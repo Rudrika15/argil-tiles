@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\visitors;
 
 use App\Http\Controllers\Controller;
+use App\Models\Catelogue;
 use App\Models\Lvtproduct;
 use App\Models\Quartzproduct;
 use Illuminate\Http\Request;
@@ -47,6 +48,7 @@ class VisitorController extends Controller
     }
     public function catalogue()
     {
+
         return view('visitors.catalogue.catalogue');
     }
     public function cantact()

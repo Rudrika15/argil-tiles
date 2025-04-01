@@ -6,9 +6,11 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 catalogueclass" >
                 <h5 class="catalogue-heading">LINK 'N' LOCK - SPC FLOORING</h5>
-                <img src="asset/images/argileimage/catalogueimage.png" alt="" width="110px" style="margin-top: 10px">
+
+                <a href="pdf/1661686250890768142.pdf" target="blank"><img src="asset/images/argileimage/catalogueimage.png" alt="" width="110px" style="margin-top: 10px"></a>
+
             </div>
         </div>
     </div>

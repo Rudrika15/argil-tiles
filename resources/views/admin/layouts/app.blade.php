@@ -48,6 +48,7 @@
                 <li class="{{ request()->routeIs('wsizeshow')?'active':'' }}"><a href="{{ route('wsizeshow') }}"> W-size</a></li>
                 <li class="{{ request()->routeIs('ssizeshow')?'active':'' }}"><a href="{{ route('ssizeshow') }}"> SPC-size</a></li>
                 <li class="{{ request()->routeIs('stockshow')?'active':'' }}"><a href="{{ route('stockshow') }}">Stock</a></li>
+                <li class="{{ request()->routeIs('blog')?'active':'' }}"><a href="{{ route('blog') }}">Blog</a></li>
 
                 {{-- <li><a href="{{ route('logout') }}">logout</a></li> --}}
             </ul>

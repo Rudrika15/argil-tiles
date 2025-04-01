@@ -1,34 +1,48 @@
 @extends('layouts.app')
 @section('content')
+    <!-- page title -->
+    <section class="page-title">
+        <div class="container">
+            <div class="content-box">
+                <div class="title">
+                    <h1>Spc Products</h1>
+                </div>
+                <div class="bread-crumb">
+                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Spc Products</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
     <div class="heading-title container-fluid">
-        <h3 class="container">Home/{{ $data->names }}</h3>
+        <h2 class="container">Home/{{ $data->names }}</h2>
     </div>
 
-    <div class="container">
-        <div class="row" style="justify-content: center">
-            <div class="col-lg-3 galaryimage" style="margin-top: 13%">
+    <div class="container spcprodcut-image">
+        <div class="row">
+            <div class="col-md-3 galaryimage">
 
                 @if ($data->mainImg)
-                    <img src="{{ asset('spc/' . $data->mainImg) }}" alt="" width="38%" height="130px"
-                        class="spcinquiry-galaryimage" onclick="miniImage(this)">
+                    <img src="{{ asset('spc/' . $data->mainImg) }}" alt=""
+                         onclick="miniImage(this)" class="img-responsive galary-mini-image spcinquiry-galaryimage">
                 @endif
 
                 @if ($data->subImg1)
-                    <img src="{{ asset('spc/' . $data->subImg1) }}" alt="" width="38%" height="130px"
-                        class="spcinquiry-galaryimage" onclick="miniImage(this)">
+                    <img src="{{ asset('spc/' . $data->subImg1) }}" alt=""
+                        onclick="miniImage(this)" class="img-responsive galary-mini-image spcinquiry-galaryimage">
                 @endif
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-9">
 
-                <div class="first-image d-flex">
+                <div class="first-image">
 
                     @if ($data->mainImg)
-                        <img src="{{ asset('spc/' . $data->mainImg) }}" alt="" width="100%" height="580px"
-                            id="big-image" class="spcproductimage">
+                        <img src="{{ asset('spc/' . $data->mainImg) }}" alt=""
+                            id="big-image" class="img-responsive spcproductimage">
                     @endif
                     @if ($data->subImg1)
-                        <img src="{{ asset('spc/' . $data->subImg1) }}" alt="" width="100%" height="580px"
-                            id="big-image" style="display: none" class="spcproductimage">
+                        <img src="{{ asset('spc/' . $data->subImg1) }}" alt=""
+                            id="big-image" class="img-responsive spcproductimage spcproductimage1">
                     @endif
 
                 </div>
@@ -36,59 +50,61 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container productr-information">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-md-6">
                 <div class="product-title">
-                    <h3><i class="fa-solid fa-clone me-3"></i>Product Information</h3>
+                    <h3><i class="fa-solid fa-clone"></i>Product Information</h3>
                 </div>
 
-                <div class="col-lg-6 product-details">
+                <div class="col-md-6 product-details">
                     <h3>Serise Name ( s ) :</h3>
-                    <h4>{{ $data->names }}</h4>
+                    <p>{{ $data->names }}</p>
                     <h3>With Enhanced Beveled Edges :</h3>
-                    <h4>{{ $data->edges }}</h4>
+                    <p>{{ $data->edges }}</p>
                     <h3>Thickness :</h3>
-                    <h4>{{ $data->thicknesses }}</h4>
+                    <p>{{ $data->thicknesses }}</p>
                     <h3>Click Type :</h3>
-                    <h4>{{ $data->clicktype }}</h4>
+                    <p>{{ $data->clicktype }}</p>
                     <h3>Shade Variation :</h3>
-                    <h4>{{ $data->shadeVariation }}</h4>
+                    <p>{{ $data->shadeVariation }}</p>
                 </div>
 
-                <div class="col-lg-6 product-details">
+                <div class="col-md-6 product-details">
                     <h3>Primary Color (s) :</h3>
-                    <h4>{{ $data->primarycolors }}</h4>
+                    <p>{{ $data->primarycolors }}</p>
                     <h3>Backing Type :</h3>
-                    <h4>{{ $data->backingType }}</h4>
+                    <p>{{ $data->backingType }}</p>
                     <h3>Style :</h3>
-                    <h4>{{ $data->style }}</h4>
+                    <p>{{ $data->style }}</p>
                     <h3>Wear Layer :</h3>
-                    <h4>{{ $data->wearLayer }}</h4>
+                    <p>{{ $data->wearLayer }}</p>
                 </div>
             </div>
 
-            <div class="contact-title1 col-lg-6" style="margin-top: 59px"><i class="fa-solid fa-clone me-3"></i>Product Inquiry
+            <div class="contact-title1 col-md-6">
+                <div class="product-title">
+                    <h3><i class="fa-solid fa-clone"></i>Product Inquiry</h3>
+                </div>
                 <div class="contact-form-area1">
                     <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php"
                         method="post">
-                        <div class="col-lg-12 input">
+                        <div class="col-md-12 input">
                             <input type="text" name="form_name" value="" placeholder="Your Name " required="">
                         </div>
-                        <div class="col-lg-12 input">
+                        <div class="col-md-12 input">
                             <input type="email" name="form_email" value="" placeholder="Email" required="">
                         </div>
-                        <div class="col-lg-12 input">
+                        <div class="col-md-12 input">
                             <input type="text" name="form_phone" value="" placeholder="Contact Number"
                                 required="">
                         </div>
-                        <div class="col-lg-12 input">
+                        <div class="col-md-12 input">
                             <textarea placeholder="Message" name="form_message" required=""></textarea>
                         </div>
                     </form>
                     <div class="btn-class">
-                        <button type="submit" class="btn-one" data-loading-text="Please wait..."
-                            style="width: 100%;">Request
+                        <button type="submit" class="btn-one btn-class1" data-loading-text="Please wait...">Request
                             Price Quote</button>
                     </div>
                 </div>
@@ -119,7 +135,7 @@
         window.onload = function() {
             if (galleryImages.length > 0) {
                 galleryImages[0].classList.add('active');
-                galleryImages[0].style.border = '7px solid gray';  // Apply border to the first image
+                galleryImages[0].style.border = '7px solid gray'; // Apply border to the first image
             }
         }
     </script>

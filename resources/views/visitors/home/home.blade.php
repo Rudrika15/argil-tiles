@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section("seosection")
+
+    <title>Artificial Quartz Stone Slab Manufacturers In Morbi, Gujarat, India | Argil</title>
+
+@endsection
+
 @section('content')
  <!--Main Slider-->
  <section class="main-slider">
@@ -13,10 +19,23 @@
 </section>
 <!-- main slider end -->
 
+<div class="container">
+    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+</div>
 {{-- topbar content --}}
-<div class="topcontent container d-flex">
+{{-- <div class="topcontent container d-flex">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-md-6">
             <div>
                 <h3>Artificial Quartz Stone Slab Manufacturers</h3>
             </div>
@@ -32,10 +51,10 @@
                     challenging us to soar greater height of success and achievement.</h5>
             </div>
         </div>
-        <div class="col-lg-6">
-            <img src="asset/images/argileimage/hometextlogo.png" alt="" width="100%">
+        <div class="col-md-6">
+            <img src="asset/images/argileimage/hometextlogo.png" alt="" class="img-responsive" >
         </div>
-        <div class="col-lg-12">
+        <div class="col-md-12">
             <h5>The management of Argil has always accomplished the big goals set out by us together. Unarguably, they
                 have done it with ethics and moral of our community. Throughout their journey they have upheld the
                 principles of sharing the growth with all stakeholders, leaving faces smiling and hearts warm with
@@ -46,14 +65,14 @@
                 your brand and people associated.<span><a href="">...MORE</a></span></h5>
         </div>
     </div>
-</div>
+</div> --}}
 
 {{-- Why Choose Argil Group? --}}
 
-@include('visitors.comanfile.certificate')
+{{-- @include('visitors.comanfile.certificate') --}}
 
 
-<div class="producttitle text-center">
+{{-- <div class="producttitle text-center">
     <h3>India's Best Quartz Surface and SPC Products Suppliers</h3>
 </div>
 <div class="productimage">
@@ -63,13 +82,13 @@
     <div class="product1" data-aos="zoom-in-up">
         <img src="asset/images/argileimage/productimage2.jpg" alt="" width="100%">
     </div>
-</div>
+</div> --}}
 
 
 
 {{-- Enhancing the usability --}}
 
-@include('visitors.comanfile.usablity')
+{{-- @include('visitors.comanfile.usablity') --}}
 
 
 @endsection

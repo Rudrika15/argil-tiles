@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\visitors\VisitorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\DashboardController;
@@ -18,6 +19,8 @@ use App\Http\Controllers\admin\WsizemasterController;
 use App\Http\Controllers\admin\SsizemasterController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\StockController;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\visitors\ContactController;
 
 
 
@@ -195,6 +198,11 @@ Route::middleware('auth:web')->group(function () {
     Route::get("stockedit", [StockController::class, 'edit'])->name('stockedit');
     Route::get("stock/delete/{id}", [StockController::class, 'delete'])->name('stock.delete');
 
+    //Blog
+    Route::get("blog",[BlogController::class,'index'])->name('blog');
+    Route::get("blog.create",[BlogController::class,'create'])->name('blog.create');
+    Route::post("blog.store",[BlogController::class,'store'])->name('blog.store');
+
 });
 
 
@@ -217,6 +225,15 @@ Route::get('/spcproducts',[VisitorController::class,'spcproducts']);
 Route::get('spcproductinquiry/{id?}',[VisitorController::class,'spcproductinquiry'])->name('spcproductinquiry');
 Route::get('quartzinquiry/{id}',[VisitorController::class,'quartzinquiry'])->name('quartzinquiry');
 Route::get('/quartzsurface',[VisitorController::class,'quartzsurface']);
+
+// Route::post('/send-mail',[ContactController::class,'sendMail'])->name('send.mail');
+// Route::get('send-mail', [MailController::class, 'index']);
+
+
+// Route::get('contact-us', [ContactController::class, 'index']);
+// Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+
+
 
 
 

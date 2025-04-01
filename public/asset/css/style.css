@@ -18,7 +18,7 @@
 13. Pricing Section
 14. News Section
 15. Call Out Section
-16. Main Footer 
+16. Main Footer
 17. Footer Bottom
 18. About Page
 19. Page Title
@@ -66,7 +66,7 @@
 @import url(../css/hover.css);
 
 
-/*** 
+/***
 
 ====================================================================
   Reset
@@ -81,7 +81,7 @@
 }
 
 
-/*** 
+/***
 
 ====================================================================
   Global Settings
@@ -103,7 +103,6 @@ body {
   background-position:center top;
   -webkit-font-smoothing: antialiased;
 }
-
 @media (min-width:1200px) {
   .container {
     padding: 0px 15px;
@@ -138,7 +137,7 @@ input,button,select,textarea{
 }
 
 .strike-through{
-  text-decoration:line-through; 
+  text-decoration:line-through;
 }
 
 .auto-container{
@@ -156,10 +155,10 @@ input,button,select,textarea{
 ul,li{
   list-style:none;
   padding:0px;
-  margin:0px; 
+  margin:0px;
 }
 .centered{
-  text-align:center;  
+  text-align:center;
 }
 .sec-pad{
   padding: 100px 0px 110px 0px;
@@ -220,13 +219,13 @@ h4{
 h5{
   font-size: 18px;
   line-height: 26px;
-} 
+}
 
 h6{
   font-size: 16px;
   line-height: 26px;
   font-weight: 700;
-} 
+}
 
 h3 a{
   font-size: 24px;
@@ -314,7 +313,7 @@ h6 a:hover{
   font-weight: 600;
   text-transform: uppercase;
   border: 2px solid #cccccc;
-  padding: 10px 33px 9px 34px; 
+  padding: 10px 33px 9px 34px;
   transition: all 500ms ease;
 }
 .btn-three:hover{
@@ -337,7 +336,7 @@ h6 a:hover{
 }
 
 
-/*** 
+/***
 
 ====================================================================
   Scroll To Top style
@@ -383,7 +382,7 @@ h6 a:hover{
 
 
 
-/*** 
+/***
 
 ====================================================================
                         Home-Page
@@ -466,7 +465,7 @@ h6 a:hover{
 }
 
 .main-menu .navbar-collapse{
-  padding:0px;  
+  padding:0px;
 }
 
 .main-menu .navigation{
@@ -532,7 +531,7 @@ h6 a:hover{
   width:100%;
 }
 .main-menu .navigation > li > ul > li:last-child{
-  border-bottom:none; 
+  border-bottom:none;
 }
 
 .main-menu .navigation > li > ul > li > a{
@@ -564,14 +563,14 @@ h6 a:hover{
 
 .main-menu .navigation > li > ul > li.dropdown:hover > a:after{
   color:#ffffff;
-  transition:all 500ms ease;  
+  transition:all 500ms ease;
 }
 
 .main-menu .navigation > li.dropdown:hover > ul{
   visibility:visible;
   opacity:1;
   top:100%;
-  transition:all 500ms ease;  
+  transition:all 500ms ease;
 }
 
 .main-menu .navbar-collapse > ul li.dropdown .dropdown-btn{
@@ -743,7 +742,7 @@ h6 a:hover{
 }
 
 .main-slider .tp-dottedoverlay{
-  background-color:rgba(0,0,0,0.30);  
+  background-color:rgba(0,0,0,0.30);
 }
 
 .main-slider .gradient-overlay .tp-dottedoverlay{
@@ -762,18 +761,18 @@ h6 a:hover{
 }
 
 .tp-bullets{
-  display:none; 
+  display:none;
 }
 
 .tp-bullets.preview4 .bullet{
   background:#ffc13b !important;
   border-color:#202020 !important;
-  margin:0px 5px; 
+  margin:0px 5px;
 }
 
 .tp-bullets.preview4 .bullet:hover,
 .tp-bullets.preview4 .bullet.selected{
-  border-color:#ffc13b !important;  
+  border-color:#ffc13b !important;
 }
 .tp-arr-allwrapper{
   display: none;
@@ -1235,7 +1234,7 @@ h6 a:hover{
   width: 100%;
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   padding: 56px 40px 65px 40px;
 }
 input,
@@ -1349,7 +1348,7 @@ textarea:focus{
 
 .overlay-style-two .item:hover .default-overlay-outer{
   top:0;
-  opacity:1;  
+  opacity:1;
 }
 .latest-products .button{
   position: relative;
@@ -1694,7 +1693,7 @@ textarea:focus{
 }
 
 
-/*** 
+/***
 
 ====================================================================
                         about-Page
@@ -1713,7 +1712,7 @@ textarea:focus{
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 259px 0px 71px 0px; 
+  padding: 259px 0px 71px 0px;
 }
 .page-title:before{
   position: absolute;
@@ -1816,11 +1815,11 @@ textarea:focus{
 .video-gallery .overlay-gallery .icon-holder{
   display: table;
   height: 100%;
-  width: 100%;    
+  width: 100%;
 }
 .video-gallery .overlay-gallery .icon-holder .icon{
   display: table-cell;
-  vertical-align: middle;    
+  vertical-align: middle;
 }
 .video-gallery .overlay-gallery .icon-holder .icon a img{
   width: auto;
@@ -1991,7 +1990,7 @@ textarea:focus{
 }
 
 
-/*** 
+/***
 
 ====================================================================
                         error-page
@@ -2017,7 +2016,7 @@ textarea:focus{
 }
 
 
-/*** 
+/***
 
 ====================================================================
                         service-page
@@ -2116,7 +2115,7 @@ textarea:focus{
 }
 
 
-/*** 
+/***
 
 ====================================================================
                         project-page
@@ -2145,7 +2144,7 @@ textarea:focus{
 }
 
 
-/*** 
+/***
 
 ====================================================================
                         blog-gird
@@ -2163,7 +2162,7 @@ textarea:focus{
 }
 
 
-/*** 
+/***
 
 ====================================================================
                         blog-classic
@@ -2405,7 +2404,7 @@ textarea:focus{
 }
 
 
-/*** 
+/***
 
 ====================================================================
                         blog-details
@@ -2615,7 +2614,7 @@ textarea:focus{
 }
 
 
-/*** 
+/***
 
 ====================================================================
                         contact page

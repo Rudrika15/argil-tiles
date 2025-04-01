@@ -1,29 +1,43 @@
 @extends('layouts.app')
 @section('content')
+    <!-- page title -->
+    <section class="page-title">
+        <div class="container">
+            <div class="content-box">
+                <div class="title">
+                    <h1>Quartz Surface</h1>
+                </div>
+                <div class="bread-crumb">
+                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Quartz Surface</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
     <div class="heading-title container-fluid">
-        <h3 class="container" style="padding: 13px">Home/Quartz Surface</h3>
+        <h2 class="container">Home/Quartz Surface</h2>
     </div>
 
 
     <div class="quartz-bg-image">
-        <a href="/contact"><img src="asset/images/argileimage/quartzimage.jpg" alt="" width="100%"
-                style="margin-top: -7px"></a>
+        <a href="/contact"><img src="asset/images/argileimage/quartzimage.jpg" alt=""
+            class="img-responsive"></a>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <img src="asset/images/argileimage/quartzimage1.jpg" alt="" width="100%" style="padding: 40px">
+            <div class="col-md-6 surface-image">
+                <img src="asset/images/argileimage/quartzimage1.jpg" alt="" class="img-responsive all-page-side-image">
             </div>
-            <div class="col-lg-6 overview" style="margin-top: 70px">
+            <div class="col-md-6 overview">
                 <h3>overview</h3>
-                <h5 class="paragraph">Composite or engineered quartz is a very solid material that resembles real granite in
+                <p class="text-justify">Composite or engineered quartz is a very solid material that resembles real granite in
                     both look and
                     utility. Engineered quartz is unaffected by stains, scratches, and cracks. It is also resistant to heat
                     and cold. Engineered By blending quartz or granite aggregates with resins and pigments, man-made
                     products like stone or quartz are created by quartz manufacturers in India, which are mostly generated
                     from natural materials. The composition of engineered quartz slabs is typically 90% pulverised natural
                     quartz and 10% polyresin. However, these percentages may vary slightly depending on the kind of quartz
-                    used.</h5>
+                    used.</p>
             </div>
         </div>
     </div>
@@ -34,17 +48,17 @@
     {{-- Quartz Stone Slab --}}
 
     <div class="quartz-stone-heading">
-        <h2 class="text-center">Quartz Stone Slab</h2>
+        <h3 class="text-center">Quartz Stone Slab</h3>
     </div>
     <div class="container quartzsurface">
         <div class="row">
             @foreach ($data as $index => $item)
-                <div class="col-lg-4 col-md-6" data-aos="flip-up">
-                    <a href="{{ Route('quartzinquiry',$item->id) }}">
-                    <div class="card1">
-                        <img src="{{ asset('quartz/' . $item->mainImg) }}" alt="" width="100%">
-                        <h5>{{ $item->name }}</h5>
-                    </div>
+                <div class="col-md-4 col-md-6" data-aos="flip-up">
+                    <a href="{{ Route('quartzinquiry', $item->id) }}">
+                        <div class="card1">
+                            <img src="{{ asset('quartz/' . $item->mainImg) }}" alt="" class="img-responsive">
+                            <p class="text-center">{{ $item->name }}</p>
+                        </div>
                     </a>
                 </div>
 
@@ -58,12 +72,13 @@
     </div>
 
     {{-- enhancing the usablity --}}
+    {{-- @include('visitors.comanfile.certificate') --}}
     @include('visitors.comanfile.usablity')
     {{-- end enhancing the usablity --}}
-
+{{--
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 advantage-parapraph">
+            <div class="col-md-12 advantage-parapraph">
                 <h2 class="text-center">Advantages of Artifical Quartz Stones</h2>
                 <h5>
                     Artificial quartz stones are manufactured from natural quartz crystals that are bound together with the
@@ -78,7 +93,7 @@
     <div class="main-container">
         <div class="container">
             <div class="row">
-                <div class="col-lg-112 advantage-card" data-aos="fade-up">
+                <div class="col-md-12 advantage-card">
                     <h3>Attractive look and feel</h3>
                     <h5>The compressed artificial quartz material is made into slabs with variations of natural stone's
                         texture
@@ -92,7 +107,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-112 advantage-card" style="background-color: rgb(31, 31, 31);" data-aos="fade-up">
+                <div class="col-md-12 advantage-card">
                     <h3>Easy to maintain</h3>
                     <h5>Natural quartz has pores in them. However, the polished surface of artificial stone does not absorb
                         moisture. As a result, cleaning the surface is simpler and requires less care. Additionally, the
@@ -104,7 +119,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-112 advantage-card" data-aos="fade-up">
+            <div class="col-md-12 advantage-card">
                 <h3>Available in a variety of options</h3>
                 <h5>The size, quart colours, treatments, and patterns of composite quartz stone are present in a variety of
                     options. As a result, you will never be without resources to help in the design or renovation of an
@@ -114,7 +129,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-112 advantage-card" style="background-color: rgb(31, 31, 31);" data-aos="fade-up">
+            <div class="col-md-12 advantage-card">
                 <h3>Cost effective</h3>
                 <h5>The cost of natural stone might vary depending on the kind, colour, and quality of the stone but is
                     typically more. For less money, artificial quartz stone offers a more luxurious and traditional
@@ -125,7 +140,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-112 advantage-card" data-aos="fade-up">
+            <div class="col-md-12 advantage-card">
                 <h3>Durability</h3>
                 <h5>Artificial quartz is as strong and hard as granite, with the benefit of being chip and crack resistant.
                     The engineered stone will only crack if it is not fitted properly on the surfaces. Hence, artificial
@@ -150,15 +165,15 @@
                 wet rooms in both residential and commercial structures.
             </li>
         </ul>
-    </div>
-    <div class="bg-image-enchance">
-        <img src="asset/images/argileimage/backgroundimage1.jpg" alt="" width="100%" height="1100px">
+    </div> --}}
+    {{-- <div class="bg-image-enchance">
+        <img src="asset/images/argileimage/backgroundimage1.jpg" alt="">
         <div class="container-fluid bg-imgae-enhance1">
             <div class="row">
-                <div class="col-lg-6">
-                    <img src="asset/images/argileimage/quartzimage5.jpg" alt="" width="70%">
+                <div class="col-md-6">
+                    <img src="asset/images/argileimage/quartzimage5.jpg" alt="">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <h3 class="bg-imgae-enhance1-para">Argil Quartz Slab Manufacturing Process</h3>
                     <h5 class="bg-imgae-enhance1-para">Finely crushed quartz is combined with resin, stabilising polymers,
                         and colouring pigments to create
@@ -171,12 +186,12 @@
                         facility </h5>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-        <div class="container-fluid main-bg-enhance-card">
-            <div class="row" style="margin-left: 82px">
-                <div class="col-lg-3 bg-enhance-card" data-aos="flip-up" style="width: 27rem">
-                    <img src="asset/images/argileimage/quartz-bg1.png" alt="" width="90px">
+        {{-- <div class="container-fluid main-bg-enhance-card">
+            <div class="row">
+                <div class="col-lg-3 bg-enhance-card">
+                    <img src="asset/images/argileimage/quartz-bg1.png" alt="">
                     <h3>MIXING</h3>
                     <h5>The fundamental components of an Argil Tiles Slab, such as Natural Quartz Grits, Resin, colouring
                         agents
@@ -185,8 +200,8 @@
                         same
                         fundamental process which makes Argil, one of the leading quartz stone manufacturers in Morbi</h5>
                 </div>
-                <div class="col-lg-3 bg-enhance-card" data-aos="flip-up" style="width: 27rem">
-                    <img src="asset/images/argileimage/quartz-bg2.png" alt="" width="90px">
+                <div class="col-lg-3 bg-enhance-card">
+                    <img src="asset/images/argileimage/quartz-bg2.png" alt="">
                     <h3>PRESSING</h3>
                     <h5>Spread onto trays, the mixture is compacted with intense vibration and pressure. The compressed
                         mixture is then transferred to a curing room, where it is heated for about an hour at about 90°C
@@ -194,8 +209,8 @@
                         a slab. These curved and irregular stones now have the classic hardness and stain resistance.
                     </h5>
                 </div>
-                <div class="col-lg-3 bg-enhance-card" data-aos="flip-up" style="width: 27rem">
-                    <img src="asset/images/argileimage/quartz-bg3.png" alt="" width="90px">
+                <div class="col-lg-3 bg-enhance-card">
+                    <img src="asset/images/argileimage/quartz-bg3.png" alt="">
                     <h3>POLISHING</h3>
                     <h5>Using two sets of parallel diamond saws, the uneven slab's four sides are now cut to the appropriate
                         size. To achieve the precise needed thickness, the slab's upper and lower surfaces are calibrated
@@ -203,8 +218,8 @@
                         the finished surface until it has the correct mirror glaze. What distinguishes the finished product
                         is its mirror glaze.</h5>
                 </div>
-                <div class="col-lg-3 bg-enhance-card" data-aos="flip-up" style="width: 27rem">
-                    <img src="asset/images/argileimage/quartz-bg4.png" alt="" width="90px">
+                <div class="col-lg-3 bg-enhance-card">
+                    <img src="asset/images/argileimage/quartz-bg4.png" alt="">
                     <h3>QUALITY CONTROL</h3>
                     <h5>Every step of the manufacturing process undergoes inspection at Argil Tiles, from selecting the best
                         raw materials to maintaining strict quality control standards. Our Quality Control division inspects
@@ -213,17 +228,17 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
-    <div class="container">
+    {{-- <div class="container">
         <div class="row">
             <div class="heading-faq text-center">
                 <h2>FAQs</h2>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </div> --}}
+    {{-- <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -243,8 +258,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </div> --}}
+    {{-- <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -263,8 +278,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </div> --}}
+    {{-- <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -284,8 +299,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </div> --}}
+    {{-- <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -304,8 +319,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </div> --}}
+    {{-- <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -326,8 +341,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </div> --}}
+    {{-- <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -348,8 +363,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </div> --}}
+    {{-- <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -368,8 +383,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </div> --}}
+    {{-- <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -388,8 +403,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
+    </div> --}}
+    {{-- <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -493,13 +508,13 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container mt-5 pt-5">
+    </div> --}}
+    {{-- <div class="container mt-5 pt-5">
         <div class="row">
-            <div class="col-lg-6">
-                <img src="asset/images/argileimage/footerimge.jpg" alt="">
+            <div class="col-md-6">
+                <img src="asset/images/argileimage/footerimge.jpg" alt="" class="quartz-image-footer">
             </div>
-            <div class="col-lg-6" style="margin-left:-160px">
+            <div class="col-md-6">
                 <div class="contact-form-area">
                     <div class="contact-title">Contact us</div>
                     <div class="text">
@@ -514,7 +529,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="email" name="form_email" value="" placeholder="Email"
-                                    class="input1" style="margin-left: 80px" required="">
+                                    class="input1" required="">
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="text" name="form_phone" value="" placeholder="Contact Number"
@@ -522,17 +537,18 @@
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input type="text" name="form_subject" value="" placeholder='Subject'
-                                    class="input1" style="margin-left: 80px" required="">
+                                    class="input1" required="">
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <textarea placeholder="Message" name="form_message" required="" class="textarea"></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="btn-one" data-loading-text="Please wait...">Request Price
+                        <button type="submit" class="btn-one btn-class2" data-loading-text="Please wait...">Request
+                            Price
                             Quote</button>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection

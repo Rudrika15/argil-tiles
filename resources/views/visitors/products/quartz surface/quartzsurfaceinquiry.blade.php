@@ -8,21 +8,21 @@
         <div class="row">
                         <div class="col-lg-2">
                 @if ($data->mainImg)
-                    <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="" width="52%" height="120px"
+                    <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="" width="52%" height="100px"
                         class="spcinquiry-galaryimage1" onclick="miniImage(this)">
                 @endif
                 @if ($data->subImg1)
-                    <img src="{{ asset('quartz/' . $data->subImg1) }}" alt="" width="52%" height="120px"
+                    <img src="{{ asset('quartz/' . $data->subImg1) }}" alt="" width="52%" height="100px"
                         class="spcinquiry-galaryimage1" onclick="miniImage(this)">
                 @endif
                 @if ($data->mainImg)
-                    <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="" width="52%" height="120px"
+                    <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="" width="52%" height="100px"
                         class="spcinquiry-galaryimage1" onclick="miniImage(this)">
                 @endif
             </div>
             <div class="col-lg-10">
                 @if ($data->mainImg)
-                <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="" width="100%" height="500px"
+                <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="" width="100%" height="450px"
                     id="big-image" class="spcproductimage1">
             @endif
             </div>

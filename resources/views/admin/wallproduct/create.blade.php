@@ -7,15 +7,17 @@
 
 
 <div class="row">
-	<div class="col-md-12">
+    <div class="col-md-12">
 
-		@if ($message = Session::get('success'))
-		<div class="alert alert-warning alert-dismissible fade show" role="alert">
-			<p>{{$message}}</p>
-			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-		</div>
-		@endif
-	</div>
+        @if ($message = Session::get('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <p>{{ $message }}</p>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+    </div>
 </div>
 
 <div class="main-content">

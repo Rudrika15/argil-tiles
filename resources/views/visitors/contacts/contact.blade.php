@@ -7,13 +7,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <img src="asset/images/argileimage/contactsimage.png" alt="" width="100%">
+                <img src="asset/images/argileimage/contactsimage.png" alt="" width="100%" class="contact-img">
             </div>
             <div class="col-lg-6">
-                <div class="contact-form-area">
+                <div class="contact-form-area1">
                     <div class="contact-title">Let's Be in Touch !!!</div>
 
-                    <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php"
+                    <form id="contact-form" name="contact_form" class="default-form" action="{{ route('send.mail') }}"
                         method="post">
                         <div class="row">
                             <div class="col-lg-10 input">
@@ -31,8 +31,8 @@
                                 <textarea placeholder="Message" name="form_message" required=""></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="btn-one" data-loading-text="Please wait..."
-                            style="width: 83%;">Request Price Quote</button>
+                        <button type="submit" class="btn-one"
+                           >Request Price Quote</button>
                     </form>
                 </div>
             </div>
