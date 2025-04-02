@@ -34,6 +34,7 @@
 }
 .all-page-side-image{
     width: 80%;
+    margin: auto;
 
 }
 .youtubevideo{
@@ -72,15 +73,8 @@
     height: 190px;
     border-radius: 10px;
 }
-.quality-image-title{
-    margin-left: 60px;
-    font-size: 19px;
-    font-weight: 600;
-    color: rgb(0, 0, 0);
 
-}
 .quality-image-title1{
-    margin-left: 20px;
     font-size: 19px;
     font-weight: 600;
     color: rgb(0, 0, 0);
@@ -105,10 +99,12 @@
     font-size: 23px;
     font-weight: 600;
     padding: 10px 0px;
+    color: rgb(82, 80, 80);
 
 }
 .galaryimage{
     margin-top: 85px;
+
 }
 .galary-mini-image{
     width: 35%;
@@ -131,6 +127,8 @@
 }
 .first-image{
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 .productr-information{
     margin-top: 60px;
@@ -226,5 +224,135 @@
 }
 .tp-banner{
     max-height: 500px;
+}
+.quality-image{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.quality-image .col-md-4{
+    padding: 0px 50px;
+}
+.advantage-parapraph h3{
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.advantage-card{
+    background-color: rgb(59, 60, 61);
+    padding: 25px;
+
+}
+.advantage-card1{
+    background-color: rgb(31, 31, 31);
+    padding: 25px;
+
+}
+.advantage-card1 h3,p{
+    color: whitesmoke;
+    font-weight: 600;
+    line-height: 1.6;
+
+}
+.advantage-card h3,p{
+    color: whitesmoke;
+    font-weight: 600;
+}
+.main-container{
+    margin-top: 30px;
+}
+.quartz-paragraph{
+    margin-top: 40px;
+}
+.quartz-paragraph h3{
+    font-weight: 600;
+    font-size: 30px;
+}
+.quartz-paragraph1 li{
+    list-style-type: disc;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+
+}
+.bg-image-enchance{
+    background-color: rgb(59, 60, 61);
+}
+.bg-img1{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+
+}
+.bg-image-title{
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
+.card3{
+    max-width: 550px;
+}
+.main-bg-enhance-card{
+    margin-top: 40px;
+}
+.bg-enhance-card{
+    border: 2px solid whitesmoke;
+    text-align: center;
+
+}
+.bg-enhance-card img{
+    width: 30%;
+    margin: 20px;
+}
+.bg-enhance-card h3{
+    color: whitesmoke;
+    font-weight: 600;
+}
+.panel-group a{
+    text-decoration: none;
+}
+.contact-title{
+    font-size: 35px;
+    font-weight: 600;
+}
+.text p{
+    font-size: 18px;
+    font-weight: 600;
+    color: #666666;
+    margin-top: 10px;
+}
+.heading-faq{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.heading-faq h2{
+    font-weight: 600;
+    font-size: 35px;
+}
+.input1{
+    border: 2px solid #dfdfdf;
+}
+.textarea{
+    border: 2px solid #dfdfdf;
+}
+.contact-details-form{
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+.contact-form-area{
+    margin-top: 50px;
+}
+.quartzinquiry-image{
+    border: 10px solid gray;
+    border-radius: 8PX;
+    margin: 40px 10px;
+}
+.carousel-control.right,
+.carousel-control.left {
+    background: transparent;
 }
 

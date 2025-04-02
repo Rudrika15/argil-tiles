@@ -19,19 +19,18 @@
 </section>
 <!-- main slider end -->
 
-<div class="container">
-    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
-    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
-    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
-    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
-    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
-    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
-    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
-    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
-    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
-    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
-    <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
-</div>
+    {{-- <div class="container">
+        <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+        <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+        <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+        <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+        <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+        <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+        <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+        <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+        <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+        <h1>dnddnnddnnfdbmfdmkgfmgdmmfgdgfd</h1>
+    </div> --}}
 {{-- topbar content --}}
 {{-- <div class="topcontent container d-flex">
     <div class="row">

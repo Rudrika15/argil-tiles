@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-md-4">
                 <img src="asset/images/argileimage/qualityimage1.jpeg" alt="" class="img-responsive">
-                <p class="quality-image-title">ISO CERTIFIED</p>
+                <p class="quality-image-title1">ISO CERTIFIED</p>
             </div>
             <div class="col-md-4">
                 <img src="asset/images/argileimage/qualityimage2.jpeg" alt="" class="img-responsive">
