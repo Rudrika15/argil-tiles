@@ -57,6 +57,11 @@ class VisitorController extends Controller
     {
         return view('visitors.contacts.contact');
     }
+    public function privacyPolicy()
+    {
+        return view('visitors.privacy.privacy');
+    }
+
 
 
     public function sendEmail(Request $request)

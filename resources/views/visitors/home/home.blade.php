@@ -59,29 +59,18 @@
         @include('visitors.comanfile.certificate')
 
 
-        {{-- <div class="producttitle text-center">
-        <h3>India's Best Quartz Surface and SPC Products Suppliers</h3>
-    </div>
-    <div class="productimage">
-        <div class="product1"  data-aos="zoom-in-up">
-
+        <div class="producttitle text-center">
+            <h3>India's Best Quartz Surface and SPC Products Suppliers</h3>
         </div>
-        <div class="product1" data-aos="zoom-in-up">
-            <img src="asset/images/argileimage/productimage2.jpg" alt=""  class="img-responsive">
-        </div>
-    </div>
- --}}
-        <div class="productimage container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="asset/images/argileimage/productimage1.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="col-md-6">
-                    <img src="asset/images/argileimage/productimage2.jpg" alt="" class="img-responsive">
-
-                </div>
+        <div class="productimage">
+            <div class="product1" data-aos="zoom-in-up">
+                <img src="asset/images/argileimage/productimage1.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="product1" data-aos="zoom-in-up">
+                <img src="asset/images/argileimage/productimage2.jpg" alt="" class="img-responsive">
             </div>
         </div>
+
 
 
         {{-- Enhancing the usability --}}

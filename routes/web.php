@@ -225,6 +225,7 @@ Route::get('/spcproducts',[VisitorController::class,'spcproducts']);
 Route::get('spcproductinquiry/{id?}',[VisitorController::class,'spcproductinquiry'])->name('spcproductinquiry');
 Route::get('quartzinquiry/{id}',[VisitorController::class,'quartzinquiry'])->name('quartzinquiry');
 Route::get('/quartzsurface',[VisitorController::class,'quartzsurface']);
+Route::get('/privacyPolicy',[VisitorController::class,'privacyPolicy']);
 
 // Route::post('/send-mail',[ContactController::class,'sendMail'])->name('send.mail');
 // Route::get('send-mail', [MailController::class, 'index']);

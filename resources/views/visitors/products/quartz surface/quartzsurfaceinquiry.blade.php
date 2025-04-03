@@ -151,17 +151,17 @@
                 <div class="col-md-5 product-details product-details3 product-infom-card">
                     <h3 class="product-title-heading">APPLICATIONS</h3>
                     <h3>Flooring :</h3>
-                    <p>Residential <i class="fas fa-check quart-icon"></i></p>
-                    <p>Commercial<i class="fas fa-check quart-icon"></i></p>
+                    <p>Residential  <i class="fa fa-check"></i></p>
+                    <p>Commercial <i class="fa fa-check"></i></p>
                     <h3>Counters :</h3>
-                    <p>Residential<i class="fas fa-check quart-icon"></i> </p>
-                    <p>Commercial<i class="fas fa-check quart-icon"></i></p>
+                    <p>Residential <i class="fa fa-check"></i> </p>
+                    <p>Commercial <i class="fa fa-check"></i></p>
                     <h3>Wall :</h3>
-                    <p>Residential<i class="fas fa-check quart-icon"></i> </p>
-                    <p>Commercial<i class="fas fa-check quart-icon"></i></p>
+                    <p>Residential <i class="fa fa-check"></i> </p>
+                    <p>Commercial <i class="fa fa-check"></i></p>
                     <h3>Other :</h3>
-                    <p>Residential<i class="fas fa-check quart-icon"></i> </p>
-                    <p>Commercial<i class="fa-solid fa-xmark"></i></p>
+                    <p>Residential <i class="fa fa-check"></i> </p>
+                    <p>Commercial<i class="fa fa-xmark"></i></p>
                 </div>
             </div>
             {{-- </div> --}}
