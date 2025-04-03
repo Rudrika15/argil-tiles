@@ -28,7 +28,7 @@
             @foreach ($data as $index => $data)
                 <div class="col-md-4 col-md-6">
                     <a href="{{ Route('spcproductinquiry', $data->id) }}">
-                        <div class="card1">
+                        <div class="card1" data-aos="flip-left">
                             <img src="{{ asset('spc/' . $data->mainImg) }}" alt="" class="img-responsive">
                             <p class="text-center">{{ $data->names }}</p>
                         </div>

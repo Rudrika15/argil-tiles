@@ -33,7 +33,7 @@
                     He moved on to Junagadh District to serve as a moulder fro 2 years in Kathiawad Industries Ltd.</p>
             </div>
             <div class="col-md-6">
-                <img src="asset/images/argileimage/aboutimage.png" alt="" class="img-responsive all-page-side-image">
+                <img src="asset/images/argileimage/aboutimage.png" alt=""  class="img-responsive all-page-side-image" >
             </div>
             <div class="col-md-12">
                 <p class="text-justify paragraph">People destined to create history are always blessed with astute vision of things to
@@ -56,12 +56,12 @@
                     the terrible struggle hence he started training his brothers, technically and commercially. Each of them
                     was given a separate unit to manage. In modern day management we would term these as profit centers and
                     each brother a profit centre head. The flagship company though remained Prajapat Tiles Co.</p>
-                <p class="text-justify paragraph">Stability is a limiting belief for those with big dreams and an
+                <p class="text-justify paragraph" data-aos="fade-up">Stability is a limiting belief for those with big dreams and an
                     even greater appetite
                     for betterment of life. The founder did not rest on the laurels of this achievement. In the year 1999 he
                     established ARGIL brand which manufactured and supplied high quality wall tiles. It is one of the most
                     admired wall tile brands in India today.</p>
-                <p class="text-justify paragraph">Innovation and growth always go hand in hand. In the year 2010 the
+                <p class="text-justify paragraph" data-aos="fade-up">Innovation and growth always go hand in hand. In the year 2010 the
                     company ahs recently launched Quartz Stone unit. The first of its kind in India, it has the most vibrant
                     product range in the segment.</p>
 

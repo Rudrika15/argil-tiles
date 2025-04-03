@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\visitors;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ContactFormMail;
 use App\Models\Catelogue;
 use App\Models\Lvtproduct;
 use App\Models\Quartzproduct;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class VisitorController extends Controller
 {
@@ -51,10 +53,38 @@ class VisitorController extends Controller
 
         return view('visitors.catalogue.catalogue');
     }
-    public function cantact()
+    public function contact()
     {
         return view('visitors.contacts.contact');
     }
+
+
+    public function sendEmail(Request $request)
+    {
+        // Validate the form data
+        $validated = $request->validate([
+            'form_name' => 'required|string|max:255',
+            'form_email' => 'required|email',
+            'form_phone' => 'required|string',
+            'form_message' => 'required|string',
+        ]);
+
+        // Collect the validated form data
+        $name = $validated['form_name'];
+        $email = $validated['form_email'];
+        $phone = $validated['form_phone'];
+        $message = $validated['form_message'];
+
+        // Send the email using the ContactFormMail Mailable
+        Mail::to('rjjadav7773@gmail.com')  // Replace with your own email address
+            ->send(new ContactFormMail($name, $email, $phone, $message));
+
+        // Redirect back with success message
+        return redirect()->back()->with('success', 'Your message has been sent!');
+    }
+
+
+
     public function spcproducts()
     {
         $data = Lvtproduct::orderBy('id', 'desc')->get();

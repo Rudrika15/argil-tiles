@@ -90,17 +90,17 @@
                     <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php"
                         method="post">
                         <div class="col-md-12 input">
-                            <input type="text" name="form_name" value="" placeholder="Your Name " required="">
+                            <input type="text" name="form_name" value="" placeholder="Your Name " required="" class="inp">
                         </div>
                         <div class="col-md-12 input">
-                            <input type="email" name="form_email" value="" placeholder="Email" required="">
+                            <input type="email" name="form_email" value="" placeholder="Email" required="" class="inp">
                         </div>
                         <div class="col-md-12 input">
                             <input type="text" name="form_phone" value="" placeholder="Contact Number"
-                                required="">
+                                required="" class="inp">
                         </div>
                         <div class="col-md-12 input">
-                            <textarea placeholder="Message" name="form_message" required=""></textarea>
+                            <textarea placeholder="Message" name="form_message" required="" class="inp"></textarea>
                         </div>
                     </form>
                     <div class="btn-class">

@@ -422,7 +422,8 @@
         <div class="header-lower">
             <div class="container">
                 <div class="logo-box">
-                    <a href="index.html"><figure><img src="{{ ('images/home/logo.png') }}" alt=""></figure></a>
+                    {{-- <a href="index.html"> <figure><img src="{{ asset('asset/images/logo/logo.png') }}" alt=""
+                        class="logo-box-image img-responsive"></figure></a> --}}
                 </div>
                 <div class="menu-bar">
                     <nav class="main-menu">
@@ -1859,15 +1860,15 @@
                         <div class="logo-widget footer-widget">
                             <div class='footer-logo'><a href="index.html">
                                     <figure><img src="{{ asset('asset/images/argileimage/footerlogo.png') }}"
-                                            alt="" width="60%"></figure>
+                                            alt=""class="img-responsive"></figure>
                                 </a></div>
-                            <ul class="footer-social">
+                            {{-- <ul class="footer-social">
                                 <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                            </ul>
+                            </ul> --}}
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-6 col-xs-12 footer-column">
@@ -1891,11 +1892,11 @@
                             </div>
                             <div class="downloadlink">
                                 <img src="{{ asset('asset/images/argileimage/playstore.png') }}" alt=""
-                                    width="65%">
+                                    width="55%" class="img-responsive">
                             </div>
                             <div class="downloadlink1">
                                 <img src="{{ asset('asset/images/argileimage/appstore.png') }}" alt=""
-                                    width="65%">
+                                    width="55%" class="img-responsive">
                             </div>
                         </div>
                     </div>
@@ -1927,7 +1928,7 @@
         </div>
         <div class="footer-bottom container">
             <p class="text col-md-9">©2023 - Mod Ceramic Industries Ltd.</p>
-            <p class="text col-md-3">Powered By: Perfetto Solutions</p>
+            <p class="text col-md-3">Powered By: FlipCode Solutions</p>
         </div>
     </footer>
     <!-- main footer area end -->
@@ -1957,6 +1958,16 @@
 
 <script src="{{asset('asset/js/script.js')}}"></script>
 
+  <!-- Include AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Include AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init();
+    </script>
 <!-- End of .page_wrapper -->
 </body>
 </html>

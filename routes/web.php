@@ -220,7 +220,7 @@ Route::get('/achievements',[VisitorController::class,'achievement']);
 Route::get('/plants',[VisitorController::class,'plants']);
 Route::get('/quality',[VisitorController::class,'quality']);
 Route::get('/catalogue',[VisitorController::class,'catalogue']);
-Route::get('/contact',[VisitorController::class,'cantact']);
+Route::get('/contact',[VisitorController::class,'contact']);
 Route::get('/spcproducts',[VisitorController::class,'spcproducts']);
 Route::get('spcproductinquiry/{id?}',[VisitorController::class,'spcproductinquiry'])->name('spcproductinquiry');
 Route::get('quartzinquiry/{id}',[VisitorController::class,'quartzinquiry'])->name('quartzinquiry');
@@ -230,8 +230,8 @@ Route::get('/quartzsurface',[VisitorController::class,'quartzsurface']);
 // Route::get('send-mail', [MailController::class, 'index']);
 
 
-// Route::get('contact-us', [ContactController::class, 'index']);
-// Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
+
+Route::post('/send-mail', [VisitorController::class, 'sendEmail'])->name('send.mail');
 
 
 

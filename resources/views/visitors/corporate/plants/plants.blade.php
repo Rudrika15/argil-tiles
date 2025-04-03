@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p class="heading1">Digital Wall Tiles</p>
+                <p class="heading1 plants-title">Digital Wall Tiles</p>
                 <p class="paragraph text-justify">The best quality Digital tiles are manufactured and delivered to the customers by
                     ARGIL. We take pride in being the leaders in setting industry trends in wall tiles since last 25 years.
                     We have the largest range of wall tiles in terms of sizes available as well as surface finish. The idea
@@ -75,8 +75,8 @@
                     index too is controlled by innovating in every department of the company. This activity is basically
                     carried out by every individual in his or her area of work. The functional heads and the supervisors are
                     continuously looking to increase efficiency, reduce losses and increase quality production.</p>
-                <p class="heading1">Design Department</p>
-                <p class="paragraph text-justify">Product design is the single most important and market generating
+                <p class="heading1" data-aos="fade-up">Design Department</p>
+                <p class="paragraph text-justify" data-aos="fade-up">Product design is the single most important and market generating
                     parameter. Thus we
                     have established a computerized Design department with fine arts experts. Both the units have their
                     independent teams who work help each other when needed but take up their own challenges on designing of

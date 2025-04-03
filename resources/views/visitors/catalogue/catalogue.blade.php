@@ -15,16 +15,16 @@
     </section>
     <!--End Page Title-->
     <div class="heading-title container-fluid">
-        <h3 class="container">Home/Catalogue</h3>
+        <h2 class="container">Home/Catalogue</h2>
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 catalogueclass">
-                <h5 class="catalogue-heading">LINK 'N' LOCK - SPC FLOORING</h5>
+            <div class="col-md-12 catalogueclass">
+                <h3 class="catalogue-heading">LINK 'N' LOCK - SPC FLOORING</h3>
 
                 <a href="pdf/1661686250890768142.pdf" target="blank"><img src="asset/images/argileimage/catalogueimage.png"
-                        alt="" width="110px" style="margin-top: 10px"></a>
+                        alt="" class="img-responsive"></a>
 
             </div>
         </div>

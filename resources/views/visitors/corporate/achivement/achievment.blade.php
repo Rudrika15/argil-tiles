@@ -26,7 +26,7 @@
                     heights regularly. He has been recognized a number times and mostly by credible institutions including
                     the government of India.</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 achievment-content">
                 <div class="col-md-4">
                     <img src="asset/images/argileimage/achievementimage1.jpeg" class="img-responsive award-image">
                 </div>
@@ -36,7 +36,7 @@
                     <p class="award-title">National Award</p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 achievment-content">
                 <div class="col-md-4">
                     <img src="asset/images/argileimage/achievementimage2.jpeg" alt=""
                         class="img-responsive award-image">

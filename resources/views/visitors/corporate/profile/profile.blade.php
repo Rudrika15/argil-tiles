@@ -79,12 +79,12 @@
                     Most of the initial capital was borrowed and a small manufacturing unit was commissioned by Shri
                     Prajapati and his team. Being the first of its kind manufacturing unit in the region and a very heavy
                     demand of Mangalore tiles, 100% production was sold.</p>
-                <p class="text-justify paragraph">The founder had witnessed good & bad days. He never wished
+                <p class="text-justify paragraph" data-aos="fade-up">The founder had witnessed good & bad days. He never wished
                     his brothers to go through the terrible struggle hence he started training his brothers, technically and
                     commercially. Each of them was given a separate unit to manage. In modern day management we would term
                     these as profit centers and each brother a profit centre head. The flagship company though remained
                     Prajapat Tiles Co.</p>
-                <p class="text-justify paragraph">Stability is a limiting belief for those with big dreams
+                <p class="text-justify paragraph" data-aos="fade-up">Stability is a limiting belief for those with big dreams
                     and an even greater appetite for betterment of life. The founder did not rest on the laurels of this
                     achievement. In the year 1999 he established ARGIL brand which manufactured and supplied high quality
                     wall tiles. It is one of the most admired wall tile brands in India today. Innovation and growth always

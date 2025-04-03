@@ -37,7 +37,7 @@
             </div>
             <div class="col-md-6">
                 <img src="asset/images/argileimage/groupcompanyimage.png" alt=""
-                    class="img-responsive all-page-side-image">
+                    class="img-responsive all-page-side-image group-image">
             </div>
             <div class="col-md-12">
                 <p class="paragraph text-justify">The operatives of the company, many of them working since more than 20 years, are all
@@ -72,15 +72,15 @@
                     can smoothly manufacture and dispatch large quantities of tiles. The men and Material flow is seamlessly
                     set for most efficient operational management. Running as an independent unit, the infrastructure of the
                     plant is upgraded regularly to keep up with the changing needs as well as new technology available.</p>
-                <p class="heading1">Argil Ceramics</p>
-                <p class="heading3">Commencement: 2010</p>
-                <p class="paragraph text-justify">The Quartz Stone Unit is relatively freshly set up and hence
+                <p class="heading1" data-aos="fade-up">Argil Ceramics</p>
+                <p class="heading3" data-aos="fade-up">Commencement: 2010</p>
+                <p class="paragraph text-justify" data-aos="fade-up">The Quartz Stone Unit is relatively freshly set up and hence
                     boasts of being more modern and advanced in comparison. It is established on 40,000 Sq mtr. Area, with
                     state of the art technology and well-planned layout of equipments and storage areas as well as material
                     and men movement sections defined, it has flawless production running round the clock. The inherent
                     advantage of the plant being set up by professionals from day one is its extremely efficient and without
                     any bottle necks of adjustments, making it more efficient and empowering larger production.</p>
-                <p class="paragraph text-justify">Quartz Stone: When the beauty of nature demands to be in
+                <p class="paragraph text-justify" data-aos="fade-up">Quartz Stone: When the beauty of nature demands to be in
                     every life technology is used to create the beauty in every life. Argil DuraQuartz Surface is one such
                     product that combines the elegance of nature into excellent tiling solutions with the employment of
                     Quartz Technology. The QUARTZ STONE unit has evolved to deliver to the world the best of nature in forms
@@ -89,7 +89,7 @@
                     years of research, lot of perseverance and huge amount of investment we have mastered the art of
                     blending the aesthetics of nature, power of technology and human creativity into a great product-line
                     that isArgil DuraQuartz Surfaces.</p>
-                <p class="paragraph text-justify">Argil DuraQuartz Surface is a high-quailty nonporous,
+                <p class="paragraph text-justify" data-aos="fade-up">Argil DuraQuartz Surface is a high-quailty nonporous,
                     composite material, built-up from hard, inorganic, polishable granulates, compactly bound together with
                     a binder and a filler, coloured with various eco-conscious pigments. It has a smooth, stain resistant
                     surface, comes in a variety of sizes and has a wide range of applications. An incredible mix of long
@@ -98,12 +98,12 @@
                     material, engineered quartz surface material is quickly becoming the new status symbol for style. Argil
                     DuraQuartz Surfaces proudly brings you the global surface-fashion statement to turn your desires into
                     stunning realities.</p>
-                <p class="paragraph text-justify">The SLABS of Quartz Stone fromARGILare a revolutionary
+                <p class="paragraph text-justify" data-aos="fade-up">The SLABS of Quartz Stone fromARGILare a revolutionary
                     product. Durable, with great
                     surface quality and most of all machin ability makes them the most suitable substitute of Natural Stone.
                     Below are the USP's ARGIL Duraquartz Surfaces:
                 </p>
-                <ul class="paragraph unorderlist text-justify">
+                <ul class="paragraph unorderlist text-justify" data-aos="fade-up">
                     <li>Scratch Resistance</li>
                     <li>Stain Resistance</li>
                     <li>Chip and Crack Resistance</li>
@@ -116,7 +116,7 @@
                     <li>Color consistency</li>
                     <li>Immunity to freeze and thaw</li>
                 </ul>
-                <p class="paragraph text-justify">They come in jumbo sizes of 3000 x 1300 mm and 3200 x 1600 mm also it can be customized as per
+                <p class="paragraph text-justify" data-aos="fade-up">They come in jumbo sizes of 3000 x 1300 mm and 3200 x 1600 mm also it can be customized as per
                     requirement. They find applications in big table tops kitchen tops and the like. They can be resized,
                     cut, beveled like any stone. Custom sizes for the stone are also available. The tiles can be of 300x300
                     mm, 300x600 mm, 600x600 mm, 800x800 mm

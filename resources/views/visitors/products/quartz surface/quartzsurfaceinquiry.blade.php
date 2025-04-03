@@ -119,7 +119,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container product-con-details">
         <div class="row">
             <div class="col-md-6">
                 <div class="product-title">
@@ -127,66 +127,68 @@
                 </div>
 
                 {{-- <div class="productinformation"> --}}
-                <div class="col-md-5 product-details1">
-                    <h3>Spaces</h3>
+                <div class="col-md-5 product-details product-infom-card">
+                    <h3 class="product-title-heading">SPACES</h3>
                     <h3>Primary Color :</h3>
-                    <h4>{{ $data->primarycolors }}</h4>
+                    <p>{{ $data->primarycolors }}</p>
                     <h3>Stock :</h3>
-                    <h4>{{ $data->stock }}</h4>
+                    <p>{{ $data->stock }}</p>
                     <h3>Book Match :</h3>
-                    <h4>{{ $data->bookmatch }}</h4>
+                    <p>{{ $data->bookmatch }}</p>
                     <h3>Available Finish :</h3>
-                    <h4>{{ $data->finishType }}</h4>
+                    <p>{{ $data->finishType }}</p>
                     {{-- <div class="col-lg-3 product-details1" style="border: 1px solid black"> --}}
-                    <h3>SIZES</h3>
+                    <h3 class="product-title-heading">SIZES</h3>
                     <h3>Thickness :</h3>
-                    <h4>{{ $data->thicknesses }}</h4>
+                    <p>{{ $data->thicknesses }}</p>
                     <h3>Slab Size :</h3>
-                    <h4>{{ $data->sizes }}</h4>
+                    <p>{{ $data->sizes }}</p>
 
                     {{-- </div> --}}
                 </div>
 
 
-                <div class="col-md-5 product-details1">
-                    <h3>APPLICATIONS</h3>
+                <div class="col-md-5 product-details product-details3 product-infom-card">
+                    <h3 class="product-title-heading">APPLICATIONS</h3>
                     <h3>Flooring :</h3>
-                    <h4>Residential <i class="fas fa-check quart-icon"></i></h4>
-                    <h4>Commercial<i class="fas fa-check quart-icon"></i></h4>
+                    <p>Residential <i class="fas fa-check quart-icon"></i></p>
+                    <p>Commercial<i class="fas fa-check quart-icon"></i></p>
                     <h3>Counters :</h3>
-                    <h4>Residential<i class="fas fa-check quart-icon"></i> </h4>
-                    <h4>Commercial<i class="fas fa-check quart-icon"></i></h4>
+                    <p>Residential<i class="fas fa-check quart-icon"></i> </p>
+                    <p>Commercial<i class="fas fa-check quart-icon"></i></p>
                     <h3>Wall :</h3>
-                    <h4>Residential<i class="fas fa-check quart-icon"></i> </h4>
-                    <h4>Commercial<i class="fas fa-check quart-icon"></i></h4>
+                    <p>Residential<i class="fas fa-check quart-icon"></i> </p>
+                    <p>Commercial<i class="fas fa-check quart-icon"></i></p>
                     <h3>Other :</h3>
-                    <h4>Residential<i class="fas fa-check quart-icon"></i> </h4>
-                    <h4>Commercial<i class="fa-solid fa-xmark"></i></h4>
+                    <p>Residential<i class="fas fa-check quart-icon"></i> </p>
+                    <p>Commercial<i class="fa-solid fa-xmark"></i></p>
                 </div>
             </div>
             {{-- </div> --}}
 
-            <div class="contact-title1 col-md-6"><i class="fa-solid fa-clone me-3"></i>Product
-                Inquiry
+            <div class="contact-title1 col-md-6">
+                <div class="product-title">
+                    <h3><i class="fa-solid fa-clone me-3"></i>Product Inquiry</h3>
+                </div>
                 <div class="contact-form-area1">
                     <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php"
                         method="post">
                         <div class="col-md-12 input">
-                            <input type="text" name="form_name" value="" placeholder="Your Name " required="">
+                            <input type="text" name="form_name" value="" placeholder="Your Name " required="" class="inp">
                         </div>
                         <div class="col-md-12 input">
-                            <input type="email" name="form_email" value="" placeholder="Email" required="">
+                            <input type="email" name="form_email" value="" placeholder="Email" required="" class="inp">
                         </div>
                         <div class="col-md-12 input">
                             <input type="text" name="form_phone" value="" placeholder="Contact Number"
-                                required="">
+                                required="" class="inp">
                         </div>
                         <div class="col-md-12 input">
-                            <textarea placeholder="Message" name="form_message" required=""></textarea>
+                            <textarea placeholder="Message" name="form_message" required="" class="inp"></textarea>
                         </div>
                     </form>
                     <div class="btn-class">
-                        <button type="submit" class="btn-one" data-loading-text="Please wait...">Request
+                        <button type="submit" class="btn-one btn-class1" data-loading-text="Please wait...">Request
                             Price Quote</button>
                     </div>
                 </div>
