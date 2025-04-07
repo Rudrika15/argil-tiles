@@ -78,7 +78,28 @@ class BlogController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'slug' => 'required',
+            'description' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $blogs = Blog::find($id);
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            // store image in public folder (blogimage folder)
+            $imageName = $image->getClientOriginalName();
+
+            $image->move(public_path('blogimage/'), $imageName);
+            $blogs->image = $imageName;
+        }
+
+        $blogs->title = $request->title;
+        $blogs->slug = $request->slug;
+        $blogs->description = $request->description;
+        $blogs->save();
+        return redirect()->back()->with('success','Record Update Successfully');
     }
 
     /**

@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <form class="form-group" enctype="multipart/form-data" action="" method="post">
+        <form class="form-group" enctype="multipart/form-data" action="{{ Route('blog.update',$blogs->id) }}" method="post">
             @csrf
             <div class="form-label-group">
                 <input id="form_firstname" type="text" name="title" value="{{ $blogs->title }}" class="form-control" placeholder="Title" required>
@@ -40,9 +40,12 @@
                 <input id="form_firstname" type="text" name="slug" value="{{ $blogs->slug }}" class="form-control" placeholder="Slug" required>
                 <label for="form_firstname">Slug</label>
             </div>
-            <div class="form-label-group">
+            {{-- <div class="form-label-group">
                 <textarea id="form_firstname" name="description" class="form-control" required>{{ $blogs->description }}</textarea>
                 <label for="form_firstname">Description</label>
+            </div> --}}
+            <div class="form-label-group">
+                <textarea id="form_firstname" name="description" class="form-control" placeholder="description" required>{{ $blogs->description }}</textarea>
             </div>
             <div class="row">
             <div class="col-md-6">

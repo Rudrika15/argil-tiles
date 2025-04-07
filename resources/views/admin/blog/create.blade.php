@@ -40,10 +40,14 @@
                 <input id="form_firstname" type="text" name="slug" class="form-control" placeholder="Slug" required>
                 <label for="form_firstname">Slug</label>
             </div>
+            {{-- <div class="form-label-group">
+                <input id="form_firstname" type="text" name="description" class="form-control" placeholder="description" required>
+                <label for="form_firstname">description</label>
+            </div> --}}
             <div class="form-label-group">
-                <textarea id="form_firstname" name="description" class="form-control" required></textarea>
-                <label for="form_firstname">Description</label>
+                <textarea id="form_firstname" name="description" class="form-control" placeholder="description" required></textarea>
             </div>
+
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-label-group">
