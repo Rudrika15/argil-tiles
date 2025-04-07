@@ -46,10 +46,10 @@
                         <td>{{ $data->title }}</td>
                         <td>{{ $data->slug }}</td>
                         <td>{{ $data->description }}</td>
-                        <td><img src="{{ $data->image }}" style="height:200px" class="img-thumbnail"></td>
+                        <td><img src="{{ 'blogimage/'.$data->image }}" style="height:200px" class="img-thumbnail"></td>
                         <td>{{ $data->status }}</td>
                         <td style="gap: 8px">
-                            <a href = "{{ route('slider.edit', $data->id) }}" class="btn btn-primary"> Edit </a>
+                            <a href = "{{ route('blog.edit', $data->id) }}" class="btn btn-primary"> Edit </a>
                             <a href="{{ route('slider.delete', $data->id) }}" class="btn btn-warning"> Delete </a>
                         </td>
                     </tr>

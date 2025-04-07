@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 use App\Models\Catelogue;
 
@@ -24,10 +24,7 @@ use App\Models\Wsizemaster;
 use App\Models\Finishtype;
 use App\Models\Favorite;
 
-use Validator;
-use Carbon\Carbon;
-
-class ApiController extends Controller
+class apiController extends Controller
 {
     function catelougeview($id = 0)
     {
@@ -78,7 +75,7 @@ class ApiController extends Controller
     function register(Request $requset)
     {
         $um = new Usermaster();
-        
+
         $um->name = $requset->name;
         $um->email = $requset->email;
         $um->password = $requset->password;
@@ -88,11 +85,11 @@ class ApiController extends Controller
     }
 
  public function sendEmail($subject, $message)
-        {                  
-              
+        {
+
               $json_string = array('to' => array('sales@argiltiles.com','kushal@argiltiles.com','nirav@shoutnhike.com','jigar@shoutnhike.com', 'manoj@shoutnhike.com','vaishali@shoutnhike.com'));
-  
-                
+
+
                 $params = array(
                         'to'        => "sales@argiltiles.com",
                         'toname'    => "Argil Tiles website ",
@@ -102,7 +99,7 @@ class ApiController extends Controller
                         'text'      => $message,
                         'html'      => $message,
                         'x-smtpapi' => json_encode($json_string),
-                      
+
                     );
 
                 $request =  'https://api.sendgrid.com/api/mail.send.json';
@@ -120,18 +117,18 @@ class ApiController extends Controller
                 // Tell curl not to return headers, but do return the response
                 curl_setopt($session, CURLOPT_HEADER, false);
                 curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
-                
+
                 // obtain response
                 $response = curl_exec($session);
                 curl_close($session);
-                
+
                 // print everything out
                 return($response);
 
 
         }
-        
-        
+
+
     function contactus(Request $request){
         $name = $request->name;
         $email = $request->email;
@@ -144,15 +141,15 @@ class ApiController extends Controller
         $ctc->contactno = $contactno;
         $ctc->message = $message;
         $ctc->save();
-        
-        
+
+
             $msg="Dear Sir/Madam,<br><br> You got a new Contact from ".$name .". Following are the  details:<br><br>";
         	$msg.="<br>Contact Person : ".$name;
-	        $msg.="<br>Phone : ".$contactno;	
-	        $msg.="<br>Email : ".$email;				
-	        $msg.="<br>Body Message : " . $message;	
-	        $msg.="<br><br><b>Thank You.</b>";				
-	
+	        $msg.="<br>Phone : ".$contactno;
+	        $msg.="<br>Email : ".$email;
+	        $msg.="<br>Body Message : " . $message;
+	        $msg.="<br><br><b>Thank You.</b>";
+
 	        $to = "sales@argiltiles.com";
             $subject = "Contact us ";
 
@@ -162,11 +159,11 @@ class ApiController extends Controller
             // More headers
            // $headers .= 'From: argil45k@argiltiles.com' . "\r\n";
           // $headers .= 'Cc: hardikprajapati23@outlook.com,jigar@shoutnhike.com,manoj@shoutnhike.com,vaishali@shoutnhike.com,kushalargil@gmail.com' . "\r\n";
-           
+
            // mail($to,$subject,$msg,$headers);
 
             $responseEmail=$this->sendEmail($subject, $msg);
-            
+
         return $ctc;
         // return $responseEmail;
 
@@ -187,14 +184,14 @@ class ApiController extends Controller
         $inqr->message= $message;
         $inqr->details= $type;
         $inqr->save();
-        
+
             $msg="Dear Sir/Madam,<br><br> You got a new Inquiry from ".$name .". Following are the  details:<br><br>";
         	$msg.="<br>Contact Person : ".$name;
-	        $msg.="<br>Phone : ".$contactno;	
+	        $msg.="<br>Phone : ".$contactno;
 	        $msg.="<br>Email : ".$email;
 	        $msg.="<br>Product : ".$productname . " type " . $type;
-	        $msg.="<br>Body Message : " . $message;	
-	        $msg.="<br><br><b>Thank You.</b>";				
+	        $msg.="<br>Body Message : " . $message;
+	        $msg.="<br><br><b>Thank You.</b>";
 
             $subject = "Inquiry ";
 
@@ -432,7 +429,7 @@ class ApiController extends Controller
             ->paginate(8);
 
 
-    // product code filter 
+    // product code filter
 		if($request->productcode){
 			$data = Wallproduct::where('name','=', $request->productcode)
             ->paginate(8);

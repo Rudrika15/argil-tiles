@@ -22,7 +22,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.blog.create');
     }
 
     /**
@@ -30,8 +30,31 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'slug' => 'required',
+            'description' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            // store image in public folder (blogimage folder)
+            $imageName = $image->getClientOriginalName();
+
+            $image->move(public_path('blogimage/'), $imageName);
+
+
+
+        $blogs = new Blog();
+        $blogs->title = $request->title;
+        $blogs->slug = $request->slug;
+        $blogs->description = $request->description;
+        $blogs->image = $imageName;
+        $blogs->save();
+        return redirect()->back()->with('success','Record Insert Successfully');
     }
+}
 
     /**
      * Display the specified resource.
@@ -46,7 +69,8 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $blogs =Blog::find($id);
+        return view('admin.blog.edit',compact('blogs'));
     }
 
     /**
