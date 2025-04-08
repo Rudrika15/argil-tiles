@@ -14,15 +14,16 @@
         </div>
     </section>
     <!--End Page Title-->
-    <div class="heading-title container-fluid">
+    {{-- <div class="heading-title container-fluid">
         <h2 class="container">Home/Core Value</h2>
-    </div>
+    </div> --}}
 
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <p class="core-heading">Philosophy</p>
-                <p class="text-justify paragraph">Since the inception of the first company the Prajapat Tiles company and subsequent
+                <p class="text-justify paragraph">Since the inception of the first company the Prajapat Tiles company and
+                    subsequent
                     development in to a number of other manufacturing units and brands, the group has maintained a
                     philosophy of Sharing and Betterment of life. In every action we take and all developments that we make,
                     the above two guiding principles have acted as the pillars of decision making. The top management of the
@@ -40,22 +41,27 @@
             </div>
             <div class="col-md-6">
                 <img src="asset/images/argileimage/corevaluesimage.png" alt=""
-                class="img-responsive all-page-side-image">
+                    class="img-responsive all-page-side-image">
             </div>
             <div class="col-md-12">
                 <p class="core-heading">Mission</p>
                 <p class="text-justify paragraph1">To excel each company under ARGIL Group in their product and
                     service to be at the top level.</p>
-                <p class="text-justify paragraph1">We will use the most relevant technology and inputs to make our products the most
+                <p class="text-justify paragraph1">We will use the most relevant technology and inputs to make our products
+                    the most
                     appreciated and demanded.</p>
-                <p class="text-justify paragraph1">We will recruit people and train them to retain them till retirement, always
+                <p class="text-justify paragraph1">We will recruit people and train them to retain them till retirement,
+                    always
                     improving their Human resource Value.</p>
-                <p class="text-justify paragraph1">To consistently introduce new product range in order to meet the global competition
+                <p class="text-justify paragraph1">To consistently introduce new product range in order to meet the global
+                    competition
                     and eventually attain leadership status.</p>
-                <p class="text-justify paragraph1">To invest more in the R&D department and constantly improve the existing product
+                <p class="text-justify paragraph1">To invest more in the R&D department and constantly improve the existing
+                    product
                     quality and increase the product line and product depth.</p>
                 <p class="text-justify paragraph1">To strengthen the existing export and explore the new markets.</p>
-                <p class="text-justify paragraph1">We would like to make ARGIL the most respected and admired business group, globally,
+                <p class="text-justify paragraph1">We would like to make ARGIL the most respected and admired business
+                    group, globally,
                     in terms of products and services that add value to lives of all associated.</p>
 
             </div>

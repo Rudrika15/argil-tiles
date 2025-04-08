@@ -8,15 +8,16 @@
                         <h1>Documentary Film</h1>
                     </div>
                     <div class="bread-crumb">
-                        <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Documentary Film</span>
+                        <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Documentary
+                            Film</span>
                     </div>
                 </div>
             </div>
         </section>
         <!--End Page Title-->
-        <div class="container-fluid heading-title">
+        {{-- <div class="container-fluid heading-title">
             <h2 class="container">Home/Documentry Film</h2>
-        </div>
+        </div> --}}
 
         <div class="container documntry-film">
             <iframe width="100%" height="450" src="https://www.youtube.com/embed/OeIRz9IBs24?si=3w7Lh8lDrE_AJfsU"

@@ -14,9 +14,9 @@
         </div>
     </section>
     <!--End Page Title-->
-    <div class="container-fluid heading-title">
+    {{-- <div class="container-fluid heading-title">
         <h2 class="container">Home/Privacy Policy</h2>
-    </div>
+    </div> --}}
 
     <div class="container">
         <div class="row">
@@ -41,7 +41,8 @@
             </div>
             <div class="col-md-12">
                 <p class="core-heading" data-aos="fade-up">Log Data</p>
-                <p class="text-justify paragraph" data-aos="fade-up">I want to inform you that whenever you use my Service, in a case of an
+                <p class="text-justify paragraph" data-aos="fade-up">I want to inform you that whenever you use my Service,
+                    in a case of an
                     error in the app I collect data and information (through third party products) on your phone called Log
                     Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device
                     name, operating system version, the configuration of the app when utilizing my Service, the time and
@@ -49,7 +50,8 @@
             </div>
             <div class="col-md-12">
                 <p class="core-heading" data-aos="fade-up">Cookies</p>
-                <p class="text-justify paragraph" data-aos="fade-up">Cookies are files with a small amount of data that are commonly used as
+                <p class="text-justify paragraph" data-aos="fade-up">Cookies are files with a small amount of data that are
+                    commonly used as
                     anonymous unique identifiers. These are sent to your browser from the websites that you visit and are
                     stored on your device's internal memory. This Service does not use these “cookies” explicitly. However,
                     the app may use third party code and libraries that use “cookies” to collect information and improve
@@ -59,7 +61,8 @@
             </div>
             <div class="col-md-12">
                 <p class="core-heading" data-aos="fade-up">Service Providers</p>
-                <p class="text-justify paragraph" data-aos="fade-up">I may employ third-party companies and individuals due to the following
+                <p class="text-justify paragraph" data-aos="fade-up">I may employ third-party companies and individuals due
+                    to the following
                     reasons: To facilitate our Service;To provide the Service on our behalf;To perform Service-related
                     services; orTo assist us in analyzing how our Service is used. I want to inform users of this Service
                     that these third parties have access to your Personal Information. The reason is to perform the tasks
@@ -69,7 +72,8 @@
             </div>
             <div class="col-md-12">
                 <p class="core-heading" data-aos="fade-up">Security</p>
-                <p class="text-justify paragraph" data-aos="fade-up">I value your trust in providing us your Personal Information, thus we are
+                <p class="text-justify paragraph" data-aos="fade-up">I value your trust in providing us your Personal
+                    Information, thus we are
                     striving to use commercially acceptable means of protecting it. But remember that no method of
                     transmission over the internet, or method of electronic storage is 100% secure and reliable, and I
                     cannot guarantee its absolute security.
@@ -78,7 +82,8 @@
             </div>
             <div class="col-md-12">
                 <p class="core-heading" data-aos="fade-up">Links to Other Sites</p>
-                <p class="text-justify paragraph" data-aos="fade-up">This Service may contain links to other sites. If you click on a
+                <p class="text-justify paragraph" data-aos="fade-up">This Service may contain links to other sites. If you
+                    click on a
                     third-party link, you will be directed to that site. Note that these external sites are not operated by
                     me. Therefore, I h3ly advise you to review the Privacy Policy of these websites. I have no control over
                     and assume no responsibility for the content, privacy policies, or practices of any third-party sites or
@@ -88,7 +93,8 @@
             <div class="col-md-12">
                 <p class="core-heading" data-aos="fade-up">Children’s Privacy
                 </p>
-                <p class="text-justify paragraph" data-aos="fade-up">These Services do not address anyone under the age of 13. I do not
+                <p class="text-justify paragraph" data-aos="fade-up">These Services do not address anyone under the age of
+                    13. I do not
                     knowingly collect personally identifiable information from children under 13. In the case I discover
                     that a child under 13 has provided me with personal information, I immediately delete this from our
                     servers. If you are a parent or guardian and you are aware that your child has provided us with personal
@@ -98,7 +104,8 @@
             <div class="col-md-12">
                 <p class="core-heading" data-aos="fade-up">Changes to This Privacy Policy
                 </p>
-                <p class="text-justify paragraph" data-aos="fade-up">I may update our Privacy Policy from time to time. Thus, you are advised
+                <p class="text-justify paragraph" data-aos="fade-up">I may update our Privacy Policy from time to time.
+                    Thus, you are advised
                     to review this page periodically for any changes. I will notify you of any changes by posting the new
                     Privacy Policy on this page. This policy is effective as of 2020-06-15
 
@@ -107,7 +114,8 @@
             <div class="col-md-12">
                 <p class="core-heading" data-aos="fade-up">Contact Us
                 </p>
-                <p class="text-justify paragraph" data-aos="fade-up">If you have any questions or suggestions about my Privacy Policy, do not
+                <p class="text-justify paragraph" data-aos="fade-up">If you have any questions or suggestions about my
+                    Privacy Policy, do not
                     hesitate to contact me at +91 98252 11465.
                 </p>
             </div>

@@ -5,18 +5,19 @@
         <div class="container">
             <div class="content-box">
                 <div class="title">
-                    <h1>QuartzInquiry</h1>
+                    <h1>{{ $data->name }}</h1>
                 </div>
                 <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>QuartzInquiry</span>
+                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a>
+                    &nbsp;<span>{{ $data->name }}</span>
                 </div>
             </div>
         </div>
     </section>
     <!--End Page Title-->
-    <div class="heading-title container-fluid">
+    {{-- <div class="heading-title container-fluid">
         <h3 class="container">Home/{{ $data->name }}</h3>
-    </div>
+    </div> --}}
 
     {{-- <div class="container-fluid">
         <div class="row">
@@ -77,32 +78,38 @@
             <div class="carousel-inner" role="listbox">
                 @if ($data->mainImg)
                     <div class="item active">
-                        <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="..." class="img-responsive carousel-image" width="100%" height="20px">
+                        <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="..."
+                            class="img-responsive carousel-image" width="100%" height="20px">
                     </div>
                 @endif
                 @if ($data->subImg1)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg1) }}" alt="..." class="img-responsive carousel-image">
+                        <img src="{{ asset('quartz/' . $data->subImg1) }}" alt="..."
+                            class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg2)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg2) }}" alt="..." class="img-responsive carousel-image">
+                        <img src="{{ asset('quartz/' . $data->subImg2) }}" alt="..."
+                            class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg3)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg3) }}" alt="..." class="img-responsive carousel-image">
+                        <img src="{{ asset('quartz/' . $data->subImg3) }}" alt="..."
+                            class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg4)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg4) }}" alt="..." class="img-responsive carousel-image">
+                        <img src="{{ asset('quartz/' . $data->subImg4) }}" alt="..."
+                            class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg5)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg5) }}" alt="..." class="img-responsive carousel-image">
+                        <img src="{{ asset('quartz/' . $data->subImg5) }}" alt="..."
+                            class="img-responsive carousel-image">
                     </div>
                 @endif
             </div>
@@ -151,7 +158,7 @@
                 <div class="col-md-5 product-details product-details3 product-infom-card">
                     <h3 class="product-title-heading">APPLICATIONS</h3>
                     <h3>Flooring :</h3>
-                    <p>Residential  <i class="fa fa-check"></i></p>
+                    <p>Residential <i class="fa fa-check"></i></p>
                     <p>Commercial <i class="fa fa-check"></i></p>
                     <h3>Counters :</h3>
                     <p>Residential <i class="fa fa-check"></i> </p>
@@ -174,10 +181,12 @@
                     <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php"
                         method="post">
                         <div class="col-md-12 input">
-                            <input type="text" name="form_name" value="" placeholder="Your Name " required="" class="inp">
+                            <input type="text" name="form_name" value="" placeholder="Your Name " required=""
+                                class="inp">
                         </div>
                         <div class="col-md-12 input">
-                            <input type="email" name="form_email" value="" placeholder="Email" required="" class="inp">
+                            <input type="email" name="form_email" value="" placeholder="Email" required=""
+                                class="inp">
                         </div>
                         <div class="col-md-12 input">
                             <input type="text" name="form_phone" value="" placeholder="Contact Number"

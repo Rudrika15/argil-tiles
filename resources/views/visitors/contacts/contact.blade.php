@@ -15,9 +15,9 @@
     </section>
 
     <!--End Page Title-->
-    <div class="heading-title container-fluid">
+    {{-- <div class="heading-title container-fluid">
         <h2 class="container">Home/Contact Us</h2>
-    </div>
+    </div> --}}
 
     <div class="container">
         <div class="row">

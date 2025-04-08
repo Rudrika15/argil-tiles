@@ -14,14 +14,15 @@
         </div>
     </section>
     <!--End Page Title-->
-    <div class="heading-title container-fluid">
+    {{-- <div class="heading-title container-fluid">
         <h2 class="container">Home/Group Company</h2>
-    </div>
+    </div> --}}
 
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p class="paragraph text-justify">The company has three manufacturing units. The Roof Tile, Wall tiles and the Quartz
+                <p class="paragraph text-justify">The company has three manufacturing units. The Roof Tile, Wall tiles and
+                    the Quartz
                     Stone Unit. All the units have a very strong and industrious infrastructure that is instrumental in
                     making the company and the brand, leading players in their respective product lines across India and
                     overseas. Located at Morbi, it touches the National Highway leading to important port destination as
@@ -40,7 +41,8 @@
                     class="img-responsive all-page-side-image group-image">
             </div>
             <div class="col-md-12">
-                <p class="paragraph text-justify">The operatives of the company, many of them working since more than 20 years, are all
+                <p class="paragraph text-justify">The operatives of the company, many of them working since more than 20
+                    years, are all
                     a part of the success story of ARGIL. They are well treated and trained to always improve their
                     productivity and hence their income as well. They put their best efforts with quality perspective so
                     that the output is acceptable and rejection is low. They are well gelled with the supervisors and the
@@ -74,13 +76,15 @@
                     plant is upgraded regularly to keep up with the changing needs as well as new technology available.</p>
                 <p class="heading1" data-aos="fade-up">Argil Ceramics</p>
                 <p class="heading3" data-aos="fade-up">Commencement: 2010</p>
-                <p class="paragraph text-justify" data-aos="fade-up">The Quartz Stone Unit is relatively freshly set up and hence
+                <p class="paragraph text-justify" data-aos="fade-up">The Quartz Stone Unit is relatively freshly set up and
+                    hence
                     boasts of being more modern and advanced in comparison. It is established on 40,000 Sq mtr. Area, with
                     state of the art technology and well-planned layout of equipments and storage areas as well as material
                     and men movement sections defined, it has flawless production running round the clock. The inherent
                     advantage of the plant being set up by professionals from day one is its extremely efficient and without
                     any bottle necks of adjustments, making it more efficient and empowering larger production.</p>
-                <p class="paragraph text-justify" data-aos="fade-up">Quartz Stone: When the beauty of nature demands to be in
+                <p class="paragraph text-justify" data-aos="fade-up">Quartz Stone: When the beauty of nature demands to be
+                    in
                     every life technology is used to create the beauty in every life. Argil DuraQuartz Surface is one such
                     product that combines the elegance of nature into excellent tiling solutions with the employment of
                     Quartz Technology. The QUARTZ STONE unit has evolved to deliver to the world the best of nature in forms
@@ -116,7 +120,8 @@
                     <li>Color consistency</li>
                     <li>Immunity to freeze and thaw</li>
                 </ul>
-                <p class="paragraph text-justify" data-aos="fade-up">They come in jumbo sizes of 3000 x 1300 mm and 3200 x 1600 mm also it can be customized as per
+                <p class="paragraph text-justify" data-aos="fade-up">They come in jumbo sizes of 3000 x 1300 mm and 3200 x
+                    1600 mm also it can be customized as per
                     requirement. They find applications in big table tops kitchen tops and the like. They can be resized,
                     cut, beveled like any stone. Custom sizes for the stone are also available. The tiles can be of 300x300
                     mm, 300x600 mm, 600x600 mm, 800x800 mm

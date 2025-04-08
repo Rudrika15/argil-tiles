@@ -14,14 +14,15 @@
         </div>
     </section>
     <!--End Page Title-->
-    <div class="heading-title container-fluid">
+    {{-- <div class="heading-title container-fluid">
         <h2 class="container">Home/About</h2>
-    </div>
+    </div> --}}
     <div class="container">
         <div class="row">
             <div class="col-md-6">
 
-                <p class="text-justify paragraph">India's greatest entrepreneurial stories are all epics within themselves. One
+                <p class="text-justify paragraph">India's greatest entrepreneurial stories are all epics within themselves.
+                    One
                     of those is the story of the Argil Group of companies. Shri Motbhai Prajapati was a potter at Sultanpur,
                     a very small village He was blessed with a son, who was destined to create history in the region. We
                     know him now as Shri Amarshibhai Prajapati. Since a young age, he was helping his father in the work of
@@ -33,35 +34,42 @@
                     He moved on to Junagadh District to serve as a moulder fro 2 years in Kathiawad Industries Ltd.</p>
             </div>
             <div class="col-md-6">
-                <img src="asset/images/argileimage/aboutimage.png" alt=""  class="img-responsive all-page-side-image" >
+                <img src="asset/images/argileimage/aboutimage.png" alt=""
+                    class="img-responsive all-page-side-image">
             </div>
             <div class="col-md-12">
-                <p class="text-justify paragraph">People destined to create history are always blessed with astute vision of things to
+                <p class="text-justify paragraph">People destined to create history are always blessed with astute vision of
+                    things to
                     come and determination to articulate the vision into reality. Shri Amarshibhai was no different. While
                     still employed he saw a heap of Mangalore roof tiles which were manufactured in Mangalore South India
                     only. Manglaore roofing tiles' main ingredient was Black and Red clay, which was available in abundance
                     in Morbi. The nearness to the raw material and his technical know-how of clay encouraged him to start
                     his own production of roofing tiles.</p>
-                <p class="text-justify paragraph">With the zeal of an entrepreneur, he returned to Morbi. With numerous trials, lot of
+                <p class="text-justify paragraph">With the zeal of an entrepreneur, he returned to Morbi. With numerous
+                    trials, lot of
                     experimentation and tremendous research, he could not design the best product or the system to mass
                     manufacture roof tiles. While many would have given up, he was not the one to throw in the towel. He
                     worked harder ever determined to make something big. Finally, he succeeded in developing durable
                     beautiful Mangalore Tile. He also devised a very efficient production system to mass manufacture tiles.
                     Trained man power was available in Morbi and that acted as a strong catalyst to start fast.</p>
-                <p class="text-justify paragraph">Prajapat Tiles Company was formed in 1952. Funding was the biggest challenge as the
+                <p class="text-justify paragraph">Prajapat Tiles Company was formed in 1952. Funding was the biggest
+                    challenge as the
                     Family had very little saved. Most of the initial capital was borrowed and a small manufacturing unit
                     was commissioned by Shri Prajapati and his team. Being the first of its kind manufacturing unit in the
                     region and a very heavy demand of Mangalore tiles, 100% production was sold.</p>
-                <p class="text-justify paragraph">The founder had witnessed good & bad days. He never wished his brothers to go through
+                <p class="text-justify paragraph">The founder had witnessed good & bad days. He never wished his brothers to
+                    go through
                     the terrible struggle hence he started training his brothers, technically and commercially. Each of them
                     was given a separate unit to manage. In modern day management we would term these as profit centers and
                     each brother a profit centre head. The flagship company though remained Prajapat Tiles Co.</p>
-                <p class="text-justify paragraph" data-aos="fade-up">Stability is a limiting belief for those with big dreams and an
+                <p class="text-justify paragraph" data-aos="fade-up">Stability is a limiting belief for those with big
+                    dreams and an
                     even greater appetite
                     for betterment of life. The founder did not rest on the laurels of this achievement. In the year 1999 he
                     established ARGIL brand which manufactured and supplied high quality wall tiles. It is one of the most
                     admired wall tile brands in India today.</p>
-                <p class="text-justify paragraph" data-aos="fade-up">Innovation and growth always go hand in hand. In the year 2010 the
+                <p class="text-justify paragraph" data-aos="fade-up">Innovation and growth always go hand in hand. In the
+                    year 2010 the
                     company ahs recently launched Quartz Stone unit. The first of its kind in India, it has the most vibrant
                     product range in the segment.</p>
 
