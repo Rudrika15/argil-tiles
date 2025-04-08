@@ -1,24 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="{{asset('asset/images/logo/logo.png')}}">
-@yield("seosection")
+    <link rel="icon" href="{{ asset('asset/images/logo/logo.png') }}">
+    @yield('seosection')
 
 
-<!-- Stylesheets -->
-<link href="{{ asset('asset/css/style.css') }}" rel="stylesheet">
-<link href="{{ asset('asset/css/responsive.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('asset/css/app1.css') }}">
+    <!-- Stylesheets -->
+    <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('asset/css/responsive.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('asset/css/app1.css') }}">
 
 
 </head>
 
 <!-- page wrapper -->
+
 <body class="body_wrapper">
 
 
@@ -39,7 +40,8 @@
                 </div>
                 <div class="top-right">
                     <ul class="social-top">
-                        <li><a href="https://www.facebook.com/argilgroup/"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="https://www.facebook.com/argilgroup/"><i class="fa fa-facebook-square"></i></a>
+                        </li>
                         <li><a href="https://www.instagram.com/argilgroup/"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
@@ -52,13 +54,18 @@
         <div class="header-lower">
             <div class="container">
                 <div class="logo-box">
-                    <a href="/"> <figure><img src="{{ asset('asset/images/logo/logo.png') }}" alt=""
-                        class="img-responsive"></figure></a>
+                    <a href="/">
+                        <figure>
+                            <img src="{{ asset('asset/images/logo/logo.png') }}" alt="argil logo" class="img-responsive"
+                                style="width: 150px">
+                        </figure>
+                    </a>
                 </div>
                 <div class="menu-bar">
                     <nav class="main-menu">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -73,7 +80,7 @@
                                 </li>
 
                                 <!-- Corporate Dropdown -->
-                                 <li
+                                <li
                                     class="dropdown {{ request()->is('profile*') || request()->is('about*') || request()->is('documentaryfilm*') || request()->is('corevalues*') || request()->is('groupcompany*') || request()->is('achievements*') || request()->is('plants*') || request()->is('quality*') ? 'active' : '' }}">
                                     <a href="#">Corporate</a>
                                     <ul>
@@ -138,13 +145,13 @@
                                 </form>
                             </div>
                         </div> --}}
-                        {{-- <div class="cart-box">
+                    {{-- <div class="cart-box">
                             <div class="icon-box"><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></div>
                             <div class="number">3</div>
                         </div> --}}
-                    </div>
                 </div>
             </div>
+        </div>
         </div>
         <!-- end header lower -->
 
@@ -152,13 +159,16 @@
         <div class="sticky-header">
             <div class="container">
                 <div class="logo-box">
-                    <a href="/"> <figure><img src="{{ asset('asset/images/logo/logo.png') }}" alt=""
-                        class="img-responsive"></figure></a>
+                    <a href="/">
+                        <figure><img src="{{ asset('asset/images/logo/logo.png') }}" alt=""
+                                class="img-responsive"></figure>
+                    </a>
                 </div>
                 <div class="menu-bar">
                     <nav class="main-menu">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -173,7 +183,7 @@
                                 </li>
 
                                 <!-- Corporate Dropdown -->
-                                 <li
+                                <li
                                     class="dropdown {{ request()->is('profile*') || request()->is('about*') || request()->is('documentaryfilm*') || request()->is('corevalues*') || request()->is('groupcompany*') || request()->is('achievements*') || request()->is('plants*') || request()->is('quality*') ? 'active' : '' }}">
                                     <a href="#">Corporate</a>
                                     <ul>
@@ -242,9 +252,9 @@
                             <div class="icon-box"><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></div>
                             <div class="number">3</div>
                         </div> --}}
-                    </div>
                 </div>
             </div>
+        </div>
         </div>
         <!-- end sticky header -->
 
@@ -339,30 +349,31 @@
 
 
 
-<!--End bodywrapper-->
+    <!--End bodywrapper-->
 
 
-<!--Scroll to top-->
-<div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-up"></span></div>
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-up"></span>
+    </div>
 
 
-<!--jquery js -->
+    <!--jquery js -->
 
 
-<script type="text/javascript" src="{{asset('asset/js/jquery-2.1.4.js')}}"></script>
-<script src="{{asset('asset/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('asset/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('asset/js/wow.js')}}"></script>
-<script src="{{asset('asset/js/isotope.js')}}"></script>
-<script src="{{asset('asset/js/validation.js')}}"></script>
-<script src="{{asset('asset/js/jquery-ui.js')}}"></script>
-<script src="{{asset('asset/js/jquery.fancybox.pack.js')}}"></script>
-<script type="text/javascript" src="{{asset('asset/js/SmoothScroll.js')}}"></script>
-<script src="{{asset('asset/js/revolution.min.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('asset/js/jquery-2.1.4.js') }}"></script>
+    <script src="{{ asset('asset/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('asset/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('asset/js/wow.js') }}"></script>
+    <script src="{{ asset('asset/js/isotope.js') }}"></script>
+    <script src="{{ asset('asset/js/validation.js') }}"></script>
+    <script src="{{ asset('asset/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('asset/js/jquery.fancybox.pack.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('asset/js/SmoothScroll.js') }}"></script>
+    <script src="{{ asset('asset/js/revolution.min.js') }}"></script>
 
-<script src="{{asset('asset/js/script.js')}}"></script>
+    <script src="{{ asset('asset/js/script.js') }}"></script>
 
-  <!-- Include AOS CSS -->
+    <!-- Include AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- Include AOS JS -->
@@ -372,6 +383,7 @@
         // Initialize AOS
         AOS.init();
     </script>
-<!-- End of .page_wrapper -->
+    <!-- End of .page_wrapper -->
 </body>
+
 </html>

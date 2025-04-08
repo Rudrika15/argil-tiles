@@ -5,13 +5,13 @@
         <section class="page-title" style="background-image: url(asset/images/argileimage/quartzimage.jpg); ">
             <div class="container">
                 <div class="content-box">
-                    {{-- <div class="title">
+                    <div class="title">
                         <h1>Quartz Surface</h1>
                     </div>
                     <div class="bread-crumb">
                         <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Quartz
                             Surface</span>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </section>
