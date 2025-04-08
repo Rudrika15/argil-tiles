@@ -37,7 +37,7 @@ class StockController extends Controller
             $stock->save();
 
 		//		return response($wsize,201);
-            return redirect()->back()->with('success','Record Insert Successfully');
+        return redirect()->route('stockshow')->with('msg', 'Record Inserted Successfully');
 
     }
 
@@ -69,12 +69,12 @@ class StockController extends Controller
             $stock->save();
 
 		//		return response(wqsize,201);
-            return redirect()->back()->with('success','Record Update Successfully');
+        return redirect()->route('stockshow')->with('msg', 'Record Update Successfully');
 
     }
     function delete($id)
 	{
         $data=Stock::find($id)->delete();
-		return redirect('/stockshow')->with('success','Data Delete successfully');
+        return redirect()->route('stockshow')->with('msg', 'Data Delete Successfully');
     }
 }

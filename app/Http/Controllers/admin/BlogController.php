@@ -14,6 +14,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::all();
+        // $blogs = Blog::whereIn('status', ['publish'])->get();        ;
         return view('admin.blog.index',compact('blogs'));
     }
 
@@ -52,7 +53,7 @@ class BlogController extends Controller
         $blogs->description = $request->description;
         $blogs->image = $imageName;
         $blogs->save();
-        return redirect()->back()->with('success','Record Insert Successfully');
+        return redirect()->route('blog')->with('msg', 'Record Inserted Successfully');
     }
 }
 
@@ -86,7 +87,7 @@ class BlogController extends Controller
         ]);
 
         $blogs = Blog::find($id);
-        if ($request->file('image')) {
+        if ($request->hasFile('image')) {
             $image = $request->file('image');
             // store image in public folder (blogimage folder)
             $imageName = $image->getClientOriginalName();
@@ -99,7 +100,7 @@ class BlogController extends Controller
         $blogs->slug = $request->slug;
         $blogs->description = $request->description;
         $blogs->save();
-        return redirect()->back()->with('success','Record Update Successfully');
+        return redirect()->route('blog')->with('msg', 'Record Update Successfully');
     }
 
     /**
@@ -107,6 +108,8 @@ class BlogController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $blogs = Blog::find($id);
+        $blogs->delete();
+        return redirect()->route('blog')->with('msg', 'Data Delete Successfully');
     }
 }

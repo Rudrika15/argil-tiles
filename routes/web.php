@@ -204,6 +204,7 @@ Route::middleware('auth:web')->group(function () {
     Route::post("blog.store",[BlogController::class,'store'])->name('blog.store');
     Route::get("blog.edit/{id}",[BlogController::class,'edit'])->name('blog.edit');
     Route::post("blog.update/{id}",[BlogController::class,'update'])->name('blog.update');
+    Route::get("blog.delete/{id}",[BlogController::class,'destroy'])->name('blog.delete');
 
 
 });
@@ -227,6 +228,7 @@ Route::get('/contact',[VisitorController::class,'contact']);
 Route::get('/spcproducts',[VisitorController::class,'spcproducts']);
 Route::get('spcproductinquiry/{id?}',[VisitorController::class,'spcproductinquiry'])->name('spcproductinquiry');
 Route::get('quartzinquiry/{id}',[VisitorController::class,'quartzinquiry'])->name('quartzinquiry');
+// Route::get('quartzinquiry/{slug?}',[VisitorController::class,'quartzinquiry'])->name('quartzinquiry');
 Route::get('/quartzsurface',[VisitorController::class,'quartzsurface']);
 Route::get('/privacyPolicy',[VisitorController::class,'privacyPolicy']);
 

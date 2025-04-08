@@ -50,7 +50,7 @@ class CatelogueController extends Controller
             }$catalogue->save();
 
 		//		return response($catalogue,201);
-            return redirect()->back()->with('success','Record Insert Successfully');
+        return redirect()->route('catelogueshow')->with('msg', 'Record Inserted Successfully');
 
     }
 
@@ -89,12 +89,12 @@ class CatelogueController extends Controller
             $catalogue->save();
 
 		//		return response($catalogue,201);
-            return redirect()->back()->with('success','Record Update Successfully');
+        return redirect()->route('catelogueshow')->with('msg', 'Record Update Successfully');
 
     }
     function delete($id)
 	{
         $data=Catelogue::find($id)->delete();
-		return redirect('/catelogueshow')->with('success','Data Delete successfully');
+        return redirect()->route('catelogueshow')->with('msg', 'Data Delete Successfully');
     }
 }

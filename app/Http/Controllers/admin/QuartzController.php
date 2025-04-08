@@ -91,7 +91,7 @@ class QuartzController extends Controller
 
 		$quartzproduct->save();
 
-		return redirect()->back()->with('success', 'Record Insert Successfully');
+        return redirect()->route('quartzshow')->with('msg', 'Record Inserted Successfully');
 	}
 
 	function create()
@@ -184,11 +184,11 @@ class QuartzController extends Controller
 
 		$quartzproduct->save();
 
-		return redirect()->back()->with('success', 'Record Update Successfully');
+        return redirect()->route('quartzshow')->with('msg', 'Record Update Successfully');
 	}
 	function delete($id)
 	{
 		$data = Quartzproduct::find($id)->delete();
-		return redirect('/quartzshow')->with('success', 'Data Delete successfully');
+        return redirect()->route('quartzshow')->with('msg', 'Data Delete Successfully');
 	}
 }

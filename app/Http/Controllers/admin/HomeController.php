@@ -44,7 +44,7 @@ class HomeController extends Controller
 			$homepage->save();
 
 				//return response($homepage,201);
-            return redirect()->back()->with('success','Record Insert Successfully');
+                return redirect()->route('homeshow')->with('msg', 'Record Inserted Successfully');
 
     }
     function edit($id)
@@ -124,12 +124,12 @@ class HomeController extends Controller
 
     $homepage->save();
 
-    return redirect()->back()->with('success', 'Record Updated Successfully');
+    return redirect()->route('homeshow')->with('msg', 'Record Update Successfully');
 }
 
     function delete($id)
 	{
         $data=Homepage::find($id)->delete();
-		return redirect('/homeshow')->with('success','Data Delete successfully');
+        return redirect()->route('homeshow')->with('msg', 'Data Delete Successfully');
     }
 }

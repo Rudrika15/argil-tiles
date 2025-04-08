@@ -85,7 +85,8 @@ class VisitorController extends Controller
             ->send(new ContactFormMail($name, $email, $phone, $message));
 
         // Redirect back with success message
-        return redirect()->back()->with('success', 'Your message has been sent!');
+        return view('visitors.contacts.contact')->with('success', 'Your message has been sent!');
+
     }
 
 

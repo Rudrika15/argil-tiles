@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12">
 
             @if ($message = Session::get('success'))
@@ -18,7 +18,7 @@
                 </div>
             @endif
         </div>
-    </div>
+    </div> --}}
 
 
     <div class="main-content">
@@ -28,7 +28,7 @@
         <div class="float-right">
             <a class="btn btn-success bi bi-arrow-right" href="{{ Route('blog.create') }}">Add New Record</a>
         </div>
-
+        <div class="table table-content" style="overflow-x: scroll">
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -48,15 +48,18 @@
                         <td>{{ $data->description }}</td>
                         <td><img src="{{ 'blogimage/'.$data->image }}" style="height:200px" class="img-thumbnail"></td>
                         <td>{{ $data->status }}</td>
-                        <td style="gap: 8px">
+                        <td style="gap: 8px;" class="d-flex">
                             <a href = "{{ route('blog.edit', $data->id) }}" class="btn btn-primary"> Edit </a>
-                            <a href="{{ route('slider.delete', $data->id) }}" class="btn btn-warning"> Delete </a>
+                            <a href="javascript:void(0)" class="btn btn-warning"
+                            onclick="openDeleteModal('{{ Route('blog.delete', $data->id) }}')">
+                            Delete
+                        </a>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
-
+        </div>
     </div>
 
 

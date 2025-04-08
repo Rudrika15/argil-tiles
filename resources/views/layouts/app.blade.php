@@ -32,7 +32,7 @@
     <header class="main-header">
 
         <!-- header upper -->
-        <div class="header-upper">
+        {{-- <div class="header-upper">
             <div class="container">
                 <div class="top-left">
                     <i class="fa fa-phone">&nbsp;Call Now For Free Estimate!&nbsp;<span>(992) 551-1465</span></i>
@@ -45,7 +45,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- end header upper -->
 
         <!-- header lower -->

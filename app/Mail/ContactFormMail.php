@@ -12,7 +12,7 @@ class ContactFormMail extends Mailable
     public $name;
     public $email;
     public $phone;
-    public $message;
+    public $userMessage;
 
     // Constructor to pass data
     public function __construct($name, $email, $phone, $message)
@@ -20,7 +20,7 @@ class ContactFormMail extends Mailable
         $this->name = $name;
         $this->email = $email;
         $this->phone = $phone;
-        $this->message = $message;
+        $this->userMessage = $message;
     }
 
     // Build the email
@@ -33,7 +33,7 @@ class ContactFormMail extends Mailable
                         'name' => $this->name,
                         'email' => $this->email,
                         'phone' => $this->phone,
-                        'message' => $this->message
+                        'userMessage' => $this->userMessage
                     ]);
     }
 }

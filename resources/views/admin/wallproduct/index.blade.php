@@ -9,7 +9,7 @@
 
 
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12">
 
             @if ($message = Session::get('success'))
@@ -21,7 +21,7 @@
                 </div>
             @endif
         </div>
-    </div>
+    </div> --}}
 
     <div class="main-content">
 
@@ -59,7 +59,10 @@
                             <td>{{ $data->status }}</td>
                             <td class="d-flex" style="gap:8px">
                                 <a href="{{ route('wall.edit', $data->id) }}" class="btn btn-primary">Edit</a>
-                                <a href="{{ route('wall.delete', $data->id) }}" class="btn btn-warning">Delete</a>
+                                <a href="javascript:void(0)" class="btn btn-warning"
+                                    onclick="openDeleteModal('{{ Route('wall.delete', $data->id) }}')">
+                                    Delete
+                                </a>
                             </td>
                         </tr>
                     @endforeach

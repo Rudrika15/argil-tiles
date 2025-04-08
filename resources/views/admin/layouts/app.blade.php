@@ -14,6 +14,13 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="{{ asset('assetbackend/css/style.css') }}">
 
+    <!-- Toastr CSS and JS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+    {{-- sweetalert cdn --}}
+
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
 
     <title>Argil | Admin Panel </title>
 </head>
@@ -28,27 +35,42 @@
             </div>
             <ul class="list-unstyled components">
 
-                <li class="{{request()->routeIs('dashboard') ? 'active' : '' }}"><a href="{{ route('dashboard') }}"><i class="bi bi-house-fill"></i> Dashboard</a></li>
+                <li class="{{ request()->routeIs('dashboard') ? 'active' : '' }}"><a href="{{ route('dashboard') }}"><i
+                            class="bi bi-house-fill"></i> Dashboard</a></li>
                 <p><i class="bi bi-box2-fill"></i> Products</p>
-                <li class="{{ request()->routeIs('wallshow')?'active':'' }}"><a href="{{ route('wallshow') }}"> Wall</a></li>
-                <li class="{{ request()->routeIs('quartzshow')?'active':'' }}"><a href="{{ route('quartzshow') }}"> Quartz</a></li>
-                <li class="{{ request()->routeIs('lvtshow')?'active':'' }}"><a href="{{ route('lvtshow') }}"> SPC Products</a></li>
+                <li class="{{ request()->routeIs('wallshow') ? 'active' : '' }}"><a href="{{ route('wallshow') }}"> Wall</a>
+                </li>
+                <li class="{{ request()->routeIs('quartzshow') ? 'active' : '' }}"><a href="{{ route('quartzshow') }}">
+                        Quartz</a></li>
+                <li class="{{ request()->routeIs('lvtshow') ? 'active' : '' }}"><a href="{{ route('lvtshow') }}"> SPC
+                        Products</a></li>
                 <p><i class="bi bi-chat-left-quote"></i> Inquiry </p>
-                <li class="{{ request()->routeIs('inquiryshow')?'active':'' }}"><a href="{{ route('inquiryshow') }}"> Inquiry</a></li>
-                <li class="{{ request()->routeIs('contactshow')?'active':'' }}"><a href="{{ route('contactshow') }}"> Contact-Us </a></li>
+                <li class="{{ request()->routeIs('inquiryshow') ? 'active' : '' }}"><a href="{{ route('inquiryshow') }}">
+                        Inquiry</a></li>
+                <li class="{{ request()->routeIs('contactshow') ? 'active' : '' }}"><a href="{{ route('contactshow') }}">
+                        Contact-Us </a></li>
                 <p><i class="bi bi-sliders"></i> General </p>
-                <li class="{{ request()->routeIs('catelogueshow')?'active':'' }}"><a href="{{ route('catelogueshow') }}"> Catelogue</a></li>
+                <li class="{{ request()->routeIs('catelogueshow') ? 'active' : '' }}"><a
+                        href="{{ route('catelogueshow') }}"> Catelogue</a></li>
                 <!-- <li><a href="{{ route('newsroomshow') }}"> News Room</a></li> -->
                 <p><i class="bi bi-gear-wide-connected"></i> Setup</p>
-                <li class="{{ request()->routeIs('slidershow')?'active':'' }}"><a href="{{ route('slidershow') }}"> Slider</a></li>
-                <li class="{{ request()->routeIs('homeshow')?'active':'' }}"><a href="{{ route('homeshow') }}"> Home </a></li>
-                <li class="{{ request()->routeIs('finishtypeshow')?'active':'' }}"><a href="{{ route('finishtypeshow') }}"> Finish Type</a></li>
-                <li class="{{ request()->routeIs('designtypeshow')?'active':'' }}"><a href="{{ route('designtypeshow') }}"> Design Type</a></li>
-                <li class="{{ request()->routeIs('qsizeshow')?'active':'' }}"><a href="{{ route('qsizeshow') }}"> Q-size</a></li>
-                <li class="{{ request()->routeIs('wsizeshow')?'active':'' }}"><a href="{{ route('wsizeshow') }}"> W-size</a></li>
-                <li class="{{ request()->routeIs('ssizeshow')?'active':'' }}"><a href="{{ route('ssizeshow') }}"> SPC-size</a></li>
-                <li class="{{ request()->routeIs('stockshow')?'active':'' }}"><a href="{{ route('stockshow') }}">Stock</a></li>
-                <li class="{{ request()->routeIs('blog')?'active':'' }}"><a href="{{ route('blog') }}">Blog</a></li>
+                <li class="{{ request()->routeIs('slidershow') ? 'active' : '' }}"><a href="{{ route('slidershow') }}">
+                        Slider</a></li>
+                <li class="{{ request()->routeIs('homeshow') ? 'active' : '' }}"><a href="{{ route('homeshow') }}"> Home
+                    </a></li>
+                <li class="{{ request()->routeIs('finishtypeshow') ? 'active' : '' }}"><a
+                        href="{{ route('finishtypeshow') }}"> Finish Type</a></li>
+                <li class="{{ request()->routeIs('designtypeshow') ? 'active' : '' }}"><a
+                        href="{{ route('designtypeshow') }}"> Design Type</a></li>
+                <li class="{{ request()->routeIs('qsizeshow') ? 'active' : '' }}"><a href="{{ route('qsizeshow') }}">
+                        Q-size</a></li>
+                <li class="{{ request()->routeIs('wsizeshow') ? 'active' : '' }}"><a href="{{ route('wsizeshow') }}">
+                        W-size</a></li>
+                <li class="{{ request()->routeIs('ssizeshow') ? 'active' : '' }}"><a href="{{ route('ssizeshow') }}">
+                        SPC-size</a></li>
+                <li class="{{ request()->routeIs('stockshow') ? 'active' : '' }}"><a
+                        href="{{ route('stockshow') }}">Stock</a></li>
+                <li class="{{ request()->routeIs('blog') ? 'active' : '' }}"><a href="{{ route('blog') }}">Blog</a></li>
 
                 {{-- <li><a href="{{ route('logout') }}">logout</a></li> --}}
             </ul>
@@ -77,15 +99,15 @@
 
 
                     <!-- @auth
-                {{ auth()->user()->name }}<i class="bi bi-person-circle ms-1"></i>
-                <a href="{{ route('login') }}" class="btn btn-outline-dark me-2">Login</a>
-            </a>
+                    {{ auth()->user()->name }}<i class="bi bi-person-circle ms-1"></i>
+                    <a href="{{ route('login') }}" class="btn btn-outline-dark me-2">Login</a>
+                </a>
       @endauth
       @guest
-                <div class="text-end">
-                <li><a class=""  href="{{ route('logout') }}" class="btn btn-outline-dark me-2"> Logout</a></li>
+                    <div class="text-end">
+                    <li><a class=""  href="{{ route('logout') }}" class="btn btn-outline-dark me-2"> Logout</a></li>
 
-                  </div>
+                      </div>
       @endguest
  </li> -->
 
@@ -105,6 +127,43 @@
 
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
+    </script>
+
+
+    {{-- SweetAlert2 toast notification code --}}
+    @if (Session::has('msg'))
+        <script>
+            Swal.fire({
+                icon: "{{ Session::get('msg_type') ?? 'success' }}", // You can pass 'msg_type' to change the icon dynamically
+                title: "{{ Session::get('msg') }}",
+                toast: true,
+                position: 'top-right',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true
+            });
+        </script>
+    @endif
+
+
+     {{-- sweet alert delete code --}}
+     <script>
+        function openDeleteModal(url) {
+            Swal.fire({
+                title: 'Are you sure you want to delete it?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6e7881',
+                confirmButtonText: 'Yes, Delete it!',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirect to the delete route
+                    window.location.href = url;
+                }
+            });
+        }
     </script>
 
 

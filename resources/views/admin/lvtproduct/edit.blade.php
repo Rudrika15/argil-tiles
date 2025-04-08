@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="row">
+{{-- <div class="row">
 	<div class="col-md-12">
 
 		@if ($message = Session::get('success'))
@@ -19,7 +19,7 @@
 		@endif
 
 	</div>
-</div>
+</div> --}}
 
 <div class="main-content">
 	<div class="row">

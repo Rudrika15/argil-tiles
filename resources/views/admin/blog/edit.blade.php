@@ -3,7 +3,7 @@
 @section('pageTitle', 'Dashboard')
 
 @section('content')
-
+{{--
     <div class="row">
         <div class="col-md-12">
 
@@ -16,7 +16,7 @@
                 </div>
             @endif
         </div>
-    </div>
+    </div> --}}
 
     <div class="main-content">
         <div class="row">
@@ -51,7 +51,7 @@
             <div class="col-md-6">
                     <div class="form-label-group">
                         <input accept='image/*' onchange="readURL(this,'#image')" id="form_firstname" type="file"
-                            name="image" class="form-control" placeholder="image" required>
+                            name="image" class="form-control" placeholder="image">
 
                         <label for="form_firstname">Blog Image</label>
                     </div>

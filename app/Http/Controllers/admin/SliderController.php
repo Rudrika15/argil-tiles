@@ -38,8 +38,8 @@ class SliderController extends Controller
 			$slider->sliderimg=$sliderimg;
             $slider->save();
 
-            return redirect()->back()->with('success','Record Insert Successfully');
-    }
+            return redirect()->route('slidershow')->with('msg', 'Record Inserted Successfully');
+        }
 
     function create()
     {
@@ -113,12 +113,12 @@ class SliderController extends Controller
 
     $slider->save();
 
-    return redirect()->back()->with('success', 'Record Updated Successfully');
+    return redirect()->route('slidershow')->with('msg', 'Record Update Successfully');
 }
 
     function delete($id)
     {
         $data=Slider::find($id)->delete();
-		return redirect('/slidershow')->with('success','Data Delete successfully');
+        return redirect()->route('slidershow')->with('msg', 'Data Delete Successfully');
     }
 }

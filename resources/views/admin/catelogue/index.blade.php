@@ -5,7 +5,7 @@
 @section('pageTitle', 'Dashboard')
 @section('content')
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12">
 
             @if ($message = Session::get('success'))
@@ -17,7 +17,7 @@
                 </div>
             @endif
         </div>
-    </div>
+    </div> --}}
 
     <div class="main-content">
         <div class="float-left">
@@ -43,7 +43,10 @@
                             <td>{{ $data->pdfFile }}</td>
                             <td class="d-flex" style="gap: 8px">
                                 <a href = "{{ route('catelogue.edit', $data->id) }}" class="btn btn-primary">Edit</a>
-                                <a href="{{ route('catelogue.delete', $data->id) }}" class="btn btn-warning"> Delete </a>
+                                <a href="javascript:void(0)" class="btn btn-warning"
+                                onclick="openDeleteModal('{{Route('catelogue.delete',$data->id)}}')">
+                                Delete
+                            </a>
                             </td>
                         </tr>
                     @endforeach
