@@ -14,9 +14,9 @@
         </div>
     </section>
     <!--End Page Title-->
-    <div class="container-fluid heading-title">
+    {{-- <div class="container-fluid heading-title">
         <h2 class="container">Home/Profile</h2>
-    </div>
+    </div> --}}
 
     <div class="container">
         <div class="row">
@@ -34,10 +34,12 @@
                 <p class="profile-heading paragraph">Success is a never ending journey</p>
             </div>
             <div class="col-md-6">
-                <img src="asset/images/argileimage/profilelogo.png" alt="" class="img-responsive all-page-side-image">
+                <img src="asset/images/argileimage/profilelogo.png" alt=""
+                    class="img-responsive all-page-side-image">
             </div>
             <div class="col-md-12 ">
-                <p class="text-justify paragraph">The employees of the company have learnt the culture of sharing and growing
+                <p class="text-justify paragraph">The employees of the company have learnt the culture of sharing and
+                    growing
                     from the management. We pride ourselves to be one of the most employee friendly brands. The employees
                     work hard ceaselessly to achieve what we set forth as goals. Their efforts are always in alignment with
                     the philosophy of the company. The customers of our brands though demanding are very loyal, within their
@@ -54,7 +56,8 @@
                     achieve it as always. Let us all remember, "We are agents of betterment, and betterment of life is our
                     sole purpose."</p>
                 <p class="heading1">History</p>
-                <p class="text-justify paragraph">India's greatest entrepreneurial stories are all epics within themselves. One
+                <p class="text-justify paragraph">India's greatest entrepreneurial stories are all epics within themselves.
+                    One
                     of those is the story of the Argil Group of companies. Shri Motbhai Prajapati was a potter at Sultanpur,
                     a very small village. He was blessed with a son, who was destined to create history in the region. We
                     know him now as Shri Amarshibhai Prajapati. Since a young age, he was helping his father in the work of
@@ -69,7 +72,8 @@
                     only. Manglaore roofing tiles' main ingredient was Black and Red clay, which was available in abundance
                     in Morbi. The nearness to the raw material and his technical know-how of clay encouraged him to start
                     his own production of roofing tiles.</p>
-                <p class="text-justify paragraph">With the zeal of an entrepreneur, he returned to Morbi. With numerous trials,
+                <p class="text-justify paragraph">With the zeal of an entrepreneur, he returned to Morbi. With numerous
+                    trials,
                     lot of experimentation and tremendous research, he could not design the best product or the system to
                     mass manufacture roof tiles. While many would have given up, he was not the one to throw in the towel.
                     He worked harder ever determined to make something big. Finally, he succeeded in developing durable
@@ -79,12 +83,14 @@
                     Most of the initial capital was borrowed and a small manufacturing unit was commissioned by Shri
                     Prajapati and his team. Being the first of its kind manufacturing unit in the region and a very heavy
                     demand of Mangalore tiles, 100% production was sold.</p>
-                <p class="text-justify paragraph" data-aos="fade-up">The founder had witnessed good & bad days. He never wished
+                <p class="text-justify paragraph" data-aos="fade-up">The founder had witnessed good & bad days. He never
+                    wished
                     his brothers to go through the terrible struggle hence he started training his brothers, technically and
                     commercially. Each of them was given a separate unit to manage. In modern day management we would term
                     these as profit centers and each brother a profit centre head. The flagship company though remained
                     Prajapat Tiles Co.</p>
-                <p class="text-justify paragraph" data-aos="fade-up">Stability is a limiting belief for those with big dreams
+                <p class="text-justify paragraph" data-aos="fade-up">Stability is a limiting belief for those with big
+                    dreams
                     and an even greater appetite for betterment of life. The founder did not rest on the laurels of this
                     achievement. In the year 1999 he established ARGIL brand which manufactured and supplied high quality
                     wall tiles. It is one of the most admired wall tile brands in India today. Innovation and growth always
