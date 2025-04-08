@@ -5,18 +5,18 @@
         <div class="container">
             <div class="content-box">
                 <div class="title">
-                    <h1>Spc Products</h1>
+                    <h1>SPC</h1>
                 </div>
                 <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Spc Products</span>
+                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>SPC Products</span>
                 </div>
             </div>
         </div>
     </section>
     <!--End Page Title-->
-    <div class="heading-title container-fluid">
+    {{-- <div class="heading-title container-fluid">
         <h2 class="container">Home/SPC Products</h2>
-    </div>
+    </div> --}}
 
 
     <div class="text-center products-heading">

@@ -46,9 +46,11 @@
 }
 
 .logo-box img {
-    width: 100%;
+    aspect-ratio: 2/1;
     height: 70px;
+    width: 100%;
     margin-top: -25px;
+    object-fit: contain;
 }
 
 .productimage {
@@ -443,14 +445,16 @@
 
 }
 
-.advantage-card1 h3, p {
+.advantage-card1 h3,
+p {
     color: whitesmoke;
     font-weight: 600;
     line-height: 1.6;
 
 }
 
-.advantage-card h3, p {
+.advantage-card h3,
+p {
     color: whitesmoke;
     font-weight: 600;
 }

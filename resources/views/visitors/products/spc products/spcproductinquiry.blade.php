@@ -5,31 +5,32 @@
         <div class="container">
             <div class="content-box">
                 <div class="title">
-                    <h1>Spc Products</h1>
+                    <h1>{{ $data->names }}</h1>
                 </div>
                 <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Spc Products</span>
+                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a>
+                    &nbsp;<span>{{ $data->names }}</span>
                 </div>
             </div>
         </div>
     </section>
     <!--End Page Title-->
-    <div class="heading-title container-fluid">
+    {{-- <div class="heading-title container-fluid">
         <h2 class="container">Home/{{ $data->names }}</h2>
-    </div>
+    </div> --}}
 
     <div class="container spcprodcut-image">
         <div class="row">
             <div class="col-md-3 galaryimage">
 
                 @if ($data->mainImg)
-                    <img src="{{ asset('spc/' . $data->mainImg) }}" alt=""
-                         onclick="miniImage(this)" class="img-responsive galary-mini-image spcinquiry-galaryimage">
+                    <img src="{{ asset('spc/' . $data->mainImg) }}" alt="" onclick="miniImage(this)"
+                        class="img-responsive galary-mini-image spcinquiry-galaryimage">
                 @endif
 
                 @if ($data->subImg1)
-                    <img src="{{ asset('spc/' . $data->subImg1) }}" alt=""
-                        onclick="miniImage(this)" class="img-responsive galary-mini-image spcinquiry-galaryimage">
+                    <img src="{{ asset('spc/' . $data->subImg1) }}" alt="" onclick="miniImage(this)"
+                        class="img-responsive galary-mini-image spcinquiry-galaryimage">
                 @endif
             </div>
             <div class="col-md-9">
@@ -37,12 +38,12 @@
                 <div class="first-image">
 
                     @if ($data->mainImg)
-                        <img src="{{ asset('spc/' . $data->mainImg) }}" alt=""
-                            id="big-image" class="img-responsive spcproductimage">
+                        <img src="{{ asset('spc/' . $data->mainImg) }}" alt="" id="big-image"
+                            class="img-responsive spcproductimage">
                     @endif
                     @if ($data->subImg1)
-                        <img src="{{ asset('spc/' . $data->subImg1) }}" alt=""
-                            id="big-image" class="img-responsive spcproductimage spcproductimage1">
+                        <img src="{{ asset('spc/' . $data->subImg1) }}" alt="" id="big-image"
+                            class="img-responsive spcproductimage spcproductimage1">
                     @endif
 
                 </div>
@@ -90,10 +91,12 @@
                     <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php"
                         method="post">
                         <div class="col-md-12 input">
-                            <input type="text" name="form_name" value="" placeholder="Your Name " required="" class="inp">
+                            <input type="text" name="form_name" value="" placeholder="Your Name " required=""
+                                class="inp">
                         </div>
                         <div class="col-md-12 input">
-                            <input type="email" name="form_email" value="" placeholder="Email" required="" class="inp">
+                            <input type="email" name="form_email" value="" placeholder="Email" required=""
+                                class="inp">
                         </div>
                         <div class="col-md-12 input">
                             <input type="text" name="form_phone" value="" placeholder="Contact Number"
