@@ -23,7 +23,7 @@
             <h2>Q Size View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success" href="{{ route('qsizecreate') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right" href="{{ route('qsizecreate') }}">Add New Record</a>
         </div>
         <table class="table table-bordered table-hover">
             <thead>
@@ -36,7 +36,7 @@
                 @foreach ($data as $data)
                     <tr>
                         <td>{{ $data->size }}</td>
-                        <td style="gap: 8px">
+                        <td style="gap: 8px; padding: 9px;">
                             <a href = "{{ route('qsize.edit', $data->id) }}" class="btn btn-primary">Edit</a>
                             <a href = "{{ route('qsize.delete', $data->id) }}" class="btn btn-warning"> Delete </a>
                         </td>

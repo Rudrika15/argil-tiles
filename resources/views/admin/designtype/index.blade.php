@@ -23,7 +23,7 @@
             <h2>Designtype View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success" href="{{ route('designtypecreate') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right" href="{{ route('designtypecreate') }}">Add New Record</a>
         </div>
         <table class="table table-bordered table-hover">
             <thead>
@@ -36,7 +36,7 @@
                 @foreach ($data as $data)
                     <tr>
                         <td>{{ $data->type }}</td>
-                        <td style="gap: 8px">
+                        <td style="gap: 8px" class="d-flex">
                             <a href = "{{ route('designtype.edit', $data->id) }}" class="btn btn-primary">Edit</a>
                             <a href = "{{ route('designtype.delete', $data->id) }}" class="btn btn-warning"> Delete </a>
                         </td>

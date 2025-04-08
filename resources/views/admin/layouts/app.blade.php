@@ -35,7 +35,7 @@
                 <li class="{{ request()->routeIs('lvtshow')?'active':'' }}"><a href="{{ route('lvtshow') }}"> SPC Products</a></li>
                 <p><i class="bi bi-chat-left-quote"></i> Inquiry </p>
                 <li class="{{ request()->routeIs('inquiryshow')?'active':'' }}"><a href="{{ route('inquiryshow') }}"> Inquiry</a></li>
-                <li class="{{ request()->routeIs('contactshow')?'active':'' }}"><a href="{{ route('contactshow') }}"> Conact-Us </a></li>
+                <li class="{{ request()->routeIs('contactshow')?'active':'' }}"><a href="{{ route('contactshow') }}"> Contact-Us </a></li>
                 <p><i class="bi bi-sliders"></i> General </p>
                 <li class="{{ request()->routeIs('catelogueshow')?'active':'' }}"><a href="{{ route('catelogueshow') }}"> Catelogue</a></li>
                 <!-- <li><a href="{{ route('newsroomshow') }}"> News Room</a></li> -->

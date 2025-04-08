@@ -25,7 +25,7 @@
             <h2>Stock View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success" href="{{ route('stockcreate') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right" href="{{ route('stockcreate') }}">Add New Record</a>
         </div>
         <table class="table table-bordered table-hover">
             <thead>

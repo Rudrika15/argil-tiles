@@ -26,7 +26,7 @@
             <h2>Slider View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success" href="{{ route('slidercreate') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right" href="{{ route('slidercreate') }}">Add New Record</a>
         </div>
 
         <table class="table table-bordered table-hover">
@@ -43,7 +43,7 @@
                         <td>{{ $data->title }}</td>
                         <td><img src="slider/{{ $data->sliderimg }}" style="height:200px" class="img-thumbnail"></td>
 
-                        <td style="gap: 8px">
+                        <td class="d-flex" style="gap: 8px" >
                             <a href = "{{ route('slider.edit', $data->id) }}" class="btn btn-primary"> Edit </a>
                             <a href="{{ route('slider.delete', $data->id) }}" class="btn btn-warning"> Delete </a>
                         </td>

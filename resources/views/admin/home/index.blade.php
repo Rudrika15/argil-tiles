@@ -22,7 +22,7 @@
             <h2>Home View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success" href="{{ route('homecreate') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right" href="{{ route('homecreate') }}">Add New Record</a>
         </div>
         <table class="table table-bordered table-hover">
             <thead>
@@ -38,7 +38,7 @@
                     <tr>
                         <td>{{ $data->title }}</td>
                         <td><img src='home_slider/{{ $data->img }}'style="height:200px" class="img-thumbnail" /></td>
-                        <td style="gap: 8px">
+                        <td style="gap: 8px;" class="d-flex">
                             <a href = "{{ route('home.edit', $data->id) }}" class="btn btn-primary">Edit</a>
                             <a href = "{{ route('home.delete', $data->id) }}" class="btn btn-warning"> Delete </a>
                         </td>

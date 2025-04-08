@@ -23,7 +23,7 @@
             <h2>Finishtype View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success" href="{{ route('finishtypecreate') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right" href="{{ route('finishtypecreate') }}">Add New Record</a>
         </div>
         <table class="table table-bordered table-hover">
             <thead>
