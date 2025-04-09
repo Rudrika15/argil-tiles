@@ -8,7 +8,7 @@
                     <h1>Catalogue</h1>
                 </div>
                 <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Catalogue</span>
+                    <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Catalogue</span>
                 </div>
             </div>
         </div>

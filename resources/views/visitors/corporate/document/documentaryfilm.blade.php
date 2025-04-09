@@ -9,7 +9,7 @@
                         <h1>Documentary Film</h1>
                     </div>
                     <div class="bread-crumb">
-                        <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Documentary
+                        <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Documentary
                             Film</span>
                     </div>
                 </div>

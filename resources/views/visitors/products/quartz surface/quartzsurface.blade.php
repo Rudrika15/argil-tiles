@@ -9,7 +9,7 @@
                         <h1>Quartz Surface</h1>
                     </div>
                     <div class="bread-crumb">
-                        <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Quartz
+                        <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Quartz
                             Surface</span>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
         <h2 class="container">Home/Quartz Surface</h2>
     </div> --}}
 
-    {{-- 
+    {{--
     <div class="quartz-bg-image">
         <a href="/contact"><img src="asset/images/argileimage/quartzimage.jpg" alt="" class="img-responsive"></a>
     </div> --}}
@@ -114,7 +114,7 @@
             <div class="row">
                 <div class="col-md-12 advantage-card1" data-aos="fade-up">
                     <h3>Easy to maintain</h3>
-                    <p>Natural quartz has pores in them. However, the polished surface of artificial stone does not absorb
+                    <p class="text-justify">Natural quartz has pores in them. However, the polished surface of artificial stone does not absorb
                         moisture. As a result, cleaning the surface is simpler and requires less care. Additionally, the
                         surface is stain- and scratch-resistant. Because of easy maintenance, these artificial quartz last
                         longer and look new for years.</p>
@@ -126,7 +126,7 @@
         <div class="row">
             <div class="col-md-12 advantage-card" data-aos="fade-up">
                 <h3>Available in a variety of options</h3>
-                <p>The size, quart colours, treatments, and patterns of composite quartz stone are present in a variety of
+                <p class="text-justify">The size, quart colours, treatments, and patterns of composite quartz stone are present in a variety of
                     options. As a result, you will never be without resources to help in the design or renovation of an
                     existing area. The top choices include Zodiac Black, Zodiac Red, Crystal White, and many others.</p>
             </div>
@@ -136,7 +136,7 @@
         <div class="row">
             <div class="col-md-12 advantage-card1" data-aos="fade-up">
                 <h3>Cost effective</h3>
-                <p>The cost of natural stone might vary depending on the kind, colour, and quality of the stone but is
+                <p class="text-justify">The cost of natural stone might vary depending on the kind, colour, and quality of the stone but is
                     typically more. For less money, artificial quartz stone offers a more luxurious and traditional
                     appearance. Quartz slab manufacturers in India make variety of cost effective slabs which are available
                     in amazing colors and variants</p>
@@ -147,7 +147,7 @@
         <div class="row">
             <div class="col-md-12 advantage-card" data-aos="fade-up">
                 <h3>Durability</h3>
-                <p>Artificial quartz is as strong and hard as granite, with the benefit of being chip and crack resistant.
+                <p class="text-justify">Artificial quartz is as strong and hard as granite, with the benefit of being chip and crack resistant.
                     The engineered stone will only crack if it is not fitted properly on the surfaces. Hence, artificial
                     quartz stones last longer and due to their easy maintenance, they look the same for years.</p>
             </div>
@@ -287,13 +287,13 @@
 
     <div class="container">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
                 aria-controls="collapseOne">
-                <div class="panel panel-default">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">What are quartz countertops?</h4>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             Quartz countertops are elegant, practical, and low-maintenance and are composed of bits
@@ -305,29 +305,28 @@
                     </div>
                 </div>
             </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsetwo" aria-expanded="true"
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsetwo" aria-expanded="false"
                 aria-controls="collapseOne">
-                <div class="panel panel-default">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">What are the advantages of quartz slabs?</h4>
                     </div>
-                    <div id="collapsetwo" class="panel-collapse collapse in" role="tabpanel"
-                        aria-labelledby="headingOne">
+                    <div id="collapsetwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
-                            Attractive look and feel, Ease of to maintenance, Availability in a variety of options,
-                            Cost
-                            effectiveness, and Durability are some of the major advantages of quartz slabs
+                            Attractive look and feel, Ease of maintenance, Availability in a variety of options,
+                            Cost effectiveness, and Durability are some of the major advantages of quartz slabs.
                         </div>
                     </div>
                 </div>
             </a>
+
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsethree"
-                aria-expanded="true" aria-controls="collapseOne">
-                <div class="panel panel-default">
+                aria-expanded="false" aria-controls="collapseOne">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">What are the disadvantages of quartz slabs?</h4>
                     </div>
-                    <div id="collapsethree" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapsethree" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             The cost and heat resistance of quartz countertops are their major disadvantages. A
@@ -339,13 +338,13 @@
                     </div>
                 </div>
             </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="true"
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false"
                 aria-controls="collapseOne">
-                <div class="panel panel-default">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">How can quartz slabs be used?</h4>
                     </div>
-                    <div id="collapsefour" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapsefour" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             Quartz slabs are perfect for a variety of wonderful home improvements. Quartz is most
@@ -355,13 +354,13 @@
                     </div>
                 </div>
             </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="true"
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="false"
                 aria-controls="collapseOne">
-                <div class="panel panel-default">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title"> Are quartz slabs high maintenance?</h4>
                     </div>
-                    <div id="collapsefive" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapsefive" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             Low maintenance is required for quartz slabs and countertops. Look no further if you're
@@ -375,13 +374,13 @@
                     </div>
                 </div>
             </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsesix" aria-expanded="true"
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsesix" aria-expanded="false"
                 aria-controls="collapseOne">
-                <div class="panel panel-default">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">How much is a slab of quartz?</h4>
                     </div>
-                    <div id="collapsesix" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapsesix" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             Quartz slabs are significantly more expensive per square than materials like ceramic and
@@ -394,12 +393,12 @@
                 </div>
             </a>
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseseven"
-                aria-expanded="true" aria-controls="collapseOne">
-                <div class="panel panel-default">
+                aria-expanded="false" aria-controls="collapseOne">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">Do quartz countertops scratch easily?</h4>
                     </div>
-                    <div id="collapseseven" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapseseven" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             Quartz slabs and countertops are extremely scratch-resistant; quartz of good quality may
@@ -409,12 +408,12 @@
                 </div>
             </a>
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseeight"
-                aria-expanded="true" aria-controls="collapseOne">
-                <div class="panel panel-default">
+                aria-expanded="false" aria-controls="collapseOne">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">Is quartz more expensive than granite?</h4>
                     </div>
-                    <div id="collapseeight" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapseeight" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             Granite costs more than quartz often. There are several types of low-quality granite
@@ -424,13 +423,13 @@
                     </div>
                 </div>
             </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsenine" aria-expanded="true"
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsenine" aria-expanded="false"
                 aria-controls="collapseOne">
-                <div class="panel panel-default">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">Is quartz better than granite?</h4>
                     </div>
-                    <div id="collapsenine" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapsenine" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             Both quartz and granite are extraordinarily stunning and durable. Depending on your
@@ -443,13 +442,13 @@
                     </div>
                 </div>
             </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseten" aria-expanded="true"
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseten" aria-expanded="false"
                 aria-controls="collapseOne">
-                <div class="panel panel-default">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title"> Does quartz stain easily?</h4>
                     </div>
-                    <div id="collapseten" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapseten" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             Quartz is not easily stained. Quartz tiles and slabs are stain-resistant because of the
@@ -460,12 +459,12 @@
                 </div>
             </a>
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseeleven"
-                aria-expanded="true" aria-controls="collapseOne">
-                <div class="panel panel-default">
+                aria-expanded="false" aria-controls="collapseOne">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title"> Is quartz cheaper than concrete?</h4>
                     </div>
-                    <div id="collapseeleven" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapseeleven" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             Concrete countertops are typically less expensive for homeowners than quartz surfaces.
@@ -478,12 +477,12 @@
                 </div>
             </a>
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsetwell"
-                aria-expanded="true" aria-controls="collapseOne">
-                <div class="panel panel-default">
+                aria-expanded="false" aria-controls="collapseOne">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">Is quartz cheaper than marble?</h4>
                     </div>
-                    <div id="collapsetwell" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapsetwell" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             Yes. Quartz is frequently less expensive than marble. Natural luxury stones like marble
@@ -496,12 +495,12 @@
                 </div>
             </a>
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsethirteen"
-                aria-expanded="true" aria-controls="collapseOne">
-                <div class="panel panel-default">
+                aria-expanded="false" aria-controls="collapseOne">
+                <div class="panel panel-default panel-box">
                     <div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">How should quartz be cleaned?</h4>
                     </div>
-                    <div id="collapsethirteen" class="panel-collapse collapse in" role="tabpanel"
+                    <div id="collapsethirteen" class="panel-collapse collapse" role="tabpanel"
                         aria-labelledby="headingOne">
                         <div class="panel-body">
                             The best cleaner for quartz slabs or countertops is a blend of warm water and mild

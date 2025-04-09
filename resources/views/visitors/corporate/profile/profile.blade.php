@@ -9,7 +9,7 @@
                     <h1>Profile</h1>
                 </div>
                 <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Profile</span>
+                    <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Profile</span>
                 </div>
             </div>
         </div>

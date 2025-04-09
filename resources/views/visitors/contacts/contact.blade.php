@@ -1,5 +1,16 @@
 @extends('layouts.app')
 @section('content')
+
+
+@if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
+
     <!-- page title -->
     <section class="page-title"
         style="background-image: url('https://www.kajariaceramics.com/concept-picture/high002650.jpg');">
@@ -9,7 +20,7 @@
                     <h1>Contact</h1>
                 </div>
                 <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Contact</span>
+                    <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Contact</span>
                 </div>
             </div>
         </div>
@@ -51,6 +62,7 @@
                             </div>
                             <div class="col-md-10">
                                 <button type="submit" class="btn-one btn-class2 inp">Request Price Quote</button>
+                                {{-- <input type="submit" class="btn-one btn-class2 inp" value="Request Price Quote"> --}}
                             </div>
                         </div>
                     </form>
@@ -60,8 +72,8 @@
     </div>
     <div class="contact-map">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d58841.759328259286!2d70.8633817!3d22.8169122!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x39598c54ff1c773b%3A0x8d065e671b879a69!2sARGIL%20GROUP%20-%20DISPLAY%20CENTER%20National%20Highway%208A%20Anand%20Nagar%20Morbi%2C%20Gujarat%20363642!3m2!1d22.816912199999997!2d70.86338169999999!5e0!3m2!1sen!2sin!4v1742370263288!5m2!1sen!2sin"
-            width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.6098250503132!2d70.86080677429504!3d22.81691712397357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39598c54ff1c773b%3A0x8d065e671b879a69!2sARGIL%20GROUP%20-%20DISPLAY%20CENTER!5e0!3m2!1sen!2sin!4v1744186604830!5m2!1sen!2sin"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 @endsection

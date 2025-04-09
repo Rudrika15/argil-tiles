@@ -9,7 +9,7 @@
                     <h1>SPC</h1>
                 </div>
                 <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>SPC Products</span>
+                    <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>SPC Products</span>
                 </div>
             </div>
         </div>

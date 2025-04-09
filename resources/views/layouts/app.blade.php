@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('asset/css/app1.css') }}">
 
 
+
 </head>
 
 <!-- page wrapper -->
@@ -36,7 +37,7 @@
         <div class="header-upper">
             <div class="container">
                 <div class="top-left">
-                    <i class="fa fa-phone">&nbsp;Call Now For Free Estimate!&nbsp;<span>(992) 551-1465</span></i>
+                    <i class="fa fa-phone">&nbsp;Call Now For Free Estimate!&nbsp;<span><a href="tel:2822-240628">(+91) 2822-240628</a></span></i>
                 </div>
                 <div class="top-right">
                     <ul class="social-top">
@@ -45,6 +46,13 @@
                         <li><a href="https://www.instagram.com/argilgroup/"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
+                    {{-- <ul class="social-top">
+                        <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                    </ul> --}}
                 </div>
             </div>
         </div>
@@ -126,7 +134,7 @@
                                     <a href="/contact">Get a Price Quote</a>
                                 </li>
                                 <li>
-                                    <a href="/contact">
+                                    <a href="tel:9925511465">
                                         <i class="fa fa-phone">+91 99255 11465</span></i>
                                     </a>
                                 </li>
@@ -229,7 +237,7 @@
                                     <a href="/contact">Get a Price Quote</a>
                                 </li>
                                 <li>
-                                    <a href="/contact">
+                                    <a href="tel:9925511465">
                                         <i class="fa fa-phone">+91 99255 11465</span></i>
                                     </a>
                                 </li>
@@ -321,12 +329,18 @@
                             </div>
                             <div class="single-box">
                                 <div class="icon-box"><i class="fa fa-phone"></i></div>
-                                <p>+91 2822 240628,</p>
-                                <p>+91 2822 240628</p>
+                                <a href="tel:2822240628">
+                                    <p>+91 2822 240628,</p>
+                                </a>
+                                <a href="tel:9925511465">
+                                    <p>+91 99255 11465</p>
+                                </a>
                             </div>
                             <div class="single-box">
                                 <div class="icon-box"><i class="fa fa-envelope"></i></div>
+                                <a href="mailto:info@argiltiles.com">
                                 <p>info@argilties.com</p>
+                            </a>
                             </div>
                             <div class="single-box">
                                 <div class="icon-box"><i class="fa fa-map-marker"></i></div>
@@ -342,7 +356,7 @@
         </div>
         <div class="footer-bottom container">
             <p class="text col-md-9">©2023 - Mod Ceramic Industries Ltd.</p>
-            <p class="text col-md-3">Powered By: FlipCode Solutions</p>
+            <p class="text col-md-3"><a href="https://flipcodesolutions.com/" target="blank">Powered By: FlipCode Solutions</a></p>
         </div>
     </footer>
     <!-- main footer area end -->

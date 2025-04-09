@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
     <!-- page title -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <section class="page-title"
         style="background-image: url('https://www.kajariaceramics.com/concept-picture/high002650.jpg');">
         <div class="container">
@@ -9,7 +11,7 @@
                     <h1>{{ $data->name }}</h1>
                 </div>
                 <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a>
+                    <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a>
                     &nbsp;<span>{{ $data->name }}</span>
                 </div>
             </div>
@@ -131,7 +133,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="product-title">
-                    <h3><i class="fa-solid fa-clone me-3"></i>Product Information</h3>
+                    <h3><i class="fa fa-files-o"></i>Product Information</h3>
                 </div>
 
                 {{-- <div class="productinformation"> --}}
@@ -159,28 +161,29 @@
                 <div class="col-md-5 product-details product-details3 product-infom-card">
                     <h3 class="product-title-heading">APPLICATIONS</h3>
                     <h3>Flooring :</h3>
-                    <p>Residential <i class="fa fa-check"></i></p>
-                    <p>Commercial <i class="fa fa-check"></i></p>
+                    <p>Residential  <i class="fa fa-check"></i></p>
+                    <p>Commercial  <i class="fa fa-check"></i></p>
                     <h3>Counters :</h3>
-                    <p>Residential <i class="fa fa-check"></i> </p>
-                    <p>Commercial <i class="fa fa-check"></i></p>
+                    <p>Residential  <i class="fa fa-check"></i> </p>
+                    <p>Commercial  <i class="fa fa-check"></i></p>
                     <h3>Wall :</h3>
-                    <p>Residential <i class="fa fa-check"></i> </p>
-                    <p>Commercial <i class="fa fa-check"></i></p>
+                    <p>Residential  <i class="fa fa-check"></i> </p>
+                    <p>Commercial  <i class="fa fa-check"></i></p>
                     <h3>Other :</h3>
-                    <p>Residential <i class="fa fa-check"></i> </p>
-                    <p>Commercial<i class="fa fa-xmark"></i></p>
+                    <p>Residential  <i class="fa fa-check"></i> </p>
+                    <p>Commercial  <i class="fa fa-times"></i></p>
                 </div>
             </div>
             {{-- </div> --}}
 
             <div class="contact-title1 col-md-6">
                 <div class="product-title">
-                    <h3><i class="fa-solid fa-clone me-3"></i>Product Inquiry</h3>
+                    <h3><i class="fa fa-files-o"></i>Product Inquiry</h3>
                 </div>
                 <div class="contact-form-area1">
-                    <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php"
+                    <form id="contact-form" name="contact_form" class="default-form" action="{{ Route('send.mail') }}"
                         method="post">
+                        @csrf
                         <div class="col-md-12 input">
                             <input type="text" name="form_name" value="" placeholder="Your Name " required=""
                                 class="inp">
@@ -196,41 +199,14 @@
                         <div class="col-md-12 input">
                             <textarea placeholder="Message" name="form_message" required="" class="inp"></textarea>
                         </div>
+                        <div class="btn-class">
+                            <button type="submit" class="btn-one btn-class1" data-loading-text="Please wait...">Request
+                                Price Quote</button>
+                        </div>
                     </form>
-                    <div class="btn-class">
-                        <button type="submit" class="btn-one btn-class1" data-loading-text="Please wait...">Request
-                            Price Quote</button>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-    <script>
-        let bgImage = document.getElementById('big-image');
-        let galleryImages = document.querySelectorAll(' .quartzinquiry-galaryimage1');
-
-
-        function miniImage(image) {
-
-            bgImage.src = image.src;
-            galleryImages.forEach(function(img) {
-                img.classList.remove('active');
-                img.style.border = '';
-            });
-
-
-            image.classList.add('active');
-            image.style.border = '7px solid gray';
-        }
-
-        window.onload = function() {
-            if (galleryImages.length > 0) {
-                galleryImages[0].classList.add('active');
-                galleryImages[0].style.border = '7px solid gray'; // Apply border to the first image
-            }
-        }
-    </script>
 @endsection

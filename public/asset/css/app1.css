@@ -11,7 +11,10 @@
     background-color: currentColor;
     padding-top: 50px;
 }
-
+.top-left a{
+    color: #dddddd;
+    text-decoration: none;
+}
 .main-footer .footer-top {
     padding-bottom: 10px;
 }
@@ -40,7 +43,14 @@
     font-size: 18px;
 
 }
-
+.footer-bottom a{
+    font-size: 18px;
+    color: #dddddd;
+    text-decoration: none;
+}
+.single-box a{
+    text-decoration: none;
+}
 .footer-logo img {
     width: 60%;
 }
@@ -178,6 +188,7 @@
 .award-image {
     height: 190px;
     border-radius: 10px;
+    margin: auto;
 }
 
 .plants-title {
@@ -309,7 +320,9 @@
     font-size: 30px;
     margin-top: 20px
 }
-
+.product-title i{
+    padding: 0px 10px 0px 0px;
+}
 .btn-class1 {
     width: 100%;
     border-radius: 5px;
@@ -363,7 +376,7 @@
 
 .sec-title h2 {
     font-weight: 600;
-    font-size: 35px;
+    font-size: 30px;
     color: white;
     margin-bottom: 60px;
     margin-top: 20px;
@@ -402,7 +415,12 @@
     font-weight: 600;
     padding: 40px;
 }
-
+.panel-box{
+    margin: 20px;
+}
+.panel-title{
+    padding: 3px;
+}
 .certificate1 {
     background-color: rgb(31, 31, 31);
     margin-top: 40px;
@@ -495,6 +513,9 @@ p {
     width: 70%;
     margin: auto;
     margin-top: 50px;
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 8px
 
 }
 
@@ -502,7 +523,7 @@ p {
     color: whitesmoke;
     font-weight: 600;
     font-size: 30px;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-bottom: 15px;
     padding: 0px 10px;
     line-height: 1.3;
@@ -655,5 +676,11 @@ p {
         margin-top: 2px;
 
         margin-left: 50px;
+    }
+    .certificate-class img{
+        width: 35%;
+    }
+    .certificate-class{
+        gap: 18px;
     }
 }

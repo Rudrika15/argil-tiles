@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
     <!-- page title -->
     <section class="page-title"
         style="background-image: url('https://www.kajariaceramics.com/concept-picture/high002650.jpg');">
@@ -9,7 +10,7 @@
                     <h1>{{ $data->names }}</h1>
                 </div>
                 <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a>
+                    <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a>
                     &nbsp;<span>{{ $data->names }}</span>
                 </div>
             </div>
@@ -56,7 +57,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="product-title">
-                    <h3><i class="fa-solid fa-clone"></i>Product Information</h3>
+                    <h3><i class="fa fa-files-o"></i>Product Information</h3>
                 </div>
 
                 <div class="col-md-6 product-details">
@@ -86,11 +87,13 @@
 
             <div class="contact-title1 col-md-6">
                 <div class="product-title">
-                    <h3><i class="fa-solid fa-clone"></i>Product Inquiry</h3>
+                    <h3><i class="fa fa-files-o"></i>Product Inquiry</h3>
                 </div>
                 <div class="contact-form-area1">
-                    <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php"
+
+                    <form id="contact-form" name="contact_form" class="default-form" action="{{ Route('send.mail') }}"
                         method="post">
+                        @csrf
                         <div class="col-md-12 input">
                             <input type="text" name="form_name" value="" placeholder="Your Name " required=""
                                 class="inp">
@@ -106,11 +109,11 @@
                         <div class="col-md-12 input">
                             <textarea placeholder="Message" name="form_message" required="" class="inp"></textarea>
                         </div>
+                        <div class="btn-class">
+                            <button type="submit" class="btn-one btn-class1" data-loading-text="Please wait...">Request
+                                Price Quote</button>
+                        </div>
                     </form>
-                    <div class="btn-class">
-                        <button type="submit" class="btn-one btn-class1" data-loading-text="Please wait...">Request
-                            Price Quote</button>
-                    </div>
                 </div>
             </div>
         </div>

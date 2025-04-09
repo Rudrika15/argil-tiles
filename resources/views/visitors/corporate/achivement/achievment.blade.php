@@ -9,7 +9,7 @@
                     <h1>Achievment</h1>
                 </div>
                 <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Achievment</span>
+                    <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Achievment</span>
                 </div>
             </div>
         </div>
