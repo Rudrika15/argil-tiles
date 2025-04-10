@@ -38,7 +38,7 @@
 
             </div>
             <div class="col-md-6">
-                <img src="asset/images/argileimage/groupcompanyimage.png" alt=""
+                <img src="asset/images/argileimage/groupcompanyimage.png" alt="group company image"
                     class="img-responsive all-page-side-image group-image">
             </div>
             <div class="col-md-12">

@@ -35,7 +35,7 @@
                 <p class="profile-heading paragraph">Success is a never ending journey</p>
             </div>
             <div class="col-md-6">
-                <img src="asset/images/argileimage/profilelogo.png" alt=""
+                <img src="asset/images/argileimage/profilelogo.png" alt="profile image"
                     class="img-responsive all-page-side-image">
             </div>
             <div class="col-md-12 ">

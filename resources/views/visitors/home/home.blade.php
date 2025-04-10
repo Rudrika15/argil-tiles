@@ -17,11 +17,11 @@
         </section>
 
         <!-- main slider end -->
-        <div class="topcontent container " style="padding-top: 25px">
+        <div class="+ container " style="padding-top: 25px">
             <div class="row">
                 <div class="col-md-6">
                     <div>
-                        <h2 class="heading1">Artificial Quartz Stone Slab Manufacturers</h2>
+                        <h1 class="heading1 heading-h1">Artificial Quartz Stone Slab Manufacturers</h1>
                     </div>
                     <div>
                         <p class="paragraph text-justify">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="asset/images/argileimage/hometextlogo.png" alt="" class="img-responsive">
+                    <img src="asset/images/argileimage/hometextlogo.png" alt="home page logo" class="img-responsive">
                 </div>
                 <div class="col-md-12">
                     <p class="paragraph text-justify">The management of Argil has always accomplished the big goals set out
@@ -68,7 +68,7 @@
                 <div class="overlay-style-two">
                     <div class="item">
                         <figure class="img-box">
-                            <a href="/quartzsurface"><img src="asset/images/argileimage/productimage1.jpg" alt=""
+                            <a href="/quartzsurface"><img src="asset/images/argileimage/productimage1.jpg" alt="quartz image"
                                     class="img-responsive"></a>
                             <div class="default-overlay-outer">
                                 <div class="inner">
@@ -88,7 +88,7 @@
                 <div class="overlay-style-two">
                     <div class="item">
                         <figure class="img-box">
-                            <a href="/spcproducts"><img src="asset/images/argileimage/productimage2.jpg" alt=""
+                            <a href="/spcproducts"><img src="asset/images/argileimage/productimage2.jpg" alt="spc image"
                                     class="img-responsive"></a>
                             <div class="default-overlay-outer">
                                 <div class="inner">

@@ -30,7 +30,7 @@
                 <div class="col-md-4 col-md-6">
                     <a href="{{ Route('spcproductinquiry', $data->id) }}">
                         <div class="card1" data-aos="flip-left">
-                            <img src="{{ asset('spc/' . $data->mainImg) }}" alt="" class="img-responsive">
+                            <img src="{{ asset('spc/' . $data->mainImg) }}" alt="spc product image" class="img-responsive">
                             <p class="text-center">{{ $data->names }}</p>
                         </div>
                     </a>

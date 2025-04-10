@@ -35,7 +35,7 @@
                     He moved on to Junagadh District to serve as a moulder fro 2 years in Kathiawad Industries Ltd.</p>
             </div>
             <div class="col-md-6">
-                <img src="asset/images/argileimage/aboutimage.png" alt=""
+                <img src="asset/images/argileimage/aboutimage.png" alt="about image"
                     class="img-responsive all-page-side-image">
             </div>
             <div class="col-md-12">

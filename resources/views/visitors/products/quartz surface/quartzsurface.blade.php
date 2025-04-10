@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 surface-image">
-                <img src="asset/images/argileimage/quartzimage1.jpg" alt=""
+                <img src="asset/images/argileimage/quartzimage1.jpg" alt="quartz image"
                     class="img-responsive all-page-side-image">
             </div>
             <div class="col-md-6 overview">
@@ -57,10 +57,10 @@
     <div class="container quartzsurface">
         <div class="row">
             @foreach ($data as $index => $item)
-                <div class="col-md-4 col-md-6" data-aos="flip-up">
+                <div class="col-md-4">
                     <a href="{{ Route('quartzinquiry', $item->id) }}">
-                        <div class="card1">
-                            <img src="{{ asset('quartz/' . $item->mainImg) }}" alt="" class="img-responsive">
+                        <div class="card1"  data-aos="flip-up">
+                            <img src="{{ asset('quartz/' . $item->mainImg) }}" alt="quartz product" class="img-responsive">
                             <p class="text-center">{{ $item->name }}</p>
                         </div>
                     </a>
@@ -177,7 +177,7 @@
         <div class="container-fluid bg-imgae-enhance1">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="asset/images/argileimage/quartzimage5.jpg" alt="" class="img-responsive bg-img1">
+                    <img src="asset/images/argileimage/quartzimage5.jpg" alt="argil quartz image" class="img-responsive bg-img1">
                 </div>
                 <div class="col-md-6 card3">
                     <h3 class="bg-image-title">Argil Quartz Slab Manufacturing Process</h3>
@@ -198,7 +198,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
                         <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg1.png" alt="" class="img-responsive">
+                            <img src="asset/images/argileimage/quartz-bg1.png" alt="MIXING image" class="img-responsive">
                             <h3>MIXING</h3>
                             <p>The fundamental components of an Argil Tiles Slab, such as Natural Quartz Grits, Resin,
                                 colouring
@@ -218,7 +218,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
                         <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg2.png" alt="" class="img-responsive">
+                            <img src="asset/images/argileimage/quartz-bg2.png" alt="PRESSING image" class="img-responsive">
                             <h3>PRESSING</h3>
                             <p class="card-para">Spread onto trays, the mixture is compacted with intense vibration and
                                 pressure. The
@@ -237,7 +237,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
                         <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg3.png" alt="" class="img-responsive">
+                            <img src="asset/images/argileimage/quartz-bg3.png" alt="POLISHING image" class="img-responsive">
                             <h3>POLISHING</h3>
                             <p>Using two sets of parallel diamond saws, the uneven slab's four sides are now cut to the
                                 appropriate
@@ -255,7 +255,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
                         <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg4.png" alt="" class="img-responsive">
+                            <img src="asset/images/argileimage/quartz-bg4.png" alt="QUALITY CONTROL" class="img-responsive">
                             <h3>QUALITY CONTROL</h3>
                             <p class="card-para1">Every step of the manufacturing process undergoes inspection at Argil
                                 Tiles, from selecting
@@ -518,10 +518,11 @@
     {{-- end accrodian --}}
 
 
+
     <div class="container contact-details-form">
         <div class="row">
             <div class="col-md-6">
-                <img src="asset/images/argileimage/footerimge.jpg" alt=""
+                <img src="asset/images/argileimage/footerimge.jpg" alt="contact image"
                     class="quartz-image-footer img-responsive">
             </div>
             <div class="col-md-6">
@@ -530,8 +531,9 @@
                     <div class="text">
                         <p>Let's Be in Touch !!!</p>
                     </div>
-                    <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php"
+                    <form id="contact-form" name="contact_form" class="default-form" action="{{ Route('send.mail') }}"
                         method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <input type="text" name="form_name" value="" placeholder="Your Name "
@@ -541,14 +543,14 @@
                                 <input type="email" name="form_email" value="" placeholder="Email"
                                     class="inp" required="">
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <input type="text" name="form_phone" value="" placeholder="Contact Number"
                                     class="inp" required="">
                             </div>
-                            <div class="col-md-6">
+                            {{-- <div class="col-md-6">
                                 <input type="text" name="form_subject" value="" placeholder='Subject'
                                     class="inp" required="">
-                            </div>
+                            </div> --}}
                             <div class="col-md-12 ">
                                 <textarea placeholder="Message" name="form_message" required="" class="textarea inp"></textarea>
                             </div>

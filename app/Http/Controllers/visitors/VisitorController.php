@@ -89,8 +89,6 @@ class VisitorController extends Controller
 
     }
 
-
-
     public function spcproducts()
     {
         $data = Lvtproduct::orderBy('id', 'desc')->get();

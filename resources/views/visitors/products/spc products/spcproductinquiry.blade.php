@@ -26,12 +26,12 @@
             <div class="col-md-3 galaryimage">
 
                 @if ($data->mainImg)
-                    <img src="{{ asset('spc/' . $data->mainImg) }}" alt="" onclick="miniImage(this)"
+                    <img src="{{ asset('spc/' . $data->mainImg) }}" alt="spc product image" onclick="miniImage(this)"
                         class="img-responsive galary-mini-image spcinquiry-galaryimage">
                 @endif
 
                 @if ($data->subImg1)
-                    <img src="{{ asset('spc/' . $data->subImg1) }}" alt="" onclick="miniImage(this)"
+                    <img src="{{ asset('spc/' . $data->subImg1) }}" alt="spc product image" onclick="miniImage(this)"
                         class="img-responsive galary-mini-image spcinquiry-galaryimage">
                 @endif
             </div>
@@ -40,11 +40,11 @@
                 <div class="first-image">
 
                     @if ($data->mainImg)
-                        <img src="{{ asset('spc/' . $data->mainImg) }}" alt="" id="big-image"
+                        <img src="{{ asset('spc/' . $data->mainImg) }}" alt="spc product image" id="big-image"
                             class="img-responsive spcproductimage">
                     @endif
                     @if ($data->subImg1)
-                        <img src="{{ asset('spc/' . $data->subImg1) }}" alt="" id="big-image"
+                        <img src="{{ asset('spc/' . $data->subImg1) }}" alt="spc product image" id="big-image"
                             class="img-responsive spcproductimage spcproductimage1">
                     @endif
 

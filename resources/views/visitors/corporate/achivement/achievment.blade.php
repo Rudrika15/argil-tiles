@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-6 achievment-content">
                 <div class="col-md-4">
-                    <img src="asset/images/argileimage/achievementimage1.jpeg" class="img-responsive award-image">
+                    <img src="asset/images/argileimage/achievementimage1.jpeg" class="img-responsive award-image" alt="national award">
                 </div>
                 <div class="col-md-8">
                     <p class="paragraph2">National Award for the year 1997 (for best quality products) from vice president
@@ -39,7 +39,7 @@
             </div>
             <div class="col-md-6 achievment-content">
                 <div class="col-md-4">
-                    <img src="asset/images/argileimage/achievementimage2.jpeg" alt=""
+                    <img src="asset/images/argileimage/achievementimage2.jpeg" alt="export award"
                         class="img-responsive award-image">
                 </div>
                 <div class="col-md-8">

@@ -113,7 +113,9 @@
     margin-bottom: 0px;
     padding: 0px 1px;
 }
-
+.heading-h1{
+    line-height: 33px;
+}
 .heading3 {
     font-size: 22px;
     font-weight: 600;
@@ -212,6 +214,7 @@
 
 .card1 {
     margin: 0px 20px;
+
 }
 
 .card1 img {

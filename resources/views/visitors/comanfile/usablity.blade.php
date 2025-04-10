@@ -11,27 +11,27 @@
         <div class="row">
             <div class="certificate-class">
                 <div class="col-md-2">
-                    <img src="asset/images/argileimage/usablityimage1.png" alt="" class="img-responsive">
+                    <img src="asset/images/argileimage/usablityimage1.png" alt="More Durable" class="img-responsive">
                     <h3>More Durable</h3>
                 </div>
                 <div class="col-md-2">
-                    <img src="asset/images/argileimage/usablityimage2.png" alt="" class="img-responsive">
+                    <img src="asset/images/argileimage/usablityimage2.png" alt="More Uniform" class="img-responsive">
                     <h3>More Uniform</h3>
                 </div>
                 <div class="col-md-2">
-                    <img src="asset/images/argileimage/usablityimage3.png" alt="" class="img-responsive">
+                    <img src="asset/images/argileimage/usablityimage3.png" alt="Bacteria-Free" class="img-responsive">
                     <h3>Bacteria-Free</h3>
                 </div>
                 <div class="col-md-2">
-                    <img src="asset/images/argileimage/usablityimage4.png" alt="" class="img-responsive">
+                    <img src="asset/images/argileimage/usablityimage4.png" alt="Friendiler to the Environment" class="img-responsive">
                     <h3>Friendiler to the Environment</h3>
                 </div>
                 <div class="col-md-2">
-                    <img src="asset/images/argileimage/usablityimage5.png" alt="" class="img-responsive">
+                    <img src="asset/images/argileimage/usablityimage5.png" alt="Requires less Maintenance" class="img-responsive">
                     <h3>Requires less Maintenance</h3>
                 </div>
                 <div class="col-md-2">
-                    <img src="asset/images/argileimage/usablityimage5.png" alt="" class="img-responsive">
+                    <img src="asset/images/argileimage/usablityimage5.png" alt="Longer Warranty" class="img-responsive">
                     <h3>Longer Warranty</h3>
                 </div>
             </div>
