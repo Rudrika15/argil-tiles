@@ -26,14 +26,15 @@ class ContactFormMail extends Mailable
     // Build the email
     public function build()
     {
-        return $this->from(config('mail.from.address'), config('mail.from.name'))  // Set a default sender
+        return $this->from(config('mail.from.address'), config('mail.from.name'))
                     ->subject('New Contact Form Submission')
-                    ->view('emails.contact_form')  // Blade view for email content
+                    ->view('emails.contact_form')
                     ->with([
                         'name' => $this->name,
                         'email' => $this->email,
                         'phone' => $this->phone,
-                        'userMessage' => $this->userMessage
+                        'userMessage' => $this->userMessage,
                     ]);
     }
+
 }

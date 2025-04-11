@@ -26,7 +26,7 @@ assist you!">
     <meta name="twitter:image" content="https://www.argiltiles.com/path-to-contact
 -image.jpg">
     <meta name="twitter:site" content="@ArgilGroup">
-    <link rel="canonical" href="https://www.argiltiles.com/contact" data-react- helmet="true">
+    <link rel="canonical" href="https://dev.argiltiles.com/contact" data-react- helmet="true">
     <title>Contact Us | Argil Tiles – Quartz Stone Manufacturers in Morbi, India</title>
 @endsection
 

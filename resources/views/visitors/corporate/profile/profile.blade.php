@@ -1,4 +1,25 @@
 @extends('layouts.app')
+@section('seosection')
+<meta name="description" content="Learn about Argil, a leading
+manufacturer of high-quality quartz slabs in Morbi, Gujarat. Discover our
+expertise, products, and innovations." />
+<meta name="keywords" content="Argil Profile, Quartz Manufacturer,
+Artificial Quartz Slabs, About Argil, Morbi Tiles Manufacturer" />
+<meta property="og:title" content="About Argil Group – Leading Quartz
+Stone Manufacturer">
+<meta property="og:description" content="Learn more about Argil Group, a
+leading manufacturer of premium artificial quartz stone slabs in Morbi,
+Gujarat, India. Quality, innovation, and excellence define us.">
+<meta property="og:image" content="https://www.argiltiles.com/images/
+profile-og-image.jpg">
+<meta property="og:url" content="https://www.argiltiles.com/profile">
+<meta name="twitter:title" content="About Argil Group – Leading Quartz Stone Manufacturer">
+<meta name="twitter:description" content="Discover Argil Group, a premier manufacturer of high-quality quartz stone products, committed to innovation and excellence.">
+<meta name="twitter:image" content="https://example.com/path-to-image.jpg">
+<link rel="canonical" href="https://dev.argiltiles.com/profile" data-react-
+helmet="true">
+<title>Argil Company Profile | Leading Quartz Slab Manufacturer</title>
+@endsection
 @section('content')
     <!-- page title -->
     <section class="page-title"

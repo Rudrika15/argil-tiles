@@ -1,4 +1,36 @@
 @extends('layouts.app')
+@section('seosection')
+<meta name="description" content="Premium quartz stone slabs for
+countertops & kitchen platforms. Manufactured in Morbi, Gujarat, India.
+Explore our high-quality designs at Argil." />
+<meta name="keywords" content="Quartz Slabs, Quartz Countertops,
+Kitchen Surfaces, Argil Tiles, Quartz Stone Manufacturers, Morbi Gujarat" />
+<meta name="author" content="Argil Group – Leading Manufacturer of
+Premium Quartz Surfaces">
+<meta property="og:title" content="Quartz Stone Slab For Kitchen Platform
+Countertops Manufacturers In Morbi, Gujarat, India | Argil" data-react-helmet
+="true">
+<meta property="og:url" content="https://www.argiltiles.com/quartzsurface"
+data-react-helmet="true">
+<meta property="og:description" content="Argil is a quartz surface stone slab
+for kitchen platform countertops manufacturers in Morbi, Gujarat, India. We have
+ the best engineered  quartz surface stone for kitchen and platform  at a
+ reasonable price We have 10+ yrs of service. Get a price quote " data-react-
+helmet="true">
+<meta property="og:image" content="Image URL" data-react-helmet="true">
+<meta name="twitter:title" content="Quartz Stone Slab For Kitchen Platform
+Countertops Manufacturers In Morbi, Gujarat, India | Argil"
+data-react-helmet="true">
+<meta name="twitter:description" content="Argil is a quartz surface stone
+slab for kitchen platform countertops manufacturers in Morbi, Gujarat, India. We
+ have the best engineered  quartz surface stone for kitchen and platform  at a
+reasonable price We have 10+ yrs of service. Get a price quote  "
+data-react-helmet="true">
+<meta name="twitter:image" content="Image URL" data-react-helmet="true">
+<link rel="canonical" href="https://dev.argiltiles.com/quartzsurface" data-react-
+helmet="true">
+<title>Quartz Countertops & Kitchen Slabs Manufacturer | Argil</title>
+@endsection
 @section('content')
     <!-- page title -->
     <a href="/contact">

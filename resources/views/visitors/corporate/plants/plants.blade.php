@@ -1,4 +1,28 @@
 @extends('layouts.app')
+@section('seosection')
+<meta name="description" content="Discover Argil's state-of-the-art tile
+manufacturing plants. Explore our advanced production technology and
+sustainable practices." />
+<meta name="keywords" content="Argil Plants, Tile Manufacturing, Ceramic
+Production, Industrial Plants, Argil Tiles Factory" />
+<meta property="og:title" content="Argil Group Manufacturing Plants –
+Precision & Innovation">
+<meta property="og:description" content="Explore Argil Group’s state-of-the
+-art manufacturing plants, where advanced technology meets precision
+craftsmanship in artificial quartz stone production.">
+<meta property="og:image" content="https://www.argiltiles.com/images/
+plants-og-image.jpg">
+<meta property="og:url" content="https://www.argiltiles.com/plants">
+<meta name="twitter:title" content="Argil Group Manufacturing Plants –
+Precision & Innovation"><meta name="twitter:description" content="Discover the cutting-edge
+manufacturing facilities of Argil Group, where technology, quality, and
+innovation drive the production of world-class artificial quartz stones.">
+<meta name="twitter:image" content="https://argilgroup.com/assets/images/
+plants-banner.jpg"> <!-- Replace with actual image URL -->
+<link rel="canonical" href="https://dev.argiltiles.com/plants" data-react-
+helmet="true">
+<title>Argil Manufacturing Plants | Advanced Tile Production</title>
+@endsection
 @section('content')
     <!-- page title -->
     <section class="page-title"

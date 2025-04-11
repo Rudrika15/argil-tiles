@@ -71,6 +71,8 @@
                 <li class="{{ request()->routeIs('stockshow') ? 'active' : '' }}"><a
                         href="{{ route('stockshow') }}">Stock</a></li>
                 <li class="{{ request()->routeIs('blog') ? 'active' : '' }}"><a href="{{ route('blog') }}">Blog</a></li>
+                <li class="{{ request()->routeIs('newarrivalsshow') ? 'active' : '' }}"><a
+                        href="{{ route('newarrivalsshow') }}">New Arrivals</a></li>
 
                 {{-- <li><a href="{{ route('logout') }}">logout</a></li> --}}
             </ul>

@@ -13,5 +13,13 @@
     <p><strong>Phone:</strong> {{ $phone }}</p>
     <p><strong>Message:</strong></p>
     <p>{{ $userMessage }}</p>
+
+
+    <hr>
+    <pre>
+        {{ var_dump(get_defined_vars()) }}
+    </pre>
+    <p>Thank you for reaching out to us. We will get back to you shortly.</p>
+
 </body>
 </html>

@@ -1,4 +1,31 @@
     @extends('layouts.app')
+    @section('seosection')
+    <meta name="description" content="Watch Argil's documentary film
+showcasing our journey in quartz slab manufacturing, innovation, and
+quality craftsmanship in India." />
+<meta name="keywords" content="Argil Documentary,Quartz Manufacturing,
+Artificial Quartz Film, Argil Story, Quartz Industry" />
+<meta property="og:title" content="The Argil Group Story – A Documentary
+on Innovation & Excellence">
+<meta property="og:description" content="Watch the inspiring journey of
+Argil Group, a leader in artificial quartz stone manufacturing. This
+documentary highlights our innovation, craftsmanship, and industry
+impact.">
+<meta property="og:image" content="https://www.argiltiles.com/images/
+documentary-og-image.jpg">
+<meta property="og:url" content="https://www.argiltiles.com/documentary">
+<meta property="og:type" content="video.movie">
+<meta name="twitter:title" content="The Argil Group Story – A Documentary
+on Innovation & Excellence">
+<meta name="twitter:description" content="Explore the evolution of Argil
+Group in this exclusive documentary. From vision to reality, witness our
+dedication to premium quartz stone manufacturing.">
+<meta name="twitter:image" content="https://argilgroup.com/assets/
+images/documentary-cover.jpg"> <!-- Replace with actual image URL -->
+<link rel="canonical" href="https://dev.argiltiles.com/documentaryfilm" data-react-
+helmet="true">
+    <title>Argil Documentary Film | Quartz Manufacturing & Innovation</title>
+    @endsection
     @section('content')
         <!-- page title -->
         <section class="page-title"

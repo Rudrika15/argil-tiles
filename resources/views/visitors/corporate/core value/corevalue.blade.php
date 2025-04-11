@@ -1,4 +1,29 @@
 @extends('layouts.app')
+@section('seosection')
+<meta name="description" content="Discover Argil's core values that drive
+innovation, sustainability, and quality in quartz slab manufacturing.
+ Learn what sets us apart." />
+ <meta name="keywords" content="Argil Core Values, Quartz Manufacturing
+ Ethics, Quality Commitment, Sustainability, Innovation" />
+ <meta property="og:title" content="Our Core Values – The Foundation of
+Argil Group">
+<meta property="og:description" content="At Argil Group, our core values
+drive our commitment to excellence, integrity, and innovation in artificial
+quartz stone manufacturing. Discover what sets us apart.">
+<meta property="og:image" content="https://www.argiltiles.com/images/
+core-values-og-image.jpg">
+<meta property="og:url" content="https://www.argiltiles.com/core-values">
+<meta name="twitter:title" content="Our Core Values – The Foundation of
+Argil Group">
+<meta name="twitter:description" content="Integrity, quality, and innovation
+define Argil Group. Explore the core values that shape our commitment to
+excellence in quartz stone manufacturing.">
+<meta name="twitter:image" content="https://argilgroup.com/assets/
+images/core-values-banner.jpg"> <!-- Replace with actual image URL -->
+<link rel="canonical" href="https://dev.argiltiles.com/corevalues" data-react-
+helmet="true">
+<title>Argil Core Values | Commitment to Quality & Innovation</title>
+@endsection
 @section('content')
     <!-- page title -->
     <section class="page-title"

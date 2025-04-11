@@ -20,6 +20,8 @@ jpg">
  surfaces in our latest catalogue at Argil Group.">
  <meta name="twitter:title" content="Explore Argil Group's Quartz Slabs Catalogue –
 Premium Designs">
+<link rel="canonical" href="https://dev.argiltiles.com/catalogue" data-react-
+helmet="true">
 <title>Argil Quartz Slab Catalogue | Artificial Quartz Collection</title>
 @endsection
 @section('content')

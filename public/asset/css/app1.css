@@ -10,7 +10,9 @@
 .main-footer {
     background-color: currentColor;
     padding-top: 50px;
+
 }
+
 .top-left a{
     color: #dddddd;
     text-decoration: none;
@@ -658,6 +660,19 @@ p {
     max-height: 430px;
     width: 100%;
 }
+.footer-widget h5{
+    font-size: 23px;
+}
+.footer-widget a{
+    font-size: 17px;
+    /* color: #dddddd; */
+}
+.footer-widget .single-box p{
+    font-size: 17px;
+}
+.footer-social{
+    text-align: center;
+}
 
 @media screen and (min-width: 375px) and (max-width: 1024px) {
 
@@ -686,4 +701,13 @@ p {
     .certificate-class{
         gap: 18px;
     }
+    /* .service-widget .list {
+        text-align: center;
+    }
+    .quick-link-div{
+        padding-left: 108px;
+    }
+    .quick-link-div .list{
+        text-align: center;
+    } */
 }

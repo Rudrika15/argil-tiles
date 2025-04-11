@@ -1,4 +1,29 @@
 @extends('layouts.app')
+@section('seosection')
+<meta name="description" content="Explore Argil's achievements and
+awards in the quartz manufacturing industry. See how we innovate and lead
+with excellence." />
+<meta name="keywords" content="Argil Achievements, Quartz Awards,
+Argil Tiles Success, Industrial Excellence, Company Milestones" />
+<meta property="og:title" content="Argil Group Achievements – Excellence
+in Quartz Manufacturing">
+<meta property="og:description" content="Discover the milestones, awards,
+and industry recognitions that define Argil Group’s success in artificial quartz
+stone manufacturing. Our journey of excellence continues.">
+<meta property="og:image" content="https://www.argiltiles.com/images/
+achievement-og-image.jpg">
+<meta property="og:url" content="https://www.argiltiles.com/achievements">
+<meta name="twitter:title" content="Argil Group Achievements – Excellence
+ in Quartz Manufacturing">
+ <meta name="twitter:description" content="Explore the awards,
+certifications, and recognitions that showcase Argil Group’s commitment
+to quality, innovation, and leadership in the artificial quartz industry.">
+<meta name="twitter:image" content="https://argilgroup.com/assets/images/
+achievements-banner.jpg"> <!-- Replace with actual image URL -->
+<link rel="canonical" href="https://dev.argiltiles.com/achievements" data-react-
+helmet="true">
+<title>Argil Achievements | Awards & Milestones in Quartz Industry</title>
+@endsection
 @section('content')
     <!-- page title -->
     <section class="page-title"

@@ -48,7 +48,7 @@ platform at a reasonable price. We have 10+ yrs of service.
 Get a price quote "
             data-react-helmet="true">
         <meta name="twitter:image" content="Image URL" data-react- helmet="true">
-        <link rel="canonical" href="https://www.argiltiles.com/" data- react-helmet="true">
+        <link rel="canonical" href="https://dev.argiltiles.com/" data- react-helmet="true">
         <link rel="icon" href="/logo_bg.png">
 
 
@@ -336,20 +336,22 @@ Get a price quote "
                                     <figure><img src="{{ asset('asset/images/argileimage/footerlogo.png') }}"
                                             alt="footer logo"class="img-responsive"></figure>
                                 </a></div>
-                            {{-- <ul class="footer-social">
+                            <ul class="footer-social">
                                 <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                            </ul> --}}
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-6 col-xs-12 footer-column">
                         <div class="service-widget footer-widget">
+                            <div class="quick-link-div">
                             <div class="title">
                                 <h5>Quick Links</h5>
                             </div>
+                        </div>
                             <ul class="list">
                                 <li><a href="/profile">Corporate</a></li>
                                 <li><a href="/quartzsurface">Products</a></li>
@@ -357,6 +359,7 @@ Get a price quote "
                                 <li><a href="/contact">Contact</a></li>
                                 <li><a href="/privacyPolicy">Privacy</a></li>
                             </ul>
+
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12 footer-column">

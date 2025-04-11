@@ -14,6 +14,8 @@ use App\Http\Controllers\admin\SliderController;
 use App\Http\Controllers\admin\WallController;
 use App\Http\Controllers\admin\FinshtypeController;
 use App\Http\Controllers\admin\DesigntypeController;
+use App\Http\Controllers\admin\NewArievelsController;
+use App\Http\Controllers\admin\NewArrivalsController;
 use App\Http\Controllers\admin\QsizemasterController;
 use App\Http\Controllers\admin\WsizemasterController;
 use App\Http\Controllers\admin\SsizemasterController;
@@ -206,6 +208,10 @@ Route::middleware('auth:web')->group(function () {
     Route::post("blog.update/{id}",[BlogController::class,'update'])->name('blog.update');
     Route::get("blog.delete/{id}",[BlogController::class,'destroy'])->name('blog.delete');
 
+    // new arievels
+    Route::get("newarrivalsshow", [NewArrivalsController::class, 'index'])->name('newarrivalsshow');
+    Route::get("newarrivals/edit/{id}", [NewArrivalsController::class, 'edit'])->name('newarrivals.edit');
+    Route::post("newarrivals/update/{id}", [NewArrivalsController::class, 'update'])->name('newarrivals.update');
 
 });
 
