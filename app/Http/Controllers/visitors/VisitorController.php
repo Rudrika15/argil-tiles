@@ -69,32 +69,32 @@ class VisitorController extends Controller
     {
 
 
+ //       return $request->all();
+
         // Validate the form data
-        $validated = $request->validate([
+        $request->validate([
             'form_name' => 'required|string|max:255',
             'form_email' => 'required|email',
             'form_phone' => 'required|string',
             'form_message' => 'required|string',
         ]);
 
-        // Collect the validated form data
-        $name = $validated['form_name'];
-        $email = $validated['form_email'];
-        $phone = $validated['form_phone'];
-        $message = $validated['form_message'];
 
+        $name = $request->input('form_name');
+        $email = $request->input('form_email');
+        $phone = $request->input('form_phone');
+        $message = $request->input('form_message');
 
-        // $contact = new Contact();
-        // $contact->name = $validated['form_name'];
-        // $contact->email = $validated['form_email'];
-        // $contact->contactno = $validated['form_phone'];
-        // $contact->message = $validated['form_message'];
-
-        // $contact->save();
+        $contact = new Contact();
+        $contact->name = $name;
+        $contact->email = $email;
+        $contact->contactno = $phone;
+        $contact->message = $message;
+        $contact->save();
 
 
         // Send the email using the ContactFormMail Mailable
-        Mail::to('rjjadav7773@gmail.com')  // Replace with your own email address
+        Mail::to('parmarjigardhirajlal@gmail.com')  // Replace with your own email address
             ->send(new ContactFormMail($name, $email, $phone, $message));
 
         // Redirect back with success message

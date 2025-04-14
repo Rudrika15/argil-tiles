@@ -16,9 +16,6 @@
 
 
     <hr>
-    <pre>
-        {{ var_dump(get_defined_vars()) }}
-    </pre>
     <p>Thank you for reaching out to us. We will get back to you shortly.</p>
 
 </body>
