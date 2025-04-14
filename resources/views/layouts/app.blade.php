@@ -384,17 +384,9 @@ Get a price quote "
                             </div>
                             <div class="single-box">
                                 <div class="icon-box"><i class="fa fa-phone"></i></div>
-<<<<<<< HEAD
                                 <p>+91 2822 240628,</p>
                                 {{-- <p>+91 2822 240628</p> --}}
-=======
-                                <a href="tel:2822240628">
-                                    <p>+91 2822 240628,</p>
-                                </a>
-                                <a href="tel:9925511465">
-                                    <p>+91 99255 11465</p>
-                                </a>
->>>>>>> 1c44e42171ef8d079bf9df37b8c51020e8aca1b0
+                              
                             </div>
                             <div class="single-box">
                                 <div class="icon-box"><i class="fa fa-envelope"></i></div>
@@ -415,18 +407,12 @@ Get a price quote "
             </div>
         </div>
         <div class="footer-bottom container">
-<<<<<<< HEAD
             @php
                 $year = date('Y');
 
             @endphp
             <p class="text col-md-9">©{{ $year }} - Mod Ceramic Industries Ltd.</p>
             <p class="text col-md-3">Powered By: FlipCode Solutions</p>
-=======
-            <p class="text col-md-9">©2023 - Mod Ceramic Industries Ltd.</p>
-            <p class="text col-md-3"><a href="https://flipcodesolutions.com/" target="blank">Powered By: FlipCode
-                    Solutions</a></p>
->>>>>>> 1c44e42171ef8d079bf9df37b8c51020e8aca1b0
         </div>
     </footer>
     <!-- main footer area end -->
