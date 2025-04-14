@@ -322,7 +322,7 @@
                             <div class="single-box">
                                 <div class="icon-box"><i class="fa fa-phone"></i></div>
                                 <p>+91 2822 240628,</p>
-                                <p>+91 2822 240628</p>
+                                {{-- <p>+91 2822 240628</p> --}}
                             </div>
                             <div class="single-box">
                                 <div class="icon-box"><i class="fa fa-envelope"></i></div>
@@ -341,7 +341,11 @@
             </div>
         </div>
         <div class="footer-bottom container">
-            <p class="text col-md-9">©2023 - Mod Ceramic Industries Ltd.</p>
+            @php
+                $year = date('Y');
+
+            @endphp
+            <p class="text col-md-9">©{{ $year }} - Mod Ceramic Industries Ltd.</p>
             <p class="text col-md-3">Powered By: FlipCode Solutions</p>
         </div>
     </footer>

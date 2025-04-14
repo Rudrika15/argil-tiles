@@ -2,7 +2,7 @@
 @section('content')
     <!-- page title -->
     <section class="page-title"
-        style="background-image: url('https://www.kajariaceramics.com/concept-picture/high002650.jpg');">
+        style="background-image: url('https://spark27creative.com/wp-content/uploads/2023/11/FAST-Poster-Hero-2048x1075.jpg');">
         <div class="container">
             <div class="content-box">
                 <div class="title">

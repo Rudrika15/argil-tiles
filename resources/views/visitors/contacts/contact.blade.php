@@ -2,7 +2,7 @@
 @section('content')
     <!-- page title -->
     <section class="page-title"
-        style="background-image: url('https://www.kajariaceramics.com/concept-picture/high002650.jpg');">
+        style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/005/263/636/small_2x/contact-us-concept-icons-such-as-mobile-phone-e-mail-address-chat-global-communication-on-dark-blue-background-for-presentation-web-banner-article-business-and-network-connection-and-company-free-vector.jpg');">
         <div class="container">
             <div class="content-box">
                 <div class="title">

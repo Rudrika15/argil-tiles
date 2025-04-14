@@ -2,7 +2,7 @@
 @section('content')
     <!-- page title -->
     <section class="page-title"
-        style="background-image: url('https://www.kajariaceramics.com/concept-picture/high002650.jpg');">
+        style="background-image: url('https://knowledgehorizonindia.com/wp-content/uploads/2021/11/About-us.jpg');">
         <div class="container">
             <div class="content-box">
                 <div class="title">
