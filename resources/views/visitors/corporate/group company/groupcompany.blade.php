@@ -1,4 +1,31 @@
 @extends('layouts.app')
+@section('seosection')
+<meta name="description" content="Learn about Argil Group's companies
+specializing in quartz manufacturing, innovation, and sustainability. Explore
+our legacy and vision." />
+<meta name="keywords" content="Argil Group, Quartz Manufacturing,
+Industrial Innovation, Sustainable Business, Argil Companies" />
+<meta property="og:title" content="Argil Group Companies – A Legacy of
+Excellence & Innovation">
+<meta property="og:description" content="Explore the diverse companies
+under Argil Group, a leader in artificial quartz stone manufacturing. Our
+commitment to quality, innovation, and growth drives us forward.">
+<meta property="og:image" content="https://www.argiltiles.com/images/
+group-company-og-image.jpg">
+<meta property="og:url" content="https://www.argiltiles.com/group-
+company">
+<meta name="twitter:title" content="Argil Group Companies – A Legacy of
+Excellence & Innovation">
+<meta name="twitter:description" content="Discover the companies within
+Argil Group, each dedicated to delivering premium artificial quartz stone
+solutions with a focus on innovation and quality.">
+<meta name="twitter:image" content="https://argilgroup.com/assets/
+images/group-companies-banner.jpg"> <!-- Replace with actual
+image URL -->
+<link rel="canonical" href="https://dev.argiltiles.com/groupcompany" data-react-
+helmet="true">
+<title>Argil Group of Companies | Leaders in Quartz Manufacturing</title>
+@endsection
 @section('content')
     <!-- page title -->
     <section class="page-title"
@@ -9,7 +36,7 @@
                     <h1>GroupCompany</h1>
                 </div>
                 <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>GroupCompany</span>
+                    <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>GroupCompany</span>
                 </div>
             </div>
         </div>
@@ -38,7 +65,7 @@
 
             </div>
             <div class="col-md-6">
-                <img src="asset/images/argileimage/groupcompanyimage.png" alt=""
+                <img src="asset/images/argileimage/groupcompanyimage.png" alt="group company image"
                     class="img-responsive all-page-side-image group-image">
             </div>
             <div class="col-md-12">

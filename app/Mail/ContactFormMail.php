@@ -12,7 +12,7 @@ class ContactFormMail extends Mailable
     public $name;
     public $email;
     public $phone;
-    public $message;
+    public $userMessage;
 
     // Constructor to pass data
     public function __construct($name, $email, $phone, $message)
@@ -20,20 +20,21 @@ class ContactFormMail extends Mailable
         $this->name = $name;
         $this->email = $email;
         $this->phone = $phone;
-        $this->message = $message;
+        $this->userMessage = $message;
     }
 
     // Build the email
     public function build()
     {
-        return $this->from(config('mail.from.address'), config('mail.from.name'))  // Set a default sender
+        return $this->from(config('mail.from.address'), config('mail.from.name'))
                     ->subject('New Contact Form Submission')
-                    ->view('emails.contact_form')  // Blade view for email content
+                    ->view('emails.contact_form')
                     ->with([
                         'name' => $this->name,
                         'email' => $this->email,
                         'phone' => $this->phone,
-                        'message' => $this->message
+                        'userMessage' => $this->userMessage,
                     ]);
     }
+
 }

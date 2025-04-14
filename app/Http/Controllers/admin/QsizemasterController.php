@@ -40,7 +40,7 @@ class QsizemasterController extends Controller
             $qsize->save();
 
 		//		return response($qsize,201);
-            return redirect()->back()->with('success','Record Insert Successfully');
+        return redirect()->route('qsizeshow')->with('msg', 'Record Inserted Successfully');
 
     }
 
@@ -72,12 +72,12 @@ class QsizemasterController extends Controller
             $qsize->save();
 
 		//		return response($qsize,201);
-            return redirect()->back()->with('success','Record Update Successfully');
+        return redirect()->route('qsizeshow')->with('msg', 'Record Update Successfully');
 
     }
     function delete($id)
 	{
         $data=Qsizemaster::find($id)->delete();
-		return redirect('/qsizeshow')->with('success','Data Delete successfully');
+        return redirect()->route('qsizeshow')->with('msg', 'Data Delete Successfully');
     }
 }

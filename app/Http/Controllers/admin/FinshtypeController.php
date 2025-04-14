@@ -38,7 +38,7 @@ class FinshtypeController extends Controller
             $finishtype->save();
 
 		//		return response($finishtype,201);
-            return redirect()->back()->with('success','Record Insert Successfully');
+        return redirect()->route('finishtypeshow')->with('msg', 'Record Inserted Successfully');
 
     }
 
@@ -70,12 +70,12 @@ class FinshtypeController extends Controller
             $finishtype->save();
 
 		//		return response($finishtype,201);
-            return redirect()->back()->with('success','Record Update Successfully');
+        return redirect()->route('finishtypeshow')->with('msg', 'Record Update Successfully');
 
     }
     function delete($id)
 	{
         $data=Finishtype::find($id)->delete();
-		return redirect('/finishtypeshow')->with('success','Data Delete successfully');
+        return redirect()->route('finishtypeshow')->with('msg', 'Data Delete Successfully');
     }
 }

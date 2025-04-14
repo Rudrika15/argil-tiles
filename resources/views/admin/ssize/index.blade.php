@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="row">
+{{-- <div class="row">
     <div class="col-md-12">
 
         @if ($message = Session::get('success'))
@@ -16,7 +16,7 @@
             </div>
         @endif
     </div>
-</div>
+</div> --}}
 
 
     <div class="main-content">
@@ -39,7 +39,10 @@
                         <td>{{ $data->size }}</td>
                         <td style="gap: 8px">
                             <a href="{{ route('ssize.edit', $data->id) }}" class="btn btn-primary">Edit</a>
-                            <a href="{{ route('ssize.delete', $data->id) }}" class="btn btn-warning"> Delete </a>
+                            <a href="javascript:void(0)" class="btn btn-warning"
+                            onclick="openDeleteModal('{{Route('ssize.delete',$data->id)}}')">
+                            Delete
+                        </a>
                         </td>
                     </tr>
                 @endforeach

@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12">
 
             @if ($message = Session::get('success'))
@@ -18,7 +18,7 @@
                 </div>
             @endif
         </div>
-    </div>
+    </div> --}}
 
     <div class="main-content">
         <div class="float-left">
@@ -59,7 +59,11 @@
                             <td>{{ $data->status }}</td>
                             <td class="d-flex" style="gap: 8px"><a class="btn btn-primary"
                                     href="{{ route('quartz.edit', $data->id) }}"> Edit </a>
-                                <a class="btn btn-warning" href="{{ route('quartz.delete', $data->id) }}"> Delete </a>
+
+                                 <a href="javascript:void(0)" class="btn btn-warning"
+                                 onclick="openDeleteModal('{{Route('quartz.delete',$data->id)}}')">
+                                 Delete
+                             </a>
                             </td>
                         </tr>
                     @endforeach

@@ -39,7 +39,7 @@ class WsizemasterController extends Controller
             $wsize->save();
 
 		//		return response($wsize,201);
-            return redirect()->back()->with('success','Record Insert Successfully');
+        return redirect()->route('wsizeshow')->with('msg', 'Record Inserted Successfully');
 
     }
 
@@ -71,12 +71,12 @@ class WsizemasterController extends Controller
             $wsize->save();
 
 		//		return response(wqsize,201);
-            return redirect()->back()->with('success','Record Update Successfully');
+        return redirect()->route('wsizeshow')->with('msg', 'Record Update Successfully');
 
     }
     function delete($id)
 	{
         $data=Wsizemaster::find($id)->delete();
-		return redirect('/wsizeshow')->with('success','Data Delete successfully');
+        return redirect()->route('wsizeshow')->with('msg', 'Data Delete Successfully');
     }
 }

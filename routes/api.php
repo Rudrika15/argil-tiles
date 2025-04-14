@@ -19,6 +19,10 @@ Route::get('/slider/{id?}',[ApiController::class,'sliderview']);
 Route::get('/quartzproduct/{id?}',[ApiController::class,'quartzproductview']);
 //Route::get('/wallproductview/{id?}',[ApiController::class,'wallproductview']);
 Route::get('/spcproduct/{id?}',[ApiController::class,'lvtproductview']);
+// new arrivals route
+Route::get('/newarrivals/{id?}',[ApiController::class,'newarrivalsview']);
+
+Route::post('/contactus',[ApiController::class,'contactus']);
 
 //Route::post('/wallfilter',[ApiController::class,'wallfilter']);
 //Route::get('/quartzfilter/{id?}',[ApiController::class,'quartzfilter']);

@@ -98,7 +98,7 @@ class WallController extends Controller
 
 		$wall->save();
 
-		return redirect()->back()->with('success', 'Record Inserted Successfully');
+        return redirect()->route('wallshow')->with('msg', 'Record Inserted Successfully');
 	}
 
 	function edit($id)
@@ -180,13 +180,13 @@ class WallController extends Controller
 
 		$wall->save();
 
-		return redirect()->back()->with('success', 'Record Update Successfully');
+        return redirect()->route('wallshow')->with('msg', 'Record Update Successfully');
 	}
 	function delete($id)
 	{
 
 		$data = Wallproduct::find($id)->delete();
 
-		return redirect()->back()->with('success', 'Data Delete Successfully');
+        return redirect()->route('wallshow')->with('msg', 'Data Delete Successfully');
 	}
 }

@@ -23,6 +23,8 @@ use App\Models\Designtype;
 use App\Models\Wsizemaster;
 use App\Models\Finishtype;
 use App\Models\Favorite;
+use App\Models\NewArievels;
+use App\Models\NewArrivals;
 
 class apiController extends Controller
 {
@@ -227,6 +229,7 @@ class apiController extends Controller
         $um->save();
         return $um;
     }
+
     function changepassword(Request $requset, $id)
     {
         $oldpassword = $requset->oldpassword;
@@ -516,4 +519,18 @@ class apiController extends Controller
         else
             return ['data' => "No Slider Found.."];
     }
+
+    function newarrivalsview($id = 0)
+    {
+        if ($id == 0) {
+            $data = NewArrivals::orderBy('id', 'desc')->get();
+        } else {
+            $data = NewArrivals::find($id);
+        }
+        if ($data)
+            return $data;
+        else
+            return ['data' => "No New Arievels Found.."];
+    }
+
 }

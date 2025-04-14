@@ -5,6 +5,7 @@ namespace App\Http\Controllers\visitors;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactFormMail;
 use App\Models\Catelogue;
+use App\Models\Contact;
 use App\Models\Lvtproduct;
 use App\Models\Quartzproduct;
 use Illuminate\Http\Request;
@@ -66,29 +67,40 @@ class VisitorController extends Controller
 
     public function sendEmail(Request $request)
     {
+
+
+ //       return $request->all();
+
         // Validate the form data
-        $validated = $request->validate([
+        $request->validate([
             'form_name' => 'required|string|max:255',
             'form_email' => 'required|email',
             'form_phone' => 'required|string',
             'form_message' => 'required|string',
         ]);
 
-        // Collect the validated form data
-        $name = $validated['form_name'];
-        $email = $validated['form_email'];
-        $phone = $validated['form_phone'];
-        $message = $validated['form_message'];
+
+        $name = $request->input('form_name');
+        $email = $request->input('form_email');
+        $phone = $request->input('form_phone');
+        $message = $request->input('form_message');
+
+        $contact = new Contact();
+        $contact->name = $name;
+        $contact->email = $email;
+        $contact->contactno = $phone;
+        $contact->message = $message;
+        $contact->save();
+
 
         // Send the email using the ContactFormMail Mailable
         Mail::to('rjjadav7773@gmail.com')  // Replace with your own email address
             ->send(new ContactFormMail($name, $email, $phone, $message));
 
         // Redirect back with success message
-        return redirect()->back()->with('success', 'Your message has been sent!');
+        return redirect()->back()->with('success', 'Your message has been sent successfully!');
+
     }
-
-
 
     public function spcproducts()
     {

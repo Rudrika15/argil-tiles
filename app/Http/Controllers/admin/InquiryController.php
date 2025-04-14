@@ -99,11 +99,12 @@ class InquiryController extends Controller
     function delete($id)
 	{
         $data=Inquiry::find($id)->delete();
-		return redirect('/inquiryshow')->with('success','Data Delete successfully');
+        return redirect()->route('inquiryshow')->with('msg', 'Data Delete Successfully');
+
     }
     function contactdelete($id)
 	{
         $data=Contact::find($id)->delete();
-		return back()->with('success','Data Delete successfully');
+        return redirect()->route('contactshow')->with('msg', 'Data Delete Successfully');
     }
 }

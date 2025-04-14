@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Lvtproduct;
 use App\Models\Ssizemaster;
 use Validator;
+// use Illuminate\Support\Str;
 
 
 class LvtController extends Controller
@@ -91,7 +92,9 @@ class LvtController extends Controller
 
         $lvtproduct->save();
 
-        return redirect()->back()->with('success', 'Record Insert Successfully');
+        return redirect()->route('lvtshow')->with('msg', 'Record Inserted Successfully');
+
+
     }
 
 
@@ -126,6 +129,7 @@ class LvtController extends Controller
         $lvtproduct =  Lvtproduct::find($id);
 
         $lvtproduct->names = $request->names;
+        // $lvtproduct->slug = Str::slug($request->names);
         $lvtproduct->thicknesses = $request->thicknesses;
         $lvtproduct->primarycolors = $request->primarycolors;
         $lvtproduct->edges = $request->edges;
@@ -170,11 +174,11 @@ class LvtController extends Controller
         }
         $lvtproduct->save();
 
-        return redirect()->back()->with('success', 'Record Update Successfully');
+        return redirect()->route('lvtshow')->with('msg', 'Record Update Successfully');
     }
     function delete($id)
     {
         $data = Lvtproduct::find($id)->delete();
-        return redirect('/lvtshow')->with('success', 'Data Delete successfully');
+        return redirect()->route('lvtshow')->with('msg', 'Data Delete Successfully');
     }
 }

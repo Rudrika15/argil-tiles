@@ -12,6 +12,11 @@
     <p><strong>Email:</strong> {{ $email }}</p>
     <p><strong>Phone:</strong> {{ $phone }}</p>
     <p><strong>Message:</strong></p>
-    <p>{{ $message }}</p>
+    <p>{{ $userMessage }}</p>
+
+
+    <hr>
+    <p>Thank you for reaching out to us. We will get back to you shortly.</p>
+
 </body>
 </html>

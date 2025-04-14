@@ -17,11 +17,11 @@
         </section>
 
         <!-- main slider end -->
-        <div class="topcontent container " style="padding-top: 25px">
+        <div class="+ container " style="padding-top: 25px">
             <div class="row">
                 <div class="col-md-6">
                     <div>
-                        <h2 class="heading1">Artificial Quartz Stone Slab Manufacturers</h2>
+                        <h1 class="heading1 heading-h1">Artificial Quartz Stone Slab Manufacturers</h1>
                     </div>
                     <div>
                         <p class="paragraph text-justify">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="asset/images/argileimage/hometextlogo.png" alt="" class="img-responsive">
+                    <img src="asset/images/argileimage/hometextlogo.png" alt="home page logo" class="img-responsive">
                 </div>
                 <div class="col-md-12">
                     <p class="paragraph text-justify">The management of Argil has always accomplished the big goals set out
@@ -49,7 +49,7 @@
 
                     <p class="paragraph text-justify">I would like to congratulate you on the same and motivate you to
                         always be this humble and serving to
-                        your brand and people associated.<span><a href="">...MORE</a></span></p>
+                        your brand and people associated.<span><a href="/about">...MORE</a></span></p>
                 </div>
             </div>
         </div>
@@ -64,13 +64,74 @@
         </div>
         <div class="productimage">
             <div class="product1" data-aos="zoom-in-up">
-                <img src="asset/images/argileimage/productimage1.jpg" alt="" class="img-responsive">
+                {{-- <a href="/quartzsurface"><img src="asset/images/argileimage/productimage1.jpg" alt="" class="img-responsive"></a> --}}
+                <div class="overlay-style-two">
+                    <div class="item">
+                        <figure class="img-box">
+                            <a href="/quartzsurface"><img src="asset/images/argileimage/productimage1.jpg" alt="quartz image"
+                                    class="img-responsive"></a>
+                            <div class="default-overlay-outer">
+                                <div class="inner">
+                                    <div class="content-layer">
+                                        <a href="/quartzsurface" class="btn-one">GET A PRICE QUOTE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+
+                    </div>
+                </div>
             </div>
             <div class="product1" data-aos="zoom-in-up">
-                <img src="asset/images/argileimage/productimage2.jpg" alt="" class="img-responsive">
+                {{-- <a href="/spcproducts"><img src="asset/images/argileimage/productimage2.jpg" alt=""
+                        class="img-responsive"></a> --}}
+                <div class="overlay-style-two">
+                    <div class="item">
+                        <figure class="img-box">
+                            <a href="/spcproducts"><img src="asset/images/argileimage/productimage2.jpg" alt="spc image"
+                                    class="img-responsive"></a>
+                            <div class="default-overlay-outer">
+                                <div class="inner">
+                                    <div class="content-layer">
+                                        <a href="/spcproducts" class="btn-one">GET A PRICE QUOTE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+
+                    </div>
+                </div>
             </div>
         </div>
 
+        {{-- <section class="latest-products sec-pad centred">
+            <div class="container">
+                <div class="sec-title">
+                    <h2>Latest Products Shop</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12 shop-column">
+                        <div class="overlay-style-two">
+                            <div class="item">
+                                <figure class="img-box">
+                                    <a href="/quartzsurface"><img src="asset/images/argileimage/productimage1.jpg"
+                                            alt="" class="img-responsive"></a>
+                                    <div class="default-overlay-outer">
+                                        <div class="inner">
+                                            <div class="content-layer">
+                                                <a href="service-1.html" class="btn-one">Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </figure>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section> --}}
 
 
         {{-- Enhancing the usability --}}

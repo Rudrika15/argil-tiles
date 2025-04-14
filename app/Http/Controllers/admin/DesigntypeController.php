@@ -39,7 +39,7 @@ class DesigntypeController extends Controller
             $designtype->save();
 
 		//		return response($designtype,201);
-            return redirect()->back()->with('success','Record Insert Successfully');
+        return redirect()->route('designtypeshow')->with('msg', 'Record Inserted Successfully');
 
     }
 
@@ -71,12 +71,12 @@ class DesigntypeController extends Controller
             $designtype->save();
 
 		//		return response($designtype,201);
-            return redirect()->back()->with('success','Record Update Successfully');
+        return redirect()->route('designtypeshow')->with('msg', 'Record Update Successfully');
 
     }
     function delete($id)
 	{
         $data=Designtype::find($id)->delete();
-		return redirect('/designtypeshow')->with('success','Data Delete successfully');
+        return redirect()->route('designtypeshow')->with('msg', 'Data Delete Successfully');
     }
 }

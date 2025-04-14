@@ -37,7 +37,7 @@ class SsizemasterController extends Controller
         $ssize->save();
 
         //		return response($ssize,201);
-        return redirect()->back()->with('success', 'Record Insert Successfully');
+        return redirect()->route('ssizeshow')->with('msg', 'Record Inserted Successfully');
     }
 
     function edit($id)
@@ -67,11 +67,11 @@ class SsizemasterController extends Controller
         $ssize->save();
 
         //		return response(wqsize,201);
-        return redirect()->back()->with('success', 'Record Update Successfully');
+        return redirect()->route('ssizeshow')->with('msg', 'Record Update Successfully');
     }
     function delete($id)
     {
         $data = Ssizemaster::find($id)->delete();
-        return redirect('/ssizeshow')->with('success', 'Data Delete successfully');
+        return redirect()->route('ssizeshow')->with('msg', 'Data Delete Successfully');
     }
 }

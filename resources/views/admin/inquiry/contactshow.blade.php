@@ -2,7 +2,7 @@
 @section('pageTitle', 'Contact')
 @section('content')
 
-<div class="row">
+{{-- <div class="row">
     <div class="col-md-12">
 
         @if ($message = Session::get('success'))
@@ -14,7 +14,7 @@
             </div>
         @endif
     </div>
-</div>
+</div> --}}
     <div class="main-content">
         <div class="float-left">
             <h2>Conact View</h2>
@@ -43,7 +43,10 @@
 
                         <td>
                             <!-- <a href = "{{ route('inquiry.edit', $data->id) }}"> Edit </a>|| -->
-                            <a href = "{{ route('inquiry.contactdelete', $data->id) }}" class="btn btn-warning"> Delete </a>
+                            <a href="javascript:void(0)" class="btn btn-warning"
+                            onclick="openDeleteModal('{{Route('inquiry.contactdelete',$data->id)}}')">
+                            Delete
+                        </a>
                         </td>
                     </tr>
                 @endforeach
