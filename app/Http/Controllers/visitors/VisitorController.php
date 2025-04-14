@@ -94,7 +94,7 @@ class VisitorController extends Controller
 
 
         // Send the email using the ContactFormMail Mailable
-        Mail::to('parmarjigardhirajlal@gmail.com')  // Replace with your own email address
+        Mail::to('rjjadav7773@gmail.com')  // Replace with your own email address
             ->send(new ContactFormMail($name, $email, $phone, $message));
 
         // Redirect back with success message
