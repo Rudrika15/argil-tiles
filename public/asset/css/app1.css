@@ -10,9 +10,7 @@
 .main-footer {
     background-color: currentColor;
     padding-top: 50px;
-
 }
-
 .top-left a{
     color: #dddddd;
     text-decoration: none;
@@ -20,27 +18,22 @@
 .main-footer .footer-top {
     padding-bottom: 10px;
 }
-
 .footer-logo img {
     margin-left: 70PX;
 
 }
-
 .downloadlink img {
     margin: 20px 0px;
 }
-
 .downloadlink1 img {
     margin: 20px 0px;
     margin-bottom: 35px;
 }
-
 .footer-bottom {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .footer-bottom p {
     font-size: 18px;
 
@@ -56,7 +49,6 @@
 .footer-logo img {
     width: 60%;
 }
-
 .logo-box img {
     aspect-ratio: 2/1;
     height: 70px;
@@ -64,7 +56,6 @@
     margin-top: -25px;
     object-fit: contain;
 }
-
 .productimage {
     display: flex;
     flex-wrap: wrap;
@@ -72,7 +63,6 @@
     gap: 60px;
     margin-top: 50px;
 }
-
 .producttitle h3 {
     font-weight: 600;
     font-size: 28px;
@@ -80,34 +70,28 @@
     line-height: 1.4;
     padding: 0px 15px;
 }
-
 .product1 {
     max-width: 300px;
     border: 8px solid gray;
     border-radius: 8px 8px
 }
-
 .heading-title {
     background-color: rgb(231, 220, 205);
     padding: 4px 0px;
     border-radius: 0px 0px 15px 15px;
 
 }
-
 .heading-title h2 {
     font-size: 25px;
     font-weight: 600;
     color: rgb(71, 70, 70);
 }
-
 .headding-content {
     border-radius: 0px 0px;
 }
-
 .profile-heading {
     font-size: 20px;
 }
-
 .heading1 {
     font-size: 26px;
     font-weight: 600;
@@ -124,27 +108,22 @@
     color: rgb(0, 0, 0);
     padding: 0px 1px;
 }
-
 .all-page-side-image {
     width: 80%;
     margin: auto;
 
 }
-
 .youtubevideo {
     border: 10px solid gray;
     border-radius: 10px;
 }
-
 .documntry-film {
     margin-top: 30px;
     padding: 0px 15px;
 }
-
 .documntry-film1 {
     margin-bottom: 20px;
 }
-
 .core-heading {
     font-size: 25px;
     font-weight: 700;
@@ -152,23 +131,19 @@
     margin-top: 20px;
     padding: 0px 1px;
 }
-
 .group-image {
     margin-top: 50px;
 }
-
 .paragraph1 {
     font-weight: 600;
     color: rgb(0, 0, 0);
     font-size: 17px;
     padding: 0px 1px;
 }
-
 .unorderlist li {
     list-style-type: disc;
     margin-left: 40px;
 }
-
 .paragraph2 {
     font-weight: 600;
     color: rgb(0, 0, 0);
@@ -176,36 +151,29 @@
     margin-top: 25px;
     line-height: 1.6
 }
-
 .award-title {
     font-weight: 600;
     color: rgb(0, 0, 0);
     font-size: 18px;
 
 }
-
 .achievment-content {
     margin-top: 20px;
     margin-bottom: 30px;
 }
-
 .award-image {
     height: 190px;
     border-radius: 10px;
     margin: auto;
 }
-
 .plants-title {
     margin-top: 25px;
 }
-
 .quality-image-title1 {
     font-size: 19px;
     font-weight: 600;
     color: rgb(0, 0, 0);
-
 }
-
 .products-heading P {
     font-size: 35px;
     font-weight: 600;
@@ -213,113 +181,91 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
 .card1 {
     margin: 0px 20px;
-
 }
-
 .card1 img {
     /* margin-top: 20px; */
     border: 10px solid gray;
     border-radius: 10px;
 }
-
 .card1 p {
     font-size: 23px;
     font-weight: 600;
     padding: 10px 0px;
     color: rgb(82, 80, 80);
-
 }
-
 .galaryimage {
     margin-top: 85px;
 }
-
 .galary-mini-image {
     width: 35%;
     height: 120px;
     margin: 30px 0px;
     margin-left: 100px;
 }
-
 .spcinquiry-galaryimage.active,
 .spcinquiry-galaryimage1.active {
     border: 7px solid gray;
     border-radius: 10px;
     padding: 5px;
 }
-
 .spcproductimage {
     width: 85%;
     height: 460px;
 }
-
 .spcproductimage1 {
     display: none;
 }
-
 .first-image {
     margin-top: 50px;
     display: flex;
     justify-content: center;
 }
-
 .productr-information {
     margin-top: 60px;
     margin-bottom: 20px;
 }
-
 .product-details {
     margin-top: 20px;
 }
-
 .product-details h3 {
     font-size: 22px;
     font-weight: 600;
 }
-
 .product-details p {
     font-size: 18px;
     /* margin-bottom: 10px;
     color: gray; */
     color: currentColor;
 }
-
 .product-title-heading {
     font-size: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
 
 }
-
 .product-con-details {
     margin-bottom: 30px;
 }
-
 .product-details3 p {
     margin-bottom: 0;
 
 }
-
 .product-details3 h3 {
     margin-bottom: 0;
     margin-top: 15px;
 }
-
 .product-infom-card {
     border: 2px solid gray;
     margin: 10px;
     margin-top: 20px;
     padding: 10px 25px;
 }
-
 .contact-form-area1 {
     margin-top: 40px;
     margin-bottom: 30px;
 }
-
 .product-title h3 {
     font-weight: 600;
     font-size: 30px;
@@ -332,20 +278,16 @@
     width: 100%;
     border-radius: 5px;
 }
-
 .btn-class {
     padding: 0px 15px;
 }
-
 .btn-class2 {
     width: 100%;
 }
-
 .overview {
     margin-top: 80px;
 
 }
-
 .overview p {
     max-width: 500px;
     font-weight: 600;
@@ -354,31 +296,25 @@
     margin-top: 10px;
     padding: 0px 1px;
 }
-
 .surface-image {
     margin-top: 40px;
 
 }
-
 .surface-image img {
     margin-left: 40px;
 }
-
 .overview h3 {
     font-size: 35px;
     font-weight: 600;
     padding: 0px 1px;
 }
-
 .certificate {
     background-color: rgb(31, 31, 31);
     margin-top: 40px;
 }
-
 .sec-title {
     padding: 10px;
 }
-
 .sec-title h2 {
     font-weight: 600;
     font-size: 30px;
@@ -387,15 +323,11 @@
     margin-top: 20px;
     padding: 0px 15px;
     line-height: 1.4;
-
-
 }
-
 .certificate-class img {
     width: 45%;
     margin: auto;
 }
-
 .certificate-class h3 {
     color: white;
     text-wrap: wrap;
@@ -406,15 +338,12 @@
     font-weight: 600;
     text-align: center;
 }
-
 .certificate-class {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 60px;
-
 }
-
 .quartz-stone-heading h3 {
     font-size: 35px;
     font-weight: 600;
@@ -430,11 +359,9 @@
     background-color: rgb(31, 31, 31);
     margin-top: 40px;
 }
-
 .tp-banner {
     max-height: 500px;
 }
-
 .quality-image {
     display: flex;
     justify-content: center;
@@ -443,11 +370,9 @@
     margin-top: 15px;
     margin-bottom: 10px;
 }
-
 .quality-image .col-md-4 {
     padding: 0px 50px;
 }
-
 .advantage-parapraph h3 {
     font-weight: 600;
     font-size: 30px;
@@ -455,65 +380,49 @@
     margin-bottom: 20px;
     padding: 0px 1px;
 }
-
 .advantage-card {
     background-color: rgb(59, 60, 61);
     padding: 25px;
-
 }
-
 .advantage-card1 {
     background-color: rgb(31, 31, 31);
     padding: 25px;
-
 }
-
 .advantage-card1 h3,
 p {
     color: whitesmoke;
     font-weight: 600;
     line-height: 1.6;
-
 }
-
 .advantage-card h3,
 p {
     color: whitesmoke;
     font-weight: 600;
 }
-
 .main-container {
     margin-top: 30px;
 }
-
 .quartz-paragraph {
     margin-top: 40px;
 }
-
 .quartz-paragraph h3 {
     font-weight: 600;
     font-size: 30px;
 }
-
 .quartz-paragraph1 ul {
     padding: 0px 15px;
     margin-bottom: 30px;
 }
-
 .quartz-paragraph1 li {
     list-style-type: disc;
     font-weight: 600;
     color: rgb(0, 0, 0);
     font-size: 17px;
-    /* padding: 0px 15px; */
-
 }
-
 .bg-image-enchance {
     background-color: rgb(59, 60, 61);
     padding-bottom: 30px;
 }
-
 .bg-img1 {
     width: 70%;
     margin: auto;
@@ -521,9 +430,7 @@ p {
     border: 1px solid white;
     padding: 8px;
     border-radius: 8px
-
 }
-
 .bg-image-title {
     color: whitesmoke;
     font-weight: 600;
@@ -533,116 +440,88 @@ p {
     padding: 0px 10px;
     line-height: 1.3;
 }
-
 .card3 {
     max-width: 550px;
-
 }
-
 .card3 p {
     padding: 0px 1px;
 }
-
 .main-bg-enhance-card {
     margin-top: 40px;
     padding: 0px 20px;
-
 }
-
 .bg-enhance-card {
     border: 2px solid whitesmoke;
     text-align: center;
-
 }
-
 .bg-enhance-card img {
     width: 30%;
     padding: 20px 0px;
     margin: auto;
-
 }
-
 .bg-enhance-card h3 {
-    /* color: whitesmoke; */
     font-weight: 600;
 }
-
 .bg-enhance-card p {
     color: black;
 }
-
 .card-para1 {
     padding-bottom: 48px;
 }
-
 .panel-group {
     padding: 0px 1px;
 }
-
 .panel-group a {
     text-decoration: none;
 }
-
 .contact-title {
     font-size: 35px;
     font-weight: 600;
 }
-
 .text p {
     font-size: 18px;
     font-weight: 600;
     color: #666666;
     margin-top: 10px;
 }
-
 .heading-faq {
     margin-top: 30px;
     margin-bottom: 20px;
 }
-
 .heading-faq h2 {
     font-weight: 600;
     font-size: 35px;
 }
-
 .inp {
     border: 2px solid rgb(223, 223, 223);
     border-radius: 5px;
 }
-
 .contact-details-form {
     margin-top: 35px;
     margin-bottom: 40px;
 }
-
 .contact-details-form img {
     padding: 0px 1px;
 }
-
 .contact-form-area {
     margin-top: 50px;
     padding: 0px 1px;
 }
-
 .quartzinquiry-image {
     border: 10px solid gray;
     border-radius: 8PX;
     margin: 40px 10px;
 }
-
 .carousel-control.right,
 .carousel-control.left {
     background: transparent;
 }
-
 .catalogue-heading {
     font-weight: 600;
     margin-top: 30px;
     font-size: 28px;
 }
-
 .catalogueclass img {
-    /* width: 10%; */
     height: 100px;
     margin-top: 20px;
     margin-bottom: 40px;
@@ -701,13 +580,4 @@ p {
     .certificate-class{
         gap: 18px;
     }
-    /* .service-widget .list {
-        text-align: center;
-    }
-    .quick-link-div{
-        padding-left: 108px;
-    }
-    .quick-link-div .list{
-        text-align: center;
-    } */
 }

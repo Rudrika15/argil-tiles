@@ -89,7 +89,7 @@ Get a price quote "
             <div class="container">
                 <div class="top-left">
                     <i class="fa fa-phone">&nbsp;Call Now For Free Estimate!&nbsp;<span><a href="tel:2822-240628">(+91)
-                                2822-240628</a></span></i>
+                        99255-11465</a></span></i>
                 </div>
                 <div class="top-right">
                     <ul class="social-top">
@@ -185,11 +185,11 @@ Get a price quote "
                                 <li class="{{ request()->is('contact*') ? 'active' : '' }}">
                                     <a href="/contact">Get a Price Quote</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="tel:9925511465">
                                         <i class="fa fa-phone">+91 99255 11465</span></i>
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </nav>
@@ -288,11 +288,11 @@ Get a price quote "
                                 <li class="{{ request()->is('contact*') ? 'active' : '' }}">
                                     <a href="/contact">Get a Price Quote</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="tel:9925511465">
                                         <i class="fa fa-phone">+91 99255 11465</span></i>
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </nav>
@@ -336,13 +336,13 @@ Get a price quote "
                                     <figure><img src="{{ asset('asset/images/argileimage/footerlogo.png') }}"
                                             alt="footer logo"class="img-responsive"></figure>
                                 </a></div>
-                            <ul class="footer-social">
+                            {{-- <ul class="footer-social">
                                 <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                            </ul>
+                            </ul> --}}
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-6 col-xs-12 footer-column">

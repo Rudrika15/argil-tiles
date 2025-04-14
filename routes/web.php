@@ -244,6 +244,7 @@ Route::get('/privacyPolicy',[VisitorController::class,'privacyPolicy']);
 
 
 Route::post('/send-mail', [VisitorController::class, 'sendEmail'])->name('send.mail');
+Route::post('/send-inquiry', [VisitorController::class, 'sendinquiry'])->name('send.inquiry');
 
 
 

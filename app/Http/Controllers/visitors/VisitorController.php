@@ -4,8 +4,10 @@ namespace App\Http\Controllers\visitors;
 
 use App\Http\Controllers\Controller;
 use App\Mail\ContactFormMail;
+use App\Mail\InquiryFormMail;
 use App\Models\Catelogue;
 use App\Models\Contact;
+use App\Models\Inquiry;
 use App\Models\Lvtproduct;
 use App\Models\Quartzproduct;
 use Illuminate\Http\Request;
@@ -94,8 +96,49 @@ class VisitorController extends Controller
 
 
         // Send the email using the ContactFormMail Mailable
-        Mail::to('rjjadav7773@gmail.com')  // Replace with your own email address
+        Mail::to('social.media@argiltiles.com')  // Replace with your own email address
             ->send(new ContactFormMail($name, $email, $phone, $message));
+
+        // Redirect back with success message
+        return redirect()->back()->with('success', 'Your message has been sent successfully!');
+
+    }
+
+    public function sendinquiry(Request $request)
+    {
+
+
+    //    return $request;
+
+        // Validate the form data
+        $request->validate([
+            'form_name' => 'required|string|max:255',
+            'form_email' => 'required|email',
+            'form_phone' => 'required|string',
+            'form_message' => 'required|string',
+        ]);
+
+
+        $name = $request->input('form_name');
+        $email = $request->input('form_email');
+        $phone = $request->input('form_phone');
+        $message = $request->input('form_message');
+
+        $inquiry = new Inquiry();
+        $inquiry->subject = $request->product_name;
+        // $inquiry->subject = 'Product Inquiry';
+        $inquiry->name = $name;
+        $inquiry->email = $email;
+        $inquiry->phone = $phone;
+        $inquiry->message = $message;
+        // $inquiry->details = $request->product_details;
+        $inquiry->details = 'spc';
+        $inquiry->save();
+
+
+        // Send the email using the ContactFormMail Mailable
+        Mail::to('social.media@argiltiles.com')  // Replace with your own email address
+            ->send(new InquiryFormMail($name, $email, $phone, $message));
 
         // Redirect back with success message
         return redirect()->back()->with('success', 'Your message has been sent successfully!');
@@ -110,6 +153,7 @@ class VisitorController extends Controller
     public function spcproductinquiry($id){
 
         $data= Lvtproduct::find($id);
+        // return $data;
 
         return view('visitors.products.spc products.spcproductinquiry',compact('data'));
     }

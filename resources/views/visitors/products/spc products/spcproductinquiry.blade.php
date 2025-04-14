@@ -91,9 +91,11 @@
                 </div>
                 <div class="contact-form-area1">
 
-                    <form id="contact-form" name="contact_form" class="default-form" action="{{ Route('send.mail') }}"
+                    <form id="contact-form" name="contact_form" class="default-form" action="{{ Route('send.inquiry') }}"
                         method="post">
                         @csrf
+                        <input type="hidden" name="product_name" value="{{ $data->names }}">
+
                         <div class="col-md-12 input">
                             <input type="text" name="form_name" value="" placeholder="Your Name " required=""
                                 class="inp">
@@ -109,8 +111,9 @@
                         <div class="col-md-12 input">
                             <textarea placeholder="Message" name="form_message" required="" class="inp"></textarea>
                         </div>
+                        <input type="hidden" name="product_details" value="spc product">
                         <div class="btn-class">
-                            <button type="submit" class="btn-one btn-class1" data-loading-text="Please wait...">Request
+                            <button type="submit" class="btn-one btn-class1">Request
                                 Price Quote</button>
                         </div>
                     </form>

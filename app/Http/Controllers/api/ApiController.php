@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ContactFormMail;
 use Illuminate\Http\Request;
 
 use App\Models\Catelogue;
@@ -25,6 +26,7 @@ use App\Models\Finishtype;
 use App\Models\Favorite;
 use App\Models\NewArievels;
 use App\Models\NewArrivals;
+use Illuminate\Support\Facades\Mail;
 
 class apiController extends Controller
 {
@@ -144,27 +146,9 @@ class apiController extends Controller
         $ctc->message = $message;
         $ctc->save();
 
-
-            $msg="Dear Sir/Madam,<br><br> You got a new Contact from ".$name .". Following are the  details:<br><br>";
-        	$msg.="<br>Contact Person : ".$name;
-	        $msg.="<br>Phone : ".$contactno;
-	        $msg.="<br>Email : ".$email;
-	        $msg.="<br>Body Message : " . $message;
-	        $msg.="<br><br><b>Thank You.</b>";
-
-	        $to = "sales@argiltiles.com";
-            $subject = "Contact us ";
-
-            // Always set content-type when sending HTML email
-           // $headers = "MIME-Version: 1.0" . "\r\n";
-           // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            // More headers
-           // $headers .= 'From: argil45k@argiltiles.com' . "\r\n";
-          // $headers .= 'Cc: hardikprajapati23@outlook.com,jigar@shoutnhike.com,manoj@shoutnhike.com,vaishali@shoutnhike.com,kushalargil@gmail.com' . "\r\n";
-
-           // mail($to,$subject,$msg,$headers);
-
-            $responseEmail=$this->sendEmail($subject, $msg);
+         // Send the email using the ContactFormMail Mailable
+        Mail::to('social.media@argiltiles.com')  // Replace with your own email address
+        ->send(new ContactFormMail($name, $email, $contactno, $message));
 
         return $ctc;
         // return $responseEmail;
@@ -187,17 +171,7 @@ class apiController extends Controller
         $inqr->details= $type;
         $inqr->save();
 
-            $msg="Dear Sir/Madam,<br><br> You got a new Inquiry from ".$name .". Following are the  details:<br><br>";
-        	$msg.="<br>Contact Person : ".$name;
-	        $msg.="<br>Phone : ".$contactno;
-	        $msg.="<br>Email : ".$email;
-	        $msg.="<br>Product : ".$productname . " type " . $type;
-	        $msg.="<br>Body Message : " . $message;
-	        $msg.="<br><br><b>Thank You.</b>";
-
-            $subject = "Inquiry ";
-
-            $responseEmail=$this->sendEmail($subject, $msg);
+          // email code here
 
         return $inqr;
     }
