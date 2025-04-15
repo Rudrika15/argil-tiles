@@ -56,10 +56,10 @@ class apiController extends Controller
         $user_id = $requset->user_id;
         $p_id = $requset->p_id;
         $type = $requset->type;
-        $fav = Favorite::where('p_id','=',$p_id)
-                        ->where('type','=',$type)
-                        ->where('user_id','=',$user_id)
-                        ->get()->first();
+        $fav = Favorite::where('p_id', '=', $p_id)
+            ->where('type', '=', $type)
+            ->where('user_id', '=', $user_id)
+            ->get()->first();
         $fav->delete();
         return $fav;
     }
@@ -86,52 +86,51 @@ class apiController extends Controller
         return $um;
     }
 
- public function sendEmail($subject, $message)
-        {
+    public function sendEmail($subject, $message)
+    {
 
-              $json_string = array('to' => array('sales@argiltiles.com','kushal@argiltiles.com','nirav@shoutnhike.com','jigar@shoutnhike.com', 'manoj@shoutnhike.com','vaishali@shoutnhike.com'));
-
-
-                $params = array(
-                        'to'        => "sales@argiltiles.com",
-                        'toname'    => "Argil Tiles website ",
-                        'from'      => "sales@argiltiles.com",
-                        'fromname'  => "argil",
-                        'subject'   => $subject,
-                        'text'      => $message,
-                        'html'      => $message,
-                        'x-smtpapi' => json_encode($json_string),
-
-                    );
-
-                $request =  'https://api.sendgrid.com/api/mail.send.json';
-                $sendgrid_apikey = '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';
-
-                // Generate curl request
-                $session = curl_init($request);
-                // Tell PHP not to use SSLv3 (instead opting for TLS)
-                curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
-                curl_setopt($session, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $sendgrid_apikey));
-                // Tell curl to use HTTP POST
-                curl_setopt ($session, CURLOPT_POST, true);
-                // Tell curl that this is the body of the POST
-                curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
-                // Tell curl not to return headers, but do return the response
-                curl_setopt($session, CURLOPT_HEADER, false);
-                curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
-
-                // obtain response
-                $response = curl_exec($session);
-                curl_close($session);
-
-                // print everything out
-                return($response);
+        $json_string = array('to' => array('sales@argiltiles.com', 'kushal@argiltiles.com', 'nirav@shoutnhike.com', 'jigar@shoutnhike.com', 'manoj@shoutnhike.com', 'vaishali@shoutnhike.com'));
 
 
-        }
+        $params = array(
+            'to'        => "sales@argiltiles.com",
+            'toname'    => "Argil Tiles website ",
+            'from'      => "sales@argiltiles.com",
+            'fromname'  => "argil",
+            'subject'   => $subject,
+            'text'      => $message,
+            'html'      => $message,
+            'x-smtpapi' => json_encode($json_string),
+
+        );
+
+        $request =  'https://api.sendgrid.com/api/mail.send.json';
+        $sendgrid_apikey = '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';
+
+        // Generate curl request
+        $session = curl_init($request);
+        // Tell PHP not to use SSLv3 (instead opting for TLS)
+        curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
+        curl_setopt($session, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $sendgrid_apikey));
+        // Tell curl to use HTTP POST
+        curl_setopt($session, CURLOPT_POST, true);
+        // Tell curl that this is the body of the POST
+        curl_setopt($session, CURLOPT_POSTFIELDS, $params);
+        // Tell curl not to return headers, but do return the response
+        curl_setopt($session, CURLOPT_HEADER, false);
+        curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+
+        // obtain response
+        $response = curl_exec($session);
+        curl_close($session);
+
+        // print everything out
+        return ($response);
+    }
 
 
-    function contactus(Request $request){
+    function contactus(Request $request)
+    {
         $name = $request->name;
         $email = $request->email;
         $contactno = $request->contactno;
@@ -145,32 +144,33 @@ class apiController extends Controller
         $ctc->save();
 
 
-            $msg="Dear Sir/Madam,<br><br> You got a new Contact from ".$name .". Following are the  details:<br><br>";
-        	$msg.="<br>Contact Person : ".$name;
-	        $msg.="<br>Phone : ".$contactno;
-	        $msg.="<br>Email : ".$email;
-	        $msg.="<br>Body Message : " . $message;
-	        $msg.="<br><br><b>Thank You.</b>";
+        $msg = "Dear Sir/Madam,<br><br> You got a new Contact from " . $name . ". Following are the  details:<br><br>";
+        $msg .= "<br>Contact Person : " . $name;
+        $msg .= "<br>Phone : " . $contactno;
+        $msg .= "<br>Email : " . $email;
+        $msg .= "<br>Body Message : " . $message;
+        $msg .= "<br><br><b>Thank You.</b>";
 
-	        $to = "sales@argiltiles.com";
-            $subject = "Contact us ";
+        $to = "sales@argiltiles.com";
+        $subject = "Contact us ";
 
-            // Always set content-type when sending HTML email
-           // $headers = "MIME-Version: 1.0" . "\r\n";
-           // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            // More headers
-           // $headers .= 'From: argil45k@argiltiles.com' . "\r\n";
-          // $headers .= 'Cc: hardikprajapati23@outlook.com,jigar@shoutnhike.com,manoj@shoutnhike.com,vaishali@shoutnhike.com,kushalargil@gmail.com' . "\r\n";
+        // Always set content-type when sending HTML email
+        // $headers = "MIME-Version: 1.0" . "\r\n";
+        // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        // More headers
+        // $headers .= 'From: argil45k@argiltiles.com' . "\r\n";
+        // $headers .= 'Cc: hardikprajapati23@outlook.com,jigar@shoutnhike.com,manoj@shoutnhike.com,vaishali@shoutnhike.com,kushalargil@gmail.com' . "\r\n";
 
-           // mail($to,$subject,$msg,$headers);
+        // mail($to,$subject,$msg,$headers);
 
-            $responseEmail=$this->sendEmail($subject, $msg);
+        $responseEmail = $this->sendEmail($subject, $msg);
 
         return $ctc;
         // return $responseEmail;
 
     }
-    function inquiry(Request $request){
+    function inquiry(Request $request)
+    {
         $productname = $request->productname;
         $name = $request->name;
         $email = $request->email;
@@ -179,29 +179,30 @@ class apiController extends Controller
         $type = $request->type;
 
         $inqr = new Inquiry();
-        $inqr->subject= $productname;
-        $inqr->name= $name;
-        $inqr->email= $email;
-        $inqr->phone= $contactno;
-        $inqr->message= $message;
-        $inqr->details= $type;
+        $inqr->subject = $productname;
+        $inqr->name = $name;
+        $inqr->email = $email;
+        $inqr->phone = $contactno;
+        $inqr->message = $message;
+        $inqr->details = $type;
         $inqr->save();
 
-            $msg="Dear Sir/Madam,<br><br> You got a new Inquiry from ".$name .". Following are the  details:<br><br>";
-        	$msg.="<br>Contact Person : ".$name;
-	        $msg.="<br>Phone : ".$contactno;
-	        $msg.="<br>Email : ".$email;
-	        $msg.="<br>Product : ".$productname . " type " . $type;
-	        $msg.="<br>Body Message : " . $message;
-	        $msg.="<br><br><b>Thank You.</b>";
+        $msg = "Dear Sir/Madam,<br><br> You got a new Inquiry from " . $name . ". Following are the  details:<br><br>";
+        $msg .= "<br>Contact Person : " . $name;
+        $msg .= "<br>Phone : " . $contactno;
+        $msg .= "<br>Email : " . $email;
+        $msg .= "<br>Product : " . $productname . " type " . $type;
+        $msg .= "<br>Body Message : " . $message;
+        $msg .= "<br><br><b>Thank You.</b>";
 
-            $subject = "Inquiry ";
+        $subject = "Inquiry ";
 
-            $responseEmail=$this->sendEmail($subject, $msg);
+        $responseEmail = $this->sendEmail($subject, $msg);
 
         return $inqr;
     }
-    function forgot(Request $request){
+    function forgot(Request $request)
+    {
         $email = $request->email;
         $contact = $request->contact;
     }
@@ -432,11 +433,11 @@ class apiController extends Controller
             ->paginate(8);
 
 
-    // product code filter
-		if($request->productcode){
-			$data = Wallproduct::where('name','=', $request->productcode)
-            ->paginate(8);
-		}
+        // product code filter
+        if ($request->productcode) {
+            $data = Wallproduct::where('name', '=', $request->productcode)
+                ->paginate(8);
+        }
 
 
 
@@ -493,16 +494,13 @@ class apiController extends Controller
                 ->where('p_id', '=', $data[$i]['id'])
                 ->where('type', '=', 'SPC')
                 ->get();
-                if($fav->count() > 0)
-                {
-                      $data[$i]['favid']=$fav[0]['id'];
-                      $data[$i]['isfav']=true;
-                }
-              else
-              {
-                  $data[$i]['favid']=0;
-                  $data[$i]['isfav']=false;
-              }
+            if ($fav->count() > 0) {
+                $data[$i]['favid'] = $fav[0]['id'];
+                $data[$i]['isfav'] = true;
+            } else {
+                $data[$i]['favid'] = 0;
+                $data[$i]['isfav'] = false;
+            }
         }
         return $data;
     }
@@ -520,17 +518,57 @@ class apiController extends Controller
             return ['data' => "No Slider Found.."];
     }
 
-    function newarrivalsview($id = 0)
+    function newarrivalsview()
     {
-        if ($id == 0) {
-            $data = NewArrivals::orderBy('id', 'desc')->get();
-        } else {
-            $data = NewArrivals::find($id);
-        }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No New Arievels Found.."];
-    }
+        $data = NewArrivals::orderBy('id', 'desc')->first();
+        $url = $data->navigate_url;
 
+        // Extract path and split into segments
+        $path = parse_url($url, PHP_URL_PATH);
+        $segments = explode('/', trim($path, '/'));
+
+        $productId = 0;
+        $quartzproduct = null;
+        $wallproduct = null;
+
+        $index = array_search('quartzproduct', $segments);
+        if ($index !== false && isset($segments[$index + 1])) {
+            $productId = $segments[$index + 1];
+
+            // Fetch quartz product
+            $quartzproduct = Quartzproduct::find($productId);
+            if ($quartzproduct) {
+                return response()->json([
+                    'status' => true,
+                    'type' => 'quartzproduct',
+                    'data' => [$quartzproduct, $data]
+                ]);
+            }
+        } else {
+            // Try to detect wallproduct and get its ID
+            $index = array_search('wallproduct', $segments);
+            if ($index !== false && isset($segments[$index + 1])) {
+                $productId = $segments[$index + 1];
+                $wallproduct = Wallproduct::find($productId);
+                if ($wallproduct) {
+                    return response()->json([
+                        'status' => true,
+                        'type' => 'wallproduct',
+                        'data' => [$wallproduct, $data]
+                    ]);
+                }
+            }
+        }
+
+        // Fallback response
+        return response()->json([
+            'status' => false,
+            'message' => 'Product not found.',
+            'data' => [
+                'newarrival' => $data,
+                'quartzproduct' => $quartzproduct,
+                'wallproduct' => $wallproduct
+            ]
+        ]);
+    }
 }
