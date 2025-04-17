@@ -1,33 +1,36 @@
 @extends('layouts.app')
 @section('seosection')
-<meta name="description" content="Discover Argil, a leading quartz slab
+    <meta name="description"
+        content="Discover Argil, a leading quartz slab
 and tile manufacturer in India. Learn about our commitment to quality,
 innovation, and sustainability." />
-<meta name="keywords" content="Argil About, Quartz Manufacturer,
+    <meta name="keywords"
+        content="Argil About, Quartz Manufacturer,
 Artificial Quartz Slabs, About Argil, Morbi Tiles Manufacturer" />
-<meta property="og:title" content="About Argil Group – Innovators in
+    <meta property="og:title" content="About Argil Group – Innovators in
  Artificial Quartz Stone">
- <meta property="og:description" content="Discover Argil Group’s journey as
+    <meta property="og:description"
+        content="Discover Argil Group’s journey as
 a leading manufacturer of high-quality artificial quartz stone slabs in Morbi,
 Gujarat, India. Excellence, innovation, and trust define us.">
-<meta property="og:image" content="https://www.argiltiles.com/images/
+    <meta property="og:image" content="https://www.argiltiles.com/images/
 about-og-image.jpg">
-<meta property="og:url" content="https://www.argiltiles.com/about">
-<meta name="twitter:title" content="About Argil Group – Innovators in
+    <meta property="og:url" content="https://www.argiltiles.com/about">
+    <meta name="twitter:title" content="About Argil Group – Innovators in
 Artificial Quartz Stone">
-<meta name="twitter:description" content="Learn more about Argil Group,
+    <meta name="twitter:description"
+        content="Learn more about Argil Group,
 a trusted name in the artificial quartz industry. Our commitment to quality and
 innovation makes us stand out.">
-<meta name="twitter:image" content="https://www.argiltiles.com/path-to-
+    <meta name="twitter:image" content="https://www.argiltiles.com/path-to-
 about-image.jpg">
-<link rel="canonical" href="https://dev.argiltiles.com/about" data-react-
-helmet="true">
-<title>About Argil | Leading Quartz Slab & Tile Manufacturer in India</title>
+    <link rel="canonical" href="https://dev.argiltiles.com/about" data-react- helmet="true">
+    <title>About Argil | Leading Quartz Slab & Tile Manufacturer in India</title>
 @endsection
 @section('content')
     <!-- page title -->
-    <section class="page-title"
-        style="background-image: url('https://knowledgehorizonindia.com/wp-content/uploads/2021/11/About-us.jpg');">
+    <section class="page-title" style="background-image: url('asset/css/assets/bg-img.png');">
+
         <div class="container">
             <div class="content-box">
                 <div class="title">

@@ -171,6 +171,7 @@ class apiController extends Controller
     }
     function inquiry(Request $request)
     {
+
         $productname = $request->productname;
         $name = $request->name;
         $email = $request->email;
@@ -199,7 +200,12 @@ class apiController extends Controller
 
         $responseEmail = $this->sendEmail($subject, $msg);
 
-        return $inqr;
+        return response()->json([
+            'status' => true,
+            'message' => 'Inquiry Sent Successfully',
+            'data' => $inqr
+
+        ]);
     }
     function forgot(Request $request)
     {
@@ -540,6 +546,7 @@ class apiController extends Controller
             if ($quartzproduct) {
                 return response()->json([
                     'status' => true,
+                    'url' => 'quartz',
                     'type' => 'quartzproduct',
                     'data' => [$quartzproduct, $data]
                 ]);
@@ -553,6 +560,7 @@ class apiController extends Controller
                 if ($wallproduct) {
                     return response()->json([
                         'status' => true,
+                        'url' => 'spc',
                         'type' => 'wallproduct',
                         'data' => [$wallproduct, $data]
                     ]);

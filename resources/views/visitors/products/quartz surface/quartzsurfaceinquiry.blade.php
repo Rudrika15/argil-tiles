@@ -3,8 +3,9 @@
     <!-- page title -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <section class="page-title"
-        style="background-image: url('https://www.kajariaceramics.com/concept-picture/high002650.jpg');">
+    <section class="page-title" style="background-image: url('/asset/css/assets/bg-img.png');">
+
+
         <div class="container">
             <div class="content-box">
                 <div class="title">
@@ -161,17 +162,17 @@
                 <div class="col-md-5 product-details product-details3 product-infom-card">
                     <h3 class="product-title-heading">APPLICATIONS</h3>
                     <h3>Flooring :</h3>
-                    <p>Residential  <i class="fa fa-check"></i></p>
-                    <p>Commercial  <i class="fa fa-check"></i></p>
+                    <p>Residential <i class="fa fa-check"></i></p>
+                    <p>Commercial <i class="fa fa-check"></i></p>
                     <h3>Counters :</h3>
-                    <p>Residential  <i class="fa fa-check"></i> </p>
-                    <p>Commercial  <i class="fa fa-check"></i></p>
+                    <p>Residential <i class="fa fa-check"></i> </p>
+                    <p>Commercial <i class="fa fa-check"></i></p>
                     <h3>Wall :</h3>
-                    <p>Residential  <i class="fa fa-check"></i> </p>
-                    <p>Commercial  <i class="fa fa-check"></i></p>
+                    <p>Residential <i class="fa fa-check"></i> </p>
+                    <p>Commercial <i class="fa fa-check"></i></p>
                     <h3>Other :</h3>
-                    <p>Residential  <i class="fa fa-check"></i> </p>
-                    <p>Commercial  <i class="fa fa-times"></i></p>
+                    <p>Residential <i class="fa fa-check"></i> </p>
+                    <p>Commercial <i class="fa fa-times"></i></p>
                 </div>
             </div>
             {{-- </div> --}}
@@ -208,5 +209,4 @@
             </div>
         </div>
     </div>
-
 @endsection
