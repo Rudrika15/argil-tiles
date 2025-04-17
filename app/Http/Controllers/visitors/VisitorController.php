@@ -125,14 +125,15 @@ class VisitorController extends Controller
         $message = $request->input('form_message');
 
         $inquiry = new Inquiry();
+        // return $inquiry;
         $inquiry->subject = $request->product_name;
         // $inquiry->subject = 'Product Inquiry';
         $inquiry->name = $name;
         $inquiry->email = $email;
         $inquiry->phone = $phone;
         $inquiry->message = $message;
-        // $inquiry->details = $request->product_details;
-        $inquiry->details = 'spc';
+        $inquiry->details = $request->product_details;
+        // $inquiry->details = 'spc';
         $inquiry->save();
 
 
