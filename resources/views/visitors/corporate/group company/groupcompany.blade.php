@@ -1,35 +1,37 @@
 @extends('layouts.app')
 @section('seosection')
-<meta name="description" content="Learn about Argil Group's companies
+    <meta name="description"
+        content="Learn about Argil Group's companies
 specializing in quartz manufacturing, innovation, and sustainability. Explore
 our legacy and vision." />
-<meta name="keywords" content="Argil Group, Quartz Manufacturing,
+    <meta name="keywords"
+        content="Argil Group, Quartz Manufacturing,
 Industrial Innovation, Sustainable Business, Argil Companies" />
-<meta property="og:title" content="Argil Group Companies – A Legacy of
+    <meta property="og:title" content="Argil Group Companies – A Legacy of
 Excellence & Innovation">
-<meta property="og:description" content="Explore the diverse companies
+    <meta property="og:description"
+        content="Explore the diverse companies
 under Argil Group, a leader in artificial quartz stone manufacturing. Our
 commitment to quality, innovation, and growth drives us forward.">
-<meta property="og:image" content="https://www.argiltiles.com/images/
+    <meta property="og:image" content="https://www.argiltiles.com/images/
 group-company-og-image.jpg">
-<meta property="og:url" content="https://www.argiltiles.com/group-
+    <meta property="og:url" content="https://www.argiltiles.com/group-
 company">
-<meta name="twitter:title" content="Argil Group Companies – A Legacy of
+    <meta name="twitter:title" content="Argil Group Companies – A Legacy of
 Excellence & Innovation">
-<meta name="twitter:description" content="Discover the companies within
+    <meta name="twitter:description"
+        content="Discover the companies within
 Argil Group, each dedicated to delivering premium artificial quartz stone
 solutions with a focus on innovation and quality.">
-<meta name="twitter:image" content="https://argilgroup.com/assets/
+    <meta name="twitter:image" content="https://argilgroup.com/assets/
 images/group-companies-banner.jpg"> <!-- Replace with actual
-image URL -->
-<link rel="canonical" href="https://dev.argiltiles.com/groupcompany" data-react-
-helmet="true">
-<title>Argil Group of Companies | Leaders in Quartz Manufacturing</title>
+    image URL -->
+    <link rel="canonical" href="https://dev.argiltiles.com/groupcompany" data-react- helmet="true">
+    <title>Argil Group of Companies | Leaders in Quartz Manufacturing</title>
 @endsection
 @section('content')
     <!-- page title -->
-    <section class="page-title"
-        style="background-image: url('https://www.kajariaceramics.com/concept-picture/high002650.jpg');">
+    <section class="page-title" style="background-image: url('asset/css/assets/bg-img.png');">
         <div class="container">
             <div class="content-box">
                 <div class="title">

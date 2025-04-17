@@ -42,8 +42,7 @@ assist you!">
     @endif
 
     <!-- page title -->
-    <section class="page-title"
-        style="background-image: url('https://www.kajariaceramics.com/concept-picture/high002650.jpg');">
+    <section class="page-title" style="background-image: url('asset/css/assets/bg-img.png');">
         <div class="container">
             <div class="content-box">
                 <div class="title">
@@ -91,8 +90,7 @@ assist you!">
                                 <textarea placeholder="Message" name="form_message" required="" class="inp"></textarea>
                             </div>
                             <div class="col-md-10">
-                                <button type="submit" class="btn-one btn-class2 inp">Request Price Quote</button>
-                                {{-- <input type="submit" class="btn-one btn-class2 inp" value="Request Price Quote"> --}}
+                                <button type="submit" class="btn-one btn-class2 inp" data-loading-text="Please wait...">Request Price Quote</button>
                             </div>
                         </div>
                     </form>

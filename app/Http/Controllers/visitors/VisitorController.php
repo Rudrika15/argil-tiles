@@ -100,8 +100,7 @@ class VisitorController extends Controller
             ->send(new ContactFormMail($name, $email, $phone, $message));
 
         // Redirect back with success message
-        return redirect()->back()->with('success', 'Your message has been sent successfully!');
-
+        return response()->json(['success' => true]);
     }
 
     public function sendinquiry(Request $request)
@@ -142,8 +141,7 @@ class VisitorController extends Controller
             ->send(new InquiryFormMail($name, $email, $phone, $message));
 
         // Redirect back with success message
-        return redirect()->back()->with('success', 'Your message has been sent successfully!');
-
+        return response()->json(['success' => true]);
     }
 
     public function spcproducts()

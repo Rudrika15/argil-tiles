@@ -1,42 +1,44 @@
 @extends('layouts.app')
 @section('seosection')
-<meta name="description" content="Explore Argil's Quartz Slab Catalogue.
+    <meta name="description"
+        content="Explore Argil's Quartz Slab Catalogue.
 Browse premium artificial quartz designs, perfect for countertops, flooring, and interior
 applications." />
-<meta name="keywords" content="Quartz Catalogue, Artificial Quartz, Argil Quartz Slabs,
+    <meta name="keywords" content="Quartz Catalogue, Artificial Quartz, Argil Quartz Slabs,
 Quartz Designs" />
-<meta property="og:title" content="Explore Argil Group's Quartz Slabs Catalogue –
+    <meta property="og:title" content="Explore Argil Group's Quartz Slabs Catalogue –
 Premium Designs">
-<meta property="og:description" content="Browse the latest collection of high-quality
+    <meta property="og:description"
+        content="Browse the latest collection of high-quality
 artificial quartz stone slabs by Argil Group. Find premium quartz surfaces for kitchens,
  bathrooms, and flooring.">
- <meta property="og:type" content="website">
- <meta property="og:image" content="https://www.argiltiles.com/images/catalogue-og-
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.argiltiles.com/images/catalogue-og-
 image.jpg">
-<meta property="og:url" content="https://www.argiltiles.com/catalogue">
-<meta name="twitter:image" content="https://www.argiltiles.com/path-to-catalogue-image.
+    <meta property="og:url" content="https://www.argiltiles.com/catalogue">
+    <meta name="twitter:image" content="https://www.argiltiles.com/path-to-catalogue-image.
 jpg">
-<meta name="twitter:description" content="Discover a wide range of high-quality tiles and
+    <meta name="twitter:description"
+        content="Discover a wide range of high-quality tiles and
  surfaces in our latest catalogue at Argil Group.">
- <meta name="twitter:title" content="Explore Argil Group's Quartz Slabs Catalogue –
+    <meta name="twitter:title" content="Explore Argil Group's Quartz Slabs Catalogue –
 Premium Designs">
-<link rel="canonical" href="https://dev.argiltiles.com/catalogue" data-react-
-helmet="true">
-<title>Argil Quartz Slab Catalogue | Artificial Quartz Collection</title>
+    <link rel="canonical" href="https://dev.argiltiles.com/catalogue" data-react- helmet="true">
+    <title>Argil Quartz Slab Catalogue | Artificial Quartz Collection</title>
 @endsection
 @section('content')
     <!-- page title -->
-    <section class="page-title"
-        style="background-image: url('https://www.kajariaceramics.com/concept-picture/high002650.jpg');">
+    <section class="page-title" style="background-image: url('asset/css/assets/bg-img.png');">
+
         <div class="container">
-        <div class="content-box">
-            <div class="title">
-                <h1>Catalogue</h1>
+            <div class="content-box">
+                <div class="title">
+                    <h1>Catalogue</h1>
+                </div>
+                <div class="bread-crumb">
+                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Catalogue</span>
+                </div>
             </div>
-            <div class="bread-crumb">
-                <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Catalogue</span>
-            </div>
-        </div>
         </div>
     </section>
     <!--End Page Title-->

@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
-
     <!-- page title -->
-    <section class="page-title"
-        style="background-image: url('https://www.kajariaceramics.com/concept-picture/high002650.jpg');">
+    <section class="page-title" style="background-image: url('/asset/css/assets/bg-img.png');">
+
+
         <div class="container">
             <div class="content-box">
                 <div class="title">
@@ -113,7 +113,7 @@
                         </div>
                         <input type="hidden" name="product_details" value="spc product">
                         <div class="btn-class">
-                            <button type="submit" class="btn-one btn-class1">Request
+                            <button type="submit" class="btn-one btn-class1" data-loading-text="Please wait...">Request
                                 Price Quote</button>
                         </div>
                     </form>
@@ -149,4 +149,5 @@
             }
         }
     </script>
+
 @endsection

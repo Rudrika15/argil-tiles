@@ -7,6 +7,16 @@
     padding: 0px 1px;
 
 }
+.get-price-quote{
+    border: 1px solid whitesmoke;
+    padding: 10px 20px;
+
+}
+.get-price-quote a{
+    color:#ffffff;
+    font-weight: 600;
+    font-size: 14px;
+}
 .main-footer {
     background-color: currentColor;
     padding-top: 50px;
@@ -552,7 +562,17 @@ p {
 .footer-social{
     text-align: center;
 }
+.swal-title {
+    font-size: 22px !important;
+}
 
+.swal-text {
+    font-size: 18px !important;
+}
+
+.swal-button {
+    font-size: 16px !important;
+}
 @media screen and (min-width: 375px) and (max-width: 1024px) {
 
     /* Target video in the main slider */
