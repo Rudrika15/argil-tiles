@@ -66,7 +66,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <div class="container">
         <div class="row">
             <div class="col-md-6 surface-image">
-                <img src="asset/images/argileimage/quartzimage1.jpg" alt="quartz image"
+                <img src="asset/images/argileimage/quartzimage1.jpg" alt="quartz image" title="quartz image"
                     class="img-responsive all-page-side-image">
             </div>
             <div class="col-md-6 overview">
@@ -95,10 +95,10 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <div class="container quartzsurface">
         <div class="row">
             @foreach ($data as $index => $item)
-                <div class="col-md-4">
+                <div class="col-md-4 ">
                     <a href="{{ Route('quartzinquiry', $item->id) }}">
                         <div class="card1" data-aos="flip-up">
-                            <img src="{{ asset('quartz/' . $item->mainImg) }}" alt="quartz product" class="img-responsive">
+                            <img src="{{ asset('quartz/' . $item->mainImg) }}" alt="quartz product" title="quartz product" class="img-responsive">
                             <p class="text-center">{{ $item->name }}</p>
                         </div>
                     </a>
@@ -219,7 +219,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         <div class="container-fluid bg-imgae-enhance1">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="asset/images/argileimage/quartzimage5.jpg" alt="argil quartz image"
+                    <img src="asset/images/argileimage/quartzimage5.jpg" alt="argil quartz image" title="argil quartz image"
                         class="img-responsive bg-img1">
                 </div>
                 <div class="col-md-6 card3">
@@ -238,10 +238,10 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         </div>
         <div class="container main-bg-enhance-card">
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3">
                     <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
                         <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg1.png" alt="MIXING image" class="img-responsive">
+                            <img src="asset/images/argileimage/quartz-bg1.png" alt="MIXING image" title="MIXING image" class="img-responsive">
                             <h3>MIXING</h3>
                             <p>The fundamental components of an Argil Tiles Slab, such as Natural Quartz Grits, Resin,
                                 colouring
@@ -258,13 +258,13 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3">
                     <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
                         <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg2.png" alt="PRESSING image"
+                            <img src="asset/images/argileimage/quartz-bg2.png" alt="PRESSING image" title="PRESSING image"
                                 class="img-responsive">
                             <h3>PRESSING</h3>
-                            <p class="card-para">Spread onto trays, the mixture is compacted with intense vibration and
+                            <p class="">Spread onto trays, the mixture is compacted with intense vibration and
                                 pressure. The
                                 compressed
                                 mixture is then transferred to a curing room, where it is heated for about an hour at about
@@ -278,10 +278,10 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3">
                     <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
                         <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg3.png" alt="POLISHING image"
+                            <img src="asset/images/argileimage/quartz-bg3.png" alt="POLISHING image" title="POLISHING image"
                                 class="img-responsive">
                             <h3>POLISHING</h3>
                             <p>Using two sets of parallel diamond saws, the uneven slab's four sides are now cut to the
@@ -297,10 +297,10 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="col-md-3">
                     <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
                         <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg4.png" alt="QUALITY CONTROL"
+                            <img src="asset/images/argileimage/quartz-bg4.png" alt="QUALITY CONTROL" title="QUALITY CONTROL"
                                 class="img-responsive">
                             <h3>QUALITY CONTROL</h3>
                             <p class="card-para1">Every step of the manufacturing process undergoes inspection at Argil
@@ -562,7 +562,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <div class="container contact-details-form">
         <div class="row">
             <div class="col-md-6">
-                <img src="asset/images/argileimage/footerimge.jpg" alt="contact image"
+                <img src="asset/images/argileimage/footerimge.jpg" alt="contact image" title="contact image"
                     class="quartz-image-footer img-responsive">
             </div>
             <div class="col-md-6">
@@ -571,8 +571,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     <div class="text">
                         <p>Let's Be in Touch !!!</p>
                     </div>
-                    <form id="contact-form" name="contact_form" class="default-form" action="{{ Route('send.mail') }}"
-                        method="post">
+                    <form id="contact-form" name="contact_form" class="default-form">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
@@ -595,7 +594,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                                 <textarea placeholder="Message" name="form_message" required="" class="textarea inp"></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="btn-one btn-class1" data-loading-text="Please wait...">Request
+                        <button type="submit" class="btn-one btn-class1">Request
                             Price
                             Quote</button>
                     </form>
@@ -603,4 +602,64 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
             </div>
         </div>
     </div>
+
+     {{-- contact form --}}
+
+     <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            // Check if all required fields are filled
+            const isFormValid = form.checkValidity();
+
+            // If the form is valid, change the button text to "Submitting..."
+            if (isFormValid) {
+                submitBtn.innerHTML = "Submitting...";
+            } else {
+                // If form is not valid, just return without making AJAX request
+                return;
+            }
+
+            // Disable the button to prevent multiple submissions
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+
+            fetch("{{ Route('send.mail') }}", {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                        title: 'Thank you!',
+                        text: 'Your message has been sent successfully!',
+                        icon: 'success',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            title: 'swal-title',
+                            htmlContainer: 'swal-text',
+                            confirmButton: 'swal-button'
+                        }
+                    });
+
+                    // Reset the form
+                    form.reset();
+                }
+            })
+            .finally(() => {
+                // Re-enable the button and restore original text
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            });
+        });
+    </script>
 @endsection

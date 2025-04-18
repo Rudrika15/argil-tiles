@@ -70,7 +70,7 @@ images/core-values-banner.jpg">
                     the same.</p>
             </div>
             <div class="col-md-6">
-                <img src="asset/images/argileimage/corevaluesimage.png" alt="core value image"
+                <img src="asset/images/argileimage/corevaluesimage.png" alt="core value image" title="core value image"
                     class="img-responsive all-page-side-image">
             </div>
             <div class="col-md-12">

@@ -17,6 +17,9 @@
     font-weight: 600;
     font-size: 14px;
 }
+.title h1{
+    font-size: 47px;
+}
 .main-footer {
     background-color: currentColor;
     padding-top: 50px;
@@ -459,10 +462,12 @@ p {
 .main-bg-enhance-card {
     margin-top: 40px;
     padding: 0px 20px;
+
 }
 .bg-enhance-card {
     border: 2px solid whitesmoke;
     text-align: center;
+
 }
 .bg-enhance-card img {
     width: 30%;
@@ -550,10 +555,10 @@ p {
     width: 100%;
 }
 .footer-widget h5{
-    font-size: 23px;
+    font-size: 20px;
 }
 .footer-widget a{
-    font-size: 17px;
+    font-size: 16px;
     /* color: #dddddd; */
 }
 .footer-widget .single-box p{
@@ -573,7 +578,7 @@ p {
 .swal-button {
     font-size: 16px !important;
 }
-@media screen and (min-width: 375px) and (max-width: 1024px) {
+@media screen and (min-width: 344px) and (max-width: 1024px) {
 
     /* Target video in the main slider */
     .main-slider video {
@@ -591,13 +596,42 @@ p {
         width: 50%;
         height: 52px;
         margin-top: 2px;
-
-        margin-left: 50px;
+        margin-left: 35px;
     }
     .certificate-class img{
         width: 35%;
     }
     .certificate-class{
         gap: 18px;
+    }
+    .card-para1 {
+        padding-bottom: 48px;
+    }
+    .bg-enhance-card {
+       max-height: 565px;
+    }
+    .overview p {
+        max-width: 720px;
+    }
+    .card3 {
+        max-width: 900px;
+        padding: 0px 25px;
+    }
+    .get-price-quote{
+        border: 2px solid gray;
+        padding: 10px 20px;
+    }
+    .get-price-quote a{
+        color: #222;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .get-price{
+        padding: 5px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .get-price-quote a{
+        color: #ffffff;
     }
 }

@@ -82,37 +82,37 @@
             <div class="carousel-inner" role="listbox">
                 @if ($data->mainImg)
                     <div class="item active">
-                        <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="..."
+                        <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
                             class="img-responsive carousel-image" width="100%" height="20px">
                     </div>
                 @endif
                 @if ($data->subImg1)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg1) }}" alt="..."
+                        <img src="{{ asset('quartz/' . $data->subImg1) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
                             class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg2)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg2) }}" alt="..."
+                        <img src="{{ asset('quartz/' . $data->subImg2) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
                             class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg3)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg3) }}" alt="..."
+                        <img src="{{ asset('quartz/' . $data->subImg3) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
                             class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg4)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg4) }}" alt="..."
+                        <img src="{{ asset('quartz/' . $data->subImg4) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
                             class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg5)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg5) }}" alt="..."
+                        <img src="{{ asset('quartz/' . $data->subImg5) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
                             class="img-responsive carousel-image">
                     </div>
                 @endif
@@ -182,8 +182,7 @@
                     <h3><i class="fa fa-files-o"></i>Product Inquiry</h3>
                 </div>
                 <div class="contact-form-area1">
-                    <form id="contact-form" name="contact_form" class="default-form" action="{{ Route('send.inquiry') }}"
-                        method="post">
+                    <form id="contact-form" name="contact_form" class="default-form">
                         @csrf
                         <input type="hidden" name="product_name" value="{{ $data->name }}">
                         <div class="col-md-12 input">
@@ -203,12 +202,71 @@
                         </div>
                         <input type="hidden" name="product_details" value="Quartz product">
                         <div class="btn-class">
-                            <button type="submit" class="btn-one btn-class1" data-loading-text="Please wait...">Request
-                                Price Quote</button>
+                            <button type="submit" class="btn-one btn-class1">Request Price Quote</button>
+
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+     {{-- inquiry  --}}
+     <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            // Check if all required fields are filled
+            const isFormValid = form.checkValidity();
+
+            // If the form is valid, change the button text to "Submitting..."
+            if (isFormValid) {
+                submitBtn.innerHTML = "Submitting...";
+            } else {
+                // If form is not valid, just return without making AJAX request
+                return;
+            }
+
+            // Disable the button to prevent multiple submissions
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+
+            fetch("{{ Route('send.inquiry') }}", {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                        title: 'Thank you!',
+                        text: 'Your inquiry has been submitted successfully.',
+                        icon: 'success',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            title: 'swal-title',
+                            htmlContainer: 'swal-text',
+                            confirmButton: 'swal-button'
+                        }
+                    });
+
+                    // Reset the form
+                    form.reset();
+                }
+            })
+            .finally(() => {
+                // Re-enable the button and restore original text
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            });
+        });
+    </script>
 @endsection

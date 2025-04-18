@@ -61,10 +61,10 @@ with 10+ yrs of service. Get a price quote"
     <div class="container spcprodcuts">
         <div class="row">
             @foreach ($data as $index => $data)
-                <div class="col-md-4 col-md-6">
+                <div class="col-md-4 col-sm-4">
                     <a href="{{ Route('spcproductinquiry', $data->id) }}">
                         <div class="card1" data-aos="flip-left">
-                            <img src="{{ asset('spc/' . $data->mainImg) }}" alt="spc product image" class="img-responsive">
+                            <img src="{{ asset('spc/' . $data->mainImg) }}" alt="spc product image" title="spc prodcut image" class="img-responsive">
                             <p class="text-center">{{ $data->names }}</p>
                         </div>
                     </a>

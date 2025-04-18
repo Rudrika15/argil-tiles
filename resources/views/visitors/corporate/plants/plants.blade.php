@@ -74,7 +74,7 @@ plants-banner.jpg">
                     range in wall tiles manufacturers in the region.</p>
             </div>
             <div class="col-md-6">
-                <img src="asset/images/argileimage/plantsimage.png" alt="plants image"
+                <img src="asset/images/argileimage/plantsimage.png" alt="plants image" title="plants image"
                     class="img-responsive all-page-side-image">
             </div>
             <div class="col-md-12">

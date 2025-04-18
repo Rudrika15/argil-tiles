@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="asset/images/argileimage/hometextlogo.png" alt="home page logo" class="img-responsive">
+                    <img src="asset/images/argileimage/hometextlogo.png" alt="home page logo" title="home page logo" class="img-responsive">
                 </div>
                 <div class="col-md-12">
                     <p class="paragraph text-justify">The management of Argil has always accomplished the big goals set out
@@ -68,7 +68,7 @@
                 <div class="overlay-style-two">
                     <div class="item">
                         <figure class="img-box">
-                            <a href="/quartzsurface"><img src="asset/images/argileimage/productimage1.jpg" alt="quartz image"
+                            <a href="/quartzsurface"><img src="asset/images/argileimage/productimage1.jpg" alt="quartz image" title="quartz image"
                                     class="img-responsive"></a>
                             <div class="default-overlay-outer">
                                 <div class="inner">
@@ -88,7 +88,7 @@
                 <div class="overlay-style-two">
                     <div class="item">
                         <figure class="img-box">
-                            <a href="/spcproducts"><img src="asset/images/argileimage/productimage2.jpg" alt="spc image"
+                            <a href="/spcproducts"><img src="asset/images/argileimage/productimage2.jpg" alt="spc image" title="spc image"
                                     class="img-responsive"></a>
                             <div class="default-overlay-outer">
                                 <div class="inner">

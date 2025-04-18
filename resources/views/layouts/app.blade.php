@@ -53,6 +53,7 @@ Get a price quote "
 
 
     <meta name="robots" content="index, follow" />
+
     {{-- <meta name="robots" content="index, follow" /> --}}
     <meta name="keywords"
         content="Artificial Quartz, Quartz Slabs, Quartz Manufacturers, Morbi Quartz, India Quartz Stone">
@@ -95,10 +96,13 @@ Get a price quote "
                 </div>
                 <div class="top-right">
                     <ul class="social-top">
-                        <li><a href="https://www.facebook.com/argilgroup/"><i class="fa fa-facebook-square"></i></a>
+                        <li><a href="https://www.facebook.com/argilgroup/" target="blank"><i
+                                    class="fa fa-facebook-square"></i></a>
                         </li>
-                        <li><a href="https://www.instagram.com/argilgroup/"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/argilgroup/" target="blank"><i
+                                    class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank"><i
+                                    class="fa fa-linkedin"></i></a></li>
                     </ul>
                     {{-- <ul class="social-top">
                         <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
@@ -118,7 +122,7 @@ Get a price quote "
                 <div class="logo-box">
                     <a href="/">
                         <figure>
-                            <img src="{{ asset('asset/images/logo/logo.png') }}" alt="argil logo" class="img-responsive"
+                            <img src="{{ asset('asset/images/logo/logo.png') }}" alt="argil logo" title="argile logo" class="img-responsive"
                                 style="width: 150px">
                         </figure>
                     </a>
@@ -184,10 +188,10 @@ Get a price quote "
                                 <li class="{{ request()->is('contact*') ? 'active' : '' }}">
                                     <a href="/contact">Contact</a>
                                 </li>
-                                <li class="{{ request()->is('contact*') ? 'active' : '' }}">
-                                    <span class="get-price-quote">
+                                <li class="{{ request()->is('contact*') ? 'active' : '' }} get-price">
+                                    <div class="get-price-quote">
                                         <a href="/contact">GET A PRICE QUOTE</a>
-                                    </span>
+                                    </div>
                                 </li>
                                 {{-- <li>
                                     <a href="tel:9925511465">
@@ -224,7 +228,7 @@ Get a price quote "
             <div class="container">
                 <div class="logo-box">
                     <a href="/">
-                        <figure><img src="{{ asset('asset/images/logo/logo.png') }}" alt="argile logo"
+                        <figure><img src="{{ asset('asset/images/logo/logo.png') }}" alt="argile logo" title="argile logo"
                                 class="img-responsive"></figure>
                     </a>
                 </div>
@@ -289,10 +293,10 @@ Get a price quote "
                                 <li class="{{ request()->is('contact*') ? 'active' : '' }}">
                                     <a href="/contact">Contact</a>
                                 </li>
-                                <li class="{{ request()->is('contact*') ? 'active' : '' }}">
-                                    <span class="get-price-quote">
+                                <li class="{{ request()->is('contact*') ? 'active' : '' }} get-price">
+                                    <div class="get-price-quote">
                                         <a href="/contact">GET A PRICE QUOTE</a>
-                                    </span>
+                                    </div>
                                 </li>
                                 {{-- <li>
                                     <a href="tel:9925511465">
@@ -340,7 +344,7 @@ Get a price quote "
                         <div class="logo-widget footer-widget">
                             <div class='footer-logo'><a href="/">
                                     <figure><img src="{{ asset('asset/images/argileimage/footerlogo.png') }}"
-                                            alt="footer logo"class="img-responsive"></figure>
+                                            alt="footer logo" title="footer logo" class="img-responsive"></figure>
                                 </a></div>
                             {{-- <ul class="footer-social">
                                 <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
@@ -374,11 +378,11 @@ Get a price quote "
                                 <h5>Download Our App</h5>
                             </div>
                             <div class="downloadlink">
-                                <img src="{{ asset('asset/images/argileimage/playstore.png') }}" alt="playstore logo"
+                                <img src="{{ asset('asset/images/argileimage/playstore.png') }}" alt="playstore logo" title="playstore logo"
                                     width="55%" class="img-responsive">
                             </div>
                             <div class="downloadlink1">
-                                <img src="{{ asset('asset/images/argileimage/appstore.png') }}" alt="appstore logo"
+                                <img src="{{ asset('asset/images/argileimage/appstore.png') }}" alt="appstore logo" title="appstore logo"
                                     width="55%" class="img-responsive">
                             </div>
                         </div>
@@ -427,80 +431,6 @@ Get a price quote "
 
     <!--End bodywrapper-->
 
-    {{-- inquiry  --}}
-    {{-- <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            var formData = new FormData(this);
-
-            fetch("{{ Route('send.inquiry') }}", {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        // SweetAlert2 success message with custom font size
-                        Swal.fire({
-                            title: 'Thank you!',
-                            text: 'Your inquiry has been submitted successfully.',
-                            icon: 'success',
-                            confirmButtonText: 'OK',
-                            customClass: {
-                                title: 'swal-title',
-                                htmlContainer: 'swal-text',
-                                confirmButton: 'swal-button'
-                            }
-                        });
-
-                        // Reset form
-                        document.getElementById('contact-form').reset();
-                    }
-                });
-        });
-    </script>
- --}}
-    {{-- contact
-    <script>
-        document.getElementById('contact-form1').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            var formData = new FormData(this);
-
-            fetch("{{ Route('send.mail') }}", {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        // SweetAlert2 success message with custom font size
-                        Swal.fire({
-                            title: 'Thank you!',
-                            text: 'Your message has been sent successfully!',
-                            icon: 'success',
-                            confirmButtonText: 'OK',
-                            customClass: {
-                                title: 'swal-title',
-                                htmlContainer: 'swal-text',
-                                confirmButton: 'swal-button'
-                            }
-                        });
-
-                        // Reset form
-                        document.getElementById('contact-form1').reset();
-                    }
-                });
-        });
-    </script>
- --}}
 
     <!--Scroll to top-->
     <div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-up"></span>

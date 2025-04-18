@@ -58,7 +58,7 @@ achievements-banner.jpg">
             </div>
             <div class="col-md-6 achievment-content">
                 <div class="col-md-4">
-                    <img src="asset/images/argileimage/achievementimage1.jpeg" class="img-responsive award-image"
+                    <img src="asset/images/argileimage/achievementimage1.jpeg" class="img-responsive award-image" title="national award"
                         alt="national award">
                 </div>
                 <div class="col-md-8">
@@ -69,7 +69,7 @@ achievements-banner.jpg">
             </div>
             <div class="col-md-6 achievment-content">
                 <div class="col-md-4">
-                    <img src="asset/images/argileimage/achievementimage2.jpeg" alt="export award"
+                    <img src="asset/images/argileimage/achievementimage2.jpeg" alt="export award" title="export award"
                         class="img-responsive award-image">
                 </div>
                 <div class="col-md-8">

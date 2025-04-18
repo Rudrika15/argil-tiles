@@ -61,16 +61,16 @@ quality-banner.jpg">
     <div class="container quality-image">
         <div class="row">
             <div class="col-md-4">
-                <img src="asset/images/argileimage/qualityimage1.jpeg" alt="iso certificate" class="img-responsive">
+                <img src="asset/images/argileimage/qualityimage1.jpeg" alt="iso certificate" title="iso certificate" class="img-responsive">
                 <p class="quality-image-title1">ISO CERTIFIED</p>
             </div>
             <div class="col-md-4">
-                <img src="asset/images/argileimage/qualityimage2.jpeg" alt="TISI THAILAND STANDARD" class="img-responsive">
+                <img src="asset/images/argileimage/qualityimage2.jpeg" alt="TISI THAILAND STANDARD" title="TISI THAILAND STANDARD" class="img-responsive">
                 <p class="quality-image-title1">TISI THAILAND STANDARD
                 </p>
             </div>
             <div class="col-md-4">
-                <img src="asset/images/argileimage/qualityimage3.jpeg" alt="SLSI SRILANKAN STANDARD" class="img-responsive">
+                <img src="asset/images/argileimage/qualityimage3.jpeg" alt="SLSI SRILANKAN STANDARD" title="SLSI SRILANKAN STANDARD" class="img-responsive">
                 <p class="quality-image-title1">SLSI SRILANKAN STANDARD
                 </p>
             </div>

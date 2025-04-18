@@ -63,15 +63,14 @@ assist you!">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="asset/images/argileimage/contactsimage.png" alt="contact image"
+                <img src="asset/images/argileimage/contactsimage.png" alt="contact image" title="contact image"
                     class="img-responsive all-page-side-image">
             </div>
             <div class="col-md-6">
                 <div class="contact-form-area1">
                     <div class="contact-title">Let's Be in Touch !!!</div>
 
-                    <form id="contact-form" name="contact_form" class="default-form" action="{{ route('send.mail') }}"
-                        method="POST">
+                    <form id="contact-form" name="contact_form" class="default-form">
                         @csrf
                         <div class="row">
                             <div class="col-md-10 input">
@@ -90,7 +89,7 @@ assist you!">
                                 <textarea placeholder="Message" name="form_message" required="" class="inp"></textarea>
                             </div>
                             <div class="col-md-10">
-                                <button type="submit" class="btn-one btn-class2 inp" data-loading-text="Please wait...">Request Price Quote</button>
+                                <button type="submit" class="btn-one btn-class1">Request Price Quote</button>
                             </div>
                         </div>
                     </form>
@@ -104,4 +103,64 @@ assist you!">
             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+
+      {{-- contact form --}}
+
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            // Check if all required fields are filled
+            const isFormValid = form.checkValidity();
+
+            // If the form is valid, change the button text to "Submitting..."
+            if (isFormValid) {
+                submitBtn.innerHTML = "Submitting...";
+            } else {
+                // If form is not valid, just return without making AJAX request
+                return;
+            }
+
+            // Disable the button to prevent multiple submissions
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+
+            fetch("{{ Route('send.mail') }}", {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                        title: 'Thank you!',
+                        text: 'Your message has been sent successfully!',
+                        icon: 'success',
+                        confirmButtonText: 'OK',
+                        customClass: {
+                            title: 'swal-title',
+                            htmlContainer: 'swal-text',
+                            confirmButton: 'swal-button'
+                        }
+                    });
+
+                    // Reset the form
+                    form.reset();
+                }
+            })
+            .finally(() => {
+                // Re-enable the button and restore original text
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            });
+        });
+    </script>
 @endsection

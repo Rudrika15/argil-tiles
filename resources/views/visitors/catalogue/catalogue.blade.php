@@ -52,7 +52,7 @@ Premium Designs">
                 <h3 class="catalogue-heading">LINK 'N' LOCK - SPC FLOORING</h3>
 
                 <a href="pdf/1661686250890768142.pdf" target="blank"><img src="asset/images/argileimage/catalogueimage.png"
-                        alt="catalogue image" class="img-responsive"></a>
+                        alt="catalogue image" title="catalogue image" class="img-responsive"></a>
 
             </div>
         </div>

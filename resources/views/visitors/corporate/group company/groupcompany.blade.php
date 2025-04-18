@@ -67,7 +67,7 @@ images/group-companies-banner.jpg"> <!-- Replace with actual
 
             </div>
             <div class="col-md-6">
-                <img src="asset/images/argileimage/groupcompanyimage.png" alt="group company image"
+                <img src="asset/images/argileimage/groupcompanyimage.png" alt="group company image" title="Group Company iamge"
                     class="img-responsive all-page-side-image group-image">
             </div>
             <div class="col-md-12">
