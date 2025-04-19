@@ -1,4 +1,21 @@
 @extends('layouts.app')
+@section('seosection')
+    <meta name="description"
+        content="Read the privacy policy of Argil Tiles to understand how we collect, use, and protect your data.">
+    <meta name="keywords" content="Privacy Policy, Argil Tiles, User Data, Cookies, Security">
+    <meta property="og:title" content="Privacy Policy | Argil Tiles">
+    <meta property="og:description" content="Learn how Argil Tiles collects, uses, and protects your personal information.">
+    <meta property="og:url" content="https://argiltiles.com/privacyPolicy">
+    <!-- Twitter Card Meta Tags for Privacy Policy -->
+    <meta name="twitter:title" content="Privacy Policy | Argil Tiles – Your Data, Our Responsibility">
+    <meta name="twitter:description"
+        content="Learn how Argil Tiles collects, uses, and protects your personal data with transparency and care.">
+    <meta name="twitter:url" content="https://argiltiles.com/privacyPolicy">
+    <link rel="canonical" href="https://argiltiles.com/privacyPolicy">
+
+
+    <title>Privacy Policy | Argil Tiles – Your Data, Our Responsibility</title>
+@endsection
 @section('content')
     <!-- page title -->
     <section class="page-title" style="background-image: url('asset/css/assets/bg-img.png');">

@@ -9,23 +9,23 @@
         <div class="row">
             <div class="certificate-class">
                 <div class="col-md-2">
-                    <img src="asset/images/argileimage/certificate1.png" alt="ISO CERTIFIED" class="img-responsive">
+                    <img src="asset/images/argileimage/certificate1.png" alt="ISO CERTIFIED" title="ISO CERTIFIED" class="img-responsive">
                     <h3>ISO CERTIFIED</h3>
                 </div>
                 <div class="col-md-2">
-                    <img src="asset/images/argileimage/certificate2.png" alt="TISI THAILAND STANDARD" class="img-responsive">
+                    <img src="asset/images/argileimage/certificate2.png" alt="TISI THAILAND STANDARD" title="TISI THAILAND CERTIFIED" class="img-responsive">
                     <h3>TISI THAILAND STANDARD</h3>
                 </div>
                 <div class="col-md-2">
-                    <img src="asset/images/argileimage/certificate3.png" alt="SLSI SRILANKAN STANDARD" class="img-responsive">
+                    <img src="asset/images/argileimage/certificate3.png" alt="SLSI SRILANKAN STANDARD" title="SLSI SRILANKAN CERTIFIED" class="img-responsive">
                     <h3>SLSI SRILANKAN STANDARD</h3>
                 </div>
                 <div class="col-md-2">
-                    <img src="asset/images/argileimage/certificate4.png" alt="HIGHEST EXPORT AWARDS" class="img-responsive">
+                    <img src="asset/images/argileimage/certificate4.png" alt="HIGHEST EXPORT AWARDS" title="HIGHEST EXPORT AWARDS" class="img-responsive">
                     <h3>HIGHEST EXPORT AWARDS</h3>
                 </div>
                 <div class="col-md-2">
-                    <img src="asset/images/argileimage/certificate5.png" alt="HIGHEST NATIONAL AWARDS" class="img-responsive">
+                    <img src="asset/images/argileimage/certificate5.png" alt="HIGHEST NATIONAL AWARDS" title="HIGHEST NATIONAL AWARDS" class="img-responsive">
                     <h3>HIGHEST NATIONAL AWARDS</h3>
                 </div>
             </div>

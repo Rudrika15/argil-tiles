@@ -13,19 +13,17 @@ Excellence in Every Slab">
         content="At Argil Group, we adhere to the
  highest quality standards in artificial quartz stone manufacturing. Precision,
 durability, and innovation define our products.">
-    <meta property="og:image" content="https://www.argiltiles.com/images/
-quality-og-image.jpg">
-    <meta property="og:url" content="https://www.argiltiles.com/quality">
+
+    <meta property="og:url" content="https://argiltiles.com/quality">
     <meta name="twitter:title" content="Argil Group Quality Standards –
 Excellence in Every Slab">
     <meta name="twitter:description"
         content="Discover Argil Group’s
 commitment to premium quality in artificial quartz stone manufacturing.
 Our rigorous testing ensures durability, strength, and beauty.">
-    <meta name="twitter:image" content="https://argilgroup.com/assets/images/
-quality-banner.jpg">
-    <!-- Replace with actual image URL -->
-    <link rel="canonical" href="https://dev.argiltiles.com/quality" data-react- helmet="true">
+
+    <link rel="canonical" href="https://argiltiles.com/quality" data-react-
+    helmet="true">
     <title>Argil Quality Standards | Premium Tile Manufacturing</title>
 @endsection
 @section('content')
@@ -65,12 +63,12 @@ quality-banner.jpg">
                 <p class="quality-image-title1">ISO CERTIFIED</p>
             </div>
             <div class="col-md-4">
-                <img src="asset/images/argileimage/qualityimage2.jpeg" alt="TISI THAILAND STANDARD" title="TISI THAILAND STANDARD" class="img-responsive">
+                <img src="asset/images/argileimage/qualityimage2.jpeg" alt="TISI THAILAND STANDARD" title="TISI THAILAND STANDARD CERTIFIED" class="img-responsive">
                 <p class="quality-image-title1">TISI THAILAND STANDARD
                 </p>
             </div>
             <div class="col-md-4">
-                <img src="asset/images/argileimage/qualityimage3.jpeg" alt="SLSI SRILANKAN STANDARD" title="SLSI SRILANKAN STANDARD" class="img-responsive">
+                <img src="asset/images/argileimage/qualityimage3.jpeg" alt="SLSI SRILANKAN STANDARD" title="SLSI SRILANKAN STANDARD CERTIFIED" class="img-responsive">
                 <p class="quality-image-title1">SLSI SRILANKAN STANDARD
                 </p>
             </div>

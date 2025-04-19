@@ -13,19 +13,17 @@ Precision & Innovation">
         content="Explore Argil Group’s state-of-the
 -art manufacturing plants, where advanced technology meets precision
 craftsmanship in artificial quartz stone production.">
-    <meta property="og:image" content="https://www.argiltiles.com/images/
-plants-og-image.jpg">
-    <meta property="og:url" content="https://www.argiltiles.com/plants">
+
+    <meta property="og:url" content="https://argiltiles.com/plants">
     <meta name="twitter:title" content="Argil Group Manufacturing Plants –
 Precision & Innovation">
     <meta name="twitter:description"
         content="Discover the cutting-edge
 manufacturing facilities of Argil Group, where technology, quality, and
 innovation drive the production of world-class artificial quartz stones.">
-    <meta name="twitter:image" content="https://argilgroup.com/assets/images/
-plants-banner.jpg">
-    <!-- Replace with actual image URL -->
-    <link rel="canonical" href="https://dev.argiltiles.com/plants" data-react- helmet="true">
+
+    <link rel="canonical" href="https://argiltiles.com/plants" data-react-
+    helmet="true">
     <title>Argil Manufacturing Plants | Advanced Tile Production</title>
 @endsection
 @section('content')

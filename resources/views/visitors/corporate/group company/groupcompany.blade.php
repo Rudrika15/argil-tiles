@@ -13,9 +13,8 @@ Excellence & Innovation">
         content="Explore the diverse companies
 under Argil Group, a leader in artificial quartz stone manufacturing. Our
 commitment to quality, innovation, and growth drives us forward.">
-    <meta property="og:image" content="https://www.argiltiles.com/images/
-group-company-og-image.jpg">
-    <meta property="og:url" content="https://www.argiltiles.com/group-
+
+    <meta property="og:url" content="https://argiltiles.com/group-
 company">
     <meta name="twitter:title" content="Argil Group Companies – A Legacy of
 Excellence & Innovation">
@@ -23,10 +22,9 @@ Excellence & Innovation">
         content="Discover the companies within
 Argil Group, each dedicated to delivering premium artificial quartz stone
 solutions with a focus on innovation and quality.">
-    <meta name="twitter:image" content="https://argilgroup.com/assets/
-images/group-companies-banner.jpg"> <!-- Replace with actual
-    image URL -->
-    <link rel="canonical" href="https://dev.argiltiles.com/groupcompany" data-react- helmet="true">
+
+    <link rel="canonical" href="https://argiltiles.com/groupcompany" data-
+    react-helmet="true">
     <title>Argil Group of Companies | Leaders in Quartz Manufacturing</title>
 @endsection
 @section('content')

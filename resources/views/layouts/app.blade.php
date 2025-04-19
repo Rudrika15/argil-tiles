@@ -10,9 +10,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Argil is a leading artificial quartz stone slab manufacturer in Morbi, Gujarat, India.
-Explore premium quartz surfaces for homes and businesses.">
 
     <meta name="author" content="Argil Group">
     <meta name="theme-color" content="#000000">
@@ -20,44 +17,24 @@ Explore premium quartz surfaces for homes and businesses.">
     <meta name="geo.placename" content="Morbi">
     <meta name="geo.position" content="22.82587;70.847998">
     <meta name="ICBM" content="22.82587, 70.847998">
-    <meta property="og:title" content="Artificial Quartz Stone Slab
-Manufacturers In Morbi, Gujarat, India | Argil"
-        data-react- helmet="true">
+
     <meta property="og:type" content="website" data-react-helmet=
 "true">
     <meta property="og:site_name" content="Argil Group">
-    <meta property="og:url" content="https://www.argiltiles.com/" data-react-helmet="true">
-    <meta property="og:description"
-        content="Argil is an artificial
-quartz stone slab manufacturer in Morbi, Gujarat, India. We
-have the best-engineered quartz surface stone for kitchen and
-platform at a reasonable price. We have 10+ yrs of service.
-Get a price quote "
-        data-react-helmet="true">
-    <meta property="og:image" content="Image URL" data-react- helmet="true">
+
+    <meta property="og:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react- helmet="true">
     <meta name="twitter:card" content="summary_large_image" data-react-helmet="true">
     <meta name="twitter:site" content="@argiltiles" data-react- helmet="true">
-    <meta name="twitter:title" content="Artificial Quartz Stone Slab
-Manufacturers In Morbi, Gujarat, India | Argil"
-        data-react- helmet="true">
-    <meta name="twitter:description"
-        content="Argil is an artificial
-quartz stone slab manufacturer in Morbi, Gujarat, India. We
-have the best-engineered quartz surface stone for kitchen and
-platform at a reasonable price. We have 10+ yrs of service.
-Get a price quote "
-        data-react-helmet="true">
-    <meta name="twitter:image" content="Image URL" data-react- helmet="true">
-    <link rel="canonical" href="https://dev.argiltiles.com/" data- react-helmet="true">
+
+
+    <meta name="twitter:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react- helmet="true">
+    <meta name="publisher" content="Argil Tiles" />
     <link rel="icon" href="/logo_bg.png">
 
 
     <meta name="robots" content="index, follow" />
 
     {{-- <meta name="robots" content="index, follow" /> --}}
-    <meta name="keywords"
-        content="Artificial Quartz, Quartz Slabs, Quartz Manufacturers, Morbi Quartz, India Quartz Stone">
-    <meta name="publisher" content="Argil Tiles" />
 
     <link rel="icon" href="{{ asset('asset/images/logo/logo.png') }}">
 
@@ -95,7 +72,7 @@ Get a price quote "
                                 99255-11465</a></span></i>
                 </div>
                 <div class="top-right">
-                    <ul class="social-top">
+                    <ul class="social-top text-center">
                         <li><a href="https://www.facebook.com/argilgroup/" target="blank"><i
                                     class="fa fa-facebook-square"></i></a>
                         </li>

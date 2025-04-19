@@ -14,14 +14,13 @@ Premium Quartz Surfaces">
 Countertops Manufacturers In Morbi, Gujarat, India | Argil"
         data-react-helmet
 ="true">
-    <meta property="og:url" content="https://www.argiltiles.com/quartzsurface" data-react-helmet="true">
+    <meta property="og:url" content="https://argiltiles.com/quartzsurface" data-react-helmet="true">
     <meta property="og:description"
         content="Argil is a quartz surface stone slab
 for kitchen platform countertops manufacturers in Morbi, Gujarat, India. We have
  the best engineered  quartz surface stone for kitchen and platform  at a
  reasonable price We have 10+ yrs of service. Get a price quote "
         data-react- helmet="true">
-    <meta property="og:image" content="Image URL" data-react-helmet="true">
     <meta name="twitter:title"
         content="Quartz Stone Slab For Kitchen Platform
 Countertops Manufacturers In Morbi, Gujarat, India | Argil"
@@ -32,8 +31,8 @@ slab for kitchen platform countertops manufacturers in Morbi, Gujarat, India. We
  have the best engineered  quartz surface stone for kitchen and platform  at a
 reasonable price We have 10+ yrs of service. Get a price quote  "
         data-react-helmet="true">
-    <meta name="twitter:image" content="Image URL" data-react-helmet="true">
-    <link rel="canonical" href="https://dev.argiltiles.com/quartzsurface" data-react- helmet="true">
+    <link rel="canonical" href="https://argiltiles.com/quartzsurface" data-react-
+    helmet="true">
     <title>Quartz Countertops & Kitchen Slabs Manufacturer | Argil</title>
 @endsection
 @section('content')
@@ -66,7 +65,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <div class="container">
         <div class="row">
             <div class="col-md-6 surface-image">
-                <img src="asset/images/argileimage/quartzimage1.jpg" alt="quartz image" title="quartz image"
+                <img src="asset/images/argileimage/quartzimage1.jpg" alt="quartz product" title="quartz product"
                     class="img-responsive all-page-side-image">
             </div>
             <div class="col-md-6 overview">
@@ -219,7 +218,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         <div class="container-fluid bg-imgae-enhance1">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="asset/images/argileimage/quartzimage5.jpg" alt="argil quartz image" title="argil quartz image"
+                    <img src="asset/images/argileimage/quartzimage5.jpg" alt="argil quartz product" title="argil quartz product"
                         class="img-responsive bg-img1">
                 </div>
                 <div class="col-md-6 card3">
@@ -241,7 +240,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                 <div class="col-md-3">
                     <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
                         <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg1.png" alt="MIXING image" title="MIXING image" class="img-responsive">
+                            <img src="asset/images/argileimage/quartz-bg1.png" alt="MIXING" title="MIXING" class="img-responsive">
                             <h3>MIXING</h3>
                             <p>The fundamental components of an Argil Tiles Slab, such as Natural Quartz Grits, Resin,
                                 colouring
@@ -261,7 +260,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                 <div class="col-md-3">
                     <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
                         <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg2.png" alt="PRESSING image" title="PRESSING image"
+                            <img src="asset/images/argileimage/quartz-bg2.png" alt="PRESSING" title="PRESSING"
                                 class="img-responsive">
                             <h3>PRESSING</h3>
                             <p class="">Spread onto trays, the mixture is compacted with intense vibration and
@@ -281,7 +280,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                 <div class="col-md-3">
                     <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
                         <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg3.png" alt="POLISHING image" title="POLISHING image"
+                            <img src="asset/images/argileimage/quartz-bg3.png" alt="POLISHING" title="POLISHING"
                                 class="img-responsive">
                             <h3>POLISHING</h3>
                             <p>Using two sets of parallel diamond saws, the uneven slab's four sides are now cut to the
@@ -562,7 +561,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <div class="container contact-details-form">
         <div class="row">
             <div class="col-md-6">
-                <img src="asset/images/argileimage/footerimge.jpg" alt="contact image" title="contact image"
+                <img src="asset/images/argileimage/footerimge.jpg" alt="Quartz product" title="Quartz product"
                     class="quartz-image-footer img-responsive">
             </div>
             <div class="col-md-6">

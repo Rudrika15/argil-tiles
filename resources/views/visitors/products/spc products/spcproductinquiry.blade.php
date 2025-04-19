@@ -1,4 +1,23 @@
 @extends('layouts.app')
+@section('seosection')
+    <meta name="description"
+        content="Argil is a leading manufacturer of premium artificial quartz stone slabs in Morbi, Gujarat. Explore quartz for homes & businesses.">
+    <meta name="keywords" content="Artificial Quartz, Quartz Slabs, Quartz Manufacturers, Morbi Quartz, India Quartz Stone">
+    <meta property="og:title" content="SPC Product Inquiry | Argil Quartz Surfaces" data-react-helmet="true">
+    <meta property="og:description"
+        content="Explore premium artificial quartz stone slabs by Argil, a leading manufacturer in Morbi, Gujarat. Perfect for homes and businesses."
+        data-react-helmet="true">
+    <meta property="og:url" content="https://argiltiles.com/spcproductinquiry/{{ $data->id }}" data-react-helmet="true">
+
+    <meta name="twitter:title" content="SPC Product Inquiry | Argil Quartz Surfaces" data-react-helmet="true">
+    <meta name="twitter:description"
+        content="Explore premium artificial quartz stone slabs by Argil, a leading manufacturer in Morbi, Gujarat. Perfect for homes and businesses."
+        data-react-helmet="true">
+
+        <link rel="canonical" href="{{ url()->current() }}">
+
+    <title>SPC Product Inquiry | Premium SPC Flooring Solutions by Argil</title>
+@endsection
 @section('content')
     <!-- page title -->
     <section class="page-title" style="background-image: url('/asset/css/assets/bg-img.png');">
@@ -26,13 +45,13 @@
             <div class="col-md-3 galaryimage">
 
                 @if ($data->mainImg)
-                    <img src="{{ asset('spc/' . $data->mainImg) }}" alt="spc product image" title="spc product image" onclick="miniImage(this)"
-                        class="img-responsive galary-mini-image spcinquiry-galaryimage">
+                    <img src="{{ asset('spc/' . $data->mainImg) }}" alt="spc product" title="spc product"
+                        onclick="miniImage(this)" class="img-responsive galary-mini-image spcinquiry-galaryimage">
                 @endif
 
                 @if ($data->subImg1)
-                    <img src="{{ asset('spc/' . $data->subImg1) }}" alt="spc product image" title="spc product image" onclick="miniImage(this)"
-                        class="img-responsive galary-mini-image spcinquiry-galaryimage">
+                    <img src="{{ asset('spc/' . $data->subImg1) }}" alt="spc product" title="spc product"
+                        onclick="miniImage(this)" class="img-responsive galary-mini-image spcinquiry-galaryimage">
                 @endif
             </div>
             <div class="col-md-9">
@@ -40,11 +59,11 @@
                 <div class="first-image">
 
                     @if ($data->mainImg)
-                        <img src="{{ asset('spc/' . $data->mainImg) }}" alt="spc product image" title="spc product image" id="big-image"
+                        <img src="{{ asset('spc/' . $data->mainImg) }}" alt="spc product" title="spc product" id="big-image"
                             class="img-responsive spcproductimage">
                     @endif
                     @if ($data->subImg1)
-                        <img src="{{ asset('spc/' . $data->subImg1) }}" alt="spc product image" title="spc product image" id="big-image"
+                        <img src="{{ asset('spc/' . $data->subImg1) }}" alt="spc product" title="spc product" id="big-image"
                             class="img-responsive spcproductimage spcproductimage1">
                     @endif
 
@@ -91,8 +110,7 @@
                 </div>
                 <div class="contact-form-area1">
 
-                    <form id="contact-form" name="contact_form" class="default-form"
-                        >
+                    <form id="contact-form" name="contact_form" class="default-form">
                         @csrf
                         <input type="hidden" name="product_name" value="{{ $data->names }}">
 
@@ -150,8 +168,8 @@
         }
     </script>
 
-     {{-- inquiry  --}}
-     <script>
+    {{-- inquiry  --}}
+    <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -176,37 +194,36 @@
             const formData = new FormData(form);
 
             fetch("{{ Route('send.inquiry') }}", {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    Swal.fire({
-                        title: 'Thank you!',
-                        text: 'Your inquiry has been submitted successfully.',
-                        icon: 'success',
-                        confirmButtonText: 'OK',
-                        customClass: {
-                            title: 'swal-title',
-                            htmlContainer: 'swal-text',
-                            confirmButton: 'swal-button'
-                        }
-                    });
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        Swal.fire({
+                            title: 'Thank you!',
+                            text: 'Your inquiry has been submitted successfully.',
+                            icon: 'success',
+                            confirmButtonText: 'OK',
+                            customClass: {
+                                title: 'swal-title',
+                                htmlContainer: 'swal-text',
+                                confirmButton: 'swal-button'
+                            }
+                        });
 
-                    // Reset the form
-                    form.reset();
-                }
-            })
-            .finally(() => {
-                // Re-enable the button and restore original text
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-            });
+                        // Reset the form
+                        form.reset();
+                    }
+                })
+                .finally(() => {
+                    // Re-enable the button and restore original text
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                });
         });
     </script>
-
 @endsection

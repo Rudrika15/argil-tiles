@@ -13,19 +13,18 @@ Argil Group">
         content="At Argil Group, our core values
 drive our commitment to excellence, integrity, and innovation in artificial
 quartz stone manufacturing. Discover what sets us apart.">
-    <meta property="og:image" content="https://www.argiltiles.com/images/
-core-values-og-image.jpg">
-    <meta property="og:url" content="https://www.argiltiles.com/core-values">
+
+    <meta property="og:url" content="https://argiltiles.com/core-values">
     <meta name="twitter:title" content="Our Core Values – The Foundation of
 Argil Group">
     <meta name="twitter:description"
         content="Integrity, quality, and innovation
 define Argil Group. Explore the core values that shape our commitment to
 excellence in quartz stone manufacturing.">
-    <meta name="twitter:image" content="https://argilgroup.com/assets/
-images/core-values-banner.jpg">
+
     <!-- Replace with actual image URL -->
-    <link rel="canonical" href="https://dev.argiltiles.com/corevalues" data-react- helmet="true">
+    <link rel="canonical" href="https://argiltiles.com/corevalues" data-
+    react-helmet="true">
     <title>Argil Core Values | Commitment to Quality & Innovation</title>
 @endsection
 @section('content')

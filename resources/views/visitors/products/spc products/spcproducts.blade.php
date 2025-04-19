@@ -14,13 +14,12 @@ Surface Solutions">
 Countertops Manufacturers In Morbi, Gujarat, India | Argil"
         data-react-helmet
 ="true">
-    <meta property="og:url" content="https://www.argiltiles.com/spcproducts" data- react-helmet="true">
+    <meta property="og:url" content="https://argiltiles.com/spcproducts" data- react-helmet="true">
     <meta property="og:description"
         content="Argil is SPC flooring tiles
 manufacturers in Morbi, Gujarat, India. We are the best SPC flooring brands
 with 10+ yrs of service. Get a price quote "
         data-react-helmet="true">
-    <meta property="og:image" content="Image URL" data-react-helmet="true">
     <meta name="twitter:title" content="SPC Flooring Tiles Manufacturers In Morbi,
  Gujarat, India | Argil"
         data-react-helmet="true">
@@ -29,8 +28,8 @@ with 10+ yrs of service. Get a price quote "
 manufacturers in Morbi, Gujarat, India. We are the best SPC flooring brands
 with 10+ yrs of service. Get a price quote"
         data-react-helmet="true">
-    <meta name="twitter:image" content="Image URL" data-react-helmet="true">
-    <link rel="canonical" href="https://dev.argiltiles.com/spcproducts" data-react- helmet="true">
+    <link rel="canonical" href="https://argiltiles.com/spcproducts" data-react-
+    helmet="true">
     <title>Best SPC Flooring Tiles Manufacturer in Morbi, India | Argil</title>
 @endsection
 @section('content')
@@ -64,7 +63,7 @@ with 10+ yrs of service. Get a price quote"
                 <div class="col-md-4 col-sm-4">
                     <a href="{{ Route('spcproductinquiry', $data->id) }}">
                         <div class="card1" data-aos="flip-left">
-                            <img src="{{ asset('spc/' . $data->mainImg) }}" alt="spc product image" title="spc prodcut image" class="img-responsive">
+                            <img src="{{ asset('spc/' . $data->mainImg) }}" alt="spc product" title="spc prodcut" class="img-responsive">
                             <p class="text-center">{{ $data->names }}</p>
                         </div>
                     </a>

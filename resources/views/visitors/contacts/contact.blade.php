@@ -13,9 +13,7 @@ Today">
         content="Have questions or need
 assistance? Contact Argil Group for inquiries about our premium artificial
 quartz stone slabs. We are here to help!">
-    <meta property="og:image" content="https://www.argiltiles.com/images/
-contact-og-image.jpg">
-    <meta property="og:url" content="https://www.argiltiles.com/contact">
+    <meta property="og:url" content="https://argiltiles.com/contact">
     <meta property="og:type" content="website">
     <meta name="twitter:title" content="Get in Touch with Argil Group – Contact Us
 Today">
@@ -23,10 +21,10 @@ Today">
         content="Need help? Contact Argil Group for
 inquiries about our premium artificial quartz stone slabs. Our team is ready to
 assist you!">
-    <meta name="twitter:image" content="https://www.argiltiles.com/path-to-contact
--image.jpg">
+
     <meta name="twitter:site" content="@ArgilGroup">
-    <link rel="canonical" href="https://dev.argiltiles.com/contact" data-react- helmet="true">
+    <link rel="canonical" href="https://argiltiles.com/contact" data-react-
+    helmet="true">
     <title>Contact Us | Argil Tiles – Quartz Stone Manufacturers in Morbi, India</title>
 @endsection
 

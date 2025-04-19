@@ -1,4 +1,23 @@
 @extends('layouts.app')
+@section('seosection')
+    <meta name="description"
+        content="Argil is a leading artificial quartz stone slab manufacturer in Morbi, Gujarat. Explore premium quartz surfaces for homes and businesses.">
+    <meta name="keywords" content="Artificial Quartz, Quartz Slabs, Quartz Manufacturers, Morbi Quartz, India Quartz Stone">
+    <meta property="og:title" content="Quartz Inquiry | Argil Quartz Surfaces" data-react-helmet="true">
+    <meta property="og:description"
+        content="Explore premium artificial quartz stone slabs from Argil, trusted by homeowners and businesses in India."
+        data-react-helmet="true">
+    <meta property="og:url" content="https://argiltiles.com/quartzinquiry/{{ $data->id }}">
+
+    <meta name="twitter:title" content="Quartz Inquiry | Argil Quartz Surfaces" data-react-helmet="true">
+    <meta name="twitter:description"
+        content="Explore premium artificial quartz stone slabs from Argil, trusted by homeowners and businesses in India."
+        data-react-helmet="true">
+
+        <link rel="canonical" href="{{ url()->current() }}">
+
+    <title>Quartz Inquiry | Premium Quartz Surfaces by Argil</title>
+    @endsection
 @section('content')
     <!-- page title -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -82,38 +101,39 @@
             <div class="carousel-inner" role="listbox">
                 @if ($data->mainImg)
                     <div class="item active">
-                        <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
-                            class="img-responsive carousel-image" width="100%" height="20px">
+                        <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="quartzsurface tiles image"
+                            title="quartzsurface tiles image" class="img-responsive carousel-image" width="100%"
+                            height="20px">
                     </div>
                 @endif
                 @if ($data->subImg1)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg1) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
-                            class="img-responsive carousel-image">
+                        <img src="{{ asset('quartz/' . $data->subImg1) }}" alt="quartzsurface tiles image"
+                            title="quartzsurface tiles image" class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg2)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg2) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
-                            class="img-responsive carousel-image">
+                        <img src="{{ asset('quartz/' . $data->subImg2) }}" alt="quartzsurface tiles image"
+                            title="quartzsurface tiles image" class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg3)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg3) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
-                            class="img-responsive carousel-image">
+                        <img src="{{ asset('quartz/' . $data->subImg3) }}" alt="quartzsurface tiles image"
+                            title="quartzsurface tiles image" class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg4)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg4) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
-                            class="img-responsive carousel-image">
+                        <img src="{{ asset('quartz/' . $data->subImg4) }}" alt="quartzsurface tiles image"
+                            title="quartzsurface tiles image" class="img-responsive carousel-image">
                     </div>
                 @endif
                 @if ($data->subImg5)
                     <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg5) }}" alt="quartzsurface tiles image" title="quartzsurface tiles image"
-                            class="img-responsive carousel-image">
+                        <img src="{{ asset('quartz/' . $data->subImg5) }}" alt="quartzsurface tiles image"
+                            title="quartzsurface tiles image" class="img-responsive carousel-image">
                     </div>
                 @endif
             </div>
@@ -186,8 +206,8 @@
                         @csrf
                         <input type="hidden" name="product_name" value="{{ $data->name }}">
                         <div class="col-md-12 input">
-                            <input type="text" name="form_name" value="" placeholder="Your Name " required=""
-                                class="inp">
+                            <input type="text" name="form_name" value="" placeholder="Your Name "
+                                required="" class="inp">
                         </div>
                         <div class="col-md-12 input">
                             <input type="email" name="form_email" value="" placeholder="Email" required=""
@@ -211,8 +231,8 @@
         </div>
     </div>
 
-     {{-- inquiry  --}}
-     <script>
+    {{-- inquiry  --}}
+    <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -237,36 +257,36 @@
             const formData = new FormData(form);
 
             fetch("{{ Route('send.inquiry') }}", {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    Swal.fire({
-                        title: 'Thank you!',
-                        text: 'Your inquiry has been submitted successfully.',
-                        icon: 'success',
-                        confirmButtonText: 'OK',
-                        customClass: {
-                            title: 'swal-title',
-                            htmlContainer: 'swal-text',
-                            confirmButton: 'swal-button'
-                        }
-                    });
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        Swal.fire({
+                            title: 'Thank you!',
+                            text: 'Your inquiry has been submitted successfully.',
+                            icon: 'success',
+                            confirmButtonText: 'OK',
+                            customClass: {
+                                title: 'swal-title',
+                                htmlContainer: 'swal-text',
+                                confirmButton: 'swal-button'
+                            }
+                        });
 
-                    // Reset the form
-                    form.reset();
-                }
-            })
-            .finally(() => {
-                // Re-enable the button and restore original text
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-            });
+                        // Reset the form
+                        form.reset();
+                    }
+                })
+                .finally(() => {
+                    // Re-enable the button and restore original text
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                });
         });
     </script>
 @endsection

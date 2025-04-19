@@ -13,19 +13,17 @@ in Quartz Manufacturing">
         content="Discover the milestones, awards,
 and industry recognitions that define Argil Group’s success in artificial quartz
 stone manufacturing. Our journey of excellence continues.">
-    <meta property="og:image" content="https://www.argiltiles.com/images/
-achievement-og-image.jpg">
-    <meta property="og:url" content="https://www.argiltiles.com/achievements">
+
+    <meta property="og:url" content="https://argiltiles.com/achievements">
     <meta name="twitter:title" content="Argil Group Achievements – Excellence
  in Quartz Manufacturing">
     <meta name="twitter:description"
         content="Explore the awards,
 certifications, and recognitions that showcase Argil Group’s commitment
 to quality, innovation, and leadership in the artificial quartz industry.">
-    <meta name="twitter:image" content="https://argilgroup.com/assets/images/
-achievements-banner.jpg">
-    <!-- Replace with actual image URL -->
-    <link rel="canonical" href="https://dev.argiltiles.com/achievements" data-react- helmet="true">
+
+    <link rel="canonical" href="https://argiltiles.com/achievements" data-
+    react-helmet="true">
     <title>Argil Achievements | Awards & Milestones in Quartz Industry</title>
 @endsection
 @section('content')
@@ -58,7 +56,7 @@ achievements-banner.jpg">
             </div>
             <div class="col-md-6 achievment-content">
                 <div class="col-md-4">
-                    <img src="asset/images/argileimage/achievementimage1.jpeg" class="img-responsive award-image" title="national award"
+                    <img src="asset/images/argileimage/achievementimage1.jpeg" class="img-responsive award-image" title="national award certificate"
                         alt="national award">
                 </div>
                 <div class="col-md-8">
