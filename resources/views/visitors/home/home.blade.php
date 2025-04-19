@@ -16,8 +16,11 @@
             </div>
         </section>
 
+
+
         <!-- main slider end -->
-        <div class="+ container " style="padding-top: 25px">
+        {{-- <div class="container" style="padding-top: 250px"> --}}
+        <div class="container" style="padding-top: 25px">
             <div class="row">
                 <div class="col-md-6">
                     <div>
