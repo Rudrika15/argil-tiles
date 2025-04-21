@@ -88,8 +88,8 @@
 
         <!-- header lower -->
         <div class="header-lower">
-            <div class="container">
-                <div class="logo-box">
+            <div class="container" style="position: relative;">
+                <div class="logo-box" style="position: absolute; left: 0;">
                     <a href="/">
                         <figure>
                             <img src="{{ asset('asset/images/logo/logo.png') }}" alt="argil logo" title="argile logo" class="img-responsive"
@@ -169,13 +169,13 @@
                 </div>
             </div>
         </div>
-        </div>
+
         <!-- end header lower -->
 
         <!--sticky header-->
         <div class="sticky-header">
-            <div class="container">
-                <div class="logo-box">
+            <div class="container" style="position: relative;">
+                <div class="logo-box" style="position: absolute; left: 0;">
                     <a href="/">
                         <figure><img src="{{ asset('asset/images/logo/logo.png') }}" alt="argile logo" title="argile logo"
                                 class="img-responsive"></figure>
@@ -255,7 +255,7 @@
                 </div>
             </div>
         </div>
-        </div>
+
         <!-- end sticky header -->
 
     </header>

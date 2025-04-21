@@ -10,6 +10,7 @@
 .get-price-quote {
     border: 1px solid whitesmoke;
     padding: 10px 20px;
+    text-align: left;
 
 }
 
@@ -80,7 +81,7 @@
     aspect-ratio: 2/1;
     height: 70px;
     width: 100%;
-    margin-top: -25px;
+    margin-top: -35px;
     object-fit: contain;
 }
 
@@ -704,13 +705,22 @@ p {
     .tp-fullwidth-forcer {
         height: 170px !important;
     }
-
+    .menu-bar{
+        text-align: right;
+    }
     .logo-box img {
         width: 50%;
+
         height: 52px;
         margin-top: 2px;
-        margin-left: 35px;
+        margin-left: -20px;
     }
+    .logo-box{
+        margin: 0;
+    }
+    /* .fixed-header .logo-box{
+        display: block;
+    } */
 
     .certificate-class img {
         width: 35%;
@@ -751,6 +761,9 @@ p {
     .get-price {
         padding: 5px;
     }
+    /* .main-menu .navigation > li > a{
+        padding: 0;
+    } */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
