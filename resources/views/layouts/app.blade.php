@@ -81,13 +81,6 @@
                         <li><a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank"><i
                                     class="fa fa-linkedin"></i></a></li>
                     </ul>
-                    {{-- <ul class="social-top">
-                        <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                        <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                    </ul> --}}
                 </div>
             </div>
         </div>
@@ -170,30 +163,9 @@
                                         <a href="/contact">GET A PRICE QUOTE</a>
                                     </div>
                                 </li>
-                                {{-- <li>
-                                    <a href="tel:9925511465">
-                                        <i class="fa fa-phone">+91 99255 11465</span></i>
-                                    </a>
-                                </li> --}}
                             </ul>
                         </div>
                     </nav>
-                    {{-- <div class="info-box">
-                        <div class="search-box-area">
-                            <div class="search-toggle"><i class="fa fa-search"></i></div>
-                            <div class="search-box">
-                                <form method="post" action="index.html">
-                                    <div class="form-group">
-                                        <input type="search" name="search" placeholder="Search Here" required>
-                                        <button type="submit"><i class="fa fa-search"></i></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div> --}}
-                    {{-- <div class="cart-box">
-                            <div class="icon-box"><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></div>
-                            <div class="number">3</div>
-                        </div> --}}
                 </div>
             </div>
         </div>
@@ -275,30 +247,11 @@
                                         <a href="/contact">GET A PRICE QUOTE</a>
                                     </div>
                                 </li>
-                                {{-- <li>
-                                    <a href="tel:9925511465">
-                                        <i class="fa fa-phone">+91 99255 11465</span></i>
-                                    </a>
-                                </li> --}}
+
                             </ul>
                         </div>
                     </nav>
-                    {{-- <div class="info-box">
-                        <div class="search-box-area">
-                            <div class="search-toggle"><i class="fa fa-search"></i></div>
-                            <div class="search-box">
-                                <form method="post" action="index.html">
-                                    <div class="form-group">
-                                        <input type="search" name="search" placeholder="Search Here" required>
-                                        <button type="submit"><i class="fa fa-search"></i></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="cart-box">
-                            <div class="icon-box"><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></div>
-                            <div class="number">3</div>
-                        </div> --}}
+
                 </div>
             </div>
         </div>
@@ -323,13 +276,7 @@
                                     <figure><img src="{{ asset('asset/images/argileimage/footerlogo.png') }}"
                                             alt="footer logo" title="footer logo" class="img-responsive"></figure>
                                 </a></div>
-                            {{-- <ul class="footer-social">
-                                <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                            </ul> --}}
+
                         </div>
                     </div>
                     <div class="col-md-2 col-sm-6 col-xs-12 footer-column">

@@ -38,41 +38,7 @@
         </div>
     </section>
     <!--End Page Title-->
-    {{-- <div class="heading-title container-fluid">
-        <h3 class="container">Home/{{ $data->name }}</h3>
-    </div> --}}
 
-    {{-- <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                @if ($data->mainImg)
-                    <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="" id="big-image" class="img-responsive">
-                @endif
-            </div>
-        </div>
-    </div>
-    <div class="container mini-image">
-        <div class="row">
-            <div class="col-md-2">
-                @if ($data->mainImg)
-                    <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="" onclick="miniImage(this)"
-                        class="img-responsive quartzinquiry-galaryimage1 ">
-                @endif
-            </div>
-            <div class="col-md-2">
-                @if ($data->subImg1)
-                    <img src="{{ asset('quartz/' . $data->subImg1) }}" alt="" onclick="miniImage(this)"
-                        class="img-responsive quartzinquiry-galaryimage1">
-                @endif
-            </div>
-            <div class="col-md-2">
-                @if ($data->mainImg)
-                    <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="" onclick="miniImage(this)"
-                        class="img-responsive quartzinquiry-galaryimage1">
-                @endif
-            </div>
-        </div>
-    </div> --}}
     <div class="container-fluid">
         <div id="carousel-example-generic" class="carousel slide quartzinquiry-image" data-ride="carousel">
             <!-- Indicators -->

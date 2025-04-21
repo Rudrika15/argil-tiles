@@ -36,9 +36,6 @@ helmet="true">
         </div>
     </section>
     <!--End Page Title-->
-    {{-- <div class="container-fluid heading-title">
-        <h2 class="container">Home/Profile</h2>
-    </div> --}}
 
     <div class="container">
         <div class="row">

@@ -54,14 +54,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         </section>
     </a>
     <!--End Page Title-->
-    {{-- <div class="heading-title container-fluid headding-content">
-        <h2 class="container">Home/Quartz Surface</h2>
-    </div> --}}
 
-    {{--
-    <div class="quartz-bg-image">
-        <a href="/contact"><img src="asset/images/argileimage/quartzimage.jpg" alt="" class="img-responsive"></a>
-    </div> --}}
     <div class="container">
         <div class="row">
             <div class="col-md-6 surface-image">
@@ -585,10 +578,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                                 <input type="text" name="form_phone" value="" placeholder="Contact Number"
                                     class="inp" required="">
                             </div>
-                            {{-- <div class="col-md-6">
-                                <input type="text" name="form_subject" value="" placeholder='Subject'
-                                    class="inp" required="">
-                            </div> --}}
+
                             <div class="col-md-12 ">
                                 <textarea placeholder="Message" name="form_message" required="" class="textarea inp"></textarea>
                             </div>

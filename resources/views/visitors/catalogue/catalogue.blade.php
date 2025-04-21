@@ -39,9 +39,6 @@ Premium Designs">
         </div>
     </section>
     <!--End Page Title-->
-    {{-- <div class="heading-title container-fluid">
-        <h2 class="container">Home/Catalogue</h2>
-    </div> --}}
 
     <div class="container">
         <div class="row">

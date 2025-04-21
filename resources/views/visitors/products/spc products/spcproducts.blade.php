@@ -48,9 +48,7 @@ with 10+ yrs of service. Get a price quote"
         </div>
     </section>
     <!--End Page Title-->
-    {{-- <div class="heading-title container-fluid">
-        <h2 class="container">Home/SPC Products</h2>
-    </div> --}}
+
 
 
     <div class="text-center products-heading">

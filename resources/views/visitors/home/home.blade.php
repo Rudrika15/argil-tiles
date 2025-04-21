@@ -36,18 +36,7 @@ Get a price quote "
     @section('content')
         <!--Main Slider-->
 
-        {{-- <section class="main-slider">
 
-            <div class="tp-banner-container">
-                <div class="tp-banner">
-                    <video autoplay muted loop width="100%">
-                        <source src="asset/video/homescreenvideo.mp4" type="video/mp4">
-                    </video>
-
-                    <div class="tp-bannertimer"></div>
-                </div>
-            </div>
-        </section> --}}
         <div class="container-fluid" style="padding:0!important">
             <video autoplay muted loop width="100%">
                 <source src="asset/video/homescreenvideo.mp4" type="video/mp4">
@@ -104,7 +93,6 @@ Get a price quote "
         </div>
         <div class="productimage">
             <div class="product1" data-aos="zoom-in-up">
-                {{-- <a href="/quartzsurface"><img src="asset/images/argileimage/productimage1.jpg" alt="" class="img-responsive"></a> --}}
                 <div class="overlay-style-two">
                     <div class="item">
                         <figure class="img-box">
@@ -123,8 +111,7 @@ Get a price quote "
                 </div>
             </div>
             <div class="product1" data-aos="zoom-in-up">
-                {{-- <a href="/spcproducts"><img src="asset/images/argileimage/productimage2.jpg" alt=""
-                        class="img-responsive"></a> --}}
+
                 <div class="overlay-style-two">
                     <div class="item">
                         <figure class="img-box">
@@ -143,36 +130,6 @@ Get a price quote "
                 </div>
             </div>
         </div>
-
-        {{-- <section class="latest-products sec-pad centred">
-            <div class="container">
-                <div class="sec-title">
-                    <h2>Latest Products Shop</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12 shop-column">
-                        <div class="overlay-style-two">
-                            <div class="item">
-                                <figure class="img-box">
-                                    <a href="/quartzsurface"><img src="asset/images/argileimage/productimage1.jpg"
-                                            alt="" class="img-responsive"></a>
-                                    <div class="default-overlay-outer">
-                                        <div class="inner">
-                                            <div class="content-layer">
-                                                <a href="service-1.html" class="btn-one">Add to cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </figure>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section> --}}
-
 
         {{-- Enhancing the usability --}}
 
