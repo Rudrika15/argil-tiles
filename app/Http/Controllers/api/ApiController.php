@@ -145,33 +145,9 @@ class apiController extends Controller
         $ctc->message = $message;
         $ctc->save();
 
-<<<<<<< HEAD
          // Send the email using the ContactFormMail Mailable
         Mail::to('social.media@argiltiles.com')  // Replace with your own email address
         ->send(new ContactFormMail($name, $email, $contactno, $message));
-=======
-
-        $msg = "Dear Sir/Madam,<br><br> You got a new Contact from " . $name . ". Following are the  details:<br><br>";
-        $msg .= "<br>Contact Person : " . $name;
-        $msg .= "<br>Phone : " . $contactno;
-        $msg .= "<br>Email : " . $email;
-        $msg .= "<br>Body Message : " . $message;
-        $msg .= "<br><br><b>Thank You.</b>";
-
-        $to = "sales@argiltiles.com";
-        $subject = "Contact us ";
-
-        // Always set content-type when sending HTML email
-        // $headers = "MIME-Version: 1.0" . "\r\n";
-        // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        // More headers
-        // $headers .= 'From: argil45k@argiltiles.com' . "\r\n";
-        // $headers .= 'Cc: hardikprajapati23@outlook.com,jigar@shoutnhike.com,manoj@shoutnhike.com,vaishali@shoutnhike.com,kushalargil@gmail.com' . "\r\n";
-
-        // mail($to,$subject,$msg,$headers);
-
-        $responseEmail = $this->sendEmail($subject, $msg);
->>>>>>> cc0f9479ee4b5371c789f412687163dd3e35fb39
 
         return $ctc;
         // return $responseEmail;
@@ -196,21 +172,7 @@ class apiController extends Controller
         $inqr->details = $type;
         $inqr->save();
 
-<<<<<<< HEAD
           // email code here
-=======
-        $msg = "Dear Sir/Madam,<br><br> You got a new Inquiry from " . $name . ". Following are the  details:<br><br>";
-        $msg .= "<br>Contact Person : " . $name;
-        $msg .= "<br>Phone : " . $contactno;
-        $msg .= "<br>Email : " . $email;
-        $msg .= "<br>Product : " . $productname . " type " . $type;
-        $msg .= "<br>Body Message : " . $message;
-        $msg .= "<br><br><b>Thank You.</b>";
-
-        $subject = "Inquiry ";
-
-        $responseEmail = $this->sendEmail($subject, $msg);
->>>>>>> cc0f9479ee4b5371c789f412687163dd3e35fb39
 
         return response()->json([
             'status' => true,
