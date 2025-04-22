@@ -26,7 +26,7 @@
             <h2>Blog View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success bi bi-arrow-right" href="{{ Route('blog.create') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right mb-2" href="{{ Route('blog.create') }}">Add New Record</a>
         </div>
         <div class="table table-content" style="overflow-x: scroll">
         <table class="table table-bordered table-hover">

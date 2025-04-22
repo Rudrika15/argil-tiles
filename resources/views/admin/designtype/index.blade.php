@@ -23,7 +23,7 @@
             <h2>Designtype View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success bi bi-arrow-right" href="{{ route('designtypecreate') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right mb-2" href="{{ route('designtypecreate') }}">Add New Record</a>
         </div>
         <table class="table table-bordered table-hover">
             <thead>

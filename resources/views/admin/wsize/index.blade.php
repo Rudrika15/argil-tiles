@@ -23,7 +23,7 @@
             <h2>W Size View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success bi bi-arrow-right" href="{{ route('wsizecreate') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right mb-2" href="{{ route('wsizecreate') }}">Add New Record</a>
         </div>
         <table class="table table-bordered table-hover">
             <thead>
