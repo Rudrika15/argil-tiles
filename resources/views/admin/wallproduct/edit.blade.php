@@ -142,9 +142,9 @@
 			</div>
 
 		</div>
-		<div class="text-center form-action float-right">
+		<div class="text-center form-action">
 			<button type="submit" class="btn btn-primary text-uppercase">Submit</button>
-
+        </div>
 
 	</form>
 </div>
