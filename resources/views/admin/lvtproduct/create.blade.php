@@ -25,7 +25,7 @@
 				<h2>SPC Product Create</h2>
 			</div>
 			<div class="float-right">
-				<a href="{{route('lvtshow')}}" class="btn btn-success">Back</a>
+				<a href="{{route('lvtshow')}}" class="btn btn-success mb-2">Back</a>
 			</div>
 		</div>
 	</div>
@@ -39,10 +39,14 @@
 					<label for="form_firstname">Names</label>
 				</div>
 
-				<div class="form-label-group">
-					<input id="form_firstname" type="text" name="thicknesses" class="form-control" placeholder="Thiknesses" required>
-					<label for="form_firstname">Thiknesses</label>
-				</div>
+                <div class="form-label-group">
+                    <select name="thicknesses" id="thicknesses" class="form-control" required>
+                        <option value="" disabled selected>Thicknesses</option>
+                        <option value="4MM,5MM,6MM">4MM,5MM,6MM</option>
+
+                    </select>
+                </div>
+
 
 				<div class="form-label-group">
 					<input id="form_firstname" type="text" name="primarycolors" class="form-control" placeholder="Primarycolors" required>
@@ -82,7 +86,7 @@
 					<label for="form_firstname">Wearlayer</label>
 				</div>
 
-				<div class="form-label-group">
+				{{-- <div class="form-label-group">
 					<input id="form_firstname" list="lvtsize" type="text" name="bookmatch" class="form-control" placeholder="Size" required>
 
 					<datalist id="lvtsize">
@@ -93,7 +97,16 @@
 
 
 					<label for="form_firstname">Size</label>
-				</div>
+				</div> --}}
+                <div class="form-label-group">
+                    <select name="bookmatch" id="bookmatch" class="form-control" required>
+                        <option value="" disabled selected>Size</option>
+                        @foreach($lvtsize as $lvtsize)
+						<option value="{{$lvtsize->size}}">{{$lvtsize->size}}</option>
+						@endforeach
+
+                    </select>
+                </div>
 			</div>
 
 			<div class="col-md-6">
@@ -133,12 +146,12 @@
 
 					<label for="form_firstname">SubImg5</label>
 				</div>
-				<img src="{{url('slider/image_default.png')}}" alt="Main Image" id="img1" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px'>
+				<img src="{{url('slider/image_default.png')}}" alt="Main Image" id="img1" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px'  class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px'  class="mt-2">
 
 			</div>
 		</div>

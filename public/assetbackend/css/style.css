@@ -36,7 +36,8 @@ a{transition: 0.4s;-webkit-transition: 0.4s;-ms-transition: 0.4s;-moz-transition
 .form-label-group > input,
 .form-label-group > label,
 .input-group > input,
-.input-group > label {
+.input-group > label ,
+.form-label-group > select{
   height: 3.125rem;
   padding: .75rem;
 }

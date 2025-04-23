@@ -105,6 +105,7 @@ class QuartzController extends Controller
 	function edit($id)
 	{
 		$data = Quartzproduct::find($id);
+        // return $data;
 		$data1 = Qsizemaster::all();
 		$data2 = Finishtype::all();
 		$data3 = Stock::all();

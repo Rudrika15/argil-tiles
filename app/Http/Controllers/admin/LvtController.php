@@ -101,6 +101,7 @@ class LvtController extends Controller
     function edit($id)
     {
         $data = Lvtproduct::find($id);
+        // return $data;
         $lvtsize = Ssizemaster::all();
         return view("admin.lvtproduct.edit", compact('data', 'lvtsize'));
     }
