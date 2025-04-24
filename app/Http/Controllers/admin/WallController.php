@@ -187,6 +187,6 @@ class WallController extends Controller
 
 		$data = Wallproduct::find($id)->delete();
 
-        return redirect()->route('wallshow')->with('msg', 'Data Delete Successfully');
+        return redirect()->route('wallshow')->with('msg', 'Data Deleted Successfully');
 	}
 }

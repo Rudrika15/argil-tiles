@@ -190,6 +190,6 @@ class QuartzController extends Controller
 	function delete($id)
 	{
 		$data = Quartzproduct::find($id)->delete();
-        return redirect()->route('quartzshow')->with('msg', 'Data Delete Successfully');
+        return redirect()->route('quartzshow')->with('msg', 'Data Deleted Successfully');
 	}
 }

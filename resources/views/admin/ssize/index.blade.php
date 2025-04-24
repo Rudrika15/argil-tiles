@@ -33,6 +33,11 @@
                     <th scope="col">Option</th>
                 </tr>
             </thead>
+            @if (count($data) == 0)
+                <tr>
+                    <td colspan="12" class="text-center text-danger">No Record Found</td>
+                </tr>
+            @endif
             <tbody>
                 @foreach ($data as $data)
                     <tr>

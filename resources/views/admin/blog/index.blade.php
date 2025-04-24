@@ -40,6 +40,12 @@
                     <th scope="col">Option</th>
                 </tr>
             </thead>
+            @if (count($blogs) == 0)
+                <tr>
+                    <td colspan="6" class="text-center text-danger">No Record Found</td>
+                </tr>
+
+            @endif
             <tbody>
                 @foreach ($blogs as $data)
                     <tr>
@@ -48,12 +54,14 @@
                         <td>{{ $data->description }}</td>
                         <td><img src="{{ 'blogimage/'.$data->image }}" style="height:200px" class="img-thumbnail"></td>
                         <td>{{ $data->status }}</td>
-                        <td style="gap: 8px;" class="d-flex">
+                        <td>
+                            <span class="d-flex" style="gap: 8px">
                             <a href = "{{ route('blog.edit', $data->id) }}" class="btn btn-primary"> Edit </a>
                             <a href="javascript:void(0)" class="btn btn-warning"
                             onclick="openDeleteModal('{{ Route('blog.delete', $data->id) }}')">
                             Delete
                         </a>
+                            </span>
                         </td>
                     </tr>
                 @endforeach

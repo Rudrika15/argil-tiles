@@ -110,6 +110,6 @@ class BlogController extends Controller
     {
         $blogs = Blog::find($id);
         $blogs->delete();
-        return redirect()->route('blog')->with('msg', 'Data Delete Successfully');
+        return redirect()->route('blog')->with('msg', 'Data Deleted Successfully');
     }
 }

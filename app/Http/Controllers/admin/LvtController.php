@@ -180,6 +180,6 @@ class LvtController extends Controller
     function delete($id)
     {
         $data = Lvtproduct::find($id)->delete();
-        return redirect()->route('lvtshow')->with('msg', 'Data Delete Successfully');
+        return redirect()->route('lvtshow')->with('msg', 'Data Deleted Successfully');
     }
 }
