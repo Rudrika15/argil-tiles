@@ -52,6 +52,7 @@
                 </div>
                 <div class="col-md-6"> <img src="{{ asset('home_slider/' . $data->img) }}" alt="img" id="img" style='height:150px;width:100px'>
                 </div>
+            </div>
 
                 <div class="text-center form-action">
                     <button type="submit" class="btn btn-primary text-uppercase">Submit</button>

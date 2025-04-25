@@ -17,18 +17,31 @@ class UserController extends Controller
         return view("admin.admin.login");
     }
 
-    function loginUser(Request $req)
+    public function loginUser(Request $req)
     {
-        // Validate the input
-        $data = $req->validate([
-            'email' => 'required',
+        $req->validate([
+            'email' => 'required|email',
             'password' => 'required'
         ]);
 
-            if (Auth::attempt($data)) {
-                return redirect()->route('dashboard');
-            }
+        // Find the user by email
+        $user = User::where('email', $req->email)->first();
+
+        if (!$user) {
+            // Email not found
+            return back()->with('fail', 'This email is not registered.');
         }
+
+        if (!Hash::check($req->password, $user->password)) {
+            // Password incorrect
+            return back()->with('fail', 'Password does not match.');
+        }
+
+        // Login the user manually
+        Auth::login($user);
+
+        return redirect()->route('dashboard');
+    }
 
         public function dashboardpage()
         {

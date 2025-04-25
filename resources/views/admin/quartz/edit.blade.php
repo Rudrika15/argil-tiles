@@ -46,7 +46,7 @@
 				</div>
 
 
-				<div class="form-label-group">
+				{{-- <div class="form-label-group">
 					<input id="form_firstname" list="sizes" type="text" value="{{$data->sizes}}" name="sizes" class="form-control" placeholder="Sizes" required>
 
 					<datalist id="sizes">
@@ -56,11 +56,19 @@
 					</datalist>
 
 					<label for="form_firstname">Sizes</label>
-				</div>
+				</div> --}}
+                <div class="form-label-group">
+                    <select name="sizes" id="sizes" class="form-control" required>
+                        <option value="" disabled selected>sizes</option>
+                        @foreach($data1 as $item1)
+						<option value="{{$item1->size}}" {{ $item1->size == $data->sizes ? 'selected':'' }}>{{$item1->size}}</option>
+						@endforeach
+                    </select>
+                </div>
 
 
 
-				<div class="form-label-group">
+				{{-- <div class="form-label-group">
 					<input id="form_firstname" list="thicknesses" type="text" name="thicknesses" value="{{$data->thicknesses}}" class="form-control" placeholder="Thiknesses" required>
 
 					<datalist id="thicknesses">
@@ -69,10 +77,27 @@
 					</datalist>
 
 					<label for="form_firstname">Thiknesses</label>
-				</div>
+				</div> --}}
+                {{-- <div class="form-label-group">
+                    <select name="thicknesses" id="thicknesses" class="form-control" required>
+                        <option value="" disabled selected>Thicknesses</option>
+                        <option value="20 X 30 MM"{{ $data->thicknesses == '20 X 30 MM'?'selected':'' }}>20 X 30 MM</option>
+                        <option value="30 X 40 MM"{{ $data->thicknesses == '30 X 40 MM'?'selected':'' }}>30 X 40 MM</option>
+
+                    </select>
+                </div> --}}
+                <div class="form-label-group">
+                    <select name="thicknesses" id="thicknesses" class="form-control" required>
+                        <option value="" disabled selected>Thicknesses</option>
+                        <option value="20 X 30 MM"{{ $data->thicknesses == '20 X 30 MM'?'selected':'' }}>20 X 30 MM</option>
+                        <option value="30 X 40 MM"{{ $data->thicknesses == '30 X 40 MM'?'selected':'' }}>30 X 40 MM</option>
+
+                    </select>
+                </div>
 
 
-				<div class="form-label-group">
+
+				{{-- <div class="form-label-group">
 					<input id="form_firstname" type="text" list="finishType" name="finishType" value="{{$data->finishType}}" class="form-control" placeholder="Finish Type" required>
 
 					<datalist id="finishType">
@@ -81,10 +106,19 @@
 						@endforeach
 					</datalist>
 					<label for="form_firstname">Finish Type</label>
-				</div>
+				</div> --}}
+                <div class="form-label-group">
+                    <select name="finishType" id="finishType" class="form-control" required>
+                        <option value="" disabled selected>finishType</option>
+                        @foreach($data2 as $data2)
+						<option value="{{$data2->type}}"{{ $data2->type ==$data->finishType?'selected':'' }}>{{$data2->type}}</option>
+						@endforeach
+                    </select>
+                </div>
 
 
-				<div class="form-label-group">
+
+				{{-- <div class="form-label-group">
 					<input id="form_firstname" type="text" list="stocks" name="stock" value="{{$data->stock}}" class="form-control" placeholder="Stock" required>
 					<datalist id="stocks">
 						@foreach($data3 as $data3)
@@ -93,7 +127,15 @@
 					</datalist>
 
 					<label for="form_firstname">Stock</label>
-				</div>
+				</div> --}}
+                <div class="form-label-group">
+                    <select name="stock" id="stock" class="form-control" required>
+                        <option value="" disabled selected>stock</option>
+                        @foreach($data3 as $data3)
+						<option value="{{$data3->stock}}"{{ $data3->stock ==$data->stock?'selected':'' }}>{{$data3->stock}}</option>
+						@endforeach
+                    </select>
+                </div>
 
 
 
@@ -150,19 +192,19 @@
 
 
 
-				<img src="{{url('quartz')}}/{{$data -> mainImg}}" alt="Main Image" id="img1" style='height:150px;width:100px'>
-				<img src="{{url('quartz')}}/{{$data -> subImg1}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px'>
-				<img src="{{url('quartz')}}/{{$data -> subImg2}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px'>
-				<img src="{{url('quartz')}}/{{$data -> subImg3}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px'>
-				<img src="{{url('quartz')}}/{{$data -> subImg4}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px'>
-				<img src="{{url('quartz')}}/{{$data -> subImg5}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px'>
+				<img src="{{url('quartz')}}/{{$data -> mainImg}}" alt="Main Image" id="img1" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('quartz')}}/{{$data -> subImg1}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('quartz')}}/{{$data -> subImg2}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('quartz')}}/{{$data -> subImg3}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('quartz')}}/{{$data -> subImg4}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px'  class="mt-2">
+				<img src="{{url('quartz')}}/{{$data -> subImg5}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px'  class="mt-2">
 
 			</div>
 
 		</div>
-		<div class="text-center form-action float-right">
+		<div class="text-center form-action">
 			<button type="submit" class="btn btn-primary text-uppercase">Submit</button>
-
+        </div>
 
 	</form>
 </div>

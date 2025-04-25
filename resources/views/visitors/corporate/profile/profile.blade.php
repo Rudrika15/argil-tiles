@@ -13,11 +13,11 @@ Stone Manufacturer">
         content="Learn more about Argil Group, a
 leading manufacturer of premium artificial quartz stone slabs in Morbi,
 Gujarat, India. Quality, innovation, and excellence define us.">
-        <meta property="og:url" content="https://www.argiltiles.com/profile">
+        <meta property="og:url" content="https://argiltiles.com/profile">
     <meta name="twitter:title" content="About Argil Group – Leading Quartz Stone Manufacturer">
     <meta name="twitter:description"
         content="Discover Argil Group, a premier manufacturer of high-quality quartz stone products, committed to innovation and excellence.">
-    <link rel="canonical" href="https://www.argiltiles.com/profile" data-react-
+    <link rel="canonical" href="https://argiltiles.com/profile" data-react-
 helmet="true">
     <title>Argil Company Profile | Leading Quartz Slab Manufacturer</title>
 @endsection

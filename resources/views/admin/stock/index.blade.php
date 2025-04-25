@@ -25,7 +25,7 @@
             <h2>Stock View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success bi bi-arrow-right" href="{{ route('stockcreate') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right mb-2" href="{{ route('stockcreate') }}">Add New Record</a>
         </div>
         <table class="table table-bordered table-hover">
             <thead>
@@ -34,6 +34,11 @@
                     <th scope="col">Option</th>
                 </tr>
             </thead>
+            @if (count($data) == 0)
+                <tr>
+                    <td colspan="12" class="text-center text-danger">No Record Found</td>
+                </tr>
+            @endif
             <tbody>
                 @foreach ($data as $data)
                     <tr>

@@ -78,6 +78,6 @@ class QsizemasterController extends Controller
     function delete($id)
 	{
         $data=Qsizemaster::find($id)->delete();
-        return redirect()->route('qsizeshow')->with('msg', 'Data Delete Successfully');
+        return redirect()->route('qsizeshow')->with('msg', 'Data Deleted Successfully');
     }
 }

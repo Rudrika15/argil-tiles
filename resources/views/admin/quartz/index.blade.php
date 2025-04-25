@@ -45,6 +45,11 @@
                         <th scope="col">Option</th>
                     </tr>
                 </thead>
+                @if (count($data) == 0)
+                    <tr>
+                        <td colspan="12" class="text-center text-danger">No Record Found</td>
+                    </tr>
+                @endif
                 <tbody>
                     @foreach ($data as $data)
                         <tr>
@@ -57,13 +62,16 @@
                             <td>{{ $data->bookmatch }}</td>
                             <td><img src="quartz/{{ $data->mainImg }}" style="height:200px" class="img-thumbnail"></td>
                             <td>{{ $data->status }}</td>
-                            <td class="d-flex" style="gap: 8px"><a class="btn btn-primary"
+                            <td>
+                                <span class="d-flex" style="gap: 8px">
+                                <a class="btn btn-primary"
                                     href="{{ route('quartz.edit', $data->id) }}"> Edit </a>
 
                                  <a href="javascript:void(0)" class="btn btn-warning"
                                  onclick="openDeleteModal('{{Route('quartz.delete',$data->id)}}')">
                                  Delete
                              </a>
+                                </span>
                             </td>
                         </tr>
                     @endforeach

@@ -101,6 +101,7 @@ class LvtController extends Controller
     function edit($id)
     {
         $data = Lvtproduct::find($id);
+        // return $data;
         $lvtsize = Ssizemaster::all();
         return view("admin.lvtproduct.edit", compact('data', 'lvtsize'));
     }
@@ -179,6 +180,6 @@ class LvtController extends Controller
     function delete($id)
     {
         $data = Lvtproduct::find($id)->delete();
-        return redirect()->route('lvtshow')->with('msg', 'Data Delete Successfully');
+        return redirect()->route('lvtshow')->with('msg', 'Data Deleted Successfully');
     }
 }

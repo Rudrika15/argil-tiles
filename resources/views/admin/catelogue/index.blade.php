@@ -36,6 +36,11 @@
                         <th scope="col">Option</th>
                     </tr>
                 </thead>
+                @if (count($data) == 0)
+                    <tr>
+                        <td colspan="12" class="text-center text-danger">No Record Found</td>
+                    </tr>
+                @endif
                 <tbody>
                     @foreach ($data as $data)
                         <tr>
@@ -44,9 +49,9 @@
                             <td class="d-flex" style="gap: 8px">
                                 <a href = "{{ route('catelogue.edit', $data->id) }}" class="btn btn-primary">Edit</a>
                                 <a href="javascript:void(0)" class="btn btn-warning"
-                                onclick="openDeleteModal('{{Route('catelogue.delete',$data->id)}}')">
-                                Delete
-                            </a>
+                                    onclick="openDeleteModal('{{ Route('catelogue.delete', $data->id) }}')">
+                                    Delete
+                                </a>
                             </td>
                         </tr>
                     @endforeach

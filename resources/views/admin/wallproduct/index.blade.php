@@ -47,6 +47,11 @@
                         <th scope="col">Option</th>
                     </tr>
                 </thead>
+                @if (count($wdata) == 0)
+                    <tr>
+                        <td colspan="12" class="text-center text-danger">No Record Found</td>
+                    </tr>
+                @endif
                 <tbody>
                     @foreach ($wdata as $data)
                         <tr>
@@ -57,12 +62,14 @@
                             <td>{{ $data->designType }}</td>
                             <td><img src="wall/{{ $data->mainImg }}" style="height:200px" class="img-thumbnail"></td>
                             <td>{{ $data->status }}</td>
-                            <td class="d-flex" style="gap:8px">
+                            <td>
+                                <span class="d-flex" style="gap: 8px">
                                 <a href="{{ route('wall.edit', $data->id) }}" class="btn btn-primary">Edit</a>
                                 <a href="javascript:void(0)" class="btn btn-warning"
                                     onclick="openDeleteModal('{{ Route('wall.delete', $data->id) }}')">
                                     Delete
                                 </a>
+                                </span>
                             </td>
                         </tr>
                     @endforeach

@@ -105,6 +105,7 @@ class QuartzController extends Controller
 	function edit($id)
 	{
 		$data = Quartzproduct::find($id);
+        // return $data;
 		$data1 = Qsizemaster::all();
 		$data2 = Finishtype::all();
 		$data3 = Stock::all();
@@ -189,6 +190,6 @@ class QuartzController extends Controller
 	function delete($id)
 	{
 		$data = Quartzproduct::find($id)->delete();
-        return redirect()->route('quartzshow')->with('msg', 'Data Delete Successfully');
+        return redirect()->route('quartzshow')->with('msg', 'Data Deleted Successfully');
 	}
 }

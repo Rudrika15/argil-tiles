@@ -75,6 +75,6 @@ class StockController extends Controller
     function delete($id)
 	{
         $data=Stock::find($id)->delete();
-        return redirect()->route('stockshow')->with('msg', 'Data Delete Successfully');
+        return redirect()->route('stockshow')->with('msg', 'Data Deleted Successfully');
     }
 }

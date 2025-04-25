@@ -26,7 +26,7 @@
             <h2>Blog View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success bi bi-arrow-right" href="{{ Route('blog.create') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right mb-2" href="{{ Route('blog.create') }}">Add New Record</a>
         </div>
         <div class="table table-content" style="overflow-x: scroll">
         <table class="table table-bordered table-hover">
@@ -40,6 +40,12 @@
                     <th scope="col">Option</th>
                 </tr>
             </thead>
+            @if (count($blogs) == 0)
+                <tr>
+                    <td colspan="6" class="text-center text-danger">No Record Found</td>
+                </tr>
+
+            @endif
             <tbody>
                 @foreach ($blogs as $data)
                     <tr>
@@ -48,12 +54,14 @@
                         <td>{{ $data->description }}</td>
                         <td><img src="{{ 'blogimage/'.$data->image }}" style="height:200px" class="img-thumbnail"></td>
                         <td>{{ $data->status }}</td>
-                        <td style="gap: 8px;" class="d-flex">
+                        <td>
+                            <span class="d-flex" style="gap: 8px">
                             <a href = "{{ route('blog.edit', $data->id) }}" class="btn btn-primary"> Edit </a>
                             <a href="javascript:void(0)" class="btn btn-warning"
                             onclick="openDeleteModal('{{ Route('blog.delete', $data->id) }}')">
                             Delete
                         </a>
+                            </span>
                         </td>
                     </tr>
                 @endforeach

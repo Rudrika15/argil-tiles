@@ -25,7 +25,7 @@
 				<h2>Quartz Product Create</h2>
 			</div>
 			<div class="float-right">
-				<a href="{{route('quartzshow')}}" class="btn btn-success">Back</a>
+				<a href="{{route('quartzshow')}}" class="btn btn-success mb-2">Back</a>
 			</div>
 		</div>
 	</div>
@@ -44,7 +44,7 @@
 				</div>
 
 
-				<div class="form-label-group">
+				{{-- <div class="form-label-group">
 					<input id="form_firstname" list="sizes" type="text" name="sizes" class="form-control" placeholder="Sizes" required>
 
 					<datalist id="sizes">
@@ -54,11 +54,20 @@
 					</datalist>
 
 					<label for="form_firstname">Sizes</label>
-				</div>
+				</div> --}}
+                <div class="form-label-group">
+                    <select name="sizes" id="sizes" class="form-control" required>
+                        <option value="" disabled selected>sizes</option>
+                        @foreach($data1 as $data1)
+						<option value="{{$data1->size}}">{{$data1->size}}</option>
+						@endforeach
+                    </select>
+                </div>
 
 
 
-				<div class="form-label-group">
+
+				{{-- <div class="form-label-group">
 					<input id="form_firstname" list="thicknesses" type="text" name="thicknesses" class="form-control" placeholder="Thiknesses" required>
 
 					<datalist id="thicknesses">
@@ -67,9 +76,17 @@
 					</datalist>
 
 					<label for="form_firstname">Thiknesses</label>
-				</div>
+				</div> --}}
+                <div class="form-label-group">
+                    <select name="thicknesses" id="thicknesses" class="form-control" required>
+                        <option value="" disabled selected>Thicknesses</option>
+                        <option value="20 X 30 MM">20 X 30 MM</option>
+                        <option value="30 X 40 MM">30 X 40 MM</option>
 
+                    </select>
+                </div>
 
+{{--
 				<div class="form-label-group">
 					<input id="form_firstname" type="text" list="finishType" name="finishType" class="form-control" placeholder="Finish Type" required>
 
@@ -79,10 +96,19 @@
 						@endforeach
 					</datalist>
 					<label for="form_firstname">Finish Type</label>
-				</div>
+				</div> --}}
+                <div class="form-label-group">
+                    <select name="finishType" id="finishType" class="form-control" required>
+                        <option value="" disabled selected>finishType</option>
+                        @foreach($data2 as $data2)
+						<option value="{{$data2->type}}">{{$data2->type}}</option>
+						@endforeach
+                    </select>
+                </div>
 
 
-				<div class="form-label-group">
+
+				{{-- <div class="form-label-group">
 					<input id="form_firstname" type="text" list="stocks" name="stock" class="form-control" placeholder="Stock" required>
 					<datalist id="stocks">
 						@foreach($data3 as $data3)
@@ -91,8 +117,15 @@
 					</datalist>
 
 					<label for="form_firstname">Stock</label>
-				</div>
-
+				</div> --}}
+                <div class="form-label-group">
+                    <select name="stock" id="stock" class="form-control" required>
+                        <option value="" disabled selected>stock</option>
+                        @foreach($data3 as $data3)
+						<option value="{{$data3->stock}}">{{$data3->stock}}</option>
+						@endforeach
+                    </select>
+                </div>
 
 
 				<div class="form-label-group">
@@ -148,19 +181,19 @@
 
 
 
-				<img src="{{url('slider/image_default.png')}}" alt="Main Image" id="img1" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px'>
+				<img src="{{url('slider/image_default.png')}}" alt="Main Image" id="img1" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px'  class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px'  class="mt-2">
 
 			</div>
 
 		</div>
-		<div class="text-center form-action float-right">
+		<div class="text-center form-action">
 			<button type="submit" class="btn btn-primary text-uppercase">Submit</button>
-
+        </div>
 
 	</form>
 </div>

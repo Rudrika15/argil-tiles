@@ -31,7 +31,7 @@ dedication to premium quartz stone manufacturing.">
     @endsection
     @section('content')
         <!-- page title -->
-        <section class="page-title" style="background-image: url('asset/css/assets/bg-x.png');">
+        <section class="page-title" style="background-image: url('asset/css/assets/bg-img.png');">
             <div class="container">
                 <div class="content-box">
                     <div class="title">

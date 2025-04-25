@@ -95,6 +95,6 @@ class CatelogueController extends Controller
     function delete($id)
 	{
         $data=Catelogue::find($id)->delete();
-        return redirect()->route('catelogueshow')->with('msg', 'Data Delete Successfully');
+        return redirect()->route('catelogueshow')->with('msg', 'Data Deleted Successfully');
     }
 }

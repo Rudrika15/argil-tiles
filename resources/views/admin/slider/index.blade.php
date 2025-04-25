@@ -26,7 +26,7 @@
             <h2>Slider View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success bi bi-arrow-right" href="{{ route('slidercreate') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right mb-2" href="{{ route('slidercreate') }}">Add New Record</a>
         </div>
 
         <table class="table table-bordered table-hover">
@@ -37,18 +37,25 @@
                     <th scope="col">Option</th>
                 </tr>
             </thead>
+            @if (count($data) == 0)
+                <tr>
+                    <td colspan="12" class="text-center text-danger">No Record Found</td>
+                </tr>
+            @endif
             <tbody>
                 @foreach ($data as $data)
                     <tr>
                         <td>{{ $data->title }}</td>
                         <td><img src="slider/{{ $data->sliderimg }}" style="height:200px" class="img-thumbnail"></td>
 
-                        <td class="d-flex" style="gap: 8px" >
+                        <td>
+                            <span class="d-flex" style="gap: 8px">
                             <a href = "{{ route('slider.edit', $data->id) }}" class="btn btn-primary"> Edit </a>
                             <a href="javascript:void(0)" class="btn btn-warning"
                             onclick="openDeleteModal('{{Route('slider.delete',$data->id)}}')">
                             Delete
                         </a>
+                            </span>
                         </td>
                     </tr>
                 @endforeach

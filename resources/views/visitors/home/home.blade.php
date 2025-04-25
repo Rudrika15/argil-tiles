@@ -1,33 +1,32 @@
     @extends('layouts.app')
     @section('seosection')
-    <meta name="description"
-    content="Argil is a leading artificial quartz stone slab manufacturer in Morbi, Gujarat, India.
+        <meta name="description"
+            content="Argil is a leading artificial quartz stone slab manufacturer in Morbi, Gujarat, India.
 Explore premium quartz surfaces for homes and businesses.">
-<meta property="og:title" content="Artificial Quartz Stone Slab
+        <meta property="og:title" content="Artificial Quartz Stone Slab
 Manufacturers In Morbi, Gujarat, India | Argil"
-        data-react- helmet="true">
+            data-react- helmet="true">
         <meta property="og:url" content="https://argiltiles.com/" data-react-helmet="true">
         <meta property="og:description"
-        content="Argil is an artificial
+            content="Argil is an artificial
 quartz stone slab manufacturer in Morbi, Gujarat, India. We
 have the best-engineered quartz surface stone for kitchen and
 platform at a reasonable price. We have 10+ yrs of service.
 Get a price quote "
-        data-react-helmet="true">
+            data-react-helmet="true">
         <meta name="twitter:title" content="Artificial Quartz Stone Slab
 Manufacturers In Morbi, Gujarat, India | Argil"
-        data-react- helmet="true">
+            data-react- helmet="true">
         <meta name="twitter:description"
-        content="Argil is an artificial
+            content="Argil is an artificial
 quartz stone slab manufacturer in Morbi, Gujarat, India. We
 have the best-engineered quartz surface stone for kitchen and
 platform at a reasonable price. We have 10+ yrs of service.
 Get a price quote "
-        data-react-helmet="true">
-        <link rel="canonical" href="https://argiltiles.com/" data-
-        react-helmet="true">
+            data-react-helmet="true">
+        <link rel="canonical" href="https://argiltiles.com" />
         <meta name="keywords"
-        content="Artificial Quartz, Quartz Slabs, Quartz Manufacturers, Morbi Quartz, India Quartz Stone">
+            content="Artificial Quartz, Quartz Slabs, Quartz Manufacturers, Morbi Quartz, India Quartz Stone">
 
 
         <title>Artificial Quartz Stone Slab Manufacturers In Morbi, Gujarat, India | Argil</title>
