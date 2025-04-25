@@ -107,7 +107,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                         </div>
-                        <div class="navbar-collapse collapse clearfix">
+                        {{-- <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
 
                                 <!-- Home Link -->
@@ -164,7 +164,63 @@
                                     </div>
                                 </li>
                             </ul>
+                        </div> --}}
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+
+                                <!-- Home -->
+                                <li class="{{ request()->is('/') ? 'active' : '' }}">
+                                    <a href="/">Home</a>
+                                </li>
+
+                                <!-- Corporate -->
+                                <li class="dropdown
+                                    {{ request()->is('profile*') || request()->is('about*') || request()->is('documentaryfilm*')
+                                    || request()->is('corevalues*') || request()->is('groupcompany*')
+                                    || request()->is('achievements*') || request()->is('plants*')
+                                    || request()->is('quality*') ? 'active' : '' }}">
+                                    <a href="#">Corporate</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="{{ request()->is('profile*') ? 'active' : '' }}"><a href="{{ url('profile') }}">Profile</a></li>
+                                        <li class="{{ request()->is('about*') ? 'active' : '' }}"><a href="{{ url('about') }}">About</a></li>
+                                        <li class="{{ request()->is('documentaryfilm*') ? 'active' : '' }}"><a href="{{ url('documentaryfilm') }}">Documentary Film</a></li>
+                                        <li class="{{ request()->is('corevalues*') ? 'active' : '' }}"><a href="{{ url('corevalues') }}">Core Values</a></li>
+                                        <li class="{{ request()->is('groupcompany*') ? 'active' : '' }}"><a href="{{ url('groupcompany') }}">Group Company</a></li>
+                                        <li class="{{ request()->is('achievements*') ? 'active' : '' }}"><a href="{{ url('achievements') }}">Achievements</a></li>
+                                        <li class="{{ request()->is('plants*') ? 'active' : '' }}"><a href="{{ url('plants') }}">Plants</a></li>
+                                        <li class="{{ request()->is('quality*') ? 'active' : '' }}"><a href="{{ url('quality') }}">Quality</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Products -->
+                                <li class="dropdown {{ request()->is('quartzsurface*') || request()->is('spcproducts*') ? 'active' : '' }}">
+                                    <a href="#">Products</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="{{ request()->is('quartzsurface*') ? 'active' : '' }}"><a href="{{ url('quartzsurface') }}">Quartz Surface</a></li>
+                                        <li class="{{ request()->is('spcproducts*') ? 'active' : '' }}"><a href="{{ url('spcproducts') }}">SPC Products</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- Catalogue -->
+                                <li class="{{ request()->is('catalogue*') ? 'active' : '' }}">
+                                    <a href="{{ url('catalogue') }}">Catalogue</a>
+                                </li>
+
+                                <!-- Contact -->
+                                <li class="{{ request()->is('contact') ? 'active' : '' }}">
+                                    <a href="{{ url('contact') }}">Contact</a>
+                                </li>
+
+                                <!-- GET A PRICE QUOTE -->
+                                <li class="get-price">
+                                    <div class="get-price-quote">
+                                        <a href="{{ url('contact') }}">GET A PRICE QUOTE</a>
+                                    </div>
+                                </li>
+
+                            </ul>
                         </div>
+
                     </nav>
                 </div>
             </div>
@@ -194,62 +250,59 @@
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
 
-                                <!-- Home Link -->
+                                <!-- Home -->
                                 <li class="{{ request()->is('/') ? 'active' : '' }}">
                                     <a href="/">Home</a>
                                 </li>
 
-                                <!-- Corporate Dropdown -->
-                                <li
-                                    class="dropdown {{ request()->is('profile*') || request()->is('about*') || request()->is('documentaryfilm*') || request()->is('corevalues*') || request()->is('groupcompany*') || request()->is('achievements*') || request()->is('plants*') || request()->is('quality*') ? 'active' : '' }}">
+                                <!-- Corporate -->
+                                <li class="dropdown
+                                    {{ request()->is('profile*') || request()->is('about*') || request()->is('documentaryfilm*')
+                                    || request()->is('corevalues*') || request()->is('groupcompany*')
+                                    || request()->is('achievements*') || request()->is('plants*')
+                                    || request()->is('quality*') ? 'active' : '' }}">
                                     <a href="#">Corporate</a>
-                                    <ul>
-                                        <li class="{{ request()->is('profile*') ? 'active' : '' }}"><a
-                                                href="/profile">Profile</a></li>
-                                        <li class="{{ request()->is('about*') ? 'active' : '' }}"><a
-                                                href="/about">About</a></li>
-                                        <li class="{{ request()->is('documentaryfilm*') ? 'active' : '' }}"><a
-                                                href="/documentaryfilm">Documentary Film</a></li>
-                                        <li class="{{ request()->is('corevalues*') ? 'active' : '' }}"><a
-                                                href="/corevalues">Core Value</a></li>
-                                        <li class="{{ request()->is('groupcompany*') ? 'active' : '' }}"><a
-                                                href="/groupcompany">Group Company</a></li>
-                                        <li class="{{ request()->is('achievements*') ? 'active' : '' }}"><a
-                                                href="/achievements">Achievements</a></li>
-                                        <li class="{{ request()->is('plants*') ? 'active' : '' }}"><a
-                                                href="/plants">Plants</a></li>
-                                        <li class="{{ request()->is('quality*') ? 'active' : '' }}"><a
-                                                href="/quality">Quality</a></li>
+                                    <ul class="dropdown-menu">
+                                        <li class="{{ request()->is('profile*') ? 'active' : '' }}"><a href="{{ url('profile') }}">Profile</a></li>
+                                        <li class="{{ request()->is('about*') ? 'active' : '' }}"><a href="{{ url('about') }}">About</a></li>
+                                        <li class="{{ request()->is('documentaryfilm*') ? 'active' : '' }}"><a href="{{ url('documentaryfilm') }}">Documentary Film</a></li>
+                                        <li class="{{ request()->is('corevalues*') ? 'active' : '' }}"><a href="{{ url('corevalues') }}">Core Values</a></li>
+                                        <li class="{{ request()->is('groupcompany*') ? 'active' : '' }}"><a href="{{ url('groupcompany') }}">Group Company</a></li>
+                                        <li class="{{ request()->is('achievements*') ? 'active' : '' }}"><a href="{{ url('achievements') }}">Achievements</a></li>
+                                        <li class="{{ request()->is('plants*') ? 'active' : '' }}"><a href="{{ url('plants') }}">Plants</a></li>
+                                        <li class="{{ request()->is('quality*') ? 'active' : '' }}"><a href="{{ url('quality') }}">Quality</a></li>
                                     </ul>
                                 </li>
 
-                                <!-- Products Dropdown -->
-                                <li
-                                    class="dropdown {{ request()->is('quartzsurface*') || request()->is('spcproducts*') ? 'active' : '' }}">
+                                <!-- Products -->
+                                <li class="dropdown {{ request()->is('quartzsurface*') || request()->is('spcproducts*') ? 'active' : '' }}">
                                     <a href="#">Products</a>
-                                    <ul>
-                                        <li class="{{ request()->is('quartzsurface*') ? 'active' : '' }}"><a
-                                                href="/quartzsurface">Quartz Surface</a></li>
-                                        <li class="{{ request()->is('spcproducts*') ? 'active' : '' }}"><a
-                                                href="/spcproducts">SPC Products</a></li>
+                                    <ul class="dropdown-menu">
+                                        <li class="{{ request()->is('quartzsurface*') ? 'active' : '' }}"><a href="{{ url('quartzsurface') }}">Quartz Surface</a></li>
+                                        <li class="{{ request()->is('spcproducts*') ? 'active' : '' }}"><a href="{{ url('spcproducts') }}">SPC Products</a></li>
                                     </ul>
                                 </li>
 
-                                <!-- Other Links -->
+                                <!-- Catalogue -->
                                 <li class="{{ request()->is('catalogue*') ? 'active' : '' }}">
-                                    <a href="/catalogue">Catalogue</a>
+                                    <a href="{{ url('catalogue') }}">Catalogue</a>
                                 </li>
-                                <li class="{{ request()->is('contact*') ? 'active' : '' }}">
-                                    <a href="/contact">Contact</a>
+
+                                <!-- Contact -->
+                                <li class="{{ request()->is('contact') ? 'active' : '' }}">
+                                    <a href="{{ url('contact') }}">Contact</a>
                                 </li>
-                                <li class="{{ request()->is('contact*') ? 'active' : '' }} get-price">
+
+                                <!-- GET A PRICE QUOTE -->
+                                <li class="get-price">
                                     <div class="get-price-quote">
-                                        <a href="/contact">GET A PRICE QUOTE</a>
+                                        <a href="{{ url('contact') }}">GET A PRICE QUOTE</a>
                                     </div>
                                 </li>
 
                             </ul>
                         </div>
+
                     </nav>
 
                 </div>

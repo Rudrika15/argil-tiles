@@ -146,13 +146,27 @@
     color: rgb(0, 0, 0);
     padding: 0px 1px;
 }
+.navigation li.active > a {
+    color: #da8e3c;
 
+}
+.dropdown-menu > .active > a{
+    background-color: rgb(231, 236, 236);
+    color: white;
+
+}
+.dropdown-menu > .active > a:hover{
+    background-color: white;
+}
 .all-page-side-image {
     width: 80%;
     margin: auto;
 
 }
+.spc-image1{
+    width: 100%;
 
+}
 .youtubevideo {
     border: 10px solid gray;
     border-radius: 10px;
@@ -764,6 +778,7 @@ p {
     /* .main-menu .navigation > li > a{
         padding: 0;
     } */
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {

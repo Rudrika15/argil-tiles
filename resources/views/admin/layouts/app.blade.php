@@ -26,7 +26,7 @@
 <body>
 
     <!-- Sidebar -->
-    <div id="sidebar">
+    {{-- <div id="sidebar">
 
         <ul class="sidebar-ul">
             <li class="{{ request()->routeIs('dashboard') ? 'active' : '' }}"><a href="{{ route('dashboard') }}"><i
@@ -67,6 +67,119 @@
             <li class="{{ request()->routeIs('newarrivalsshow') ? 'active' : '' }}"><a
                     href="{{ route('newarrivalsshow') }}">New Arrivals</a></li>
         </ul>
+    </div> --}}
+
+
+    <div id="sidebar" class="border-right">
+        <div id="sidebarAccordion"> <!-- Accordion wrapper -->
+
+            <ul class="nav flex-column">
+
+                <!-- Dashboard -->
+                <li class="nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('dashboard') }}">
+                        <i class="bi bi-house-fill"></i> Dashboard
+                    </a>
+                </li>
+
+                <!-- Products -->
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#productsMenu" role="button" aria-expanded="false" aria-controls="productsMenu">
+                        <span><i class="bi bi-box2-fill"></i> Products</span>
+                        <i class="bi bi-chevron-down small"></i>
+                    </a>
+                    <div class="collapse {{ request()->routeIs('wallshow') || request()->routeIs('quartzshow') || request()->routeIs('lvtshow') ? 'show' : '' }}" id="productsMenu" data-parent="#sidebarAccordion">
+                        <ul class="nav flex-column ml-3">
+                            <li class="nav-item {{ request()->routeIs('wallshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('wallshow') }}">Wall</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('quartzshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('quartzshow') }}">Quartz</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('lvtshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('lvtshow') }}">SPC Products</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Inquiry -->
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#inquiryMenu" role="button" aria-expanded="false" aria-controls="inquiryMenu">
+                        <span><i class="bi bi-chat-left-quote"></i> Inquiry</span>
+                        <i class="bi bi-chevron-down small"></i>
+                    </a>
+                    <div class="collapse {{ request()->routeIs('inquiryshow') || request()->routeIs('contactshow') ? 'show' : '' }}" id="inquiryMenu" data-parent="#sidebarAccordion">
+                        <ul class="nav flex-column ml-3">
+                            <li class="nav-item {{ request()->routeIs('inquiryshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('inquiryshow') }}">Inquiry</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('contactshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('contactshow') }}">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- General Section -->
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#generalMenu" role="button" aria-expanded="false" aria-controls="generalMenu">
+                        <span><i class="bi bi-sliders"></i> General</span>
+                        <i class="bi bi-chevron-down small"></i>
+                    </a>
+                    <div class="collapse {{ request()->routeIs('catelogueshow') ? 'show' : '' }}" id="generalMenu" data-parent="#sidebarAccordion">
+                        <ul class="nav flex-column ml-3">
+                            <li class="nav-item {{ request()->routeIs('catelogueshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('catelogueshow') }}">Catalogue</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Setup Section -->
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#setupMenu" role="button" aria-expanded="false" aria-controls="setupMenu">
+                        <span><i class="bi bi-gear-wide-connected"></i> Setup</span>
+                        <i class="bi bi-chevron-down small"></i>
+                    </a>
+                    <div class="collapse {{ request()->routeIs('slidershow') || request()->routeIs('homeshow') || request()->routeIs('finishtypeshow') || request()->routeIs('designtypeshow') || request()->routeIs('qsizeshow') || request()->routeIs('wsizeshow') || request()->routeIs('ssizeshow') || request()->routeIs('stockshow') || request()->routeIs('blog') || request()->routeIs('newarrivalsshow') ? 'show' : '' }}" id="setupMenu" data-parent="#sidebarAccordion">
+                        <ul class="nav flex-column ml-3">
+                            <li class="nav-item {{ request()->routeIs('slidershow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('slidershow') }}">Slider</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('homeshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('homeshow') }}">Home</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('finishtypeshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('finishtypeshow') }}">Finish Type</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('designtypeshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('designtypeshow') }}">Design Type</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('qsizeshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('qsizeshow') }}">Q-size</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('wsizeshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('wsizeshow') }}">W-size</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('ssizeshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('ssizeshow') }}">SPC-size</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('stockshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('stockshow') }}">Stock</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('blog') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('blog') }}">Blog</a>
+                            </li>
+                            <li class="nav-item {{ request()->routeIs('newarrivalsshow') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('newarrivalsshow') }}">New Arrivals</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
     </div>
 
     <!-- Overlay -->

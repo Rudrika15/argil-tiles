@@ -192,6 +192,7 @@ a{transition: 0.4s;-webkit-transition: 0.4s;-ms-transition: 0.4s;-moz-transition
 
 .navbar {
     z-index: 1060;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3)
 }
 
 /* 👇 NEW CSS for large screens: sidebar always open */

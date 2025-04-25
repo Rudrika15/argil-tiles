@@ -50,7 +50,42 @@ with 10+ yrs of service. Get a price quote"
     <!--End Page Title-->
 
 
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <h1 class="text-info">hello Argil</h1>
+            </div>
+            <div class="col-md-6">
+                <p class="text-danger text-justify paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae voluptate tempora atque odit nemo blanditiis, dolorum culpa sed architecto, placeat harum nostrum vero explicabo aliquam nesciunt fugiat exercitationem asperiores temporibus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorum corporis harum doloremque quia beatae tempora assumenda minima ipsum! Recusandae, laborum architecto? Dolorem nobis laudantium quasi dolorum? Tenetur, quia voluptatibus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+            <img src="spc/spc1.jpg" alt="" class="img-responsive spc-image1">
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <img src="spc/spc2.jpg" alt="" class="img-responsive spc-image1">
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <img src="spc/spc1.jpg" alt="" class="img-responsive spc-image1">
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <img src="spc/spc1.jpg" alt="" class="img-responsive spc-image1">
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <img src="spc/spc1.jpg" alt="" class="img-responsive spc-image1">
+            </div>
+        </div>
+    </div>
     <div class="text-center products-heading">
         <p>SPC Flooring Tiles</p>
     </div>
