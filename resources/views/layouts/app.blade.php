@@ -68,17 +68,17 @@
         <div class="header-upper">
             <div class="container">
                 <div class="top-left">
-                    <i class="fa fa-phone">&nbsp;Call Now For Free Estimate!&nbsp;<span><a href="tel:2822-240628">(+91)
+                    <i class="fa fa-phone">&nbsp;Call Now For Free Estimate!&nbsp;<span><a href="tel:2822-240628" rel=nofollow>(+91)
                                 99255-11465</a></span></i>
                 </div>
                 <div class="top-right">
                     <ul class="social-top text-center">
-                        <li><a href="https://www.facebook.com/argilgroup/" target="blank"><i
+                        <li><a href="https://www.facebook.com/argilgroup/" target="blank" rel=nofollow><i
                                     class="fa fa-facebook-square"></i></a>
                         </li>
-                        <li><a href="https://www.instagram.com/argilgroup/" target="blank"><i
+                        <li><a href="https://www.instagram.com/argilgroup/" target="blank" rel=nofollow><i
                                     class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank"><i
+                        <li><a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank" rel=nofollow><i
                                     class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
@@ -318,13 +318,13 @@
                             </div>
                             <div class="single-box">
                                 <div class="icon-box"><i class="fa fa-phone"></i></div>
-                                <p><a href="tel:2822-240628">+91 2822 240628</a></p>
+                                <p><a href="tel:2822-240628" rel=nofollow>+91 2822 240628</a></p>
                                 {{-- <p>+91 2822 240628</p> --}}
 
                             </div>
                             <div class="single-box">
                                 <div class="icon-box"><i class="fa fa-envelope"></i></div>
-                                <a href="mailto:info@argiltiles.com">
+                                <a href="mailto:info@argiltiles.com" rel=nofollow>
                                     <p>info@argilties.com</p>
                                 </a>
                             </div>
@@ -346,7 +346,7 @@
 
             @endphp
             <p class="text col-md-9">©{{ $year }} - Mod Ceramic Industries Ltd.</p>
-            <p class="text col-md-3"><a href="https://flipcodesolutions.com/" target="blank">Powered By: FlipCode
+            <p class="text col-md-3"><a href="https://flipcodesolutions.com/" target="blank" rel=nofollow>Powered By: FlipCode
                     Solutions</a></p>
         </div>
     </footer>
