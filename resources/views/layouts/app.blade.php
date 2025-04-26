@@ -200,6 +200,10 @@
                                         <li class="{{ request()->is('spcproducts*') ? 'active' : '' }}"><a href="{{ url('spcproducts') }}">SPC Products</a></li>
                                     </ul>
                                 </li>
+                                <!-- Blog -->
+                                <li class="{{ request()->is('blog*') ? 'active' : '' }}">
+                                    <a href="{{ url('blogs') }}">Blog</a>
+                                </li>
 
                                 <!-- Catalogue -->
                                 <li class="{{ request()->is('catalogue*') ? 'active' : '' }}">
@@ -282,6 +286,7 @@
                                         <li class="{{ request()->is('spcproducts*') ? 'active' : '' }}"><a href="{{ url('spcproducts') }}">SPC Products</a></li>
                                     </ul>
                                 </li>
+
 
                                 <!-- Catalogue -->
                                 <li class="{{ request()->is('catalogue*') ? 'active' : '' }}">

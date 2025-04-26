@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\MetaPropertyBlog;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -28,7 +29,7 @@ class BlogController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     */
+         */
     public function store(Request $request)
     {
         $request->validate([
@@ -37,7 +38,7 @@ class BlogController extends Controller
             'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-
+        // return $request;
         if ($request->file('image')) {
             $image = $request->file('image');
             // store image in public folder (blogimage folder)
@@ -45,7 +46,7 @@ class BlogController extends Controller
 
             $image->move(public_path('blogimage/'), $imageName);
 
-
+        }
 
         $blogs = new Blog();
         $blogs->title = $request->title;
@@ -53,8 +54,36 @@ class BlogController extends Controller
         $blogs->description = $request->description;
         $blogs->image = $imageName;
         $blogs->save();
-        return redirect()->route('blog')->with('msg', 'Record Inserted Successfully');
+
+        $ogImageName = null;
+    if ($request->file('ogImage')) {
+        $image = $request->file('ogImage');
+        // store image in public folder (blogimage folder)
+        $ogImageName = $image->getClientOriginalName();
+
+        $image->move(public_path('ogimage/'), $ogImageName);
     }
+
+    $metablogs = new MetaPropertyBlog();
+
+    $metablogs->blogId = $blogs->id;
+    $metablogs->ogTitleEng = $request->ogTitleEng;
+    $metablogs->ogTitleGuj = $request->ogTitleGuj;
+    $metablogs->ogTitleHin = $request->ogTitleHin;
+    $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
+    $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
+    $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
+    $metablogs->ogImage = $ogImageName;
+    $metablogs->ogUrl = $request->ogUrl;
+    $metablogs->description = $request->metadescription;
+    $metablogs->keywords = $request->keywords;
+    $metablogs->author = $request->author;
+    $metablogs->tages = $request->tages;
+    $metablogs->save();
+
+
+    return redirect()->route('blog')->with('msg', 'Record Inserted Successfully');
+
 }
 
     /**
@@ -71,7 +100,8 @@ class BlogController extends Controller
     public function edit(string $id)
     {
         $blogs =Blog::find($id);
-        return view('admin.blog.edit',compact('blogs'));
+        $metablogs = MetaPropertyBlog::where('blogId', $id)->first();
+        return view('admin.blog.edit', compact('blogs', 'metablogs'));
     }
 
     /**
@@ -100,6 +130,39 @@ class BlogController extends Controller
         $blogs->slug = $request->slug;
         $blogs->description = $request->description;
         $blogs->save();
+
+
+        // $metablogs = new MetaPropertyBlog();
+        $metablogs = MetaPropertyBlog::where('blogId', $blogs->id)->first();
+        if (!$metablogs) {
+            $metablogs = new MetaPropertyBlog();
+            $metablogs->blogId = $blogs->id;
+        }
+        $ogImageName = null;
+        if ($request->hasFile('ogImage')) {
+            $image = $request->file('ogImage');
+            // store image in public folder (blogimage folder)
+            $ogImageName = $image->getClientOriginalName();
+
+            $image->move(public_path('ogimage/'), $ogImageName);
+            $metablogs->ogImage = $ogImageName;
+        }
+
+
+
+        $metablogs->blogId = $blogs->id;
+        $metablogs->ogTitleEng = $request->ogTitleEng;
+        $metablogs->ogTitleGuj = $request->ogTitleGuj;
+        $metablogs->ogTitleHin = $request->ogTitleHin;
+        $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
+        $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
+        $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
+        $metablogs->ogUrl = $request->ogUrl;
+        $metablogs->description = $request->metadescription;
+        $metablogs->keywords = $request->keywords;
+        $metablogs->author = $request->author;
+        $metablogs->tages = $request->tages;
+        $metablogs->save();
         return redirect()->route('blog')->with('msg', 'Record Update Successfully');
     }
 
@@ -109,6 +172,10 @@ class BlogController extends Controller
     public function destroy(string $id)
     {
         $blogs = Blog::find($id);
+        $metablogs = MetaPropertyBlog::where('blogId', $id)->first();
+        if ($metablogs) {
+            $metablogs->delete();
+        }
         $blogs->delete();
         return redirect()->route('blog')->with('msg', 'Data Deleted Successfully');
     }

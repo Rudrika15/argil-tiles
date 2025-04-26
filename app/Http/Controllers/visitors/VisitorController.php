@@ -5,6 +5,7 @@ namespace App\Http\Controllers\visitors;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactFormMail;
 use App\Mail\InquiryFormMail;
+use App\Models\Blog;
 use App\Models\Catelogue;
 use App\Models\Contact;
 use App\Models\Inquiry;
@@ -50,6 +51,16 @@ class VisitorController extends Controller
     public function quality()
     {
         return view('visitors.corporate.quality.quality');
+    }
+    public function blog()
+    {
+        $blogs =Blog::orderBy('id', 'desc')->get();
+        return view('visitors.blog.blog',compact('blogs'));
+    }
+    public function blogdetails()
+    {
+
+        return view('visitors.blog.blogdetails');
     }
     public function catalogue()
     {

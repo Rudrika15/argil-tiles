@@ -237,6 +237,8 @@ Route::get('quartzinquiry/{id}',[VisitorController::class,'quartzinquiry'])->nam
 // Route::get('quartzinquiry/{slug?}',[VisitorController::class,'quartzinquiry'])->name('quartzinquiry');
 Route::get('/quartzsurface',[VisitorController::class,'quartzsurface']);
 Route::get('/privacyPolicy',[VisitorController::class,'privacyPolicy']);
+Route::get('/blogs',[VisitorController::class,'blog']);
+Route::get('/blogdetails',[VisitorController::class,'blogdetails'])->name('blogdetails');
 
 // Route::post('/send-mail',[ContactController::class,'sendMail'])->name('send.mail');
 // Route::get('send-mail', [MailController::class, 'index']);
