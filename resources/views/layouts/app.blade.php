@@ -4,6 +4,95 @@
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTBK17M75S"></script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Mod Ceramic Industries Ltd.",
+          "image": "https://argiltiles.com/asset/images/logo/logo.png",
+          "@id": "",
+          "url": "https://www.argiltiles.com/",
+          "telephone": "02822 240 628",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "National Highway 8A, Anand Nagar, Morbi, Gujarat 363642",
+            "addressLocality": "Morbi",
+            "postalCode": "363642",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 22.8175956,
+            "longitude": 70.8627034
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          },
+          "sameAs": [
+            "https://www.facebook.com/argilgroup/",
+            "https://www.instagram.com/argilgroup/",
+            "https://www.linkedin.com/company/argilgroup/"
+          ] 
+        }
+        </script>
+
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Mod Ceramic Industries Ltd.",
+          "alternateName": "Argil Tiles",
+          "url": "https://www.argiltiles.com/",
+          "logo": "https://argiltiles.com/asset/images/logo/logo.png",
+          "sameAs": [
+            "https://www.facebook.com/argilgroup/",
+            "https://www.instagram.com/argilgroup/",
+            "https://www.linkedin.com/company/argilgroup/",
+            "https://www.argiltiles.com/"
+          ]
+        }
+        </script>
+
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "WebSite",
+          "name": "Argil Tiles",
+          "url": "https://argiltiles.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "{search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+        </script>
+
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "name": "Argil Tiles",
+          "description": "Argil is an artificial quartz stone slab manufacturer in Morbi, Gujarat, India. We have the best-engineered quartz surface stone for kitchen and platform at a reasonable price. We have 10+ yrs of service. Get a price quote",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.1",
+            "bestRating": "5",
+            "ratingCount": "39"
+          }
+        }
+        </script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
