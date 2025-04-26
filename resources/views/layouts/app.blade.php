@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTBK17M75S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-TTBK17M75S');
+    </script>
     @hasSection('seosection')
         @yield('seosection')
     @else
@@ -22,12 +33,14 @@
 "true">
     <meta property="og:site_name" content="Argil Group">
 
-    <meta property="og:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react- helmet="true">
+    <meta property="og:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
+        helmet="true">
     <meta name="twitter:card" content="summary_large_image" data-react-helmet="true">
     <meta name="twitter:site" content="@argiltiles" data-react- helmet="true">
 
 
-    <meta name="twitter:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react- helmet="true">
+    <meta name="twitter:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
+        helmet="true">
     <meta name="publisher" content="Argil Tiles" />
     <link rel="icon" href="/logo_bg.png">
 
@@ -68,7 +81,8 @@
         <div class="header-upper">
             <div class="container">
                 <div class="top-left">
-                    <i class="fa fa-phone">&nbsp;Call Now For Free Estimate!&nbsp;<span><a href="tel:2822-240628" rel=nofollow>(+91)
+                    <i class="fa fa-phone">&nbsp;Call Now For Free Estimate!&nbsp;<span><a href="tel:2822-240628"
+                                rel=nofollow>(+91)
                                 99255-11465</a></span></i>
                 </div>
                 <div class="top-right">
@@ -78,8 +92,8 @@
                         </li>
                         <li><a href="https://www.instagram.com/argilgroup/" target="blank" rel=nofollow><i
                                     class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank" rel=nofollow><i
-                                    class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank"
+                                rel=nofollow><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -88,12 +102,12 @@
 
         <!-- header lower -->
         <div class="header-lower">
-            <div class="container" style="position: relative;">
+            <div class="container" style="position: relative; ">
                 <div class="logo-box" style="position: absolute; left: 0;">
                     <a href="/">
                         <figure>
-                            <img src="{{ asset('asset/images/logo/logo.png') }}" alt="argil logo" title="argile logo" class="img-responsive"
-                                style="width: 150px">
+                            <img src="{{ asset('asset/images/logo/logo.png') }}" alt="argil logo" title="argile logo"
+                                class="img-responsive" style="width: 150px">
                         </figure>
                     </a>
                 </div>
@@ -111,7 +125,7 @@
                             <ul class="navigation clearfix">
 
                                 <!-- Home Link -->
-                                <li class="{{ request()->is('/') ? 'active' : '' }}">
+                                <li class="{{ request()->is('/') ? 'active' : '' }} ">
                                     <a href="/">Home</a>
                                 </li>
 
@@ -177,8 +191,8 @@
             <div class="container" style="position: relative;">
                 <div class="logo-box" style="position: absolute; left: 0;">
                     <a href="/">
-                        <figure><img src="{{ asset('asset/images/logo/logo.png') }}" alt="argile logo" title="argile logo"
-                                class="img-responsive"></figure>
+                        <figure><img src="{{ asset('asset/images/logo/logo.png') }}" alt="argile logo"
+                                title="argile logo" class="img-responsive"></figure>
                     </a>
                 </div>
                 <div class="menu-bar">
@@ -302,12 +316,12 @@
                                 <h5>Download Our App</h5>
                             </div>
                             <div class="downloadlink">
-                                <img src="{{ asset('asset/images/argileimage/playstore.png') }}" alt="playstore logo" title="playstore logo"
-                                    width="55%" class="img-responsive">
+                                <img src="{{ asset('asset/images/argileimage/playstore.png') }}" alt="playstore logo"
+                                    title="playstore logo" width="55%" class="img-responsive">
                             </div>
                             <div class="downloadlink1">
-                                <img src="{{ asset('asset/images/argileimage/appstore.png') }}" alt="appstore logo" title="appstore logo"
-                                    width="55%" class="img-responsive">
+                                <img src="{{ asset('asset/images/argileimage/appstore.png') }}" alt="appstore logo"
+                                    title="appstore logo" width="55%" class="img-responsive">
                             </div>
                         </div>
                     </div>
@@ -346,7 +360,8 @@
 
             @endphp
             <p class="text col-md-9">©{{ $year }} - Mod Ceramic Industries Ltd.</p>
-            <p class="text col-md-3"><a href="https://flipcodesolutions.com/" target="blank" rel=nofollow>Powered By: FlipCode
+            <p class="text col-md-3"><a href="https://flipcodesolutions.com/" target="blank" rel=nofollow>Powered By:
+                    FlipCode
                     Solutions</a></p>
         </div>
     </footer>
