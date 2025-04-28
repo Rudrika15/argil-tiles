@@ -19,7 +19,7 @@
     <title>SPC Product Inquiry | Premium SPC Flooring Solutions by Argil</title>
 @endsection
 @section('content')
-    <!-- page title -->
+    {{-- <!-- page title -->
     <section class="page-title" style="background-image: url('/asset/css/assets/bg-img.png');">
 
 
@@ -137,10 +137,91 @@
             </div>
         </div>
     </div>
+    </div> --}}
+
+
+     <!-- breadcrumb -->
+     <div class="breadcrumb d-flex justify-content-between align-items-center">
+        <div class="container">
+
+            <div class="p-2">
+                <h1 class="display-6 fw-bold">Home / {{ $data->names }}</h1>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb -->
+    <div class="container">
+
+        <div class="row pb-5">
+            <h2 class="text-center fw-bold pt-5">SPC Flooring tiles</h2>
+            <div class="col-md-4 pt-5">
+                <div class="card">
+                    <img src="{{ asset('spc/' . $data->mainImg) }}" class="img-thumbnail" style="height: 400px;" alt="spc product" loading="lazy">
+                </div>
+            </div>
+            <div class="col-md-8 pt-5">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <h3>Serise Name ( s ) :</h3>
+                        <p>{{ $data->names }}</p>
+                        <h3>With Enhanced Beveled Edges :</h3>
+                        <p>{{ $data->edges }}</p>
+                        <h3>Thickness :</h3>
+                        <p>{{ $data->thicknesses }}</p>
+                        <h3>Click Type :</h3>
+                        <p>{{ $data->clicktype }}</p>
+                        <h3>Shade Variation :</h3>
+                        <p>{{ $data->shadeVariation }}</p>
+                    </div>
+                    <div class="col-md-6">
+
+                        <h3>Primary Color (s) :</h3>
+                        <p>{{ $data->primarycolors }}</p>
+                        <h3>Backing Type :</h3>
+                        <p>{{ $data->backingType }}</p>
+                        <h3>Style :</h3>
+                        <p>{{ $data->style }}</p>
+                        <h3>Wear Layer :</h3>
+                        <p>{{ $data->wearLayer }}</p>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingName" placeholder="Your Name" required>
+                        <label for="floatingName">Your Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com"
+                            required>
+                        <label for="floatingEmail">Email</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="floatingContact" placeholder="Contact Number"
+                            required>
+                        <label for="floatingContact">Contact Number</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="floatingMessage" placeholder="Your Message"
+                            style="height: 150px;" required></textarea>
+                        <label for="floatingMessage">Your Message</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
     </div>
 
 
-    <script>
+    {{-- <script>
         let bgImage = document.getElementById('big-image');
         let galleryImages = document.querySelectorAll('.spcinquiry-galaryimage, .spcinquiry-galaryimage1');
 
@@ -164,10 +245,10 @@
                 galleryImages[0].style.border = '7px solid gray'; // Apply border to the first image
             }
         }
-    </script>
+    </script> --}}
 
     {{-- inquiry  --}}
-    <script>
+    {{-- <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -222,6 +303,6 @@
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
                 });
-        });
-    </script>
+        }); --}}
+    {{-- </script> --}}
 @endsection

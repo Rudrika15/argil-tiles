@@ -27,48 +27,53 @@ Our rigorous testing ensures durability, strength, and beauty.">
     <title>Argil Quality Standards | Premium Tile Manufacturing</title>
 @endsection
 @section('content')
-    <!-- page title -->
-    <section class="page-title" style="background-image: url('asset/css/assets/bg-img.png');">
+     <!-- breadcrumb -->
+     <div class="breadcrumb d-flex justify-content-between align-items-center">
         <div class="container">
-            <div class="content-box">
-                <div class="title">
-                    <h1>Quality</h1>
-                </div>
-                <div class="bread-crumb">
-                    <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Quality</span>
-                </div>
+
+            <div class="p-2">
+                <h1 class="display-6 fw-bold">Home / Quality</h1>
             </div>
         </div>
-    </section>
-    <!--End Page Title-->
-
+    </div>
+    <!-- breadcrumb -->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="paragraph text-justify">In the past 65 odd years of working in semi professional and
-                    professional environment, we have observed that quality is not limited to products, but to all
-                    activities that we do. From smallest of the tasks like keying in an invoice data to closing the biggest
-                    deal, quality is required at every stage and at all levels. We have some quality and standard
-                    certificates.</p>
-            </div>
-        </div>
-    </div>
-    <div class="container quality-image">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="asset/images/argileimage/qualityimage1.jpeg" alt="iso certificate" title="iso certificate" class="img-responsive">
-                <p class="quality-image-title1">ISO CERTIFIED</p>
-            </div>
-            <div class="col-md-4">
-                <img src="asset/images/argileimage/qualityimage2.jpeg" alt="TISI THAILAND STANDARD" title="TISI THAILAND STANDARD CERTIFIED" class="img-responsive">
-                <p class="quality-image-title1">TISI THAILAND STANDARD
-                </p>
-            </div>
-            <div class="col-md-4">
-                <img src="asset/images/argileimage/qualityimage3.jpeg" alt="SLSI SRILANKAN STANDARD" title="SLSI SRILANKAN STANDARD CERTIFIED" class="img-responsive">
-                <p class="quality-image-title1">SLSI SRILANKAN STANDARD
+                <p class="pt-5 text-justify">
+                    In the past 65 odd years of working in semi professional and professional environment, we have
+                    observed that quality is not limited to products, but to all activities that we do. From smallest of
+                    the tasks like keying in an invoice data to closing the biggest deal, quality is required at every
+                    stage and at all levels. We have some quality and standard certificates.
                 </p>
             </div>
         </div>
+        <div class="row py-4">
+            <div class="col-md-4 text-center">
+                <img src="{{ asset('assets/asset/qualityimage1.jpeg')}}" alt="argil ISO CERTIFIED" loading="lazy" class="img-fluid w-75">
+
+                <h2 class="fs-5 pt-2">ISO CERTIFIED
+
+                </h2>
+            </div>
+
+
+            <div class="col-md-4 text-center">
+                <img src="{{ asset('assets/asset/qualityimage2.jpeg')}}" alt="argil TISI THAILAND STANDARD" loading="lazy" class="img-fluid w-75">
+                <h2 class="fs-5 pt-2">TISI THAILAND STANDARD
+
+                </h2>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="{{ asset('assets/asset/qualityimage3.jpeg')}}" alt="argil SLSI SRILANKAN STANDARD" loading="lazy" class="img-fluid w-75">
+                <h2 class="fs-5 pt-2">SLSI SRILANKAN STANDARD
+
+                </h2>
+            </div>
+
+
+        </div>
+
     </div>
+
 @endsection

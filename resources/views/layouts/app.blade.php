@@ -1,452 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    @hasSection('seosection')
-        @yield('seosection')
-    @else
-    @endif
-
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="author" content="Argil Group">
-    <meta name="theme-color" content="#000000">
-    <meta name="geo.region" content="IN-GJ">
-    <meta name="geo.placename" content="Morbi">
-    <meta name="geo.position" content="22.82587;70.847998">
-    <meta name="ICBM" content="22.82587, 70.847998">
-
-    <meta property="og:type" content="website" data-react-helmet=
-"true">
-    <meta property="og:site_name" content="Argil Group">
-
-    <meta property="og:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react- helmet="true">
-    <meta name="twitter:card" content="summary_large_image" data-react-helmet="true">
-    <meta name="twitter:site" content="@argiltiles" data-react- helmet="true">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <meta name="twitter:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react- helmet="true">
-    <meta name="publisher" content="Argil Tiles" />
-    <link rel="icon" href="/logo_bg.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+@yield('seosection')
+    <title>Argil Tiles</title>
+    <style>
+        .navbar {
+            transition: all 0.3s ease;
+            padding: 1.2rem 1rem;
+            background-color: white;
+        }
 
-
-    <meta name="robots" content="index, follow" />
-
-    {{-- <meta name="robots" content="index, follow" /> --}}
-
-    <link rel="icon" href="{{ asset('asset/images/logo/logo.png') }}">
-
-
-    <!-- Stylesheets -->
-    <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('asset/css/responsive.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('asset/css/app1.css') }}">
-
-    {{-- sweet alert 2  cdn --}}
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
+        .sticky-navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 1rem;
+            background-color: white;
+        }
+    </style>
 </head>
 
-<!-- page wrapper -->
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="d-flex justify-content-between mb-3">
 
-<body class="body_wrapper">
-
-
-    <!-- .preloader -->
-    <div class="preloader"></div>
-    <!-- /.preloader -->
-
-
-
-    <!-- main header area -->
-    <header class="main-header">
-
-        <!-- header upper -->
-        <div class="header-upper">
-            <div class="container">
-                <div class="top-left">
-                    <i class="fa fa-phone">&nbsp;Call Now For Free Estimate!&nbsp;<span><a href="tel:2822-240628" rel=nofollow>(+91)
-                                99255-11465</a></span></i>
-                </div>
-                <div class="top-right">
-                    <ul class="social-top text-center">
-                        <li><a href="https://www.facebook.com/argilgroup/" target="blank" rel=nofollow><i
-                                    class="fa fa-facebook-square"></i></a>
-                        </li>
-                        <li><a href="https://www.instagram.com/argilgroup/" target="blank" rel=nofollow><i
-                                    class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank" rel=nofollow><i
-                                    class="fa fa-linkedin"></i></a></li>
-                    </ul>
+                <div class="p-2 text-white "><a href="tel:99255-11465" class="text-white text-decoration-none"> (+91) 99255-11465</a></div>
+                <div class="p-2 text-white ">
+                    <a href="https://www.facebook.com/argilgroup/" target="blank" class="text-white text-decoration-none"><i class="bi bi-facebook me-3"></i></a>
+                    <a href="https://www.instagram.com/argilgroup/" target="blank" class="text-white text-decoration-none"><i class="bi bi-instagram me-3"></i></a>
+                    <a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank" class="text-white text-decoration-none"><i class="bi bi-linkedin me-3"></i></a>
                 </div>
             </div>
         </div>
-        <!-- end header upper -->
-
-        <!-- header lower -->
-        <div class="header-lower">
-            <div class="container" style="position: relative;">
-                <div class="logo-box" style="position: absolute; left: 0;">
-                    <a href="/">
-                        <figure>
-                            <img src="{{ asset('asset/images/logo/logo.png') }}" alt="argil logo" title="argile logo" class="img-responsive"
-                                style="width: 150px">
-                        </figure>
-                    </a>
-                </div>
-                <div class="menu-bar">
-                    <nav class="main-menu">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                data-target=".navbar-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        {{-- <div class="navbar-collapse collapse clearfix">
-                            <ul class="navigation clearfix">
-
-                                <!-- Home Link -->
-                                <li class="{{ request()->is('/') ? 'active' : '' }}">
-                                    <a href="/">Home</a>
-                                </li>
-
-                                <!-- Corporate Dropdown -->
-                                <li
-                                    class="dropdown {{ request()->is('profile*') || request()->is('about*') || request()->is('documentaryfilm*') || request()->is('corevalues*') || request()->is('groupcompany*') || request()->is('achievements*') || request()->is('plants*') || request()->is('quality*') ? 'active' : '' }}">
-                                    <a href="#">Corporate</a>
-                                    <ul>
-                                        <li class="{{ request()->is('profile*') ? 'active' : '' }}"><a
-                                                href="/profile">Profile</a></li>
-                                        <li class="{{ request()->is('about*') ? 'active' : '' }}"><a
-                                                href="/about">About</a></li>
-                                        <li class="{{ request()->is('documentaryfilm*') ? 'active' : '' }}"><a
-                                                href="/documentaryfilm">Documentary Film</a></li>
-                                        <li class="{{ request()->is('corevalues*') ? 'active' : '' }}"><a
-                                                href="/corevalues">Core Value</a></li>
-                                        <li class="{{ request()->is('groupcompany*') ? 'active' : '' }}"><a
-                                                href="/groupcompany">Group Company</a></li>
-                                        <li class="{{ request()->is('achievements*') ? 'active' : '' }}"><a
-                                                href="/achievements">Achievements</a></li>
-                                        <li class="{{ request()->is('plants*') ? 'active' : '' }}"><a
-                                                href="/plants">Plants</a></li>
-                                        <li class="{{ request()->is('quality*') ? 'active' : '' }}"><a
-                                                href="/quality">Quality</a></li>
-                                    </ul>
-                                </li>
-
-                                <!-- Products Dropdown -->
-                                <li
-                                    class="dropdown {{ request()->is('quartzsurface*') || request()->is('spcproducts*') ? 'active' : '' }}">
-                                    <a href="#">Products</a>
-                                    <ul>
-                                        <li class="{{ request()->is('quartzsurface*') ? 'active' : '' }}"><a
-                                                href="/quartzsurface">Quartz Surface</a></li>
-                                        <li class="{{ request()->is('spcproducts*') ? 'active' : '' }}"><a
-                                                href="/spcproducts">SPC Products</a></li>
-                                    </ul>
-                                </li>
-
-                                <!-- Other Links -->
-                                <li class="{{ request()->is('catalogue*') ? 'active' : '' }}">
-                                    <a href="/catalogue">Catalogue</a>
-                                </li>
-                                <li class="{{ request()->is('contact*') ? 'active' : '' }}">
-                                    <a href="/contact">Contact</a>
-                                </li>
-                                <li class="{{ request()->is('contact*') ? 'active' : '' }} get-price">
-                                    <div class="get-price-quote">
-                                        <a href="/contact">GET A PRICE QUOTE</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div> --}}
-                        <div class="navbar-collapse collapse clearfix">
-                            <ul class="navigation clearfix">
-
-                                <!-- Home -->
-                                <li class="{{ request()->is('/') ? 'active' : '' }}">
-                                    <a href="/">Home</a>
-                                </li>
-
-                                <!-- Corporate -->
-                                <li class="dropdown
-                                    {{ request()->is('profile*') || request()->is('about*') || request()->is('documentaryfilm*')
-                                    || request()->is('corevalues*') || request()->is('groupcompany*')
-                                    || request()->is('achievements*') || request()->is('plants*')
-                                    || request()->is('quality*') ? 'active' : '' }}">
-                                    <a href="#">Corporate</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="{{ request()->is('profile*') ? 'active' : '' }}"><a href="{{ url('profile') }}">Profile</a></li>
-                                        <li class="{{ request()->is('about*') ? 'active' : '' }}"><a href="{{ url('about') }}">About</a></li>
-                                        <li class="{{ request()->is('documentaryfilm*') ? 'active' : '' }}"><a href="{{ url('documentaryfilm') }}">Documentary Film</a></li>
-                                        <li class="{{ request()->is('corevalues*') ? 'active' : '' }}"><a href="{{ url('corevalues') }}">Core Values</a></li>
-                                        <li class="{{ request()->is('groupcompany*') ? 'active' : '' }}"><a href="{{ url('groupcompany') }}">Group Company</a></li>
-                                        <li class="{{ request()->is('achievements*') ? 'active' : '' }}"><a href="{{ url('achievements') }}">Achievements</a></li>
-                                        <li class="{{ request()->is('plants*') ? 'active' : '' }}"><a href="{{ url('plants') }}">Plants</a></li>
-                                        <li class="{{ request()->is('quality*') ? 'active' : '' }}"><a href="{{ url('quality') }}">Quality</a></li>
-                                    </ul>
-                                </li>
-
-                                <!-- Products -->
-                                <li class="dropdown {{ request()->is('quartzsurface*') || request()->is('spcproducts*') ? 'active' : '' }}">
-                                    <a href="#">Products</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="{{ request()->is('quartzsurface*') ? 'active' : '' }}"><a href="{{ url('quartzsurface') }}">Quartz Surface</a></li>
-                                        <li class="{{ request()->is('spcproducts*') ? 'active' : '' }}"><a href="{{ url('spcproducts') }}">SPC Products</a></li>
-                                    </ul>
-                                </li>
-                                <!-- Blog -->
-                                <li class="{{ request()->is('blog*') ? 'active' : '' }}">
-                                    <a href="{{ url('blogs') }}">Blog</a>
-                                </li>
-
-                                <!-- Catalogue -->
-                                <li class="{{ request()->is('catalogue*') ? 'active' : '' }}">
-                                    <a href="{{ url('catalogue') }}">Catalogue</a>
-                                </li>
-
-                                <!-- Contact -->
-                                <li class="{{ request()->is('contact') ? 'active' : '' }}">
-                                    <a href="{{ url('contact') }}">Contact</a>
-                                </li>
-
-                                <!-- GET A PRICE QUOTE -->
-                                <li class="get-price">
-                                    <div class="get-price-quote">
-                                        <a href="{{ url('contact') }}">GET A PRICE QUOTE</a>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </nav>
-                </div>
-            </div>
-        </div>
-
-        <!-- end header lower -->
-
-        <!--sticky header-->
-        <div class="sticky-header">
-            <div class="container" style="position: relative;">
-                <div class="logo-box" style="position: absolute; left: 0;">
-                    <a href="/">
-                        <figure><img src="{{ asset('asset/images/logo/logo.png') }}" alt="argile logo" title="argile logo"
-                                class="img-responsive"></figure>
-                    </a>
-                </div>
-                <div class="menu-bar">
-                    <nav class="main-menu">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                data-target=".navbar-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="navbar-collapse collapse clearfix">
-                            <ul class="navigation clearfix">
-
-                                <!-- Home -->
-                                <li class="{{ request()->is('/') ? 'active' : '' }}">
-                                    <a href="/">Home</a>
-                                </li>
-
-                                <!-- Corporate -->
-                                <li class="dropdown
-                                    {{ request()->is('profile*') || request()->is('about*') || request()->is('documentaryfilm*')
-                                    || request()->is('corevalues*') || request()->is('groupcompany*')
-                                    || request()->is('achievements*') || request()->is('plants*')
-                                    || request()->is('quality*') ? 'active' : '' }}">
-                                    <a href="#">Corporate</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="{{ request()->is('profile*') ? 'active' : '' }}"><a href="{{ url('profile') }}">Profile</a></li>
-                                        <li class="{{ request()->is('about*') ? 'active' : '' }}"><a href="{{ url('about') }}">About</a></li>
-                                        <li class="{{ request()->is('documentaryfilm*') ? 'active' : '' }}"><a href="{{ url('documentaryfilm') }}">Documentary Film</a></li>
-                                        <li class="{{ request()->is('corevalues*') ? 'active' : '' }}"><a href="{{ url('corevalues') }}">Core Values</a></li>
-                                        <li class="{{ request()->is('groupcompany*') ? 'active' : '' }}"><a href="{{ url('groupcompany') }}">Group Company</a></li>
-                                        <li class="{{ request()->is('achievements*') ? 'active' : '' }}"><a href="{{ url('achievements') }}">Achievements</a></li>
-                                        <li class="{{ request()->is('plants*') ? 'active' : '' }}"><a href="{{ url('plants') }}">Plants</a></li>
-                                        <li class="{{ request()->is('quality*') ? 'active' : '' }}"><a href="{{ url('quality') }}">Quality</a></li>
-                                    </ul>
-                                </li>
-
-                                <!-- Products -->
-                                <li class="dropdown {{ request()->is('quartzsurface*') || request()->is('spcproducts*') ? 'active' : '' }}">
-                                    <a href="#">Products</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="{{ request()->is('quartzsurface*') ? 'active' : '' }}"><a href="{{ url('quartzsurface') }}">Quartz Surface</a></li>
-                                        <li class="{{ request()->is('spcproducts*') ? 'active' : '' }}"><a href="{{ url('spcproducts') }}">SPC Products</a></li>
-                                    </ul>
-                                </li>
-
-
-                                <!-- Catalogue -->
-                                <li class="{{ request()->is('catalogue*') ? 'active' : '' }}">
-                                    <a href="{{ url('catalogue') }}">Catalogue</a>
-                                </li>
-
-                                <!-- Contact -->
-                                <li class="{{ request()->is('contact') ? 'active' : '' }}">
-                                    <a href="{{ url('contact') }}">Contact</a>
-                                </li>
-
-                                <!-- GET A PRICE QUOTE -->
-                                <li class="get-price">
-                                    <div class="get-price-quote">
-                                        <a href="{{ url('contact') }}">GET A PRICE QUOTE</a>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </nav>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- end sticky header -->
-
-    </header>
-    <!-- end main header area -->
-
-    @yield('content')
-
-
-
-    <!-- main footer area -->
-    <footer class="main-footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12 footer-column">
-                        <div class="logo-widget footer-widget">
-                            <div class='footer-logo'><a href="/">
-                                    <figure><img src="{{ asset('asset/images/argileimage/footerlogo.png') }}"
-                                            alt="footer logo" title="footer logo" class="img-responsive"></figure>
-                                </a></div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-6 col-xs-12 footer-column">
-                        <div class="service-widget footer-widget">
-                            <div class="quick-link-div">
-                                <div class="title">
-                                    <h5>Quick Links</h5>
-                                </div>
-                            </div>
-                            <ul class="list">
-                                <li><a href="/profile">Corporate</a></li>
-                                <li><a href="/quartzsurface">Products</a></li>
-                                <li><a href="/catalogue">Catalogue</a></li>
-                                <li><a href="/contact">Contact</a></li>
-                                <li><a href="/privacyPolicy">Privacy</a></li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 footer-column">
-                        <div class="subscribe-wideget footer-widget">
-                            <div class="title">
-                                <h5>Download Our App</h5>
-                            </div>
-                            <div class="downloadlink">
-                                <img src="{{ asset('asset/images/argileimage/playstore.png') }}" alt="playstore logo" title="playstore logo"
-                                    width="55%" class="img-responsive">
-                            </div>
-                            <div class="downloadlink1">
-                                <img src="{{ asset('asset/images/argileimage/appstore.png') }}" alt="appstore logo" title="appstore logo"
-                                    width="55%" class="img-responsive">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 footer-column">
-                        <div class="contact-widget footer-widget">
-                            <div class="title">
-                                <h5>Contact Info</h5>
-                            </div>
-                            <div class="single-box">
-                                <div class="icon-box"><i class="fa fa-phone"></i></div>
-                                <p><a href="tel:2822-240628" rel=nofollow>+91 2822 240628</a></p>
-                                {{-- <p>+91 2822 240628</p> --}}
-
-                            </div>
-                            <div class="single-box">
-                                <div class="icon-box"><i class="fa fa-envelope"></i></div>
-                                <a href="mailto:info@argiltiles.com" rel=nofollow>
-                                    <p>info@argilties.com</p>
-                                </a>
-                            </div>
-                            <div class="single-box">
-                                <div class="icon-box"><i class="fa fa-map-marker"></i></div>
-                                <p>Mod Ceramic Industries Ltd.
-                                    8-A, National Highway,
-                                    Morbi (Gujarat),
-                                    India 363 642</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom container">
-            @php
-                $year = date('Y');
-
-            @endphp
-            <p class="text col-md-9">©{{ $year }} - Mod Ceramic Industries Ltd.</p>
-            <p class="text col-md-3"><a href="https://flipcodesolutions.com/" target="blank" rel=nofollow>Powered By: FlipCode
-                    Solutions</a></p>
-        </div>
-    </footer>
-    <!-- main footer area end -->
-
-
-    <!--End bodywrapper-->
-
-
-    <!--Scroll to top-->
-    <div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-up"></span>
     </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{ asset('assets/asset/logo.png') }}" alt="argil tiles logo" loading="lazy" class="" style="height: 65px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Corporate
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/about">About</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/documentaryfilm">Documentary film</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/corevalues">Core value</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/groupcompany">Company group</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/achievements">Achievements</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/plants">Plants</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/quality">Qulity</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/quartzsurface">Quartz surface</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/spcproducts">SPC Products</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/catalogue" tabindex="-1" aria-disabled="true">catalogue</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/contact" tabindex="-1" aria-disabled="true">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Video Section -->
+   @yield('content')
+    <!-- footer -->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <img src="{{ asset('assets/asset/footerlogo.png')}}" class="img-fluid w-50" alt="argil footerlogo" loading="lazy" />
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Quick Links
+                        </h6>
+                        <p>
+                            <a href="/profile" class="text-reset">Corporate</a>
+                        </p>
+                        <p>
+                            <a href="/quartzsurface" class="text-reset">Product</a>
+                        </p>
+                        <p>
+                            <a href="/catalogue" class="text-reset">Catalogue</a>
+                        </p>
+                        <p>
+                            <a href="/contact" class="text-reset">Contact</a>
+                        </p>
+                        <p>
+                            <a href="/privacyPolicy" class="text-reset">Privacy</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Download Our App
 
 
+                        </h6>
+                        <p>
+                            <img src="{{ asset('assets/asset/playstore.png')}}" loading ="lazy" alt="argil-playstore-link" class="w-75">
+                        </p>
+                        <p>
+                            <img src="{{ asset('assets/asset/appstore.png')}}"  loading ="lazy"alt="argil-appstore-link" class="w-75">
+                        </p>
+                    </div>
+                    <!-- Grid column -->
 
-    <!--jquery js -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact info</h6>
+                        <p><i class="bi bi-geo-alt mx-3"></i>Mod Ceramic Industries Ltd.
+                        </p>
+                        <p class="mx-5">8-A, National Highway, Morbi
+                        </p>
 
+                        <p class="mx-5">
+                            (Gujarat), India 363 642</p>
 
-    <script type="text/javascript" src="{{ asset('asset/js/jquery-2.1.4.js') }}"></script>
-    <script src="{{ asset('asset/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('asset/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('asset/js/wow.js') }}"></script>
-    <script src="{{ asset('asset/js/isotope.js') }}"></script>
-    <script src="{{ asset('asset/js/validation.js') }}"></script>
-    <script src="{{ asset('asset/js/jquery-ui.js') }}"></script>
-    <script src="{{ asset('asset/js/jquery.fancybox.pack.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('asset/js/SmoothScroll.js') }}"></script>
-    <script src="{{ asset('asset/js/revolution.min.js') }}"></script>
+                        <p><i class="bi bi-telephone me-3 mx-3"></i><a href="tel:2822 240628" class="text-decoration-none" style="color: inherit !important;">+ 91 2822 240628</a></p>
+                        <p> <i class="bi bi-envelope me-3 mx-3"></i>
+                            <a href="mailto:info@argilties.com" class="text-decoration-none" style="color: inherit !important;">info@argilties.com</a>
+                        </p>
+                        <p class="mx-5">
+                            <a href="https://www.facebook.com/argilgroup/" target="blank" class="text-decoration-none" style="color: inherit !important;"><i class="bi bi-facebook me-3"></i></a>
+                            <a href="https://www.instagram.com/argilgroup/" target="blank" class="text-decoration-none" style="color: inherit !important;"><i class="bi bi-instagram me-3"></i></a>
+                            <a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank" class="text-decoration-none" style="color: inherit !important;"><i class="bi bi-linkedin me-3"></i></a>
 
-    <script src="{{ asset('asset/js/script.js') }}"></script>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
 
-    <!-- Include AOS CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <!-- Copyright -->
+        <div class="d-flex justify-content-around p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            <div>
 
-    <!-- Include AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+                <a class="text-reset fw-bold" href="https://mdbootstrap.com/">©2025 - Mod Ceramic Industries Ltd.
 
+                </a>
+            </div>
+            <div>
+
+                <a class="text-reset fw-bold" href="https://flipcodesolutions.com/" target="_blank">Flipcode
+                    Solutions</a>
+            </div>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- footer -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init();
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 75) {
+                navbar.classList.add('sticky-navbar');
+            } else {
+                navbar.classList.remove('sticky-navbar');
+            }
+        });
     </script>
-    <!-- End of .page_wrapper -->
 </body>
 
 </html>

@@ -24,31 +24,29 @@ Premium Designs">
 <title>Argil Quartz Slab Catalogue | Artificial Quartz Collection</title>
 @endsection
 @section('content')
-    <!-- page title -->
-    <section class="page-title" style="background-image: url('asset/css/assets/bg-img.png');">
-
+     <!-- breadcrumb -->
+     <div class="breadcrumb d-flex justify-content-between align-items-center">
         <div class="container">
-            <div class="content-box">
-                <div class="title">
-                    <h1>Catalogue</h1>
-                </div>
-                <div class="bread-crumb">
-                    <a href="index.html">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Catalogue</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Page Title-->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 catalogueclass">
-                <h3 class="catalogue-heading">LINK 'N' LOCK - SPC FLOORING</h3>
-
-                <a href="pdf/1661686250890768142.pdf" target="blank"><img src="asset/images/argileimage/catalogueimage.png"
-                        alt="catalogue" title="catalogue" class="img-responsive"></a>
-
+            <div class="p-2">
+                <h1 class="display-6 fw-bold">Home / Catalogue</h1>
             </div>
         </div>
     </div>
+    <!-- breadcrumb -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="pt-4">LINK 'N' LOCK - SPC FLOORING
+                </h2>
+                <a href="https://argiltiles.com/pdf/1661686250890768142.pdf" target="_blank">
+                    <img src="{{ asset('assets/asset/catalogueimage.png')}}" alt="argil catalogue" loading="lazy" class="img-fluid">
+                </a>
+            </div>
+
+
+        </div>
+
+    </div>
+
 @endsection
