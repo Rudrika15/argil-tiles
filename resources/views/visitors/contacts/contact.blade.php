@@ -52,11 +52,11 @@ assist you!">
     <!-- breadcrumb -->
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 text-center" >
 
                 <img src="{{ asset('assets/asset/contactsimage.png')}}" alt="argil contact" loading="lazy" class="img-fluid h-75">
             </div>
-            <div class="col-md-6 pt-5">
+            <div class="col-md-6 pt-2">
                 <h2>Let's Be in Touch !!!
                 </h2>
                 <form>

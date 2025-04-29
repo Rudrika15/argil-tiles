@@ -42,7 +42,7 @@ solutions with a focus on innovation and quality.">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2 class="pt-3">Philosophy</h2>
+                <h3 class="pt-3">Philosophy</h3>
 
                 <p class="pt-3 text-justify">The company has three manufacturing units. The Roof Tile, Wall tiles and
                     the Quartz Stone Unit. All the units have a very strong and industrious infrastructure that is
@@ -56,21 +56,21 @@ solutions with a focus on innovation and quality.">
                     production. "Production is a sum total of three major Factors, Men Machines and Materials."</p>
 
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 text-center mt-5">
                 <img src="{{ asset('assets/asset/groupcompanyimage.png')}}" alt="argil groupcompany" loading="lazy" class="img-fluid w-75">
             </div>
 
             <div class="col-md-12 pt-5">
 
-                <h2>
-
-                    MEN
-                </h2>
-
                 <h3>
 
-                    "Hands that work are never dirty"
+                    MEN
                 </h3>
+
+                <h4>
+
+                    "Hands that work are never dirty"
+                </h4>
                 <p class="text-justify">
 
                     group company image
@@ -83,14 +83,14 @@ solutions with a focus on innovation and quality.">
                     The top management being approachable to them makes them all the more happy to work atARGIL. In
                     alignment with the company principles, they have a very good work life balance.
                 </p>
-                <h2>
+                <h3 class="pt-3">
 
                     Machines
-                </h2>
-                <h3>
+                </h3>
+                <h4>
 
                     "Leveraging Human Effort through Efficient use of Technology"
-                </h3>
+                </h4>
 
                 <p class="text-justify">
 
@@ -104,14 +104,14 @@ solutions with a focus on innovation and quality.">
                     is
                     very well highlighted in the profile of each plant.
                 </p>
-                <h2>
+                <h3 class="pt-3">
 
                     Prajapat Tiles
-                </h2>
-                <h3>
+                </h3>
+                <h4>
 
                     Commencement : 1951
-                </h3>
+                </h4>
                 <p class="text-justify">
 
 
@@ -126,13 +126,13 @@ solutions with a focus on innovation and quality.">
                     doing it the natural way, the CHAKRAbrand roof tiles have entered Indian hearts as well.
 
                 </p>
-                <h2>
+                <h3 class="pt-3">
                     Argil Tiles : Mod Ceramic Industries Ltd.
-                </h2>
-                <h3>
+                </h3>
+                <h4>
 
                     Commencement: 1991
-                </h3>
+                </h4>
                 <p class="text-justify">
 
                     The wall tiles unit started in 1991 and was the first plant in the morbi region is spread in 50,000
@@ -145,14 +145,14 @@ solutions with a focus on innovation and quality.">
                     management. Running as an independent unit, the infrastructure of the plant is upgraded regularly to
                     keep up with the changing needs as well as new technology available.
                 </p>
-                <h2>
+                <h3 class="pt-3">
 
                     Argil Ceramics
-                </h2>
-                <h3>
+                </h3>
+                <h4>
 
                     Commencement: 2010
-                </h3>
+                </h4>
                 <p class="text-justify">
 
                     The Quartz Stone Unit is relatively freshly set up and hence boasts of being more modern and

@@ -64,22 +64,53 @@ class BlogController extends Controller
         $image->move(public_path('ogimage/'), $ogImageName);
     }
 
-    $metablogs = new MetaPropertyBlog();
+    // $metablogs = new MetaPropertyBlog();
 
-    $metablogs->blogId = $blogs->id;
-    $metablogs->ogTitleEng = $request->ogTitleEng;
-    $metablogs->ogTitleGuj = $request->ogTitleGuj;
-    $metablogs->ogTitleHin = $request->ogTitleHin;
-    $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
-    $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
-    $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
-    $metablogs->ogImage = $ogImageName;
-    $metablogs->ogUrl = $request->ogUrl;
-    $metablogs->description = $request->metadescription;
-    $metablogs->keywords = $request->keywords;
-    $metablogs->author = $request->author;
-    $metablogs->tages = $request->tages;
-    $metablogs->save();
+    // $metablogs->blogId = $blogs->id;
+    // $metablogs->ogTitleEng = $request->ogTitleEng;
+    // $metablogs->ogTitleGuj = $request->ogTitleGuj;
+    // $metablogs->ogTitleHin = $request->ogTitleHin;
+    // $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
+    // $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
+    // $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
+    // $metablogs->ogImage = $ogImageName;
+    // $metablogs->ogUrl = $request->ogUrl;
+    // $metablogs->description = $request->metadescription;
+    // $metablogs->keywords = $request->keywords;
+    // $metablogs->author = $request->author;
+    // $metablogs->tages = $request->tages;
+    // $metablogs->save();
+    if (
+        $request->filled('ogTitleEng') ||
+        $request->filled('ogTitleGuj') ||
+        $request->filled('ogTitleHin') ||
+        $request->filled('ogDescriptionEng') ||
+        $request->filled('ogDescriptionGuj') ||
+        $request->filled('ogDescriptionHin') ||
+        $request->filled('ogUrl') ||
+        $request->filled('metadescription') ||
+        $request->filled('keywords') ||
+        $request->filled('author') ||
+        $request->filled('tages') ||
+        $request->file('ogImage')
+    ) {
+        $metablogs = new MetaPropertyBlog();
+        $metablogs->blogId = $blogs->id;
+        $metablogs->ogTitleEng = $request->ogTitleEng;
+        $metablogs->ogTitleGuj = $request->ogTitleGuj;
+        $metablogs->ogTitleHin = $request->ogTitleHin;
+        $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
+        $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
+        $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
+        $metablogs->ogImage = $ogImageName;
+        $metablogs->ogUrl = $request->ogUrl;
+        $metablogs->description = $request->metadescription;
+        $metablogs->keywords = $request->keywords;
+        $metablogs->author = $request->author;
+        $metablogs->tages = $request->tages;
+        $metablogs->save();
+    }
+
 
 
     return redirect()->route('blog')->with('msg', 'Record Inserted Successfully');
@@ -150,19 +181,51 @@ class BlogController extends Controller
 
 
 
-        $metablogs->blogId = $blogs->id;
-        $metablogs->ogTitleEng = $request->ogTitleEng;
-        $metablogs->ogTitleGuj = $request->ogTitleGuj;
-        $metablogs->ogTitleHin = $request->ogTitleHin;
-        $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
-        $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
-        $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
-        $metablogs->ogUrl = $request->ogUrl;
-        $metablogs->description = $request->metadescription;
-        $metablogs->keywords = $request->keywords;
-        $metablogs->author = $request->author;
-        $metablogs->tages = $request->tages;
-        $metablogs->save();
+        // $metablogs->blogId = $blogs->id;
+        // $metablogs->ogTitleEng = $request->ogTitleEng;
+        // $metablogs->ogTitleGuj = $request->ogTitleGuj;
+        // $metablogs->ogTitleHin = $request->ogTitleHin;
+        // $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
+        // $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
+        // $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
+        // $metablogs->ogUrl = $request->ogUrl;
+        // $metablogs->description = $request->metadescription;
+        // $metablogs->keywords = $request->keywords;
+        // $metablogs->author = $request->author;
+        // $metablogs->tages = $request->tages;
+        // $metablogs->save();
+
+        if (
+            $request->filled('ogTitleEng') ||
+            $request->filled('ogTitleGuj') ||
+            $request->filled('ogTitleHin') ||
+            $request->filled('ogDescriptionEng') ||
+            $request->filled('ogDescriptionGuj') ||
+            $request->filled('ogDescriptionHin') ||
+            $request->filled('ogUrl') ||
+            $request->filled('metadescription') ||
+            $request->filled('keywords') ||
+            $request->filled('author') ||
+            $request->filled('tages') ||
+            $request->file('ogImage')
+        ) {
+            // $metablogs = new MetaPropertyBlog();
+            $metablogs->blogId = $blogs->id;
+            $metablogs->ogTitleEng = $request->ogTitleEng;
+            $metablogs->ogTitleGuj = $request->ogTitleGuj;
+            $metablogs->ogTitleHin = $request->ogTitleHin;
+            $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
+            $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
+            $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
+            $metablogs->ogImage = $ogImageName;
+            $metablogs->ogUrl = $request->ogUrl;
+            $metablogs->description = $request->metadescription;
+            $metablogs->keywords = $request->keywords;
+            $metablogs->author = $request->author;
+            $metablogs->tages = $request->tages;
+            $metablogs->save();
+        }
+
         return redirect()->route('blog')->with('msg', 'Record Update Successfully');
     }
 

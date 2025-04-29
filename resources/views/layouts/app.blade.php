@@ -111,6 +111,9 @@
                         </ul>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link " href="/blogs" tabindex="-1" aria-disabled="true">Blog</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link " href="/catalogue" tabindex="-1" aria-disabled="true">catalogue</a>
                     </li>
                     <li class="nav-item">

@@ -48,7 +48,7 @@ helmet="true">
                     affection and respect for the brand. I would like to congratulate you on the same and motivate you
                     to always be this humble and serving to your brand and people associated.</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 text-center">
                 <img src="{{ asset('assets/asset/profile.png')}}" alt="argil profile" loading="lazy" class="img-fluid h-75">
             </div>
 

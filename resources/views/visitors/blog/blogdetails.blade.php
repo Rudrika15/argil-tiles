@@ -2,69 +2,56 @@
 @section('seosection')
 @endsection
 @section('content')
-    <!-- page title -->
-    <section class="page-title" style="background-image: url('asset/css/assets/bg-img.png');">
+    <!-- breadcrumb -->
+    <div class="breadcrumb d-flex justify-content-between align-items-center">
         <div class="container">
-            <div class="content-box">
-                <div class="title">
-                    <h1>BlogDetials</h1>
-                </div>
-                <div class="bread-crumb">
-                    <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>BlogDetials</span>
-                </div>
+
+            <div class="p-2">
+                <h1 class="display-6 fw-bold">Home / {{ $blog->title }}</h1>
             </div>
         </div>
-    </section>
-    <!--End Page Title-->
-
-    <div class="container">
-        <h2>blog 1</h2>
     </div>
-    <div class="container" style="margin-top: 20px;">
-        <div class="row">
+    <!-- breadcrumb -->
 
-            <div class="col-md-5">
 
-                <img src="spc/spc1.jpg" alt="" class="img-responsive spc-image1">
+    {{-- <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="{{ asset('blogimage/' . $blog->image) }}" alt="Blog Image" class="img-fluid rounded">
+                </div>
+
+                <div class="col-md-7">
+                    <div class="content">
+                        <p class="text-justify">{!! nl2br(e($blog->description)) !!}</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-7">
-                <p style="color:black;" class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                    quibusdam mollitia tempora, similique
-                    dolorum, vitae illo vero, et porro iusto cumque nobis tempore aliquid blanditiis corrupti quod!
-                    Mollitia, quas ducimus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quibusdam mollitia
-                    tempora, similique
-                    dolorum, vitae illo vero, et porro iusto cumque nobis tempore aliquid blanditiis corrupti quod!
-                    Mollitia, quas ducimus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quibusdam mollitia
-                    tempora, similique
-                </p>
-                <p style="color:black" class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                    quibusdam mollitia tempora, similique
-                    dolorum, vitae illo vero, et porro iusto cumque nobis tempore aliquid blanditiis corrupti quod!
-                    Mollitia, quas ducimus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quibusdam mollitia
-                    tempora, similique
-                    dolorum, vitae illo vero, et porro iusto cumque nobis tempore aliquid blanditiis corrupti quod!
-                    Mollitia, quas ducimus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quibusdam mollitia
-                    tempora, similique
-                </p>
-            </div>
-        </div>
+        </div> --}}
+    @php
+        // Split the description into two parts dynamically
+        $split_position = 900; // Adjust the split point
+        $first_part = substr($blog->description, 0, $split_position);
+        $second_part = substr($blog->description, $split_position);
+    @endphp
+
+    <div class="container mt-4">
         <div class="row">
-            <div class="col-md-12">
-                <p  style="color:black" class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, velit repellendus. Inventore nobis
-                    accusantium, enim quis molestiae esse officia cum rem, sunt aliquid perspiciatis. Aut atque rem
-                    doloremque aliquam voluptatum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
-                    corporis placeat corrupti. Voluptatem, nobis adipisci a totam reiciendis dolorum voluptas impedit eaque
-                    exercitationem sequi cupiditate unde quam cum magni dolores.</p>
-                <p  style="color:black" class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, velit repellendus. Inventore nobis
-                    accusantium, enim quis molestiae esse officia cum rem, sunt aliquid perspiciatis. Aut atque rem
-                    doloremque aliquam voluptatum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
-                    corporis placeat corrupti. Voluptatem, nobis adipisci a totam reiciendis dolorum voluptas impedit eaque
-                    exercitationem sequi cupiditate unde quam cum magni dolores.</p>
-                        <p  style="color:black" class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, velit repellendus. Inventore nobis
-                            accusantium, enim quis molestiae esse officia cum rem, sunt aliquid perspiciatis. Aut atque rem
-                            doloremque aliquam voluptatum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
-                            corporis placeat corrupti. Voluptatem, nobis adipisci a totam reiciendis dolorum voluptas impedit eaque
-                            exercitationem sequi cupiditate unde quam cum magni dolores.</p>
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <img src="{{ asset('blogimage/' . $blog->image) }}" alt="Blog Image" class="img-fluid rounded w-100">
+            </div>
+
+            <!-- First Part of Description (col-md-7) -->
+            <div class="col-12 col-md-7">
+                <div class="content">
+                    <p class="text-justify">{!! nl2br(e($first_part)) !!}</p>
+                </div>
+            </div>
+
+            <!-- Second Part of Description (col-md-12) -->
+            <div class="col-12">
+                <div class="content mt-2">
+                    <p class="text-justify">{!! nl2br(e($second_part)) !!}</p>
+                </div>
             </div>
         </div>
     </div>

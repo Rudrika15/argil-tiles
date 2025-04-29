@@ -75,21 +75,21 @@
                  <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="ogTitleEng" placeholder="English Title"
-                             name="ogTitleEng" value="{{ $metablogs->ogTitleEng }}">
+                             name="ogTitleEng" value="{{ $metablogs->ogTitleEng ?? '' }}">
                          <label for="">English</label>
                      </div>
                  </div>
                  <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="ogTitleGuj" placeholder="Gujrati Title"
-                             name="ogTitleGuj" value="{{ $metablogs->ogTitleGuj }}">
+                             name="ogTitleGuj" value="{{ $metablogs->ogTitleGuj ?? ''}}">
                          <label for="">Gujarati</label>
                      </div>
                  </div>
                  <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="ogTitleHin" placeholder="Hindi Title"
-                             name="ogTitleHin" value="{{ $metablogs->ogTitleHin }}">
+                             name="ogTitleHin" value="{{ $metablogs->ogTitleHin ?? ''}}">
                          <label for="">Hindi</label>
                      </div>
                  </div>
@@ -103,21 +103,21 @@
                  <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="ogDescriptionEng" placeholder="English Description"
-                             name="ogDescriptionEng" value="{{ $metablogs->ogDescriptionEng }}">
+                             name="ogDescriptionEng" value="{{ $metablogs->ogDescriptionEng ?? '' }}">
                          <label for="">English</label>
                      </div>
                  </div>
                  <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="ogDescriptionGuj" placeholder="Gujrati Description"
-                             name="ogDescriptionGuj" value="{{ $metablogs->ogDescriptionGuj }}">
+                             name="ogDescriptionGuj" value="{{ $metablogs->ogDescriptionGuj ?? ''}}">
                          <label for="">Gujarati</label>
                      </div>
                  </div>
                  <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="ogDescriptionHin" placeholder="Hindi Description"
-                             name="ogDescriptionHin" value="{{ $metablogs->ogDescriptionHin }}">
+                             name="ogDescriptionHin" value="{{ $metablogs->ogDescriptionHin ?? ''}}">
                          <label for="">Hindi</label>
                      </div>
                  </div>
@@ -128,16 +128,19 @@
                  <div class="col-sm-12 col-lg-3 col-md-12">
                      Og Image
                  </div>
+                 @if(!empty($metablogs) && !empty($metablogs->ogImage))
                  <div class="col-2" id="imagepreview">
                      <img id="ogImagePreview" src="{{ asset('ogimage/'.$metablogs->ogImage) }}" alt="Og Image" height="100px"
                          width="150px">
                  </div>
+                    @else
                  <div class="col">
                      <div class="form">
                          <label>Upload Image</label>
                          <input type="file" class="form-control" id="ogImage" placeholder="" name="ogImage">
                      </div>
                  </div>
+                    @endif
              </div>
 
              {{-- og url --}}
@@ -148,7 +151,7 @@
                  <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="ogUrl" placeholder="" name="ogUrl"
-                             value="{{ $metablogs->ogUrl }}">
+                             value="{{ $metablogs->ogUrl ?? ''}}">
                          <label for="">Url</label>
                      </div>
                  </div>
@@ -162,7 +165,7 @@
                  <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="metadescription" placeholder="" name="metadescription"
-                             value="{{ $metablogs->description }}">
+                             value="{{ $metablogs->description ?? ''}}">
                          <label for="">description</label>
                      </div>
                  </div>
@@ -176,7 +179,7 @@
                  <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="keywords" placeholder="" name="keywords"
-                             value="{{ $metablogs->keywords }}">
+                             value="{{ $metablogs->keywords ?? '' }}">
                          <label for="">keywords</label>
                      </div>
                  </div>
@@ -190,7 +193,7 @@
                  <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="author" placeholder="" name="author"
-                             value="{{ $metablogs->author }}">
+                             value="{{ $metablogs->author ?? ''}}">
                          <label for="">author</label>
                      </div>
                  </div>
@@ -204,7 +207,7 @@
                  <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="tages" placeholder="Hindi Title"
-                             name="tages" value="{{ $metablogs->tages }}">
+                             name="tages" value="{{ $metablogs->tages ?? '' }}">
                          <label for="">tages</label>
                      </div>
                  </div>

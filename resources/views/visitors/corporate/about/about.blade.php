@@ -53,7 +53,7 @@ helmet="true">
                     District to serve as a moulder fro 2 years in Kathiawad Industries Ltd.
                 </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 text-center">
                 <img src="{{ asset('assets/asset/aboutimage.png')}}" alt="argil about" loading="lazy" class="img-fluid w-75">
             </div>
 

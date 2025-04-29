@@ -40,7 +40,7 @@ to quality, innovation, and leadership in the artificial quartz industry.">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="pt-5 text-justify">The Founder has been in the business since last 60 years within which he
+                <p class="pt-5 pb-3 text-justify">The Founder has been in the business since last 60 years within which he
                     has scaled new heights regularly. He has been recognized a number times and mostly by credible
                     institutions including the government of India.
 
@@ -48,12 +48,12 @@ to quality, innovation, and leadership in the artificial quartz industry.">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 text-center">
                 <img src="{{ asset('assets/asset/achievementimage1.jpeg')}}" alt="argil National Award" laoding="lazy" class="img-fluid h-75">
             </div>
 
             <div class="col-md-3">
-                <p class="pt-5 text-justify">
+                <p class=" text-justify">
                     National Award for the year 1997 (for best quality products) from vice president of India
 
                 </p>
@@ -61,12 +61,12 @@ to quality, innovation, and leadership in the artificial quartz industry.">
                     National Award
                 </h2>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 text-center">
                 <img src="{{ asset('assets/asset/achievementimage2.jpeg')}}" alt="argil Export Awards" loading="lazy" class="img-fluid h-75">
             </div>
 
             <div class="col-md-3">
-                <p class="pt-5 text-justify">
+                <p class=" text-justify">
                     Highest Export Awards, Govt. of India and State
 
                 </p>

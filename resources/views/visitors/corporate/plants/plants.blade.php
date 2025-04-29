@@ -70,7 +70,7 @@ innovation drive the production of world-class artificial quartz stones.">
                     in wall tiles manufacturers in the region.
                 </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 text-center">
                 <img src="{{ asset('assets/asset/plantsimage.png')}}" alt="argil plants" loading="lazy" class="img-fluid w-75">
             </div>
 

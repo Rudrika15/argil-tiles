@@ -60,11 +60,11 @@ excellence in quartz stone manufacturing.">
                     will stand by this habit always. The company started with this philosophy and will grow with the
                     same.</p>
             </div>
-            <div class="col-md-6">
-                <img src="{{ asset('assets/asset/corevaluesimage.png')}}" alt="argil corevalues" loading="lazy" class="img-fluid ">
+            <div class="col-md-6 text-center">
+                <img src="{{ asset('assets/asset/corevaluesimage.png')}}" alt="argil corevalues" loading="lazy" class="img-fluid h-75">
             </div>
 
-            <div class="col-md-12 pt-5">
+            <div class="col-md-12 pt-4">
 
                 <h2>Mission</h2>
                 <p class="text-justify">

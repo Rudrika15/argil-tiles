@@ -2,40 +2,32 @@
 @section('seosection')
 @endsection
 @section('content')
-    <!-- page title -->
-    <section class="page-title" style="background-image: url('asset/css/assets/bg-img.png');">
+    <!-- breadcrumb -->
+    <div class="breadcrumb d-flex justify-content-between align-items-center">
         <div class="container">
-            <div class="content-box">
-                <div class="title">
-                    <h1>Blog</h1>
-                </div>
-                <div class="bread-crumb">
-                    <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Blog</span>
-                </div>
+
+            <div class="p-2">
+                <h1 class="display-6 fw-bold">Home / Blog</h1>
             </div>
         </div>
-    </section>
-    <!--End Page Title-->
+    </div>
+    <!-- breadcrumb -->
 
-    <div class="container" style="margin-top: 20px;">
-        <div class="row">
+    <div class="container">
+        <div class="row mb-4">
             @foreach ($blogs as $index => $blog)
-                <div class="col-md-6" style="margin-bottom: 20px;">
-                    <h2>{{ $blog->title }}</h2>
-                    <img src="{{ asset('blogimage/' . $blog->image) }}" alt="" class="img-responsive spc-image1">
-                    <p class="text-justify paragraph">{{ $blog->description }}</p>
-                    <a href="/blogdetails">
-                        <button class="btn btn-warning"
-                            style="padding: 4px 10px; border-radius: 5px; margin-bottom:10px;">Read Me</button>
+                <div class="col-md-6">
+                    <h2 class="mt-4">{{ $blog->title }}</h2>
+                    <img src="{{ asset('blogimage/' . $blog->image) }}" alt="" class="img-fluid w-100 mt-3">
+                    <p class="text-justify mt-4">{{ Str::limit($blog->description, 200, '...') }}</p>
+                    <a href="{{ route('blogdetails', $blog->slug) }}"
+                        class="btn border-black rounded text-black btn1 fw-bold">
+                        Read More
                     </a>
-                </div>
 
-                @if (($index + 1) % 2 == 0 && !$loop->last)
-        </div> <!-- Close current row -->
-        <div class="row"> <!-- Start new row -->
-            @endif
+                </div>
             @endforeach
-        </div> <!-- Close last row -->
+        </div> <!-- Close current row -->
     </div>
 
 

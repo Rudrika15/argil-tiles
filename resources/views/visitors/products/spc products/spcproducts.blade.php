@@ -44,6 +44,44 @@ with 10+ yrs of service. Get a price quote"
     <!-- breadcrumb -->
     <div class="container">
 
+        {{-- <div class="container">
+            <div class="row pt-3">
+                <div class="col-md-6">
+                    <h2>hello argil </h2>
+                </div>
+                <div class="col-md-6">
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quam natus cumque corporis
+                        laudantium repellat aut reiciendis assumenda nulla labore molestiae eveniet fugiat eaque suscipit
+                        rerum facere qui, ducimus modi?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+                        veritatis, perferendis quod commodi cum cumque beatae sunt possimus repellat, nihil ipsa repudiandae
+                        dolorem eius aliquam animi voluptatem. Odit, reiciendis? Praesentium.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <img src="spc\spc1.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <img src="spc\spc2.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <img src="spc\spc1.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="spc\spc2.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="spc\spc2.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div> --}}
+
 
         <div class="row pb-5">
             <h2 class="text-center fw-bold pt-5">SPC Flooring Tiles</h2>

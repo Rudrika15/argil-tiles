@@ -1,5 +1,5 @@
 .parallax {
-    max-height: 420px;
+    /* max-height: 420px; */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -77,4 +77,26 @@
 .text-justify {
     text-align: justify;
 }
+.accordion-item{
+   margin: 20px;
+}
+.accordion-button{
+    border: 2px solid #ccb19b;
+}
+.accordion-button:focus{
+    box-shadow: none;
+    border: 2px solid #ccb19b;
 
+}
+.accordion-body{
+    border: 1px solid #ccb19b;
+}
+.carousel-item{
+    max-height: 450px;
+    padding: 15px;
+}
+.btn1:hover{
+    background-color: #d6c7bb !important;
+    color: #fff !important;
+    border: none
+}

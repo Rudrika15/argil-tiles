@@ -57,10 +57,11 @@ class VisitorController extends Controller
         $blogs =Blog::orderBy('id', 'desc')->get();
         return view('visitors.blog.blog',compact('blogs'));
     }
-    public function blogdetails()
+    public function blogdetails($slug)
     {
 
-        return view('visitors.blog.blogdetails');
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+        return view('visitors.blog.blogdetails',compact('blog'));
     }
     public function catalogue()
     {
