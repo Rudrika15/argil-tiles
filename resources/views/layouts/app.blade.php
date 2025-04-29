@@ -2,6 +2,145 @@
 <html lang="en">
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTBK17M75S"></script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Mod Ceramic Industries Ltd.",
+          "image": "https://argiltiles.com/asset/images/logo/logo.png",
+          "@id": "",
+          "url": "https://www.argiltiles.com/",
+          "telephone": "02822 240 628",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "National Highway 8A, Anand Nagar, Morbi, Gujarat 363642",
+            "addressLocality": "Morbi",
+            "postalCode": "363642",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 22.8175956,
+            "longitude": 70.8627034
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          },
+          "sameAs": [
+            "https://www.facebook.com/argilgroup/",
+            "https://www.instagram.com/argilgroup/",
+            "https://www.linkedin.com/company/argilgroup/"
+          ] 
+        }
+        </script>
+
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Mod Ceramic Industries Ltd.",
+          "alternateName": "Argil Tiles",
+          "url": "https://www.argiltiles.com/",
+          "logo": "https://argiltiles.com/asset/images/logo/logo.png",
+          "sameAs": [
+            "https://www.facebook.com/argilgroup/",
+            "https://www.instagram.com/argilgroup/",
+            "https://www.linkedin.com/company/argilgroup/",
+            "https://www.argiltiles.com/"
+          ]
+        }
+        </script>
+
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "WebSite",
+          "name": "Argil Tiles",
+          "url": "https://argiltiles.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "{search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+        </script>
+
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "name": "Argil Tiles",
+          "description": "Argil is an artificial quartz stone slab manufacturer in Morbi, Gujarat, India. We have the best-engineered quartz surface stone for kitchen and platform at a reasonable price. We have 10+ yrs of service. Get a price quote",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.1",
+            "bestRating": "5",
+            "ratingCount": "39"
+          }
+        }
+        </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-TTBK17M75S');
+    </script>
+    @hasSection('seosection')
+        @yield('seosection')
+    @else
+    @endif
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Argil Group">
+    <meta name="theme-color" content="#000000">
+    <meta name="geo.region" content="IN-GJ">
+    <meta name="geo.placename" content="Morbi">
+    <meta name="geo.position" content="22.82587;70.847998">
+    <meta name="ICBM" content="22.82587, 70.847998">
+
+    <meta property="og:type" content="website" data-react-helmet=
+"true">
+    <meta property="og:site_name" content="Argil Group">
+
+    <meta property="og:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
+        helmet="true">
+    <meta name="twitter:card" content="summary_large_image" data-react-helmet="true">
+    <meta name="twitter:site" content="@argiltiles" data-react- helmet="true">
+
+
+    <meta name="twitter:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
+        helmet="true">
+    <meta name="publisher" content="Argil Tiles" />
+    <link rel="icon" href="/logo_bg.png">
+
+
+    <meta name="robots" content="index, follow" />
+
+    {{-- <meta name="robots" content="index, follow" /> --}}
+
+    <link rel="icon" href="{{ asset('asset/images/logo/logo.png') }}">
+
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,7 +149,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-@yield('seosection')
+    @yield('seosection')
     <title>Argil Tiles</title>
     <style>
         .navbar {
@@ -36,11 +175,15 @@
         <div class="container">
             <div class="d-flex justify-content-between mb-3">
 
-                <div class="p-2 text-white "><a href="tel:99255-11465" class="text-white text-decoration-none"> (+91) 99255-11465</a></div>
+                <div class="p-2 text-white "><a href="tel:99255-11465" class="text-white text-decoration-none"> (+91)
+                        99255-11465</a></div>
                 <div class="p-2 text-white ">
-                    <a href="https://www.facebook.com/argilgroup/" target="blank" class="text-white text-decoration-none"><i class="bi bi-facebook me-3"></i></a>
-                    <a href="https://www.instagram.com/argilgroup/" target="blank" class="text-white text-decoration-none"><i class="bi bi-instagram me-3"></i></a>
-                    <a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank" class="text-white text-decoration-none"><i class="bi bi-linkedin me-3"></i></a>
+                    <a href="https://www.facebook.com/argilgroup/" target="blank"
+                        class="text-white text-decoration-none"><i class="bi bi-facebook me-3"></i></a>
+                    <a href="https://www.instagram.com/argilgroup/" target="blank"
+                        class="text-white text-decoration-none"><i class="bi bi-instagram me-3"></i></a>
+                    <a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank"
+                        class="text-white text-decoration-none"><i class="bi bi-linkedin me-3"></i></a>
                 </div>
             </div>
         </div>
@@ -48,7 +191,8 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="{{ asset('assets/asset/logo.png') }}" alt="argil tiles logo" loading="lazy" class="" style="height: 65px;" />
+                <img src="{{ asset('assets/asset/logo.png') }}" alt="argil tiles logo" loading="lazy" class=""
+                    style="height: 65px;" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -125,7 +269,7 @@
     </nav>
 
     <!-- Video Section -->
-   @yield('content')
+    @yield('content')
     <!-- footer -->
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-body-tertiary text-muted">
@@ -168,7 +312,8 @@
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
-                        <img src="{{ asset('assets/asset/footerlogo.png')}}" class="img-fluid w-50" alt="argil footerlogo" loading="lazy" />
+                        <img src="{{ asset('assets/asset/footerlogo.png') }}" class="img-fluid w-50"
+                            alt="argil footerlogo" loading="lazy" />
                     </div>
                     <!-- Grid column -->
 
@@ -205,10 +350,12 @@
 
                         </h6>
                         <p>
-                            <img src="{{ asset('assets/asset/playstore.png')}}" loading ="lazy" alt="argil-playstore-link" class="w-75">
+                            <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
+                                alt="argil-playstore-link" class="w-75">
                         </p>
                         <p>
-                            <img src="{{ asset('assets/asset/appstore.png')}}"  loading ="lazy"alt="argil-appstore-link" class="w-75">
+                            <img src="{{ asset('assets/asset/appstore.png') }}"
+                                loading ="lazy"alt="argil-appstore-link" class="w-75">
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -225,14 +372,23 @@
                         <p class="mx-5">
                             (Gujarat), India 363 642</p>
 
-                        <p><i class="bi bi-telephone me-3 mx-3"></i><a href="tel:2822 240628" class="text-decoration-none" style="color: inherit !important;">+ 91 2822 240628</a></p>
+                        <p><i class="bi bi-telephone me-3 mx-3"></i><a href="tel:2822 240628"
+                                class="text-decoration-none" style="color: inherit !important;">+ 91 2822 240628</a>
+                        </p>
                         <p> <i class="bi bi-envelope me-3 mx-3"></i>
-                            <a href="mailto:info@argilties.com" class="text-decoration-none" style="color: inherit !important;">info@argilties.com</a>
+                            <a href="mailto:info@argilties.com" class="text-decoration-none"
+                                style="color: inherit !important;">info@argilties.com</a>
                         </p>
                         <p class="mx-5">
-                            <a href="https://www.facebook.com/argilgroup/" target="blank" class="text-decoration-none" style="color: inherit !important;"><i class="bi bi-facebook me-3"></i></a>
-                            <a href="https://www.instagram.com/argilgroup/" target="blank" class="text-decoration-none" style="color: inherit !important;"><i class="bi bi-instagram me-3"></i></a>
-                            <a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank" class="text-decoration-none" style="color: inherit !important;"><i class="bi bi-linkedin me-3"></i></a>
+                            <a href="https://www.facebook.com/argilgroup/" target="blank"
+                                class="text-decoration-none" style="color: inherit !important;"><i
+                                    class="bi bi-facebook me-3"></i></a>
+                            <a href="https://www.instagram.com/argilgroup/" target="blank"
+                                class="text-decoration-none" style="color: inherit !important;"><i
+                                    class="bi bi-instagram me-3"></i></a>
+                            <a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank"
+                                class="text-decoration-none" style="color: inherit !important;"><i
+                                    class="bi bi-linkedin me-3"></i></a>
 
                         </p>
                     </div>
@@ -264,7 +420,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 75) {
                 navbar.classList.add('sticky-navbar');
