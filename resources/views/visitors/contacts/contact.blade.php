@@ -54,31 +54,32 @@ assist you!">
         <div class="row">
             <div class="col-md-6 text-center" >
 
-                <img src="{{ asset('assets/asset/contactsimage.png')}}" alt="argil contact" loading="lazy" class="img-fluid h-75">
+                <img src="{{ asset('assets/asset/contactsimage.png')}}" alt="argil contact" title="argil contact" loading="lazy" class="img-fluid h-75">
             </div>
             <div class="col-md-6 pt-2">
                 <h2>Let's Be in Touch !!!
                 </h2>
-                <form>
+                <form method="POST" id="contact-form">
+                    @csrf
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" placeholder="Your Name" required>
+                        <input type="text" class="form-control" id="floatingName" name="form_name" placeholder="Your Name" required>
                         <label for="floatingName">Your Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com"
+                        <input type="email" class="form-control" id="floatingEmail" name="form_email" placeholder="name@example.com"
                             required>
                         <label for="floatingEmail">Email</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="tel" class="form-control" id="floatingContact" placeholder="Contact Number"
+                        <input type="tel" class="form-control" id="floatingContact" name="form_phone" placeholder="Contact Number"
                             required>
                         <label for="floatingContact">Contact Number</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" id="floatingMessage" placeholder="Your Message"
+                        <textarea class="form-control" id="floatingMessage" placeholder="Your Message" name="form_message"
                             style="height: 150px;" required></textarea>
                         <label for="floatingMessage">Your Message</label>
                     </div>
@@ -105,7 +106,7 @@ assist you!">
 
 
 
-      {{-- <script>
+      <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -161,5 +162,8 @@ assist you!">
                 submitBtn.innerHTML = originalText;
             });
         });
-    </script> --}}
+    </script>
+
+
+
 @endsection

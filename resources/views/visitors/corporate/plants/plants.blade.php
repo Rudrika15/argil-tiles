@@ -71,7 +71,7 @@ innovation drive the production of world-class artificial quartz stones.">
                 </p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{ asset('assets/asset/plantsimage.png')}}" alt="argil plants" loading="lazy" class="img-fluid w-75">
+                <img src="{{ asset('assets/asset/plantsimage.png')}}" alt="argil plants" title="argil plants" loading="lazy" class="img-fluid w-75">
             </div>
 
         </div>

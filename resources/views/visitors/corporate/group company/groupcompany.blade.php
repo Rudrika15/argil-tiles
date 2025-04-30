@@ -57,7 +57,7 @@ solutions with a focus on innovation and quality.">
 
             </div>
             <div class="col-md-6 text-center mt-5">
-                <img src="{{ asset('assets/asset/groupcompanyimage.png')}}" alt="argil groupcompany" loading="lazy" class="img-fluid w-75">
+                <img src="{{ asset('assets/asset/groupcompanyimage.png')}}" alt="argil groupcompany" title="argil groupcompany" loading="lazy" class="img-fluid w-75">
             </div>
 
             <div class="col-md-12 pt-5">

@@ -156,7 +156,7 @@
             <h2 class="text-center fw-bold pt-5">SPC Flooring tiles</h2>
             <div class="col-md-4 pt-5">
                 <div class="card">
-                    <img src="{{ asset('spc/' . $data->mainImg) }}" class="img-thumbnail" style="height: 400px;" alt="spc product" loading="lazy">
+                    <img src="{{ asset('spc/' . $data->mainImg) }}" class="img-thumbnail" style="height: 400px;" alt="spc product" title="spc product" loading="lazy">
                 </div>
             </div>
             <div class="col-md-8 pt-5">
@@ -186,7 +186,7 @@
                         <p>{{ $data->wearLayer }}</p>
                     </div>
                 </div>
-                <form>
+                {{-- <form>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingName" placeholder="Your Name" required>
                         <label for="floatingName">Your Name</label>
@@ -211,7 +211,34 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
-                </form>
+                </form> --}}
+                <form class="mt-3" id="contact-form" method="POST">
+                        @csrf
+                        {{-- <input type="hidden" name="product_id" value="{{ $data->id }}"> --}}
+                        <input type="hidden" name="product_name" value="{{ $data->names }}">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingName" placeholder="Your Name" name="form_name" required>
+                            <label for="floatingName">Your Name</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="form_email" required>
+                            <label for="floatingEmail">Email</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="tel" class="form-control" id="floatingContact" placeholder="Contact Number" name="form_phone" required>
+                            <label for="floatingContact">Contact Number</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="floatingMessage" name="form_message" placeholder="Your Message" style="height: 150px;" required></textarea>
+                            <label for="floatingMessage">Your Message</label>
+                        </div>
+                        <input type="hidden" name="product_details" value="spc product">
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+                    </form>
+
             </div>
 
         </div>
@@ -248,7 +275,7 @@
     </script> --}}
 
     {{-- inquiry  --}}
-    {{-- <script>
+    <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -303,6 +330,6 @@
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
                 });
-        }); --}}
-    {{-- </script> --}}
+        });
+     </script>
 @endsection

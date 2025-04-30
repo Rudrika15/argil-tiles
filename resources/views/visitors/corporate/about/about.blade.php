@@ -54,7 +54,7 @@ helmet="true">
                 </p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{ asset('assets/asset/aboutimage.png')}}" alt="argil about" loading="lazy" class="img-fluid w-75">
+                <img src="{{ asset('assets/asset/aboutimage.png')}}" alt="argil about" title="argil about" loading="lazy" class="img-fluid w-75">
             </div>
 
         </div>

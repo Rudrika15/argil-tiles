@@ -61,7 +61,7 @@ excellence in quartz stone manufacturing.">
                     same.</p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{ asset('assets/asset/corevaluesimage.png')}}" alt="argil corevalues" loading="lazy" class="img-fluid h-75">
+                <img src="{{ asset('assets/asset/corevaluesimage.png')}}" alt="argil corevalues" title="argil corevalues" loading="lazy" class="img-fluid h-75">
             </div>
 
             <div class="col-md-12 pt-4">

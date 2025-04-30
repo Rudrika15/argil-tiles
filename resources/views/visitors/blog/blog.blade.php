@@ -1,5 +1,19 @@
 @extends('layouts.app')
 @section('seosection')
+    <meta name="description"
+        content="Discover the latest tile trends, design ideas, and product updates from Argil Tiles. Explore our blogs for inspiration and expert tips.">
+    <meta name="keywords"
+        content="tiles, tile design, flooring, Argil Tiles blog, home renovation, ceramic tiles, tile ideas">
+    <meta property="og:title" content="Argil Tiles Blog | Tile Design Trends, Tips & Inspirations">
+    <meta property="og:description"
+        content="Explore expert tips, tile trends, and design inspiration from the official Argil Tiles blog. Stay updated with the latest in ceramic and flooring solutions.">
+    <meta property="og:url" content="https://argiltiles.com/blogs">
+    <meta name="twitter:title" content="Argil Tiles Blog | Tile Design Trends, Tips & Inspirations">
+    <meta name="twitter:description"
+        content="Explore expert tips, tile trends, and design inspiration from the official Argil Tiles blog. Stay updated with the latest in ceramic and flooring solutions.">
+    <link rel="canonical" href="https://argiltiles.com/blogs" data-react- helmet="true">
+    <title>Argil Tiles Blog | Tile Design Trends, Tips & Inspirations
+    </title>
 @endsection
 @section('content')
     <!-- breadcrumb -->
@@ -17,14 +31,13 @@
         <div class="row mb-4">
             @foreach ($blogs as $index => $blog)
                 <div class="col-md-6">
-                    <h2 class="mt-4">{{ $blog->title }}</h2>
-                    <img src="{{ asset('blogimage/' . $blog->image) }}" alt="" class="img-fluid w-100 mt-3">
+                    <h3 class="mt-4 fw-bold">{{ $blog->title }}</h3>
+                    <img src="{{ asset('blogimage/' . $blog->image) }}" alt="argil blog" title="argil blog" loading="lazy"
+                        class="img-fluid w-100 mt-3">
                     <p class="text-justify mt-4">{{ Str::limit($blog->description, 200, '...') }}</p>
-                    <a href="{{ route('blogdetails', $blog->slug) }}"
-                        class="btn border-black rounded text-black btn1 fw-bold">
+                    <a href="{{ route('blogdetails', $blog->slug) }}" class="btn btn-primary mt-3">
                         Read More
                     </a>
-
                 </div>
             @endforeach
         </div> <!-- Close current row -->

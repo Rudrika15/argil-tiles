@@ -4,12 +4,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="robots" content="index, follow" />
+    <meta name="publisher" content="Argil Tiles" />
+    <meta property="og:type" content="website">
+    <meta name="author" content="Argil Group">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ArgilGroup">
+    <meta name="theme-color" content="#000000">
+    <meta name="geo.region" content="IN-GJ">
+    <meta name="geo.placename" content="Morbi">
+    <meta name="geo.position" content="22.82587;70.847998">
+    <meta name="ICBM" content="22.82587, 70.847998">
+    <meta property="og:image" content="https://argiltiles.com/assets/asset/logo.png">
+    <meta name="twitter:image" content="https://argiltiles.com/assets/asset/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @yield('seosection')
     <title>Argil Tiles</title>
     <style>
@@ -48,7 +61,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="{{ asset('assets/asset/logo.png') }}" alt="argil tiles logo" loading="lazy" class="" style="height: 65px;" />
+                <img src="{{ asset('assets/asset/logo.png') }}" alt="argil tiles logo" title="argil tiles logo" loading="lazy" class="" style="height: 65px;" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -168,7 +181,7 @@
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
-                        <img src="{{ asset('assets/asset/footerlogo.png')}}" class="img-fluid w-50" alt="argil footerlogo" loading="lazy" />
+                        <img src="{{ asset('assets/asset/footerlogo.png')}}" class="img-fluid w-50" alt="argil footerlogo" title="argil footerlogo" loading="lazy" />
                     </div>
                     <!-- Grid column -->
 
@@ -205,10 +218,10 @@
 
                         </h6>
                         <p>
-                            <img src="{{ asset('assets/asset/playstore.png')}}" loading ="lazy" alt="argil-playstore-link" class="w-75">
+                            <img src="{{ asset('assets/asset/playstore.png')}}" loading ="lazy" alt="argil-playstore-link" title="argil-playstore-link" class="w-75">
                         </p>
                         <p>
-                            <img src="{{ asset('assets/asset/appstore.png')}}"  loading ="lazy"alt="argil-appstore-link" class="w-75">
+                            <img src="{{ asset('assets/asset/appstore.png')}}"  loading ="lazy"alt="argil-appstore-link" title="argil-appstore-link" class="w-75">
                         </p>
                     </div>
                     <!-- Grid column -->

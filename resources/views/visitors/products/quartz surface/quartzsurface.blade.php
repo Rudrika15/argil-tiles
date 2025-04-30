@@ -50,7 +50,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
 
         <div class="row">
             <div class="col-md-6 text-center">
-                <img src="{{ asset('asset/images/argileimage/quartzimage1.jpg') }}" alt=""
+                <img src="{{ asset('asset/images/argileimage/quartzimage1.jpg') }}" alt="argil quartz product" title="argil quartz product" loading="lazy"
                     class="img-fluid w-75 mb-5 mt-4">
             </div>
             <div class="col-md-6">
@@ -68,39 +68,10 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         </div>
     </div>
 
+
     <!-- Why Choose Us -->
-    <div class="container-fluid py-5 parallax" style="background-image: url(./assets/asset/home-why-choose.jpg); ">
-        <div class="row pt-5">
-            <h2 class="text-center text-white">Why Choose Argil Group?</h2>
-        </div>
-        <div class="row text-center pt-5">
-            <div class="col">
-                <img src="{{ asset('assets/asset/iso.png') }}" class="img-fluid" width="40%" alt="argil ISO CERTIFIED"
-                    loading="lazy" />
-                <p class="text-white fw-bold">ISO CERTIFIED</p>
-            </div>
-            <div class="col">
-                <img src="{{ asset('assets/asset/certificate.png') }}" class="img-fluid" alt="argil TISI THAILAND STANDARD"
-                    width="40%" loading="lazy" />
-                <p class="text-white fw-bold">TISI THAILAND STANDARD</p>
-            </div>
-            <div class="col">
-                <img src="{{ asset('assets/asset/standard.png') }}" class="img-fluid" alt="argil SLSI SRILANKAN STANDARD"
-                    width="40%" loading="lazy" />
-                <p class="text-white fw-bold">SLSI SRILANKAN STANDARD</p>
-            </div>
-            <div class="col">
-                <img src="{{ asset('assets/asset/medal.png') }}" class="img-fluid" width="40%"
-                    alt="argil TISI THAILAND STANDARD" loading="lazy" />
-                <p class="text-white fw-bold">TISI THAILAND STANDARD</p>
-            </div>
-            <div class="col">
-                <img src="{{ asset('assets/asset/trophy.png') }}" class="img-fluid" width="40%"
-                    alt="argil HIGHEST NATIONAL AWARDS" loading="lazy" />
-                <p class="text-white fw-bold">HIGHEST NATIONAL AWARDS</p>
-            </div>
-        </div>
-    </div>
+    @include('visitors.comanfile.certificate')
+    <!-- Why Choose Us -->
 
 
     <div class="container">
@@ -113,7 +84,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                 <div class="col-md-4 pt-5">
                     <a href="{{ Route('quartzinquiry', $item->id) }}" class="text-decoration-none">
                         <div class="card">
-                            <img src="{{ asset('quartz/' . $item->mainImg) }}" class="card-img-top" alt="Tile Image"
+                            <img src="{{ asset('quartz/' . $item->mainImg) }}" class="card-img-top" alt="Tile Image" title="Tile Image"
                                 loading="lazy">
                             <div class="card-body">
                                 <h5 class="card-title text-center">{{ $item->name }}</h5>
@@ -127,47 +98,8 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
 
 
     <!-- Usability Section -->
-    <div class="container-fluid parallax"
-        style="background-image: url(./assets/asset/enhance-bg.999209ece5b0474be060.jpg); ">
-        <div class="row">
-            <h3 class="text-center pt-5 text-white">Enhancing the usability</h3>
-        </div>
-        <div class="container">
-            <div class="row py-5 text-center">
-                <div class="col-md-2">
-                    <img src="{{ asset('assets/asset/more_durable.f8643b534f3641b38a37.png') }}" alt="argil More Durable"
-                        loading="lazy" class="w-50" />
-                    <p class="text-white fw-bold">More Durable</p>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('assets/asset/more_uniform.17d9c8340a2104dbd386.png') }}" alt="argil More uniform"
-                        loading="lazy" class="w-50" />
-                    <p class="text-white fw-bold">More Uniform</p>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('assets/asset/bacteria_free.d09ea4b13eb6e0fd2a01.png') }}"
-                        alt="argil Bacteria free" loading="lazy" class="w-50" />
-                    <p class="text-white fw-bold">Bacteria-Free</p>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('assets/asset/environment.bfd9cc4c69ec5bafd98f.png') }}"
-                        alt="argil friendlier to the envitoment" class="w-50" loading="lazy" />
-                    <p class="text-white fw-bold">Friendlier to the Environment</p>
-                </div>
-                <div class="col-md-2">
-
-                    <img src="{{ asset('assets/asset/required_less.ccc007476f8f4ba3e851.png') }}"
-                        alt="argil Requires less Maintenance" class="w-50" loading="lazy" />
-                    <p class="text-white fw-bold">Requires less Maintenance</p>
-                </div>
-                <div class="col-md-2">
-                    <img src="{{ asset('assets/asset/longer.ff36c4bf82788d2e5dad.png') }}" alt="argil Longer Warranty"
-                        loading="lazy" class="w-50" />
-                    <p class="text-white fw-bold">Longer Warranty</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('visitors.comanfile.usablity')
+    <!-- Usability Section -->
 
 
     <div class="container">
@@ -280,7 +212,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         <div class="container">
             <div class="row py-5 text-center">
                 <div class="col-md-6">
-                    <img src="{{ asset('asset/images/argileimage/quartzimage5.jpg') }}" alt="" loading="lazy"
+                    <img src="{{ asset('asset/images/argileimage/quartzimage5.jpg') }}" alt="argil quartz product" title="argil quartz product" loading="lazy"
                         class="img-fluid w-75 border rounded p-2" />
                 </div>
                 <div class="col-md-6">
@@ -300,7 +232,8 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                 <div class="col-md-3">
                     <div class="card text-center mt-3">
                         <div class="d-flex justify-content-center mt-4">
-                            <img src="asset/images/argileimage/quartz-bg1.png" alt="MIXING" title="MIXING" class="card-img-top w-25">
+                            <img src="asset/images/argileimage/quartz-bg1.png" alt="MIXING" title="MIXING" loading="lazy"
+                             class="card-img-top w-25">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title pt-1">MIXING</h4>
@@ -323,7 +256,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                 <div class="col-md-3">
                     <div class="card text-center mt-3">
                         <div class="d-flex justify-content-center mt-4">
-                            <img src="asset/images/argileimage/quartz-bg2.png" alt="PRESSING" title="PRESSING" class="card-img-top w-25">
+                            <img src="asset/images/argileimage/quartz-bg2.png" alt="PRESSING" title="PRESSING" loading="lazy" class="card-img-top w-25">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title pt-1">PRESSING</h4>
@@ -621,7 +554,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
             <div class="col-md-6">
                 <h2>Let's Be in Touch !!!
                 </h2>
-                <form>
+                {{-- <form>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingName" placeholder="Your Name" required>
                         <label for="floatingName">Your Name</label>
@@ -645,7 +578,35 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     </div>
 
                     <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+                </form> --}}
+                <form method="POST" id="contact-form">
+                    @csrf
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingName" name="form_name" placeholder="Your Name" required>
+                        <label for="floatingName">Your Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" name="form_email" placeholder="name@example.com"
+                            required>
+                        <label for="floatingEmail">Email</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="floatingContact" name="form_phone" placeholder="Contact Number"
+                            required>
+                        <label for="floatingContact">Contact Number</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="floatingMessage" placeholder="Your Message" name="form_message"
+                            style="height: 150px;" required></textarea>
+                        <label for="floatingMessage">Your Message</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
                 </form>
+
 
             </div>
 
@@ -655,7 +616,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     </div>
     </div>
 
-    {{-- <script>
+    <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -711,5 +672,5 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     submitBtn.innerHTML = originalText;
                 });
         });
-    </script> --}}
+    </script>
 @endsection

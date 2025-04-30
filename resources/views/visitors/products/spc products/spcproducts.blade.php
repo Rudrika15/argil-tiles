@@ -44,43 +44,55 @@ with 10+ yrs of service. Get a price quote"
     <!-- breadcrumb -->
     <div class="container">
 
-        {{-- <div class="container">
+        <div class="container">
             <div class="row pt-3">
                 <div class="col-md-6">
-                    <h2>hello argil </h2>
+                    <h2 class="fw-bold">SPC Flooring Tiles</h2>
                 </div>
                 <div class="col-md-6">
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quam natus cumque corporis
-                        laudantium repellat aut reiciendis assumenda nulla labore molestiae eveniet fugiat eaque suscipit
-                        rerum facere qui, ducimus modi?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                        veritatis, perferendis quod commodi cum cumque beatae sunt possimus repellat, nihil ipsa repudiandae
-                        dolorem eius aliquam animi voluptatem. Odit, reiciendis? Praesentium.</p>
+                    <p class="text-justify">SPC Flooring (Stone Plastic Composite) is a modern and durable flooring solution
+                        made from a mix of limestone powder, PVC, and stabilizers. It is highly water-resistant, making it
+                        ideal for kitchens, bathrooms, and other moisture-prone areas. The rigid core provides excellent
+                        stability and resists dents and scratches, even in high-traffic spaces. SPC flooring features a link
+                        lock system that allows for quick and easy installation without glue or nails. Its layered structure
+                        includes a protective wear layer, decorative vinyl layer, solid core, and attached underlayment for
+                        sound insulation and comfort. It often replicates the appearance of natural wood or stone. This
+                        flooring is low maintenance and easy to clean, making it a practical choice for both homes and
+                        commercial environments.</p>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row mt-4">
-                <div class="col-md-6">
-                    <img src="spc\spc1.jpg" alt="" class="img-fluid">
+            <div class="row">
+                <div class="col-md-6 pt-4">
+                    <img src="spc\spc1.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
+                        class="img-fluid">
                 </div>
-                <div class="col-md-6">
-                    <img src="spc\spc2.jpg" alt="" class="img-fluid">
+                <div class="col-md-6 pt-4">
+                    <img src="spc\spc2.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
+                        class="img-fluid">
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row mt-5">
-                <div class="col-md-4">
-                    <img src="spc\spc1.jpg" alt="" class="img-fluid">
+            <div class="row">
+                <div class="col-md-4 mt-4">
+                    <video autoplay muted loop playsinline style="width: 100%; height: auto; display: block;">
+                        <source src="{{ asset('assets/asset/video1.mp4') }}" type="video/mp4" />
+                    </video>
                 </div>
-                <div class="col-md-4">
-                    <img src="spc\spc2.jpg" alt="" class="img-fluid">
+                <div class="col-md-4 mt-4">
+                    <video autoplay muted loop playsinline style="width: 100%; height: auto; display: block;">
+                        <source src="{{ asset('assets/asset/video 2.mp4') }}" type="video/mp4" />
+                    </video>
                 </div>
-                <div class="col-md-4">
-                    <img src="spc\spc2.jpg" alt="" class="img-fluid">
+                <div class="col-md-4 mt-4">
+                    <video autoplay muted loop playsinline style="width: 100%; height: auto; display: block;">
+                        <source src="{{ asset('assets/asset/video3.mp4') }}" type="video/mp4" />
+                    </video>
                 </div>
             </div>
-        </div> --}}
+        </div>
 
 
         <div class="row pb-5">
@@ -90,8 +102,8 @@ with 10+ yrs of service. Get a price quote"
                 <div class="col-md-4 pt-5">
                     <a href="{{ Route('spcproductinquiry', $item->id) }}" class="text-decoration-none">
                         <div class="card">
-                            <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top" alt="Tile Image"
-                                loading="lazy">
+                            <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top" alt="argil spc product"
+                                title="argil spc product" loading="lazy">
                             <div class="card-body">
                                 <h5 class="card-title text-center">{{ $item->names }}</h5>
                             </div>

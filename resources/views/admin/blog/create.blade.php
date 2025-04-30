@@ -78,10 +78,10 @@
                     <div class="form-label-group">
                         <input type="text" class="form-control" id="ogTitleEng" placeholder="English Title"
                             name="ogTitleEng" value="{{ old('ogTitleEng') }}">
-                        <label for="">English</label>
+                        <label for="">og title</label>
                     </div>
                 </div>
-                <div class="col">
+                {{-- <div class="col">
                     <div class="form-label-group">
                         <input type="text" class="form-control" id="ogTitleGuj" placeholder="Gujrati Title"
                             name="ogTitleGuj" value="{{ old('ogTitleGuj') }}">
@@ -94,7 +94,7 @@
                             name="ogTitleHin" value="{{ old('ogTitleHin') }}">
                         <label for="">Hindi</label>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             {{-- og Description --}}
@@ -106,10 +106,10 @@
                     <div class="form-label-group">
                         <input type="text" class="form-control" id="ogDescriptionEng" placeholder="English Description"
                             name="ogDescriptionEng" value="{{ old('ogDescriptionEng') }}">
-                        <label for="">English</label>
+                        <label for="">og description</label>
                     </div>
                 </div>
-                <div class="col">
+                {{-- <div class="col">
                     <div class="form-label-group">
                         <input type="text" class="form-control" id="ogDescriptionGuj" placeholder="Gujrati Description"
                             name="ogDescriptionGuj" value="{{ old('ogDescriptionGuj') }}">
@@ -122,7 +122,7 @@
                             name="ogDescriptionHin" value="{{ old('ogDescriptionHin') }}">
                         <label for="">Hindi</label>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             {{-- og image --}}

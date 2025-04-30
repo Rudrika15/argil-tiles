@@ -1,5 +1,19 @@
 @extends('layouts.app')
 @section('seosection')
+    <meta name="description"
+        content="Get the latest updates, ideas, and expert insights from Argil Tiles. Explore our blog for tips on selecting and styling tiles.">
+    <meta name="keywords"
+        content="Argil Tiles blog, tile trends, tile inspiration, floor tile tips, wall tiles, ceramic tiles">
+    <meta property="og:title" content="Argil Tiles Blog | Insights, Inspiration & Tile Trends">
+    <meta property="og:description"
+        content="Explore tile styling tips, product highlights, and design trends with Argil Tiles.">
+    <meta property="og:url" content="https://argiltiles.com/blogdetails/{{ $blog->slug }}">
+    <meta name="twitter:title" content="Argil Tiles Blog | Insights & Tile Trends">
+    <meta name="twitter:description" content="Stay updated with tile designs, styles, and tips from Argil Tiles.">
+
+    <link rel="canonical" href="https://argiltiles.com/blogdetails/{{ $blog->slug }}" data-react-helmet="true">
+
+    <title>Argil Tiles Blog | Insights, Inspiration & Tile Trends</title>
 @endsection
 @section('content')
     <!-- breadcrumb -->
@@ -29,7 +43,7 @@
         </div> --}}
     @php
         // Split the description into two parts dynamically
-        $split_position = 900; // Adjust the split point
+        $split_position = 851; // Adjust the split point
         $first_part = substr($blog->description, 0, $split_position);
         $second_part = substr($blog->description, $split_position);
     @endphp
@@ -37,7 +51,8 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-12 col-md-5 mb-3 mb-md-0">
-                <img src="{{ asset('blogimage/' . $blog->image) }}" alt="Blog Image" class="img-fluid rounded w-100">
+                <img src="{{ asset('blogimage/' . $blog->image) }}" alt="argil blog" title="argil blog" loading="lazy"
+                    class="img-fluid rounded w-100">
             </div>
 
             <!-- First Part of Description (col-md-7) -->

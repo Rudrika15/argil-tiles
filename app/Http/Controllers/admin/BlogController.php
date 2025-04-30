@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\MetaPropertyBlog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -50,7 +51,7 @@ class BlogController extends Controller
 
         $blogs = new Blog();
         $blogs->title = $request->title;
-        $blogs->slug = $request->slug;
+        $blogs->slug = Str::slug($request->slug);
         $blogs->description = $request->description;
         $blogs->image = $imageName;
         $blogs->save();
@@ -82,11 +83,7 @@ class BlogController extends Controller
     // $metablogs->save();
     if (
         $request->filled('ogTitleEng') ||
-        $request->filled('ogTitleGuj') ||
-        $request->filled('ogTitleHin') ||
         $request->filled('ogDescriptionEng') ||
-        $request->filled('ogDescriptionGuj') ||
-        $request->filled('ogDescriptionHin') ||
         $request->filled('ogUrl') ||
         $request->filled('metadescription') ||
         $request->filled('keywords') ||
@@ -97,11 +94,7 @@ class BlogController extends Controller
         $metablogs = new MetaPropertyBlog();
         $metablogs->blogId = $blogs->id;
         $metablogs->ogTitleEng = $request->ogTitleEng;
-        $metablogs->ogTitleGuj = $request->ogTitleGuj;
-        $metablogs->ogTitleHin = $request->ogTitleHin;
         $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
-        $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
-        $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
         $metablogs->ogImage = $ogImageName;
         $metablogs->ogUrl = $request->ogUrl;
         $metablogs->description = $request->metadescription;
@@ -158,7 +151,8 @@ class BlogController extends Controller
         }
 
         $blogs->title = $request->title;
-        $blogs->slug = $request->slug;
+        // $blogs->slug = $request->slug;
+        $blogs->slug = Str::slug($request->slug);
         $blogs->description = $request->description;
         $blogs->save();
 
@@ -197,11 +191,7 @@ class BlogController extends Controller
 
         if (
             $request->filled('ogTitleEng') ||
-            $request->filled('ogTitleGuj') ||
-            $request->filled('ogTitleHin') ||
             $request->filled('ogDescriptionEng') ||
-            $request->filled('ogDescriptionGuj') ||
-            $request->filled('ogDescriptionHin') ||
             $request->filled('ogUrl') ||
             $request->filled('metadescription') ||
             $request->filled('keywords') ||
@@ -212,11 +202,7 @@ class BlogController extends Controller
             // $metablogs = new MetaPropertyBlog();
             $metablogs->blogId = $blogs->id;
             $metablogs->ogTitleEng = $request->ogTitleEng;
-            $metablogs->ogTitleGuj = $request->ogTitleGuj;
-            $metablogs->ogTitleHin = $request->ogTitleHin;
             $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
-            $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
-            $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
             $metablogs->ogImage = $ogImageName;
             $metablogs->ogUrl = $request->ogUrl;
             $metablogs->description = $request->metadescription;

@@ -49,7 +49,7 @@ to quality, innovation, and leadership in the artificial quartz industry.">
         </div>
         <div class="row">
             <div class="col-md-3 text-center">
-                <img src="{{ asset('assets/asset/achievementimage1.jpeg')}}" alt="argil National Award" laoding="lazy" class="img-fluid h-75">
+                <img src="{{ asset('assets/asset/achievementimage1.jpeg')}}" alt="argil National Award" title="argil National Award" laoding="lazy" class="img-fluid h-75">
             </div>
 
             <div class="col-md-3">
@@ -62,7 +62,7 @@ to quality, innovation, and leadership in the artificial quartz industry.">
                 </h2>
             </div>
             <div class="col-md-3 text-center">
-                <img src="{{ asset('assets/asset/achievementimage2.jpeg')}}" alt="argil Export Awards" loading="lazy" class="img-fluid h-75">
+                <img src="{{ asset('assets/asset/achievementimage2.jpeg')}}" alt="argil Export Awards" title="argil Export Awards" loading="lazy" class="img-fluid h-75">
             </div>
 
             <div class="col-md-3">

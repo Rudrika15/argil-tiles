@@ -14,13 +14,8 @@ return new class extends Migration
         Schema::create('meta_property_blogs', function (Blueprint $table) {
             $table->id();
             $table->integer('blogId')->nullable();
-            // $table->integer('audioId')->nullable();
             $table->string('ogTitleEng')->nullable();
-            $table->string('ogTitleGuj')->nullable();
-            $table->string('ogTitleHin')->nullable();
             $table->string('ogDescriptionEng')->nullable();
-            $table->string('ogDescriptionGuj')->nullable();
-            $table->string('ogDescriptionHin')->nullable();
             $table->string('ogImage')->nullable();
             $table->string('ogUrl')->nullable();
             $table->string('description')->nullable();

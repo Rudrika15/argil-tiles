@@ -76,10 +76,10 @@
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="ogTitleEng" placeholder="English Title"
                              name="ogTitleEng" value="{{ $metablogs->ogTitleEng ?? '' }}">
-                         <label for="">English</label>
+                         <label for="">og title</label>
                      </div>
                  </div>
-                 <div class="col">
+                 {{-- <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="ogTitleGuj" placeholder="Gujrati Title"
                              name="ogTitleGuj" value="{{ $metablogs->ogTitleGuj ?? ''}}">
@@ -92,7 +92,7 @@
                              name="ogTitleHin" value="{{ $metablogs->ogTitleHin ?? ''}}">
                          <label for="">Hindi</label>
                      </div>
-                 </div>
+                 </div> --}}
              </div>
 
              {{-- og Description --}}
@@ -104,10 +104,10 @@
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="ogDescriptionEng" placeholder="English Description"
                              name="ogDescriptionEng" value="{{ $metablogs->ogDescriptionEng ?? '' }}">
-                         <label for="">English</label>
+                         <label for="">og description</label>
                      </div>
                  </div>
-                 <div class="col">
+                 {{-- <div class="col">
                      <div class="form-label-group">
                          <input type="text" class="form-control" id="ogDescriptionGuj" placeholder="Gujrati Description"
                              name="ogDescriptionGuj" value="{{ $metablogs->ogDescriptionGuj ?? ''}}">
@@ -120,7 +120,7 @@
                              name="ogDescriptionHin" value="{{ $metablogs->ogDescriptionHin ?? ''}}">
                          <label for="">Hindi</label>
                      </div>
-                 </div>
+                 </div> --}}
              </div>
 
              {{-- og image --}}
