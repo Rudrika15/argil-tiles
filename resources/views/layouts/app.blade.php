@@ -208,12 +208,8 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="/">
-<<<<<<< HEAD
-                <img src="{{ asset('assets/asset/logo.png') }}" alt="argil tiles logo" title="argil tiles logo" loading="lazy" class="" style="height: 65px;" />
-=======
                 <img src="{{ asset('assets/asset/logo.png') }}" alt="argil tiles logo" loading="lazy" class=""
                     style="height: 65px;" />
->>>>>>> cba24da0dea22041e192cc6045813f0bb3dd2ef3
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -333,12 +329,7 @@
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
-<<<<<<< HEAD
                         <img src="{{ asset('assets/asset/footerlogo.png')}}" class="img-fluid w-50" alt="argil footerlogo" title="argil footerlogo" loading="lazy" />
-=======
-                        <img src="{{ asset('assets/asset/footerlogo.png') }}" class="img-fluid w-50"
-                            alt="argil footerlogo" loading="lazy" />
->>>>>>> cba24da0dea22041e192cc6045813f0bb3dd2ef3
                     </div>
                     <!-- Grid column -->
 
@@ -375,19 +366,10 @@
 
                         </h6>
                         <p>
-<<<<<<< HEAD
                             <img src="{{ asset('assets/asset/playstore.png')}}" loading ="lazy" alt="argil-playstore-link" title="argil-playstore-link" class="w-75">
                         </p>
                         <p>
                             <img src="{{ asset('assets/asset/appstore.png')}}"  loading ="lazy"alt="argil-appstore-link" title="argil-appstore-link" class="w-75">
-=======
-                            <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
-                                alt="argil-playstore-link" class="w-75">
-                        </p>
-                        <p>
-                            <img src="{{ asset('assets/asset/appstore.png') }}"
-                                loading ="lazy"alt="argil-appstore-link" class="w-75">
->>>>>>> cba24da0dea22041e192cc6045813f0bb3dd2ef3
                         </p>
                     </div>
                     <!-- Grid column -->
