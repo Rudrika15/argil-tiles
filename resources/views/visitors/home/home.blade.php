@@ -70,7 +70,9 @@ Get a price quote "
                         with affection and respect for the brand.
 
                         I would like to congratulate you on the same and motivate you to always be this humble and serving
-                        to your brand and people associated....MORE</p>
+                        to your brand and people associated....
+                        <a href="/about" class="text-dark">Read More</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -86,13 +88,13 @@ Get a price quote "
             </div>
             <div class="row pt-5">
                 <div class="col-md-4 text-center offset-md-2">
-                    <a href="/spcproducts">
+                    <a href="/quartzsurface">
                         <img src="https://dev.argiltiles.com/asset/images/argileimage/productimage1.jpg"
                             class="img-fluid h-75" alt="product-image" title="spc product" loading="lazy" />
                     </a>
                 </div>
                 <div class="col-md-4 text-center">
-                    <a href="/quartzsurface">
+                    <a href="/spcproducts">
                         <img src="https://dev.argiltiles.com/asset/images/argileimage/productimage2.jpg"
                             class="img-fluid h-75" alt="product-image" title="quartz product" loading="lazy" />
                     </a>
