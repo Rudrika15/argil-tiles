@@ -39,22 +39,13 @@
 			<div class="col-md-6">
 
 				<div class="form-label-group">
-					<input id="form_firstname" type="text" name="name" class="form-control" placeholder="Name" required>
+					<input id="name" type="text" name="name" class="form-control" placeholder="Name" required>
 					<label for="form_firstname">Name</label>
 				</div>
 
+                <input type="hidden" name="slug" id="slug">
 
-				{{-- <div class="form-label-group">
-					<input id="form_firstname" list="sizes" type="text" name="sizes" class="form-control" placeholder="Sizes" required>
 
-					<datalist id="sizes">
-						@foreach($data1 as $data1)
-						<option value="{{$data1->size}}">{{$data1->size}}</option>
-						@endforeach
-					</datalist>
-
-					<label for="form_firstname">Sizes</label>
-				</div> --}}
                 <div class="form-label-group">
                     <select name="sizes" id="sizes" class="form-control" required>
                         <option value="" disabled selected>sizes</option>
@@ -64,19 +55,6 @@
                     </select>
                 </div>
 
-
-
-
-				{{-- <div class="form-label-group">
-					<input id="form_firstname" list="thicknesses" type="text" name="thicknesses" class="form-control" placeholder="Thiknesses" required>
-
-					<datalist id="thicknesses">
-						<option value="20 X 30 MM">
-						<option value="30 X 40 MM">
-					</datalist>
-
-					<label for="form_firstname">Thiknesses</label>
-				</div> --}}
                 <div class="form-label-group">
                     <select name="thicknesses" id="thicknesses" class="form-control" required>
                         <option value="" disabled selected>Thicknesses</option>
@@ -86,17 +64,6 @@
                     </select>
                 </div>
 
-{{--
-				<div class="form-label-group">
-					<input id="form_firstname" type="text" list="finishType" name="finishType" class="form-control" placeholder="Finish Type" required>
-
-					<datalist id="finishType">
-						@foreach($data2 as $data2)
-						<option value="{{$data2->type}}">{{$data2->type}}</option>
-						@endforeach
-					</datalist>
-					<label for="form_firstname">Finish Type</label>
-				</div> --}}
                 <div class="form-label-group">
                     <select name="finishType" id="finishType" class="form-control" required>
                         <option value="" disabled selected>finishType</option>
@@ -106,18 +73,6 @@
                     </select>
                 </div>
 
-
-
-				{{-- <div class="form-label-group">
-					<input id="form_firstname" type="text" list="stocks" name="stock" class="form-control" placeholder="Stock" required>
-					<datalist id="stocks">
-						@foreach($data3 as $data3)
-						<option value="{{$data3->stock}}">{{$data3->stock}}</option>
-						@endforeach
-					</datalist>
-
-					<label for="form_firstname">Stock</label>
-				</div> --}}
                 <div class="form-label-group">
                     <select name="stock" id="stock" class="form-control" required>
                         <option value="" disabled selected>stock</option>
@@ -191,8 +146,133 @@
 			</div>
 
 		</div>
-		<div class="text-center form-action">
-			<button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+        {{-- add meta propertys --}}
+        <hr class="sidebar-divider my-4">
+
+        <div class="row mb-4">
+            <h4 class="m-3">Add Meta Propertys for Quartz Product</h4>
+        </div>
+
+        {{-- og titles --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Og Title
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="ogTitleEng" placeholder="English Title"
+                        name="ogTitleEng" value="{{ old('ogTitleEng') }}">
+                    <label for="">og title</label>
+                </div>
+            </div>
+
+        </div>
+
+        {{-- og Description --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Og Description
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="ogDescriptionEng" placeholder="English Description"
+                        name="ogDescriptionEng" value="{{ old('ogDescriptionEng') }}">
+                    <label for="">og description</label>
+                </div>
+            </div>
+
+        </div>
+
+        {{-- og image --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Og Image
+            </div>
+            <div class="col-2" id="imagepreview">
+                <img id="ogImagePreview" src="{{ asset('slider/image_default.png') }}" alt="Og Image"  height="100px"
+                    width="150px">
+            </div>
+            <div class="col">
+                <div class="form">
+                    <label>Upload Image</label>
+                    <input type="file" class="form-control" id="ogImage" placeholder="" accept='image/*' onchange="readURL(this,'#ogImagePreview')" name="ogImage">
+                </div>
+            </div>
+        </div>
+
+
+
+        {{-- og url --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Og Url
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="ogUrl" placeholder="" name="ogUrl"
+                        value="{{ old('ogUrl') }}">
+                    <label for="">Url</label>
+                </div>
+            </div>
+        </div>
+
+        {{-- description --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Description
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="metadescription" placeholder="" name="metadescription"
+                        value="{{ old('metadescription') }}">
+                    <label for="">description</label>
+                </div>
+            </div>
+        </div>
+
+        {{-- keyword --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Keyword
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="keywords" placeholder="" name="keywords"
+                        value="{{ old('keywords') }}">
+                    <label for="">keywords</label>
+                </div>
+            </div>
+        </div>
+
+        {{-- author --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Author
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="author" placeholder="" name="author"
+                        value="{{ old('author') }}">
+                    <label for="">author</label>
+                </div>
+            </div>
+        </div>
+
+        {{-- tages --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Tages
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="tages" placeholder="Hindi Title"
+                        name="tages" value="{{ old('tages') }}">
+                    <label for="">tages</label>
+                </div>
+            </div>
+        </div>
+        <div class="text-center form-action">
+            <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
         </div>
 
 	</form>
@@ -210,6 +290,19 @@
 			reader.readAsDataURL(input.files[0]);
 		}
 	}
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const titleInput = document.getElementById('name');
+        const slugInput = document.getElementById('slug');
+
+        titleInput.addEventListener('input', function () {
+            let slug = this.value.replace(/\s+/g, '-');
+            slugInput.value = slug;
+        });
+    });
 </script>
 @endsection
 

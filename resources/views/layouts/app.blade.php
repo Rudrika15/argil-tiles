@@ -40,7 +40,7 @@
             "https://www.facebook.com/argilgroup/",
             "https://www.instagram.com/argilgroup/",
             "https://www.linkedin.com/company/argilgroup/"
-          ] 
+          ]
         }
         </script>
 

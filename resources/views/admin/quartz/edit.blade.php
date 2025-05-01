@@ -45,18 +45,6 @@
 					<label for="form_firstname">Name</label>
 				</div>
 
-
-				{{-- <div class="form-label-group">
-					<input id="form_firstname" list="sizes" type="text" value="{{$data->sizes}}" name="sizes" class="form-control" placeholder="Sizes" required>
-
-					<datalist id="sizes">
-						@foreach($data1 as $data1)
-						<option value="{{$data1->size}}">{{$data1->size}}</option>
-						@endforeach
-					</datalist>
-
-					<label for="form_firstname">Sizes</label>
-				</div> --}}
                 <div class="form-label-group">
                     <select name="sizes" id="sizes" class="form-control" required>
                         <option value="" disabled selected>sizes</option>
@@ -66,26 +54,6 @@
                     </select>
                 </div>
 
-
-
-				{{-- <div class="form-label-group">
-					<input id="form_firstname" list="thicknesses" type="text" name="thicknesses" value="{{$data->thicknesses}}" class="form-control" placeholder="Thiknesses" required>
-
-					<datalist id="thicknesses">
-						<option value="20 X 30 MM">
-						<option value="30 X 40 MM">
-					</datalist>
-
-					<label for="form_firstname">Thiknesses</label>
-				</div> --}}
-                {{-- <div class="form-label-group">
-                    <select name="thicknesses" id="thicknesses" class="form-control" required>
-                        <option value="" disabled selected>Thicknesses</option>
-                        <option value="20 X 30 MM"{{ $data->thicknesses == '20 X 30 MM'?'selected':'' }}>20 X 30 MM</option>
-                        <option value="30 X 40 MM"{{ $data->thicknesses == '30 X 40 MM'?'selected':'' }}>30 X 40 MM</option>
-
-                    </select>
-                </div> --}}
                 <div class="form-label-group">
                     <select name="thicknesses" id="thicknesses" class="form-control" required>
                         <option value="" disabled selected>Thicknesses</option>
@@ -95,18 +63,6 @@
                     </select>
                 </div>
 
-
-
-				{{-- <div class="form-label-group">
-					<input id="form_firstname" type="text" list="finishType" name="finishType" value="{{$data->finishType}}" class="form-control" placeholder="Finish Type" required>
-
-					<datalist id="finishType">
-						@foreach($data2 as $data2)
-						<option value="{{$data2->type}}">{{$data2->type}}</option>
-						@endforeach
-					</datalist>
-					<label for="form_firstname">Finish Type</label>
-				</div> --}}
                 <div class="form-label-group">
                     <select name="finishType" id="finishType" class="form-control" required>
                         <option value="" disabled selected>finishType</option>
@@ -116,18 +72,6 @@
                     </select>
                 </div>
 
-
-
-				{{-- <div class="form-label-group">
-					<input id="form_firstname" type="text" list="stocks" name="stock" value="{{$data->stock}}" class="form-control" placeholder="Stock" required>
-					<datalist id="stocks">
-						@foreach($data3 as $data3)
-						<option value="{{$data3->stock}}">{{$data3->stock}}</option>
-						@endforeach
-					</datalist>
-
-					<label for="form_firstname">Stock</label>
-				</div> --}}
                 <div class="form-label-group">
                     <select name="stock" id="stock" class="form-control" required>
                         <option value="" disabled selected>stock</option>
@@ -202,10 +146,136 @@
 			</div>
 
 		</div>
-		<div class="text-center form-action">
-			<button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+         {{-- add meta propertys --}}
+         <hr class="sidebar-divider my-4">
+
+         <div class="row mb-4">
+             <h4 class="m-3">Edit Meta Propertys for Quartz Product</h4>
+         </div>
+
+         {{-- og titles --}}
+         <div class="row mb-3">
+             <div class="col-sm-12 col-lg-3 col-md-12">
+                 Og Title
+             </div>
+             <div class="col">
+                 <div class="form-label-group">
+                     <input type="text" class="form-control" id="ogTitleEng" placeholder="English Title"
+                         name="ogTitleEng" value="{{ $data4->ogTitleEng ?? '' }}">
+                     <label for="">og title</label>
+                 </div>
+             </div>
+
+         </div>
+
+         {{-- og Description --}}
+         <div class="row mb-3">
+             <div class="col-sm-12 col-lg-3 col-md-12">
+                 Og Description
+             </div>
+             <div class="col">
+                 <div class="form-label-group">
+                     <input type="text" class="form-control" id="ogDescriptionEng" placeholder="English Description"
+                         name="ogDescriptionEng" value="{{ $data4->ogDescriptionEng ?? '' }}">
+                     <label for="">og description</label>
+                 </div>
+             </div>
+
+         </div>
+
+         {{-- og image --}}
+         <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Og Image
+            </div>
+            @if(!empty($data4) && !empty($data4->ogImage))
+            <div class="col-2" id="imagepreview">
+                <img id="ogImagePreview" src="{{ asset('ogimage/'.$data4->ogImage) }}" alt="Og Image" height="100px"
+                    width="150px">
+            </div>
+               @else
+            <div class="col">
+                <div class="form">
+                    <label>Upload Image</label>
+                    <input type="file" class="form-control" id="ogImage" placeholder="" name="ogImage">
+                </div>
+            </div>
+               @endif
         </div>
 
+
+         {{-- og url --}}
+         <div class="row mb-3">
+             <div class="col-sm-12 col-lg-3 col-md-12">
+                 Og Url
+             </div>
+             <div class="col">
+                 <div class="form-label-group">
+                     <input type="text" class="form-control" id="ogUrl" placeholder="" name="ogUrl"
+                         value="{{ $data4->ogUrl ?? '' }}">
+                     <label for="">Url</label>
+                 </div>
+             </div>
+         </div>
+
+         {{-- description --}}
+         <div class="row mb-3">
+             <div class="col-sm-12 col-lg-3 col-md-12">
+                 Description
+             </div>
+             <div class="col">
+                 <div class="form-label-group">
+                     <input type="text" class="form-control" id="metadescription" placeholder="" name="metadescription"
+                         value="{{ $data4->description ?? '' }}">
+                     <label for="">description</label>
+                 </div>
+             </div>
+         </div>
+
+         {{-- keyword --}}
+         <div class="row mb-3">
+             <div class="col-sm-12 col-lg-3 col-md-12">
+                 Keyword
+             </div>
+             <div class="col">
+                 <div class="form-label-group">
+                     <input type="text" class="form-control" id="keywords" placeholder="" name="keywords"
+                         value="{{ $data4->keywords ?? '' }}">
+                     <label for="">keywords</label>
+                 </div>
+             </div>
+         </div>
+
+         {{-- author --}}
+         <div class="row mb-3">
+             <div class="col-sm-12 col-lg-3 col-md-12">
+                 Author
+             </div>
+             <div class="col">
+                 <div class="form-label-group">
+                     <input type="text" class="form-control" id="author" placeholder="" name="author"
+                         value="{{ $data4->author ?? '' }}">
+                     <label for="">author</label>
+                 </div>
+             </div>
+         </div>
+
+         {{-- tages --}}
+         <div class="row mb-3">
+             <div class="col-sm-12 col-lg-3 col-md-12">
+                 Tages
+             </div>
+             <div class="col">
+                 <div class="form-label-group">
+                     <input type="text" class="form-control" id="tages" placeholder="Hindi Title"
+                         name="tages" value="{{ $data4->tages ?? '' }}">
+                     <label for="">tages</label>
+                 </div>
+             </div>
+         </div>
+         <div class="text-center form-action">
+             <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+         </div>
 	</form>
 </div>
 </div>
@@ -222,6 +292,7 @@
 		}
 	}
 </script>
+
 @endsection
 
 

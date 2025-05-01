@@ -36,14 +36,8 @@
                 <input id="form_firstname" type="text" name="title" value="{{ $blogs->title }}" class="form-control" placeholder="Title" required>
                 <label for="form_firstname">Title</label>
             </div>
-            <div class="form-label-group">
-                <input id="form_firstname" type="text" name="slug" value="{{ $blogs->slug }}" class="form-control" placeholder="Slug" required>
-                <label for="form_firstname">Slug</label>
-            </div>
-            {{-- <div class="form-label-group">
-                <textarea id="form_firstname" name="description" class="form-control" required>{{ $blogs->description }}</textarea>
-                <label for="form_firstname">Description</label>
-            </div> --}}
+
+
             <div class="form-label-group">
                 <textarea id="form_firstname" name="description" class="form-control" placeholder="description" required>{{ $blogs->description }}</textarea>
             </div>
@@ -64,7 +58,7 @@
              <hr class="sidebar-divider my-4">
 
              <div class="row mb-4">
-                 <h4 class="m-3">Add Meta Propertys for Category</h4>
+                 <h4 class="m-3">Edit Meta Propertys for Blog</h4>
              </div>
 
              {{-- og titles --}}
@@ -79,20 +73,7 @@
                          <label for="">og title</label>
                      </div>
                  </div>
-                 {{-- <div class="col">
-                     <div class="form-label-group">
-                         <input type="text" class="form-control" id="ogTitleGuj" placeholder="Gujrati Title"
-                             name="ogTitleGuj" value="{{ $metablogs->ogTitleGuj ?? ''}}">
-                         <label for="">Gujarati</label>
-                     </div>
-                 </div>
-                 <div class="col">
-                     <div class="form-label-group">
-                         <input type="text" class="form-control" id="ogTitleHin" placeholder="Hindi Title"
-                             name="ogTitleHin" value="{{ $metablogs->ogTitleHin ?? ''}}">
-                         <label for="">Hindi</label>
-                     </div>
-                 </div> --}}
+
              </div>
 
              {{-- og Description --}}
@@ -107,20 +88,7 @@
                          <label for="">og description</label>
                      </div>
                  </div>
-                 {{-- <div class="col">
-                     <div class="form-label-group">
-                         <input type="text" class="form-control" id="ogDescriptionGuj" placeholder="Gujrati Description"
-                             name="ogDescriptionGuj" value="{{ $metablogs->ogDescriptionGuj ?? ''}}">
-                         <label for="">Gujarati</label>
-                     </div>
-                 </div>
-                 <div class="col">
-                     <div class="form-label-group">
-                         <input type="text" class="form-control" id="ogDescriptionHin" placeholder="Hindi Description"
-                             name="ogDescriptionHin" value="{{ $metablogs->ogDescriptionHin ?? ''}}">
-                         <label for="">Hindi</label>
-                     </div>
-                 </div> --}}
+
              </div>
 
              {{-- og image --}}

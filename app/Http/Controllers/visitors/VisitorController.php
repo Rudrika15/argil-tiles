@@ -161,10 +161,10 @@ class VisitorController extends Controller
         $data = Lvtproduct::orderBy('id', 'desc')->get();
         return view('visitors.products.spc products.spcproducts',compact('data'));
     }
-    public function spcproductinquiry($id){
+    public function spcproductinquiry($slug){
 
-        $data= Lvtproduct::find($id);
-        // return $data;
+        // $data= Lvtproduct::find($id);
+        $data= Lvtproduct::where('slug', $slug)->firstOrFail();
 
         return view('visitors.products.spc products.spcproductinquiry',compact('data'));
     }
@@ -174,11 +174,10 @@ class VisitorController extends Controller
         $data = Quartzproduct::orderBy('id', 'desc')->get();
         return view('visitors.products.quartz surface.quartzsurface',compact('data'));
     }
-    public function quartzinquiry($id){
+    public function quartzinquiry($slug){
 
-        $data= Quartzproduct::find($id);
-        // $data= Lvtproduct::find($id);
-        // return $data;
+        // $data= Quartzproduct::find($id);
+        $data= Quartzproduct::where('slug', $slug)->firstOrFail();
         return view('visitors.products.quartz surface.quartzsurfaceinquiry',compact('data'));
     }
 
