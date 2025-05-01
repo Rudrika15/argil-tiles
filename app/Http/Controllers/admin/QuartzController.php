@@ -7,7 +7,9 @@ use App\Models\Quartzproduct;
 use App\Models\Qsizemaster;
 use App\Models\Stock;
 use App\Models\Finishtype;
+use App\Models\MetaPropertyQuartz;
 use Validator;
+use Illuminate\Support\Str;
 
 
 class QuartzController extends Controller
@@ -40,6 +42,8 @@ class QuartzController extends Controller
 		$quartzproduct = new Quartzproduct();
 
 		$quartzproduct->name = $request->name;
+        // $quartzproduct->slug = str_replace(' ', '-', $request->slug);
+        $quartzproduct->slug = Str::slug($request->slug);
 		$quartzproduct->sizes = $request->sizes;
 		$quartzproduct->thicknesses = $request->thicknesses;
 		$quartzproduct->finishType = $request->finishType;
@@ -91,6 +95,39 @@ class QuartzController extends Controller
 
 		$quartzproduct->save();
 
+
+        $ogImageName = null;
+    if ($request->file('ogImage')) {
+        $image = $request->file('ogImage');
+
+        $ogImageName = $image->getClientOriginalName();
+
+        $image->move(public_path('ogimage/'), $ogImageName);
+    }
+
+    if (
+        $request->filled('ogTitleEng') ||
+        $request->filled('ogDescriptionEng') ||
+        $request->filled('ogUrl') ||
+        $request->filled('metadescription') ||
+        $request->filled('keywords') ||
+        $request->filled('author') ||
+        $request->filled('tages') ||
+        $request->file('ogImage')
+    ) {
+        $metaquartz = new MetaPropertyQuartz();
+        $metaquartz->quartzId = $quartzproduct->id;
+        $metaquartz->ogTitleEng = $request->ogTitleEng;
+        $metaquartz->ogDescriptionEng = $request->ogDescriptionEng;
+        $metaquartz->ogImage = $ogImageName;
+        $metaquartz->ogUrl = $request->ogUrl;
+        $metaquartz->description = $request->metadescription;
+        $metaquartz->keywords = $request->keywords;
+        $metaquartz->author = $request->author;
+        $metaquartz->tages = $request->tages;
+        $metaquartz->save();
+    }
+
         return redirect()->route('quartzshow')->with('msg', 'Record Inserted Successfully');
 	}
 
@@ -109,7 +146,8 @@ class QuartzController extends Controller
 		$data1 = Qsizemaster::all();
 		$data2 = Finishtype::all();
 		$data3 = Stock::all();
-		return view("admin.quartz.edit", compact('data', 'data1', 'data2', 'data3'));
+        $data4 = MetaPropertyQuartz::where('quartzId', $id)->first();
+		return view("admin.quartz.edit", compact('data', 'data1', 'data2', 'data3', 'data4'));
 	}
 	function editcode(Request $request)
 	{
@@ -132,6 +170,8 @@ class QuartzController extends Controller
 		$quartzproduct = Quartzproduct::find($id);
 
 		$quartzproduct->name = $request->name;
+        $quartzproduct->slug = Str::slug($request->name);
+
 		$quartzproduct->sizes = $request->sizes;
 		$quartzproduct->thicknesses = $request->thicknesses;
 		$quartzproduct->finishType = $request->finishType;
@@ -185,11 +225,54 @@ class QuartzController extends Controller
 
 		$quartzproduct->save();
 
+
+         $metaquartz = MetaPropertyQuartz::where('quartzId', $quartzproduct->id)->first();
+         if (!$metaquartz) {
+             $metaquartz = new MetaPropertyQuartz();
+             $metaquartz->quartzId = $quartzproduct->id;
+         }
+         $ogImageName = null;
+         if ($request->hasFile('ogImage')) {
+             $image = $request->file('ogImage');
+
+             $ogImageName = $image->getClientOriginalName();
+
+             $image->move(public_path('ogimage/'), $ogImageName);
+             $metaquartz->ogImage = $ogImageName;
+         }
+
+         if (
+             $request->filled('ogTitleEng') ||
+             $request->filled('ogDescriptionEng') ||
+             $request->filled('ogUrl') ||
+             $request->filled('metadescription') ||
+             $request->filled('keywords') ||
+             $request->filled('author') ||
+             $request->filled('tages') ||
+             $request->file('ogImage')
+         ) {
+
+             $metaquartz->quartzId = $quartzproduct->id;
+             $metaquartz->ogTitleEng = $request->ogTitleEng;
+             $metaquartz->ogDescriptionEng = $request->ogDescriptionEng;
+             $metaquartz->ogImage = $ogImageName;
+             $metaquartz->ogUrl = $request->ogUrl;
+             $metaquartz->description = $request->metadescription;
+             $metaquartz->keywords = $request->keywords;
+             $metaquartz->author = $request->author;
+             $metaquartz->tages = $request->tages;
+             $metaquartz->save();
+         }
+
+
+
         return redirect()->route('quartzshow')->with('msg', 'Record Update Successfully');
 	}
 	function delete($id)
 	{
+
 		$data = Quartzproduct::find($id)->delete();
+        $metaquartz = MetaPropertyQuartz::where('quartzId', $id)->delete();
         return redirect()->route('quartzshow')->with('msg', 'Data Deleted Successfully');
 	}
 }

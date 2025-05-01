@@ -35,7 +35,6 @@ class BlogController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'slug' => 'required',
             'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -52,6 +51,7 @@ class BlogController extends Controller
         $blogs = new Blog();
         $blogs->title = $request->title;
         $blogs->slug = Str::slug($request->slug);
+        // $blogs->slug = $request->slug;
         $blogs->description = $request->description;
         $blogs->image = $imageName;
         $blogs->save();
@@ -65,22 +65,6 @@ class BlogController extends Controller
         $image->move(public_path('ogimage/'), $ogImageName);
     }
 
-    // $metablogs = new MetaPropertyBlog();
-
-    // $metablogs->blogId = $blogs->id;
-    // $metablogs->ogTitleEng = $request->ogTitleEng;
-    // $metablogs->ogTitleGuj = $request->ogTitleGuj;
-    // $metablogs->ogTitleHin = $request->ogTitleHin;
-    // $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
-    // $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
-    // $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
-    // $metablogs->ogImage = $ogImageName;
-    // $metablogs->ogUrl = $request->ogUrl;
-    // $metablogs->description = $request->metadescription;
-    // $metablogs->keywords = $request->keywords;
-    // $metablogs->author = $request->author;
-    // $metablogs->tages = $request->tages;
-    // $metablogs->save();
     if (
         $request->filled('ogTitleEng') ||
         $request->filled('ogDescriptionEng') ||
@@ -135,7 +119,6 @@ class BlogController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'slug' => 'required',
             'description' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -152,7 +135,7 @@ class BlogController extends Controller
 
         $blogs->title = $request->title;
         // $blogs->slug = $request->slug;
-        $blogs->slug = Str::slug($request->slug);
+        $blogs->slug = Str::slug($request->title);
         $blogs->description = $request->description;
         $blogs->save();
 
@@ -172,22 +155,6 @@ class BlogController extends Controller
             $image->move(public_path('ogimage/'), $ogImageName);
             $metablogs->ogImage = $ogImageName;
         }
-
-
-
-        // $metablogs->blogId = $blogs->id;
-        // $metablogs->ogTitleEng = $request->ogTitleEng;
-        // $metablogs->ogTitleGuj = $request->ogTitleGuj;
-        // $metablogs->ogTitleHin = $request->ogTitleHin;
-        // $metablogs->ogDescriptionEng = $request->ogDescriptionEng;
-        // $metablogs->ogDescriptionGuj = $request->ogDescriptionGuj;
-        // $metablogs->ogDescriptionHin = $request->ogDescriptionHin;
-        // $metablogs->ogUrl = $request->ogUrl;
-        // $metablogs->description = $request->metadescription;
-        // $metablogs->keywords = $request->keywords;
-        // $metablogs->author = $request->author;
-        // $metablogs->tages = $request->tages;
-        // $metablogs->save();
 
         if (
             $request->filled('ogTitleEng') ||

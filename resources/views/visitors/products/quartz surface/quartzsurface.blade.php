@@ -82,7 +82,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
 
             @foreach ($data as $index => $item)
                 <div class="col-md-4 pt-5">
-                    <a href="{{ Route('quartzinquiry', $item->id) }}" class="text-decoration-none">
+                    <a href="{{ Route('quartzinquiry', $item->slug) }}" class="text-decoration-none">
                         <div class="card">
                             <img src="{{ asset('quartz/' . $item->mainImg) }}" class="card-img-top" alt="Tile Image" title="Tile Image"
                                 loading="lazy">

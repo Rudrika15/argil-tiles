@@ -40,7 +40,7 @@
             "https://www.facebook.com/argilgroup/",
             "https://www.instagram.com/argilgroup/",
             "https://www.linkedin.com/company/argilgroup/"
-          ] 
+          ]
         }
         </script>
 
@@ -161,12 +161,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-@yield('seosection')
-=======
     @yield('seosection')
->>>>>>> cba24da0dea22041e192cc6045813f0bb3dd2ef3
     <title>Argil Tiles</title>
     <style>
         .navbar {

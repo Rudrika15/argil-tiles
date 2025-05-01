@@ -33,17 +33,13 @@
         <form class="form-group" enctype="multipart/form-data" action="{{ route('blog.store') }}" method="post">
             @csrf
             <div class="form-label-group">
-                <input id="form_firstname" type="text" name="title" class="form-control" placeholder="Title" required>
+                <input id="title" type="text" name="title" class="form-control" placeholder="Title" required>
                 <label for="form_firstname">Title</label>
             </div>
-            <div class="form-label-group">
-                <input id="form_firstname" type="text" name="slug" class="form-control" placeholder="Slug" required>
-                <label for="form_firstname">Slug</label>
-            </div>
-            {{-- <div class="form-label-group">
-                <input id="form_firstname" type="text" name="description" class="form-control" placeholder="description" required>
-                <label for="form_firstname">description</label>
-            </div> --}}
+
+            <input type="hidden" name="slug" id="slug">
+
+
             <div class="form-label-group">
                 <textarea id="form_firstname" name="description" class="form-control" placeholder="description" required></textarea>
             </div>
@@ -66,7 +62,7 @@
             <hr class="sidebar-divider my-4">
 
             <div class="row mb-4">
-                <h4 class="m-3">Add Meta Propertys for Category</h4>
+                <h4 class="m-3">Add Meta Propertys for Blog</h4>
             </div>
 
             {{-- og titles --}}
@@ -81,20 +77,7 @@
                         <label for="">og title</label>
                     </div>
                 </div>
-                {{-- <div class="col">
-                    <div class="form-label-group">
-                        <input type="text" class="form-control" id="ogTitleGuj" placeholder="Gujrati Title"
-                            name="ogTitleGuj" value="{{ old('ogTitleGuj') }}">
-                        <label for="">Gujarati</label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-label-group">
-                        <input type="text" class="form-control" id="ogTitleHin" placeholder="Hindi Title"
-                            name="ogTitleHin" value="{{ old('ogTitleHin') }}">
-                        <label for="">Hindi</label>
-                    </div>
-                </div> --}}
+
             </div>
 
             {{-- og Description --}}
@@ -109,20 +92,7 @@
                         <label for="">og description</label>
                     </div>
                 </div>
-                {{-- <div class="col">
-                    <div class="form-label-group">
-                        <input type="text" class="form-control" id="ogDescriptionGuj" placeholder="Gujrati Description"
-                            name="ogDescriptionGuj" value="{{ old('ogDescriptionGuj') }}">
-                        <label for="">Gujarati</label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-label-group">
-                        <input type="text" class="form-control" id="ogDescriptionHin" placeholder="Hindi Description"
-                            name="ogDescriptionHin" value="{{ old('ogDescriptionHin') }}">
-                        <label for="">Hindi</label>
-                    </div>
-                </div> --}}
+
             </div>
 
             {{-- og image --}}
@@ -231,7 +201,23 @@
     </script>
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const titleInput = document.getElementById('title');
+        const slugInput = document.getElementById('slug');
+
+        titleInput.addEventListener('input', function () {
+            let slug = this.value.replace(/\s+/g, '-');
+            slugInput.value = slug;
+        });
+    });
+</script>
+
+
+
 @endsection
+
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

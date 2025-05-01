@@ -100,7 +100,7 @@ with 10+ yrs of service. Get a price quote"
 
             @foreach ($data as $index => $item)
                 <div class="col-md-4 pt-5">
-                    <a href="{{ Route('spcproductinquiry', $item->id) }}" class="text-decoration-none">
+                    <a href="{{ Route('spcproductinquiry', $item->slug) }}" class="text-decoration-none">
                         <div class="card">
                             <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top" alt="argil spc product"
                                 title="argil spc product" loading="lazy">

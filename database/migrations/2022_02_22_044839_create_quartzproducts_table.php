@@ -16,6 +16,7 @@ class CreateQuartzproductsTable extends Migration
         Schema::create('quartzproducts', function (Blueprint $table) {
             $table->id();
 			$table->string("name");
+            $table->string("slug");
 			$table->string("sizes");
 			$table->string("thicknesses");
 			$table->string("finishType");
@@ -23,7 +24,7 @@ class CreateQuartzproductsTable extends Migration
 			$table->string("primarycolors");
 			$table->string("bookmatch");
 			$table->string("mainImg");
-			$table->string("subImg1")->nullable();	
+			$table->string("subImg1")->nullable();
 			$table->string("subImg2")->nullable();
 			$table->string("subImg3")->nullable();
 			$table->string("subImg4")->nullable();

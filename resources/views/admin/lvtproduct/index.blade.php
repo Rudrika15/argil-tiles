@@ -35,6 +35,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Names</th>
+                        <th scope="col">Slug</th>
                         <th scope="col">Thicknesses</th>
                         <th scope="col">Primary Colors</th>
                         <th scope="col">Edges</th>
@@ -60,6 +61,7 @@
                     @foreach ($data as $data)
                         <tr>
                             <td>{{ $data->names }}</td>
+                            <td>{{ $data->slug }}</td>
                             <td>{{ $data->thicknesses }}</td>
                             <td>{{ $data->primarycolors }}</td>
                             <td>{{ $data->edges }}</td>
