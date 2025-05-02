@@ -2,13 +2,24 @@
 /* CSS Document */
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body{
+body {
     font-family: 'Jost', sans-serif;
     overflow-x: hidden;
 }
 
-a{transition: 0.4s;-webkit-transition: 0.4s;-ms-transition: 0.4s;-moz-transition: 0.4s;}
-.btn{transition: 0.4s;-webkit-transition: 0.4s;-ms-transition: 0.4s;-moz-transition: 0.4s;}
+a {
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -moz-transition: 0.4s;
+}
+
+.btn {
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -moz-transition: 0.4s;
+}
 
 .authincation {
     background-color: #FC7500;
@@ -19,106 +30,133 @@ a{transition: 0.4s;-webkit-transition: 0.4s;-ms-transition: 0.4s;-moz-transition
 .authincation-content {
     background: #fff;
     box-shadow: 0px 3px 15px 0px rgba(82, 63, 105, 0.15);
-	border-radius: 30px;
+    border-radius: 30px;
 }
-.form-header{margin-bottom: 35px;}
 
-.auth-form {padding: 30px 50px;}
-.auth-form .logo{margin-bottom: 1.5rem;}
-.auth-form h2{margin-bottom: .6rem;color: #333;font-weight: 600}
-.auth-form h5{color: #777}
+.form-header {
+    margin-bottom: 35px;
+}
+
+.auth-form {
+    padding: 30px 50px;
+}
+
+.auth-form .logo {
+    margin-bottom: 1.5rem;
+}
+
+.auth-form h2 {
+    margin-bottom: .6rem;
+    color: #333;
+    font-weight: 600
+}
+
+.auth-form h5 {
+    color: #777
+}
 
 .form-label-group {
-  position: relative;
-  margin-bottom: 1rem;
+    position: relative;
+    margin-bottom: 1rem;
 }
 
-.form-label-group > input,
-.form-label-group > label,
-.input-group > input,
-.input-group > label ,
-.form-label-group > select{
-  height: 3.125rem;
-  padding: .75rem;
+.form-label-group>input,
+.form-label-group>label,
+.input-group>input,
+.input-group>label,
+.form-label-group>select {
+    height: 3.125rem;
+    padding: .75rem;
 }
 
-.form-label-group > label,
-.input-group > label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  margin-bottom: 0; /* Override default `<label>` margin */
-  line-height: 1.5;
-  color: #495057;
-  pointer-events: none;
-  cursor: text; /* Match the input under the label */
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  z-index: 3;
-  transition: all .1s ease-in-out;
+.form-label-group>label,
+.input-group>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    pointer-events: none;
+    cursor: text;
+    /* Match the input under the label */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    z-index: 3;
+    transition: all .1s ease-in-out;
 }
 
 .form-label-group input::-webkit-input-placeholder {
-  color: transparent;
+    color: transparent;
 }
 
 .form-label-group input:-ms-input-placeholder {
-  color: transparent;
+    color: transparent;
 }
 
 .form-label-group input::-ms-input-placeholder {
-  color: transparent;
+    color: transparent;
 }
 
 .form-label-group input::-moz-placeholder {
-  color: transparent;
+    color: transparent;
 }
 
 .form-label-group input::placeholder {
-  color: transparent;
+    color: transparent;
 }
 
 .form-label-group input:not(:placeholder-shown) {
-  padding-top: 1.25rem;
-  padding-bottom: .25rem;
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
 }
 
-.form-label-group input:not(:placeholder-shown) ~ label {
-  padding-top: .25rem;
-  padding-bottom: .25rem;
-  font-size: 12px;
-  color: #777;
+.form-label-group input:not(:placeholder-shown)~label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
 }
+
 .form-label-group input:focus {
-  padding-top: 1.25rem;
-  padding-bottom: .25rem;
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
 }
 
-.form-label-group input:focus ~ label {
-  padding-top: .15rem;
-  padding-bottom: .25rem;
-  font-size: 11px;
-  color: #777;
+.form-label-group input:focus~label {
+    padding-top: .15rem;
+    padding-bottom: .25rem;
+    font-size: 11px;
+    color: #777;
 }
-.forgot-pass{text-align: right;}
-.forgot-pass a{color: #FC7500}
+
+.forgot-pass {
+    text-align: right;
+}
+
+.forgot-pass a {
+    color: #FC7500
+}
 
 .form-action {
-	margin-top: 25px;
-}
-.form-action .btn{
-	background-color: #FC7500;
-	border-color: #FC7500;
-	padding: .6rem 2.25rem;
-	font-weight: 500;
+    margin-top: 25px;
 }
 
-.form-action .btn:hover{
-	background-color: transparent;
-	color: #FC7500;
+.form-action .btn {
+    background-color: #FC7500;
+    border-color: #FC7500;
+    padding: .6rem 2.25rem;
+    font-weight: 500;
 }
+
+.form-action .btn:hover {
+    background-color: transparent;
+    color: #FC7500;
+}
+
 #sidebar {
     height: 100vh;
     overflow-y: auto;
