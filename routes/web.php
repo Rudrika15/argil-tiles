@@ -201,18 +201,17 @@ Route::middleware('auth:web')->group(function () {
     Route::get("stock/delete/{id}", [StockController::class, 'delete'])->name('stock.delete');
 
     //Blog
-    Route::get("blog",[BlogController::class,'index'])->name('blog');
-    Route::get("blog.create",[BlogController::class,'create'])->name('blog.create');
-    Route::post("blog.store",[BlogController::class,'store'])->name('blog.store');
-    Route::get("blog.edit/{id}",[BlogController::class,'edit'])->name('blog.edit');
-    Route::post("blog.update/{id}",[BlogController::class,'update'])->name('blog.update');
-    Route::get("blog.delete/{id}",[BlogController::class,'destroy'])->name('blog.delete');
+    Route::get("blog", [BlogController::class, 'index'])->name('blog');
+    Route::get("blog.create", [BlogController::class, 'create'])->name('blog.create');
+    Route::post("blog.store", [BlogController::class, 'store'])->name('blog.store');
+    Route::get("blog.edit/{id}", [BlogController::class, 'edit'])->name('blog.edit');
+    Route::post("blog.update/{id}", [BlogController::class, 'update'])->name('blog.update');
+    Route::get("blog.delete/{id}", [BlogController::class, 'destroy'])->name('blog.delete');
 
     // new arievels
     Route::get("newarrivalsshow", [NewArrivalsController::class, 'index'])->name('newarrivalsshow');
     Route::get("newarrivals/edit/{id}", [NewArrivalsController::class, 'edit'])->name('newarrivals.edit');
     Route::post("newarrivals/update/{id}", [NewArrivalsController::class, 'update'])->name('newarrivals.update');
-
 });
 
 
@@ -220,25 +219,25 @@ Route::middleware('auth:web')->group(function () {
 
 // ====================== visitors ======================
 
-Route::get('/',[VisitorController::class,'home']);
-Route::get('/profile',[VisitorController::class,'profile']);
-Route::get('/about',[VisitorController::class,'about']);
-Route::get('/documentaryfilm',[VisitorController::class,'documentaryfilm']);
-Route::get('/corevalues',[VisitorController::class,'corevalue']);
-Route::get('/groupcompany',[VisitorController::class,'groupcompany']);
-Route::get('/achievements',[VisitorController::class,'achievement']);
-Route::get('/plants',[VisitorController::class,'plants']);
-Route::get('/quality',[VisitorController::class,'quality']);
-Route::get('/catalogue',[VisitorController::class,'catalogue']);
-Route::get('/contact',[VisitorController::class,'contact']);
-Route::get('/spcproducts',[VisitorController::class,'spcproducts']);
-Route::get('spcproductinquiry/{slug}',[VisitorController::class,'spcproductinquiry'])->name('spcproductinquiry');
-Route::get('quartzinquiry/{slug}',[VisitorController::class,'quartzinquiry'])->name('quartzinquiry');
-// Route::get('quartzinquiry/{slug?}',[VisitorController::class,'quartzinquiry'])->name('quartzinquiry');
-Route::get('/quartzsurface',[VisitorController::class,'quartzsurface']);
-Route::get('/privacyPolicy',[VisitorController::class,'privacyPolicy']);
-Route::get('/blogs',[VisitorController::class,'blog']);
-Route::get('/blogdetails/{slug}',[VisitorController::class,'blogdetails'])->name('blogdetails');
+Route::get('/', [VisitorController::class, 'home']);
+Route::get('/profile', [VisitorController::class, 'profile']);
+Route::get('/about', [VisitorController::class, 'about']);
+Route::get('/documentaryfilm', [VisitorController::class, 'documentaryfilm']);
+Route::get('/corevalues', [VisitorController::class, 'corevalue']);
+Route::get('/groupcompany', [VisitorController::class, 'groupcompany']);
+Route::get('/achievements', [VisitorController::class, 'achievement']);
+Route::get('/plants', [VisitorController::class, 'plants']);
+Route::get('/quality', [VisitorController::class, 'quality']);
+Route::get('/catalogue', [VisitorController::class, 'catalogue']);
+Route::get('/contact', [VisitorController::class, 'contact']);
+Route::get('/spcproducts', [VisitorController::class, 'spcproducts']);
+Route::get('spcproductinquiry/{slug?}', [VisitorController::class, 'spcproductinquiry'])->name('spcproductinquiry');
+Route::get('quartzinquiry/{slug?}', [VisitorController::class, 'quartzinquiry'])->name('quartzinquiry');
+Route::get('quartzinquiry/{slug?}', [VisitorController::class, 'quartzinquiry'])->name('quartzinquiry');
+Route::get('/quartzsurface', [VisitorController::class, 'quartzsurface']);
+Route::get('/privacyPolicy', [VisitorController::class, 'privacyPolicy']);
+Route::get('/blogs', [VisitorController::class, 'blog']);
+Route::get('/blogdetails/{slug}', [VisitorController::class, 'blogdetails'])->name('blogdetails');
 
 // Route::post('/send-mail',[ContactController::class,'sendMail'])->name('send.mail');
 // Route::get('send-mail', [MailController::class, 'index']);
@@ -247,9 +246,3 @@ Route::get('/blogdetails/{slug}',[VisitorController::class,'blogdetails'])->name
 
 Route::post('/send-mail', [VisitorController::class, 'sendEmail'])->name('send.mail');
 Route::post('/send-inquiry', [VisitorController::class, 'sendinquiry'])->name('send.inquiry');
-
-
-
-
-
-
