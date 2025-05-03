@@ -96,19 +96,16 @@
                  <div class="col-sm-12 col-lg-3 col-md-12">
                      Og Image
                  </div>
-                 @if(!empty($metablogs) && !empty($metablogs->ogImage))
                  <div class="col-2" id="imagepreview">
-                     <img id="ogImagePreview" src="{{ asset('ogimage/'.$metablogs->ogImage) }}" alt="Og Image" height="100px"
+                     <img id="ogImagePreview" src="{{ !empty($metablogs) && !empty($metablogs->ogImage) ? asset('ogimage/'.$metablogs->ogImage) : asset('slider/image_default.png') }}" alt="Og Image" height="100px"
                          width="150px">
                  </div>
-                    @else
                  <div class="col">
                      <div class="form">
                          <label>Upload Image</label>
-                         <input type="file" class="form-control" id="ogImage" placeholder="" name="ogImage">
+                         <input type="file" class="form-control" id="ogImage" accept='image/*' onchange="readURL(this,'#ogImagePreview')" placeholder="" name="ogImage">
                      </div>
                  </div>
-                    @endif
              </div>
 
              {{-- og url --}}

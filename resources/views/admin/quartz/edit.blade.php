@@ -23,7 +23,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="float-left">
-				<h2>Quartz Product edit</h2>
+				<h2>Quartz Product Edit</h2>
 			</div>
 			<div class="float-right">
 				<a href="{{route('quartzshow')}}" class="btn btn-success">Back</a>
@@ -188,19 +188,16 @@
             <div class="col-sm-12 col-lg-3 col-md-12">
                 Og Image
             </div>
-            @if(!empty($data4) && !empty($data4->ogImage))
             <div class="col-2" id="imagepreview">
-                <img id="ogImagePreview" src="{{ asset('ogimage/'.$data4->ogImage) }}" alt="Og Image" height="100px"
+                <img id="ogImagePreview" src="{{ !empty($metablogs) && !empty($metablogs->ogImage) ? asset('ogimage/'.$data4->ogImage) : asset('slider/image_default.png') }}" alt="Og Image" height="100px"
                     width="150px">
             </div>
-               @else
             <div class="col">
                 <div class="form">
                     <label>Upload Image</label>
-                    <input type="file" class="form-control" id="ogImage" placeholder="" name="ogImage">
+                    <input type="file" class="form-control" id="ogImage" placeholder="" name="ogImage"  accept='image/*' onchange="readURL(this,'#ogImagePreview')">
                 </div>
             </div>
-               @endif
         </div>
 
 
