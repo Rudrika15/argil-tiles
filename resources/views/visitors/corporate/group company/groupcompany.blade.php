@@ -23,18 +23,16 @@ Excellence & Innovation">
 Argil Group, each dedicated to delivering premium artificial quartz stone
 solutions with a focus on innovation and quality.">
 
-    <link rel="canonical" href="https://argiltiles.com/groupcompany" data-
-    react-helmet="true">
+    <link rel="canonical" href="https://argiltiles.com/groupcompany" data- react-helmet="true">
     <title>Argil Group of Companies | Leaders in Quartz Manufacturing</title>
 @endsection
 @section('content')
-
-     <!-- breadcrumb -->
-     <div class="breadcrumb d-flex justify-content-between align-items-center">
+    <!-- breadcrumb -->
+    <div class="breadcrumb d-flex justify-content-between align-items-center">
         <div class="container">
 
             <div class="p-2">
-                <h1 class="display-6 fw-bold">Home / groupCompany</h1>
+                <h1 class="display-6 fw-bold">Home / Group Company</h1>
             </div>
         </div>
     </div>
@@ -57,7 +55,8 @@ solutions with a focus on innovation and quality.">
 
             </div>
             <div class="col-md-6 text-center mt-5">
-                <img src="{{ asset('assets/asset/groupcompanyimage.png')}}" alt="argil groupcompany" title="argil groupcompany" loading="lazy" class="img-fluid w-75">
+                <img src="{{ asset('assets/asset/groupcompanyimage.png') }}" alt="argil groupcompany"
+                    title="argil groupcompany" loading="lazy" class="img-fluid w-75">
             </div>
 
             <div class="col-md-12 pt-5">

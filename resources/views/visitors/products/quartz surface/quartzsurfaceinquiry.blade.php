@@ -45,7 +45,6 @@
 
         }
         </script>
-
 @endsection
 @section('content')
     <!-- breadcrumb -->
@@ -170,38 +169,38 @@
             <div class="carousel-inner">
                 @if ($data->mainImg)
                     <div class="carousel-item active">
-                        <img src="{{ asset('quartz/' . $data->mainImg) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->mainImg) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
                 @if ($data->subImg1)
                     <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg1) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->subImg1) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
                 @if ($data->subImg2)
                     <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg2) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->subImg2) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
                 @if ($data->subImg3)
                     <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg3) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->subImg3) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
                 @if ($data->subImg4)
                     <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg4) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->subImg4) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
                 @if ($data->subImg5)
                     <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg5) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->subImg5) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
             </div>
@@ -349,34 +348,38 @@
 
             <!-- PRODUCT INQUIRY form -->
             <div class="col-12 col-md-8 col-lg-6 mb-4">
-                    <h3><i class="bi bi-file-earmark-text"></i> Product Inquiry</h3>
+                <h3><i class="bi bi-file-earmark-text"></i> Product Inquiry</h3>
 
-                    <form class="mt-3" id="contact-form" method="POST">
-                        @csrf
-                        {{-- <input type="hidden" name="product_id" value="{{ $data->id }}"> --}}
-                        <input type="hidden" name="product_name" value="{{ $data->name }}">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingName" placeholder="Your Name" name="form_name" required>
-                            <label for="floatingName">Your Name</label>
-                        </div>
+                <form class="mt-3" id="contact-form" method="POST">
+                    @csrf
+                    {{-- <input type="hidden" name="product_id" value="{{ $data->id }}"> --}}
+                    <input type="hidden" name="product_name" value="{{ $data->name }}">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingName" placeholder="Your Name"
+                            name="form_name" required>
+                        <label for="floatingName">Your Name</label>
+                    </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="form_email" required>
-                            <label for="floatingEmail">Email</label>
-                        </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com"
+                            name="form_email" required>
+                        <label for="floatingEmail">Email</label>
+                    </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" id="floatingContact" placeholder="Contact Number" name="form_phone" required>
-                            <label for="floatingContact">Contact Number</label>
-                        </div>
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="floatingContact" placeholder="Contact Number"
+                            name="form_phone" required>
+                        <label for="floatingContact">Contact Number</label>
+                    </div>
 
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="floatingMessage" name="form_message" placeholder="Your Message" style="height: 150px;" required></textarea>
-                            <label for="floatingMessage">Your Message</label>
-                        </div>
-                        <input type="hidden" name="product_details" value="quartz product">
-                        <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
-                    </form>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="floatingMessage" name="form_message" placeholder="Your Message"
+                            style="height: 150px;" required></textarea>
+                        <label for="floatingMessage">Your Message</label>
+                    </div>
+                    <input type="hidden" name="product_details" value="quartz product">
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+                </form>
 
             </div>
 
