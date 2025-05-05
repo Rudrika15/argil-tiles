@@ -3,8 +3,20 @@
     --secondary-color: #fff;
 }
 
+
+@font-face {
+    font-family: 'Avenir';
+    src: URL('../fonts/Avenir.ttc') format('truetype');
+}
+
+@font-face {
+    font-family: 'Hinted';
+    src: URL('../fonts/hinted-Adriatic-Medium.ttf') format('truetype');
+}
+
+
 body {
-    font-family: 'Hinted Adriatic', sans-serif;
+    font-family: Avenir,'Hinted Adriatic', sans-serif;
 }
 
 
@@ -131,3 +143,4 @@ body {
     /* Optional: change text color */
     border-radius: 10px 0px 10px 0px;
 }
+

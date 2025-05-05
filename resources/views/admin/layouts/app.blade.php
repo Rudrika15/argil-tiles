@@ -84,19 +84,23 @@
 
                 <!-- Products -->
                 <li class="nav-item">
-                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#productsMenu" role="button" aria-expanded="false" aria-controls="productsMenu">
+                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse"
+                        href="#productsMenu" role="button" aria-expanded="false" aria-controls="productsMenu">
                         <span><i class="bi bi-box2-fill"></i> Products</span>
                         <i class="bi bi-chevron-down small"></i>
                     </a>
-                    <div class="collapse {{ request()->routeIs('wallshow') || request()->routeIs('quartzshow') || request()->routeIs('lvtshow') ? 'show' : '' }}" id="productsMenu" data-parent="#sidebarAccordion">
+                    <div class="collapse {{ request()->routeIs('lvtcreate') || request()->routeIs('lvtshow') || request()->routeIs('quartzshow') || request()->routeIs('quartz.edit') || request()->routeIs('quartzcreate') || request()->routeIs('lvt.edit') ? 'show' : '' }}"
+                        id="productsMenu" data-parent="#sidebarAccordion">
                         <ul class="nav flex-column ml-3">
-                            <li class="nav-item {{ request()->routeIs('wallshow') ? 'active' : '' }}">
+                            {{-- <li class="nav-item {{ request()->routeIs('wallshow.*') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('wallshow') }}">Wall</a>
-                            </li>
-                            <li class="nav-item {{ request()->routeIs('quartzshow') ? 'active' : '' }}">
+                            </li> --}}
+                            <li
+                                class="nav-item {{ request()->routeIs('quartzshow') || request()->routeIs('quartz.edit') || request()->routeIs('quartzcreate') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('quartzshow') }}">Quartz</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('lvtshow') ? 'active' : '' }}">
+                            <li
+                                class="nav-item  {{ request()->routeIs('lvtcreate') || request()->routeIs('lvt.edit') || request()->routeIs('lvtshow') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('lvtshow') }}">SPC Products</a>
                             </li>
                         </ul>
@@ -105,11 +109,13 @@
 
                 <!-- Inquiry -->
                 <li class="nav-item">
-                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#inquiryMenu" role="button" aria-expanded="false" aria-controls="inquiryMenu">
+                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse"
+                        href="#inquiryMenu" role="button" aria-expanded="false" aria-controls="inquiryMenu">
                         <span><i class="bi bi-chat-left-quote"></i> Inquiry</span>
                         <i class="bi bi-chevron-down small"></i>
                     </a>
-                    <div class="collapse {{ request()->routeIs('inquiryshow') || request()->routeIs('contactshow') ? 'show' : '' }}" id="inquiryMenu" data-parent="#sidebarAccordion">
+                    <div class="collapse {{ request()->routeIs('inquiryshow') || request()->routeIs('contactshow') ? 'show' : '' }}"
+                        id="inquiryMenu" data-parent="#sidebarAccordion">
                         <ul class="nav flex-column ml-3">
                             <li class="nav-item {{ request()->routeIs('inquiryshow') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('inquiryshow') }}">Inquiry</a>
@@ -123,13 +129,16 @@
 
                 <!-- General Section -->
                 <li class="nav-item">
-                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#generalMenu" role="button" aria-expanded="false" aria-controls="generalMenu">
+                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse"
+                        href="#generalMenu" role="button" aria-expanded="false" aria-controls="generalMenu">
                         <span><i class="bi bi-sliders"></i> General</span>
                         <i class="bi bi-chevron-down small"></i>
                     </a>
-                    <div class="collapse {{ request()->routeIs('catelogueshow') ? 'show' : '' }}" id="generalMenu" data-parent="#sidebarAccordion">
+                    <div class="collapse {{ request()->routeIs('cateloguecreate') || request()->routeIs('catelogue.edit') || request()->routeIs('catelogueshow') ? 'show' : '' }}"
+                        id="generalMenu" data-parent="#sidebarAccordion">
                         <ul class="nav flex-column ml-3">
-                            <li class="nav-item {{ request()->routeIs('catelogueshow') ? 'active' : '' }}">
+                            <li
+                                class="nav-item {{ request()->routeIs('cateloguecreate') || request()->routeIs('catelogue.edit') || request()->routeIs('catelogueshow') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('catelogueshow') }}">Catalogue</a>
                             </li>
                         </ul>
@@ -138,40 +147,42 @@
 
                 <!-- Setup Section -->
                 <li class="nav-item">
-                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#setupMenu" role="button" aria-expanded="false" aria-controls="setupMenu">
+                    <a class="nav-link d-flex justify-content-between align-items-center" data-toggle="collapse"
+                        href="#setupMenu" role="button" aria-expanded="false" aria-controls="setupMenu">
                         <span><i class="bi bi-gear-wide-connected"></i> Setup</span>
                         <i class="bi bi-chevron-down small"></i>
                     </a>
-                    <div class="collapse {{ request()->routeIs('slidershow') || request()->routeIs('homeshow') || request()->routeIs('finishtypeshow') || request()->routeIs('designtypeshow') || request()->routeIs('qsizeshow') || request()->routeIs('wsizeshow') || request()->routeIs('ssizeshow') || request()->routeIs('stockshow') || request()->routeIs('blog') || request()->routeIs('newarrivalsshow') ? 'show' : '' }}" id="setupMenu" data-parent="#sidebarAccordion">
+                    <div class="collapse {{ request()->routeIs('slidershow') || request()->routeIs('slidercreate') || request()->routeIs('slider.edit') || request()->routeIs('homeshow') || request()->routeIs('homecreate') || request()->routeIs('home.edit') || request()->routeIs('finishtypeshow') || request()->routeIs('finishtypecreate') || request()->routeIs('finishtype.edit') || request()->routeIs('designtypeshow') || request()->routeIs('designtypecreate') || request()->routeIs('designtype.edit') || request()->routeIs('qsizeshow') || request()->routeIs('qsizecreate') || request()->routeIs('qsize.edit') || request()->routeIs('wsizeshow') || request()->routeIs('wsizecreate') || request()->routeIs('wsize.edit') || request()->routeIs('ssizeshow') || request()->routeIs('ssizecreate') || request()->routeIs('ssize.edit') || request()->routeIs('stockshow') || request()->routeIs('stockcreate') || request()->routeIs('stock.edit') || request()->routeIs('blog') || request()->routeIs('blog.create') || request()->routeIs('blog.edit') || request()->routeIs('newarrivalsshow') || request()->routeIs('newarrivals.edit') ? 'show' : '' }}"
+                        id="setupMenu" data-parent="#sidebarAccordion">
                         <ul class="nav flex-column ml-3">
-                            <li class="nav-item {{ request()->routeIs('slidershow') ? 'active' : '' }}">
+                            <li class="nav-item {{ request()->routeIs('slidershow') || request()->routeIs('slidercreate') || request()->routeIs('slider.edit')  ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('slidershow') }}">Slider</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('homeshow') ? 'active' : '' }}">
+                            <li class="nav-item {{  request()->routeIs('homeshow') || request()->routeIs('homecreate') || request()->routeIs('home.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('homeshow') }}">Home</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('finishtypeshow') ? 'active' : '' }}">
+                            <li class="nav-item {{  request()->routeIs('finishtypeshow') || request()->routeIs('finishtypecreate') || request()->routeIs('finishtype.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('finishtypeshow') }}">Finish Type</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('designtypeshow') ? 'active' : '' }}">
+                            <li class="nav-item {{ request()->routeIs('designtypeshow') || request()->routeIs('designtypecreate') || request()->routeIs('designtype.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('designtypeshow') }}">Design Type</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('qsizeshow') ? 'active' : '' }}">
+                            <li class="nav-item {{ request()->routeIs('qsizeshow') || request()->routeIs('qsizecreate') || request()->routeIs('qsize.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('qsizeshow') }}">Q-size</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('wsizeshow') ? 'active' : '' }}">
+                            <li class="nav-item {{  request()->routeIs('wsizeshow') || request()->routeIs('wsizecreate') || request()->routeIs('wsize.edit')  ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('wsizeshow') }}">W-size</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('ssizeshow') ? 'active' : '' }}">
+                            <li class="nav-item {{ request()->routeIs('ssizeshow') || request()->routeIs('ssizecreate') || request()->routeIs('ssize.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('ssizeshow') }}">SPC-size</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('stockshow') ? 'active' : '' }}">
+                            <li class="nav-item {{ request()->routeIs('stockshow') || request()->routeIs('stockcreate') || request()->routeIs('stock.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('stockshow') }}">Stock</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('blog') ? 'active' : '' }}">
+                            <li class="nav-item {{  request()->routeIs('blog') || request()->routeIs('blog.create') || request()->routeIs('blog.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('blog') }}">Blog</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('newarrivalsshow') ? 'active' : '' }}">
+                            <li class="nav-item {{ request()->routeIs('newarrivalsshow') || request()->routeIs('newarrivals.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('newarrivalsshow') }}">New Arrivals</a>
                             </li>
                         </ul>
@@ -219,41 +230,42 @@
             });
         });
     </script>
-     {{-- SweetAlert2 toast notification code --}}
-     @if (Session::has('msg'))
-     <script>
-         Swal.fire({
-             icon: "{{ Session::get('msg_type') ?? 'success' }}", // You can pass 'msg_type' to change the icon dynamically
-             title: "{{ Session::get('msg') }}",
-             toast: true,
-             position: 'top-right',
-             showConfirmButton: false,
-             timer: 3000,
-             timerProgressBar: true
-         });
-     </script>
- @endif
+    {{-- SweetAlert2 toast notification code --}}
+    @if (Session::has('msg'))
+        <script>
+            Swal.fire({
+                icon: "{{ Session::get('msg_type') ?? 'success' }}", // You can pass 'msg_type' to change the icon dynamically
+                title: "{{ Session::get('msg') }}",
+                toast: true,
+                position: 'top-right',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true
+            });
+        </script>
+    @endif
 
 
-  {{-- sweet alert delete code --}}
-  <script>
-     function openDeleteModal(url) {
-         Swal.fire({
-             title: 'Are you sure you want to delete it?',
-             text: "You won't be able to revert this!",
-             icon: 'warning',
-             showCancelButton: true,
-             confirmButtonColor: '#d33',
-             cancelButtonColor: '#6e7881',
-             confirmButtonText: 'Yes, Delete it!',
-         }).then((result) => {
-             if (result.isConfirmed) {
-                 // Redirect to the delete route
-                 window.location.href = url;
-             }
-         });
-     }
-    //  <script src="{{ asset('assetbackend/js/jquery-3.5.1.slim.min.js') }}"></script>
+    {{-- sweet alert delete code --}}
+    <script>
+        function openDeleteModal(url) {
+            Swal.fire({
+                title: 'Are you sure you want to delete it?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#6e7881',
+                confirmButtonText: 'Yes, Delete it!',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirect to the delete route
+                    window.location.href = url;
+                }
+            });
+        }
+        //  <script src="{{ asset('assetbackend/js/jquery-3.5.1.slim.min.js') }}">
+    </script>
     <script src="{{ asset('assetbackend/js/popper.min.js') }}"></script>
     <script src="{{ asset('assetbackend/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assetbackend/js/script.js') }}"></script>
@@ -263,7 +275,7 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
     </script>
 
-     <script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.0/js/dataTables.bootstrap4.min.js"></script>
 
 
@@ -272,7 +284,7 @@
             $('#dataTable').DataTable();
         });
     </script>
- </script>
+    </script>
 
 </body>
 

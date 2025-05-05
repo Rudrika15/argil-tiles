@@ -94,7 +94,6 @@ with 10+ yrs of service. Get a price quote"
             </div>
         </div>
 
-
         <div class="row pb-5">
             <h2 class="text-center fw-bold pt-5">SPC Flooring Tiles</h2>
 

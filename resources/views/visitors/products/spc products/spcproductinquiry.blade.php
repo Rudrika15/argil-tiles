@@ -16,7 +16,38 @@
 
         <link rel="canonical" href="{{ url()->current() }}">
 
-    <title>SPC Product Inquiry | Premium SPC Flooring Solutions by Argil</title>
+    <title> {{$data->names}} | Premium SPC Flooring Solutions by Argil</title>
+
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "name": "{{ $data->names }}",
+          "image": ["{{ asset('spc/' . $data->mainImg) }}"],
+          "description": " Thickness : {{ $data->thicknesses }} , Primary color : {{ $data->primarycolors }} ",
+          "brand": {
+            "@type": "Brand",
+            "name": "Argil Group"
+          },
+          "review": [
+
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Chandan Gupta"
+            },
+            "datePublished": "{{ $data->created_at->toDateString() }}",
+            "reviewBody": "
+            Thrilled with the SPC flooring from Argil. It has a clean, stylish appearance and feels incredibly sturdy underfoot. It’s transformed our room with a modern touch and is super low-maintenance. Definitely recommend!"
+          }
+          ]
+
+        }
+        </script>
+
+
 @endsection
 @section('content')
     {{-- <!-- page title -->
