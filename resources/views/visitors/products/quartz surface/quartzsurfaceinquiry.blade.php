@@ -59,83 +59,6 @@
     </div>
     <!-- breadcrumb -->
 
-
-    {{-- <div class="container-fluid">
-        <div id="carousel-example-generic" class="carousel slide quartzinquiry-image" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                @if ($data->mainImg)
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                @endif
-                @if ($data->subImg1)
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                @endif
-                @if ($data->subImg2)
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                @endif
-                @if ($data->subImg3)
-                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                @endif
-                @if ($data->subImg4)
-                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                @endif
-                @if ($data->subImg5)
-                    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-                @endif
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                @if ($data->mainImg)
-                    <div class="item active">
-                        <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="quartzsurface tiles image"
-                            title="quartzsurface tiles image" class="img-responsive carousel-image" width="100%"
-                            height="20px">
-                    </div>
-                @endif
-                @if ($data->subImg1)
-                    <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg1) }}" alt="quartzsurface tiles image"
-                            title="quartzsurface tiles image" class="img-responsive carousel-image">
-                    </div>
-                @endif
-                @if ($data->subImg2)
-                    <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg2) }}" alt="quartzsurface tiles image"
-                            title="quartzsurface tiles image" class="img-responsive carousel-image">
-                    </div>
-                @endif
-                @if ($data->subImg3)
-                    <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg3) }}" alt="quartzsurface tiles image"
-                            title="quartzsurface tiles image" class="img-responsive carousel-image">
-                    </div>
-                @endif
-                @if ($data->subImg4)
-                    <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg4) }}" alt="quartzsurface tiles image"
-                            title="quartzsurface tiles image" class="img-responsive carousel-image">
-                    </div>
-                @endif
-                @if ($data->subImg5)
-                    <div class="item">
-                        <img src="{{ asset('quartz/' . $data->subImg5) }}" alt="quartzsurface tiles image"
-                            title="quartzsurface tiles image" class="img-responsive carousel-image">
-                    </div>
-                @endif
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div> --}}
     <div class="container-fluid">
         <div id="carouselExample" class="carousel slide quartzinquiry-image" data-bs-ride="carousel">
             <!-- Indicators -->
@@ -219,89 +142,10 @@
     </div>
 
 
-    {{-- <div class="container">
-        <div class="row">
-            <div class="mt-5">
-                <h3><i class="bi bi-file-earmark-text"></i> Product Information</h3>
-            </div>
-
-            <div class="col-md-3 col-sm-3 border border-1 border-dark p-3 rounded">
-                <h4 class="pt-2">SPACES</h4>
-                <h4 class="pt-1">Primary Color :</h4>
-                <p>{{ $data->primarycolors }}</p>
-                <h4>Stock :</h4>
-                <p>{{ $data->stock }}</p>
-                <h4>Book Match :</h4>
-                <p>{{ $data->bookmatch }}</p>
-                <h4>Available Finish :</h4>
-                <p>{{ $data->finishType }}</p>
-                <h4 class="pt-2">SIZES</h4>
-                <h4 class="pt-1">Thickness :</h4>
-                <p>{{ $data->thicknesses }}</p>
-                <h4>Slab Size :</h4>
-                <p>{{ $data->sizes }}</p>
-            </div>
-
-
-
-            <div class="col-md-3 col-sm-3 border border-1 border-dark p-3 rounded mb-4 ms-3">
-                <h4 class="pt-2">APPLICATIONS</h4>
-
-                <h4 class="pt-1">Flooring :</h4>
-                <p>Residential <i class="bi bi-check-lg text-success"></i></p>
-                <p>Commercial <i class="bi bi-check-lg text-success"></i></p>
-
-                <h4>Counters :</h4>
-                <p>Residential <i class="bi bi-check-lg text-success"></i></p>
-                <p>Commercial <i class="bi bi-check-lg text-success"></i></p>
-
-                <h4>Wall :</h4>
-                <p>Residential <i class="bi bi-check-lg text-success"></i></p>
-                <p>Commercial <i class="bi bi-check-lg text-success"></i></p>
-
-                <h4>Other :</h4>
-                <p>Residential <i class="bi bi-check-lg text-success"></i></p>
-                <p>Commercial <i class="bi bi-x-lg text-danger"></i></p> <!-- Cross icon here -->
-            </div>
-
-            <div class="col-md-5 col-sm-5 ms-5">
-                <h3><i class="bi bi-file-earmark-text"></i> Product Inquiry</h3>
-
-                <form class="mt-3">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" placeholder="Your Name" required>
-                        <label for="floatingName">Your Name</label>
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com"
-                            required>
-                        <label for="floatingEmail">Email</label>
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        <input type="tel" class="form-control" id="floatingContact" placeholder="Contact Number"
-                            required>
-                        <label for="floatingContact">Contact Number</label>
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" id="floatingMessage" placeholder="Your Message" style="height: 150px;" required></textarea>
-                        <label for="floatingMessage">Your Message</label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
-                </form>
-
-            </div>
-
-        </div>
-    </div> --}}
-
     <div class="container">
         <div class="row">
             <div class="col-12 mt-5 mb-4">
-                <h3><i class="bi bi-file-earmark-text"></i> Product Information</h3>
+                <h2 class="fw-bold"><i class="bi bi-file-earmark-text"></i> Product Information</h2>
             </div>
 
             <!-- SPACES box -->
@@ -349,29 +193,30 @@
 
             <!-- PRODUCT INQUIRY form -->
             <div class="col-12 col-md-8 col-lg-6 mb-4">
-                    <h3><i class="bi bi-file-earmark-text"></i> Product Inquiry</h3>
+                    <h2 class="fw-bold"><i class="bi bi-file-earmark-text"></i> Product Inquiry</h2>
 
                     <form class="mt-3" id="contact-form" method="POST">
                         @csrf
                         {{-- <input type="hidden" name="product_id" value="{{ $data->id }}"> --}}
                         <input type="hidden" name="product_name" value="{{ $data->name }}">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingName" placeholder="Your Name" name="form_name" required>
+                            <input type="text" class="form-control" id="floatingName" placeholder="Your Name" name="form_name" required oninvalid="this.setCustomValidity('The name field is required.')" oninput="this.setCustomValidity('')">
                             <label for="floatingName">Your Name</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="form_email" required>
+                            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="form_email" required oninvalid="this.setCustomValidity('The email field is required.')" oninput="this.setCustomValidity('')">
                             <label for="floatingEmail">Email</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" id="floatingContact" placeholder="Contact Number" name="form_phone" required>
+                            <input type="tel" class="form-control" id="floatingContact" placeholder="Contact Number" name="form_phone" required oninvalid="this.setCustomValidity('The contact field is required.')" oninput="this.setCustomValidity('')">
                             <label for="floatingContact">Contact Number</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="floatingMessage" name="form_message" placeholder="Your Message" style="height: 150px;" required></textarea>
+                            <textarea class="form-control" id="floatingMessage" name="form_message" placeholder="Your Message" style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.
+')" oninput="this.setCustomValidity('')"></textarea>
                             <label for="floatingMessage">Your Message</label>
                         </div>
                         <input type="hidden" name="product_details" value="quartz product">

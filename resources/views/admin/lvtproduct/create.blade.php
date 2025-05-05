@@ -189,11 +189,11 @@
              <div class="col-sm-12 col-lg-3 col-md-12">
                  Og Image
              </div>
-             <div class="col-2" id="imagepreview">
+             <div class="col-md-2" id="imagepreview">
                  <img id="ogImagePreview" src="{{ asset('slider/image_default.png') }}" alt="Og Image"  height="100px"
                      width="150px">
              </div>
-             <div class="col">
+             <div class="col-md-7">
                  <div class="form">
                      <label>Upload Image</label>
                      <input type="file" class="form-control" id="ogImage" placeholder="" accept='image/*' onchange="readURL(this,'#ogImagePreview')" name="ogImage">

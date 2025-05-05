@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="mt-3" >Philosophy</h4 class="mt-3" >
+                <h2 class="mt-3 fw-bold" >Philosophy</h2 class="mt-3" >
                 <p class="text-justify">Mahadev built the Argil Ceramics app as a Free app. This SERVICE is
                     provided by Mahadev at no cost and is intended for use as is. This page is used to inform visitors
                     regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided
@@ -41,7 +41,7 @@
                     Conditions, which is accessible at Argil Ceramics unless otherwise defined in this Privacy Policy.</p>
             </div>
             <div class="col-md-12">
-                <h4 class="mt-3" >Information Collection and Use</h4 class="mt-3" >
+                <h2 class="mt-3 fw-bold">Information Collection and Use</h2 class="mt-3" >
                 <p class="text-justify">For a better experience, while using our Service, I may require you to
                     provide us with certain personally identifiable information, including but not limited to Wall Tiles,
                     Quartz, Quartz Surface, Ceramics. The information that I request will be retained on your device and is
@@ -49,7 +49,7 @@
                     to identify you. Link to privacy policy of third party service providers used by the app</p>
             </div>
             <div class="col-md-12">
-                <h4 class="mt-3" >Log Data</h4 class="mt-3" >
+                <h2 class="mt-3 fw-bold">Log Data</h2 class="mt-3" >
                 <p class="text-justify">I want to inform you that whenever you use my Service,
                     in a case of an
                     error in the app I collect data and information (through third party products) on your phone called Log
@@ -58,7 +58,7 @@
                     date of your use of the Service, and other statistics.</p>
             </div>
             <div class="col-md-12">
-                <h4 class="mt-3" >Cookies</h4 class="mt-3" >
+                <h2 class="mt-3 fw-bold">Cookies</h2 class="mt-3" >
                 <p class="text-justify">Cookies are files with a small amount of data that are
                     commonly used as
                     anonymous unique identifiers. These are sent to your browser from the websites that you visit and are
@@ -69,7 +69,7 @@
                     of this Service.</p>
             </div>
             <div class="col-md-12">
-                <h4 class="mt-3" >Service Providers</h4 class="mt-3" >
+                <h2 class="mt-3 fw-bold">Service Providers</h2 class="mt-3" >
                 <p class="text-justify">I may employ third-party companies and individuals due
                     to the following
                     reasons: To facilitate our Service;To provide the Service on our behalf;To perform Service-related
@@ -80,7 +80,7 @@
                 </p>
             </div>
             <div class="col-md-12">
-                <h4 class="mt-3" >Security</h4 class="mt-3" >
+                <h2 class="mt-3 fw-bold">Security</h2 class="mt-3" >
                 <p class="text-justify">I value your trust in providing us your Personal
                     Information, thus we are
                     striving to use commercially acceptable means of protecting it. But remember that no method of
@@ -90,7 +90,7 @@
                 </p>
             </div>
             <div class="col-md-12">
-                <h4 class="mt-3" >Links to Other Sites</h4 class="mt-3" >
+                <h2 class="mt-3 fw-bold">Links to Other Sites</h2 class="mt-3" >
                 <p class="text-justify">This Service may contain links to other sites. If you
                     click on a
                     third-party link, you will be directed to that site. Note that these external sites are not operated by
@@ -100,8 +100,8 @@
                 </p>
             </div>
             <div class="col-md-12">
-                <h4 class="mt-3" >Children’s Privacy
-                </h4 class="mt-3" >
+                <h2 class="mt-3 fw-bold">Children’s Privacy
+                </h2 class="mt-3" >
                 <p class="text-justify">These Services do not address anyone under the age of
                     13. I do not
                     knowingly collect personally identifiable information from children under 13. In the case I discover
@@ -111,8 +111,8 @@
                 </p>
             </div>
             <div class="col-md-12">
-                <h4 class="mt-3" >Changes to This Privacy Policy
-                </h4 class="mt-3" >
+                <h2 class="mt-3 fw-bold">Changes to This Privacy Policy
+                </h2 class="mt-3" >
                 <p class="text-justify">I may update our Privacy Policy from time to time.
                     Thus, you are advised
                     to review this page periodically for any changes. I will notify you of any changes by posting the new
@@ -121,8 +121,8 @@
                 </p>
             </div>
             <div class="col-md-12">
-                <h4 class="mt-3" >Contact Us
-                </h4 class="mt-3" >
+                <h2 class="mt-3 fw-bold">Contact Us
+                </h2 class="mt-3" >
                 <p class="text-justify">If you have any questions or suggestions about my
                     Privacy Policy, do not
                     hesitate to contact me at +91 98252 11465.

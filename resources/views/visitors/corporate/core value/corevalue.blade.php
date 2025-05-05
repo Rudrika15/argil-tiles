@@ -42,7 +42,7 @@ excellence in quartz stone manufacturing.">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2 class="pt-3">Philosophy</h2>
+                <h2 class="pt-3 fw-bold">Philosophy</h2>
 
                 <p class="pt-3 text-justify">Since the inception of the first company the Prajapat Tiles company and
                     subsequent development in to a number of other manufacturing units and brands, the group has
@@ -66,7 +66,7 @@ excellence in quartz stone manufacturing.">
 
             <div class="col-md-12 pt-4">
 
-                <h2>Mission</h2>
+                <h2 class="fw-bold">Mission</h2>
                 <p class="text-justify">
                     To excel each company under ARGIL Group in their product and service to be at the top level.
                 </p>

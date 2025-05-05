@@ -48,7 +48,7 @@ Get a price quote "
         <div class="container">
             <div class="row">
                 <div class="col-md-8 pt-5">
-                    <h1>Artificial Quartz Stone Slab Manufacturers</h1>
+                    <h2 class="fw-bold">Artificial Quartz Stone Slab Manufacturers</h2>
                     <p>Argil, where we have travelled from Tradition to technology, we feel the journey is growing longer
                         and better with every passing day.
                     </p>
@@ -84,7 +84,7 @@ Get a price quote "
         <!-- Product Section -->
         <div class="container">
             <div class="row pt-5">
-                <h2 class="text-center">India's Best Quartz Surface and SPC Products Suppliers</h2>
+                <h2 class="text-center fw-bold">India's Best Quartz Surface and SPC Products Suppliers</h2>
             </div>
             <div class="row pt-5">
                 <div class="col-md-4 text-center offset-md-2">

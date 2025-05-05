@@ -1,7 +1,7 @@
  <!-- Why Choose Us -->
  <div class="container-fluid py-5 parallax" style="background-image: url(./assets/asset/home-why-choose.jpg); ">
     <div class="row pt-5">
-        <h2 class="text-center text-white">Why Choose Argil Group?</h2>
+        <h2 class="text-center text-white fw-bold">Why Choose Argil Group?</h2>
     </div>
     <div class="row text-center pt-5">
         <div class="col">

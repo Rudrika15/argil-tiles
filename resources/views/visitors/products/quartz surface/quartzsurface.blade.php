@@ -54,7 +54,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     class="img-fluid w-75 mb-5 mt-4">
             </div>
             <div class="col-md-6">
-                <h3 class="mt-5">overview</h3>
+                <h2 class="mt-5 fw-bold">Overview</h2>
                 <p class="text-justify">Composite or engineered quartz is a very solid material that resembles real granite
                     in
                     both look and
@@ -105,7 +105,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center fw-bold pt-5">Advantages of Artifical Quartz Stones</h3>
+                <h2 class="text-center fw-bold pt-5">Advantages of Artifical Quartz Stones</h2>
                 <p class="text-center mt-4">
                     Artificial quartz stones are manufactured from natural quartz crystals that are bound together with the
                     help of a binding resin, as compared with natural quartz stones, which are carved from pure sandstone,
@@ -182,7 +182,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
 
     <div class="container">
         <div class="row pt-4">
-            <h3 class="text-center fw-bold pt-2">Uses and Applications of Quartz Stones</h3>
+            <h2 class="text-center fw-bold pt-2">Uses and Applications of Quartz Stones</h2>
             <p class="text-center pt-2">There are a number of usage and applications of artificial quartz stones which is
                 why
                 they
@@ -303,7 +303,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     </div>
 
     <div class="container my-5">
-        <h2 class="text-center mb-4">FAQs</h2>
+        <h2 class="text-center mb-4 fw-bold">FAQs</h2>
 
         <div class="accordion" id="accordionExample">
 
@@ -552,7 +552,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     class="img-fluid mb-5">
             </div>
             <div class="col-md-6">
-                <h2>Let's Be in Touch !!!
+                <h2 class="fw-bold">Let's Be in Touch !!!
                 </h2>
                 {{-- <form>
                     <div class="form-floating mb-3">
@@ -582,25 +582,26 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                 <form method="POST" id="contact-form">
                     @csrf
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" name="form_name" placeholder="Your Name" required>
+                        <input type="text" class="form-control" id="floatingName" name="form_name" placeholder="Your Name" required oninvalid="this.setCustomValidity('The name field is required.')" oninput="this.setCustomValidity('')">
                         <label for="floatingName">Your Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="floatingEmail" name="form_email" placeholder="name@example.com"
-                            required>
+                        required oninvalid="this.setCustomValidity('The email field is required.')" oninput="this.setCustomValidity('')">
                         <label for="floatingEmail">Email</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <input type="tel" class="form-control" id="floatingContact" name="form_phone" placeholder="Contact Number"
-                            required>
+                        required oninvalid="this.setCustomValidity('The contact field is required.')" oninput="this.setCustomValidity('')">
                         <label for="floatingContact">Contact Number</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <textarea class="form-control" id="floatingMessage" placeholder="Your Message" name="form_message"
-                            style="height: 150px;" required></textarea>
+                            style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.
+')" oninput="this.setCustomValidity('')"></textarea>
                         <label for="floatingMessage">Your Message</label>
                     </div>
 

@@ -1,7 +1,7 @@
  <!-- Usability Section -->
  <div class="container-fluid parallax" style="background-image: url(./assets/asset/enhance-bg.999209ece5b0474be060.jpg); ">
     <div class="row">
-        <h3 class="text-center pt-5 text-white">Enhancing the usability</h3>
+        <h3 class="text-center pt-5 text-white fw-bold">Enhancing the usability</h3>
     </div>
     <div class="container">
         <div class="row py-5 text-center">

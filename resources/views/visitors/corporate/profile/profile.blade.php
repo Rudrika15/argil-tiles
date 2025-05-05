@@ -56,7 +56,7 @@ helmet="true">
         <div class="row">
             <div class="col-md-12">
 
-                <h2>Success is a never ending journey</h2>
+                <h2 class="fw-bold">Success is a never ending journey</h2>
                 <p class="text-justify">The employees of the company have learnt the culture of sharing and growing from
                     the
                     management. We pride
@@ -83,7 +83,7 @@ helmet="true">
                     remember,
                     "We are agents of betterment, and betterment of life is our sole purpose."
                 </p>
-                <h3>History</h3>
+                <h2 class="fw-bold">History</h2>
 
                 <p class="text-justify">
                     India's greatest entrepreneurial stories are all epics within themselves. One of those is the story

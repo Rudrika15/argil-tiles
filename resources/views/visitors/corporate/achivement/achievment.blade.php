@@ -57,7 +57,7 @@ to quality, innovation, and leadership in the artificial quartz industry.">
                     National Award for the year 1997 (for best quality products) from vice president of India
 
                 </p>
-                <h2>
+                <h2 class="fw-bold">
                     National Award
                 </h2>
             </div>
@@ -70,7 +70,7 @@ to quality, innovation, and leadership in the artificial quartz industry.">
                     Highest Export Awards, Govt. of India and State
 
                 </p>
-                <h2>
+                <h2 class="fw-bold">
 
                     Export Awards </h2>
             </div>

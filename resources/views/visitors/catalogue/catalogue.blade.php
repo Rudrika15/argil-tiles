@@ -37,7 +37,7 @@ Premium Designs">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="pt-4">LINK 'N' LOCK - SPC FLOORING
+                <h2 class="pt-4 fw-bold">LINK 'N' LOCK - SPC FLOORING
                 </h2>
                 <a href="https://argiltiles.com/pdf/1661686250890768142.pdf" target="_blank">
                     <img src="{{ asset('assets/asset/catalogueimage.png')}}" alt="argil catalogue" title="argil catalogue" loading="lazy" class="img-fluid">

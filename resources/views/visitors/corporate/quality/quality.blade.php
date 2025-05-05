@@ -52,7 +52,7 @@ Our rigorous testing ensures durability, strength, and beauty.">
             <div class="col-md-4 text-center">
                 <img src="{{ asset('assets/asset/qualityimage1.jpeg')}}" alt="argil ISO CERTIFIED" title="argil ISO CERTIFIED" loading="lazy" class="img-fluid w-75">
 
-                <h2 class="fs-5 pt-2">ISO CERTIFIED
+                <h2 class="fs-5 pt-2 fw-bold">ISO CERTIFIED
 
                 </h2>
             </div>
@@ -60,13 +60,13 @@ Our rigorous testing ensures durability, strength, and beauty.">
 
             <div class="col-md-4 text-center">
                 <img src="{{ asset('assets/asset/qualityimage2.jpeg')}}" alt="argil TISI THAILAND STANDARD" title="argil TISI THAILAND STANDARD" loading="lazy" class="img-fluid w-75">
-                <h2 class="fs-5 pt-2">TISI THAILAND STANDARD
+                <h2 class="fs-5 pt-2 fw-bold">TISI THAILAND STANDARD
 
                 </h2>
             </div>
             <div class="col-md-4 text-center">
                 <img src="{{ asset('assets/asset/qualityimage3.jpeg')}}" alt="argil SLSI SRILANKAN STANDARD" title="argil SLSI SRILANKAN STANDARD" loading="lazy" class="img-fluid w-75">
-                <h2 class="fs-5 pt-2">SLSI SRILANKAN STANDARD
+                <h2 class="fs-5 pt-2 fw-bold">SLSI SRILANKAN STANDARD
 
                 </h2>
             </div>

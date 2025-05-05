@@ -36,7 +36,7 @@ dedication to premium quartz stone manufacturing.">
         <div class="container">
 
             <div class="p-2">
-                <h1 class="display-6 fw-bold">Home / Doumentary film</h1>
+                <h1 class="display-6 fw-bold">Home / Doumentary Film</h1>
             </div>
         </div>
     </div>

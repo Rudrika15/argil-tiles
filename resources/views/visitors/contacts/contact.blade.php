@@ -57,35 +57,37 @@ assist you!">
                 <img src="{{ asset('assets/asset/contactsimage.png')}}" alt="argil contact" title="argil contact" loading="lazy" class="img-fluid h-75">
             </div>
             <div class="col-md-6 pt-2">
-                <h2>Let's Be in Touch !!!
+                <h2 class="fw-bold">Let's Be in Touch !!!
                 </h2>
                 <form method="POST" id="contact-form">
                     @csrf
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" name="form_name" placeholder="Your Name" required>
+                        <input type="text" class="form-control" id="floatingName" name="form_name" placeholder="Your Name"  required oninvalid="this.setCustomValidity('The name field is required.')" oninput="this.setCustomValidity('')">
                         <label for="floatingName">Your Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="floatingEmail" name="form_email" placeholder="name@example.com"
-                            required>
+                        required oninvalid="this.setCustomValidity('The email field is required.')" oninput="this.setCustomValidity('')">
                         <label for="floatingEmail">Email</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <input type="tel" class="form-control" id="floatingContact" name="form_phone" placeholder="Contact Number"
-                            required>
+                        required oninvalid="this.setCustomValidity('The contact field is required.')" oninput="this.setCustomValidity('')">
                         <label for="floatingContact">Contact Number</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <textarea class="form-control" id="floatingMessage" placeholder="Your Message" name="form_message"
-                            style="height: 150px;" required></textarea>
+                            style="height: 150px;"  required oninvalid="this.setCustomValidity('The message field is required.
+')" oninput="this.setCustomValidity('')"></textarea>
                         <label for="floatingMessage">Your Message</label>
                     </div>
 
                     <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
                 </form>
+
 
             </div>
 
