@@ -268,7 +268,7 @@
                         <a class="nav-link dropdown-toggle {{ Request::is('quartzsurface', 'spcproducts') ? 'active' : '' }}"
                             href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Product
+                            Products
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item {{ Request::is('quartzsurface') ? 'active' : '' }}"

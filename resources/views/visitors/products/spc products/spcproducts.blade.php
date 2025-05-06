@@ -47,7 +47,8 @@ with 10+ yrs of service. Get a price quote"
         <div class="container">
             <div class="row pt-3">
                 <div class="col-md-6">
-                    <h2 class="fw-bold">SPC Flooring Tiles</h2>
+                    <img src="spc\spc1.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
+                        class="img-fluid">
                 </div>
                 <div class="col-md-6">
                     <p class="text-justify">SPC Flooring (Stone Plastic Composite) is a modern and durable flooring solution
@@ -62,32 +63,28 @@ with 10+ yrs of service. Get a price quote"
                 </div>
             </div>
         </div>
-        <div class="container">
+        {{-- <div class="container">
             <div class="row">
-                <div class="col-md-6 pt-4">
-                    <img src="spc\spc1.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
-                        class="img-fluid">
-                </div>
-                <div class="col-md-6 pt-4">
+                <div class="col-md-12 pt-4">
                     <img src="spc\spc2.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
                         class="img-fluid">
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mt-4">
-                    <video autoplay muted loop playsinline style="width: 100%; height: auto; display: block;">
+                    <video autoplay muted loop playsinline class="w-100">
                         <source src="{{ asset('assets/asset/video1.mp4') }}" type="video/mp4" />
                     </video>
                 </div>
                 <div class="col-md-4 mt-4">
-                    <video autoplay muted loop playsinline style="width: 100%; height: auto; display: block;">
+                    <video autoplay muted loop playsinline class="w-100">
                         <source src="{{ asset('assets/asset/video 2.mp4') }}" type="video/mp4" />
                     </video>
                 </div>
                 <div class="col-md-4 mt-4">
-                    <video autoplay muted loop playsinline style="width: 100%; height: auto; display: block;">
+                    <video autoplay muted loop playsinline class="w-100">
                         <source src="{{ asset('assets/asset/video3.mp4') }}" type="video/mp4" />
                     </video>
                 </div>
