@@ -193,6 +193,6 @@ class BlogController extends Controller
             $metablogs->delete();
         }
         $blogs->delete();
-        return redirect()->route('blog')->with('msg', 'Data Deleted Successfully');
+        return redirect()->route('blog')->with('msg', 'Data Delete Successfully.');
     }
 }

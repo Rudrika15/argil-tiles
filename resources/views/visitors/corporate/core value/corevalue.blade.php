@@ -23,18 +23,16 @@ define Argil Group. Explore the core values that shape our commitment to
 excellence in quartz stone manufacturing.">
 
     <!-- Replace with actual image URL -->
-    <link rel="canonical" href="https://argiltiles.com/corevalues" data-
-    react-helmet="true">
+    <link rel="canonical" href="https://argiltiles.com/corevalues" data- react-helmet="true">
     <title>Argil Core Values | Commitment to Quality & Innovation</title>
 @endsection
 @section('content')
-
-      <!-- breadcrumb -->
-      <div class="breadcrumb d-flex justify-content-between align-items-center">
+    <!-- breadcrumb -->
+    <div class="breadcrumb d-flex justify-content-between align-items-center">
         <div class="container">
 
             <div class="p-2">
-                <h1 class="display-6 fw-bold">Home / CoreValues</h1>
+                <h1 class="display-6 fw-bold">Home / Core Values</h1>
             </div>
         </div>
     </div>
@@ -61,7 +59,8 @@ excellence in quartz stone manufacturing.">
                     same.</p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{ asset('assets/asset/corevaluesimage.png')}}" alt="argil corevalues" title="argil corevalues" loading="lazy" class="img-fluid h-75">
+                <img src="{{ asset('assets/asset/corevaluesimage.png') }}" alt="argil corevalues" title="argil corevalues"
+                    loading="lazy" class="img-fluid h-75">
             </div>
 
             <div class="col-md-12 pt-4">

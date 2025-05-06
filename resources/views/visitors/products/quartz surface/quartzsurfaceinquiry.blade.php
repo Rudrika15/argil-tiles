@@ -45,7 +45,6 @@
 
         }
         </script>
-
 @endsection
 @section('content')
     <!-- breadcrumb -->
@@ -93,38 +92,38 @@
             <div class="carousel-inner">
                 @if ($data->mainImg)
                     <div class="carousel-item active">
-                        <img src="{{ asset('quartz/' . $data->mainImg) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->mainImg) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
                 @if ($data->subImg1)
                     <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg1) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->subImg1) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
                 @if ($data->subImg2)
                     <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg2) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->subImg2) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
                 @if ($data->subImg3)
                     <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg3) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->subImg3) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
                 @if ($data->subImg4)
                     <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg4) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->subImg4) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
                 @if ($data->subImg5)
                     <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg5) }}" class="d-block w-100 carousel-image" loading="lazy"
-                            alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                        <img src="{{ asset('quartz/' . $data->subImg5) }}" class="d-block w-100 carousel-image"
+                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
                     </div>
                 @endif
             </div>

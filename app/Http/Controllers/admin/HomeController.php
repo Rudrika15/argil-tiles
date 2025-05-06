@@ -130,6 +130,6 @@ class HomeController extends Controller
     function delete($id)
 	{
         $data=Homepage::find($id)->delete();
-        return redirect()->route('homeshow')->with('msg', 'Data Deleted Successfully');
+        return redirect()->route('homeshow')->with('msg', 'Data Delete Successfully.');
     }
 }

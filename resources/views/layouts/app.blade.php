@@ -236,17 +236,17 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item {{ Request::is('documentaryfilm') ? 'active' : '' }}"
-                                    href="/documentaryfilm">Documentary film</a></li>
+                                    href="/documentaryfilm">Documentary Film</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item {{ Request::is('corevalues') ? 'active' : '' }}"
-                                    href="/corevalues">Core value</a></li>
+                                    href="/corevalues">Core Value</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item {{ Request::is('groupcompany') ? 'active' : '' }}"
-                                    href="/groupcompany">Company group</a></li>
+                                    href="/groupcompany">Company Group</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -268,11 +268,11 @@
                         <a class="nav-link dropdown-toggle {{ Request::is('quartzsurface', 'spcproducts') ? 'active' : '' }}"
                             href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Product
+                            Products
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item {{ Request::is('quartzsurface') ? 'active' : '' }}"
-                                    href="/quartzsurface">Quartz surface</a></li>
+                                    href="/quartzsurface">Quartz Surface</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

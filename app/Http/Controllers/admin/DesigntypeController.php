@@ -77,6 +77,6 @@ class DesigntypeController extends Controller
     function delete($id)
 	{
         $data=Designtype::find($id)->delete();
-        return redirect()->route('designtypeshow')->with('msg', 'Data Deleted Successfully');
+        return redirect()->route('designtypeshow')->with('msg', 'Data Delete Successfully.');
     }
 }

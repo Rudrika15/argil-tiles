@@ -77,6 +77,6 @@ class WsizemasterController extends Controller
     function delete($id)
 	{
         $data=Wsizemaster::find($id)->delete();
-        return redirect()->route('wsizeshow')->with('msg', 'Data Deleted Successfully');
+        return redirect()->route('wsizeshow')->with('msg', 'Data Delete Successfully.');
     }
 }

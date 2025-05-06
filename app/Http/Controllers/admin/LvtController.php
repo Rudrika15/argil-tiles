@@ -260,6 +260,6 @@ class LvtController extends Controller
         if ($metaspc) {
             $metaspc->delete();
         }
-        return redirect()->route('lvtshow')->with('msg', 'Data Deleted Successfully');
+        return redirect()->route('lvtshow')->with('msg', 'Data Delete Successfully.');
     }
 }

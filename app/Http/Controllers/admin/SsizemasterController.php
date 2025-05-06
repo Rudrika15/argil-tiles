@@ -72,6 +72,6 @@ class SsizemasterController extends Controller
     function delete($id)
     {
         $data = Ssizemaster::find($id)->delete();
-        return redirect()->route('ssizeshow')->with('msg', 'Data Deleted Successfully');
+        return redirect()->route('ssizeshow')->with('msg', 'Data Delete Successfully.');
     }
 }

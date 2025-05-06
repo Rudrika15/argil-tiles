@@ -145,9 +145,9 @@ class apiController extends Controller
         $ctc->message = $message;
         $ctc->save();
 
-         // Send the email using the ContactFormMail Mailable
+        // Send the email using the ContactFormMail Mailable
         Mail::to('social.media@argiltiles.com')  // Replace with your own email address
-        ->send(new ContactFormMail($name, $email, $contactno, $message));
+            ->send(new ContactFormMail($name, $email, $contactno, $message));
 
         return $ctc;
         // return $responseEmail;
@@ -162,6 +162,7 @@ class apiController extends Controller
         $contactno = $request->contactno;
         $message = $request->message;
         $type = $request->type;
+        $subject = $request->subject;
 
         $inqr = new Inquiry();
         $inqr->subject = $productname;
@@ -170,9 +171,10 @@ class apiController extends Controller
         $inqr->phone = $contactno;
         $inqr->message = $message;
         $inqr->details = $type;
+        $inqr->subject = $subject;
         $inqr->save();
 
-          // email code here
+        // email code here
 
         return response()->json([
             'status' => true,

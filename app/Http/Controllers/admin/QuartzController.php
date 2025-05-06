@@ -273,6 +273,6 @@ class QuartzController extends Controller
 
 		$data = Quartzproduct::find($id)->delete();
         $metaquartz = MetaPropertyQuartz::where('quartzId', $id)->delete();
-        return redirect()->route('quartzshow')->with('msg', 'Data Deleted Successfully');
+        return redirect()->route('quartzshow')->with('msg', 'Data Delete Successfully.');
 	}
 }
