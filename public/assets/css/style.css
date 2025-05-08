@@ -96,6 +96,33 @@ body {
     margin: 10px 0;
 }
 
+.btn-disabled {
+    background-color: var(--primary-color) !important;
+    /* or your desired color */
+    box-shadow: none;
+    /* removes the blue glow */
+    outline: none;
+    /* removes outline */
+}
+
+.btn:focus-visible {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: none;
+    border: var(--primary-color) 1px solid;
+}
+
+.btn.disabled,
+.btn:disabled,
+fieldset:disabled .btn {
+    color: var(--primary-color) !important;
+    pointer-events: none;
+    background-color: var(--secondary-color) !important;
+    border: var(--primary-color) 1px solid !important;
+    opacity: var(--bs-btn-disabled-opacity);
+}
+
+
 .text-justify {
     text-align: justify;
 }
