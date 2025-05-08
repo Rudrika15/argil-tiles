@@ -238,9 +238,9 @@ class apiController extends Controller
             $data = Qsizemaster::find($id);
         }
         if ($data)
-            return Util::getSuccessMessage(' User Found Successfully', $data);
+            return Util::getSuccessMessage('Quartz Size Fetched Successfully', $data);
         else
-            return Util::getErrorMessage('User Not Found', $data);
+            return Util::getErrorMessage('Quartz Size Not Found', $data);
     }
     function wsizematsterview($id = 0)
     {
@@ -249,7 +249,7 @@ class apiController extends Controller
         } else {
             $data = Wsizemaster::find($id);
         }
-        return Util::getSuccessMessage(' User Found Successfully', $data);
+        return Util::getSuccessMessage('Wall Size Fetched Successfully', $data);
     }
     function stockview($id = 0)
     {
@@ -321,7 +321,7 @@ class apiController extends Controller
         } else {
             $data = Lvtproduct::find($id);
         }
-        return Util::getSuccessMessage(' User Found Successfully', $data);
+        return Util::getSuccessMessage('Lvtproduct Fetched Successfully', $data);
     }
 
 
@@ -346,7 +346,7 @@ class apiController extends Controller
         } else {
             $data = Quartzproduct::find($id);
         }
-        return Util::getSuccessMessage(' User Found Successfully', $data);
+        return Util::getSuccessMessage('Quartzproduct Fetched Successfully', $data);
     }
 
 
@@ -469,7 +469,7 @@ class apiController extends Controller
         } else {
             $data = Slider::find($id);
         }
-        return Util::getSuccessMessage(' User Found Successfully', $data);
+        return Util::getSuccessMessage('Slider Fetched Successfully', $data);
     }
 
     function newarrivalsview()
@@ -492,7 +492,7 @@ class apiController extends Controller
             // Fetch quartz product
             $quartzproduct = Quartzproduct::find($productId);
             if ($quartzproduct) {
-                return Util::getSuccessMessage(' User Found Successfully', [$quartzproduct, $data]);
+                return Util::getSuccessMessage('Quartz Product Fetched Successfully', [$quartzproduct, $data]);
             }
         } else {
             // Try to detect wallproduct and get its ID
@@ -501,7 +501,7 @@ class apiController extends Controller
                 $productId = $segments[$index + 1];
                 $wallproduct = Wallproduct::find($productId);
                 if ($wallproduct) {
-                    return Util::getSuccessMessage(' User Found Successfully', [$wallproduct, $data]);
+                    return Util::getSuccessMessage('Wall Product Fetched Successfully', [$wallproduct, $data]);
                 }
             }
         }
