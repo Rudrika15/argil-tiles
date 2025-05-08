@@ -54,14 +54,14 @@ class VisitorController extends Controller
     }
     public function blog()
     {
-        $blogs =Blog::orderBy('id', 'desc')->get();
-        return view('visitors.blog.blog',compact('blogs'));
+        $blogs = Blog::orderBy('id', 'desc')->get();
+        return view('visitors.blog.blog', compact('blogs'));
     }
     public function blogdetails($slug)
     {
 
         $blog = Blog::where('slug', $slug)->firstOrFail();
-        return view('visitors.blog.blogdetails',compact('blog'));
+        return view('visitors.blog.blogdetails', compact('blog'));
     }
     public function catalogue()
     {
@@ -83,7 +83,7 @@ class VisitorController extends Controller
     {
 
 
- //       return $request->all();
+        return $request->all();
 
         // Validate the form data
         $request->validate([
@@ -119,7 +119,7 @@ class VisitorController extends Controller
     {
 
 
-    //    return $request;
+        //    return $request;
 
         // Validate the form data
         $request->validate([
@@ -159,27 +159,27 @@ class VisitorController extends Controller
     public function spcproducts()
     {
         $data = Lvtproduct::orderBy('id', 'desc')->get();
-        return view('visitors.products.spc products.spcproducts',compact('data'));
+        return view('visitors.products.spc products.spcproducts', compact('data'));
     }
-    public function spcproductinquiry($slug){
+    public function spcproductinquiry($slug)
+    {
 
         // $data= Lvtproduct::find($id);
-        $data= Lvtproduct::where('slug', $slug)->firstOrFail();
+        $data = Lvtproduct::where('slug', $slug)->firstOrFail();
 
-        return view('visitors.products.spc products.spcproductinquiry',compact('data'));
+        return view('visitors.products.spc products.spcproductinquiry', compact('data'));
     }
 
     public function quartzsurface()
     {
         $data = Quartzproduct::orderBy('id', 'desc')->get();
-        return view('visitors.products.quartz surface.quartzsurface',compact('data'));
+        return view('visitors.products.quartz surface.quartzsurface', compact('data'));
     }
-    public function quartzinquiry($slug){
+    public function quartzinquiry($slug)
+    {
 
         // $data= Quartzproduct::find($id);
-        $data= Quartzproduct::where('slug', $slug)->firstOrFail();
-        return view('visitors.products.quartz surface.quartzsurfaceinquiry',compact('data'));
+        $data = Quartzproduct::where('slug', $slug)->firstOrFail();
+        return view('visitors.products.quartz surface.quartzsurfaceinquiry', compact('data'));
     }
-
-
 }

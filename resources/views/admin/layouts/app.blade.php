@@ -152,41 +152,52 @@
                         <span><i class="bi bi-gear-wide-connected"></i> Setup</span>
                         <i class="bi bi-chevron-down small"></i>
                     </a>
-                    <div class="collapse {{ request()->routeIs('slidershow') || request()->routeIs('slidercreate') || request()->routeIs('slider.edit') || request()->routeIs('homeshow') || request()->routeIs('homecreate') || request()->routeIs('home.edit') || request()->routeIs('finishtypeshow') || request()->routeIs('finishtypecreate') || request()->routeIs('finishtype.edit') || request()->routeIs('designtypeshow') || request()->routeIs('designtypecreate') || request()->routeIs('designtype.edit') || request()->routeIs('qsizeshow') || request()->routeIs('qsizecreate') || request()->routeIs('qsize.edit') || request()->routeIs('wsizeshow') || request()->routeIs('wsizecreate') || request()->routeIs('wsize.edit') || request()->routeIs('ssizeshow') || request()->routeIs('ssizecreate') || request()->routeIs('ssize.edit') || request()->routeIs('stockshow') || request()->routeIs('stockcreate') || request()->routeIs('stock.edit') || request()->routeIs('blog') || request()->routeIs('blog.create') || request()->routeIs('blog.edit') || request()->routeIs('newarrivalsshow') || request()->routeIs('newarrivals.edit') ? 'show' : '' }}"
+                    <div class="collapse {{ request()->routeIs('slidershow') ||request()->routeIs('slidercreate') ||request()->routeIs('slider.edit') ||request()->routeIs('homeshow') ||request()->routeIs('homecreate') ||request()->routeIs('home.edit') ||request()->routeIs('finishtypeshow') ||request()->routeIs('finishtypecreate') ||request()->routeIs('finishtype.edit') ||request()->routeIs('designtypeshow') ||request()->routeIs('designtypecreate') ||request()->routeIs('designtype.edit') ||request()->routeIs('qsizeshow') ||request()->routeIs('qsizecreate') ||request()->routeIs('qsize.edit') ||request()->routeIs('wsizeshow') ||request()->routeIs('wsizecreate') ||request()->routeIs('wsize.edit') ||request()->routeIs('ssizeshow') ||request()->routeIs('ssizecreate') ||request()->routeIs('ssize.edit') ||request()->routeIs('stockshow') ||request()->routeIs('stockcreate') ||request()->routeIs('stock.edit') ? 'show': '' }}"
                         id="setupMenu" data-parent="#sidebarAccordion">
                         <ul class="nav flex-column ml-3">
-                            <li class="nav-item {{ request()->routeIs('slidershow') || request()->routeIs('slidercreate') || request()->routeIs('slider.edit')  ? 'active' : '' }}">
+                            <li
+                                class="nav-item {{ request()->routeIs('slidershow') || request()->routeIs('slidercreate') || request()->routeIs('slider.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('slidershow') }}">Slider</a>
                             </li>
-                            <li class="nav-item {{  request()->routeIs('homeshow') || request()->routeIs('homecreate') || request()->routeIs('home.edit') ? 'active' : '' }}">
+                            <li
+                                class="nav-item {{ request()->routeIs('homeshow') || request()->routeIs('homecreate') || request()->routeIs('home.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('homeshow') }}">Home</a>
                             </li>
-                            <li class="nav-item {{  request()->routeIs('finishtypeshow') || request()->routeIs('finishtypecreate') || request()->routeIs('finishtype.edit') ? 'active' : '' }}">
+                            <li
+                                class="nav-item {{ request()->routeIs('finishtypeshow') || request()->routeIs('finishtypecreate') || request()->routeIs('finishtype.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('finishtypeshow') }}">Finish Type</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('designtypeshow') || request()->routeIs('designtypecreate') || request()->routeIs('designtype.edit') ? 'active' : '' }}">
+                            <li
+                                class="nav-item {{ request()->routeIs('designtypeshow') || request()->routeIs('designtypecreate') || request()->routeIs('designtype.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('designtypeshow') }}">Design Type</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('qsizeshow') || request()->routeIs('qsizecreate') || request()->routeIs('qsize.edit') ? 'active' : '' }}">
+                            <li
+                                class="nav-item {{ request()->routeIs('qsizeshow') || request()->routeIs('qsizecreate') || request()->routeIs('qsize.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('qsizeshow') }}">Q-size</a>
                             </li>
-                            <li class="nav-item {{  request()->routeIs('wsizeshow') || request()->routeIs('wsizecreate') || request()->routeIs('wsize.edit')  ? 'active' : '' }}">
+                            <li
+                                class="nav-item {{ request()->routeIs('wsizeshow') || request()->routeIs('wsizecreate') || request()->routeIs('wsize.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('wsizeshow') }}">W-size</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('ssizeshow') || request()->routeIs('ssizecreate') || request()->routeIs('ssize.edit') ? 'active' : '' }}">
+                            <li
+                                class="nav-item {{ request()->routeIs('ssizeshow') || request()->routeIs('ssizecreate') || request()->routeIs('ssize.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('ssizeshow') }}">SPC-size</a>
                             </li>
-                            <li class="nav-item {{ request()->routeIs('stockshow') || request()->routeIs('stockcreate') || request()->routeIs('stock.edit') ? 'active' : '' }}">
+                            <li
+                                class="nav-item {{ request()->routeIs('stockshow') || request()->routeIs('stockcreate') || request()->routeIs('stock.edit') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('stockshow') }}">Stock</a>
                             </li>
-                            <li class="nav-item {{  request()->routeIs('blog') || request()->routeIs('blog.create') || request()->routeIs('blog.edit') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('blog') }}">Blog</a>
-                            </li>
-                            <li class="nav-item {{ request()->routeIs('newarrivalsshow') || request()->routeIs('newarrivals.edit') ? 'active' : '' }}">
-                                <a class="nav-link" href="{{ route('newarrivalsshow') }}">New Arrivals</a>
-                            </li>
+
                         </ul>
                     </div>
+                </li>
+                <li
+                    class="nav-item {{ request()->routeIs('blog') || request()->routeIs('blog.create') || request()->routeIs('blog.edit') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('blog') }}">Blog</a>
+                </li>
+                <li
+                    class="nav-item {{ request()->routeIs('newarrivalsshow') || request()->routeIs('newarrivals.edit') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('newarrivalsshow') }}">New Arrivals</a>
                 </li>
 
             </ul>

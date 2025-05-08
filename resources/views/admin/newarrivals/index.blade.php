@@ -38,26 +38,31 @@
                 </tr>
             </thead>
             @if (count($newarrivals) == 0)
-            <tr>
-                <td colspan="12" class="text-center text-danger">No Record Found</td>
-            </tr>
-
-        @endif
+                <tr>
+                    <td colspan="12" class="text-center text-danger">No Record Found</td>
+                </tr>
+            @endif
             <tbody>
-                @foreach ($newarrivals as $data)
-                    <tr>
+                @if (count($newarrivals) > 0)
+                    @foreach ($newarrivals as $data)
+                        <tr>
 
-                        <td><img src="{{ asset('newarieles/'.$data->image) }}" style="height:200px" class="img-thumbnail"></td>
-                        <td>{{ $data->navigate_url }}</td>
-                        <td class="" style="gap: 8px" >
-                            <a href = "{{ Route('newarrivals.edit',$data->id) }}" class="btn btn-primary"> Edit </a>
-                            {{-- <a href="javascript:void(0)" class="btn btn-warning"
+                            <td><img src="{{ asset('newarieles/' . $data->image) }}" style="height:200px"
+                                    class="img-thumbnail">
+                            </td>
+                            <td>{{ $data->navigate_url }}</td>
+                            <td class="" style="gap: 8px">
+                                <a href = "{{ Route('newarrivals.edit', $data->id) }}" class="btn btn-primary"> Edit </a>
+                                {{-- <a href="javascript:void(0)" class="btn btn-warning"
                             onclick="openDeleteModal('{{Route('slider.delete',$data->id)}}')">
                             Delete
                         </a> --}}
-                        </td>
-                    </tr>
-                @endforeach
+                            </td>
+                        </tr>
+                    @endforeach
+                @else
+                    <span>No Record Found</span>
+                @endif
             </tbody>
         </table>
 
