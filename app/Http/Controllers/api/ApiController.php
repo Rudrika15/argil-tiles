@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\api;
 
+use App\Helper\Util;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactFormMail;
 use Illuminate\Http\Request;
@@ -37,10 +38,8 @@ class apiController extends Controller
         } else {
             $data = Catelogue::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No Catelogue Found.."];
+
+        return Util::getSuccessMessage('Success', $data);
     }
 
     function favorite_add(Request $requset)
@@ -51,7 +50,7 @@ class apiController extends Controller
         $fav->type = $requset->type;
 
         $fav->save();
-        return $fav;
+        return Util::getSuccessMessage('Success', $fav);
     }
     function favorite_remove(Request $requset)
     {
@@ -63,17 +62,15 @@ class apiController extends Controller
             ->where('user_id', '=', $user_id)
             ->get()->first();
         $fav->delete();
-        return $fav;
+        return Util::getSuccessMessage('Success', $fav);
     }
     function favorite_view($id)
     {
         $data = Favorite::orderBy('id', 'desc')
             ->where('user_id', '=', $id)
             ->get();
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+
+        return Util::getSuccessMessage('Success', $data);
     }
 
     function register(Request $requset)
@@ -85,7 +82,8 @@ class apiController extends Controller
         $um->password = $requset->password;
         $um->contact = $requset->contact;
         $um->save();
-        return $um;
+
+        return Util::getSuccessMessage('Register Successfully', $um);
     }
 
     public function sendEmail($subject, $message)
@@ -127,7 +125,7 @@ class apiController extends Controller
         curl_close($session);
 
         // print everything out
-        return ($response);
+        return Util::getSuccessMessage('Success',  $response);
     }
 
 
@@ -149,9 +147,7 @@ class apiController extends Controller
         Mail::to('social.media@argiltiles.com')  // Replace with your own email address
             ->send(new ContactFormMail($name, $email, $contactno, $message));
 
-        return Util
-        // return $responseEmail;
-
+        return Util::getSuccessMessage('Message Sent Successfully', $ctc);
     }
     function inquiry(Request $request)
     {
@@ -176,12 +172,7 @@ class apiController extends Controller
 
         // email code here
 
-        return response()->json([
-            'status' => true,
-            'message' => 'Inquiry Sent Successfully',
-            'data' => $inqr
-
-        ]);
+        return Util::getSuccessMessage('Inquiry Sent Successfully', $inqr);
     }
     function forgot(Request $request)
     {
@@ -195,11 +186,8 @@ class apiController extends Controller
         $password = $requset->password;
         $data = Usermaster::where('contact', '=', $contact)->where('password', '=', $password)->first();
 
-        if ($data)
 
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+        return Util::getSuccessMessage($data, 'Login Successfully');
     }
 
     function profile(Request $requset, $id)
@@ -210,7 +198,7 @@ class apiController extends Controller
         $um->email = $requset->email;
         $um->contact = $requset->contact;
         $um->save();
-        return $um;
+        return Util::getSuccessMessage('Profile Updated Successfully', $um);
     }
 
     function changepassword(Request $requset, $id)
@@ -224,9 +212,9 @@ class apiController extends Controller
                 $um->password = $newpassword;
 
                 $um->save();
-                return $um;
+                return Util::getSuccessMessage('Password Updated Successfully', $um);
             } else {
-                return ['data' => "Not Match Found.."];
+                return Util::getErrorMessage('Old Password Not Match',);
             }
         } else {
             return ['data' => "No  Found.."];
@@ -237,9 +225,9 @@ class apiController extends Controller
     {
         $data = Usermaster::find($id);
         if ($data)
-            return $data;
+            return Util::getSuccessMessage($data, 'User Found Successfully');
         else
-            return ['data' => "No  Found.."];
+            return Util::getErrorMessage($data, 'User Not Found');
     }
 
     function qsizematsterview($id = 0)
@@ -250,9 +238,9 @@ class apiController extends Controller
             $data = Qsizemaster::find($id);
         }
         if ($data)
-            return $data;
+            return Util::getSuccessMessage(' User Found Successfully', $data);
         else
-            return ['data' => "No  Found.."];
+            return Util::getErrorMessage('User Not Found', $data);
     }
     function wsizematsterview($id = 0)
     {
@@ -261,10 +249,7 @@ class apiController extends Controller
         } else {
             $data = Wsizemaster::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+        return Util::getSuccessMessage(' User Found Successfully', $data);
     }
     function stockview($id = 0)
     {
@@ -273,10 +258,8 @@ class apiController extends Controller
         } else {
             $data = Stock::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+
+        return Util::getSuccessMessage(' User Found Successfully', $data);
     }
     function designtypeview($id = 0)
     {
@@ -285,10 +268,8 @@ class apiController extends Controller
         } else {
             $data = Designtype::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+
+        return Util::getSuccessMessage(' User Found Successfully', $data);
     }
 
     function finishtypeview($id = 0)
@@ -340,10 +321,7 @@ class apiController extends Controller
         } else {
             $data = Lvtproduct::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No product Found.."];
+        return Util::getSuccessMessage(' User Found Successfully', $data);
     }
 
 
@@ -368,10 +346,7 @@ class apiController extends Controller
         } else {
             $data = Quartzproduct::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No Quartzproduct Found.."];
+        return Util::getSuccessMessage(' User Found Successfully', $data);
     }
 
 
@@ -494,10 +469,7 @@ class apiController extends Controller
         } else {
             $data = Slider::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No Slider Found.."];
+        return Util::getSuccessMessage(' User Found Successfully', $data);
     }
 
     function newarrivalsview()
@@ -520,12 +492,7 @@ class apiController extends Controller
             // Fetch quartz product
             $quartzproduct = Quartzproduct::find($productId);
             if ($quartzproduct) {
-                return response()->json([
-                    'status' => true,
-                    'url' => 'quartz',
-                    'type' => 'quartzproduct',
-                    'data' => [$quartzproduct, $data]
-                ]);
+                return Util::getSuccessMessage(' User Found Successfully', [$quartzproduct, $data]);
             }
         } else {
             // Try to detect wallproduct and get its ID
@@ -534,12 +501,7 @@ class apiController extends Controller
                 $productId = $segments[$index + 1];
                 $wallproduct = Wallproduct::find($productId);
                 if ($wallproduct) {
-                    return response()->json([
-                        'status' => true,
-                        'url' => 'spc',
-                        'type' => 'wallproduct',
-                        'data' => [$wallproduct, $data]
-                    ]);
+                    return Util::getSuccessMessage(' User Found Successfully', [$wallproduct, $data]);
                 }
             }
         }
