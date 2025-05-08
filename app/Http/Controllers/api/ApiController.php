@@ -149,7 +149,7 @@ class apiController extends Controller
         Mail::to('social.media@argiltiles.com')  // Replace with your own email address
             ->send(new ContactFormMail($name, $email, $contactno, $message));
 
-        return $ctc;
+        return Util
         // return $responseEmail;
 
     }
