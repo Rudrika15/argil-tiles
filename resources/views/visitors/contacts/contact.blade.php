@@ -86,7 +86,7 @@ assist you!">
                     </div>
 
 
-                    <div class="form-floating mb-3">
+                    <div class=" mb-3">
                         <textarea class="form-control" id="floatingMessage" placeholder="Your Message" name="form_message"
                             style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.')"
                             oninput="this.setCustomValidity('')"></textarea>

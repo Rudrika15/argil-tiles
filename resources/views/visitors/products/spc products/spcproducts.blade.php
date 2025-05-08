@@ -45,7 +45,7 @@ with 10+ yrs of service. Get a price quote"
     <div class="container">
 
         <div class="container">
-            {{-- <div class="row pt-3">
+            <div class="row pt-3">
                 <div class="col-md-6">
                     <img src="spc\spc1.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
                         class="img-fluid">
@@ -61,8 +61,8 @@ with 10+ yrs of service. Get a price quote"
                         flooring is low maintenance and easy to clean, making it a practical choice for both homes and
                         commercial environments.</p>
                 </div>
-            </div> --}}
-            <div class="row pt-3">
+            </div>
+            {{-- <div class="row pt-3">
                 <div class="col-md-6">
                     <h2 class="fw-bold">SPC Flooring Tiles</h2>
                 </div>
@@ -77,9 +77,9 @@ with 10+ yrs of service. Get a price quote"
                         flooring is low maintenance and easy to clean, making it a practical choice for both homes and
                         commercial environments.</p>
                 </div>
-            </div>
+            </div> --}}
         </div>
-        <div class="container">
+        {{-- <div class="container">
             <div class="row">
                 <div class="col-md-6 pt-4">
                     <img src="spc\spc1.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
@@ -90,16 +90,16 @@ with 10+ yrs of service. Get a price quote"
                         class="img-fluid">
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-        {{-- <div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12 pt-4">
                     <img src="spc\spc2.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
                         class="img-fluid">
                 </div>
             </div>
-        </div> --}}
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mt-4">

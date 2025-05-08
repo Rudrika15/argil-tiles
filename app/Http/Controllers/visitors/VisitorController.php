@@ -82,9 +82,6 @@ class VisitorController extends Controller
     public function sendEmail(Request $request)
     {
 
-
-        return $request->all();
-
         // Validate the form data
         $request->validate([
             'form_name' => 'required|string|max:255',
@@ -118,8 +115,7 @@ class VisitorController extends Controller
     public function sendinquiry(Request $request)
     {
 
-
-        //    return $request;
+        return $request;
 
         // Validate the form data
         $request->validate([

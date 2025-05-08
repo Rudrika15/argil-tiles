@@ -115,19 +115,16 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="tel" class="form-control" id="floatingContact" placeholder="Contact Number"
+                        <input type="tel" class="form-control" id="form_phone" placeholder="Contact Number"
                             name="form_phone" required oninvalid="this.setCustomValidity('The contact field is required.')"
                             oninput="this.setCustomValidity('')" maxlength="10"
                             oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
-                        <label for="floatingContact">Contact Number</label>
                     </div>
 
-                    <div class="form-floating mb-3">
+                    <div class="mb-3">
                         <textarea class="form-control" id="floatingMessage" name="form_message" placeholder="Your Message"
-                            style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.
-')"
+                            style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.')"
                             oninput="this.setCustomValidity('')"></textarea>
-                        <label for="floatingMessage">Your Message</label>
                     </div>
                     <input type="hidden" name="product_details" value="spc product">
                     <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
@@ -166,6 +163,15 @@
             // Disable the button to prevent multiple submissions
             submitBtn.disabled = true;
 
+            const iti = window.intlTelInputGlobals.getInstance(document.querySelector('#form_phone'));
+
+            // Get full international number
+            const fullPhone = iti.getNumber();
+
+            // Remove original form_phone and add formatted one
+            formData.delete('form_phone');
+            formData.append('form_phone', fullPhone);
+
             const formData = new FormData(form);
 
             fetch("{{ Route('send.inquiry') }}", {
@@ -199,6 +205,16 @@
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
                 });
+        });
+    </script>
+
+    <script>
+        const input = document.querySelector("#form_phone");
+
+        window.intlTelInput(input, {
+            initialCountry: "in", // default country code (India)
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
         });
     </script>
 @endsection

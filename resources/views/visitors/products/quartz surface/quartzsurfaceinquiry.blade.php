@@ -213,16 +213,16 @@
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="tel" class="form-control" id="phone" placeholder="Contact Number"
+                        <input type="tel" class="form-control" id="form_phone" placeholder="Contact Number"
                             name="form_phone" required
                             oninvalid="this.setCustomValidity('The contact field is required.')"
                             oninput="this.setCustomValidity('')" maxlength="10"
                             oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
                     </div>
 
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" id="" name="form_message" placeholder="Your Message"
-                            style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.')"
+                    <div class=" mb-3">
+                        <textarea class="form-control" id="" name="form_message" placeholder="Your Message" style="height: 150px;"
+                            required oninvalid="this.setCustomValidity('The message field is required.')"
                             oninput="this.setCustomValidity('')"></textarea>
                         {{-- <label for="floatingMessage">Your Message</label> --}}
                     </div>
@@ -261,6 +261,16 @@
 
             const formData = new FormData(form);
 
+            // Get intlTelInput instance
+            const iti = window.intlTelInputGlobals.getInstance(document.querySelector('#form_phone'));
+
+            // Get full international number
+            const fullPhone = iti.getNumber();
+
+            // Remove original form_phone and add formatted one
+            formData.delete('form_phone');
+            formData.append('form_phone', fullPhone);
+
             fetch("{{ Route('send.inquiry') }}", {
                     method: 'POST',
                     body: formData,
@@ -296,7 +306,7 @@
     </script>
 
     <script>
-        const input = document.querySelector("#phone");
+        const input = document.querySelector("#form_phone");
 
         window.intlTelInput(input, {
             initialCountry: "in", // default country code (India)
