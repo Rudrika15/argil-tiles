@@ -192,35 +192,43 @@
 
             <!-- PRODUCT INQUIRY form -->
             <div class="col-12 col-md-8 col-lg-6 mb-4">
-                    <h2 class="fw-bold"><i class="bi bi-file-earmark-text"></i> Product Inquiry</h2>
+                <h2 class="fw-bold"><i class="bi bi-file-earmark-text"></i> Product Inquiry</h2>
 
-                    <form class="mt-3" id="contact-form" method="POST">
-                        @csrf
-                        {{-- <input type="hidden" name="product_id" value="{{ $data->id }}"> --}}
-                        <input type="hidden" name="product_name" value="{{ $data->name }}">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingName" placeholder="Your Name" name="form_name" required oninvalid="this.setCustomValidity('The name field is required.')" oninput="this.setCustomValidity('')">
-                            <label for="floatingName">Your Name</label>
-                        </div>
+                <form class="mt-3" id="contact-form" method="POST">
+                    @csrf
+                    {{-- <input type="hidden" name="product_id" value="{{ $data->id }}"> --}}
+                    <input type="hidden" name="product_name" value="{{ $data->name }}">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingName" placeholder="Your Name"
+                            name="form_name" required oninvalid="this.setCustomValidity('The name field is required.')"
+                            oninput="this.setCustomValidity('')">
+                        <label for="floatingName">Your Name</label>
+                    </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="form_email" required oninvalid="this.setCustomValidity('The email field is required.')" oninput="this.setCustomValidity('')">
-                            <label for="floatingEmail">Email</label>
-                        </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com"
+                            name="form_email" required oninvalid="this.setCustomValidity('The email field is required.')"
+                            oninput="this.setCustomValidity('')">
+                        <label for="floatingEmail">Email</label>
+                    </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" id="floatingContact" placeholder="Contact Number" name="form_phone" required oninvalid="this.setCustomValidity('The contact field is required.')" oninput="this.setCustomValidity('')">
-                            <label for="floatingContact">Contact Number</label>
-                        </div>
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="phone" placeholder="Contact Number"
+                            name="form_phone" required
+                            oninvalid="this.setCustomValidity('The contact field is required.')"
+                            oninput="this.setCustomValidity('')" maxlength="10"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
+                    </div>
 
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="floatingMessage" name="form_message" placeholder="Your Message" style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.
-')" oninput="this.setCustomValidity('')"></textarea>
-                            <label for="floatingMessage">Your Message</label>
-                        </div>
-                        <input type="hidden" name="product_details" value="quartz product">
-                        <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
-                    </form>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="" name="form_message" placeholder="Your Message"
+                            style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.')"
+                            oninput="this.setCustomValidity('')"></textarea>
+                        {{-- <label for="floatingMessage">Your Message</label> --}}
+                    </div>
+                    <input type="hidden" name="product_details" value="quartz product">
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+                </form>
 
             </div>
 
@@ -284,6 +292,16 @@
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
                 });
+        });
+    </script>
+
+    <script>
+        const input = document.querySelector("#phone");
+
+        window.intlTelInput(input, {
+            initialCountry: "in", // default country code (India)
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
         });
     </script>
 @endsection

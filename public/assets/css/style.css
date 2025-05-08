@@ -16,7 +16,7 @@
 
 
 body {
-    font-family: Avenir,'Hinted Adriatic', sans-serif;
+    font-family: Avenir, 'Hinted Adriatic', sans-serif;
 }
 
 
@@ -144,3 +144,8 @@ body {
     border-radius: 10px 0px 10px 0px;
 }
 
+.iti {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}

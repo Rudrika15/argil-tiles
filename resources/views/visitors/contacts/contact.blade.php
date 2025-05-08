@@ -25,11 +25,6 @@ assist you!">
     <meta name="twitter:site" content="@ArgilGroup">
     <link rel="canonical" href="https://argiltiles.com/contact" data-react- helmet="true">
     <title>Contact Us | Argil Tiles – Quartz Stone Manufacturers in Morbi, India</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-
-    <!-- JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 @endsection
 
 
@@ -119,6 +114,8 @@ assist you!">
     </div>
 
 
+    <!-- country JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
 
     <script>
