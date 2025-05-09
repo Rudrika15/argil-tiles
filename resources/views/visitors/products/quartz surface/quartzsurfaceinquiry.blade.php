@@ -58,86 +58,43 @@
     </div>
     <!-- breadcrumb -->
 
-    <div class="container-fluid">
-        <div id="carouselExample" class="carousel slide quartzinquiry-image" data-bs-ride="carousel">
-            <!-- Indicators -->
-            <div class="carousel-indicators">
-                @if ($data->mainImg)
-                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                @endif
-                @if ($data->subImg1)
-                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                @endif
-                @if ($data->subImg2)
-                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                @endif
-                @if ($data->subImg3)
-                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                @endif
-                @if ($data->subImg4)
-                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4"
-                        aria-label="Slide 5"></button>
-                @endif
-                @if ($data->subImg5)
-                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="5"
-                        aria-label="Slide 6"></button>
-                @endif
-            </div>
+    <div class="">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-            <!-- Wrapper for slides -->
+            <!-- Indicators/dots -->
+
+
+            <!-- The slideshow/carousel -->
             <div class="carousel-inner">
-                @if ($data->mainImg)
-                    <div class="carousel-item active">
-                        <img src="{{ asset('quartz/' . $data->mainImg) }}" class="d-block w-100 carousel-image"
-                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                <div class="carousel-item active">
+                    <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="Los Angeles" class="d-block" style="width:100%">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="chicago.jpg" alt="Chicago" class="d-block" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>Chicago</h3>
+                        <p>Thank you, Chicago!</p>
                     </div>
-                @endif
-                @if ($data->subImg1)
-                    <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg1) }}" class="d-block w-100 carousel-image"
-                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
+                </div>
+                <div class="carousel-item">
+                    <img src="ny.jpg" alt="New York" class="d-block" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>New York</h3>
+                        <p>We love the Big Apple!</p>
                     </div>
-                @endif
-                @if ($data->subImg2)
-                    <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg2) }}" class="d-block w-100 carousel-image"
-                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
-                    </div>
-                @endif
-                @if ($data->subImg3)
-                    <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg3) }}" class="d-block w-100 carousel-image"
-                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
-                    </div>
-                @endif
-                @if ($data->subImg4)
-                    <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg4) }}" class="d-block w-100 carousel-image"
-                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
-                    </div>
-                @endif
-                @if ($data->subImg5)
-                    <div class="carousel-item">
-                        <img src="{{ asset('quartz/' . $data->subImg5) }}" class="d-block w-100 carousel-image"
-                            loading="lazy" alt="quartzsurface tiles image" title="quartzsurface tiles image">
-                    </div>
-                @endif
+                </div>
             </div>
 
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
             </button>
         </div>
+
     </div>
 
 

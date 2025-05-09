@@ -63,11 +63,43 @@
         <div class="row pb-5">
             <h2 class="text-center fw-bold pt-5">SPC Flooring tiles</h2>
             <div class="col-md-4 pt-5">
-                <div class="card">
-                    <img src="{{ asset('spc/' . $data->mainImg) }}" class="img-thumbnail" style="height: 400px;"
-                        alt="spc product" title="spc product" loading="lazy">
-                </div>
+                {{-- Main Image --}}
+                @if ($data->mainImg)
+                    <div style="height:950px">
+                        <img id="mainImage" src="{{ asset('spc/' . $data->mainImg) }}" class="img-thumbnail mb-3"
+                            alt="spc product" title="spc product" loading="lazy">
+                    </div>
+                @endif
+
+                {{-- Thumbnail Images --}}
+                @php
+                    $images = [
+                        $data->mainImg,
+                        $data->subImg1,
+                        $data->subImg2,
+                        $data->subImg3,
+                        $data->subImg4,
+                        $data->subImg5,
+                    ];
+                @endphp
+
+                @foreach ($images as $img)
+                    @if ($img)
+                        <img src="{{ asset('spc/' . $img) }}" class="img-thumbnail thumb-img me-2 mb-2"
+                            style="height: 100px; cursor: pointer;" alt="spc product" title="spc product" loading="lazy"
+                            onclick="changeMainImage('{{ asset('spc/' . $img) }}')">
+                    @endif
+                @endforeach
             </div>
+
+            {{-- Script to Change Main Image --}}
+            <script>
+                function changeMainImage(src) {
+                    const mainImg = document.getElementById('mainImage');
+                    mainImg.src = src;
+                }
+            </script>
+
             <div class="col-md-8 pt-5">
                 <div class="row">
                     <div class="col-md-6">
