@@ -22,13 +22,12 @@ Precision & Innovation">
 manufacturing facilities of Argil Group, where technology, quality, and
 innovation drive the production of world-class artificial quartz stones.">
 
-    <link rel="canonical" href="https://argiltiles.com/plants" data-react-
-    helmet="true">
+    <link rel="canonical" href="https://argiltiles.com/plants" data-react- helmet="true">
     <title>Argil Manufacturing Plants | Advanced Tile Production</title>
 @endsection
 @section('content')
-     <!-- breadcrumb -->
-     <div class="breadcrumb d-flex justify-content-between align-items-center">
+    <!-- breadcrumb -->
+    <div class="breadcrumb d-flex justify-content-between align-items-center">
         <div class="container">
 
             <div class="p-2">
@@ -40,7 +39,7 @@ innovation drive the production of world-class artificial quartz stones.">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2 class="pt-4 fw-bold">Digital Wall Tiles</h2>
+                <h2 class="pt-4 ">Digital Wall Tiles</h2>
                 <p class="text-justify">
                     The best quality Digital tiles are manufactured and delivered to the customers by ARGIL. We take
                     pride
@@ -71,7 +70,8 @@ innovation drive the production of world-class artificial quartz stones.">
                 </p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{ asset('assets/asset/plantsimage.png')}}" alt="argil plants" title="argil plants" loading="lazy" class="img-fluid w-75">
+                <img src="{{ asset('assets/asset/plantsimage.png') }}" alt="argil plants" title="argil plants"
+                    loading="lazy" class="img-fluid w-75">
             </div>
 
         </div>
@@ -85,7 +85,7 @@ innovation drive the production of world-class artificial quartz stones.">
                     of tiles. We have a number of imported presses including Sacmi 1600, Lethai 1300, Sacmi 980 and
                     Sacmi 680. Both these manufacturers are leaders in Ceramic Machinery globally.
                 </p>
-                <h2 class="fw-bold">DuraQuartz</h2>
+                <h2 class="">DuraQuartz</h2>
                 <p class="text-justify">
 
                     Argil DuraQuartz Surfaces' range of products is manufactured under a fully-automated production
@@ -100,7 +100,7 @@ innovation drive the production of world-class artificial quartz stones.">
                     stones.
 
                 </p>
-                <h2 class="fw-bold">Research and Development
+                <h2 class="">Research and Development
 
                 </h2>
                 <p class="text-justify">
@@ -117,7 +117,7 @@ innovation drive the production of world-class artificial quartz stones.">
                     heads and the supervisors are continuously looking to increase efficiency, reduce losses and
                     increase quality production.
                 </p>
-                <h2 class="fw-bold">Design Department
+                <h2 class="">Design Department
 
                 </h2>
                 <p class="text-justify">

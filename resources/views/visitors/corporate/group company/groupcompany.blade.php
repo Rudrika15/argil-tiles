@@ -66,7 +66,7 @@ solutions with a focus on innovation and quality.">
                     MEN
                 </h2>
 
-                <h3 class="fw-bold">
+                <h3 class="">
 
                     "Hands that work are never dirty"
                 </h3>
@@ -86,7 +86,7 @@ solutions with a focus on innovation and quality.">
 
                     Machines
                 </h2>
-                <h3 class="fw-bold">
+                <h3 class="">
 
                     "Leveraging Human Effort through Efficient use of Technology"
                 </h3>
@@ -107,7 +107,7 @@ solutions with a focus on innovation and quality.">
 
                     Prajapat Tiles
                 </h2>
-                <h3 class="fw-bold">
+                <h3 class="">
 
                     Commencement : 1951
                 </h3>
@@ -128,7 +128,7 @@ solutions with a focus on innovation and quality.">
                 <h2 class="pt-3 fw-bold">
                     Argil Tiles : Mod Ceramic Industries Ltd.
                 </h2>
-                <h3 class="fw-bold">
+                <h3 class="">
 
                     Commencement: 1991
                 </h3>
@@ -148,7 +148,7 @@ solutions with a focus on innovation and quality.">
 
                     Argil Ceramics
                 </h2>
-                <h3 class="fw-bold">
+                <h3 class="">
 
                     Commencement: 2010
                 </h3>

@@ -62,44 +62,17 @@ with 10+ yrs of service. Get a price quote"
                         commercial environments.</p>
                 </div>
             </div>
-            {{-- <div class="row pt-3">
-                <div class="col-md-6">
-                    <h2 class="fw-bold">SPC Flooring Tiles</h2>
-                </div>
-                <div class="col-md-6">
-                    <p class="text-justify">SPC Flooring (Stone Plastic Composite) is a modern and durable flooring solution
-                        made from a mix of limestone powder, PVC, and stabilizers. It is highly water-resistant, making it
-                        ideal for kitchens, bathrooms, and other moisture-prone areas. The rigid core provides excellent
-                        stability and resists dents and scratches, even in high-traffic spaces. SPC flooring features a link
-                        lock system that allows for quick and easy installation without glue or nails. Its layered structure
-                        includes a protective wear layer, decorative vinyl layer, solid core, and attached underlayment for
-                        sound insulation and comfort. It often replicates the appearance of natural wood or stone. This
-                        flooring is low maintenance and easy to clean, making it a practical choice for both homes and
-                        commercial environments.</p>
-                </div>
-            </div> --}}
-        </div>
-        {{-- <div class="container">
-            <div class="row">
-                <div class="col-md-6 pt-4">
-                    <img src="spc\spc1.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
-                        class="img-fluid">
-                </div>
-                <div class="col-md-6 pt-4">
-                    <img src="spc\spc2.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
-                        class="img-fluid">
-                </div>
-            </div>
-        </div> --}}
 
-        <div class="container">
+        </div>
+
+        {{-- <div class="container">
             <div class="row">
                 <div class="col-md-12 pt-4">
                     <img src="spc\spc2.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
                         class="img-fluid">
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mt-4">
@@ -127,8 +100,11 @@ with 10+ yrs of service. Get a price quote"
                 <div class="col-md-4 pt-5">
                     <a href="{{ Route('spcproductinquiry', $item->slug) }}" class="text-decoration-none">
                         <div class="card">
-                            <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top" alt="argil spc product"
-                                title="argil spc product" loading="lazy">
+                            <picture>
+                                <source srcset="{{ asset('spc/' . $item->mainImg) }}" type="image/webp" />
+                                <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top"
+                                    alt="{{ $item->slug }}" title="{{ $item->slug }}" loading="lazy" />
+                            </picture>
                             <div class="card-body">
                                 <h5 class="card-title text-center">{{ $item->names }}</h5>
                             </div>

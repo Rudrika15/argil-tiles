@@ -115,7 +115,6 @@ class VisitorController extends Controller
     public function sendinquiry(Request $request)
     {
 
-        return $request;
 
         // Validate the form data
         $request->validate([

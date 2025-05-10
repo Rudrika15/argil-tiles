@@ -50,8 +50,8 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
 
         <div class="row">
             <div class="col-md-6 text-center">
-                <img src="{{ asset('asset/images/argileimage/quartzimage1.jpg') }}" alt="argil quartz product" title="argil quartz product" loading="lazy"
-                    class="img-fluid w-75 mb-5 mt-4">
+                <img src="{{ asset('asset/images/argileimage/quartzimage1.jpg') }}" alt="argil quartz product"
+                    title="argil quartz product" loading="lazy" class="img-fluid w-75 mb-5 mt-4">
             </div>
             <div class="col-md-6">
                 <h2 class="mt-5 fw-bold">Overview</h2>
@@ -79,13 +79,15 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
 
         <div class="row pb-5">
             <h2 class="text-center fw-bold pt-5">Quartz Stone Slab</h2>
-
             @foreach ($data as $index => $item)
                 <div class="col-md-4 pt-5">
                     <a href="{{ Route('quartzinquiry', $item->slug) }}" class="text-decoration-none">
                         <div class="card">
-                            <img src="{{ asset('quartz/' . $item->mainImg) }}" class="card-img-top" alt="Tile Image" title="Tile Image"
-                                loading="lazy">
+                            <picture>
+                                <source srcset="{{ asset('quartz/' . $item->mainImg) }}" type="image/webp" />
+                                <img src="{{ asset('quartz/' . $item->mainImg) }}" class="card-img-top"
+                                    alt="{{ $item->slug }}" title="{{ $item->slug }}" loading="lazy" />
+                            </picture>
                             <div class="card-body">
                                 <h5 class="card-title text-center">{{ $item->name }}</h5>
                             </div>
@@ -210,10 +212,10 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         style="background-image: url(./assets/asset/enhance-bg.999209ece5b0474be060.jpg); ">
 
         <div class="container">
-            <div class="row py-5 text-center">
-                <div class="col-md-6">
-                    <img src="{{ asset('asset/images/argileimage/quartzimage5.jpg') }}" alt="argil quartz product" title="argil quartz product" loading="lazy"
-                        class="img-fluid w-75 border rounded p-2" />
+            <div class="row py-5 text-center ">
+                <div class="col-md-6 h">
+                    <img src="{{ asset('asset/images/argileimage/quartzimage5.jpg') }}" alt="argil quartz product"
+                        title="argil quartz product" loading="lazy" class="img-fluid w-75 border rounded p-2" />
                 </div>
                 <div class="col-md-6">
                     <h3 class="text-center fw-bold text-white mt-2">Argil Quartz Slab Manufacturing Process</h3>
@@ -230,10 +232,10 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
             </div>
             <div class="row pb-5">
                 <div class="col-md-3">
-                    <div class="card text-center mt-3">
+                    <div class="card text-center mt-3 h-100">
                         <div class="d-flex justify-content-center mt-4">
-                            <img src="asset/images/argileimage/quartz-bg1.png" alt="MIXING" title="MIXING" loading="lazy"
-                             class="card-img-top w-25">
+                            <img src="asset/images/argileimage/quartz-bg1.png" alt="MIXING" title="MIXING"
+                                loading="lazy" class="card-img-top w-25">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title pt-1">MIXING</h4>
@@ -254,9 +256,10 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card text-center mt-3">
+                    <div class="card text-center mt-3 h-100">
                         <div class="d-flex justify-content-center mt-4">
-                            <img src="asset/images/argileimage/quartz-bg2.png" alt="PRESSING" title="PRESSING" loading="lazy" class="card-img-top w-25">
+                            <img src="asset/images/argileimage/quartz-bg2.png" alt="PRESSING" title="PRESSING"
+                                loading="lazy" class="card-img-top w-25">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title pt-1">PRESSING</h4>
@@ -269,9 +272,11 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card text-center mt-3">
+                    <div class="card text-center mt-3 h-100">
                         <div class="d-flex justify-content-center mt-4">
-                            <img src="asset/images/argileimage/quartz-bg3.png" alt="POLISHING" title="POLISHING" class="card-img-top w-25">                        </div>
+                            <img src="asset/images/argileimage/quartz-bg3.png" alt="POLISHING" title="POLISHING"
+                                class="card-img-top w-25">
+                        </div>
                         <div class="card-body">
                             <h4 class="card-title pt-1">POLISHING
                             </h4>
@@ -284,12 +289,15 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card text-center mt-3">
+                    <div class="card text-center mt-3 h-100">
                         <div class="d-flex justify-content-center mt-4">
-                            <img src="asset/images/argileimage/quartz-bg4.png" alt="QUALITY CONTROL" title="QUALITY CONTROL" class="card-img-top w-25">                        </div>
+                            <img src="asset/images/argileimage/quartz-bg4.png" alt="QUALITY CONTROL"
+                                title="QUALITY CONTROL" class="card-img-top w-25">
+                        </div>
                         <div class="card-body">
                             <h4 class="card-title pt-1">QUALITY CONTROL</h4>
-                            <p class="card-text pt-2 mb-5">Every step of the manufacturing process undergoes inspection at Argil
+                            <p class="card-text pt-2 mb-5">Every step of the manufacturing process undergoes inspection at
+                                Argil
                                 Tiles, from selecting the best raw materials to maintaining strict quality control
                                 standards. Our Quality Control division inspects each slab for flaws and impurities. The
                                 slabs are only sorted and marked for entry into our distribution system after they have
@@ -582,26 +590,34 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                 <form method="POST" id="contact-form">
                     @csrf
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" name="form_name" placeholder="Your Name" required oninvalid="this.setCustomValidity('The name field is required.')" oninput="this.setCustomValidity('')">
+                        <input type="text" class="form-control" id="floatingName" name="form_name"
+                            placeholder="Your Name" required
+                            oninvalid="this.setCustomValidity('The name field is required.')"
+                            oninput="this.setCustomValidity('')">
                         <label for="floatingName">Your Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingEmail" name="form_email" placeholder="name@example.com"
-                        required oninvalid="this.setCustomValidity('The email field is required.')" oninput="this.setCustomValidity('')">
+                        <input type="email" class="form-control" id="floatingEmail" name="form_email"
+                            placeholder="name@example.com" required
+                            oninvalid="this.setCustomValidity('The email field is required.')"
+                            oninput="this.setCustomValidity('')">
                         <label for="floatingEmail">Email</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="tel" class="form-control" id="floatingContact" name="form_phone" placeholder="Contact Number"
-                        required oninvalid="this.setCustomValidity('The contact field is required.')" oninput="this.setCustomValidity('')">
+                        <input type="tel" class="form-control" id="floatingContact" name="form_phone"
+                            placeholder="Contact Number" required
+                            oninvalid="this.setCustomValidity('The contact field is required.')"
+                            oninput="this.setCustomValidity('')">
                         <label for="floatingContact">Contact Number</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <textarea class="form-control" id="floatingMessage" placeholder="Your Message" name="form_message"
                             style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.
-')" oninput="this.setCustomValidity('')"></textarea>
+')"
+                            oninput="this.setCustomValidity('')"></textarea>
                         <label for="floatingMessage">Your Message</label>
                     </div>
 

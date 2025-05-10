@@ -54,9 +54,9 @@ assist you!">
             <div class="col-md-6 text-center">
 
                 <img src="{{ asset('assets/asset/contactsimage.png') }}" alt="argil contact" title="argil contact"
-                    loading="lazy" class="img-fluid h-75">
+                    loading="lazy" class="img-fluid h-100">
             </div>
-            <div class="col-md-6 pt-2">
+            <div class="col-md-6 pt-5">
                 <h2 class="fw-bold">Let's Be in Touch !!!
                 </h2>
                 <form method="POST" id="contact-form">

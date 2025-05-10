@@ -63,7 +63,7 @@ excellence in quartz stone manufacturing.">
                     loading="lazy" class="img-fluid h-75">
             </div>
 
-            <div class="col-md-12 pt-4">
+            <div class="col-md-12" style="margin-top:-70px ">
 
                 <h2 class="fw-bold">Mission</h2>
                 <p class="text-justify">

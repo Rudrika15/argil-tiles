@@ -279,12 +279,12 @@
                             Products
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item {{ Request::is('quartzsurface','quartzinquiry/*') ? 'active' : '' }}"
+                            <li><a class="dropdown-item {{ Request::is('quartzsurface', 'quartzinquiry/*') ? 'active' : '' }}"
                                     href="/quartzsurface">Quartz Surface</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item {{ Request::is('spcproducts','spcproductinquiry/*') ? 'active' : '' }}"
+                            <li><a class="dropdown-item {{ Request::is('spcproducts', 'spcproductinquiry/*') ? 'active' : '' }}"
                                     href="/spcproducts">SPC Products</a></li>
                         </ul>
                     </li>
@@ -318,9 +318,9 @@
         <section class="">
             <div class="container text-center text-md-start mt-5">
                 <!-- Grid row -->
-                <div class="row mt-3">
+                <div class="row mt-5">
                     <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto my-4 ">
                         <!-- Content -->
                         <img src="{{ asset('assets/asset/footerlogo.png') }}" class="img-fluid w-50"
                             alt="argil footerlogo" title="argil footerlogo" loading="lazy" />
@@ -328,9 +328,9 @@
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-4">
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto my-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
+                        <h6 class="text-uppercase fw-bold my-4">
                             Quick Links
                         </h6>
                         <p>
@@ -352,14 +352,14 @@
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto my-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mt-4">
                             Download Our App
 
 
                         </h6>
-                        <p>
+                        <p class="my-4">
                             <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
                                 alt="argil-playstore-link" title="argil-playstore-link" class="w-75">
                         </p>
@@ -371,16 +371,18 @@
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 my-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mt-4">Contact info</h6>
-                        <p><i class="bi bi-geo-alt mx-3"></i>Mod Ceramic Industries Ltd.
+                        <p class="my-4"><i class="bi bi-geo-alt mx-3 "></i>Mod Ceramic Industries Ltd.
+                            <br />
+                            <span class="mx-5 ">
+                                8-A, National Highway, </span>
+                            <br />
+                            <span class="mx-5">
+                                Morbi(Gujarat),India 363642
+                            </span>
                         </p>
-                        <p class="mx-5">8-A, National Highway, Morbi
-                        </p>
-
-                        <p class="mx-5">
-                            (Gujarat), India 363 642</p>
 
                         <p><i class="bi bi-telephone me-3 mx-3"></i><a href="tel:2822 240628"
                                 class="text-decoration-none" style="color: inherit !important;">+ 91 2822 240628</a>
@@ -415,7 +417,7 @@
                 @php
                     $year = date('Y');
                 @endphp
-                <a class="text-reset fw-bold text-decoration-none" href="https://argilties.com/">
+                <a class="text-reset fw-bold text-decoration-none" href="https://argiltiles.com">
                     © {{ $year }}
                     - Mod Ceramic Industries Ltd.
 
