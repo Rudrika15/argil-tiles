@@ -58,43 +58,59 @@
     </div>
     <!-- breadcrumb -->
 
-    <div class="">
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-            <!-- Indicators/dots -->
-
-
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="Los Angeles" class="d-block" style="width:100%">
-
-                </div>
-                <div class="carousel-item">
-                    <img src="chicago.jpg" alt="Chicago" class="d-block" style="width:100%">
-                    <div class="carousel-caption">
-                        <h3>Chicago</h3>
-                        <p>Thank you, Chicago!</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="ny.jpg" alt="New York" class="d-block" style="width:100%">
-                    <div class="carousel-caption">
-                        <h3>New York</h3>
-                        <p>We love the Big Apple!</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            @if ($data->mainImg)
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            @endif
+            @if ($data->subImg1)
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="{{ $data->mainImg ? 1 : 0 }}"></button>
+            @endif
+            @if ($data->subImg2)
+                <button type="button" data-bs-target="#demo"
+                    data-bs-slide-to="{{ $data->mainImg && $data->subImg1 ? 2 : 1 }}"></button>
+            @endif
+            @if ($data->subImg3)
+                <button type="button" data-bs-target="#demo"
+                    data-bs-slide-to="{{ $data->mainImg && $data->subImg2 ? 3 : 2 }}"></button>
+            @endif
+            @if ($data->subImg4)
+                <button type="button" data-bs-target="#demo"
+                    data-bs-slide-to="{{ $data->mainImg && $data->subImg3 ? 4 : 3 }}"></button>
+            @endif
+            @if ($data->subImg5)
+                <button type="button" data-bs-target="#demo"
+                    data-bs-slide-to="{{ $data->mainImg && $data->subImg4 ? 5 : 4 }}"></button>
+            @endif
         </div>
 
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            @if ($data->mainImg)
+                <div class="carousel-item active">
+                    <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="Main Image" class="d-block w-100 img-fluid"
+                        style="object-fit: cover; height: 100vh;">
+                </div>
+            @endif
+            @foreach (['subImg1', 'subImg2', 'subImg3', 'subImg4', 'subImg5'] as $index => $img)
+                @if ($data->$img)
+                    <div class="carousel-item @if (!$data->mainImg && $index == 0) active @endif">
+                        <img src="{{ asset('quartz/' . $data->$img) }}" alt="Image {{ $index + 1 }}"
+                            class="d-block w-100 img-fluid" style="object-fit: cover; height: 100vh;">
+                    </div>
+                @endif
+            @endforeach
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
 
 
