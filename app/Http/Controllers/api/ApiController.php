@@ -27,6 +27,7 @@ use App\Models\Finishtype;
 use App\Models\Favorite;
 use App\Models\NewArievels;
 use App\Models\NewArrivals;
+use Exception;
 use Illuminate\Support\Facades\Mail;
 
 class apiController extends Controller
@@ -157,7 +158,7 @@ class apiController extends Controller
         $email = $request->email;
         $contactno = $request->contactno;
         $message = $request->message;
-        $type = $request->type;
+        $details = $request->details;
         $subject = $request->subject;
 
         $inqr = new Inquiry();
@@ -166,7 +167,7 @@ class apiController extends Controller
         $inqr->email = $email;
         $inqr->phone = $contactno;
         $inqr->message = $message;
-        $inqr->details = $type;
+        $inqr->details = $details;
         $inqr->subject = $subject;
         $inqr->save();
 
@@ -472,49 +473,61 @@ class apiController extends Controller
         return Util::getSuccessMessage('Slider Fetched Successfully', $data);
     }
 
+    // function newarrivalsview()
+    // {
+    //     $data = NewArrivals::orderBy('id', 'desc')->first();
+    //     $url = $data->navigate_url;
+
+    //     // Extract path and split into segments
+    //     $path = parse_url($url, PHP_URL_PATH);
+    //     $segments = explode('/', trim($path, '/'));
+
+    //     $productId = 0;
+    //     $quartzproduct = null;
+    //     $wallproduct = null;
+
+    //     $index = array_search('quartzproduct', $segments);
+    //     if ($index !== false && isset($segments[$index + 1])) {
+    //         $productId = $segments[$index + 1];
+
+    //         // Fetch quartz product
+    //         $quartzproduct = Quartzproduct::find($productId);
+    //         if ($quartzproduct) {
+    //             return Util::getSuccessMessage('Quartz Product Fetched Successfully', [$quartzproduct, $data]);
+    //         }
+    //     } else {
+    //         // Try to detect wallproduct and get its ID
+    //         $index = array_search('wallproduct', $segments);
+    //         if ($index !== false && isset($segments[$index + 1])) {
+    //             $productId = $segments[$index + 1];
+    //             $wallproduct = Wallproduct::find($productId);
+    //             if ($wallproduct) {
+    //                 return Util::getSuccessMessage('Wall Product Fetched Successfully', [$wallproduct, $data]);
+    //             }
+    //         }
+    //     }
+
+    //     // Fallback response
+    //     return response()->json([
+    //         'status' => false,
+    //         'message' => 'Product not found.',
+    //         'data' => [
+    //             'url' => $url,
+    //             'newarrival' => $data,
+    //             'quartzproduct' => $quartzproduct,
+    //             'wallproduct' => $wallproduct
+    //         ]
+    //     ]);
+    // }
+
     function newarrivalsview()
     {
-        $data = NewArrivals::orderBy('id', 'desc')->first();
-        $url = $data->navigate_url;
-
-        // Extract path and split into segments
-        $path = parse_url($url, PHP_URL_PATH);
-        $segments = explode('/', trim($path, '/'));
-
-        $productId = 0;
-        $quartzproduct = null;
-        $wallproduct = null;
-
-        $index = array_search('quartzproduct', $segments);
-        if ($index !== false && isset($segments[$index + 1])) {
-            $productId = $segments[$index + 1];
-
-            // Fetch quartz product
-            $quartzproduct = Quartzproduct::find($productId);
-            if ($quartzproduct) {
-                return Util::getSuccessMessage('Quartz Product Fetched Successfully', [$quartzproduct, $data]);
-            }
-        } else {
-            // Try to detect wallproduct and get its ID
-            $index = array_search('wallproduct', $segments);
-            if ($index !== false && isset($segments[$index + 1])) {
-                $productId = $segments[$index + 1];
-                $wallproduct = Wallproduct::find($productId);
-                if ($wallproduct) {
-                    return Util::getSuccessMessage('Wall Product Fetched Successfully', [$wallproduct, $data]);
-                }
-            }
+        try {
+            $data = NewArrivals::orderBy('id', 'desc')->first();
+            $data->image = 'newarieles/' . $data->image;
+            return Util::getSuccessMessage('New Arrivals Fetched Successfully', $data);
+        } catch (Exception $e) {
+            return Util::getErrorMessage('New Arrivals Not Found', $e);
         }
-
-        // Fallback response
-        return response()->json([
-            'status' => false,
-            'message' => 'Product not found.',
-            'data' => [
-                'newarrival' => $data,
-                'quartzproduct' => $quartzproduct,
-                'wallproduct' => $wallproduct
-            ]
-        ]);
     }
 }

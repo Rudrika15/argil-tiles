@@ -153,8 +153,16 @@ class VisitorController extends Controller
 
     public function spcproducts()
     {
+        $videos = [
+            asset('assets/asset/video1.mp4'),
+            asset('assets/asset/video2.mp4'),
+            asset('assets/asset/video3.mp4'),
+        ];
+
+        $randomVideo = $videos[array_rand($videos)];
+
         $data = Lvtproduct::orderBy('id', 'desc')->get();
-        return view('visitors.products.spc products.spcproducts', compact('data'));
+        return view('visitors.products.spc products.spcproducts', compact('data', 'randomVideo'));
     }
     public function spcproductinquiry($slug)
     {

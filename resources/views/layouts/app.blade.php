@@ -2,6 +2,73 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Argil Group">
+    <meta name="theme-color" content="#000000">
+    <meta name="geo.region" content="IN-GJ">
+    <meta name="geo.placename" content="Morbi">
+    <meta name="geo.position" content="22.82587;70.847998">
+    <meta name="ICBM" content="22.82587, 70.847998">
+
+    <meta property="og:type" content="website" data-react-helmet=
+"true">
+    <meta property="og:site_name" content="Argil Group">
+
+    <meta property="og:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
+        helmet="true">
+    <meta name="twitter:card" content="summary_large_image" data-react-helmet="true">
+    <meta name="twitter:site" content="@argiltiles" data-react- helmet="true">
+
+
+    <meta name="twitter:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
+        helmet="true">
+    <meta name="publisher" content="Argil Tiles" />
+    {{-- <link rel="icon" href="/logo_bg.png"> --}}
+
+
+    <meta name="robots" content="index, follow" />
+
+
+    <link rel="icon" href="{{ asset('asset/images/logo/logo.png') }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- country CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
+    <!-- country JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+
+
+    <style>
+        .navbar {
+            transition: all 0.3s ease;
+            padding: 1.2rem 1rem;
+            background-color: white;
+        }
+
+        .sticky-navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 1rem;
+            background-color: white;
+        }
+    </style>
+
+    @yield('seosection')
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTBK17M75S"></script>
     <script type="application/ld+json">
         {
@@ -78,20 +145,7 @@
         </script>
 
 
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org/",
-          "@type": "Product",
-          "name": "Argil Tiles",
-          "description": "Argil is an artificial quartz stone slab manufacturer in Morbi, Gujarat, India. We have the best-engineered quartz surface stone for kitchen and platform at a reasonable price. We have 10+ yrs of service. Get a price quote",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.1",
-            "bestRating": "5",
-            "ratingCount": "39"
-          }
-        }
-        </script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -101,94 +155,8 @@
         gtag('js', new Date());
         gtag('config', 'G-TTBK17M75S');
     </script>
-    @hasSection('seosection')
-        @yield('seosection')
-    @else
-    @endif
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="author" content="Argil Group">
-    <meta name="theme-color" content="#000000">
-    <meta name="geo.region" content="IN-GJ">
-    <meta name="geo.placename" content="Morbi">
-    <meta name="geo.position" content="22.82587;70.847998">
-    <meta name="ICBM" content="22.82587, 70.847998">
-
-    <meta property="og:type" content="website" data-react-helmet=
-"true">
-    <meta property="og:site_name" content="Argil Group">
-
-    <meta property="og:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
-        helmet="true">
-    <meta name="twitter:card" content="summary_large_image" data-react-helmet="true">
-    <meta name="twitter:site" content="@argiltiles" data-react- helmet="true">
 
 
-    <meta name="twitter:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
-        helmet="true">
-    <meta name="publisher" content="Argil Tiles" />
-    <link rel="icon" href="/logo_bg.png">
-
-
-    <meta name="robots" content="index, follow" />
-
-    {{-- <meta name="robots" content="index, follow" /> --}}
-
-    <link rel="icon" href="{{ asset('asset/images/logo/logo.png') }}">
-
-
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow" />
-    <meta name="publisher" content="Argil Tiles" />
-    <meta property="og:type" content="website">
-    <meta name="author" content="Argil Group">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ArgilGroup">
-    <meta name="theme-color" content="#000000">
-    <meta name="geo.region" content="IN-GJ">
-    <meta name="geo.placename" content="Morbi">
-    <meta name="geo.position" content="22.82587;70.847998">
-    <meta name="ICBM" content="22.82587, 70.847998">
-    <meta property="og:image" content="https://argiltiles.com/assets/asset/logo.png">
-    <meta name="twitter:image" content="https://argiltiles.com/assets/asset/logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- country CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-
-    <!-- country JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-
-
-    @yield('seosection')
-    <title>Argil Tiles</title>
-    <style>
-        .navbar {
-            transition: all 0.3s ease;
-            padding: 1.2rem 1rem;
-            background-color: white;
-        }
-
-        .sticky-navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 0.5rem 1rem;
-            background-color: white;
-        }
-    </style>
 </head>
 
 <body>
@@ -307,6 +275,10 @@
 
     <!-- Video Section -->
     @yield('content')
+
+    {{-- <div id="preloader">
+        <div class="spinner"></div>
+    </div> --}}
     <!-- footer -->
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-body-tertiary text-muted">
@@ -411,6 +383,7 @@
         </section>
         <!-- Section: Links  -->
 
+
         <!-- Copyright -->
         <div class="d-flex justify-content-around p-4" style="background-color: rgba(0, 0, 0, 0.05);">
             <div>
@@ -435,6 +408,40 @@
     <!-- Footer -->
     <!-- footer -->
     <!-- Bootstrap JS -->
+    <style>
+        /* Preloader styling */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #ccb19b;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         window.addEventListener('scroll', function() {
@@ -446,7 +453,13 @@
             }
         });
     </script>
-
+    <script>
+        // Wait for window load
+        // window.addEventListener("load", function() {
+        //     document.getElementById("preloader").style.display = "none";
+        //     document.querySelector(".content").style.display = "block";
+        // });
+    </script>
 
 
 

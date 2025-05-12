@@ -47,8 +47,10 @@ with 10+ yrs of service. Get a price quote"
         <div class="container">
             <div class="row pt-3">
                 <div class="col-md-6">
+
                     <img src="spc\spc1.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
                         class="img-fluid">
+
                 </div>
                 <div class="col-md-6">
                     <p class="text-justify">SPC Flooring (Stone Plastic Composite) is a modern and durable flooring solution
@@ -73,7 +75,7 @@ with 10+ yrs of service. Get a price quote"
                 </div>
             </div>
         </div> --}}
-        <div class="container">
+        {{-- <div class="container">
             <div class="row">
                 <div class="col-md-4 mt-4">
                     <video autoplay muted loop playsinline class="w-100">
@@ -91,7 +93,7 @@ with 10+ yrs of service. Get a price quote"
                     </video>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="row pb-5">
             <h2 class="text-center fw-bold pt-5">SPC Flooring Tiles</h2>
@@ -100,11 +102,8 @@ with 10+ yrs of service. Get a price quote"
                 <div class="col-md-4 pt-5">
                     <a href="{{ Route('spcproductinquiry', $item->slug) }}" class="text-decoration-none">
                         <div class="card">
-                            <picture>
-                                <source srcset="{{ asset('spc/' . $item->mainImg) }}" type="image/webp" />
-                                <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top"
-                                    alt="{{ $item->slug }}" title="{{ $item->slug }}" loading="lazy" />
-                            </picture>
+                            <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top" alt="{{ $item->slug }}"
+                                title="{{ $item->slug }}" loading="lazy" />
                             <div class="card-body">
                                 <h5 class="card-title text-center">{{ $item->names }}</h5>
                             </div>

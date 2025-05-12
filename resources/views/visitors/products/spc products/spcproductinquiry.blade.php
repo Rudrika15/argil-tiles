@@ -127,6 +127,7 @@
                         <p>{{ $data->wearLayer }}</p>
                     </div>
                 </div>
+                <h2 class="fw-bold"><i class="bi bi-file-earmark-text"></i> Product Inquiry</h2>
 
                 <form class="mt-3" id="contact-form" method="POST">
                     @csrf

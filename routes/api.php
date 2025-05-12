@@ -20,7 +20,7 @@ Route::get('/quartzproduct/{id?}', [ApiController::class, 'quartzproductview']);
 //Route::get('/wallproductview/{id?}',[ApiController::class,'wallproductview']);
 Route::get('/spcproduct/{id?}', [ApiController::class, 'lvtproductview']);
 // new arrivals route
-Route::get('/newarrivals/{id?}', [ApiController::class, 'newarrivalsview']);
+Route::get('/newarrivals', [ApiController::class, 'newarrivalsview']);
 
 Route::post('/contactus', [ApiController::class, 'contactus']);
 Route::post('/inquiry', [ApiController::class, 'inquiry']);

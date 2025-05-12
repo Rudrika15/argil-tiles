@@ -16,7 +16,7 @@
 
     <link rel="canonical" href="{{ url()->current() }}">
 
-    <title>Quartz Inquiry | Premium Quartz Surfaces by Argil</title>
+    <title>Quartz | {{ $data->name }} | Premium Quartz Surfaces by Argil</title>
 
     <script type="application/ld+json">
         {
@@ -38,8 +38,7 @@
               "name": "Chandan Gupta"
             },
             "datePublished": "{{ $data->created_at->toDateString() }}",
-            "reviewBody": "
-            Impressed with the quality and elegant finish of Argil’s quartz. Smooth texture, excellent durability, and a classy touch to our space. Highly recommended!"
+            "reviewBody": "Impressed with the quality and elegant finish of Argil’s quartz. Smooth texture, excellent durability, and a classy touch to our space. Highly recommended!"
           }
           ]
 
