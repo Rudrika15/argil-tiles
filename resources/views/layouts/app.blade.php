@@ -344,17 +344,17 @@
                     <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 my-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mt-4">Contact info</h6>
-                        <p class="my-4"><i class="bi bi-geo-alt mx-3 "></i>Mod Ceramic Industries Ltd.
+                        <p class="my-4"><i class="bi bi-geo-alt mx-3 "></i>Argil Group.
                             <br />
                             <span class="mx-5 ">
                                 8-A, National Highway, </span>
                             <br />
                             <span class="mx-5">
-                                Morbi(Gujarat),India
+                                Morbi(Gujarat)-363642
                             </span>
                             <br />
                             <span class="mx-5">
-                                363642
+                                India
                             </span>
                         </p>
 
@@ -392,9 +392,9 @@
                 @php
                     $year = date('Y');
                 @endphp
-                <a class="text-reset fw-bold text-decoration-none" href="https://argiltiles.com">
+                All rights reserved <a class="text-reset fw-bold text-decoration-none" href="https://argiltiles.com">
                     © {{ $year }}
-                    - Mod Ceramic Industries Ltd.
+                    Argil Group .
 
                 </a>
             </div>
