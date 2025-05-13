@@ -54,7 +54,7 @@ with 10+ yrs of service. Get a price quote"
                 </div>
                 <div class="col-md-6">
                     <p class="text-justify">SPC Flooring (Stone Plastic Composite) is a modern and durable flooring solution
-                        made from a mix of limestone powder, PVC, and stabilizers. It is highly water-resistant, making it
+                        made from a mix of limestone powder, PVC, and stabilizers. <span id="products">It</span> is highly water-resistant, making it
                         ideal for kitchens, bathrooms, and other moisture-prone areas. The rigid core provides excellent
                         stability and resists dents and scratches, even in high-traffic spaces. SPC flooring features a link
                         lock system that allows for quick and easy installation without glue or nails. Its layered structure
@@ -111,6 +111,25 @@ with 10+ yrs of service. Get a price quote"
                     </a>
                 </div>
             @endforeach
+
+        </div>
+
+        <div class="row">
+
+            {{ $data->links('pagination::bootstrap-5') }}
+
         </div>
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.pagination a').forEach(link => {
+            // Avoid duplicate hashes
+            if (!link.href.includes('#products')) {
+                link.href += '#products';
+            }
+        });
+    });
+</script>
+
 @endsection

@@ -359,8 +359,8 @@
                             </span>
                         </p>
 
-                        <p><i class="bi bi-telephone me-3 mx-3"></i><a href="tel:2822 240628"
-                                class="text-decoration-none" style="color: inherit !important;">+ 91 2822 240628</a>
+                        <p><i class="bi bi-telephone me-3 mx-3"></i><a href="tel:9925511465"
+                                class="text-decoration-none" style="color: inherit !important;">+ 91 9925511465</a>
                         </p>
                         <p> <i class="bi bi-envelope me-3 mx-3"></i>
                             <a href="mailto:info@argilties.com" class="text-decoration-none"
