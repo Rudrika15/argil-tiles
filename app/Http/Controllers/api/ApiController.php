@@ -172,6 +172,8 @@ class apiController extends Controller
         $inqr->save();
 
         // email code here
+     Mail::to('social.media@argiltiles.com')  // Replace with your own email address
+            ->send(new ContactFormMail($name, $email, $contactno, $message));
 
         return Util::getSuccessMessage('Inquiry Sent Successfully', $inqr);
     }
