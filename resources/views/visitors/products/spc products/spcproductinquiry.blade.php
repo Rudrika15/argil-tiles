@@ -202,10 +202,10 @@
             const fullPhone = iti.getNumber();
 
             // Remove original form_phone and add formatted one
-            formData.delete('form_phone');
-            formData.append('form_phone', fullPhone);
 
             const formData = new FormData(form);
+            formData.delete('form_phone');
+            formData.append('form_phone', fullPhone);
 
             fetch("{{ Route('send.inquiry') }}", {
                     method: 'POST',

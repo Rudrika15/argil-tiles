@@ -142,7 +142,7 @@ class VisitorController extends Controller
         // $inquiry->details = 'spc';
         $inquiry->save();
 
-
+        $message = "Product Name : " . $request->product_name . " \n  " . $message;
         // Send the email using the ContactFormMail Mailable
         Mail::to('social.media@argiltiles.com')  // Replace with your own email address
             ->send(new InquiryFormMail($name, $email, $phone, $message));
@@ -156,7 +156,6 @@ class VisitorController extends Controller
         $data = Lvtproduct::orderBy('id', 'desc')->paginate(6); // 9 items per page (adjust as needed)
 
         return view('visitors.products.spc products.spcproducts', compact('data'));
-
     }
     public function spcproductinquiry($slug)
     {
