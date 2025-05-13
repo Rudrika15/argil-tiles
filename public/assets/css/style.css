@@ -176,3 +176,38 @@ ul li a.active {
     display: inline-block;
     width: 100%;
 }
+
+/* Pagination links */
+ul.pagination li.page-item a.page-link {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+/* Hover effect */
+ul.pagination li.page-item a.page-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+}
+
+/* Active page */
+ul.pagination li.page-item.active span.page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Disabled links */
+ul.pagination li.page-item.disabled span.page-link,
+ul.pagination li.page-item.disabled a.page-link {
+    color: #ccc;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
