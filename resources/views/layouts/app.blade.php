@@ -13,8 +13,7 @@
     <meta name="geo.position" content="22.82587;70.847998">
     <meta name="ICBM" content="22.82587, 70.847998">
 
-    <meta property="og:type" content="website" data-react-helmet=
-"true">
+    <meta property="og:type" content="website" data-react-helmet="true">
     <meta property="og:site_name" content="Argil Group">
 
     <meta property="og:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
