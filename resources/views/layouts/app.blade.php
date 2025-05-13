@@ -25,7 +25,6 @@
     <meta name="twitter:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
         helmet="true">
     <meta name="publisher" content="Argil Tiles" />
-    {{-- <link rel="icon" href="/logo_bg.png"> --}}
 
 
     <meta name="robots" content="index, follow" />
@@ -68,7 +67,6 @@
 
     @yield('seosection')
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTBK17M75S"></script>
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -144,6 +142,7 @@
         </script>
 
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTBK17M75S"></script>
 
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -191,80 +190,80 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page"
-                            href="/">Home</a>
+                            href="/">HOME</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle {{ Request::is('profile', 'about', 'documentaryfilm', 'corevalues', 'groupcompany', 'achievements', 'plants', 'quality') ? 'active' : '' }}"
                             href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Corporate
+                            CORPORATE
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item {{ Request::is('profile') ? 'active' : '' }}"
-                                    href="/profile">Profile</a></li>
+                                    href="/profile">PROFILE</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item {{ Request::is('about') ? 'active' : '' }}"
-                                    href="/about">About</a></li>
+                                    href="/about">ABOUT </a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item {{ Request::is('documentaryfilm') ? 'active' : '' }}"
-                                    href="/documentaryfilm">Documentary Film</a></li>
+                                    href="/documentaryfilm">DOCUMENTARY FILM</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item {{ Request::is('corevalues') ? 'active' : '' }}"
-                                    href="/corevalues">Core Value</a></li>
+                                    href="/corevalues">CORE VALUES</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item {{ Request::is('groupcompany') ? 'active' : '' }}"
-                                    href="/groupcompany">Company Group</a></li>
+                                    href="/groupcompany">COMPANY GROUP</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item {{ Request::is('achievements') ? 'active' : '' }}"
-                                    href="/achievements">Achievements</a></li>
+                                    href="/achievements">ACHIEVEMENTS</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item {{ Request::is('plants') ? 'active' : '' }}"
-                                    href="/plants">Plants</a></li>
+                                    href="/plants">PLANTS</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item {{ Request::is('quality') ? 'active' : '' }}"
-                                    href="/quality">Qulity</a></li>
+                                    href="/quality">QUALITY</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle {{ Request::is('quartzsurface', 'spcproducts', 'quartzinquiry/*', 'spcproductinquiry/*') ? 'active' : '' }}"
                             href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Products
+                            PRODUCTS
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item {{ Request::is('quartzsurface', 'quartzinquiry/*') ? 'active' : '' }}"
-                                    href="/quartzsurface">Quartz Surface</a></li>
+                                    href="/quartzsurface">QUARTZ SURFACE</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item {{ Request::is('spcproducts', 'spcproductinquiry/*') ? 'active' : '' }}"
-                                    href="/spcproducts">SPC Products</a></li>
+                                    href="/spcproducts">SPC PRODUCTS</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('blogs') || Request::is('blogdetails/*') ? 'active' : '' }}"
-                            href="/blogs">Blog</a>
+                            href="/blogs">BLOG</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('catalogue') ? 'active' : '' }}"
-                            href="/catalogue">Catalogue</a>
+                            href="/catalogue">CATALOGUE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="/contact">Contact</a>
+                        <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="/contact">CONTACT</a>
                     </li>
                 </ul>
 
@@ -353,7 +352,7 @@
                             <span class="mx-5">
                                 Morbi(Gujarat),India
                             </span>
-                            <br/>
+                            <br />
                             <span class="mx-5">
                                 363642
                             </span>
