@@ -287,13 +287,13 @@
 
         <!-- Section: Links  -->
         <section class="">
-            <div class="container text-center text-md-start mt-5">
+            <div class="container-fluid d-flex justify-content-evenly text-center text-md-start mt-5">
                 <!-- Grid row -->
-                <div class="row mt-5">
+                <div class="row mt-5 ">
                     <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto my-4 ">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto my-4 d-flex justify-content-center ">
                         <!-- Content -->
-                        <img src="{{ asset('assets/asset/footerlogo.png') }}" class="img-fluid w-50"
+                        <img src="{{ asset('assets/asset/footerlogo.png') }}" style="width: 150px;height: 150px;"
                             alt="argil footerlogo" title="argil footerlogo" loading="lazy" />
                     </div>
                     <!-- Grid column -->
@@ -323,7 +323,7 @@
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto my-4">
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto my-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mt-4">
                             Download Our App
@@ -342,7 +342,7 @@
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 my-4">
+                    <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 my-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mt-4">Contact info</h6>
                         <p class="my-4"><i class="bi bi-geo-alt mx-3 "></i>Mod Ceramic Industries Ltd.
@@ -351,7 +351,11 @@
                                 8-A, National Highway, </span>
                             <br />
                             <span class="mx-5">
-                                Morbi(Gujarat),India 363642
+                                Morbi(Gujarat),India
+                            </span>
+                            <br/>
+                            <span class="mx-5">
+                                363642
                             </span>
                         </p>
 
