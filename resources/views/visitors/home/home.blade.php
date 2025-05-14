@@ -85,7 +85,8 @@ Get a price quote "
 
                         I would like to congratulate you on the same and motivate you to always be this humble and serving
                         to your brand and people associated....
-                        <a href="/about" class="text-dark">Read More</a>
+                        <a href="/about" class="text-dark text-decoration-none">About More <i
+                                class="bi bi-arrow-right"></i> </a>
                     </p>
                 </div>
             </div>
@@ -101,18 +102,62 @@ Get a price quote "
                 <h2 class="text-center fw-bold">India's Best Quartz Surface and SPC Products Suppliers</h2>
             </div>
             <div class="row pt-5">
-                <div class="col-md-4 text-center offset-md-2">
-                    <a href="/quartzsurface">
-                        <img src="https://dev.argiltiles.com/asset/images/argileimage/productimage1.jpg"
-                            class="img-fluid h-75" alt="product-image" title="spc product" loading="lazy" />
-                    </a>
+
+                <div class="col-md-4">
+                    <img src="{{ asset('asset/images/argileimage/quartzimage1.jpg') }}" alt="argil quartz product"
+                        title="argil quartz product" loading="lazy" class="img-fluid">
                 </div>
-                <div class="col-md-4 text-center">
-                    <a href="/spcproducts">
-                        <img src="https://dev.argiltiles.com/asset/images/argileimage/productimage2.jpg"
-                            class="img-fluid h-75" alt="product-image" title="quartz product" loading="lazy" />
-                    </a>
+                <div class="col-md-8 ">
+                    <h2>Quartz Surface</h2>
+
+                    <p class="text-justify">Composite or engineered quartz is a very solid material that
+                        resembles
+                        real
+                        granite
+                        in
+                        both look and
+                        utility. Engineered quartz is unaffected by stains, scratches, and cracks. It is also resistant
+                        to heat
+                        and cold. Engineered By blending quartz or granite aggregates with resins and pigments, man-made
+                        products like stone or quartz are created by quartz manufacturers in India, which are mostly
+                        generated
+                        from natural materials. The composition of engineered quartz slabs is typically 90% pulverised
+                        natural
+                        quartz and 10% polyresin. However, these percentages may vary slightly depending on the kind of
+                        quartz
+                        used.</p>
+                    <p>
+                        <a href="/quartzsurface" class="btn-primary fw-bold text-decoration-none"> Explore Quartz Surface <i
+                                class="bi bi-arrow-right"></i> </a>
+                    </p>
                 </div>
+            </div>
+            <div class="row py-5">
+
+                <div class="col-md-8">
+                    <h2>SPC Flooring Tiles</h2>
+                    <p class="text-justify">SPC Flooring (Stone Plastic Composite) is a modern and durable flooring solution
+                        made from a mix of limestone powder, PVC, and stabilizers. <span id="products">It</span> is highly
+                        water-resistant, making it
+                        ideal for kitchens, bathrooms, and other moisture-prone areas. The rigid core provides excellent
+                        stability and resists dents and scratches, even in high-traffic spaces. SPC flooring features a link
+                        lock system that allows for quick and easy installation without glue or nails. Its layered structure
+                        includes a protective wear layer, decorative vinyl layer, solid core, and attached underlayment for
+                        sound insulation and comfort. It often replicates the appearance of natural wood or stone. This
+                        flooring is low maintenance and easy to clean, making it a practical choice for both homes and
+                        commercial environments.</p>
+                    <p>
+                        <a href="/spcproducts" class="btn-primary fw-bold text-decoration-none"> Explore SPC Flooring <i
+                                class="bi bi-arrow-right"></i> </a>
+                    </p>
+                </div>
+                <div class="col-md-3 offset-md-1">
+
+                    <img src="{{ asset('asset/images/argileimage/spc1.jpg') }}" alt="argil spc product"
+                        title="argil spc product" loading="lazy" class="img-fluid text-right">
+
+                </div>
+
             </div>
         </div>
 

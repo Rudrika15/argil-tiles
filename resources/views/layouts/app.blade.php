@@ -175,7 +175,7 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="/">
                 <img src="{{ asset('assets/asset/logo.png') }}" alt="argil tiles logo" title ="argil tiles logo"
@@ -392,7 +392,7 @@
                 @php
                     $year = date('Y');
                 @endphp
-                All rights reserved <a class="text-reset fw-bold text-decoration-none" href="https://argiltiles.com">
+                <a class="text-reset fw-bold text-decoration-none" href="https://argiltiles.com">
                     © {{ $year }}
                     Argil Group .
 
@@ -445,7 +445,7 @@
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+    {{-- <script>
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 75) {
@@ -455,12 +455,12 @@
             }
         });
     </script>
-    <script>
-        // Wait for window load
-        // window.addEventListener("load", function() {
-        //     document.getElementById("preloader").style.display = "none";
-        //     document.querySelector(".content").style.display = "block";
-        // });
+    <script> --}}
+    // Wait for window load
+    // window.addEventListener("load", function() {
+    // document.getElementById("preloader").style.display = "none";
+    // document.querySelector(".content").style.display = "block";
+    // });
     </script>
 
 
