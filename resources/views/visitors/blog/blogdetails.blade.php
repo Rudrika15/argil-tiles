@@ -13,7 +13,7 @@
 
     <link rel="canonical" href="https://argiltiles.com/blogdetails/{{ $blog->slug }}" data-react-helmet="true">
 
-    <title>Argil Tiles Blog | Insights, Inspiration & Tile Trends</title>
+    <title>Argil Tiles Blog | {{ $blog->title }}</title>
 @endsection
 @section('content')
     <!-- breadcrumb -->
@@ -21,7 +21,7 @@
         <div class="container">
 
             <div class="p-2">
-                <h1 class="display-6 fw-bold">Home / {{ $blog->title }}</h1>
+                <h1 class="display-6 fw-bold">Home / Blog Detail</h1>
             </div>
         </div>
     </div>
@@ -50,6 +50,7 @@
 
     <div class="container mt-4">
         <div class="row">
+            <h3 class="fw-bold py-5">{{ $blog->title }}</h3>
             <div class="col-12 col-md-5 mb-3 mb-md-0">
                 <img src="{{ asset('blogimage/' . $blog->image) }}" alt="argil blog" title="argil blog" loading="lazy"
                     class="img-fluid rounded w-100">

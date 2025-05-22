@@ -20,14 +20,12 @@ Artificial Quartz Stone">
         content="Learn more about Argil Group,
 a trusted name in the artificial quartz industry. Our commitment to quality and
 innovation makes us stand out.">
-<link rel="canonical" href="https://argiltiles.com/about" data-react-
-helmet="true">
+    <link rel="canonical" href="https://argiltiles.com/about" data-react- helmet="true">
     <title>About Argil | Leading Quartz Slab & Tile Manufacturer in India</title>
 @endsection
 @section('content')
-
-     <!-- breadcrumb -->
-     <div class="breadcrumb d-flex justify-content-between align-items-center">
+    <!-- breadcrumb -->
+    <div class="breadcrumb d-flex justify-content-between align-items-center">
         <div class="container">
 
             <div class="p-2">
@@ -54,7 +52,8 @@ helmet="true">
                 </p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{ asset('assets/asset/aboutimage.png')}}" alt="argil about" title="argil about" loading="lazy" class="img-fluid w-75">
+                <img src="{{ asset('assets/asset/aboutimage.png') }}" alt="argil about" title="argil about" loading="lazy"
+                    class="img-fluid w-75">
             </div>
 
         </div>
@@ -114,5 +113,4 @@ helmet="true">
             </div>
         </div>
     </div>
-
 @endsection

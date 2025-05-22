@@ -39,7 +39,7 @@ innovation drive the production of world-class artificial quartz stones.">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2 class="pt-4 ">Digital Wall Tiles</h2>
+                <h2 class="pt-4 font-bold">Digital Wall Tiles</h2>
                 <p class="text-justify">
                     The best quality Digital tiles are manufactured and delivered to the customers by ARGIL. We take
                     pride

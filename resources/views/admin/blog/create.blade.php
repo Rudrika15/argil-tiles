@@ -40,9 +40,17 @@
             <input type="hidden" name="slug" id="slug">
 
 
-            <div class="form-label-group">
+            {{-- <div class="form-label-group">
                 <textarea id="form_firstname" name="description" class="form-control" placeholder="description" required></textarea>
-            </div>
+            </div> --}}
+
+            <div id="toolbar" class="mb-3 d-flex flex-wrap align-items-center gap-2"></div>
+
+            <!-- Editor -->
+            <div id="editor" contenteditable="true" class="bg-white"></div>
+
+            <!-- Source View -->
+            <textarea id="source" name="description" class="form-control mt-2" placeholder="HTML Source Code"></textarea>
 
             <div class="row">
                 <div class="col-md-6">
@@ -107,7 +115,8 @@
                 <div class="col-md-7">
                     <div class="form">
                         <label>Upload Image</label>
-                        <input type="file" class="form-control" id="ogImage" placeholder="" accept='image/*' onchange="readURL(this,'#ogImagePreview')" name="ogImage">
+                        <input type="file" class="form-control" id="ogImage" placeholder="" accept='image/*'
+                            onchange="readURL(this,'#ogImagePreview')" name="ogImage">
                     </div>
                 </div>
             </div>
@@ -133,8 +142,8 @@
                 </div>
                 <div class="col">
                     <div class="form-label-group">
-                        <input type="text" class="form-control" id="metadescription" placeholder="" name="metadescription"
-                            value="{{ old('metadescription') }}">
+                        <input type="text" class="form-control" id="metadescription" placeholder=""
+                            name="metadescription" value="{{ old('metadescription') }}">
                         <label for="">description</label>
                     </div>
                 </div>
@@ -201,17 +210,17 @@
     </script>
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const titleInput = document.getElementById('title');
-        const slugInput = document.getElementById('slug');
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const titleInput = document.getElementById('title');
+            const slugInput = document.getElementById('slug');
 
-        titleInput.addEventListener('input', function () {
-            let slug = this.value.replace(/\s+/g, '-');
-            slugInput.value = slug;
+            titleInput.addEventListener('input', function() {
+                let slug = this.value.replace(/\s+/g, '-');
+                slugInput.value = slug;
+            });
         });
-    });
-</script>
+    </script>
 
 
 

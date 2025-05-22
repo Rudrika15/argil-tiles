@@ -330,8 +330,11 @@
 
                         </h6>
                         <p class="my-4">
-                            <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
-                                alt="argil-playstore-link" title="argil-playstore-link" class="w-75">
+                            <a target="_blank"
+                                href="https://play.google.com/store/apps/details?id=com.arjil.argil_tiles&pli=1">
+                                <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
+                                    alt="argil-playstore-link" title="argil-playstore-link" class="w-75">
+                            </a>
                         </p>
                         <p>
                             <img src="{{ asset('assets/asset/appstore.png') }}"
@@ -344,7 +347,7 @@
                     <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 my-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mt-4">Contact info</h6>
-                        <p class="my-4"><i class="bi bi-geo-alt mx-3 "></i>Argil Group.
+                        <p class="my-4"><i class="bi bi-geo-alt mx-3 "></i>Argil Group
                             <br />
                             <span class="mx-5 ">
                                 8-A, National Highway, </span>
@@ -394,7 +397,7 @@
                 @endphp
                 <a class="text-reset fw-bold text-decoration-none" href="https://argiltiles.com">
                     © {{ $year }}
-                    Argil Group .
+                    Argil Group
 
                 </a>
             </div>
@@ -402,7 +405,7 @@
                 Developed by
                 <a class="text-reset fw-bold text-decoration-none" href="https://flipcodesolutions.com/"
                     target="_blank">Flipcode
-                    Solutions</a>
+                    Solutions private limited</a>
             </div>
         </div>
         <!-- Copyright -->

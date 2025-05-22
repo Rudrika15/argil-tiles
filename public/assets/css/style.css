@@ -20,7 +20,11 @@ body {
 }
 
 
-
+.display-6 {
+    font-family: Avenir, 'Hinted Adriatic', sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+}
 
 .parallax {
     /* max-height: 420px; */

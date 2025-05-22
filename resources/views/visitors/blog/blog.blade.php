@@ -34,6 +34,10 @@
                     <h2 class="mt-4 fw-bold">{{ $blog->title }}</h2>
                     <img src="{{ asset('blogimage/' . $blog->image) }}" alt="argil blog" title="argil blog" loading="lazy"
                         class="img-fluid w-100 mt-3">
+                    <p class="py-3">
+                        {{ $blog->created_at ? $blog->created_at->diffForHumans() : 'No date available' }}
+                    </p>
+
                     <p class="text-justify mt-4">{{ Str::limit($blog->description, 200, '...') }}</p>
                     <a href="{{ route('blogdetails', $blog->slug) }}" class="btn btn-primary mt-3">
                         Read More

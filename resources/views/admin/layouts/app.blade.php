@@ -152,7 +152,7 @@
                         <span><i class="bi bi-gear-wide-connected"></i> Setup</span>
                         <i class="bi bi-chevron-down small"></i>
                     </a>
-                    <div class="collapse {{ request()->routeIs('slidershow') ||request()->routeIs('slidercreate') ||request()->routeIs('slider.edit') ||request()->routeIs('homeshow') ||request()->routeIs('homecreate') ||request()->routeIs('home.edit') ||request()->routeIs('finishtypeshow') ||request()->routeIs('finishtypecreate') ||request()->routeIs('finishtype.edit') ||request()->routeIs('designtypeshow') ||request()->routeIs('designtypecreate') ||request()->routeIs('designtype.edit') ||request()->routeIs('qsizeshow') ||request()->routeIs('qsizecreate') ||request()->routeIs('qsize.edit') ||request()->routeIs('wsizeshow') ||request()->routeIs('wsizecreate') ||request()->routeIs('wsize.edit') ||request()->routeIs('ssizeshow') ||request()->routeIs('ssizecreate') ||request()->routeIs('ssize.edit') ||request()->routeIs('stockshow') ||request()->routeIs('stockcreate') ||request()->routeIs('stock.edit') ? 'show': '' }}"
+                    <div class="collapse {{ request()->routeIs('slidershow') || request()->routeIs('slidercreate') || request()->routeIs('slider.edit') || request()->routeIs('homeshow') || request()->routeIs('homecreate') || request()->routeIs('home.edit') || request()->routeIs('finishtypeshow') || request()->routeIs('finishtypecreate') || request()->routeIs('finishtype.edit') || request()->routeIs('designtypeshow') || request()->routeIs('designtypecreate') || request()->routeIs('designtype.edit') || request()->routeIs('qsizeshow') || request()->routeIs('qsizecreate') || request()->routeIs('qsize.edit') || request()->routeIs('wsizeshow') || request()->routeIs('wsizecreate') || request()->routeIs('wsize.edit') || request()->routeIs('ssizeshow') || request()->routeIs('ssizecreate') || request()->routeIs('ssize.edit') || request()->routeIs('stockshow') || request()->routeIs('stockcreate') || request()->routeIs('stock.edit') ? 'show' : '' }}"
                         id="setupMenu" data-parent="#sidebarAccordion">
                         <ul class="nav flex-column ml-3">
                             <li
@@ -256,7 +256,20 @@
         </script>
     @endif
 
+    <style>
+        /* Minimal styling */
+        #editor {
+            min-height: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: auto;
+        }
 
+        #source {
+            display: none;
+            min-height: 300px;
+        }
+    </style>
     {{-- sweet alert delete code --}}
     <script>
         function openDeleteModal(url) {
@@ -295,6 +308,317 @@
             $('#dataTable').DataTable();
         });
     </script>
+
+
+    <script>
+        const toolbarConfig = [{
+                type: "select",
+                options: [{
+                        value: "P",
+                        text: "Paragraph"
+                    },
+                    {
+                        value: "H1",
+                        text: "H1"
+                    },
+                    {
+                        value: "H2",
+                        text: "H2"
+                    },
+                    {
+                        value: "H3",
+                        text: "H3"
+                    },
+                    {
+                        value: "H4",
+                        text: "H4"
+                    },
+                    {
+                        value: "H5",
+                        text: "H5"
+                    },
+                    {
+                        value: "H6",
+                        text: "H6"
+                    },
+                ],
+                onChangeCmd: "formatBlock",
+                className: "form-select form-select-sm w-auto",
+            },
+
+            {
+                type: "select",
+                options: [{
+                        value: "3",
+                        text: "Default"
+                    },
+                    {
+                        value: "1",
+                        text: "Small"
+                    },
+                    {
+                        value: "5",
+                        text: "Large"
+                    },
+                    {
+                        value: "7",
+                        text: "Extra Large"
+                    },
+                ],
+                onChangeCmd: "fontSize",
+                className: "form-select form-select-sm w-auto",
+            },
+
+            {
+                type: "select",
+                options: [{
+                        value: "Arial",
+                        text: "Arial"
+                    },
+                    {
+                        value: "Courier New",
+                        text: "Courier New"
+                    },
+                    {
+                        value: "Georgia",
+                        text: "Georgia"
+                    },
+                    {
+                        value: "Times New Roman",
+                        text: "Times New Roman"
+                    },
+                    {
+                        value: "Verdana",
+                        text: "Verdana"
+                    },
+                ],
+                onChangeCmd: "fontName",
+                className: "form-select form-select-sm w-auto",
+            },
+
+            {
+                type: "button",
+                cmd: "bold",
+                text: "B",
+                className: "btn btn-outline-primary btn-sm",
+                html: "<b>B</b>"
+            },
+            {
+                type: "button",
+                cmd: "italic",
+                text: "I",
+                className: "btn btn-outline-primary btn-sm",
+                html: "<i>I</i>"
+            },
+            {
+                type: "button",
+                cmd: "underline",
+                text: "U",
+                className: "btn btn-outline-primary btn-sm",
+                html: "<u>U</u>"
+            },
+            {
+                type: "button",
+                cmd: "strikeThrough",
+                text: "S",
+                className: "btn btn-outline-primary btn-sm",
+                html: "<s>S</s>"
+            },
+
+            {
+                type: "button",
+                cmd: "justifyLeft",
+                text: "Left",
+                className: "btn btn-outline-secondary btn-sm"
+            },
+            {
+                type: "button",
+                cmd: "justifyCenter",
+                text: "Center",
+                className: "btn btn-outline-secondary btn-sm"
+            },
+            {
+                type: "button",
+                cmd: "justifyRight",
+                text: "Right",
+                className: "btn btn-outline-secondary btn-sm"
+            },
+            {
+                type: "button",
+                cmd: "justifyFull",
+                text: "Justify",
+                className: "btn btn-outline-secondary btn-sm"
+            },
+
+            {
+                type: "button",
+                cmd: "insertUnorderedList",
+                text: "• List",
+                className: "btn btn-outline-dark btn-sm"
+            },
+            {
+                type: "button",
+                cmd: "insertOrderedList",
+                text: "1. List",
+                className: "btn btn-outline-dark btn-sm"
+            },
+
+            {
+                type: "button",
+                cmd: "indent",
+                text: "Indent",
+                className: "btn btn-outline-dark btn-sm"
+            },
+            {
+                type: "button",
+                cmd: "outdent",
+                text: "Outdent",
+                className: "btn btn-outline-dark btn-sm"
+            },
+
+            {
+                type: "color",
+                cmd: "foreColor",
+                title: "Text Color"
+            },
+            {
+                type: "color",
+                cmd: "hiliteColor",
+                title: "Highlight"
+            },
+
+            {
+                type: "button",
+                cmd: "insertImage",
+                text: "Image",
+                className: "btn btn-outline-success btn-sm",
+                onclick: "insertImage",
+            },
+            {
+                type: "button",
+                cmd: "insertLink",
+                text: "Link",
+                className: "btn btn-outline-success btn-sm",
+                onclick: "insertLink",
+            },
+            {
+                type: "button",
+                cmd: "insertTable",
+                text: "Table",
+                className: "btn btn-outline-info btn-sm",
+                onclick: "insertTable",
+            },
+
+            {
+                type: "button",
+                cmd: "insertHorizontalRule",
+                text: "HR",
+                className: "btn btn-outline-secondary btn-sm"
+            },
+            {
+                type: "button",
+                cmd: "removeFormat",
+                text: "Clear",
+                className: "btn btn-outline-danger btn-sm"
+            },
+            {
+                type: "button",
+                cmd: "toggleSource",
+                text: "View Source",
+                className: "btn btn-outline-secondary btn-sm",
+                onclick: "toggleSource",
+            },
+        ];
+
+        const toolbarContainer = document.getElementById("toolbar");
+        const editor = document.getElementById("editor");
+        const source = document.getElementById("source");
+        let isSource = false;
+
+        function format(command, value = null) {
+            document.execCommand(command, false, value);
+            editor.focus();
+        }
+
+        function insertImage() {
+            const url = prompt("Enter image URL");
+            if (url) format("insertImage", url);
+        }
+
+        function insertLink() {
+            const url = prompt("Enter link URL");
+            if (url) format("createLink", url);
+        }
+
+        function insertTable() {
+            const rows = parseInt(prompt("Rows?", 2));
+            const cols = parseInt(prompt("Columns?", 2));
+            if (rows > 0 && cols > 0) {
+                let table = "<table border='1' style='width: 100%; border-collapse: collapse'>";
+                for (let i = 0; i < rows; i++) {
+                    table += "<tr>";
+                    for (let j = 0; j < cols; j++) {
+                        table += "<td>&nbsp;</td>";
+                    }
+                    table += "</tr>";
+                }
+                table += "</table>";
+                document.execCommand("insertHTML", false, table);
+            }
+        }
+
+        function toggleSource() {
+            if (isSource) {
+                editor.innerHTML = source.value;
+                source.style.display = "none";
+                editor.style.display = "block";
+            } else {
+                source.value = editor.innerHTML;
+                source.style.display = "block";
+                editor.style.display = "none";
+            }
+            isSource = !isSource;
+        }
+
+        function createToolbar() {
+            toolbarConfig.forEach((item) => {
+                let element;
+                if (item.type === "select") {
+                    element = document.createElement("select");
+                    element.className = item.className || "form-select form-select-sm w-auto";
+                    item.options.forEach((opt) => {
+                        const option = document.createElement("option");
+                        option.value = opt.value;
+                        option.textContent = opt.text;
+                        element.appendChild(option);
+                    });
+                    element.addEventListener("change", () => format(item.onChangeCmd, element.value));
+                } else if (item.type === "button") {
+                    element = document.createElement("button");
+                    element.type = "button";
+                    element.className = item.className || "btn btn-outline-primary btn-sm";
+                    element.title = item.title || item.text || "";
+                    element.innerHTML = item.html || item.text;
+                    if (item.onclick && typeof window[item.onclick] === "function") {
+                        element.addEventListener("click", window[item.onclick]);
+                    } else {
+                        element.addEventListener("click", () => format(item.cmd));
+                    }
+                } else if (item.type === "color") {
+                    element = document.createElement("input");
+                    element.type = "color";
+                    element.className = "form-control form-control-color";
+                    element.title = item.title || "";
+                    element.addEventListener("change", (e) => format(item.cmd, e.target.value));
+                }
+                if (element) {
+                    toolbarContainer.appendChild(element);
+                }
+            });
+        }
+
+        // Initialize toolbar on page load
+        createToolbar();
     </script>
 
 </body>
