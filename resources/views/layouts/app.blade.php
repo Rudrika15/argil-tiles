@@ -5,9 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="author" content="Argil Group">
-    <meta name="theme-color" content="#000000">
     <meta name="geo.region" content="IN-GJ">
     <meta name="geo.placename" content="Morbi">
     <meta name="geo.position" content="22.82587;70.847998">
@@ -30,7 +28,25 @@
     <meta name="robots" content="index, follow" />
 
 
-    <link rel="icon" href="{{ asset('asset/images/logo/logo.png') }}">
+
+    <!-- Favicon & App Icons -->
+
+    <link rel="icon" type="image/png" href="{{ asset('icons/favicon-96x96.png') }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ asset('icons/favicon.svg') }}" />
+    <link rel="shortcut icon" href="{{ asset('icons/favicon.ico') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('icons/apple-touch-icon.png') }}" />
+    <link rel="manifest" href="{{ asset('icons/site.webmanifest') }}" />
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('icons/web-app-manifest-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('icons/web-app-manifest-512x512.png') }}">
+
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Favicon & App Icons -->
+
+
+
+
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -154,7 +170,18 @@
         gtag('config', 'G-TTBK17M75S');
     </script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17164959163"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17164959163');
+    </script>
 </head>
 
 <body>
@@ -331,14 +358,18 @@
                         </h6>
                         <p class="my-4">
                             <a target="_blank"
-                                href="https://play.google.com/store/apps/details?id=com.arjil.argil_tiles&pli=1">
+                                href="https://play.google.com/store/apps/details?id=com.arjil.argil_tiles">
                                 <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
                                     alt="argil-playstore-link" title="argil-playstore-link" class="w-75">
                             </a>
                         </p>
                         <p>
-                            <img src="{{ asset('assets/asset/appstore.png') }}"
-                                loading ="lazy"alt="argil-appstore-link" title="argil-appstore-link" class="w-75">
+                            <a href="https://apps.apple.com/in/app/argil-group/id6746482165" target="_blank">
+
+                                <img src="{{ asset('assets/asset/appstore.png') }}"
+                                    loading ="lazy"alt="argil-appstore-link" title="argil-appstore-link"
+                                    class="w-75">
+                            </a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -390,24 +421,26 @@
 
 
         <!-- Copyright -->
-        <div class="d-flex justify-content-around p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            <div>
+
+        <div class="d-flex flex-column flex-md-row justify-content-around p-4 text-center text-md-start"
+            style="background-color: rgba(0, 0, 0, 0.05);">
+            <div class="mb-2 mb-md-0">
                 @php
                     $year = date('Y');
                 @endphp
                 <a class="text-reset fw-bold text-decoration-none" href="https://argiltiles.com">
-                    © {{ $year }}
-                    Argil Group
-
+                    © {{ $year }} Argil Group
                 </a>
             </div>
             <div>
                 Developed by
                 <a class="text-reset fw-bold text-decoration-none" href="https://flipcodesolutions.com/"
-                    target="_blank">Flipcode
-                    Solutions private limited</a>
+                    target="_blank">
+                    Flipcode Solutions Private Limited
+                </a>
             </div>
         </div>
+
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
@@ -457,13 +490,13 @@
                 navbar.classList.remove('sticky-navbar');
             }
         });
-    </script>
-    <script> --}}
-    // Wait for window load
-    // window.addEventListener("load", function() {
-    // document.getElementById("preloader").style.display = "none";
-    // document.querySelector(".content").style.display = "block";
-    // });
+    </script> --}}
+    <script>
+        // Wait for window load
+        // window.addEventListener("load", function() {
+        // document.getElementById("preloader").style.display = "none";
+        // document.querySelector(".content").style.display = "block";
+        // });
     </script>
 
 

@@ -54,7 +54,7 @@ assist you!">
             <div class="col-md-6 text-center">
 
                 <img src="{{ asset('assets/asset/contactsimage.png') }}" alt="argil contact" title="argil contact"
-                    loading="lazy" class="img-fluid h-100">
+                    loading="lazy" class="img-fluid ">
             </div>
             <div class="col-md-6 pt-5">
                 <h2 class="fw-bold">Let's Be in Touch !!!

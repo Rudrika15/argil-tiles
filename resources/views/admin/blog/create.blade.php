@@ -40,17 +40,17 @@
             <input type="hidden" name="slug" id="slug">
 
 
-            {{-- <div class="form-label-group">
+            <div class="form-label-group">
                 <textarea id="form_firstname" name="description" class="form-control" placeholder="description" required></textarea>
-            </div> --}}
-
-            <div id="toolbar" class="mb-3 d-flex flex-wrap align-items-center gap-2"></div>
+            </div>
+            {{-- <div id="toolbar" class="mb-3 d-flex flex-wrap align-items-center gap-2"></div>
 
             <!-- Editor -->
             <div id="editor" contenteditable="true" class="bg-white"></div>
 
             <!-- Source View -->
             <textarea id="source" name="description" class="form-control mt-2" placeholder="HTML Source Code"></textarea>
+            <br /> --}}
 
             <div class="row">
                 <div class="col-md-6">
@@ -65,7 +65,6 @@
                         style='height:150px;width:100px'>
                 </div>
             </div>
-
             {{-- add meta propertys --}}
             <hr class="sidebar-divider my-4">
 

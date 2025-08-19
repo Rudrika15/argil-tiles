@@ -2,12 +2,17 @@
 
 use App\Http\Controllers\api\ApiController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+Route::group(['middleware' => ['auth:sanctum']], function () {
+
+    Route::get('/dashboard', [ApiController::class, 'dashboard']);
+});
 
 // Route::get('/catelogue/{id?}',[ApiController::class,'catelougeview']);
 // Route::get('/home/{id?}',[ApiController::class,'homeview']);
@@ -39,7 +44,7 @@ Route::post('/inquiry', [ApiController::class, 'inquiry']);
 
 
 // Route::post('/register',[ApiController::class,'register']);
-// Route::post('/login',[ApiController::class,'login']);
+Route::post('/login', [ApiController::class, 'login']);
 // Route::post('/profile/{id}',[ApiController::class,'profile']);
 // Route::post('/changepassword/{id}',[ApiController::class,'changepassword']);
 // Route::get('/usermasterview/{id?}',[ApiController::class,'usermasterview']);

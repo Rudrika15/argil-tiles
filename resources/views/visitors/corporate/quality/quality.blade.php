@@ -22,13 +22,12 @@ Excellence in Every Slab">
 commitment to premium quality in artificial quartz stone manufacturing.
 Our rigorous testing ensures durability, strength, and beauty.">
 
-    <link rel="canonical" href="https://argiltiles.com/quality" data-react-
-    helmet="true">
+    <link rel="canonical" href="https://argiltiles.com/quality" data-react- helmet="true">
     <title>Argil Quality Standards | Premium Tile Manufacturing</title>
 @endsection
 @section('content')
-     <!-- breadcrumb -->
-     <div class="breadcrumb d-flex justify-content-between align-items-center">
+    <!-- breadcrumb -->
+    <div class="breadcrumb d-flex justify-content-between align-items-center">
         <div class="container">
 
             <div class="p-2">
@@ -50,7 +49,8 @@ Our rigorous testing ensures durability, strength, and beauty.">
         </div>
         <div class="row py-4">
             <div class="col-md-4 text-center">
-                <img src="{{ asset('assets/asset/qualityimage1.jpeg')}}" alt="argil ISO CERTIFIED" title="argil ISO CERTIFIED" loading="lazy" class="img-fluid w-75">
+                <img src="{{ asset('assets/asset/qualityimage1.jpeg') }}" alt="argil ISO CERTIFIED"
+                    title="argil ISO CERTIFIED" loading="lazy" class="img-fluid w-50">
 
                 <h2 class="fs-5 pt-2 fw-bold">ISO CERTIFIED
 
@@ -59,13 +59,15 @@ Our rigorous testing ensures durability, strength, and beauty.">
 
 
             <div class="col-md-4 text-center">
-                <img src="{{ asset('assets/asset/qualityimage2.jpeg')}}" alt="argil TISI THAILAND STANDARD" title="argil TISI THAILAND STANDARD" loading="lazy" class="img-fluid w-75">
+                <img src="{{ asset('assets/asset/qualityimage2.jpeg') }}" alt="argil TISI THAILAND STANDARD"
+                    title="argil TISI THAILAND STANDARD" loading="lazy" class="img-fluid w-50">
                 <h2 class="fs-5 pt-2 fw-bold">TISI THAILAND STANDARD
 
                 </h2>
             </div>
             <div class="col-md-4 text-center">
-                <img src="{{ asset('assets/asset/qualityimage3.jpeg')}}" alt="argil SLSI SRILANKAN STANDARD" title="argil SLSI SRILANKAN STANDARD" loading="lazy" class="img-fluid w-75">
+                <img src="{{ asset('assets/asset/qualityimage3.jpeg') }}" alt="argil SLSI SRILANKAN STANDARD"
+                    title="argil SLSI SRILANKAN STANDARD" loading="lazy" class="img-fluid w-50">
                 <h2 class="fs-5 pt-2 fw-bold">SLSI SRILANKAN STANDARD
 
                 </h2>
@@ -75,5 +77,4 @@ Our rigorous testing ensures durability, strength, and beauty.">
         </div>
 
     </div>
-
 @endsection

@@ -27,7 +27,10 @@ use App\Models\Finishtype;
 use App\Models\Favorite;
 use App\Models\NewArievels;
 use App\Models\NewArrivals;
+use Carbon\Carbon;
 use Exception;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 
 class apiController extends Controller
@@ -172,7 +175,7 @@ class apiController extends Controller
         $inqr->save();
 
         // email code here
-     Mail::to('social.media@argiltiles.com')  // Replace with your own email address
+        Mail::to('social.media@argiltiles.com')  // Replace with your own email address
             ->send(new ContactFormMail($name, $email, $contactno, $message));
 
         return Util::getSuccessMessage('Inquiry Sent Successfully', $inqr);
@@ -183,15 +186,16 @@ class apiController extends Controller
         $contact = $request->contact;
     }
 
-    function login(Request $requset)
-    {
-        $contact = $requset->contact;
-        $password = $requset->password;
-        $data = Usermaster::where('contact', '=', $contact)->where('password', '=', $password)->first();
+    // function login(Request $requset)
+    // {
+    //     $contact = $requset->contact;
+    //     $password = $requset->password;
+    //     $data = Usermaster::where('contact', '=', $contact)->where('password', '=', $password)->first();
 
 
-        return Util::getSuccessMessage($data, 'Login Successfully');
-    }
+    //     return Util::getSuccessMessage($data, 'Login Successfully');
+    // }
+
 
     function profile(Request $requset, $id)
     {
@@ -531,5 +535,56 @@ class apiController extends Controller
         } catch (Exception $e) {
             return Util::getErrorMessage('New Arrivals Not Found', $e);
         }
+    }
+    public function dashboard()
+    {
+        if (!Auth::user()) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Unauthorized',
+            ]);
+        }
+
+        $inquiryCount = Inquiry::count();
+        $contactCount = Contact::count();
+
+        $inquiryDate = Inquiry::orderBy('created_at', 'desc')->get();
+        $contactDate = Contact::orderBy('created_at', 'desc')->get();
+        return response()->json([
+            'status' => true,
+            'message' => 'Dashboard Fetched Successfully',
+            'data' => [
+                'inquiryCount' => $inquiryCount,
+                'contactCount' => $contactCount,
+                'inquiryData' => $inquiryDate,
+                'contactData' => $contactDate,
+            ],
+
+        ]);
+    }
+
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $user = User::where('email', $request->email)->first();
+
+        if ($user && Hash::check($request->password, $user->password)) {
+            // Create token
+            $tokenResult = $user->createToken('auth_token');
+            $token = $tokenResult->plainTextToken;
+
+            // Update token expiration manually
+            $tokenResult->accessToken->expires_at = Carbon::now()->addYear();
+            $tokenResult->accessToken->save();
+
+            return Util::getSuccessMessage('Login Successfully', ["user" => $user, "token" => $token]);
+        }
+
+        return Util::getErrorMessage('Login Failed', 'Invalid Credentials');
     }
 }

@@ -65,7 +65,7 @@
             <div class="col-md-4 pt-5">
                 {{-- Main Image --}}
                 @if ($data->mainImg)
-                    <div style="height:950px">
+                    <div>
                         <img id="mainImage" src="{{ asset('spc/' . $data->mainImg) }}" class="img-thumbnail mb-3"
                             alt="spc product" title="spc product" loading="lazy">
                     </div>
@@ -83,13 +83,17 @@
                     ];
                 @endphp
 
-                @foreach ($images as $img)
-                    @if ($img)
-                        <img src="{{ asset('spc/' . $img) }}" class="img-thumbnail thumb-img me-2 mb-2"
-                            style="height: 100px; cursor: pointer;" alt="spc product" title="spc product" loading="lazy"
-                            onclick="changeMainImage('{{ asset('spc/' . $img) }}')">
-                    @endif
-                @endforeach
+                <!--@foreach ($images as $img)
+    -->
+                <!--    @if ($img)
+    -->
+                <!--        <img src="{{ asset('spc/' . $img) }}" class="img-thumbnail thumb-img me-2 mb-2"-->
+                <!--            style="height: 100px; cursor: pointer;" alt="spc product" title="spc product" loading="lazy"-->
+                <!--            onclick="changeMainImage('{{ asset('spc/' . $img) }}')">-->
+                <!--
+    @endif-->
+                <!--
+    @endforeach-->
             </div>
 
             {{-- Script to Change Main Image --}}

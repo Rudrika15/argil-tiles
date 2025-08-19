@@ -153,7 +153,7 @@ class VisitorController extends Controller
 
     public function spcproducts()
     {
-        $data = Lvtproduct::orderBy('id', 'desc')->paginate(6); // 9 items per page (adjust as needed)
+        $data = Lvtproduct::orderBy('names')->paginate(6); // 9 items per page (adjust as needed)
 
         return view('visitors.products.spc products.spcproducts', compact('data'));
     }
