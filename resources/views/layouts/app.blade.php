@@ -196,7 +196,7 @@
                         class="text-white text-decoration-none"><i class="bi bi-facebook me-3"></i></a>
                     <a href="https://www.instagram.com/argilgroup/" target="blank"
                         class="text-white text-decoration-none"><i class="bi bi-instagram me-3"></i></a>
-                    <a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank"
+                    <a href="https://www.linkedin.com/company/argilgroup/" target="blank"
                         class="text-white text-decoration-none"><i class="bi bi-linkedin me-3"></i></a>
                 </div>
             </div>
@@ -319,17 +319,20 @@
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto my-4 d-flex justify-content-center ">
                         <!-- Content -->
-                        <img src="{{ asset('assets/asset/footerlogo.png') }}" style="width: 150px;height: 150px;"
-                            alt="argil footerlogo" title="argil footerlogo" loading="lazy" />
+                        {{-- <img src="{{ asset('assets/asset/footerlogo.png') }}" style="width: 150px;height: 150px;"
+                            alt="argil footerlogo" title="argil footerlogo" loading="lazy" /> --}}
+                        <img src="{{ asset('assets/asset/footerlogo.png') }}" alt="Argil Group Footer Logo"
+                            title="Argil Group Footer Logo" class="img-fluid" style="max-width: 250px; height: auto;"
+                            loading="lazy">
                     </div>
                     <!-- Grid column -->
 
                     <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto my-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold my-4">
+                        <h4 class="text-uppercase fw-bold my-4">
                             Quick Links
-                        </h6>
+                        </h4>
                         <p>
                             <a href="/profile" class="text-reset text-decoration-none ">Corporate</a>
                         </p>
@@ -351,24 +354,28 @@
                     <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto my-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mt-4">
+                        <h4 class="text-uppercase fw-bold mt-4">
                             Download Our App
-
-
-                        </h6>
+                        </h4>
                         <p class="my-4">
                             <a target="_blank"
                                 href="https://play.google.com/store/apps/details?id=com.arjil.argil_tiles">
-                                <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
-                                    alt="argil-playstore-link" title="argil-playstore-link" class="w-75">
+                                {{-- <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
+                                    alt="argil-playstore-link" title="argil-playstore-link" class="w-75"> --}}
+                                <img src="{{ asset('assets/asset/playstore.png') }}"
+                                    alt="Download Argil App on Google Play Store" title="Argil Play Store Link"
+                                    class="img-fluid w-75" loading="lazy">
                             </a>
                         </p>
                         <p>
                             <a href="https://apps.apple.com/in/app/argil-group/id6746482165" target="_blank">
 
-                                <img src="{{ asset('assets/asset/appstore.png') }}"
+                                {{-- <img src="{{ asset('assets/asset/appstore.png') }}"
                                     loading ="lazy"alt="argil-appstore-link" title="argil-appstore-link"
-                                    class="w-75">
+                                    class="w-75"> --}}
+                                <img src="{{ asset('assets/asset/appstore.png') }}"
+                                    alt="Download Argil App on Apple App Store" title="Argil App Store Link"
+                                    class="img-fluid w-75" loading="lazy">
                             </a>
                         </p>
                     </div>
@@ -377,7 +384,7 @@
                     <!-- Grid column -->
                     <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 my-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mt-4">Contact info</h6>
+                        <h4 class="text-uppercase fw-bold mt-4">Contact info</h4>
                         <p class="my-4"><i class="bi bi-geo-alt mx-3 "></i>Argil Group
                             <br />
                             <span class="mx-5 ">
@@ -406,7 +413,7 @@
                             <a href="https://www.instagram.com/argilgroup/" target="blank"
                                 class="text-decoration-none" style="color: inherit !important;"><i
                                     class="bi bi-instagram me-3"></i></a>
-                            <a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank"
+                            <a href="https://www.linkedin.com/company/argilgroup/" target="blank"
                                 class="text-decoration-none" style="color: inherit !important;"><i
                                     class="bi bi-linkedin me-3"></i></a>
 

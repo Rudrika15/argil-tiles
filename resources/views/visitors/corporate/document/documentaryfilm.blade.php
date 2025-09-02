@@ -44,7 +44,7 @@ dedication to premium quartz stone manufacturing.">
                 <div class="col-md-12 pt-5">
 
                     <iframe width="100%" height="450"
-                        src="https://www.youtube.com/embed/OeIRz9IBs24?si=3w7Lh8lDrE_AJfsU" class="youtubevideo"
+                        src="https://www.youtube.com/embed/OeIRz9IBs24?si=3w7Lh8lDrE_AJfsU" class="youtubevideo" loading="lazy"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
@@ -52,14 +52,14 @@ dedication to premium quartz stone manufacturing.">
                 <div class="col-md-12 pt-5">
                     <iframe width="100%" height="450"
                         src="https://www.youtube.com/embed/7I37wLtJEGU?si=1D1OP2YscNpbszMk" title="YouTube video player"
-                        frameborder="0" class="youtubevideo"
+                        frameborder="0" class="youtubevideo"  loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
                 </div>
                 <div class="col-md-12 pt-5">
                     <iframe width="100%" height="450"
                         src="https://www.youtube.com/embed/N6ogrJn0e5E?si=8Gb-RT2eO1RZcw9z" title="YouTube video player"
-                        frameborder="0" class="youtubevideo"
+                        frameborder="0" class="youtubevideo" loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
                 </div>

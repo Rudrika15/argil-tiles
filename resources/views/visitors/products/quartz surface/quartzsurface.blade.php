@@ -557,7 +557,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         <div class="row">
             <div class="col-md-6">
                 <img src="asset/images/argileimage/footerimge.jpg" alt="Quartz product" title="Quartz product"
-                    class="img-fluid mb-5">
+                    class="img-fluid mb-5" loading="lazy">
             </div>
             <div class="col-md-6">
                 <h2 class="fw-bold">Let's Be in Touch !!!
