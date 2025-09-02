@@ -22,8 +22,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
 Route::get('/slider/{id?}', [ApiController::class, 'sliderview']);
 Route::get('/quartzproduct/{id?}', [ApiController::class, 'quartzproductview']);
+Route::get('/quartzproductpagination/{id?}', [ApiController::class, 'quartzproductviewpagination']);
 //Route::get('/wallproductview/{id?}',[ApiController::class,'wallproductview']);
 Route::get('/spcproduct/{id?}', [ApiController::class, 'lvtproductview']);
+Route::get('/spcproductpagination/{id?}', [ApiController::class, 'lvtproductviewpagination']);
 // new arrivals route
 Route::get('/newarrivals', [ApiController::class, 'newarrivalsview']);
 

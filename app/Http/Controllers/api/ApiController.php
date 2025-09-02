@@ -324,12 +324,30 @@ class apiController extends Controller
     function lvtproductview($id = 0)
     {
         if ($id == 0) {
-            $data = Lvtproduct::orderBy('id', 'desc')->get();
+            $data = Lvtproduct::orderBy('names')->get();
         } else {
             $data = Lvtproduct::find($id);
         }
         return Util::getSuccessMessage('Lvtproduct Fetched Successfully', $data);
     }
+    function lvtproductviewpagination(Request $request, $id = 0)
+    {
+        if ($id == 0) {
+            $query = Lvtproduct::orderBy('names');
+
+            // 🔍 Filter by name (starts with or contains)
+            if (!empty($request->q)) {
+                $query->where('names', 'like', '%' . $request->q . '%');
+            }
+
+            $data = $query->paginate(6); // use paginate if you want pagination
+        } else {
+            $data = Lvtproduct::find($id);
+        }
+
+        return Util::getSuccessMessage('Lvtproduct Fetched Successfully', $data);
+    }
+
 
 
     function newsroomview($id = 0)
@@ -346,15 +364,43 @@ class apiController extends Controller
     }
 
 
-    function quartzproductview($id = 0)
+    // function quartzproductview($id = 0)
+    // {
+    //     if ($id == 0) {
+    //         $data = Quartzproduct::orderBy('id', 'desc')->get();
+    //     } else {
+    //         $data = Quartzproduct::find($id);
+    //     }
+    //     return Util::getSuccessMessage('Quartzproduct Fetched Successfully', $data);
+    // }
+    // function quartzproductviewpagination($id = 0)
+    // {
+    //     if ($id == 0) {
+    //         $data = Quartzproduct::orderBy('id', 'desc')->paginate(6);
+    //     } else {
+    //         $data = Quartzproduct::find($id);
+    //     }
+    //     return Util::getSuccessMessage('Quartzproduct Fetched Successfully', $data);
+    // }
+    function quartzproductviewpagination(Request $request, $id = 0)
     {
         if ($id == 0) {
-            $data = Quartzproduct::orderBy('id', 'desc')->get();
+            $query = Quartzproduct::orderBy('id', 'desc');
+
+            // 🔍 Filter by name if "q" is passed
+            if (!empty($request->q)) {
+                $query->where('name', 'like', '%' . $request->q . '%');
+            }
+
+            $data = $query->paginate(6);
         } else {
             $data = Quartzproduct::find($id);
         }
+
         return Util::getSuccessMessage('Quartzproduct Fetched Successfully', $data);
     }
+
+
 
 
     function wallproductview($id = 0)
