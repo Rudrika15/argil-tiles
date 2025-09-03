@@ -50,8 +50,8 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
 
         <div class="row">
             <div class="col-md-6 text-center">
-                <img src="{{ asset('asset/images/argileimage/quartzimage1.jpg') }}" alt="argil quartz product"
-                    title="argil quartz product" loading="lazy" class="img-fluid w-75 mb-5 mt-4">
+                <img src="{{ asset('asset/images/argileimage/quartzimage1-min.jpg') }}" alt="argil quartz product"
+                    title="argil quartz product" loading="lazy" width="557" height="568" class="img-fluid w-75 mb-5 mt-4">
             </div>
             <div class="col-md-6">
                 <h2 class="mt-5 fw-bold">Overview</h2>

@@ -48,8 +48,8 @@ with 10+ yrs of service. Get a price quote"
             <div class="row pt-3">
                 <div class="col-md-4">
 
-                    <img src="{{ asset('asset/images/argileimage/spc1.jpg') }}" alt="argil spc product"
-                        title="argil spc product" loading="lazy" class="img-fluid">
+                    <img src="{{ asset('asset/images/argileimage/spc1-min.jpg') }}" alt="argil spc product"
+                        title="argil spc product" width="261" height="264" loading="lazy" class="img-fluid">
 
                 </div>
                 <div class="col-md-8">

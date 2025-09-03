@@ -72,8 +72,8 @@ Get a price quote "
                         to soar greater height of success and achievement.</p>
                 </div>
                 <div class="col-md-4 pt-5">
-                    <img src="{{ asset('assets/asset/home-about.png') }}" class="img-fluid" alt="argil-home"
-                        title="argil-home" loading="lazy" />
+                    <img src="{{ asset('assets/asset/home-about-min.png') }}" class="img-fluid" alt="argil-home"
+                        title="argil-home"  width="356" height="130"  loading="lazy" />
                 </div>
             </div>
             <div class="row pb-5">

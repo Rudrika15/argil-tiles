@@ -53,13 +53,13 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 
     <!-- country CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 
     <!-- country JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" defer></script>
 
 
 
@@ -205,7 +205,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="{{ asset('assets/asset/logo.png') }}" alt="argil tiles logo" title ="argil tiles logo"
+                <img src="{{ asset('assets/asset/logo-min.png') }}" alt="argil tiles logo" title ="argil tiles logo"
                     loading="lazy" class="" style="height: 65px;" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -321,8 +321,8 @@
                         <!-- Content -->
                         {{-- <img src="{{ asset('assets/asset/footerlogo.png') }}" style="width: 150px;height: 150px;"
                             alt="argil footerlogo" title="argil footerlogo" loading="lazy" /> --}}
-                        <img src="{{ asset('assets/asset/footerlogo.png') }}" alt="Argil Group Footer Logo"
-                            title="Argil Group Footer Logo" class="img-fluid" style="max-width: 250px; height: auto;"
+                        <img src="{{ asset('assets/asset/footerlogo-min.png') }}" alt="Argil Group Footer Logo"
+                            title="Argil Group Footer Logo" class="img-fluid" width="200" height="200"
                             loading="lazy">
                     </div>
                     <!-- Grid column -->
@@ -362,9 +362,9 @@
                                 href="https://play.google.com/store/apps/details?id=com.arjil.argil_tiles">
                                 {{-- <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
                                     alt="argil-playstore-link" title="argil-playstore-link" class="w-75"> --}}
-                                <img src="{{ asset('assets/asset/playstore.png') }}"
+                                <img src="{{ asset('assets/asset/playstore-min.png') }}"
                                     alt="Download Argil App on Google Play Store" title="Argil Play Store Link"
-                                    class="img-fluid w-75" loading="lazy">
+                                    class="img-fluid w-75" width="138" height="41" loading="lazy">
                             </a>
                         </p>
                         <p>
@@ -487,7 +487,7 @@
             }
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
     {{-- <script>
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
