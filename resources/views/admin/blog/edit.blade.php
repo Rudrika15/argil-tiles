@@ -40,7 +40,7 @@
 
 
             <div class="form-label-group">
-                <textarea id="form_firstname" name="description" class="form-control" placeholder="description" required>{{ $blogs->description }}</textarea>
+                <textarea id="description" name="description" class="form-control" placeholder="description">{{ $blogs->description }}</textarea>
             </div>
             <div class="row">
                 <div class="col-md-6">
@@ -200,9 +200,17 @@
         }
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            ClassicEditor
+                .create(document.querySelector('#description'))
+        });
+    </script>
+
 
 @endsection
 
+<script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

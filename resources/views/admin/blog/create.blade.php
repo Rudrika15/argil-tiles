@@ -41,7 +41,7 @@
 
 
             <div class="form-label-group">
-                <textarea id="form_firstname" name="description" class="form-control" placeholder="description" required></textarea>
+                <textarea id="form_firstname" name="description" class="form-control" placeholder="Description"></textarea>
             </div>
             {{-- <div id="toolbar" class="mb-3 d-flex flex-wrap align-items-center gap-2"></div>
 
@@ -222,11 +222,17 @@
     </script>
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            ClassicEditor
+                .create(document.querySelector('#form_firstname'))
+        });
+    </script>
 
 @endsection
 
 
-
+<script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
