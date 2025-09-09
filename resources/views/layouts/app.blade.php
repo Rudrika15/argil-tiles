@@ -319,11 +319,11 @@
                     <!-- Grid column -->
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto my-4 d-flex justify-content-center ">
                         <!-- Content -->
-                        {{-- <img src="{{ asset('assets/asset/footerlogo.png') }}" style="width: 150px;height: 150px;"
-                            alt="argil footerlogo" title="argil footerlogo" loading="lazy" /> --}}
-                        <img src="{{ asset('assets/asset/footerlogo-min.png') }}" alt="Argil Group Footer Logo"
+                        <img src="{{ asset('assets/asset/footerlogo.png') }}" style="width: 150px;height: 150px;"
+                            alt="argil footerlogo" title="argil footerlogo" loading="lazy" />
+                        {{-- <img src="{{ asset('assets/asset/footerlogo-min.png') }}" alt="Argil Group Footer Logo"
                             title="Argil Group Footer Logo" class="img-fluid" width="200" height="200"
-                            loading="lazy">
+                            loading="lazy"> --}}
                     </div>
                     <!-- Grid column -->
 
