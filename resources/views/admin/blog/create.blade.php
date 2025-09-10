@@ -2,6 +2,12 @@
 
 @section('pageTitle', 'Dashboard')
 
+<style>
+    .ck-editor__editable_inline {
+        min-height: 200px;
+    }
+</style>
+
 @section('content')
 
     {{-- <div class="row">
