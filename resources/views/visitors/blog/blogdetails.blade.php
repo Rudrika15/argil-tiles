@@ -21,7 +21,7 @@
         <div class="container">
 
             <div class="p-2">
-                <h1 class="display-6 fw-bold">Home / {{ $blog->title }}</h1>
+                <h1 class="display-6 fw-bold text-center"> {{ $blog->title }}</h1>
             </div>
         </div>
     </div>
@@ -47,10 +47,25 @@
         $first_part = substr($blog->description, 0, $split_position);
         $second_part = substr($blog->description, $split_position);
     @endphp
-
     <div class="container mt-4">
         <div class="row">
-            {{-- <h3 class="fw-bold py-5">{{ $blog->title }}</h3> --}}
+            <div class="col-md-8 offset-2">
+                <img src="{{ asset('blogimage/' . $blog->image) }}" alt="argil blog" title="argil blog" loading="lazy"
+                    class="img-fluid rounded w-100">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <p>{!! $blog->description !!}</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    {{-- <div class="container mt-4">
+        <div class="row">
             <div class="col-12 col-md-5 mb-3 mb-md-0">
                 <img src="{{ asset('blogimage/' . $blog->image) }}" alt="argil blog" title="argil blog" loading="lazy"
                     class="img-fluid rounded w-100">
@@ -70,5 +85,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection

@@ -38,7 +38,7 @@
                         {{ $blog->created_at ? $blog->created_at->diffForHumans() : 'No date available' }}
                     </p>
 
-                    <p class="text-justify mt-4">{{ Str::limit($blog->description, 200, '...') }}</p>
+                    <p class="text-justify mt-4 " style="font-size:12pt">{!! Str::limit($blog->description, 120, '...') !!}</p>
                     <a href="{{ route('blogdetails', $blog->slug) }}" class="btn btn-primary mt-3">
                         Read More
                     </a>
