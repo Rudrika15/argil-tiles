@@ -594,8 +594,14 @@ class apiController extends Controller
         $inquiryCount = Inquiry::count();
         $contactCount = Contact::count();
 
-        $inquiryDate = Inquiry::orderBy('created_at', 'desc')->get();
-        $contactDate = Contact::orderBy('created_at', 'desc')->get();
+        // $inquiryDate = Inquiry::orderBy('created_at', 'desc')->get();
+        $inquiryDate = Inquiry::orderBy('created_at', 'desc')
+            ->limit(50)
+            ->get();
+
+        $contactDate = Contact::orderBy('created_at', 'desc')
+            ->limit(50)
+            ->get();
         return response()->json([
             'status' => true,
             'message' => 'Dashboard Fetched Successfully',
