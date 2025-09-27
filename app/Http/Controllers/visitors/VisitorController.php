@@ -61,7 +61,8 @@ class VisitorController extends Controller
     {
 
         $blog = Blog::where('slug', $slug)->firstOrFail();
-        return view('visitors.blog.blogdetails', compact('blog'));
+        $otherBlogs = Blog::where('id', '!=', $blog->id)->orderBy('created_at', 'desc')->get();
+        return view('visitors.blog.blogdetails', compact('blog','otherBlogs'));
     }
     public function catalogue()
     {

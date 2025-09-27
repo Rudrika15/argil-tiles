@@ -47,7 +47,7 @@
         $first_part = substr($blog->description, 0, $split_position);
         $second_part = substr($blog->description, $split_position);
     @endphp
-    <div class="container mt-4">
+    {{-- <div class="container mt-4">
         <div class="row">
             <div class="col-md-8 offset-2">
                 <img src="{{ asset('blogimage/' . $blog->image) }}" alt="argil blog" title="argil blog" loading="lazy"
@@ -62,7 +62,44 @@
         </div>
 
 
+    </div> --}}
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Left: Blog Details -->
+            <div class="col-md-8">
+                <div class="mb-4">
+                    <img src="{{ asset('blogimage/' . $blog->image) }}" alt="{{ $blog->title }}"
+                        title="{{ $blog->title }}" loading="lazy" class="img-fluid rounded w-100">
+                </div>
+                <div>
+                    <p>{!! $blog->description !!}</p>
+                    <p class="text-muted">
+                        {{ $blog->created_at ? $blog->created_at->diffForHumans() : 'No date available' }}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Other Blogs -->
+            <div class="col-md-4">
+                <h4 class="fw-bold mb-3">Other Blogs</h4>
+                <div class="list-group">
+                    @foreach ($otherBlogs as $other)
+                        <a href="{{ route('blogdetails', $other->slug) }}"
+                            class="list-group-item list-group-item-action mb-2 shadow-sm rounded">
+                            <div class="d-flex flex-column">
+                                <span class="fw-bold">{{ $other->title }}</span>
+                                <small class="text-muted mt-1">
+                                    {{ $other->created_at ? $other->created_at->diffForHumans() : 'No date available' }}
+                                </small>
+                            </div>
+                        </a>
+                    @endforeach
+                </div>
+            </div>
+        </div>
     </div>
+
 
     {{-- <div class="container mt-4">
         <div class="row">

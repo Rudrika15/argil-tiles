@@ -27,7 +27,7 @@
     </div>
     <!-- breadcrumb -->
 
-    <div class="container">
+    {{-- <div class="container">
         <div class="row mb-4">
             @foreach ($blogs as $index => $blog)
                 <div class="col-md-6">
@@ -45,7 +45,68 @@
                 </div>
             @endforeach
         </div> <!-- Close current row -->
+    </div> --}}
+
+    <div class="container">
+
+        @if ($blogs->count())
+            <!-- Featured Blog (Most Recent) -->
+            @php
+                $featured = $blogs->first();
+                $otherBlogs = $blogs->skip(1);
+            @endphp
+
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card mb-4 shadow-lg border-0">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-6">
+                                <img src="{{ asset('blogimage/' . $featured->image) }}"
+                                    class="img-fluid w-75" alt="{{ $featured->title }}">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h2 class="card-title fw-bold">{{ $featured->title }}</h2>
+                                    <p class="text-muted">
+                                        {{ $featured->created_at ? $featured->created_at->diffForHumans() : 'No date available' }}
+                                    </p>
+                                    <p class="card-text" style="font-size:12pt">
+                                        {!! Str::words(strip_tags($featured->description), 50,'...') !!}
+                                    </p>
+                                    <a href="{{ route('blogdetails', $featured->slug) }}" class="btn btn-primary mt-3">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Other Blogs -->
+            <div class="row mb-4">
+                @foreach ($otherBlogs as $blog)
+                    <div class="col-md-6 mb-4">
+                        <h2 class="mt-4 fw-bold">{{ $blog->title }}</h2>
+                        <img src="{{ asset('blogimage/' . $blog->image) }}" alt="argil blog" title="argil blog"
+                            loading="lazy" class="img-fluid w-100 mt-3">
+                        <p class="py-3">
+                            {{ $blog->created_at ? $blog->created_at->diffForHumans() : 'No date available' }}
+                        </p>
+                        <p class="text-justify mt-4" style="font-size:12pt">{!! Str::limit($blog->description, 120, '...') !!}</p>
+                        <a href="{{ route('blogdetails', $blog->slug) }}" class="btn btn-primary mt-3">
+                            Read More
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        @else
+            <p>No blogs available.</p>
+        @endif
+
     </div>
+
 
 
 
