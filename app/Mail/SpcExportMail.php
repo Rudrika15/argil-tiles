@@ -23,6 +23,7 @@ class SpcExportMail extends Mailable
         $this->data = $data;
     }
 
+
     public function build()
     {
         return $this->subject('New SPC Export Quote Request')
