@@ -20,12 +20,12 @@ artificial quartz stone slabs by Argil Group. Find premium quartz surfaces for k
  surfaces in our latest catalogue at Argil Group.">
     <meta name="twitter:title" content="Explore Argil Group's Quartz Slabs Catalogue –
 Premium Designs">
-<link rel="canonical" href="https://argiltiles.com/catalogue" />
-<title>Argil Quartz Slab Catalogue | Artificial Quartz Collection</title>
+    <link rel="canonical" href="https://argiltiles.com/catalogue" />
+    <title>Argil Quartz Slab Catalogue | Artificial Quartz Collection</title>
 @endsection
 @section('content')
-     <!-- breadcrumb -->
-     <div class="breadcrumb d-flex justify-content-between align-items-center">
+    <!-- breadcrumb -->
+    <div class="breadcrumb d-flex justify-content-between align-items-center">
         <div class="container">
 
             <div class="p-2">
@@ -36,11 +36,20 @@ Premium Designs">
     <!-- breadcrumb -->
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <h2 class="pt-4 fw-bold">LINK 'N' LOCK - SPC FLOORING
                 </h2>
                 <a href="https://argiltiles.com/pdf/1661686250890768142.pdf" target="_blank">
-                    <img src="{{ asset('assets/asset/catalogueimage.png')}}" alt="argil catalogue" title="argil catalogue" loading="lazy" class="img-fluid">
+                    <img src="{{ asset('assets/asset/catalogueimage.png') }}" alt="argil catalogue" title="argil catalogue"
+                        loading="lazy" class="img-fluid">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h2 class="pt-4 fw-bold">LINK 'N' LOCK - SPC FLOORING-2025
+                </h2>
+                <a href="https://argiltiles.com/pdf/CATALOGUE.pdf" target="_blank">
+                    <img src="{{ asset('assets/asset/catalogueimage.png') }}" alt="argil catalogue" title="argil catalogue"
+                        loading="lazy" class="img-fluid">
                 </a>
             </div>
 
@@ -48,5 +57,4 @@ Premium Designs">
         </div>
 
     </div>
-
 @endsection

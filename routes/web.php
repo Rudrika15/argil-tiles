@@ -48,7 +48,7 @@ Route::get("/logout", [UserController::class, 'logout'])->name('logout');
 // end login
 
 Route::middleware('auth:web')->group(function () {
-    Route::get('dashboard',[UserCOntroller::class,'dashboardpage'])->name('dashboard');
+    Route::get('dashboard', [UserCOntroller::class, 'dashboardpage'])->name('dashboard');
     // Route::get("", [DashboardController::class, 'index'])->name('dashboard');
     // Route::get("dashboard", [DashboardController::class, 'index'])->name('dashboard');
     //cat Start
@@ -246,3 +246,11 @@ Route::get('/blogdetails/{slug}', [VisitorController::class, 'blogdetails'])->na
 
 Route::post('/send-mail', [VisitorController::class, 'sendEmail'])->name('send.mail');
 Route::post('/send-inquiry', [VisitorController::class, 'sendinquiry'])->name('send.inquiry');
+
+
+// landing pages
+
+// web.php
+Route::get('/spc-export', function () {
+    return view('visitors.landing.spc-export');
+})->name('spc.export');
