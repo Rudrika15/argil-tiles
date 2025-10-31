@@ -13,8 +13,9 @@
 
     <!-- Header -->
     <header class="header py-3 px-4 bg-light d-flex justify-content-between align-items-center">
-        <a href="{{ url('/') }}" class="logo">Argil Group</a>
-        <a href="#quote-form" class="btn btn-primary">Request Export Quote</a>
+        <a href="{{ url('/') }}" class="logo">
+        <img src="{{ asset('asset/images/logo/logo.png') }}" alt="argil group"></a>
+        <a href="#quote-form" class="cta-btn ">Request Export Quote</a>
     </header>
 
     <!-- Page Content -->

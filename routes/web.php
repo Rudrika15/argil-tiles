@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\BlogController;
+use App\Http\Controllers\visitors\SpcExportController;
 use App\Http\Controllers\visitors\VisitorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\DashboardController;
@@ -254,3 +255,6 @@ Route::post('/send-inquiry', [VisitorController::class, 'sendinquiry'])->name('s
 Route::get('/spc-export', function () {
     return view('visitors.landing.spc-export');
 })->name('spc.export');
+
+Route::post('/spc-export', [SpcExportController::class, 'submit'])->name('spc.export.submit');
+
