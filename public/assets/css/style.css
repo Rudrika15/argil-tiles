@@ -50,6 +50,7 @@ body {
     /* Optional: some padding left/right */
 }
 
+
 .main {
     width: 100%;
     background-color: var(--primary-color);
@@ -217,3 +218,11 @@ ul.pagination li.page-item.disabled a.page-link {
     border-color: #ddd;
     cursor: not-allowed;
 }
+
+.spc-bg-image {
+    background-image: url("../asset/bg-img.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+

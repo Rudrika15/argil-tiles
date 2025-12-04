@@ -1,6 +1,6 @@
 @extends('layouts.landing')
 
-@section('title', 'SPC Flooring Export from India | Argil Group')
+@section('title', 'Quartz Surface Export from India | Argil Group')
 @section('meta_description',
     'Looking to import SPC flooring? Argil Group offers export-ready, certified SPC flooring
     with a wide range of designs. Request a quote today!')
@@ -10,12 +10,13 @@
     <!-- Hero Section -->
     <section class="text-white text-center py-5 spc-bg-image">
         <div class="container py-5">
-            <h1 class="display-4">Premium SPC Flooring – Export-Ready from India</h1>
-            <p class="lead mt-3">Durable, stylish, and certified SPC flooring, delivered worldwide for distributors,
+            <h1 class="display-4">Premium Quartz Surface – Export-Ready from India</h1>
+            <p class="lead mt-3">Durable, stylish, and certified Quartz Surface, delivered worldwide for distributors,
                 importers, and interior designers.</p>
             <a href="#quote-form" class="btn btn-light btn-lg mt-3">Request Export Quote</a>
-            <a href="https://argiltiles.com/pdf/CATALOGUE.pdf" class="btn btn-outline-light btn-lg mt-3">Download SPC
+            <a href="https://argiltiles.com/pdf/Leaflet-Dura-Quartz.pdf" class="btn btn-outline-light btn-lg mt-3" target="_blank">Download Quartz
                 Catalog</a>
+
             {{-- <a href="https://argiltiles.com/pdf/CATALOGUE.pdf" target="_blank">
                     <img src="{{ asset('assets/asset/catalogueimage.png') }}" alt="argil catalogue" title="argil catalogue"
                         loading="lazy" class="img-fluid">
@@ -34,7 +35,7 @@
                     <img src="http://127.0.0.1:8000/assets/asset/qualityimage1.jpeg" alt="argil ISO CERTIFIED"
                         title="argil ISO CERTIFIED" loading="lazy" class="img-fluid w-50">
                     <h5>ISO Certified</h5>
-                    <p>Premium quality SPC flooring certified for global standards.</p>
+                    <p>Premium quality Quartz Surface certified for global standards.</p>
                 </div>
                 <div class="col-md-4 mb-3">
                     <img src="{{ asset('asset/images/spc-export/Wide-Designs2.png') }}" alt="Wide Designs"
@@ -53,21 +54,20 @@
     </section>
 
     <!-- Featured Products -->
-
     <section class="products py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4">Our SPC Flooring Collection</h2>
+            <h2 class="text-center mb-4">Our Quartz Surface Collection</h2>
 
             <div class="row">
                 @foreach ($products as $product)
                     <div class="col-md-4 mb-3">
                         <div class="card h-100">
 
-                            <img src="{{ asset('spc/' . $product->mainImg) }}" class="card-img-top"
+                            <img src="{{ asset('quartz/' . $product->mainImg) }}" class="card-img-top"
                                 alt="{{ $product->names }}">
 
                             <div class="card-body">
-                                <h5 class="card-title">{{ $product->names }}</h5>
+                                <h5 class="card-title">{{ $product->name}}</h5>
 
                                 <p>
                                     Thickness: {{ $product->thicknesses }} <br>
@@ -81,41 +81,40 @@
                     </div>
                 @endforeach
             </div>
-            <div class="text-center mt-4">
-                <a href="{{ url('/spcproducts') }}" class="btn btn-primary">View All Products</a>
-            </div>
+             <div class="text-center mt-4">
+            <a href="{{ url('/quartzsurface') }}" class="btn btn-primary">View All Products</a>        </div>
+        </div>
     </section>
-
 
     <!-- Export Process -->
     {{-- <section class="export-process py-5">
-        <div class="container">
+        <div class="container ">
             <h2 class="text-center mb-4">Simple & Transparent Export Process</h2>
             <div class="row text-center justify-content-between align-items-center">
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/inquiry.svg') }}" alt="Inquiry"
-                        title="Inquiry - Argil Group" loading="lazy" class="img-fluid w-50">
-                    <h5>1. Inquiry</h5>
+                        title="Inquiry - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <h6 class="py-2">Inquiry</h6>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/approval.svg') }}" alt="Sample Approval"
-                        title="Sample Approval - Argil Group" loading="lazy" class="img-fluid w-50">
-                    <h5>2. Sample Approval</h5>
+                        title="Sample Approval - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <h6 class="py-2">Sample Approval</h6>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
-                    <img src="{{ asset('asset/images/spc-export/payment-new.svg') }}" alt="Order and Payment"
-                        title="Order & Payment - Argil Group" loading="lazy" class="img-fluid w-50">
-                    <h5>3. Order & Payment</h5>
+                    <img src="{{ asset('asset/images/spc-export/payment.svg') }}" alt="Order and Payment"
+                        title="Order & Payment - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <h6 class="py-2">Order & Payment</h6>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/packaging.svg') }}" alt="Packaging and Shipment"
-                        title="Packaging & Shipment - Argil Group" loading="lazy" class="img-fluid w-50">
-                    <h5>4. Packaging & Shipment</h5>
+                        title="Packaging & Shipment - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <h6 class="py-2">Packaging & Shipment</h6>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/global-delivery.svg') }}" alt="Global Delivery"
-                        title="Global Delivery - Argil Group" loading="lazy" class="img-fluid w-50">
-                    <h5>5. Global Delivery</h5>
+                        title="Global Delivery - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <h6 class="py-2">Global Delivery</h6>
                 </div>
             </div>
         </div>
@@ -269,9 +268,9 @@
     <!-- Quote Form -->
     <section id="quote-form" class="quote-form py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Get Your SPC Export Quote Today</h2>
-
-            <form action="{{ route('spc.export.submit') }}" method="POST">
+            <h2 class="text-center mb-4">Get Your Quartz Export Quote Today</h2>
+            {{-- <form action=""> --}}
+                <form action="{{ route('quartz.export.submit') }}" method="POST">
                 @csrf
 
                 <div class="row">

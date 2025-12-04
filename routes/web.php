@@ -23,6 +23,8 @@ use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\StockController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\visitors\ContactController;
+use App\Http\Controllers\visitors\SpcExportController;
+use App\Http\Controllers\visitors\QuartzExportController;
 
 
 
@@ -251,6 +253,17 @@ Route::post('/send-inquiry', [VisitorController::class, 'sendinquiry'])->name('s
 // landing pages
 
 // web.php
-Route::get('/spc-export', function () {
-    return view('visitors.landing.spc-export');
-})->name('spc.export');
+
+Route::get('/spc-export', [SpcExportController::class, 'spcExportPage'])
+    ->name('spc.export');
+  Route::get('/quartz-export', [QuartzExportController::class, 'quartzExportPage'])
+    ->name('quartz.export');  
+
+// Route::get('quartz-export', function () {
+//     return view('visitors.landing.quartz-export');
+// })->name('quartz.export');
+
+Route::post('/spc-export/submit', [SpcExportController::class, 'submit'])->name('spc.export.submit');
+Route::post('/quartz-export/submit', [QuartzExportController::class, 'submit'])->name('quartz.export.submit');
+
+
