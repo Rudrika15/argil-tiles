@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="row">
+{{-- <div class="row">
   <div class="col-md-12">
 
     @if ($message = Session::get('success'))
@@ -16,7 +16,7 @@
     </div>
     @endif
   </div>
-</div>
+</div> --}}
 
 <div class="main-content">
   <div class="row">
@@ -38,7 +38,7 @@
       <label for="form_firstname">Title</label>
     </div>
     <div class="form-label-group">
-      <input id="form_firstname" type="file" name="pdfFile" class="form-control" placeholder="First Name" required>
+      <input id="form_firstname" type="file" name="pdfFile" class="form-control" placeholder="First Name" required oninvalid="this.setCustomValidity('Please upload a valid PDF file')" oninput="this.setCustomValidity('')">
       <label for="form_firstname">Pdf</label>
     </div>
 

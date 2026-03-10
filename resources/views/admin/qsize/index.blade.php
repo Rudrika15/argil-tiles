@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="row">
+{{-- <div class="row">
     <div class="col-md-12">
 
         @if ($message = Session::get('success'))
@@ -16,14 +16,14 @@
             </div>
         @endif
     </div>
-</div>
+</div> --}}
 
     <div class="main-content">
         <div class="float-left">
             <h2>Q Size View</h2>
         </div>
         <div class="float-right">
-            <a class="btn btn-success" href="{{ route('qsizecreate') }}">Add New Record</a>
+            <a class="btn btn-success bi bi-arrow-right mb-2" href="{{ route('qsizecreate') }}">Add New Record</a>
         </div>
         <table class="table table-bordered table-hover">
             <thead>
@@ -32,13 +32,21 @@
                     <th scope="col">Option</th>
                 </tr>
             </thead>
+            @if (count($data) == 0)
+                <tr>
+                    <td colspan="12" class="text-center text-danger">No Record Found</td>
+                </tr>
+            @endif
             <tbody>
                 @foreach ($data as $data)
                     <tr>
                         <td>{{ $data->size }}</td>
-                        <td style="gap: 8px">
+                        <td style="gap: 8px; padding: 9px;">
                             <a href = "{{ route('qsize.edit', $data->id) }}" class="btn btn-primary">Edit</a>
-                            <a href = "{{ route('qsize.delete', $data->id) }}" class="btn btn-warning"> Delete </a>
+                            <a href="javascript:void(0)" class="btn btn-warning"
+                            onclick="openDeleteModal('{{Route('qsize.delete',$data->id)}}')">
+                            Delete
+                        </a>
                         </td>
                     </tr>
                 @endforeach

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12">
 
             @if ($message = Session::get('success'))
@@ -16,7 +16,7 @@
                 </div>
             @endif
         </div>
-    </div>
+    </div> --}}
 
     <div class="main-content">
         <div class="float-left">
@@ -36,6 +36,12 @@
                         <th scope="col">Option</th>
                     </tr>
                 </thead>
+                @if (count($data) == 0)
+                <tr>
+                    <td colspan="12" class="text-center text-danger">No Record Found</td>
+                </tr>
+
+            @endif
                 <tbody>
 
                     @foreach ($data as $data)
@@ -49,7 +55,11 @@
                             <td>{{ $data->details }}</td>
                             <td>
                                 <!-- <a href = "{{ route('inquiry.edit', $data->id) }}"> Edit </a>|| -->
-                                <a href = "{{ route('inquiry.delete', $data->id) }}" class="btn btn-warning"> Delete </a>
+                                {{-- <a href = "{{ route('inquiry.delete', $data->id) }}" class="btn btn-warning"> Delete </a> --}}
+                                <a href="javascript:void(0)" class="btn btn-warning"
+                                onclick="openDeleteModal('{{Route('inquiry.delete',$data->id)}}')">
+                                Delete
+                            </a>
                             </td>
                         </tr>
                     @endforeach

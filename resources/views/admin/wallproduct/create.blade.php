@@ -6,17 +6,19 @@
 
 
 
-<div class="row">
-	<div class="col-md-12">
+{{-- <div class="row">
+    <div class="col-md-12">
 
-		@if ($message = Session::get('success'))
-		<div class="alert alert-warning alert-dismissible fade show" role="alert">
-			<p>{{$message}}</p>
-			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-		</div>
-		@endif
-	</div>
-</div>
+        @if ($message = Session::get('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <p>{{ $message }}</p>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+    </div>
+</div> --}}
 
 <div class="main-content">
 
@@ -29,7 +31,7 @@
 				<h2>Wall Product Create</h2>
 			</div>
 			<div class="float-right">
-				<a href="{{route('wallshow')}}" class="btn btn-success">Back</a>
+				<a href="{{route('wallshow')}}" class="btn btn-success mb-2">Back</a>
 			</div>
 		</div>
 	</div>
@@ -136,19 +138,19 @@
 
 
 
-				<img src="{{url('slider/image_default.png')}}" alt="Main Image" id="img1" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px'>
-				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px'>
+				<img src="{{url('slider/image_default.png')}}" alt="Main Image" id="img1" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('slider/image_default.png')}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px' class="mt-2">
 
 			</div>
 
 		</div>
-		<div class="text-center form-action float-right">
+		<div class="text-center form-action">
 			<button type="submit" class="btn btn-primary text-uppercase">Submit</button>
-
+        </div>
 
 	</form>
 </div>

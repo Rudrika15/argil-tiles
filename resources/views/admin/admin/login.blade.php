@@ -31,6 +31,11 @@
                                         <h2>Admin Login Portal</h2>
                                         <h5>Looking for our amazing services pricing &amp; Info? Go to Home Page</h5>
                                     </div>
+                                    @if(session('fail'))
+                                    <div class="alert alert-warning text-center mb-3">
+                                        {{ session('fail') }}
+                                    </div>
+                                @endif
 
                                     <form method="POST" action="{{ route('login-user') }}">
                                         @csrf
@@ -38,15 +43,15 @@
 
 
                                             <input id="email" type="email"
-                                                class="form-control @error('email') is-invalid @enderror" name="email"
-                                                value="{{ old('email') }}" placeholder="Email" required
+                                                class="form-control" name="email"
+                                                value="{{ old('email') }}" placeholder="Email"
                                                 autocomplete="email" autofocus>
 
+                                           <span class="text-secondary">
                                             @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
+                                           {{ $message }}
                                             @enderror
+                                           </span>
 
 
                                             <label for="form_username">Email</label>
@@ -56,22 +61,22 @@
                                         <div class="form-label-group">
 
                                             <input id="password" type="password" placeholder="Password"
-                                                class="form-control @error('password') is-invalid @enderror"
-                                                name="password" required autocomplete="current-password">
+                                                class="form-control"
+                                                name="password"  autocomplete="current-password">
 
-                                            @error('password')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
+                                            <span class="text-secondary">
+                                                @error('password')
+                                                {{ $message }}
+                                                @enderror
+                                            </span>
 
 
                                             <label for="inputPassword">Password</label>
                                         </div>
 
-                                        <div class="forgot-pass">
+                                        {{-- <div class="forgot-pass">
                                             <a href="#">Forgot Password?</a>
-                                        </div>
+                                        </div> --}}
                                         <div class="text-center form-action">
                                             <button type="submit" class="btn btn-primary text-uppercase">Login</button>
                                         </div>

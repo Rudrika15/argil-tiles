@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="row">
+{{-- <div class="row">
 	<div class="col-md-12">
 
 		@if ($message = Session::get('success'))
@@ -19,7 +19,7 @@
 		@endif
 
 	</div>
-</div>
+</div> --}}
 
 <div class="main-content">
 	<div class="row">
@@ -42,11 +42,19 @@
 					<input id="form_firstname" type="text" name="names" value="{{$data->names}}" class="form-control" placeholder="Names">
 					<label for="form_firstname">Names</label>
 				</div>
+                <div class="form-label-group">
+                     <select name="thicknesses" id="thicknesses" class="form-control" required>
+                            <option value="" disabled selected>Thicknesses</option>
+                            <option value="4MM,5MM,6MM"{{ $data->thicknesses == '4MM,5MM,6MM' ? 'selected' : '' }}>4MM,5MM,6MM
+                            </option>
+                            <option value="5MM,6MM,7MM"{{ $data->thicknesses == '4MM,5MM,6MM' ? 'selected' : '' }}>5MM,6MM,7MM
+                            </option>
+                            <option value="6MM,7MM,8MM"{{ $data->thicknesses == '4MM,5MM,6MM' ? 'selected' : '' }}>6MM,7MM,8MM
+                            </option>
 
-				<div class="form-label-group">
-					<input id="form_firstname" type="text" name="thicknesses" value="{{$data->thicknesses}}" class="form-control" placeholder="Thiknesses" required>
-					<label for="form_firstname">Thiknesses</label>
-				</div>
+                        </select>
+                </div>
+
 
 				<div class="form-label-group">
 					<input id="form_firstname" type="text" name="primarycolors" value="{{$data->primarycolors}}" class="form-control" placeholder="Primarycolors" required>
@@ -86,17 +94,16 @@
 					<label for="form_firstname">Wearlayer</label>
 				</div>
 
-				<div class="form-label-group">
-					<input id="form_firstname" list="lvtsize" type="text" name="bookmatch" value="{{$data->bookmatch}}" class="form-control" placeholder="Size" required>
 
-					<datalist id="lvtsize">
-						@foreach($lvtsize as $lvtsize)
-						<option value="{{$lvtsize->size}}">{{$lvtsize->size}}</option>
+                <div class="form-label-group">
+                    <select name="bookmatch" id="bookmatch" class="form-control" required>
+                        <option value="" disabled selected>Size</option>
+                        @foreach($lvtsize as $lvtsize)
+						<option value="{{$lvtsize->size}}"{{ $lvtsize->size == $data->bookmatch?'selected':'' }}>{{$lvtsize->size}}</option>
 						@endforeach
-					</datalist>
 
-					<label for="form_firstname">Size</label>
-				</div>
+                    </select>
+                </div>
 			</div>
 
 			<div class="col-md-6">
@@ -138,19 +145,145 @@
 				</div>
 
 
-				<img src="{{url('spc')}}/{{$data -> mainImg}}" alt="Main Image" id="img1" style='height:150px;width:100px'>
-				<img src="{{url('spc')}}/{{$data -> subImg1}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px'>
-				<img src="{{url('spc')}}/{{$data -> subImg2}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px'>
-				<img src="{{url('spc')}}/{{$data -> subImg3}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px'>
-				<img src="{{url('spc')}}/{{$data -> subImg4}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px'>
-				<img src="{{url('spc')}}/{{$data -> subImg5}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px'>
+				<img src="{{url('spc')}}/{{$data -> mainImg}}" alt="Main Image" id="img1" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('spc')}}/{{$data -> subImg1}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('spc')}}/{{$data -> subImg2}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('spc')}}/{{$data -> subImg3}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('spc')}}/{{$data -> subImg4}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px'  class="mt-2">
+				<img src="{{url('spc')}}/{{$data -> subImg5}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px'  class="mt-2">
 
 			</div>
 		</div>
 
-		<div class="text-center form-action">
-			<button type="submit" class="btn btn-primary text-uppercase">Submit</button>
-		</div>
+		{{-- add meta propertys --}}
+        <hr class="sidebar-divider my-4">
+
+        <div class="row mb-4">
+            <h4 class="m-3">Edit Meta Propertys for Spc Product</h4>
+        </div>
+
+        {{-- og titles --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Og Title
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="ogTitleEng" placeholder="English Title"
+                        name="ogTitleEng" value="{{ $data1->ogTitleEng ?? ''}}">
+                    <label for="">og title</label>
+                </div>
+            </div>
+
+        </div>
+
+        {{-- og Description --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Og Description
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="ogDescriptionEng" placeholder="English Description"
+                        name="ogDescriptionEng" value="{{ $data1->ogDescriptionEng ?? ''}}">
+                    <label for="">og description</label>
+                </div>
+            </div>
+
+        </div>
+
+        {{-- og image --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Og Image
+            </div>
+            <div class="col-md-2" id="imagepreview">
+                <img id="ogImagePreview" src="{{ !empty($metablogs) && !empty($metablogs->ogImage) ? asset('ogimage/'.$data1->ogImage) : asset('slider/image_default.png') }}" alt="Og Image"  height="100px"
+                    width="150px">
+            </div>
+            <div class="col-md-7">
+                <div class="form">
+                    <label>Upload Image</label>
+                    <input type="file" class="form-control" id="ogImage" placeholder="" accept='image/*' onchange="readURL(this,'#ogImagePreview')" name="ogImage">
+                </div>
+            </div>
+        </div>
+
+
+
+        {{-- og url --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Og Url
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="ogUrl" placeholder="" name="ogUrl"
+                        value="{{ $data1->ogUrl ?? ''}}">
+                    <label for="">Url</label>
+                </div>
+            </div>
+        </div>
+
+        {{-- description --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Description
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="metadescription" placeholder="" name="metadescription"
+                        value="{{ $data1->description ?? ''}}">
+                    <label for="">description</label>
+                </div>
+            </div>
+        </div>
+
+        {{-- keyword --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Keyword
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="keywords" placeholder="" name="keywords"
+                        value="{{ $data1->keywords ?? ''}}">
+                    <label for="">keywords</label>
+                </div>
+            </div>
+        </div>
+
+        {{-- author --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Author
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="author" placeholder="" name="author"
+                        value="{{ $data1->author ?? ''}}">
+                    <label for="">author</label>
+                </div>
+            </div>
+        </div>
+
+        {{-- tages --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Tages
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" id="tages" placeholder="Hindi Title"
+                        name="tages" value="{{ $data1->tages ?? ''}}">
+                    <label for="">tages</label>
+                </div>
+            </div>
+        </div>
+        <div class="text-center form-action">
+            <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+        </div>
+
 	</form>
 
 

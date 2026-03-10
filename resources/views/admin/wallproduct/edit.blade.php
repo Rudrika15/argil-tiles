@@ -5,7 +5,7 @@
 @section('content')
 
 
-<div class="row">
+{{-- <div class="row">
 	<div class="col-md-12">
 
 		@if ($message = Session::get('success'))
@@ -17,7 +17,7 @@
 		</div>
 		@endif
 	</div>
-</div>
+</div> --}}
 
 <div class="main-content">
 	<div class="row">
@@ -132,19 +132,19 @@
 
 
 
-				<img src="{{url('wall')}}/{{$data -> mainImg}}" alt="Main Image" id="img1" style='height:150px;width:100px'>
-				<img src="{{url('wall')}}/{{$data -> subImg1}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px'>
-				<img src="{{url('wall')}}/{{$data -> subImg2}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px'>
-				<img src="{{url('wall')}}/{{$data -> subImg3}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px'>
-				<img src="{{url('wall')}}/{{$data -> subImg4}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px'>
-				<img src="{{url('wall')}}/{{$data -> subImg5}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px'>
+				<img src="{{url('wall')}}/{{$data -> mainImg}}" alt="Main Image" id="img1" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('wall')}}/{{$data -> subImg1}}" alt="Sub-Img1" id="img2" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('wall')}}/{{$data -> subImg2}}" alt="Sub-Img2" id="img3" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('wall')}}/{{$data -> subImg3}}" alt="Sub-Img3" id="img4" style='height:150px;width:100px' class="mt-2">
+				<img src="{{url('wall')}}/{{$data -> subImg4}}" alt="Sub-Img4" id="img5" style='height:150px;width:100px'  class="mt-2">
+				<img src="{{url('wall')}}/{{$data -> subImg5}}" alt="Sub-Img5" id="img6" style='height:150px;width:100px'  class="mt-2">
 
 			</div>
 
 		</div>
-		<div class="text-center form-action float-right">
+		<div class="text-center form-action">
 			<button type="submit" class="btn btn-primary text-uppercase">Submit</button>
-
+        </div>
 
 	</form>
 </div>

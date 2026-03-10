@@ -4,7 +4,7 @@
 
 @section('content')
 
-   <div class="row">
+   {{-- <div class="row">
         <div class="col-md-12">
 
             @if ($message = Session::get('success'))
@@ -16,7 +16,7 @@
                 </div>
             @endif
         </div>
-    </div>
+    </div> --}}
 
     <div class="main-content">
         <div class="row">
@@ -52,6 +52,7 @@
                 </div>
                 <div class="col-md-6"> <img src="{{ asset('home_slider/' . $data->img) }}" alt="img" id="img" style='height:150px;width:100px'>
                 </div>
+            </div>
 
                 <div class="text-center form-action">
                     <button type="submit" class="btn btn-primary text-uppercase">Submit</button>

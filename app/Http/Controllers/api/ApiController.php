@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
+use App\Helper\Util;
+use App\Http\Controllers\Controller;
+use App\Mail\ContactFormMail;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 use App\Models\Catelogue;
 
@@ -23,11 +25,15 @@ use App\Models\Designtype;
 use App\Models\Wsizemaster;
 use App\Models\Finishtype;
 use App\Models\Favorite;
-
-use Validator;
+use App\Models\NewArievels;
+use App\Models\NewArrivals;
 use Carbon\Carbon;
+use Exception;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
-class ApiController extends Controller
+class apiController extends Controller
 {
     function catelougeview($id = 0)
     {
@@ -36,10 +42,8 @@ class ApiController extends Controller
         } else {
             $data = Catelogue::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No Catelogue Found.."];
+
+        return Util::getSuccessMessage('Success', $data);
     }
 
     function favorite_add(Request $requset)
@@ -50,89 +54,87 @@ class ApiController extends Controller
         $fav->type = $requset->type;
 
         $fav->save();
-        return $fav;
+        return Util::getSuccessMessage('Success', $fav);
     }
     function favorite_remove(Request $requset)
     {
         $user_id = $requset->user_id;
         $p_id = $requset->p_id;
         $type = $requset->type;
-        $fav = Favorite::where('p_id','=',$p_id)
-                        ->where('type','=',$type)
-                        ->where('user_id','=',$user_id)
-                        ->get()->first();
+        $fav = Favorite::where('p_id', '=', $p_id)
+            ->where('type', '=', $type)
+            ->where('user_id', '=', $user_id)
+            ->get()->first();
         $fav->delete();
-        return $fav;
+        return Util::getSuccessMessage('Success', $fav);
     }
     function favorite_view($id)
     {
         $data = Favorite::orderBy('id', 'desc')
             ->where('user_id', '=', $id)
             ->get();
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+
+        return Util::getSuccessMessage('Success', $data);
     }
 
     function register(Request $requset)
     {
         $um = new Usermaster();
-        
+
         $um->name = $requset->name;
         $um->email = $requset->email;
         $um->password = $requset->password;
         $um->contact = $requset->contact;
         $um->save();
-        return $um;
+
+        return Util::getSuccessMessage('Register Successfully', $um);
     }
 
- public function sendEmail($subject, $message)
-        {                  
-              
-              $json_string = array('to' => array('sales@argiltiles.com','kushal@argiltiles.com','nirav@shoutnhike.com','jigar@shoutnhike.com', 'manoj@shoutnhike.com','vaishali@shoutnhike.com'));
-  
-                
-                $params = array(
-                        'to'        => "sales@argiltiles.com",
-                        'toname'    => "Argil Tiles website ",
-                        'from'      => "sales@argiltiles.com",
-                        'fromname'  => "argil",
-                        'subject'   => $subject,
-                        'text'      => $message,
-                        'html'      => $message,
-                        'x-smtpapi' => json_encode($json_string),
-                      
-                    );
+    public function sendEmail($subject, $message)
+    {
 
-                $request =  'https://api.sendgrid.com/api/mail.send.json';
-                $sendgrid_apikey = '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';
-
-                // Generate curl request
-                $session = curl_init($request);
-                // Tell PHP not to use SSLv3 (instead opting for TLS)
-                curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
-                curl_setopt($session, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $sendgrid_apikey));
-                // Tell curl to use HTTP POST
-                curl_setopt ($session, CURLOPT_POST, true);
-                // Tell curl that this is the body of the POST
-                curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
-                // Tell curl not to return headers, but do return the response
-                curl_setopt($session, CURLOPT_HEADER, false);
-                curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
-                
-                // obtain response
-                $response = curl_exec($session);
-                curl_close($session);
-                
-                // print everything out
-                return($response);
+        $json_string = array('to' => array('sales@argiltiles.com', 'kushal@argiltiles.com', 'nirav@shoutnhike.com', 'jigar@shoutnhike.com', 'manoj@shoutnhike.com', 'vaishali@shoutnhike.com'));
 
 
-        }
-        
-        
-    function contactus(Request $request){
+        $params = array(
+            'to'        => "sales@argiltiles.com",
+            'toname'    => "Argil Tiles website ",
+            'from'      => "sales@argiltiles.com",
+            'fromname'  => "argil",
+            'subject'   => $subject,
+            'text'      => $message,
+            'html'      => $message,
+            'x-smtpapi' => json_encode($json_string),
+
+        );
+
+        $request =  'https://api.sendgrid.com/api/mail.send.json';
+        $sendgrid_apikey = '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';
+
+        // Generate curl request
+        $session = curl_init($request);
+        // Tell PHP not to use SSLv3 (instead opting for TLS)
+        curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
+        curl_setopt($session, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $sendgrid_apikey));
+        // Tell curl to use HTTP POST
+        curl_setopt($session, CURLOPT_POST, true);
+        // Tell curl that this is the body of the POST
+        curl_setopt($session, CURLOPT_POSTFIELDS, $params);
+        // Tell curl not to return headers, but do return the response
+        curl_setopt($session, CURLOPT_HEADER, false);
+        curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+
+        // obtain response
+        $response = curl_exec($session);
+        curl_close($session);
+
+        // print everything out
+        return Util::getSuccessMessage('Success',  $response);
+    }
+
+
+    function contactus(Request $request)
+    {
         $name = $request->name;
         $email = $request->email;
         $contactno = $request->contactno;
@@ -144,81 +146,56 @@ class ApiController extends Controller
         $ctc->contactno = $contactno;
         $ctc->message = $message;
         $ctc->save();
-        
-        
-            $msg="Dear Sir/Madam,<br><br> You got a new Contact from ".$name .". Following are the  details:<br><br>";
-        	$msg.="<br>Contact Person : ".$name;
-	        $msg.="<br>Phone : ".$contactno;	
-	        $msg.="<br>Email : ".$email;				
-	        $msg.="<br>Body Message : " . $message;	
-	        $msg.="<br><br><b>Thank You.</b>";				
-	
-	        $to = "sales@argiltiles.com";
-            $subject = "Contact us ";
 
-            // Always set content-type when sending HTML email
-           // $headers = "MIME-Version: 1.0" . "\r\n";
-           // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            // More headers
-           // $headers .= 'From: argil45k@argiltiles.com' . "\r\n";
-          // $headers .= 'Cc: hardikprajapati23@outlook.com,jigar@shoutnhike.com,manoj@shoutnhike.com,vaishali@shoutnhike.com,kushalargil@gmail.com' . "\r\n";
-           
-           // mail($to,$subject,$msg,$headers);
+        // Send the email using the ContactFormMail Mailable
+        Mail::to('social.media@argiltiles.com')  // Replace with your own email address
+            ->send(new ContactFormMail($name, $email, $contactno, $message));
 
-            $responseEmail=$this->sendEmail($subject, $msg);
-            
-        return $ctc;
-        // return $responseEmail;
-
+        return Util::getSuccessMessage('Message Sent Successfully', $ctc);
     }
-    function inquiry(Request $request){
+    function inquiry(Request $request)
+    {
+
         $productname = $request->productname;
         $name = $request->name;
         $email = $request->email;
         $contactno = $request->contactno;
         $message = $request->message;
-        $type = $request->type;
+        $details = $request->details;
+        $subject = $request->subject;
 
         $inqr = new Inquiry();
-        $inqr->subject= $productname;
-        $inqr->name= $name;
-        $inqr->email= $email;
-        $inqr->phone= $contactno;
-        $inqr->message= $message;
-        $inqr->details= $type;
+        $inqr->subject = $productname;
+        $inqr->name = $name;
+        $inqr->email = $email;
+        $inqr->phone = $contactno;
+        $inqr->message = $message;
+        $inqr->details = $details;
+        $inqr->subject = $subject;
         $inqr->save();
-        
-            $msg="Dear Sir/Madam,<br><br> You got a new Inquiry from ".$name .". Following are the  details:<br><br>";
-        	$msg.="<br>Contact Person : ".$name;
-	        $msg.="<br>Phone : ".$contactno;	
-	        $msg.="<br>Email : ".$email;
-	        $msg.="<br>Product : ".$productname . " type " . $type;
-	        $msg.="<br>Body Message : " . $message;	
-	        $msg.="<br><br><b>Thank You.</b>";				
 
-            $subject = "Inquiry ";
+        // email code here
+        Mail::to('social.media@argiltiles.com')  // Replace with your own email address
+            ->send(new ContactFormMail($name, $email, $contactno, $message));
 
-            $responseEmail=$this->sendEmail($subject, $msg);
-
-        return $inqr;
+        return Util::getSuccessMessage('Inquiry Sent Successfully', $inqr);
     }
-    function forgot(Request $request){
+    function forgot(Request $request)
+    {
         $email = $request->email;
         $contact = $request->contact;
     }
 
-    function login(Request $requset)
-    {
-        $contact = $requset->contact;
-        $password = $requset->password;
-        $data = Usermaster::where('contact', '=', $contact)->where('password', '=', $password)->first();
+    // function login(Request $requset)
+    // {
+    //     $contact = $requset->contact;
+    //     $password = $requset->password;
+    //     $data = Usermaster::where('contact', '=', $contact)->where('password', '=', $password)->first();
 
-        if ($data)
 
-            return $data;
-        else
-            return ['data' => "No  Found.."];
-    }
+    //     return Util::getSuccessMessage($data, 'Login Successfully');
+    // }
+
 
     function profile(Request $requset, $id)
     {
@@ -228,8 +205,9 @@ class ApiController extends Controller
         $um->email = $requset->email;
         $um->contact = $requset->contact;
         $um->save();
-        return $um;
+        return Util::getSuccessMessage('Profile Updated Successfully', $um);
     }
+
     function changepassword(Request $requset, $id)
     {
         $oldpassword = $requset->oldpassword;
@@ -241,9 +219,9 @@ class ApiController extends Controller
                 $um->password = $newpassword;
 
                 $um->save();
-                return $um;
+                return Util::getSuccessMessage('Password Updated Successfully', $um);
             } else {
-                return ['data' => "Not Match Found.."];
+                return Util::getErrorMessage('Old Password Not Match',);
             }
         } else {
             return ['data' => "No  Found.."];
@@ -254,9 +232,9 @@ class ApiController extends Controller
     {
         $data = Usermaster::find($id);
         if ($data)
-            return $data;
+            return Util::getSuccessMessage($data, 'User Found Successfully');
         else
-            return ['data' => "No  Found.."];
+            return Util::getErrorMessage($data, 'User Not Found');
     }
 
     function qsizematsterview($id = 0)
@@ -267,9 +245,9 @@ class ApiController extends Controller
             $data = Qsizemaster::find($id);
         }
         if ($data)
-            return $data;
+            return Util::getSuccessMessage('Quartz Size Fetched Successfully', $data);
         else
-            return ['data' => "No  Found.."];
+            return Util::getErrorMessage('Quartz Size Not Found', $data);
     }
     function wsizematsterview($id = 0)
     {
@@ -278,10 +256,7 @@ class ApiController extends Controller
         } else {
             $data = Wsizemaster::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+        return Util::getSuccessMessage('Wall Size Fetched Successfully', $data);
     }
     function stockview($id = 0)
     {
@@ -290,10 +265,8 @@ class ApiController extends Controller
         } else {
             $data = Stock::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+
+        return Util::getSuccessMessage(' User Found Successfully', $data);
     }
     function designtypeview($id = 0)
     {
@@ -302,10 +275,8 @@ class ApiController extends Controller
         } else {
             $data = Designtype::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+
+        return Util::getSuccessMessage(' User Found Successfully', $data);
     }
 
     function finishtypeview($id = 0)
@@ -353,15 +324,30 @@ class ApiController extends Controller
     function lvtproductview($id = 0)
     {
         if ($id == 0) {
-            $data = Lvtproduct::orderBy('id', 'desc')->get();
+            $data = Lvtproduct::orderBy('names')->get();
         } else {
             $data = Lvtproduct::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No product Found.."];
+        return Util::getSuccessMessage('Lvtproduct Fetched Successfully', $data);
     }
+    function lvtproductviewpagination(Request $request, $id = 0)
+    {
+        if ($id == 0) {
+            $query = Lvtproduct::orderBy('names');
+
+            // 🔍 Filter by name (starts with or contains)
+            if (!empty($request->q)) {
+                $query->where('names', 'like', '%' . $request->q . '%');
+            }
+
+            $data = $query->paginate(6); // use paginate if you want pagination
+        } else {
+            $data = Lvtproduct::find($id);
+        }
+
+        return Util::getSuccessMessage('Lvtproduct Fetched Successfully', $data);
+    }
+
 
 
     function newsroomview($id = 0)
@@ -378,18 +364,43 @@ class ApiController extends Controller
     }
 
 
-    function quartzproductview($id = 0)
+    // function quartzproductview($id = 0)
+    // {
+    //     if ($id == 0) {
+    //         $data = Quartzproduct::orderBy('id', 'desc')->get();
+    //     } else {
+    //         $data = Quartzproduct::find($id);
+    //     }
+    //     return Util::getSuccessMessage('Quartzproduct Fetched Successfully', $data);
+    // }
+    // function quartzproductviewpagination($id = 0)
+    // {
+    //     if ($id == 0) {
+    //         $data = Quartzproduct::orderBy('id', 'desc')->paginate(6);
+    //     } else {
+    //         $data = Quartzproduct::find($id);
+    //     }
+    //     return Util::getSuccessMessage('Quartzproduct Fetched Successfully', $data);
+    // }
+    function quartzproductviewpagination(Request $request, $id = 0)
     {
         if ($id == 0) {
-            $data = Quartzproduct::orderBy('id', 'desc')->get();
+            $query = Quartzproduct::where('status','Active')->orderBy('id', 'desc');  // display only active product-by jigar
+
+            // 🔍 Filter by name if "q" is passed
+            if (!empty($request->q)) {
+                $query->where('name', 'like', '%' . $request->q . '%');
+            }
+
+            $data = $query->paginate(6);
         } else {
             $data = Quartzproduct::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No Quartzproduct Found.."];
+
+        return Util::getSuccessMessage('Quartzproduct Fetched Successfully', $data);
     }
+
+
 
 
     function wallproductview($id = 0)
@@ -432,11 +443,11 @@ class ApiController extends Controller
             ->paginate(8);
 
 
-    // product code filter 
-		if($request->productcode){
-			$data = Wallproduct::where('name','=', $request->productcode)
-            ->paginate(8);
-		}
+        // product code filter
+        if ($request->productcode) {
+            $data = Wallproduct::where('name', '=', $request->productcode)
+                ->paginate(8);
+        }
 
 
 
@@ -493,16 +504,13 @@ class ApiController extends Controller
                 ->where('p_id', '=', $data[$i]['id'])
                 ->where('type', '=', 'SPC')
                 ->get();
-                if($fav->count() > 0)
-                {
-                      $data[$i]['favid']=$fav[0]['id'];
-                      $data[$i]['isfav']=true;
-                }
-              else
-              {
-                  $data[$i]['favid']=0;
-                  $data[$i]['isfav']=false;
-              }
+            if ($fav->count() > 0) {
+                $data[$i]['favid'] = $fav[0]['id'];
+                $data[$i]['isfav'] = true;
+            } else {
+                $data[$i]['favid'] = 0;
+                $data[$i]['isfav'] = false;
+            }
         }
         return $data;
     }
@@ -514,9 +522,124 @@ class ApiController extends Controller
         } else {
             $data = Slider::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No Slider Found.."];
+        return Util::getSuccessMessage('Slider Fetched Successfully', $data);
+    }
+
+    // function newarrivalsview()
+    // {
+    //     $data = NewArrivals::orderBy('id', 'desc')->first();
+    //     $url = $data->navigate_url;
+
+    //     // Extract path and split into segments
+    //     $path = parse_url($url, PHP_URL_PATH);
+    //     $segments = explode('/', trim($path, '/'));
+
+    //     $productId = 0;
+    //     $quartzproduct = null;
+    //     $wallproduct = null;
+
+    //     $index = array_search('quartzproduct', $segments);
+    //     if ($index !== false && isset($segments[$index + 1])) {
+    //         $productId = $segments[$index + 1];
+
+    //         // Fetch quartz product
+    //         $quartzproduct = Quartzproduct::find($productId);
+    //         if ($quartzproduct) {
+    //             return Util::getSuccessMessage('Quartz Product Fetched Successfully', [$quartzproduct, $data]);
+    //         }
+    //     } else {
+    //         // Try to detect wallproduct and get its ID
+    //         $index = array_search('wallproduct', $segments);
+    //         if ($index !== false && isset($segments[$index + 1])) {
+    //             $productId = $segments[$index + 1];
+    //             $wallproduct = Wallproduct::find($productId);
+    //             if ($wallproduct) {
+    //                 return Util::getSuccessMessage('Wall Product Fetched Successfully', [$wallproduct, $data]);
+    //             }
+    //         }
+    //     }
+
+    //     // Fallback response
+    //     return response()->json([
+    //         'status' => false,
+    //         'message' => 'Product not found.',
+    //         'data' => [
+    //             'url' => $url,
+    //             'newarrival' => $data,
+    //             'quartzproduct' => $quartzproduct,
+    //             'wallproduct' => $wallproduct
+    //         ]
+    //     ]);
+    // }
+
+    function newarrivalsview()
+    {
+        try {
+            $data = NewArrivals::orderBy('id', 'desc')->first();
+            $data->image = 'newarieles/' . $data->image;
+            return Util::getSuccessMessage('New Arrivals Fetched Successfully', $data);
+        } catch (Exception $e) {
+            return Util::getErrorMessage('New Arrivals Not Found', $e);
+        }
+    }
+    public function dashboard()
+    {
+        if (!Auth::user()) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Unauthorized',
+            ]);
+        }
+
+        $inquiryCount = Inquiry::count();
+        $contactCount = Contact::count();
+
+        // $inquiryDate = Inquiry::orderBy('created_at', 'desc')->get();
+       
+
+        // $contactDate = Contact::orderBy('created_at', 'desc')->get();
+         $inquiryDate = Inquiry::orderBy('created_at', 'desc')
+            ->limit(50)
+            ->get();
+
+        $contactDate = Contact::orderBy('created_at', 'desc')
+            ->limit(50)
+            ->get();
+        return response()->json([
+            'status' => true,
+            'message' => 'Dashboard Fetched Successfully',
+            'data' => [
+                'inquiryCount' => $inquiryCount,
+                'contactCount' => $contactCount,
+                'inquiryData' => $inquiryDate,
+                'contactData' => $contactDate,
+            ],
+
+        ]);
+    }
+
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $user = User::where('email', $request->email)->first();
+
+        if ($user && Hash::check($request->password, $user->password)) {
+            // Create token
+            $tokenResult = $user->createToken('auth_token');
+            $token = $tokenResult->plainTextToken;
+
+            // Update token expiration manually
+            $tokenResult->accessToken->expires_at = Carbon::now()->addYear();
+            $tokenResult->accessToken->save();
+
+            return Util::getSuccessMessage('Login Successfully', ["user" => $user, "token" => $token]);
+        }
+
+        return Util::getErrorMessage('Login Failed', 'Invalid Credentials');
     }
 }

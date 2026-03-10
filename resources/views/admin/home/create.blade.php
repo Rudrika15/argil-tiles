@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12">
 
             @if ($message = Session::get('success'))
@@ -16,7 +16,7 @@
                 </div>
             @endif
         </div>
-    </div>
+    </div> --}}
 
     <div class="main-content">
         <div class="row">
@@ -33,19 +33,20 @@
         <form class="form-group" enctype="multipart/form-data" action="{{ url('homestore') }}" method="post">
             @csrf
             <div class="form-label-group">
-                <input id="form_firstname" type="text" name="title" class="form-control" placeholder="Title">
+                <input id="form_firstname" type="text" name="title" class="form-control" placeholder="Title" required>
                 <label for="form_firstname">Title</label>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-label-group">
                         <input accept='image/*' onchange="readURL(this,'#img')" id="form_firstname" type="file"
-                            name="img" class="form-control" placeholder="subImg4">
+                            name="img" class="form-control" placeholder="subImg4" required>
                         <label for="form_firstname">Image</label>
                     </div>
                 </div>
-                <div class="col-md-6"> <img src="" alt="img" id="img" style='height:150px;width:100px'>
+                <div class="col-md-6"> <img src="{{ url('slider/image_default.png') }}" alt="img" id="img" style='height:150px;width:100px'>
                 </div>
+            </div>
 
 
             <div class="text-center form-action">

@@ -8,7 +8,7 @@
 @section('content')
 
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12">
 
             @if ($message = Session::get('success'))
@@ -20,7 +20,7 @@
                 </div>
             @endif
         </div>
-    </div>
+    </div> --}}
 
     <div class="main-content">
         <div class="float-left">
@@ -35,6 +35,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Names</th>
+                        <th scope="col">Slug</th>
                         <th scope="col">Thicknesses</th>
                         <th scope="col">Primary Colors</th>
                         <th scope="col">Edges</th>
@@ -49,11 +50,18 @@
                         <th scope="col">Option</th>
                     </tr>
                 </thead>
+                @if (count($data) == 0)
+                <tr>
+                    <td colspan="12" class="text-center text-danger">No Record Found</td>
+                </tr>
+
+            @endif
                 <tbody>
 
                     @foreach ($data as $data)
                         <tr>
                             <td>{{ $data->names }}</td>
+                            <td>{{ $data->slug }}</td>
                             <td>{{ $data->thicknesses }}</td>
                             <td>{{ $data->primarycolors }}</td>
                             <td>{{ $data->edges }}</td>
@@ -65,9 +73,14 @@
                             <td>{{ $data->bookmatch }}</td>
                             <td><img src="spc/{{ $data->mainImg }}" style="height:200px" class="img-thumbnail"></td>
                             <td>{{ $data->status }}</td>
-                            <td class="d-flex" style="gap: 8px">
+                            <td>
+                                <span class="d-flex" style="gap: 8px">
                                 <a href="{{ route('lvt.edit', $data->id) }}" class="btn btn-primary"> Edit</a>
-                                <a href="{{ route('lvt.delete', $data->id) }}" class="btn btn-warning"> Delete </a>
+                                <a href="javascript:void(0)" class="btn btn-warning"
+                                onclick="openDeleteModal('{{Route('lvt.delete',$data->id)}}')">
+                                Delete
+                            </a>
+                                </span>
                             </td>
                         </tr>
                     @endforeach
