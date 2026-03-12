@@ -26,6 +26,7 @@ use App\Http\Controllers\visitors\ContactController;
 use App\Http\Controllers\visitors\SpcExportController;
 use App\Http\Controllers\visitors\QuartzExportController;
 
+use App\Http\Controllers\ExportController;
 
 
 // ====================== admin ======================
@@ -210,6 +211,14 @@ Route::middleware('auth:web')->group(function () {
     Route::post("blog.update/{id}", [BlogController::class, 'update'])->name('blog.update');
     Route::get("blog.delete/{id}", [BlogController::class, 'destroy'])->name('blog.delete');
 
+    // Export
+Route::get("export", [ExportController::class, 'index'])->name('export');
+Route::get("export.create", [ExportController::class, 'create'])->name('export.create');
+Route::post("export.store", [ExportController::class, 'store'])->name('export.store');
+Route::get("export.edit/{id}", [ExportController::class, 'edit'])->name('export.edit');
+Route::post("export.update/{id}", [ExportController::class, 'update'])->name('export.update');
+Route::get("export.delete/{id}", [ExportController::class, 'destroy'])->name('export.delete');
+
     // new arievels
     Route::get("newarrivalsshow", [NewArrivalsController::class, 'index'])->name('newarrivalsshow');
     Route::get("newarrivals/edit/{id}", [NewArrivalsController::class, 'edit'])->name('newarrivals.edit');
@@ -238,8 +247,12 @@ Route::get('quartzinquiry/{slug?}', [VisitorController::class, 'quartzinquiry'])
 Route::get('quartzinquiry/{slug?}', [VisitorController::class, 'quartzinquiry'])->name('quartzinquiry');
 Route::get('/quartzsurface', [VisitorController::class, 'quartzsurface']);
 Route::get('/privacyPolicy', [VisitorController::class, 'privacyPolicy']);
+
 Route::get('/blogs', [VisitorController::class, 'blog']);
 Route::get('/blogdetails/{slug}', [VisitorController::class, 'blogdetails'])->name('blogdetails');
+
+Route::get('/exports', [ExportController::class,'exportList'])->name('exportlist');
+Route::get('/exports/{slug}', [ExportController::class,'exportDetails'])->name('exportdetails');
 
 // Route::post('/send-mail',[ContactController::class,'sendMail'])->name('send.mail');
 // Route::get('send-mail', [MailController::class, 'index']);

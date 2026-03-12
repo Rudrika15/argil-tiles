@@ -191,10 +191,17 @@
                         </ul>
                     </div>
                 </li>
+                
                 <li
                     class="nav-item {{ request()->routeIs('blog') || request()->routeIs('blog.create') || request()->routeIs('blog.edit') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('blog') }}">Blog</a>
                 </li>
+
+                <li
+                    class="nav-item {{ request()->routeIs('export') || request()->routeIs('export.create') || request()->routeIs('export.edit') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('export') }}">Export</a>
+                </li>
+
                 <li
                     class="nav-item {{ request()->routeIs('newarrivalsshow') || request()->routeIs('newarrivals.edit') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('newarrivalsshow') }}">New Arrivals</a>

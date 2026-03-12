@@ -51,7 +51,7 @@
                     <tr>
                         <td>{{ $data->title }}</td>
                         <td>{{ $data->slug }}</td>
-                        <td>{{ Str::limit($data->description, 500, '...') }}</td>
+                        <td>{{ Str::limit($data->description, 150, '...') }}</td>
                         <td><img src="{{ 'blogimage/'.$data->image }}" style="height:200px" class="img-thumbnail"></td>
                         <td>{{ $data->status }}</td>
                         <td>
