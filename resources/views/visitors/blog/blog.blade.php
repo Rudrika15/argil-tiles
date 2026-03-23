@@ -1,11 +1,5 @@
 @extends('layouts.app')
 @section('seosection')
-    <style>
-        .blog-img{
-    height:250px;
-    object-fit:cover;
-}
-    </style>
     <meta name="description"
         content="Discover the latest tile trends, design ideas, and product updates from Argil Tiles. Explore our blogs for inspiration and expert tips.">
     <meta name="keywords"
@@ -34,44 +28,87 @@
     <!-- breadcrumb -->
 
     <div class="container">
-    <div class="row g-4">
-        @foreach ($blogs as $blog)
-
-        <div class="col-md-6">
-            <div class="card h-100">
-
-                <img src="{{ asset('blogimage/' . $blog->image) }}"
-                     class="card-img-top blog-img"
-                     alt="{{ $blog->title }}"
-                     title="{{ $blog->title }}"
-                     loading="lazy">
-
-                <div class="card-body d-flex flex-column">
-
-                    <h5 class="fw-bold">{{ $blog->title }}</h5>
-
-                    <p class="text-muted">
+        <div class="row mb-4">
+            @foreach ($blogs as $index => $blog)
+                <div class="col-md-6">
+                    <h2 class="mt-4 fw-bold">{{ $blog->title }}</h2>
+                    <img src="{{ asset('blogimage/' . $blog->image) }}" alt="argil blog" title="argil blog" loading="lazy"
+                        class="img-fluid w-100 mt-3">
+                    <p class="py-3">
                         {{ $blog->created_at ? $blog->created_at->diffForHumans() : 'No date available' }}
                     </p>
 
-                    <p>
-                        {{ Str::limit(strip_tags($blog->description), 120, '...') }}
-                    </p>
-
-                    <a href="{{ route('blogdetails', $blog->slug) }}" class="btn btn-primary mt-auto">
+                    <p class="text-justify mt-4 " style="font-size:12pt">{!! Str::limit($blog->description, 120, '...') !!}</p>
+                    <a href="{{ route('blogdetails', $blog->slug) }}" class="btn btn-primary mt-3">
                         Read More
                     </a>
-
                 </div>
+            @endforeach
+        </div> <!-- Close current row -->
+    </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {{--
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-9">
+                <h2>Blog</h2>
+                <img src="spc/spc1.jpg" alt="" class="img-responsive spc-image1">
+                <p class="text-justify paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                    <a href="/blogdetails"> <button class="btn-warning"
+                    style="padding: 4px 10px;border-radius: 5px; margin-bottom:10px;">ReadMe</button></a>
             </div>
+            <div class="col-md-3 col-sm-3" style="margin-top: 53px;" >
+                <h2 style="background: black;color:white">POPULAR</h2>
+                <img src="spc/spc1.jpg" alt="" class="img-responsive spc-image1">
+            </div>
+            <div class="col-md-3 col-sm-3" style="margin-top: 10px" data-aos="flip-left">
+
+                <img src="spc/spc1.jpg" alt="" class="img-responsive spc-image1">
+            </div>
+            <div class="col-md-3 col-sm-3" style="margin-top: 10px" data-aos="flip-left">
+
+                <img src="spc/spc1.jpg" alt="" class="img-responsive spc-image1">
+            </div>
+
+
         </div>
 
-        @endforeach
-    </div>
-</div>
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <h2>Blog</h2>
+                <img src="spc/spc1.jpg" alt="" class="img-responsive spc-image1">
+                <p class="text-justify paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                <button class="btn-warning"
+                    style="padding: 4px 10px;border-radius: 5px; margin-bottom:10px;">ReadMe</button>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <h2>Blog</h2>
+                <img src="spc/spc1.jpg" alt="" class="img-responsive spc-image1">
+                <p class="text-justify paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                <button class="btn-warning"
+                    style="padding: 4px 10px;border-radius: 5px; margin-bottom:10px;">ReadMe</button>
+            </div>
 
-
-
-
+        </div>
+    </div> --}}
 @endsection

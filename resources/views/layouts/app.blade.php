@@ -82,7 +82,6 @@
 
     @yield('seosection')
 
-    @verbatim
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -123,9 +122,8 @@
           ]
         }
         </script>
-@endverbatim
 
-@verbatim
+
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -142,9 +140,8 @@
           ]
         }
         </script>
-@endverbatim
 
-@verbatim
+
     <script type="application/ld+json">
         {
           "@context": "https://schema.org/",
@@ -158,7 +155,7 @@
           }
         }
         </script>
-@endverbatim
+
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTBK17M75S"></script>
 

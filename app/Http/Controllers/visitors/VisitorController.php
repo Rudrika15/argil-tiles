@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Mail\ContactFormMail;
 use App\Mail\InquiryFormMail;
 use App\Models\Blog;
-use App\Models\MetaPropertyBlog;
 use App\Models\Catelogue;
 use App\Models\Contact;
 use App\Models\Inquiry;
@@ -62,12 +61,7 @@ class VisitorController extends Controller
     {
 
         $blog = Blog::where('slug', $slug)->firstOrFail();
-        $meta = MetaPropertyBlog::where('blogId', $blog->id)
-            ->where('status', 'Y')
-            ->first();
-
-        return view('visitors.blog.blogdetails', compact('blog','meta'));
-
+        return view('visitors.blog.blogdetails', compact('blog'));
     }
     public function catalogue()
     {
