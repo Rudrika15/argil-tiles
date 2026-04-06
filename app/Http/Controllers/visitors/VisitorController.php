@@ -4,6 +4,7 @@ namespace App\Http\Controllers\visitors;
 
 use App\Http\Controllers\Controller;
 use App\Mail\ContactFormMail;
+use App\Mail\ExportFormMail;
 use App\Mail\InquiryFormMail;
 use App\Models\Blog;
 use App\Models\Catelogue;
@@ -168,7 +169,7 @@ class VisitorController extends Controller
 
     public function quartzsurface()
     {
-        $data = Quartzproduct::where('status','Active')->orderBy('id', 'desc')->get();
+        $data = Quartzproduct::where('status', 'Active')->orderBy('id', 'desc')->get();
         return view('visitors.products.quartz surface.quartzsurface', compact('data'));
     }
     public function quartzinquiry($slug)
@@ -177,5 +178,64 @@ class VisitorController extends Controller
         // $data= Quartzproduct::find($id);
         $data = Quartzproduct::where('slug', $slug)->firstOrFail();
         return view('visitors.products.quartz surface.quartzsurfaceinquiry', compact('data'));
+    }
+    public function exports()
+    {
+        return view('visitors.exports.exports');
+    }
+    public function exportusa()
+    {
+        return view('visitors.exports.usa');
+    }
+    public function exportuae()
+    {
+        return view('visitors.exports.uae');
+    }
+    public function exportcanada()
+    {
+        return view('visitors.exports.canada');
+    }
+    public function exportuk()
+    {
+        return view('visitors.exports.uk');
+    }
+    public function exportaustralia()
+    {
+        return view('visitors.exports.australia');
+    }
+    public function exportrussia()
+    {
+        return view('visitors.exports.russia');
+    }
+
+    public function exportmail(Request $request)
+    {
+        try {
+            $validated = $request->validate([
+                'form_name' => 'required|string|max:255',
+                'form_email' => 'required|email',
+                'form_phone' => 'required|string',
+                'category' => 'required|string',
+                'export_country' => 'nullable|string|max:100',
+                'form_message' => 'nullable|string',
+            ]);
+
+            Mail::to('social.media@argiltiles.com')
+                ->send(new ExportFormMail(
+                    $validated['form_name'],
+                    $validated['form_email'],
+                    $validated['form_phone'],
+                    $validated['category'],
+                    $validated['export_country'] ?? 'Global',
+                    $validated['form_message'] ?? ''
+                ));
+
+            return response()->json(['success' => true]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Unable to send message right now. Please try again.',
+            ], 500);
+        }
     }
 }

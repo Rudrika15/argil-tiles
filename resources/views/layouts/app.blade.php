@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content="Argil Group">
-   
+
     <meta name="geo.region" content="IN-GJ">
     <meta name="geo.placename" content="Morbi">
     <meta name="geo.position" content="22.82587;70.847998">
@@ -45,8 +45,8 @@
 
     <!-- Favicon & App Icons -->
 
-    
-    
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -81,8 +81,10 @@
     </style>
 
     @yield('seosection')
+    @verbatim
 
-    <script type="application/ld+json">
+
+        <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
@@ -122,9 +124,10 @@
           ]
         }
         </script>
+    @endverbatim
+    @verbatim
 
-
-    <script type="application/ld+json">
+        <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -140,9 +143,11 @@
           ]
         }
         </script>
+    @endverbatim
+    @verbatim
 
 
-    <script type="application/ld+json">
+        <script type="application/ld+json">
         {
           "@context": "https://schema.org/",
           "@type": "WebSite",
@@ -155,6 +160,25 @@
           }
         }
         </script>
+    @endverbatim
+
+    @verbatim
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "name": "Argil Tiles",
+          "description": "Argil is an artificial quartz stone slab manufacturer in Morbi, Gujarat, India. We have the best-engineered quartz surface stone for kitchen and platform at a reasonable price. We have 10+ yrs of service. Get a price quote",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.1",
+            "bestRating": "5",
+            "ratingCount": "39"
+          }
+        }
+        </script>
+    @endverbatim
 
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTBK17M75S"></script>
@@ -169,15 +193,18 @@
         gtag('config', 'G-TTBK17M75S');
     </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17164959163"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
- 
-  gtag('config', 'AW-17164959163');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17164959163"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17164959163');
+    </script>
 </head>
 
 <body>
@@ -336,11 +363,15 @@
                             <a href="/catalogue" class="text-reset text-decoration-none">Catalogue</a>
                         </p>
                         <p>
+                            <a href="/exports" class="text-reset text-decoration-none">Exports</a>
+                        </p>
+                        <p>
                             <a href="/contact" class="text-reset text-decoration-none">Contact</a>
                         </p>
                         <p>
                             <a href="/privacyPolicy" class="text-reset text-decoration-none">Privacy</a>
                         </p>
+
                     </div>
                     <!-- Grid column -->
 
@@ -352,7 +383,7 @@
 
 
                         </h6>
-                       
+
                         <p class="my-4">
                             <a target="_blank"
                                 href="https://play.google.com/store/apps/details?id=com.arjil.argil_tiles">
@@ -393,8 +424,8 @@
                                 class="text-decoration-none" style="color: inherit !important;">+ 91 9925511465</a>
                         </p>
                         <p> <i class="bi bi-envelope me-3 mx-3"></i>
-                            <a href="mailto:info@argilties.com" class="text-decoration-none"
-                                style="color: inherit !important;">info@argilties.com</a>
+                            <a href="mailto:info@argiltiles.com" class="text-decoration-none"
+                                style="color: inherit !important;">info@argiltiles.com</a>
                         </p>
                         <p class="mx-5">
                             <a href="https://www.facebook.com/argilgroup/" target="blank"
@@ -418,7 +449,7 @@
 
 
         <!-- Copyright -->
-               <div class="d-flex flex-column flex-md-row justify-content-around p-4 text-center text-md-start"
+        <div class="d-flex flex-column flex-md-row justify-content-around p-4 text-center text-md-start"
             style="background-color: rgba(0, 0, 0, 0.05);">
             <div class="mb-2 mb-md-0">
                 @php
@@ -488,30 +519,38 @@
         });
     </script> --}}
     <script>
-    // Wait for window load
-    // window.addEventListener("load", function() {
-    // document.getElementById("preloader").style.display = "none";
-    // document.querySelector(".content").style.display = "block";
-    // });
+        // Wait for window load
+        // window.addEventListener("load", function() {
+        // document.getElementById("preloader").style.display = "none";
+        // document.querySelector(".content").style.display = "block";
+        // });
     </script>
 
-<script type="text/javascript">
-_linkedin_partner_id = "9069537";
-window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-</script><script type="text/javascript">
-(function(l) {
-if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
-window.lintrk.q=[]}
-var s = document.getElementsByTagName("script")[0];
-var b = document.createElement("script");
-b.type = "text/javascript";b.async = true;
-b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-s.parentNode.insertBefore(b, s);})(window.lintrk);
-</script>
-<noscript>
-<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=9069537&fmt=gif" />
-</noscript>
+    <script type="text/javascript">
+        _linkedin_partner_id = "9069537";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function(l) {
+            if (!l) {
+                window.lintrk = function(a, b) {
+                    window.lintrk.q.push([a, b])
+                };
+                window.lintrk.q = []
+            }
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";
+            b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })(window.lintrk);
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt=""
+            src="https://px.ads.linkedin.com/collect/?pid=9069537&fmt=gif" />
+    </noscript>
 
 
 

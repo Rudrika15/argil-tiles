@@ -100,24 +100,24 @@
                 <!-- Contact Section -->
                 <div class="col-12 col-md-2 mb-4 ">
                     <h5 class="mb-3">Contact Us</h5>
-                    <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>Argil Group  8-A,
-                            <br />
-                            <span>
-                                National Highway, </span>
-                            <br />
-                            <span>
-                                Morbi(Gujarat)-363642
-                            </span>
-                            <br />
-                            <span>
-                                India
-                            </span>
-                        </p>
+                    <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>Argil Group 8-A,
+                        <br />
+                        <span>
+                            National Highway, </span>
+                        <br />
+                        <span>
+                            Morbi(Gujarat)-363642
+                        </span>
+                        <br />
+                        <span>
+                            India
+                        </span>
+                    </p>
 
                     <p class="mb-2">
                         <i class="bi bi-envelope me-2"></i>
-                        <a href="mailto:info@argilties.com" class="text-white text-decoration-none">
-                         info@argilties.com
+                        <a href="mailto:info@argiltiles.com" class="text-white text-decoration-none">
+                            info@argiltiles.com
                         </a>
                     </p>
 
@@ -138,32 +138,31 @@
                 </div>
 
                 {{-- download section --}}
-                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
-                        <!-- Links -->
-               <h5 class="mb-3">Download Our App
-                        </h5>
-                        <p class="my-4">
-                            <a target="_blank"
-                                href="https://play.google.com/store/apps/details?id=com.arjil.argil_tiles">
-                                {{-- <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                    <!-- Links -->
+                    <h5 class="mb-3">Download Our App
+                    </h5>
+                    <p class="my-4">
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.arjil.argil_tiles">
+                            {{-- <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
                                     alt="argil-playstore-link" title="argil-playstore-link" class="w-75"> --}}
-                                <img src="{{ asset('assets/asset/playstore.png') }}"
-                                    alt="Download Argil App on Google Play Store" title="Argil Play Store Link"
-                                    class="img-fluid w-75" width="138" height="41" loading="lazy">
-                            </a>
-                        </p>
-                        <p>
-                            <a href="https://apps.apple.com/in/app/argil-group/id6746482165" target="_blank">
+                            <img src="{{ asset('assets/asset/playstore.png') }}"
+                                alt="Download Argil App on Google Play Store" title="Argil Play Store Link"
+                                class="img-fluid w-75" width="138" height="41" loading="lazy">
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://apps.apple.com/in/app/argil-group/id6746482165" target="_blank">
 
-                                {{-- <img src="{{ asset('assets/asset/appstore.png') }}"
+                            {{-- <img src="{{ asset('assets/asset/appstore.png') }}"
                                     loading ="lazy"alt="argil-appstore-link" title="argil-appstore-link"
                                     class="w-75"> --}}
-                                <img src="{{ asset('assets/asset/appstore.png') }}"
-                                    alt="Download Argil App on Apple App Store" title="Argil App Store Link"
-                                    class="img-fluid w-75" loading="lazy">
-                            </a>
-                        </p>
-                    </div>
+                            <img src="{{ asset('assets/asset/appstore.png') }}"
+                                alt="Download Argil App on Apple App Store" title="Argil App Store Link"
+                                class="img-fluid w-75" loading="lazy">
+                        </a>
+                    </p>
+                </div>
 
                 <!-- Social Links -->
                 <div class="col-12 col-md-2 mb-4 text-center">

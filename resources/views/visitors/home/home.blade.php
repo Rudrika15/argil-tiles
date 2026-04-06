@@ -1,12 +1,10 @@
     @extends('layouts.app')
     @section('seosection')
+        <meta name="description"
+            content="Argil Tiles, Morbi, Gujarat, India, manufactures premium quartz surfaces, SPC flooring, and vinyl flooring for homes and commercial spaces.">
 
-
-<meta name="description"
-      content="Argil Tiles, Morbi, Gujarat, India, manufactures premium quartz surfaces, SPC flooring, and vinyl flooring for homes and commercial spaces.">
-
-<meta name="keywords"
-      content="Argil Tiles, quartz surface manufacturer, artificial quartz slabs, quartz stone Morbi, SPC flooring manufacturer, vinyl flooring manufacturer, premium quartz India, Morbi tiles manufacturer, SPC vinyl flooring, quartz surfaces for homes and commercial">
+        <meta name="keywords"
+            content="Argil Tiles, quartz surface manufacturer, artificial quartz slabs, quartz stone Morbi, SPC flooring manufacturer, vinyl flooring manufacturer, premium quartz India, Morbi tiles manufacturer, SPC vinyl flooring, quartz surfaces for homes and commercial">
 
 
         <meta property="og:title" content="Artificial Quartz Stone Slab
@@ -31,21 +29,6 @@ platform at a reasonable price. We have 10+ yrs of service.
 Get a price quote "
             data-react-helmet="true">
         <link rel="canonical" href="https://argiltiles.com/" data- react-helmet="true">
-        
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org/",
-          "@type": "Product",
-          "name": "Argil Tiles",
-          "description": "Argil is an artificial quartz stone slab manufacturer in Morbi, Gujarat, India. We have the best-engineered quartz surface stone for kitchen and platform at a reasonable price. We have 10+ yrs of service. Get a price quote",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.1",
-            "bestRating": "5",
-            "ratingCount": "39"
-          }
-        }
-        </script>
 
         <title>Artificial Quartz Stone Slab Manufacturers In Morbi, Gujarat, India | Argil</title>
     @endsection

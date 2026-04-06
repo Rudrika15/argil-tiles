@@ -50,7 +50,7 @@ Route::get("/logout", [UserController::class, 'logout'])->name('logout');
 // end login
 
 Route::middleware('auth:web')->group(function () {
-    Route::get('dashboard',[UserCOntroller::class,'dashboardpage'])->name('dashboard');
+    Route::get('dashboard', [UserCOntroller::class, 'dashboardpage'])->name('dashboard');
     // Route::get("", [DashboardController::class, 'index'])->name('dashboard');
     // Route::get("dashboard", [DashboardController::class, 'index'])->name('dashboard');
     //cat Start
@@ -230,7 +230,7 @@ Route::get('/groupcompany', [VisitorController::class, 'groupcompany']);
 Route::get('/achievements', [VisitorController::class, 'achievement']);
 Route::get('/plants', [VisitorController::class, 'plants']);
 Route::get('/quality', [VisitorController::class, 'quality']);
-Route::get('/catalogue', [VisitorController::class, 'catalogue']);
+Route::get('/catalogue', [VisitorController::class, 'catalogue'])->name('catalogue');
 Route::get('/contact', [VisitorController::class, 'contact']);
 Route::get('/spcproducts', [VisitorController::class, 'spcproducts']);
 Route::get('spcproductinquiry/{slug?}', [VisitorController::class, 'spcproductinquiry'])->name('spcproductinquiry');
@@ -254,13 +254,23 @@ Route::post('/send-inquiry', [VisitorController::class, 'sendinquiry'])->name('s
 // web.php
 
 Route::get('/spc-export', [SpcExportController::class, 'spcExportPage'])
-    ->name('spc.export');
-  Route::get('/quartz-export', [QuartzExportController::class, 'quartzExportPage'])
-    ->name('quartz.export');  
+->name('spc.export');
+Route::get('/quartz-export', [QuartzExportController::class, 'quartzExportPage'])
+->name('quartz.export');
 
 // Route::get('quartz-export', function () {
-//     return view('visitors.landing.quartz-export');
-// })->name('quartz.export');
-
+    //     return view('visitors.landing.quartz-export');
+    // })->name('quartz.export');
+    
 Route::post('/spc-export/submit', [SpcExportController::class, 'submit'])->name('spc.export.submit');
 Route::post('/quartz-export/submit', [QuartzExportController::class, 'submit'])->name('quartz.export.submit');
+
+Route::get('/exports', [VisitorController::class, 'exports'])->name('exports');
+Route::get('/exports/usa', [VisitorController::class, 'exportusa'])->name('exports.us');
+Route::get('/exports/uae', [VisitorController::class, 'exportuae'])->name('exports.uae');
+Route::get('/exports/canada', [VisitorController::class, 'exportcanada'])->name('exports.canada');
+Route::get('/exports/uk', [VisitorController::class, 'exportuk'])->name('exports.uk');
+Route::get('/exports/australia', [VisitorController::class, 'exportaustralia'])->name('exports.australia');
+Route::get('/exports/russia', [VisitorController::class, 'exportrussia'])->name('exports.russia');
+
+Route::post('/exports/mail', [VisitorController::class, 'exportmail'])->name('exports.mail');
