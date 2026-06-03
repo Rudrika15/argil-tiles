@@ -1,19 +1,21 @@
 @extends('layouts.app')
 @section('seosection')
     <meta name="description"
-        content="Discover the latest tile trends, design ideas, and product updates from Argil Tiles. Explore our blogs for inspiration and expert tips.">
-    <meta name="keywords"
-        content="tiles, tile design, flooring, Argil Tiles blog, home renovation, ceramic tiles, tile ideas">
+        content="Expert tips on quartz countertops, SPC flooring & tile design from Argil's team. Read the latest articles.">
+
     <meta property="og:title" content="Argil Tiles Blog | Tile Design Trends, Tips & Inspirations">
     <meta property="og:description"
-        content="Explore expert tips, tile trends, and design inspiration from the official Argil Tiles blog. Stay updated with the latest in ceramic and flooring solutions.">
+        content="Explore design inspiration, tile trends, and expert insights from Argil Tiles. Discover ideas for modern homes and commercial spaces.">
     <meta property="og:url" content="https://argiltiles.com/blogs">
+
     <meta name="twitter:title" content="Argil Tiles Blog | Tile Design Trends, Tips & Inspirations">
     <meta name="twitter:description"
-        content="Explore expert tips, tile trends, and design inspiration from the official Argil Tiles blog. Stay updated with the latest in ceramic and flooring solutions.">
-    <link rel="canonical" href="https://argiltiles.com/blogs" data-react- helmet="true">
-    <title>Argil Tiles Blog | Tile Design Trends, Tips & Inspirations
-    </title>
+        content="Get the latest tile trends, flooring ideas, and expert advice from Argil Tiles. Stay inspired with our newest blog articles.">
+
+    <link rel="canonical" href="https://argiltiles.com/blogs">
+
+    <title>Argil Tiles Blog | Quartz, SPC Flooring & Tile Design Tips</title>
+    
 @endsection
 @section('content')
     <!-- breadcrumb -->

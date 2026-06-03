@@ -32,7 +32,9 @@ slab for kitchen platform countertops manufacturers in Morbi, Gujarat, India. We
 reasonable price We have 10+ yrs of service. Get a price quote  "
         data-react-helmet="true">
     <link rel="canonical" href="https://argiltiles.com/quartzsurface" data-react- helmet="true">
-    <title>Quartz Countertops & Kitchen Slabs Manufacturer | Argil</title>
+    <title>
+        Quartz Countertop Slabs Manufacturer in Morbi | Argil
+    </title>
 @endsection
 @section('content')
     <!-- breadcrumb -->

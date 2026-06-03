@@ -1,7 +1,7 @@
     @extends('layouts.app')
     @section('seosection')
         <meta name="description"
-            content="Argil Tiles, Morbi, Gujarat, India, manufactures premium quartz surfaces, SPC flooring, and vinyl flooring for homes and commercial spaces.">
+            content="Argil manufactures premium engineered quartz slabs & SPC flooring in Morbi, Gujarat. ISO-certified. Explore 50+ designs. Request a quote today!">
 
         <meta name="keywords"
             content="Argil Tiles, quartz surface manufacturer, artificial quartz slabs, quartz stone Morbi, SPC flooring manufacturer, vinyl flooring manufacturer, premium quartz India, Morbi tiles manufacturer, SPC vinyl flooring, quartz surfaces for homes and commercial">
@@ -30,7 +30,8 @@ Get a price quote "
             data-react-helmet="true">
         <link rel="canonical" href="https://argiltiles.com/" data- react-helmet="true">
 
-        <title>Artificial Quartz Stone Slab Manufacturers In Morbi, Gujarat, India | Argil</title>
+        <title>Quartz Stone Slab
+            Manufacturers | Argil – Morbi, India</title>
     @endsection
 
     @section('content')
