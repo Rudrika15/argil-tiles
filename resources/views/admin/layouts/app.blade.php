@@ -199,13 +199,16 @@
                     class="nav-item {{ request()->routeIs('newarrivalsshow') || request()->routeIs('newarrivals.edit') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('newarrivalsshow') }}">New Arrivals</a>
                 </li>
-
+                <li
+                    class="nav-item {{ request()->routeIs('admin.cms.index') || request()->routeIs('admin.cms.index') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.cms.index') }}">CMS</a>
+                </li>
             </ul>
         </div>
     </div>
 
     <!-- Overlay -->
-    <div class="overlay" id="overlay"></div>
+    <div class="overlay" id="overlay"></div>    
 
     <!-- Page Content -->
     <div id="content">

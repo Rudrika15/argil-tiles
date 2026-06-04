@@ -5,6 +5,7 @@ use App\Http\Controllers\visitors\VisitorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\CatelogueController;
+use App\Http\Controllers\admin\CmsController;
 use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\admin\InquiryController;
 use App\Http\Controllers\admin\LvtController;
@@ -274,3 +275,11 @@ Route::get('/exports/australia', [VisitorController::class, 'exportaustralia'])-
 Route::get('/exports/russia', [VisitorController::class, 'exportrussia'])->name('exports.russia');
 
 Route::post('/exports/mail', [VisitorController::class, 'exportmail'])->name('exports.mail');
+
+Route::get('/show-cms',[CmsController::class,'index'])->name('admin.cms.index'); 
+Route::get('/create-cms',[CmsController::class,'create'])->name('admin.cms.create'); 
+Route::post('/store-cms',[CmsController::class,'store'])->name('admin.cms.store'); 
+Route::get('/edit-cms/{id}',[CmsController::class,'edit'])->name('admin.cms.edit'); 
+Route::post('/update-cms/{id}',[CmsController::class,'update'])->name('admin.cms.update'); 
+Route::get('/delete-cms/{id}',[CmsController::class,'delete'])->name('admin.cms.delete'); 
+//Cms 
