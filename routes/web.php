@@ -26,6 +26,8 @@ use App\Http\Controllers\visitors\ContactController;
 use App\Http\Controllers\visitors\SpcExportController;
 use App\Http\Controllers\visitors\QuartzExportController;
 
+use App\Http\Controllers\admin\CmsController;
+
 
 
 // ====================== admin ======================
@@ -214,6 +216,17 @@ Route::middleware('auth:web')->group(function () {
     Route::get("newarrivalsshow", [NewArrivalsController::class, 'index'])->name('newarrivalsshow');
     Route::get("newarrivals/edit/{id}", [NewArrivalsController::class, 'edit'])->name('newarrivals.edit');
     Route::post("newarrivals/update/{id}", [NewArrivalsController::class, 'update'])->name('newarrivals.update');
+
+
+    //cms
+    Route::get('/show-cms',[CmsController::class,'index'])->name('admin.cms.index'); 
+    Route::get('/create-cms',[CmsController::class,'create'])->name('admin.cms.create'); 
+    Route::post('/store-cms',[CmsController::class,'store'])->name('admin.cms.store'); 
+    Route::get('/edit-cms/{id}',[CmsController::class,'edit'])->name('admin.cms.edit'); 
+    Route::post('/update-cms/{id}',[CmsController::class,'update'])->name('admin.cms.update'); 
+    Route::get('/delete-cms/{id}',[CmsController::class,'delete'])->name('admin.cms.delete'); 
+
+
 });
 
 
