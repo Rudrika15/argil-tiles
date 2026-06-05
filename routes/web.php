@@ -27,8 +27,8 @@ use App\Http\Controllers\visitors\SpcExportController;
 use App\Http\Controllers\visitors\QuartzExportController;
 
 use App\Http\Controllers\admin\CmsController;
-
-
+use App\Http\Controllers\admin\FaqController;
+use App\Http\Controllers\visitors\BlogAuthorController;
 
 // ====================== admin ======================
 
@@ -226,6 +226,13 @@ Route::middleware('auth:web')->group(function () {
     Route::post('/update-cms/{id}',[CmsController::class,'update'])->name('admin.cms.update'); 
     Route::get('/delete-cms/{id}',[CmsController::class,'delete'])->name('admin.cms.delete'); 
 
+    //Faqs
+    Route::get('/show-faqs',[FaqController::class,'index'])->name('admin.faqs.index'); 
+    Route::get('/create-faqs',[FaqController::class,'create'])->name('admin.faqs.create'); 
+    Route::post('/store-faqs',[FaqController::class,'store'])->name('admin.faqs.store'); 
+    Route::get('/edit-faqs/{id}',[FaqController::class,'edit'])->name('admin.faqs.edit'); 
+    Route::post('/update-faqs/{id}',[FaqController::class,'update'])->name('admin.faqs.update'); 
+    Route::get('/delete-faqs/{id}',[FaqController::class,'delete'])->name('admin.faqs.delete'); 
 
 });
 
@@ -254,8 +261,13 @@ Route::get('/privacyPolicy', [VisitorController::class, 'privacyPolicy']);
 Route::get('/blogs', [VisitorController::class, 'blog']);
 Route::get('/blogdetails/{slug}', [VisitorController::class, 'blogdetails'])->name('blogdetails');
 
+//blog author
+Route::get('/authors/{author?}',[BlogAuthorController::class,'showAuthor'])->name('visitors.blog.blogAuthor');
+
 // Route::post('/send-mail',[ContactController::class,'sendMail'])->name('send.mail');
 // Route::get('send-mail', [MailController::class, 'index']);
+
+
 
 
 

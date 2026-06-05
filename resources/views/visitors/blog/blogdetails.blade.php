@@ -66,4 +66,32 @@
 
 
     </div>
+    {{-- <div class="text-center mt-2">
+    <a href="{{ url('/authors/' . Str::slug($blog->author)) }}"
+       class="btn btn-sm btn-outline-primary">
+       Published By {{ $blog->author }}
+    </a>
+
+    <span class="ms-3">
+        <i class="fa fa-calendar"></i>
+        {{ $blog->updated_at->format('d M Y') }}
+    </span>
+</div> --}}
+
+<div class="d-flex justify-content-center align-items-center gap-3 mt-4 mb-3 text-muted">
+    
+    <a href="{{ url('/authors/' . Str::slug($blog->author)) }}"
+        class="text-decoration-none fw-semibold"
+        style="color:#c49a6c;">
+        Published By {{ $blog->author }}
+    </a>
+
+    <span>|</span>
+
+    <span>
+        <i class="fa fa-calendar-alt me-1"></i>
+        {{ $blog->updated_at->format('d M Y') }}
+    </span>
+
+</div>
 @endsection

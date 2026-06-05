@@ -2,6 +2,11 @@
 
 @section('pageTitle','Dashboard')
 
+<style>
+    .ck-editor__editable_inline {
+        min-height: 200px;
+    }
+</style>    
 @section('content')
 
 {{-- <div class="row">
@@ -42,18 +47,22 @@
                 <input type="hidden" name="slug" id="slug">
 
 
-				<div class="form-label-group">
-					<input id="form_firstname" type="text" name="description" value="{{$cms->description}}" class="form-control" placeholder="Description" required>
-					<label for="form_firstname">Description</label>
-				</div>
+				
+                    <div class="form-label-group">
+                         <textarea id="form_firstname" name="description"  value="{{$cms->description}}" class="form-control" placeholder="Description"></textarea>
+                    </div> 
 
                  <div class="form-label-group">
-                        <select name="status" id="status" class="form-control" required>
-                            <option value="" disabled selected>Status</option>
-                            <option value="1">Active</option>
-                            <option value="0">Inactive</option>
-                        </select>
-                </div>
+    <select name="status" id="status" class="form-control" required>
+        <option value="" disabled>Status</option>
+        <option value="1" {{ old('status', $cms->status) == 1 ? 'selected' : '' }}>
+            Active
+        </option>
+        <option value="0" {{ old('status', $cms->status) == 0 ? 'selected' : '' }}>
+            Inactive
+        </option>
+    </select>
+</div>
 			</div>
 		</div>
 
@@ -99,6 +108,9 @@
                 <label for="">description</label>
             </div>
         </div>
+
+        
+       
     </div>
 
     {{-- OG Image --}}
@@ -192,8 +204,15 @@
     });
 </script>
 
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            ClassicEditor
+                .create(document.querySelector('#form_firstname'))
+        });
+    </script>
 @endsection
 
+<script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

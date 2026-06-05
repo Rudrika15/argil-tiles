@@ -200,6 +200,16 @@
                     <a class="nav-link" href="{{ route('newarrivalsshow') }}">New Arrivals</a>
                 </li>
 
+                <li
+                    class="nav-item {{ request()->routeIs('admin.cms.index') || request()->routeIs('admin.cms.edit') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.cms.index') }}">CMS</a>
+                </li>
+
+                 <li
+                    class="nav-item {{ request()->routeIs('admin.faqs.index') || request()->routeIs('admin.faqs.edit') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.faqs.index') }}">FAQs</a>
+                </li>
+
             </ul>
         </div>
     </div>

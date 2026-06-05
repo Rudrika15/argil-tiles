@@ -2,6 +2,11 @@
 
     @section('pageTitle','Dashboard')
 
+<style>
+    .ck-editor__editable_inline {
+        min-height: 200px;
+    }
+</style>
     @section('content')
 
     {{-- <div class="row">
@@ -42,9 +47,13 @@
                     <input type="hidden" name="slug" id="slug">
 
 
-                    <div class="form-label-group">
+                    {{-- <div class="form-label-group">
                         <input id="form_firstname" type="text" name="description" class="form-control" placeholder="Description" required>
                         <label for="form_firstname">Description</label>
+                    </div> --}}
+
+                    <div class="form-label-group">
+                         <textarea id="form_firstname" name="description" class="form-control" placeholder="Description"></textarea>
                     </div>
 
                     <div class="form-label-group">
@@ -191,9 +200,17 @@
             });
         });
     </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            ClassicEditor
+                .create(document.querySelector('#form_firstname'))
+        });
+    </script>
 
     @endsection
-
+    
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

@@ -17,6 +17,22 @@
     <title>Argil Tiles Blog | Quartz, SPC Flooring & Tile Design Tips</title>
     
 @endsection
+
+<style>
+    .blog-card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.blog-card {
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+</style>
 @section('content')
     <!-- breadcrumb -->
     <div class="breadcrumb d-flex justify-content-between align-items-center">
@@ -29,7 +45,7 @@
     </div>
     <!-- breadcrumb -->
 
-    <div class="container">
+    {{-- <div class="container">
         <div class="row mb-4">
             @foreach ($blogs as $index => $blog)
                 <div class="col-md-6">
@@ -47,25 +63,49 @@
                 </div>
             @endforeach
         </div> <!-- Close current row -->
+    </div> --}}
+    <div class="container">
+    <div class="row g-4 mb-4">
+
+        @foreach ($blogs as $blog)
+            <div class="col-lg-4 col-md-6 col-12">
+
+                <a href="{{ route('blogdetails', $blog->slug) }}"
+                   class="text-decoration-none text-dark d-block h-100">
+
+                    <div class="card blog-card h-100 border-0 shadow-sm">
+
+                        <img src="{{ asset('blogimage/' . $blog->image) }}"
+                             alt="argil blog"
+                             title="argil blog"
+                             loading="lazy"
+                             class="card-img-top blog-card-image"
+                             >
+
+                        <div class="card-body">
+
+                            <h5 class="card-title fw-bold">
+                                {{ $blog->title }}
+                            </h5>
+
+                            <p class="text-muted small mb-2">
+                                {{ $blog->created_at ? $blog->created_at->format('d M Y') : '' }}
+                            </p>
+
+                            <p class="card-text">
+                                {!! Str::limit(strip_tags($blog->description), 120, '...') !!}
+                            </p>
+                            
+                        </div>
+
+                    </div>
+                </a>
+                
+            </div>
+        @endforeach
+
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
     {{--
     <div class="container">
         <div class="row">

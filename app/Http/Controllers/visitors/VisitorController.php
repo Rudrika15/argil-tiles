@@ -58,12 +58,29 @@ class VisitorController extends Controller
         $blogs = Blog::orderBy('id', 'desc')->get();
         return view('visitors.blog.blog', compact('blogs'));
     }
-    public function blogdetails($slug)
-    {
+    // public function blogdetails($slug)
+    // {
 
-        $blog = Blog::where('slug', $slug)->firstOrFail();
-        return view('visitors.blog.blogdetails', compact('blog'));
-    }
+    //     $blog = Blog::where('slug', $slug)->firstOrFail();
+    //     return view('visitors.blog.blogdetails', compact('blog'));
+    // }
+    public function blogdetails($slug)
+{
+    $blog = Blog::select(
+                'blogs.*',
+                'meta_property_blogs.author'
+            )
+            ->leftJoin(
+                'meta_property_blogs',
+                'blogs.id',
+                '=',
+                'meta_property_blogs.blogId'
+            )
+            ->where('blogs.slug', $slug)
+            ->firstOrFail();
+
+    return view('visitors.blog.blogdetails', compact('blog'));
+}
     public function catalogue()
     {
 

@@ -15,9 +15,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::all();
-        // $blogs = Blog::whereIn('status', ['publish'])->get();        ;
-        return view('admin.blog.index',compact('blogs'));
+         $blogs = Blog::orderBy('id', 'desc')->get();
+    return view('admin.blog.index', compact('blogs'));
     }
 
     /**
@@ -50,7 +49,7 @@ class BlogController extends Controller
 
         $blogs = new Blog();
         $blogs->title = $request->title;
-        $blogs->slug = Str::slug($request->slug);
+        $blogs->slug = $request->slug ?? Str::slug($request->title);
         // $blogs->slug = $request->slug;
         $blogs->description = $request->description;
         $blogs->image = $imageName;

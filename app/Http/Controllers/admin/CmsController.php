@@ -44,7 +44,6 @@ class CmsController extends Controller
         $cms->slug = $request->slug ?? Str::slug($request->title);
         $cms->description = $request->description;
         $cms->status = $request->status;
-
         $cms->meta_title = $request->meta_title;
         $cms->meta_keyword = $request->meta_keyword;
         $cms->meta_description = $request->meta_description;
