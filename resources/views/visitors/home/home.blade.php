@@ -32,7 +32,7 @@ Get a price quote "
 
         <title>Quartz Stone Slab
             Manufacturers | Argil – Morbi, India</title>
-    @endsection
+    @endsection 
 
     @section('content')
         <div class="container-fluid px-0">
@@ -50,7 +50,7 @@ Get a price quote "
         <div class="container">
             <div class="row">
                 <div class="col-md-8 pt-5">
-                    <h1 class="fw-bold">Artificial Quartz Stone Slab Manufacturers</h1>
+                    <h1 class="fw-bold">ARGIL - SPC Flooring & Quartz Surface Manufacturer from Morbi, India</h1>
                     <p>Argil, where we have travelled from Tradition to technology, we feel the journey is growing longer
                         and better with every passing day.
                     </p>

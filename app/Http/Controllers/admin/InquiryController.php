@@ -5,7 +5,8 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Http\Request;
 use App\Models\Inquiry;
 use App\Models\Contact;
-use Validator;
+// use Validator;
+use Illuminate\Support\Facades\Validator;
 
 
 class InquiryController extends Controller

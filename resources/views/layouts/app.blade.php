@@ -304,41 +304,11 @@
                                     href="/spcproducts">SPC PRODUCTS</a></li>
                         </ul>
                     </li>
-                    {{-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link {{ Request::is('blogs') || Request::is('blogdetails/*') ? 'active' : '' }}"
                             href="/blogs">BLOG</a>
-                    </li> --}}
-                    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle {{ Request::is('blogs','blogdetails/*','author','author/*') ? 'active' : '' }}"
-        href="#"
-        id="blogDropdown"
-        role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false">
-        BLOG
-    </a>
-
-    <ul class="dropdown-menu" aria-labelledby="blogDropdown">
-        <li>
-            <a class="dropdown-item {{ Request::is('blogs','blogdetails/*') ? 'active' : '' }}"
-                href="/blogs">
-                Blogs
-            </a>
-        </li>
-
-        <li>
-            <hr class="dropdown-divider">
-        </li>
-
-        <li>
-           <a class="dropdown-item {{ Request::is('authors', 'authors/*') ? 'active' : '' }}"
-   href="{{ route('visitors.blog.blogAuthor') }}">
-    Blog Authors
-</a>
-        </li>
-    </ul>
-</li>
-                    <li class="nav-item">
+                    </li>
+                                   <li class="nav-item">
                         <a class="nav-link {{ Request::is('catalogue') ? 'active' : '' }}"
                             href="/catalogue">CATALOGUE</a>
                     </li>

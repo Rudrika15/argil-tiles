@@ -1,5 +1,8 @@
 @extends('admin.layouts.app')
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.0/css/dataTables.bootstrap4.min.css">
 @section('pageTitle', 'Inquiry')
 
 @section('content')
@@ -23,7 +26,7 @@
             <h2>Inquiry View</h2>
         </div>
         <div class="table table-content" style="overflow-x: scroll">
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover" id="dataTable">
                 <thead>
                     <tr>
                         <th scope="col">Date</th>
@@ -46,7 +49,7 @@
 
                     @foreach ($data as $data)
                         <tr>
-                            <td>{{ $data->created_at }}</td>
+                            <td>{{ $data->created_at->format('d-m-Y');}}</td>
                             <td>{{ $data->subject }}</td>
                             <td>{{ $data->name }}</td>
                             <td>{{ $data->email }}</td>

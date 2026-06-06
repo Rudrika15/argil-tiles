@@ -66,7 +66,7 @@
 			</div>
 		</div>
 
-		<h4 class="mb-4">SEO / Meta Information</h4>
+		<h4 class="mb-4">Edit Meta Properties for CMS</h4>
 
    {{-- Meta title --}}
     <div class="row mb-3">

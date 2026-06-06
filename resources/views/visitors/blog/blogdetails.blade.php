@@ -15,6 +15,23 @@
 
     <title>Argil Tiles Blog | {{ $blog->title }}</title>
 @endsection
+<style>
+    
+.author-badge{
+    background-color: #ccb19b;
+    color: #fff;
+    border: 1px solid #c49a6c;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    
+}
+
+.author-badge:hover{
+    background-color: #b3895f; /* slightly darker */
+    color: #fff;
+    border-color: #b3895f;
+}
+</style>
 @section('content')
     <!-- breadcrumb -->
     <div class="breadcrumb d-flex justify-content-between align-items-center">
@@ -24,6 +41,22 @@
                 <h1 class="display-6 fw-bold text-center"> {{ $blog->title }}</h1>
         
             </div>
+            
+<div class="text-center mt-3">
+
+    <div class="mb-2">
+    <a href="{{ url('/authors/' . Str::slug($blog->author)) }}"
+        class="badge author-badge px-3 py-2 mb-2 text-decoration-none">
+        Written By {{ $blog->author }}
+    </a>
+</div>
+
+    <div class="text-light small">
+        <i class="fa fa-calendar-alt me-1"></i>
+       Published on {{ $blog->updated_at->format('d M Y') }}
+    </div>
+
+</div>
         </div>
     </div>
     <!-- breadcrumb -->
@@ -78,20 +111,4 @@
     </span>
 </div> --}}
 
-<div class="d-flex justify-content-center align-items-center gap-3 mt-4 mb-3 text-muted">
-    
-    <a href="{{ url('/authors/' . Str::slug($blog->author)) }}"
-        class="text-decoration-none fw-semibold"
-        style="color:#c49a6c;">
-        Published By {{ $blog->author }}
-    </a>
-
-    <span>|</span>
-
-    <span>
-        <i class="fa fa-calendar-alt me-1"></i>
-        {{ $blog->updated_at->format('d M Y') }}
-    </span>
-
-</div>
 @endsection

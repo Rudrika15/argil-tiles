@@ -159,7 +159,7 @@
         <hr class="sidebar-divider my-4">
 
         <div class="row mb-4">
-            <h4 class="m-3">Edit Meta Propertys for Spc Product</h4>
+            <h4 class="m-3">Edit Meta Properties for Spc Product</h4>
         </div>
 
         {{-- og titles --}}

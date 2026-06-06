@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="float-left">
-                    <h2>CMS Create</h2>
+                    <h2>CMS Edit</h2>
                 </div>
                 <div class="float-right">
                     <a href="{{route('admin.cms.index')}}" class="btn btn-success mb-2">Back</a>
@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            <h4 class="mb-4">SEO / Meta Information</h4>
+            <h4 class="mb-4">Add Meta Properties for CMS</h4>
 
     {{-- Meta title --}}
         <div class="row mb-3">

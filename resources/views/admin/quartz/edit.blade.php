@@ -150,7 +150,7 @@
          <hr class="sidebar-divider my-4">
 
          <div class="row mb-4">
-             <h4 class="m-3">Edit Meta Propertys for Quartz Product</h4>
+             <h4 class="m-3">Edit Meta Properties for Quartz Product</h4>
          </div>
 
          {{-- og titles --}}

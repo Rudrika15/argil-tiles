@@ -29,6 +29,7 @@ use App\Http\Controllers\visitors\QuartzExportController;
 use App\Http\Controllers\admin\CmsController;
 use App\Http\Controllers\admin\FaqController;
 use App\Http\Controllers\visitors\BlogAuthorController;
+use App\Http\Controllers\visitors\FaqShowController;
 
 // ====================== admin ======================
 
@@ -267,6 +268,7 @@ Route::get('/authors/{author?}',[BlogAuthorController::class,'showAuthor'])->nam
 // Route::post('/send-mail',[ContactController::class,'sendMail'])->name('send.mail');
 // Route::get('send-mail', [MailController::class, 'index']);
 
+Route::get('/faq/{type?}', [FaqShowController::class, 'index'])->name('visitors.faq.index');
 
 
 

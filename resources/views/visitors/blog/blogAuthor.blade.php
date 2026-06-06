@@ -42,12 +42,12 @@
         <div class="container">
             <div class="p-2">
                 <h1 class="display-6 fw-bold">
-                    Home /
-                    @if(isset($author) && $author)
+                    Blogs
+                    {{-- @if(isset($author) && $author)
                         {{ $author }}
                     @else
                         Blog Authors
-                    @endif
+                    @endif --}}
                 </h1>
             </div>
         </div>
@@ -66,45 +66,45 @@
             </h2>
         </div> --}}
 
-       <div class="row g-4 mb-4">
+       <div class="row g-3 mb-4">
     @forelse ($blogs as $blog)
 
         <div class="col-lg-4 col-md-6 col-12">
 
-            <div class="card blog-card h-100 border-0 shadow-sm">
+            <a href="{{ route('blogdetails', $blog->slug) }}"
+               class="text-decoration-none text-dark d-block h-100">
 
-                <img src="{{ asset('blogimage/' . $blog->image) }}"
-                    alt="{{ $blog->title }}"
-                    title="{{ $blog->title }}"
-                    loading="lazy"
-                    class="card-img-top blog-card-image">
+                <div class="card blog-card h-100 border-0 shadow-sm">
 
-                <div class="card-body">
+                    <img src="{{ asset('blogimage/' . $blog->image) }}"
+                        alt="{{ $blog->title }}"
+                        title="{{ $blog->title }}"
+                        loading="lazy"
+                        class="card-img-top blog-card-image">
 
-                    <h5 class="fw-bold">
-                        {{ $blog->title }}
-                    </h5>
+                    <div class="card-body">
 
-                    <p class="text-muted small mb-2">
-                        <strong>Author:</strong> {{ $blog->author }}
-                    </p>
+                        <h5 class="card-title fw-bold">
+                            {{ $blog->title }}
+                        </h5>
 
-                    <p class="text-muted small">
-                        {{ $blog->created_at ? $blog->created_at->format('d M Y') : '' }}
-                    </p>
+                        <p class="text-muted small mb-1">
+                            By {{ $blog->author }}
+                        </p>
 
-                    <p>
-                        {!! Str::limit(strip_tags($blog->description), 120, '...') !!}
-                    </p>
+                        <p class="text-muted small mb-2">
+                           {{ $blog->created_at ? $blog->created_at->format('d M Y') : '' }}
+                        </p>
 
-                    <a href="{{ route('blogdetails', $blog->slug) }}"
-                        class="btn btn-primary">
-                        Read More
-                    </a>
+                        <p class="card-text">
+                            {!! Str::limit(strip_tags($blog->description), 120, '...') !!}
+                        </p>
+
+                    </div>
 
                 </div>
 
-            </div>
+            </a>
 
         </div>
 
