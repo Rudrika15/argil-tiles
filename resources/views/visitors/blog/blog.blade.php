@@ -32,6 +32,69 @@
 .blog-card:hover {
     transform: translateY(-5px);
 }
+.blog-card .long-arrow {
+    color: #ccb19b;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease-in-out;
+}
+
+.blog-card:hover .long-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Pagination */
+.pagination-wrapper{
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+}
+
+.pagination{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.pagination .page-item{
+    list-style:none;
+}
+
+.pagination .page-link{
+    min-width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:none;
+    border-radius:50%;
+    background:#f5f5f5;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+.pagination .page-link:hover{
+    background:#ccb19b;
+    color:#fff;
+}
+
+.pagination .page-item.active .page-link{
+    background:#ccb19b;
+    color:#fff;
+    box-shadow:0 5px 15px rgba(204,177,155,.35);
+}
+
+.pagination .page-item.disabled .page-link{
+    opacity:.5;
+}
+
+.pagination svg{
+    width:16px;
+    height:16px;
+}
 </style>
 @section('content')
     <!-- breadcrumb -->
@@ -95,8 +158,20 @@
                             <p class="card-text">
                                 {!! Str::limit(strip_tags($blog->description), 120, '...') !!}
                             </p>
+                           <div class="long-arrow d-flex align-items-center justify-content-between mt-auto pt-3">
+    <span class="small fw-bold text-uppercase" style="letter-spacing:1px;">
+        More Details
+    </span>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="16"
+        fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+    </svg>
+</div>
                             
                         </div>
+                         
 
                     </div>
                 </a>
@@ -105,6 +180,12 @@
         @endforeach
 
     </div>
+
+@if($blogs->hasPages())
+    <div class="pagination-wrapper mt-5 mb-5">
+        {{  $blogs->links('pagination::bootstrap-5') }}
+    </div>
+@endif
 </div>
     {{--
     <div class="container">

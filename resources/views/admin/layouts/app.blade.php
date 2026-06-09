@@ -210,6 +210,11 @@
                     <a class="nav-link" href="{{ route('admin.faqs.index') }}">FAQs</a>
                 </li>
 
+                <li
+                    class="nav-item {{ request()->routeIs('admin.testimonials.index') || request()->routeIs('admin.testimonials.edit') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.testimonials.index') }}">Testimonials</a>
+                </li>
+
             </ul>
         </div>
     </div>

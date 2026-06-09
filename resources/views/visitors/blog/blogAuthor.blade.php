@@ -34,6 +34,18 @@
 .blog-card:hover {
     transform: translateY(-5px);
 }
+
+.blog-card .long-arrow {
+    color: #ccb19b;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease-in-out;
+}
+
+.blog-card:hover .long-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
 </style>
 
 @section('content')
@@ -99,6 +111,17 @@
                         <p class="card-text">
                             {!! Str::limit(strip_tags($blog->description), 120, '...') !!}
                         </p>
+                        <div class="long-arrow d-flex align-items-center justify-content-between mt-auto pt-3">
+    <span class="small fw-bold text-uppercase" style="letter-spacing:1px;">
+        More Details
+    </span>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="16"
+        fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+    </svg>
+</div>
 
                     </div>
 

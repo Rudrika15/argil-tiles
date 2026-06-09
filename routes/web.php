@@ -28,6 +28,7 @@ use App\Http\Controllers\visitors\QuartzExportController;
 
 use App\Http\Controllers\admin\CmsController;
 use App\Http\Controllers\admin\FaqController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\visitors\BlogAuthorController;
 use App\Http\Controllers\visitors\FaqShowController;
 
@@ -234,6 +235,17 @@ Route::middleware('auth:web')->group(function () {
     Route::get('/edit-faqs/{id}',[FaqController::class,'edit'])->name('admin.faqs.edit'); 
     Route::post('/update-faqs/{id}',[FaqController::class,'update'])->name('admin.faqs.update'); 
     Route::get('/delete-faqs/{id}',[FaqController::class,'delete'])->name('admin.faqs.delete'); 
+
+
+    //Testimonial
+    Route::get('/show-testimonials',[TestimonialController::class,'index'])->name('admin.testimonials.index'); 
+    Route::get('/create-testimonials',[TestimonialController::class,'create'])->name('admin.testimonials.create'); 
+    Route::post('/store-testimonials',[TestimonialController::class,'store'])->name('admin.testimonials.store'); 
+    Route::get('/edit-testimonials/{id}',[TestimonialController::class,'edit'])->name('admin.testimonials.edit'); 
+    Route::post('/update-testimonials/{id}',[TestimonialController::class,'update'])->name('admin.testimonials.update'); 
+    Route::get('/delete-testimonials/{id}',[TestimonialController::class,'delete'])->name('admin.testimonials.delete'); 
+
+
 
 });
 
