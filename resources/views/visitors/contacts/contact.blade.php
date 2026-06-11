@@ -26,7 +26,76 @@ assist you!">
     <link rel="canonical" href="https://argiltiles.com/contact" data-react- helmet="true">
     <title>Contact Us | Argil Tiles – Quartz Stone Manufacturers in Morbi, India</title>
 @endsection
+<style>
+    
+.testimonial-card{
+    position:relative;
+    background:#fff;
+    border:none;
+    border-top:4px solid #d4b59e;
+    border-radius:0;
+    padding:15px;
+    transition:all .3s ease;
+    overflow:hidden;
+}
 
+.testimonial-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.testimonial-card::before{
+    content:"❝";
+    position:absolute;
+    top:10px;
+    right:20px;
+    font-size:70px;
+    line-height:1;
+    color:rgba(212,181,158,.15);
+    font-family:serif;
+}
+
+.testimonial-rating{
+    color:#d4b59e;
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+.testimonial-text{
+    color:#555;
+    line-height:1.8;
+    font-size:15px;
+    min-height:130px;
+}
+
+.client-image{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #d4b59e;
+}
+
+.client-name{
+    font-size:16px;
+    font-weight:600;
+    color:#222;
+}
+
+.client-designation{
+    font-size:13px;
+    color:#777;
+}
+
+.client-company{
+    font-size:13px;
+    color:#999;
+}
+
+.testimonial-section{
+    background:#fafafa;
+}
+</style>
 
 @section('content')
     {{-- @if (session('success'))
@@ -49,6 +118,8 @@ assist you!">
         </div>
     </div>
     <!-- breadcrumb -->
+
+    @include('visitors.testimonial')
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center">
@@ -102,6 +173,9 @@ assist you!">
         </div>
 
     </div>
+
+    
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">

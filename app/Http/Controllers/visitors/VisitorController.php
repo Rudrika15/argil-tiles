@@ -12,15 +12,23 @@ use App\Models\Contact;
 use App\Models\Inquiry;
 use App\Models\Lvtproduct;
 use App\Models\Quartzproduct;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class VisitorController extends Controller
 {
-    public function home()
-    {
-        return view('visitors.home.home');
-    }
+   public function home()
+{
+    $testimonials = Testimonial::where('status', 'active')
+        ->orderBy('display_order')
+        ->take(3)
+        ->get();
+
+    return view('visitors.home.home', [
+        'testimonials' => $testimonials
+    ]);
+}
     public function profile()
     {
         return view('visitors.corporate.profile.profile');
@@ -88,7 +96,16 @@ class VisitorController extends Controller
     }
     public function contact()
     {
-        return view('visitors.contacts.contact');
+        
+    $testimonials = Testimonial::where('status', 'active')
+        ->inRandomOrder()
+        ->take(3)
+        ->get();
+
+    return view('visitors.contacts.contact', [
+        'testimonials' => $testimonials
+    ]);
+        // return view('visitors.contacts.contact');
     }
     public function privacyPolicy()
     {

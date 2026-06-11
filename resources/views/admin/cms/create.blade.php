@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="float-left">
-                    <h2>CMS Edit</h2>
+                    <h2>CMS Create</h2>
                 </div>
                 <div class="float-right">
                     <a href="{{route('admin.cms.index')}}" class="btn btn-success mb-2">Back</a>
@@ -57,11 +57,11 @@
                     </div>
 
                     <div class="form-label-group">
-                            <select name="status" id="status" class="form-control" required>
-                                <option value="" disabled selected>Status</option>
-                                <option value="active">Active</option>
-                                <option value="inactive">Inactive</option>
-                            </select>
+                        <select name="status" id="status" class="form-control" required>
+                             <option value="" disabled selected>Status</option>
+                             <option value="1">Active</option>
+                             <option value="0">Inactive</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -89,8 +89,8 @@
             </div>
             <div class="col">
                 <div class="form-label-group">
-                    <input type="text" class="form-control" id="meta_keyword" placeholder="Meta Keyword" name="meta_keywords"
-                        value="{{ old('meta_keywords') }}">
+                    <input type="text" class="form-control" id="meta_keyword" placeholder="Meta Keyword" name="meta_keyword"
+                        value="{{ old('meta_keyword') }}">
                     <label for="">keywords</label>
                 </div>
             </div>
@@ -123,8 +123,8 @@
             <div class="col-md-9">
                 <label>OG Image</label>
                 <input type="file"
-                    name="ogimage"
-                    id="ogimage"
+                    name="og_image"
+                    id="og_image"
                     class="form-control"
                     accept="image/*"
                     onchange="readURL(this, '#ogImagePreview')">
@@ -174,7 +174,7 @@
                 </div>
 
     </div>
-
+</form>
 
 
     <script>

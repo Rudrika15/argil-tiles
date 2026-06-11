@@ -38,19 +38,32 @@ class TestimonialController extends Controller
         // $testimonial = new Testimonial();
 
        $imageName = null;
+if ($request->hasFile('client_image')) {
 
-if ($request->file('client_image')) {
     $image = $request->file('client_image');
 
-    // Store image in public/testimonial-image folder
-    $imageName = $image->getClientOriginalName();
+    $imageName = time() . '_' . $image->getClientOriginalName();
 
     $image->move(
-        public_path('testimonial-image/'),
+        public_path('testimonial-image'),
         $imageName
     );
-}
 
+    $data['client_image'] = 'testimonial-image/' . $imageName;
+}
+if ($request->hasFile('client_image')) {
+
+    $image = $request->file('client_image');
+
+    $imageName = time() . '_' . $image->getClientOriginalName();
+
+    $image->move(
+        public_path('testimonial-image'),
+        $imageName
+    );
+
+    $data['client_image'] = 'testimonial-image/' . $imageName;
+}
         Testimonial::create([
               'client_name' => $request->client_name,
         'company_name' => $request->company_name,

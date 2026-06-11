@@ -27,7 +27,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="float-left">
-				<h2>CMS Create</h2>
+				<h2>CMS Edit</h2>
 			</div>
 			<div class="float-right">
 				<a href="{{route('admin.cms.index')}}" class="btn btn-success mb-2">Back</a>
@@ -43,17 +43,20 @@
 					<input id="name" type="text" name="title" value="{{$cms->title}}" class="form-control" placeholder="title" required>
 					<label for="form_firstname">title</label>
 				</div>
-
-                <input type="hidden" name="slug" id="slug">
-
+<div class="form-label-group">
+                <input type="text" name="slug" id="slug" value="{{$cms->slug}}" class="form-control">
+</div>
 
 				
                     <div class="form-label-group">
-                         <textarea id="form_firstname" name="description"  value="{{$cms->description}}" class="form-control" placeholder="Description"></textarea>
+                         <textarea id="form_firstname"
+          name="description"
+          class="form-control"
+          placeholder="Description">{{ old('description', $cms->description) }}</textarea>
                     </div> 
 
                  <div class="form-label-group">
-    <select name="status" id="status" class="form-control" required>
+    <select name="status" id="status" class="form-control" required >
         <option value="" disabled>Status</option>
         <option value="1" {{ old('status', $cms->status) == 1 ? 'selected' : '' }}>
             Active
@@ -75,7 +78,7 @@
         </div>
         <div class="col">
             <div class="form-label-group">
-                <input type="text" class="form-control" id="meta_title" placeholder="" name="meta_title"
+                <input type="text" class="form-control" value="{{$cms->meta_title}}" id="meta_title" placeholder="" name="meta_title"
                     value="{{ old('meta_title') }}">
                 <label for="">title</label>
             </div>
@@ -89,7 +92,7 @@
         </div>
         <div class="col">
             <div class="form-label-group">
-                <input type="text" class="form-control" id="meta_keyword" placeholder="Meta Keyword" name="meta_keyword"
+                <input type="text" class="form-control" value="{{$cms->meta_keyword}}" id="meta_keyword" placeholder="Meta Keyword" name="meta_keyword"
                     value="{{ old('meta_keyword') }}">
                 <label for="">keywords</label>
             </div>
@@ -103,7 +106,7 @@
         </div>
         <div class="col">
             <div class="form-label-group">
-                <input type="text" class="form-control" id="meta_description" placeholder="Meta Description"
+                <input type="text" class="form-control" value="{{$cms->meta_description}}" id="meta_description" placeholder="Meta Description"
                     name="meta_description" value="{{ old('meta_description') }}">
                 <label for="">description</label>
             </div>
@@ -126,8 +129,9 @@
         <div class="col-md-9">
             <label>OG Image</label>
             <input type="file"
-                name="ogimage"
-                id="ogimage"
+                name="og_image"
+                id="og+image"
+                value="{{$cms->og_image}}"
                 class="form-control"
                 accept="image/*"
                 onchange="readURL(this, '#ogImagePreview')">
@@ -140,7 +144,7 @@
         </div>
         <div class="col">
             <div class="form-label-group">
-                <input type="text" class="form-control" id="author" placeholder="" name="author"
+                <input type="text" class="form-control" value="{{$cms->author}}" id="author" placeholder="" name="author"
                     value="{{ old('author') }}">
                 <label for="">author</label>
             </div>
@@ -153,7 +157,7 @@
         </div>
         <div class="col">
             <div class="form-label-group">
-                <input type="text" class="form-control" id="tags" placeholder="Hindi Title"
+                <input type="text" class="form-control" value="{{$cms->tags}}" id="tags" placeholder="Hindi Title"
                     name="tags" value="{{ old('tags') }}">
                 <label for="">tages</label>
             </div>
@@ -166,7 +170,7 @@
         </div>
         <div class="col">
             <div class="form-label-group">
-                <input type="text" class="form-control" id="og_url" placeholder="Og URL" name="og_url"
+                <input type="text" class="form-control" value="{{$cms->og_url}}" id="og_url" placeholder="Og URL" name="og_url"
                     value="{{ old('og_url') }}">
                 <label for="">Url</label>
             </div>

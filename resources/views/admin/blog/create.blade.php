@@ -82,7 +82,7 @@
                             <select name="status" id="status" class="form-control" required>
                                 <option value="" disabled selected>Status</option>
                                 <option value="active">Active</option>
-                                <option value="inactive">Inactive</option>
+                                <option value="deactive">Deactive</option>
                                 <option value="published">Published</option>
                             </select>
                     </div>

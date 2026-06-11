@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\BlogController;
+use App\Http\Controllers\admin\CaseStudyController;
 use App\Http\Controllers\visitors\VisitorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\DashboardController;
@@ -30,6 +31,7 @@ use App\Http\Controllers\admin\CmsController;
 use App\Http\Controllers\admin\FaqController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\visitors\BlogAuthorController;
+use App\Http\Controllers\visitors\ContactArgilController;
 use App\Http\Controllers\visitors\FaqShowController;
 
 // ====================== admin ======================
@@ -245,6 +247,44 @@ Route::middleware('auth:web')->group(function () {
     Route::post('/update-testimonials/{id}',[TestimonialController::class,'update'])->name('admin.testimonials.update'); 
     Route::get('/delete-testimonials/{id}',[TestimonialController::class,'delete'])->name('admin.testimonials.delete'); 
 
+    // //Case Studies
+    // Route::get('/show-case-studies',[CaseStudyController::class,'index'])->name('admin.case-studies.index'); 
+    // Route::get('/create-case-studies',[CaseStudyController::class,'create'])->name('admin.case-studies.create'); 
+    // Route::post('/store-case-studies',[CaseStudyController::class,'store'])->name('admin.case-studies.store'); 
+    // Route::get('/edit-case-studies/{id}',[CaseStudyController::class,'edit'])->name('admin.case-studies.edit'); 
+    // Route::post('/update-case-studies/{id}',[CaseStudyController::class,'update'])->name('admin.case-studies.update'); 
+    // Route::get('/delete-case-studies/{id}',[CaseStudyController::class,'delete'])->name('admin.case-studies.delete'); 
+
+    // Case Studies (Slug Based)
+
+// List all case studies
+Route::get('/show-case-studies', [CaseStudyController::class, 'index'])
+    ->name('admin.case_studies.index');
+
+// Create form
+Route::get('/create-case-studies', [CaseStudyController::class, 'create'])
+    ->name('admin.case_studies.create');
+
+// Store new case study
+Route::post('/store-case-studies', [CaseStudyController::class, 'store'])
+    ->name('admin.case_studies.store');
+
+// Edit (using slug instead of ID)
+Route::get('/edit-case-studies/{slug}', [CaseStudyController::class, 'edit'])
+    ->name('admin.case_studies.edit');
+
+// Update (using slug instead of ID)
+Route::post('/update-case-studies/{slug}', [CaseStudyController::class, 'update'])
+    ->name('admin.case_studies.update');
+
+// Delete (using slug instead of ID)
+Route::get('/delete-case-studies/{slug}', [CaseStudyController::class, 'delete'])
+    ->name('admin.case_studies.delete');
+    //Show case studies by passing slug
+    Route::get(
+    '/case-studies/{slug}',
+    [CaseStudyController::class,'show']
+);
 
 
 });
@@ -283,8 +323,6 @@ Route::get('/authors/{author?}',[BlogAuthorController::class,'showAuthor'])->nam
 Route::get('/faq/{type?}', [FaqShowController::class, 'index'])->name('visitors.faq.index');
 
 
-
-
 Route::post('/send-mail', [VisitorController::class, 'sendEmail'])->name('send.mail');
 Route::post('/send-inquiry', [VisitorController::class, 'sendinquiry'])->name('send.inquiry');
 
@@ -313,3 +351,7 @@ Route::get('/exports/australia', [VisitorController::class, 'exportaustralia'])-
 Route::get('/exports/russia', [VisitorController::class, 'exportrussia'])->name('exports.russia');
 
 Route::post('/exports/mail', [VisitorController::class, 'exportmail'])->name('exports.mail');
+
+
+Route::get('/{slug}', [CmsController::class, 'show'])
+    ->name('visitors.cms.show');
