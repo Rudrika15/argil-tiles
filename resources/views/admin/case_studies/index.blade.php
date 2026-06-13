@@ -48,6 +48,21 @@
                                 <span class="">Draft</span>
                             @endif
                         </td>
+{{-- 
+                        //show featured image
+                        <img src="{{ asset($caseStudy->featured_image) }}"
+     alt="{{ $caseStudy->title }}"
+     class="img-fluid"> 
+     
+     //gallery
+     @foreach(json_decode($caseStudy->gallery, true) ?? [] as $image)
+    <img src="{{ asset($image) }}"
+         class="img-fluid"
+         alt="">
+@endforeach
+     --}}
+
+     
                         <td>
                             <span class="d-flex" style="gap: 8px">
                             <a href = "{{ route('admin.case_studies.edit', $caseStudy->slug) }}" class="btn btn-primary"> Edit </a>

@@ -31,8 +31,10 @@ use App\Http\Controllers\admin\CmsController;
 use App\Http\Controllers\admin\FaqController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\visitors\BlogAuthorController;
+use App\Http\Controllers\visitors\CaseStudiesViewController;
 use App\Http\Controllers\visitors\ContactArgilController;
 use App\Http\Controllers\visitors\FaqShowController;
+use App\Http\Controllers\visitors\testimonialsViewController;
 
 // ====================== admin ======================
 
@@ -322,7 +324,10 @@ Route::get('/authors/{author?}',[BlogAuthorController::class,'showAuthor'])->nam
 
 Route::get('/faq/{type?}', [FaqShowController::class, 'index'])->name('visitors.faq.index');
 
-
+Route::get('/case-studies',[CaseStudiesViewController::class,'caseStudyList'])->name('visitors.case_studies.caseStudies');
+Route::get('/case-details/{slug}',[CaseStudiesViewController::class,'caseStudyDetail'])->name('visitors.case_studies.caseStudiesDetail');
+Route::get('/testimonials', [testimonialsViewController::class, 'index'])
+    ->name('visitors.testimonials');
 Route::post('/send-mail', [VisitorController::class, 'sendEmail'])->name('send.mail');
 Route::post('/send-inquiry', [VisitorController::class, 'sendinquiry'])->name('send.inquiry');
 

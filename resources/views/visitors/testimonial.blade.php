@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container m-5">
 
         <div class="text-center mb-5">
             <h2 class="fw-bold">What Our Clients Say</h2>

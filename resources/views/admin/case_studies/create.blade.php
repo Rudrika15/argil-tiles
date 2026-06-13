@@ -109,14 +109,29 @@
                     </div>
 
                     <div class="form-label-group">
-                        <input id="featured_image" type="file" name="featured_image" class="form-control" placeholder="Featured Image" required>
-                        <label for="form_firstname">Featured Image</label>
-                    </div>
+    <input id="featured_image" type="file" name="featured_image" class="form-control" accept="image/*" required>
+    <label>Featured Image</label>
+</div>
+<div class="mt-3">
+    <img id="featured-preview"
+         src=""
+         class="img-thumbnail"
+         style="max-width:250px;display:none;">
+</div>
 
-                     <div class="form-label-group">
-                        <input type="file" name="gallery[]" multiple class="form-control" placeholder="Gallery" required>
-                        <label for="form_firstname">Gallery</label>
-                     </div>
+                    <div class="mb-3">
+            <label>Gallery Images</label>
+            <div class="mb-3">
+    <label>Gallery Images</label>
+    <input type="file"
+           name="gallery[]"
+           class="form-control"
+           multiple
+           accept="image/*">
+</div> <small class="text-muted">You can select multiple images</small>
+        </div>
+
+<div id="gallery-preview" class="row mt-3"></div>
 
                     <div class="form-label-group">
                         <select name="status" id="status" class="form-control" required>
@@ -201,7 +216,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const titleInput = document.getElementById('name');
+            const titleInput = document.getElementById('title');
             const slugInput = document.getElementById('slug');
 
 titleInput.addEventListener('input', function () {
@@ -212,7 +227,6 @@ titleInput.addEventListener('input', function () {
         .replace(/\s+/g, '-');
 });
             });
-        });
     </script>
     
     <script>
@@ -243,7 +257,67 @@ titleInput.addEventListener('input', function () {
 
 });
     </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
 
+    const featured = document.getElementById('featured_image');
+
+    if (featured) {
+        featured.addEventListener('change', function (e) {
+
+            if (!e.target.files.length) return;
+
+            let reader = new FileReader();
+
+            reader.onload = function (event) {
+                let preview = document.getElementById('featured-preview');
+                preview.src = event.target.result;
+                preview.style.display = 'block';
+            }
+
+            reader.readAsDataURL(e.target.files[0]);
+        });
+    }
+
+});
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const galleryInput = document.querySelector('input[name="gallery[]"]');
+
+    if (galleryInput) {
+        galleryInput.addEventListener('change', function (event) {
+
+            const files = event.target.files;
+            const container = document.getElementById('gallery-preview');
+
+            container.innerHTML = '';
+
+            Array.from(files).forEach(file => {
+
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+
+                    const col = document.createElement('div');
+                    col.classList.add('col-md-3', 'mb-2');
+
+                    col.innerHTML = `
+                        <img src="${e.target.result}"
+                             class="img-thumbnail"
+                             style="width:100%; height:150px; object-fit:cover;">
+                    `;
+
+                    container.appendChild(col);
+                };
+
+                reader.readAsDataURL(file);
+            });
+        });
+    }
+
+});
+</script>
     @endsection
     
     <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>

@@ -119,7 +119,7 @@ assist you!">
     </div>
     <!-- breadcrumb -->
 
-    @include('visitors.testimonial')
+    
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center">
@@ -174,7 +174,7 @@ assist you!">
 
     </div>
 
-    
+    @include('visitors.testimonial')
 
     <div class="container-fluid">
         <div class="row">
@@ -186,6 +186,8 @@ assist you!">
             </div>
         </div>
     </div>
+
+    
 
 
     <!-- country JS -->

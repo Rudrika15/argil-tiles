@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
-<style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 .blog-hero{
     background:#121212;
@@ -295,6 +295,10 @@
         margin-top:10px;
     }
 }
+/* .story-block p {
+    margin-bottom: 12px;
+    line-height: 1.7;
+} */
 
 @media(max-width:991px){
 
@@ -359,49 +363,40 @@
 </style>
 @section('content')
 
+{{-- ================= FULLSCREEN HERO IMAGE ================= --}}
+
+
 <section class="blog-hero">
     <div class="container text-center">
 
         <div class="blog-category">
-            BLOG /
-            <span>{{ $blog->category ?? 'LUXURY INTERIORS' }}</span>
+            Case Study Details
         </div>
 
         <h1 class="blog-title">
-            {{ $blog->title }}
+            {{ $caseStudies->title }}
         </h1>
 
         <div class="hero-divider"></div>
+        
 
-        <div class="blog-meta">
-
-            <span>
-                <i class="fa-regular fa-pen-to-square"></i>
-                Written by {{ $blog->author }}
-            </span>
-
+        {{-- <div class="blog-meta">
             <span>
                 <i class="fa-regular fa-calendar"></i>
-                Published on {{ $blog->updated_at->format('d M Y') }}
+                Published on {{ $caseStudies->updated_at->format('d M Y') }}
             </span>
 
-            <span>
-                <i class="fa-regular fa-clock"></i>
-                5 min read
-            </span>
-
-        </div>
+        </div> --}}
 
     </div>
 </section>
-
 <section class="featured-image-section">
     <div class="container">
 
-        <div class="featured-image-card">
+        <div class="featured-image-card text-light">
 
-            <img src="{{ asset('blogimage/'.$blog->image) }}"
-                alt="{{ $blog->title }}"
+            <img src="{{ asset('featured-image/'.$caseStudies->featured_image) }}"
+                alt="{{ $caseStudies->title }} "
                 class="img-fluid w-100">
 
         </div>
@@ -409,66 +404,190 @@
     </div>
 </section>
 
-<section class="article-section">
 
+{{-- ================= PROJECT DETAILS ================= --}}
+<section class="py-5">
     <div class="container">
+        <div class="row g-4">
 
-        <div class="row">
+            <div class="col-md-3">
+                <h6 class="text-muted">Location</h6>
+                <p class="fw-semibold">{{ $caseStudies->location }}</p>
+            </div>
 
-            <div class="col-lg-10 text-justify mx-auto">
+            <div class="col-md-3">
+                <h6 class="text-muted">Client</h6>
+                <p class="fw-semibold">{{ $caseStudies->client_name }}</p>
+            </div>
 
-                <div class="blog-content">
-                    {!! $blog->description !!}
-                </div>
+            <div class="col-md-3">
+                <h6 class="text-muted">Type</h6>
+                <p class="fw-semibold">{{ $caseStudies->project_type }}</p>
+            </div>
 
-                <div class="quote-box">
-    <blockquote>
-        Sophistication is not about being noticed,
-        it's about being remembered.
-    </blockquote>
-
-    <span class="quote-author">
-        — Argil Design Philosophy
-    </span>
-</div>
+            <div class="col-md-3">
+                <h6 class="text-muted">Published</h6>
+                <p class="fw-semibold">
+                    {{ $caseStudies->updated_at->format('d M Y') }}
+                </p>
+            </div>
 
         </div>
+    </div>
+</section>
 
-        <div class="author-box">
 
-            <div class="author-logo ml-2">
+{{-- ================= IMAGE GALLERY ================= --}}
+<section class="py-5 bg-light">
+    <div class="container">
 
-                <img src="{{ asset('assets/asset/logo.png') }}" class="p-3"
-                    alt="Argil">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Image Gallery</h2>
+            <p class="text-muted">Explore our project gallery</p>
+        </div>
 
-            </div>
+        @php
+            $gallery = is_string($caseStudies->gallery)
+                ? json_decode($caseStudies->gallery, true)
+                : $caseStudies->gallery;
+        @endphp
 
-            <div class="author-info">
+        <div class="row g-4">
 
-                <span>ABOUT THE AUTHOR</span>
-
-                <h4>{{ $blog->author }}</h4>
-
-                <p>
-                    Experts in Quartz, SPC Flooring and Premium Tiles.
-                    Dedicated to bringing world-class surfaces that inspire timeless living.
-                </p>
-
-            </div>
-
-            <div class="author-btn">
-
-                <a href="{{ url('/authors/' . Str::slug($blog->author)) }}"
-                    class="btn btn-theme">
-                    View all articles →
-                </a>
-
-            </div>
+            @if(!empty($gallery))
+                @foreach($gallery as $image)
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="card border-0 shadow-sm h-100 gallery-card">
+                            <img src="{{ asset('gallery-image/' . $image) }}"
+                                 class="card-img-top gallery-img"
+                                 alt="Gallery Image">
+                        </div>
+                    </div>
+                @endforeach
+            @else
+                <div class="col-12 text-center">
+                    <p class="text-muted">No gallery images found.</p>
+                </div>
+            @endif
 
         </div>
 
     </div>
-
 </section>
+
+<style>
+.gallery-card {
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-img {
+    transform: scale(1.08);
+}
+</style>
+
+
+{{-- ================= PROJECT STORY ================= --}}
+<section class="py-5">
+    <div class="container">
+
+        <h2 class="mb-4">Project Story</h2>
+
+        <div class="mb-4">
+            <h4>Overview</h4>
+            {!!  html_entity_decode($caseStudies->overview) !!}
+        </div>
+
+        <div class="story-block mb-4">
+            <h4>Challenge</h4>
+            {!!  html_entity_decode($caseStudies->challenge) !!}
+        </div>
+
+        <div class="story-block mb-4">
+            <h4>Solution</h4>
+            {!!  html_entity_decode($caseStudies->solution) !!}
+            
+        </div>
+
+        <div class="story-block mb-4">
+            <h4>Result</h4>
+            {!!  html_entity_decode($caseStudies->result )!!}
+        </div>
+
+    </div>
+</section>
+<section>
+     <div class="container">
+
+        <h2 class="mb-4">Products Used</h2>
+
+        <div class="row g-4 story-block">
+            <h6 class="card-title">{{ $caseStudies->products_used }}</h6>
+           
+        </div> 
+    </div>
+</section>
+
+
+{{-- ================= PRODUCTS USED ================= --}}
+{{-- <section class="py-5 bg-light">
+    <div class="container">
+
+        <h2 class="mb-4">Products Used</h2>
+
+        <div class="row g-4">
+            @foreach($caseStudies->products as $product)
+                <div class="col-md-3 col-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="{{ asset($product->image) }}" class="card-img-top" alt="{{ $product->name }}">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ $product->name }}</h6>
+                            <p class="text-muted small">{{ $product->short_description }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div> 
+    </div>
+</section> --}}
+
+
+{{-- ================= MORE PROJECTS ================= --}}
+{{-- <section class="py-5">
+    <div class="container">
+
+        <h2 class="mb-4">More Projects</h2>
+
+        <div class="row g-4">
+            @foreach($moreCaseStudies as $project)
+                <div class="col-md-4">
+                    <a href="{{ route('case-studies.show', $project->slug) }}" class="text-decoration-none">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <img src="{{ asset($project->thumbnail) }}" class="card-img-top" alt="{{ $project->title }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $project->title }}</h5>
+                                <p class="text-muted small">{{ $project->location }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+
+    </div>
+</section> --}}
 
 @endsection

@@ -190,13 +190,13 @@ Get a price quote "
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
-
+{{-- 
             <div class="col-md-4">
                 <a href="/projects" class="resource-card">
                     Projects
                     <i class="bi bi-arrow-right"></i>
                 </a>
-            </div>
+            </div> --}}
 
             <div class="col-md-4">
                 <a href="/case-studies" class="resource-card">
@@ -304,9 +304,7 @@ Get a price quote "
 </section> --}}
 
 
-        {{-- testimonial --}}
-         @include('visitors.testimonial')
-        
+       
         <!-- Product Section -->
         <div class="container">
             <div class="row pt-5">
@@ -447,8 +445,13 @@ Get a price quote "
                 
             </div>
         </div>
+        
 
         <!-- Usability Section -->
         @include('visitors.comanfile.usablity')
         <!-- Usability Section -->
+
+         {{-- testimonial --}}
+         @include('visitors.testimonial')
+        
     @endsection

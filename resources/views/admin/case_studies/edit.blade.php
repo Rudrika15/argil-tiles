@@ -111,9 +111,9 @@
                     <div class="form-label-group">
                         @if($caseStudy->featured_image)
     <div class="mb-3">
-        <img src="{{ asset($caseStudy->featured_image) }}"
-             width="150"
-             class="img-thumbnail">
+        <img src="{{ asset('featured-image/' . $caseStudy->featured_image) }}"
+     width="150"
+     class="img-thumbnail">
     </div>
 @endif
                         <input id="featured_image" type="file" name="featured_image" class="form-control" placeholder="Featured Image" >
@@ -121,18 +121,30 @@
                     </div>
 
                      <div class="form-label-group">
-                        @if($caseStudy->gallery)
-<div class="row mb-3">
-    @foreach(json_decode($caseStudy->gallery, true) as $image)
-        <div class="col-md-2">
-            <img src="{{ asset($image) }}"
-                 class="img-fluid img-thumbnail">
-        </div>
-    @endforeach
-</div>
+                        @php
+    $gallery = json_decode($caseStudy->gallery, true);
+@endphp
+
+@if(!empty($gallery))
+    <div class="row mb-3">
+        @foreach($gallery as $image)
+            <div class="col-md-2">
+                <img src="{{ asset('gallery-image/' . $image) }}"
+                     class="img-thumbnail"
+                     width="120">
+            </div>
+        @endforeach
+    </div>
 @endif
-                        <input id="gallery" type="file" name="gallery[]" multiple class="form-control" placeholder="Gallery" >
-                        <label for="form_firstname">Gallery</label>
+                        <div class="mb-3">
+    <label>Gallery Images</label>
+    <input type="file"
+           name="gallery[]"
+           class="form-control m-2"
+           multiple
+           accept="image/*">
+</div>
+<label for="form_firstname">Gallery</label>
                      </div>
 
                     <div class="form-label-group">
@@ -262,6 +274,41 @@
 
 });
     </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const galleryInput = document.querySelector('input[name="gallery[]"]');
+    const container = document.getElementById('gallery-preview');
+
+    if (galleryInput) {
+        galleryInput.addEventListener('change', function (event) {
+
+            const files = event.target.files;
+
+            Array.from(files).forEach(file => {
+
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+
+                    const col = document.createElement('div');
+                    col.classList.add('col-md-3', 'mb-2');
+
+                    col.innerHTML = `
+                        <img src="${e.target.result}"
+                             class="img-thumbnail"
+                             style="width:100%; height:150px; object-fit:cover;">
+                    `;
+
+                    container.appendChild(col);
+                };
+
+                reader.readAsDataURL(file);
+            });
+        });
+    }
+
+});
 
     @endsection
     

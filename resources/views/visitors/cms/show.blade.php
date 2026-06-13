@@ -42,7 +42,7 @@
             <h1 class="display-6 fw-bold">
                 {{ $page->title }}
             </h1>
-        </div>
+        </div>  
     </div>
 </div>
 
@@ -59,7 +59,8 @@
                      class="img-fluid mb-4">
             @endif
 
-            {!! $page->description !!}
+            {{-- {!! $page->description !!} --}}
+            {!!  html_entity_decode($page->description) !!}
 
         </div>
 
