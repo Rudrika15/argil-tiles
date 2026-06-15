@@ -206,7 +206,7 @@ Get a price quote "
             </div>
 
             <div class="col-md-4">
-                <a href="/testimonials" class="resource-card">
+                <a href="/testimonial" class="resource-card">
                     Testimonials
                     <i class="bi bi-arrow-right"></i>
                 </a>

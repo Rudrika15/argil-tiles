@@ -20,10 +20,12 @@ class VisitorController extends Controller
 {
    public function home()
 {
-    $testimonials = Testimonial::where('status', 'active')
-        ->orderBy('display_order')
-        ->take(3)
-        ->get();
+    // $testimonials = Testimonial::where('status', 'active')
+    //     ->orderBy('display_order')
+    //     ->take(3)
+    //     ->get();
+
+    $testimonials = Testimonial::inRandomOrder()->take(3)->get();
 
     return view('visitors.home.home', [
         'testimonials' => $testimonials

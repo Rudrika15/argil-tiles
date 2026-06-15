@@ -39,7 +39,7 @@
         <form class="form-group" enctype="multipart/form-data" action="{{ route('blog.store') }}" method="post">
             @csrf
             <div class="form-label-group">
-                <input id="title" type="text" name="title" class="form-control" placeholder="Title" required>
+                <input id="title" type="text" name="title" class="form-control" placeholder="Title" value="{{ old('title') }}" required>
                 <label for="form_firstname">Title</label>
             </div>
 
@@ -47,7 +47,7 @@
 
 
             <div class="form-label-group">
-                <textarea id="form_firstname" name="description" class="form-control" placeholder="Description"></textarea>
+                <textarea id="form_firstname" name="description" class="form-control" placeholder="Description">{{ old('description') }}</textarea>
             </div>
             @error('description')
                 <div class="invalid-feedback d-block">
@@ -77,15 +77,28 @@
                 </div>
                 
             </div>
-            <br>
-            <div class="form-label-group">
-                            <select name="status" id="status" class="form-control" required>
-                                <option value="" disabled selected>Status</option>
-                                <option value="active">Active</option>
-                                <option value="deactive">Deactive</option>
-                                <option value="published">Published</option>
-                            </select>
-                    </div>
+           <br>
+<div class="form-label-group">
+    <select name="status" id="status" class="form-control" required>
+        <option value="" disabled {{ old('status') ? '' : 'selected' }}>Status</option>
+
+        <option value="active" {{ old('status') == 'active' ? 'selected' : '' }}>
+            Active
+        </option>
+
+        <option value="deactive" {{ old('status') == 'deactive' ? 'selected' : '' }}>
+            Deactive
+        </option>
+
+        <option value="published" {{ old('status') == 'published' ? 'selected' : '' }}>
+            Published
+        </option>
+    </select>
+
+    @error('status')
+        <span class="text-danger">{{ $message }}</span>
+    @enderror
+</div>
             {{-- add meta propertys --}}
             <hr class="sidebar-divider my-4">
 

@@ -37,17 +37,17 @@ class BlogController extends Controller
             'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'status' => 'required',
+            'slug' => 'nullable|unique:blogs,slug'
         ],
          [
         'description.required' => 'Description is required.',
     ],
         );
         // return $request;
-        if ($request->file('image')) {
+        if ($request->hasFile('image')) {
             $image = $request->file('image');
             // store image in public folder (blogimage folder)
-            $imageName = $image->getClientOriginalName();
-
+           $imageName = time().'_'.$image->getClientOriginalName();
             $image->move(public_path('blogimage/'), $imageName);
 
         }
@@ -62,10 +62,10 @@ class BlogController extends Controller
         $blogs->save();
 
         $ogImageName = null;
-    if ($request->file('ogImage')) {
+    if ($request->hasFile('ogImage')) {
         $image = $request->file('ogImage');
         // store image in public folder (blogimage folder)
-        $ogImageName = $image->getClientOriginalName();
+        $imageName = time().'_'.$image->getClientOriginalName();
 
         $image->move(public_path('ogimage/'), $ogImageName);
     }
@@ -127,13 +127,14 @@ class BlogController extends Controller
             'description' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'status' => 'required',
+            'slug' => 'nullable|unique:blogs,slug,'.$id
         ]);
 
-        $blogs = Blog::find($id);
+        $blogs = Blog::findOrFail($id);
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             // store image in public folder (blogimage folder)
-            $imageName = $image->getClientOriginalName();
+           $imageName = time().'_'.$image->getClientOriginalName();
 
             $image->move(public_path('blogimage/'), $imageName);
             $blogs->image = $imageName;
@@ -157,7 +158,7 @@ class BlogController extends Controller
         if ($request->hasFile('ogImage')) {
             $image = $request->file('ogImage');
             // store image in public folder (blogimage folder)
-            $ogImageName = $image->getClientOriginalName();
+            $imageName = time().'_'.$image->getClientOriginalName();
 
             $image->move(public_path('ogimage/'), $ogImageName);
             $metablogs->ogImage = $ogImageName;

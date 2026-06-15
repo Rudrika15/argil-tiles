@@ -528,9 +528,7 @@
         </div>
 
     </div>
-</section>
-<section>
-     <div class="container">
+    <div class="container">
 
         <h2 class="mb-4">Products Used</h2>
 
@@ -540,6 +538,17 @@
         </div> 
     </div>
 </section>
+{{-- <section>
+     <div class="container">
+
+        <h2 class="mb-4">Products Used</h2>
+
+        <div class="row g-4 story-block">
+            <h6 class="card-title">{{ $caseStudies->products_used }}</h6>
+           
+        </div> 
+    </div>
+</section> --}}
 
 
 {{-- ================= PRODUCTS USED ================= --}}

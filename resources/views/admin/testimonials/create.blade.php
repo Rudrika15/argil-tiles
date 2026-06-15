@@ -1,7 +1,11 @@
 @extends('admin.layouts.app')
 
 @section('pageTitle', 'Create Testimonial')
-
+<style>
+.ck-editor__editable {
+    min-height: 250px;
+}
+</style>
 @section('content')
 
 <div class="main-content">
@@ -34,6 +38,7 @@
     <input type="text" name="company_name" class="form-control"
         placeholder="Company Name"
         value="{{ old('company_name') }}">
+        
 </div>
 
 <div class="col-md-12 mb-3">
@@ -99,7 +104,8 @@
 </div>
 
 <div class="col-md-12 mb-3">
-    <textarea name="testimonial"
+    <textarea id="testimonial"
+        name="testimonial"
         rows="5"
         class="form-control"
         placeholder="Enter Testimonial *"
@@ -126,7 +132,26 @@
 
             reader.readAsDataURL(input.files[0]);
         }
-    }
-</script>
+    }<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    console.log('Page Loaded');
+
+    const testimonial = document.querySelector('#testimonial');
+
+    if (testimonial) {
+        ClassicEditor
+            .create(testimonial)
+            .then(editor => {
+                console.log('CKEditor Loaded');
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+
+});
+</script>
 @endsection

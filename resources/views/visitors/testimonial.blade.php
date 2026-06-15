@@ -73,7 +73,7 @@
         </div>
 
         <div class="text-center mt-4">
-            <a href="{{ url('/testimonials') }}" class="btn-primary fw-bold text-decoration-none">
+            <a href="{{ url('/testimonial') }}" class="btn-primary fw-bold text-decoration-none">
                 View All Testimonials
             </a>
         </div>

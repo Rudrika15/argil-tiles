@@ -36,40 +36,35 @@ class TestimonialController extends Controller
             'client_image' => 'nullable|image|mimes:png,jpg,jpeg,webp|max:2048'      
         ]);
         // $testimonial = new Testimonial();
+$imagePath = null;
 
-       $imageName = null;
 if ($request->hasFile('client_image')) {
-
     $image = $request->file('client_image');
+    $imageName = time().'_'.$image->getClientOriginalName();
 
-    $imageName = time() . '_' . $image->getClientOriginalName();
+    $image->move(public_path('testimonial-image'), $imageName);
 
-    $image->move(
-        public_path('testimonial-image'),
-        $imageName
-    );
-
-    $data['client_image'] = 'testimonial-image/' . $imageName;
+    $imagePath = 'testimonial-image/'.$imageName;
 }
-if ($request->hasFile('client_image')) {
+// if ($request->hasFile('client_image')) {
 
-    $image = $request->file('client_image');
+//     $image = $request->file('client_image');
 
-    $imageName = time() . '_' . $image->getClientOriginalName();
+//     $imageName = time() . '_' . $image->getClientOriginalName();
 
-    $image->move(
-        public_path('testimonial-image'),
-        $imageName
-    );
+//     $image->move(
+//         public_path('testimonial-image'),
+//         $imageName
+//     );
 
-    $data['client_image'] = 'testimonial-image/' . $imageName;
-}
+//     $data['client_image'] = 'testimonial-image/' . $imageName;
+// }
         Testimonial::create([
               'client_name' => $request->client_name,
         'company_name' => $request->company_name,
         'designation' => $request->designation,
         'testimonial' => $request->testimonial,
-        'client_image' => $imageName,
+        'client_image' => $imagePath,
         'rating' => $request->rating,
         'location' => $request->location,
         'project_name' => $request->project_name,
