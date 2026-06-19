@@ -6,7 +6,7 @@
     min-height: 250px;
 }
 </style>
-@section('content')
+{{-- @section('content')
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul class="mb-0">
@@ -15,7 +15,7 @@
             @endforeach
         </ul>
     </div>
-@endif
+@endif --}}
 <div class="main-content">
 
     <div class="row mb-3">
@@ -39,7 +39,10 @@
            <div class="col-md-12 mb-3">
     <input type="text" name="client_name" class="form-control"
         placeholder="Client Name *"
-        value="{{ old('client_name') }}" >
+        value="{{ old('client_name') }}" > 
+        @error('client_name')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
 </div>
 
 <div class="col-md-12 mb-3">
@@ -82,6 +85,10 @@
         <option value="4">4 Stars</option>
         <option value="5">5 Stars</option>
     </select>
+      @error('rating')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
+        
 </div>
 
 <div class="col-md-12 mb-3">
@@ -109,6 +116,10 @@
         <option value="1">Active</option>
         <option value="0">Inactive</option>
     </select>
+      @error('status')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
+        
 </div>
 
 <div class="col-md-12 mb-3">
@@ -118,6 +129,10 @@
         class="form-control"
         placeholder="Enter Testimonial *"
         >{{ old('testimonial') }}</textarea>
+          @error('testimonial')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
+        
 </div>
 
 <div class="text-center form-action">

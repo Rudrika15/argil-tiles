@@ -39,6 +39,10 @@
                     placeholder="Client Name"
                     value="{{ $testimonial->client_name }}" required>
                 <label>Client Name</label>
+                  @error('client_name')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
+        
             </div>
 
             <div class="form-label-group">
@@ -86,6 +90,10 @@
                         </option>
                     @endfor
                 </select>
+                  @error('rating')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
+        
             </div>
 
             <div class="row">
@@ -100,6 +108,10 @@
                 placeholder="Client Image">
 
             <label for="form_firstname">Client Image</label>
+              @error('client_image')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
+        
         </div>
     </div>
 
@@ -128,6 +140,10 @@
                         Inactive
                     </option>
                 </select>
+                  @error('status')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
+        
             </div>
 
             <div class="form-group">

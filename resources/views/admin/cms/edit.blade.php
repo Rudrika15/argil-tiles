@@ -34,7 +34,7 @@
 			</div>
 		</div>
 	</div>
-    {{-- @if ($errors->any())
+    @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -42,14 +42,14 @@
             @endforeach
         </ul>
     </div>
-@endif --}}
+@endif
 
 	<form class="form-group" enctype="multipart/form-data" action="{{route('admin.cms.update',$cms->id)}}" method="post">
 		@csrf
 		<div class="row">
 			<div class="col-md-12">
 				<div class="form-label-group">
-					<input id="name" type="text" name="title" value="{{$cms->title}}" class="form-control" placeholder="title" required>
+					<input id="name" type="text" name="title" value="{{$cms->title}}" class="form-control" placeholder="title" >
 					<label for="form_firstname">title</label>
                     @error('title')
     <span class="text-danger">{{ $message }}</span>
@@ -64,14 +64,14 @@
                          <textarea id="form_firstname"
           name="description"
           class="form-control"
-          placeholder="Description">{{ old('description', $cms->description) }}</textarea>
+          {{-- placeholder="Description">{{ old('description', $cms->description) }}</textarea> --}}
           @error('description')
     <span class="text-danger">{{ $message }}</span>
 @enderror
                     </div> 
 
                  <div class="form-label-group">
-    <select name="status" id="status" class="form-control" required >
+    <select name="status" id="status" class="form-control"  >
         <option value="" disabled>Status</option>
         <option value="1" {{ old('status', $cms->status) == 1 ? 'selected' : '' }}>
             Active

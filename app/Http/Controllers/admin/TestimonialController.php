@@ -120,6 +120,28 @@ if ($request->hasFile('client_image')) {
     public function update(Request $request, string $id)
 {
     $testimonial = Testimonial::findOrFail($id);
+    $request->validate([
+        'client_name' => 'required',
+    'testimonial' => 'required',
+    'rating' => 'required|numeric|min:1|max:5',
+    'status' => 'required',
+    'client_image' => 'nullable|image|mimes:png,jpg,jpeg,webp|max:2048',
+], [
+    'client_name.required' => 'Client name is required.',
+
+    'testimonial.required' => 'Testimonial is required.',
+    'status.required' => 'status is required.',
+
+    'rating.required' => 'Rating is required.',
+    'rating.numeric' => 'Rating must be a number.',
+    'rating.min' => 'Rating must be at least 1.',
+    'rating.max' => 'Rating cannot be greater than 5.',
+
+    'client_image.image' => 'Please upload a valid image.',
+    'client_image.mimes' => 'Only PNG, JPG, JPEG and WEBP images are allowed.',
+    'client_image.max' => 'Image size must not exceed 2 MB.',
+]);
+    
 $imageName = $testimonial->client_image;
 
 if ($request->file('client_image')) {
