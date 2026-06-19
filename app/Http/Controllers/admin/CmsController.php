@@ -25,19 +25,46 @@ class CmsController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required',
-            'status' => 'required',
-            'meta_title' => 'nullable|string|max:255',
-            'meta_keyword' => 'nullable|string',
-            'meta_description' => 'nullable|string',
-            'og_image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
-            'author' => 'nullable|string|max:255',
-            'tags' => 'nullable|string',
-            'og_url' => 'nullable|string|max:255',
-        ]);
+       $request->validate([
+    'title' => 'required|string|max:255',
+    'slug' => 'required|string|max:255|unique:cms,slug',
+    'description' => 'required|string',
 
+    'status' => 'required|boolean',
+
+    'meta_title' => 'nullable|string|max:60',
+    'meta_keyword' => 'nullable|string|max:255',
+    'meta_description' => 'nullable|string|max:160',
+
+    'og_image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+
+    'author' => 'nullable|string|max:255',
+    'tags' => 'nullable|string|max:500',
+
+    'og_url' => 'nullable|url|max:255',
+], [
+
+    'title.required' => 'Page title is required.',
+    'title.max' => 'Page title cannot exceed 255 characters.',
+
+    'slug.required' => 'Slug is required.',
+    'slug.unique' => 'This slug already exists.',
+    'slug.regex' => 'Slug can contain only lowercase letters, numbers and hyphens.',
+
+    'description.required' => 'Description is required.',
+
+    'status.required' => 'Please select a status.',
+
+    'meta_title.max' => 'Meta title should not exceed 60 characters for SEO.',
+
+    'meta_description.max' => 'Meta description should not exceed 160 characters for SEO.',
+
+    'og_image.image' => 'Please upload a valid image.',
+    'og_image.mimes' => 'Only JPG, JPEG, PNG and WEBP files are allowed.',
+    'og_image.max' => 'Image size must not exceed 2MB.',
+
+    'og_url.url' => 'Please enter a valid URL.',
+]);
         $cms = new Cms();
 //         $title = strtolower($request->title);
 
@@ -80,14 +107,36 @@ class CmsController extends Controller
         $page = Cms::where('slug', $slug)
             ->where('status', 1)
             ->firstOrFail();
+        $spcUrls = [
+        'spc-flooring-manufacturer-india',
+        'spc-flooring-exporter-india',
+        'spc-flooring-manufacturer-morbi',
+        'spc-flooring-manufacturer-gujarat',
+        'rigid-core-spc-flooring',
+        'luxury-vinyl-flooring-manufacturer',
+    ];
 
-        return view('visitors.cms.show', compact('page'));
+    $quartzUrls = [
+        'quartz-slab-manufacturer-india',
+        'quartz-slab-manufacturer-morbi',
+        'quartz-surface-exporter-india',
+    ];
+
+    $productUrl = null;
+
+    if (in_array($page->slug, $spcUrls)) {
+        $productUrl = url('/spcproducts'); // Your SPC product page URL
+    } elseif (in_array($page->slug, $quartzUrls)) {
+        $productUrl = url('/quartzsurface'); // Your Quartz product page URL
+    }
+
+        return view('visitors.cms.show', compact('page','productUrl'));
     }
 
     
      public function edit($id)
     {
-        $cms =Cms::find($id);
+        $cms =Cms::findOrFail($id);
         return view('admin.cms.edit', compact('cms'));
     }
 
@@ -98,16 +147,38 @@ class CmsController extends Controller
 
         $request->validate([
             'title' => 'required|string|max:255',
+            'slug' => 'nullable|unique:cms,slug,' . $id,
             'description' => 'required',
             'status' => 'required',
             'meta_title' => 'nullable|string|max:255',
-            'meta_keywords' => 'nullable|string',
+            'meta_keyword' => 'nullable|string',
             'meta_description' => 'nullable|string',
-            'ogimage' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'og_image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'author' => 'nullable|string|max:255',
             'tags' => 'nullable|string',
-            'og_image' => 'nullable|string|max:255',
-        ]);
+            'og_url' => 'nullable|url|max:255'
+            // 'og_image' => 'nullable|string|max:255',
+        ], [
+
+    'title.required' => 'Title is required.',
+    'title.max' => 'Title cannot exceed 255 characters.',
+
+    'slug.unique' => 'This slug already exists.',
+
+    'description.required' => 'Description is required.',
+
+    'status.required' => 'Please select a status.',
+
+    'meta_title.max' => 'Meta title cannot exceed 255 characters.',
+
+    'og_image.image' => 'Please upload a valid image file.',
+    'og_image.mimes' => 'Only JPG, JPEG, PNG and WEBP images are allowed.',
+    'og_image.max' => 'Image size must not exceed 2 MB.',
+
+    'author.max' => 'Author name cannot exceed 255 characters.',
+
+    'og_url.url' => 'Please enter a valid URL.',
+    'og_url.max' => 'URL cannot exceed 255 characters.',]);
 
         $cms->title = $request->title;
     //    $cms->slug = Str::slug($request->slug ?: $request->title);
@@ -121,7 +192,8 @@ class CmsController extends Controller
         $cms->meta_description = $request->meta_description;
         $cms->author = $request->author;
         $cms->tags = $request->tags;
-        $cms->og_image = $request->og_url;
+        $cms->og_image = $request->og_image;
+        $cms->og_url  = $request->og_url;
 
         if ($request->hasFile('og_image')) {
 
@@ -144,10 +216,19 @@ class CmsController extends Controller
             ->with('success', 'CMS updated successfully.');
     }
 
-    public function delete(Request $request,$id){
-         $cms = Cms::findOrFail($id);
-         $cms->delete();
-         return redirect()->route('admin.cms.index')->with('msg', 'Data Delete Successfully.');
+   public function delete($id)
+{
+    $cms = Cms::findOrFail($id);
+
+    if ($cms->og_image && file_exists(public_path($cms->og_image))) {
+        unlink(public_path($cms->og_image));
     }
+
+    $cms->delete();
+
+    return redirect()
+        ->route('admin.cms.index')
+        ->with('msg', 'Data Deleted Successfully.');
+}
 }
 

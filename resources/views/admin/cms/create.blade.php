@@ -40,8 +40,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-label-group">
-                        <input id="name" type="text" name="title" class="form-control" placeholder="title" required>
+                        <input id="name" type="text" name="title" value="{{ old('title') }}" class="form-control" placeholder="title" >
                         <label for="form_firstname">title</label>
+                        @error('title')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
                     </div>
 
                     <input type="hidden" name="slug" id="slug">
@@ -53,15 +56,21 @@
                     </div> --}}
 
                     <div class="form-label-group">
-                         <textarea id="form_firstname" name="description" class="form-control" placeholder="Description"></textarea>
+                         <textarea id="form_firstname" name="description" class="form-control" placeholder="Description">{{ old('description') }}</textarea>
+                         @error('description')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
                     </div>
 
                     <div class="form-label-group">
-                        <select name="status" id="status" class="form-control" required>
+                        <select name="status" id="status" class="form-control" >
                              <option value="" disabled selected>Status</option>
                              <option value="1">Active</option>
                              <option value="0">Inactive</option>
                         </select>
+                        @error('status')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
                     </div>
                 </div>
             </div>
@@ -77,7 +86,10 @@
                 <div class="form-label-group">
                     <input type="text" class="form-control" id="meta_title" placeholder="" name="meta_title"
                         value="{{ old('meta_title') }}">
-                    <label for="">keywords</label>
+                    <label for="">Title</label>
+                    @error('meta_title')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
                 </div>
             </div>
         </div>
@@ -92,6 +104,9 @@
                     <input type="text" class="form-control" id="meta_keyword" placeholder="Meta Keyword" name="meta_keyword"
                         value="{{ old('meta_keyword') }}">
                     <label for="">keywords</label>
+                    @error('meta_keyword')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
                 </div>
             </div>
         </div>
@@ -106,6 +121,9 @@
                     <input type="text" class="form-control" id="meta_description" placeholder="Meta Description"
                         name="meta_description" value="{{ old('meta_description') }}">
                     <label for="">description</label>
+                    @error('meta_description')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
                 </div>
             </div>
         </div>
@@ -128,6 +146,9 @@
                     class="form-control"
                     accept="image/*"
                     onchange="readURL(this, '#ogImagePreview')">
+                    @error('og_image')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
             </div>
         </div>
         {{-- author --}}
@@ -140,6 +161,9 @@
                     <input type="text" class="form-control" id="author" placeholder="" name="author"
                         value="{{ old('author') }}">
                     <label for="">author</label>
+                    @error('author')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
                 </div>
             </div>
         </div>
@@ -153,6 +177,9 @@
                     <input type="text" class="form-control" id="tags" placeholder="Hindi Title"
                         name="tags" value="{{ old('tags') }}">
                     <label for="">tages</label>
+                    @error('tags')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
                 </div>
             </div>
         </div>
@@ -166,6 +193,9 @@
                     <input type="text" class="form-control" id="og_url" placeholder="Og URL" name="og_url"
                         value="{{ old('og_url') }}">
                     <label for="">Url</label>
+                    @error('og_url')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
                 </div>
             </div>
         </div>

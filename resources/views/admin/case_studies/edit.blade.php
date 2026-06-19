@@ -9,19 +9,15 @@
 </style>
     @section('content')
 
-    {{-- <div class="row">
-        <div class="col-md-12">
-
-            @if ($message = Session::get('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <p>{{$message}}</p>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            @endif
-        </div>
-    </div> --}}
+   @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
     <div class="main-content">
         <div class="row">
@@ -40,14 +36,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-label-group">
-                        <input id="title" type="text" name="title" class="form-control" placeholder="title" required value="{{$caseStudy->title}}">
+                        <input id="title" type="text" name="title" class="form-control" placeholder="title"  value="{{$caseStudy->title}}">
                         <label for="form_firstname">title</label>
                     </div>
 
                     <input type="hidden" name="slug" id="slug" value="{{ $caseStudy->slug }}">
 
                     <div class="form-label-group">
-                        <input id="short_description" type="text" name="short_description" class="form-control" placeholder="title" required  value="{{$caseStudy->short_description}}">
+                        <input id="short_description" type="text" name="short_description" class="form-control" placeholder="title"   value="{{$caseStudy->short_description}}">
                         <label for="form_firstname">Short Description</label>
                     </div>
 
@@ -60,29 +56,29 @@
                     </div>
 
                     <div class="form-label-group">
-                        <input id="client_name" type="text" name="client_name" class="form-control" placeholder="Client Name" required value="{{$caseStudy->client_name}}">
+                        <input id="client_name" type="text" name="client_name" class="form-control" placeholder="Client Name"  value="{{$caseStudy->client_name}}">
                         <label for="form_firstname">Client Name</label>
                     </div>
 
                     <div class="form-label-group">
-                        <input id="industry" type="text" name="industry" class="form-control" placeholder="Industry" required value="{{$caseStudy->industry}}">
+                        <input id="industry" type="text" name="industry" class="form-control" placeholder="Industry"  value="{{$caseStudy->industry}}">
                         <label for="form_firstname">Industry</label>
                     </div>
 
                     <div class="form-label-group">
-                        <input id="location" type="text" name="location" class="form-control" placeholder="Location" required value="{{$caseStudy->location}}">
+                        <input id="location" type="text" name="location" class="form-control" placeholder="Location"  value="{{$caseStudy->location}}">
                         <label for="form_firstname">Location</label>
                     </div>
 
                     
 
                     <div class="form-label-group">
-                        <input id="project_type" type="text" name="project_type" class="form-control" placeholder="Project Type" required value="{{$caseStudy->project_type}}">
+                        <input id="project_type" type="text" name="project_type" class="form-control" placeholder="Project Type"  value="{{$caseStudy->project_type}}">
                         <label for="form_firstname">Project Type</label>
                     </div>
 
                     <div class="form-label-group">
-                        <input id="project_area" type="text" name="project_area" class="form-control" placeholder="Project Area" required value="{{$caseStudy->project_area}}">
+                        <input id="project_area" type="text" name="project_area" class="form-control" placeholder="Project Area"  value="{{$caseStudy->project_area}}">
                         <label for="form_firstname">Project Area</label>
                     </div>
 
@@ -99,12 +95,12 @@
                     </div>
 
                     <div class="form-label-group">
-                        <input id="product_used" type="text" name="products_used" class="form-control" placeholder="Project Used" required value="{{$caseStudy->products_used}}">
+                        <input id="product_used" type="text" name="products_used" class="form-control" placeholder="Project Used"  value="{{$caseStudy->products_used}}">
                         <label for="form_firstname">Product Used</label>
                     </div>
                     
                     <div class="form-label-group">
-                        <input id="completion_date" type="date" name="completion_date" value="{{$caseStudy->completion_date}}" class="form-control" placeholder="Project Area" required>
+                        <input id="completion_date" type="date" name="completion_date" value="{{$caseStudy->completion_date}}" class="form-control" placeholder="Project Area" >
                         <label for="form_firstname">Completion Date</label>
                     </div>
 

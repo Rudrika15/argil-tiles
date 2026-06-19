@@ -313,7 +313,7 @@
                             href="/catalogue">CATALOGUE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="/contact">CONTACT</a>
+                        <a class="nav-link {{ Request::is('contact-argil') ? 'active' : '' }}" href="/contact-argil">CONTACT</a>
                     </li>
                 </ul>
 

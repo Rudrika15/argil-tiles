@@ -9,19 +9,15 @@
 </style>
     @section('content')
 
-    {{-- <div class="row">
-        <div class="col-md-12">
-
-            @if ($message = Session::get('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <p>{{$message}}</p>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            @endif
-        </div>
-    </div> --}}
+   @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
     <div class="main-content">
         <div class="row">
@@ -40,14 +36,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-label-group">
-                        <input id="title" type="text" name="title" class="form-control" placeholder="title" required>
+                        <input id="title" type="text" name="title" class="form-control" placeholder="title" >
                         <label for="form_firstname">title</label>
                     </div>
 
                     <input type="hidden" name="slug" id="slug">
 
                     <div class="form-label-group">
-                        <input id="short_description" type="text" name="short_description" class="form-control" placeholder="title" required>
+                        <input id="short_description" type="text" name="short_description" class="form-control" placeholder="title" >
                         <label for="form_firstname">Short Description</label>
                     </div>
 
@@ -60,28 +56,28 @@
                     </div>
 
                     <div class="form-label-group">
-                        <input id="client_name" type="text" name="client_name" class="form-control" placeholder="Client Name" required>
+                        <input id="client_name" type="text" name="client_name" class="form-control" placeholder="Client Name" >
                         <label for="form_firstname">Client Name</label>
                     </div>
 
                     <div class="form-label-group">
-                        <input id="industry" type="text" name="industry" class="form-control" placeholder="Industry" required>
+                        <input id="industry" type="text" name="industry" class="form-control" placeholder="Industry" >
                         <label for="form_firstname">Industry</label>
                     </div>
 
                     <div class="form-label-group">
-                        <input id="location" type="text" name="location" class="form-control" placeholder="Location" required>
+                        <input id="location" type="text" name="location" class="form-control" placeholder="Location" >
                         <label for="form_firstname">Location</label>
                     </div>
 
                     
                     <div class="form-label-group">
-                        <input id="project_type" type="text" name="project_type" class="form-control" placeholder="Project Type" required>
+                        <input id="project_type" type="text" name="project_type" class="form-control" placeholder="Project Type" >
                         <label for="form_firstname">Project Type</label>
                     </div>
 
                     <div class="form-label-group">
-                        <input id="project_area" type="text" name="project_area" class="form-control" placeholder="Project Area" required>
+                        <input id="project_area" type="text" name="project_area" class="form-control" placeholder="Project Area" >
                         <label for="form_firstname">Project Area</label>
                     </div>
 
@@ -99,17 +95,17 @@
                     </div>
 
                     <div class="form-label-group">
-                        <input id="product_used" type="text" name="products_used" class="form-control" placeholder="Product Used" required>
+                        <input id="product_used" type="text" name="products_used" class="form-control" placeholder="Product Used" >
                         <label for="form_firstname">Product Used</label>
                     </div>      
 
                     <div class="form-label-group">
-                        <input id="completion_date" type="date" name="completion_date" class="form-control" placeholder="Project Area" required>
+                        <input id="completion_date" type="date" name="completion_date" class="form-control" placeholder="Project Area" >
                         <label for="form_firstname">Completion Date</label>
                     </div>
 
                     <div class="form-label-group">
-    <input id="featured_image" type="file" name="featured_image" class="form-control" accept="image/*" required>
+    <input id="featured_image" type="file" name="featured_image" class="form-control" accept="image/*" >
     <label>Featured Image</label>
 </div>
 <div class="mt-3">
@@ -134,7 +130,7 @@
 <div id="gallery-preview" class="row mt-3"></div>
 
                     <div class="form-label-group">
-                        <select name="status" id="status" class="form-control" required>
+                        <select name="status" id="status" class="form-control" >
                              <option value="" disabled selected>Status</option>
                              <option value="published">Published</option>
                              <option value="draft">Draft</option>

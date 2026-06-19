@@ -9,6 +9,7 @@ use App\Mail\InquiryFormMail;
 use App\Models\Blog;
 use App\Models\Catelogue;
 use App\Models\Contact;
+use App\Models\Faq;
 use App\Models\Inquiry;
 use App\Models\Lvtproduct;
 use App\Models\Quartzproduct;
@@ -191,22 +192,22 @@ class VisitorController extends Controller
     public function spcproducts()
     {
         $data = Lvtproduct::orderBy('names')->paginate(6); // 9 items per page (adjust as needed)
-
-        return view('visitors.products.spc products.spcproducts', compact('data'));
+        $faqs = Faq::where('is_spc',1)->get();
+        return view('visitors.products.spc products.spcproducts', compact('data','faqs'));
     }
     public function spcproductinquiry($slug)
     {
-
         // $data= Lvtproduct::find($id);
         $data = Lvtproduct::where('slug', $slug)->firstOrFail();
-
         return view('visitors.products.spc products.spcproductinquiry', compact('data'));
     }
 
     public function quartzsurface()
     {
-        $data = Quartzproduct::where('status', 'Active')->orderBy('id', 'desc')->get();
-        return view('visitors.products.quartz surface.quartzsurface', compact('data'));
+        // $data = Quartzproduct::where('status', 'Active')->orderBy('id', 'desc')->get();
+        $data = Quartzproduct::where('status', 'Active')->orderBy('id', 'desc')->paginate(9);
+        $faqs = Faq::where('is_quartz', 1)->get();
+        return view('visitors.products.quartz surface.quartzsurface', compact('data','faqs'));
     }
     public function quartzinquiry($slug)
     {

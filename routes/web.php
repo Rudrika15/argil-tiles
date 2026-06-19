@@ -29,7 +29,7 @@ use App\Http\Controllers\visitors\QuartzExportController;
 
 use App\Http\Controllers\admin\CmsController;
 use App\Http\Controllers\admin\FaqController;
-use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\admin\TestimonialController;
 use App\Http\Controllers\visitors\TestimonialViewController;
 use App\Http\Controllers\visitors\BlogAuthorController;
 use App\Http\Controllers\visitors\CaseStudiesViewController;
@@ -249,15 +249,7 @@ Route::middleware('auth:web')->group(function () {
     Route::post('/update-testimonials/{id}',[TestimonialController::class,'update'])->name('admin.testimonials.update'); 
     Route::get('/delete-testimonials/{id}',[TestimonialController::class,'delete'])->name('admin.testimonials.delete'); 
 
-    // //Case Studies
-    // Route::get('/show-case-studies',[CaseStudyController::class,'index'])->name('admin.case-studies.index'); 
-    // Route::get('/create-case-studies',[CaseStudyController::class,'create'])->name('admin.case-studies.create'); 
-    // Route::post('/store-case-studies',[CaseStudyController::class,'store'])->name('admin.case-studies.store'); 
-    // Route::get('/edit-case-studies/{id}',[CaseStudyController::class,'edit'])->name('admin.case-studies.edit'); 
-    // Route::post('/update-case-studies/{id}',[CaseStudyController::class,'update'])->name('admin.case-studies.update'); 
-    // Route::get('/delete-case-studies/{id}',[CaseStudyController::class,'delete'])->name('admin.case-studies.delete'); 
-
-    // Case Studies (Slug Based)
+   // Case Studies (Slug Based)
 
 // List all case studies
 Route::get('/show-case-studies', [CaseStudyController::class, 'index'])
@@ -306,7 +298,7 @@ Route::get('/achievements', [VisitorController::class, 'achievement']);
 Route::get('/plants', [VisitorController::class, 'plants']);
 Route::get('/quality', [VisitorController::class, 'quality']);
 Route::get('/catalogue', [VisitorController::class, 'catalogue'])->name('catalogue');
-Route::get('/contact', [VisitorController::class, 'contact']);
+Route::get('/contact-argil', [VisitorController::class, 'contact']);
 Route::get('/spcproducts', [VisitorController::class, 'spcproducts']);
 Route::get('spcproductinquiry/{slug?}', [VisitorController::class, 'spcproductinquiry'])->name('spcproductinquiry');
 Route::get('quartzinquiry/{slug?}', [VisitorController::class, 'quartzinquiry'])->name('quartzinquiry');

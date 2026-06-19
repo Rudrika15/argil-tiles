@@ -7,7 +7,15 @@
 }
 </style>
 @section('content')
-
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <div class="main-content">
 
     <div class="row mb-3">
@@ -31,7 +39,7 @@
            <div class="col-md-12 mb-3">
     <input type="text" name="client_name" class="form-control"
         placeholder="Client Name *"
-        value="{{ old('client_name') }}" required>
+        value="{{ old('client_name') }}" >
 </div>
 
 <div class="col-md-12 mb-3">
@@ -66,7 +74,7 @@
 </div>
 
 <div class="col-md-12 mb-3">
-    <select name="rating" class="form-control" required>
+    <select name="rating" class="form-control" >
         <option value="">Select Rating *</option>
         <option value="1">1 Star</option>
         <option value="2">2 Stars</option>
@@ -96,7 +104,7 @@
 </div>
 
 <div class="col-md-12 mb-3">
-    <select name="status" class="form-control" required>
+    <select name="status" class="form-control" >
         <option value="">Select Status *</option>
         <option value="1">Active</option>
         <option value="0">Inactive</option>
@@ -109,7 +117,7 @@
         rows="5"
         class="form-control"
         placeholder="Enter Testimonial *"
-        required>{{ old('testimonial') }}</textarea>
+        >{{ old('testimonial') }}</textarea>
 </div>
 
 <div class="text-center form-action">
@@ -120,6 +128,7 @@
     </form>
 
 </div>
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 
 <script>
     function readURL(input, target) {
@@ -132,8 +141,9 @@
 
             reader.readAsDataURL(input.files[0]);
         }
-    }<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    }
 
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 

@@ -76,7 +76,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <!-- Why Choose Us -->
 
 
-    <div class="container">
+    <div class="container" id="images">
 
 
         <div class="row pb-5">
@@ -97,6 +97,11 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     </a>
                 </div>
             @endforeach
+        </div>
+        <div class="row">
+
+            {{ $data->links('pagination::bootstrap-5') }}
+
         </div>
     </div>
 
@@ -232,7 +237,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                         facility </p>
                 </div>
             </div>
-            <div class="row pb-5">
+            <div class="row pb-5 g-4">
                 <div class="col-md-3">
                     <div class="card text-center mt-3 h-100">
                         <div class="d-flex justify-content-center mt-4">
@@ -312,7 +317,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         </div>
     </div>
 
-    <div class="container my-5">
+    {{-- <div class="container my-5">
         <h2 class="text-center mb-4 fw-bold">FAQs</h2>
 
         <div class="accordion" id="accordionExample">
@@ -551,9 +556,9 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
             </div>
 
         </div>
-    </div>
+    </div> --}}
 
-
+    @include('visitors.faq.index')
 
     <div class="container">
         <div class="row">
@@ -617,8 +622,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
 
                     <div class="form-floating mb-3">
                         <textarea class="form-control" id="floatingMessage" placeholder="Your Message" name="form_message"
-                            style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.
-')"
+                            style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.')"
                             oninput="this.setCustomValidity('')"></textarea>
                         <label for="floatingMessage">Your Message</label>
                     </div>
@@ -690,6 +694,17 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
                 });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.pagination a').forEach(link => {
+                // Avoid duplicate hashes
+                if (!link.href.includes('#images')) {
+                    link.href += '#images';
+                }
+            });
         });
     </script>
 @endsection

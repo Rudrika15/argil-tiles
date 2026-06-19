@@ -48,6 +48,7 @@ with 10+ yrs of service. Get a price quote"
             </div>
         </div>
     </div>
+    
     <!-- breadcrumb -->
     <div class="container">
 
@@ -128,6 +129,8 @@ with 10+ yrs of service. Get a price quote"
 
         </div>
     </div>
+
+     @include('visitors.faq.index')
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

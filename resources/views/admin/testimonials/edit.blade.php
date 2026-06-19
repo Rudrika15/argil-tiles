@@ -1,6 +1,11 @@
 @extends('admin.layouts.app')
 
 @section('pageTitle','Edit Testimonial')
+<style>
+.ck-editor__editable {
+    min-height: 250px;
+}
+</style>
 
 @section('content')
 
@@ -84,7 +89,7 @@
             </div>
 
             <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-9">
         <div class="form-label-group">
             <input accept="image/*"
                 onchange="readURL(this,'#image')"
@@ -98,7 +103,7 @@
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-3">
         <img src="{{ asset('testimonialimage/' . $testimonial->image) }}"
             alt="image"
             id="image"
@@ -110,6 +115,7 @@
                 <textarea name="testimonial"
                     class="form-control"
                     rows="5"
+                    id="testimonial"
                     placeholder="Testimonial">{{ $testimonial->testimonial }}</textarea>
             </div>
 
@@ -144,6 +150,7 @@
 </form>
 
 </div>
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 
 <script>
     function readURL(input, tgt) {
@@ -159,4 +166,24 @@
     }
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    console.log('Page Loaded');
+
+    const testimonial = document.querySelector('#testimonial');
+
+    if (testimonial) {
+        ClassicEditor
+            .create(testimonial)
+            .then(editor => {
+                console.log('CKEditor Loaded');
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+
+});
+</script>
 @endsection

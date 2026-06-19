@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 @section('seosection')
     <meta name="description"
         content="Premium quartz stone slabs for
@@ -36,7 +36,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         Quartz Countertop Slabs Manufacturer in Morbi | Argil
     </title>
 @endsection
-@section('content')
+@section('content') --}}
 {{--     
 @foreach($faqs as $faq)
     <div class="accordion-item bg-white">
@@ -140,4 +140,4 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                 });
         });
     </script>
-@endsection
+{{-- @endsection --}}

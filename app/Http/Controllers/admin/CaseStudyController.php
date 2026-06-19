@@ -23,11 +23,63 @@ class CaseStudyController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'featured_image' => 'nullable|image|mimes:jpg,jpeg,png,webp',
-            'gallery.*' => 'nullable|image|mimes:jpg,jpeg,png,webp',
-        ]);
+    'title' => 'required|string|max:255',
+    // 'slug' => 'required|string|max:255|unique:case_studies,slug,' . ($id ?? 'NULL') . ',id',
 
+    'short_description' => 'required|string|max:1000',
+    'overview' => 'nullable|string',
+
+    'client_name' => 'nullable|string|max:255',
+    'industry' => 'nullable|string|max:100',
+
+    'location' => 'nullable|string|max:255',
+
+    'project_type' => 'nullable|string|max:100',
+
+    'project_area' => 'nullable|string|max:100',
+
+    'challenge' => 'nullable|string',
+    'solution' => 'nullable|string',
+    'result' => 'nullable|string',
+
+    'products_used' => 'nullable|string',
+
+    'completion_date' => 'nullable|date',
+
+    'featured_image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+
+    'gallery.*' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+
+    'seo_title' => 'nullable|string|max:60',
+    'seo_description' => 'nullable|string|max:160',
+    'seo_keywords' => 'nullable|string|max:500',
+
+    'status' => 'required|in:draft,published',
+
+    'is_featured' => 'nullable|boolean',
+], [
+    'title.required' => 'Title is required.',
+    // 'slug.required' => 'Slug is required.',
+    // 'slug.unique' => 'This slug already exists.',
+
+    'short_description' => 'Short description is required',
+
+    'featured_image.image' => 'Featured image must be an image.',
+    'featured_image.mimes' => 'Featured image must be JPG, JPEG, PNG or WEBP.',
+    'featured_image.max' => 'Featured image size cannot exceed 2MB.',
+
+    'gallery.*.image' => 'Gallery files must be images.',
+    'gallery.*.mimes' => 'Gallery images must be JPG, JPEG, PNG or WEBP.',
+    'gallery.*.max' => 'Each gallery image must be less than 2MB.',
+
+    'completion_date.date' => 'Please enter a valid completion date.',
+
+    'seo_title.max' => 'SEO title should not exceed 60 characters.',
+    'seo_description.max' => 'SEO description should not exceed 160 characters.',
+
+    'status.required' => 'Please select a status.',
+    'status.in' => 'Invalid status selected.',
+]);
         $caseStudy = new CaseStudy();
 
         // ================= SLUG =================
@@ -99,11 +151,62 @@ $caseStudy->gallery = json_encode($galleryImages);
     {
         $caseStudy = CaseStudy::where('slug', $slug)->firstOrFail();
 
-        $request->validate([
-            'title' => 'required',
-            'featured_image' => 'nullable|image|mimes:jpg,jpeg,png,webp',
-            'gallery.*' => 'nullable|image|mimes:jpg,jpeg,png,webp',
-        ]);
+      $request->validate([
+    'title' => 'required|string|max:255',
+    // 'slug' => 'required|string|max:255|unique:case_studies,slug,' . ($id ?? 'NULL') . ',id',
+
+    'short_description' => 'nullable|string|max:1000',
+    'overview' => 'nullable|string',
+
+    'client_name' => 'nullable|string|max:255',
+    'industry' => 'nullable|string|max:100',
+
+    'location' => 'nullable|string|max:255',
+
+    'project_type' => 'nullable|string|max:100',
+
+    'project_area' => 'nullable|string|max:100',
+
+    'challenge' => 'nullable|string',
+    'solution' => 'nullable|string',
+    'result' => 'nullable|string',
+
+    'products_used' => 'nullable|string',
+
+    'completion_date' => 'nullable|date',
+
+    'featured_image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+
+    'gallery.*' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+
+    'seo_title' => 'nullable|string|max:60',
+    'seo_description' => 'nullable|string|max:160',
+    'seo_keywords' => 'nullable|string|max:500',
+
+    'status' => 'required|in:draft,published',
+
+    'is_featured' => 'nullable|boolean',
+], [
+    'title.required' => 'Title is required.',
+    // 'slug.required' => 'Slug is required.',
+    // 'slug.unique' => 'This slug already exists.',
+
+    'featured_image.image' => 'Featured image must be an image.',
+    'featured_image.mimes' => 'Featured image must be JPG, JPEG, PNG or WEBP.',
+    'featured_image.max' => 'Featured image size cannot exceed 2MB.',
+
+    'gallery.*.image' => 'Gallery files must be images.',
+    'gallery.*.mimes' => 'Gallery images must be JPG, JPEG, PNG or WEBP.',
+    'gallery.*.max' => 'Each gallery image must be less than 2MB.',
+
+    'completion_date.date' => 'Please enter a valid completion date.',
+
+    'seo_title.max' => 'SEO title should not exceed 60 characters.',
+    'seo_description.max' => 'SEO description should not exceed 160 characters.',
+
+    'status.required' => 'Please select a status.',
+    'status.in' => 'Invalid status selected.',
+]);
 
         // ================= SLUG + FIELDS =================
         $caseStudy->slug = Str::slug($request->title);
