@@ -14,7 +14,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card testimonial-card h-100">
 
-    <div class="card-body">
+    <div class="card-body"> 
 
         <div class="testimonial-rating">
             @for($i = 1; $i <= $testimonial->rating; $i++)
@@ -23,7 +23,7 @@
         </div>
 
         <p class="testimonial-text">
-            "{{ Str::limit($testimonial->testimonial, 180) }}"
+           {{ strip_tags($testimonial->testimonial) }}
         </p>
 
         <div class="d-flex align-items-center mt-2">

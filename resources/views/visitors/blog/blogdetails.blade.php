@@ -39,7 +39,7 @@
     content:"✦";
     position:absolute;
     left:50%;
-    top:-14px;
+    top:-11px;
     transform:translateX(-50%);
     color:#ccb19b;
 }

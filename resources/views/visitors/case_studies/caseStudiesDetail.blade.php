@@ -497,6 +497,9 @@
 .gallery-card:hover .gallery-img {
     transform: scale(1.08);
 }
+.ul{
+    line-height:0.9;
+}
 </style>
 
 
@@ -516,7 +519,7 @@
             {!!  html_entity_decode($caseStudies->challenge) !!}
         </div>
 
-        <div class="story-block mb-4">
+        <div class="story-block mb-4 ul">
             <h4>Solution</h4>
             {!!  html_entity_decode($caseStudies->solution) !!}
             

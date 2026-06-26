@@ -37,12 +37,12 @@ class BlogController extends Controller
             'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'status' => 'required',
-            'slug' => 'nullable|unique:blogs,slug'
-        ],
-         [
-        'description.required' => 'Description is required.',
-    ],
+            'slug' => 'nullable|unique:blogs,slug',
+            'author'=>'required'
+        ]
         );
+
+        $imageName = null;
         // return $request;
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -127,7 +127,8 @@ class BlogController extends Controller
             'description' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'status' => 'required',
-            'slug' => 'nullable|unique:blogs,slug,'.$id
+            'slug' => 'nullable|unique:blogs,slug,'.$id,
+            'author' => 'required'
         ]);
 
         $blogs = Blog::findOrFail($id);

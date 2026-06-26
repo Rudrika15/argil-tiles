@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-label-group">
-                        <input id="title" type="text" name="title" class="form-control" placeholder="title" >
+                        <input id="title" type="text" name="title" value="{{ old('title') }}" class="form-control" placeholder="title" >
                         <label for="form_firstname">title</label>
                           @error('title')
     <span class="text-danger">{{ $message }}</span>
@@ -46,7 +46,7 @@
                     <input type="hidden" name="slug" id="slug">
 
                     <div class="form-label-group">
-                        <input id="short_description" type="text" name="short_description" class="form-control" placeholder="title" >
+                        <input id="short_description" type="text" value="{{ old('short_description') }}" name="short_description" class="form-control" placeholder="title" >
                         <label for="form_firstname">Short Description</label>
                           @error('short_description')
     <span class="text-danger">{{ $message }}</span>
@@ -58,14 +58,14 @@
                     </div> --}}
 
                     <div class="form-label-group">
-                        <textarea id="overview" name="overview" class="form-control" placeholder="Overview"></textarea>
+                        <textarea id="overview" name="overview" value="{{ old('overview') }}" class="form-control" placeholder="Overview">{{old('overview')}}</textarea>
                           @error('overview')
     <span class="text-danger">{{ $message }}</span>
 @enderror
                     </div>
 
                     <div class="form-label-group">
-                        <input id="client_name" type="text" name="client_name" class="form-control" placeholder="Client Name" >
+                        <input id="client_name" type="text" name="client_name"  value="{{ old('client_name') }}" class="form-control" placeholder="Client Name" >
                         <label for="form_firstname">Client Name</label>
                           @error('client_name')
     <span class="text-danger">{{ $message }}</span>
@@ -73,7 +73,7 @@
                     </div>
 
                     <div class="form-label-group">
-                        <input id="industry" type="text" name="industry" class="form-control" placeholder="Industry" >
+                        <input id="industry" type="text" name="industry" value="{{ old('industry') }}" class="form-control" placeholder="Industry" >
                         <label for="form_firstname">Industry</label>
                           @error('industry')
     <span class="text-danger">{{ $message }}</span>
@@ -81,7 +81,7 @@
                     </div>
 
                     <div class="form-label-group">
-                        <input id="location" type="text" name="location" class="form-control" placeholder="Location" >
+                        <input id="location" type="text" name="location" class="form-control" value="{{ old('location') }}" placeholder="Location" >
                         <label for="form_firstname">Location</label>
                           @error('location')
     <span class="text-danger">{{ $message }}</span>
@@ -90,7 +90,7 @@
 
                     
                     <div class="form-label-group">
-                        <input id="project_type" type="text" name="project_type" class="form-control" placeholder="Project Type" >
+                        <input id="project_type" type="text" name="project_type" class="form-control" value="{{ old('project_type') }}" placeholder="Project Type" >
                         <label for="form_firstname">Project Type</label>
                           @error('project_type')
     <span class="text-danger">{{ $message }}</span>
@@ -98,7 +98,7 @@
                     </div>
 
                     <div class="form-label-group">
-                        <input id="project_area" type="text" name="project_area" class="form-control" placeholder="Project Area" >
+                        <input id="project_area" type="text" name="project_area" class="form-control" value="{{ old('project_area') }}" placeholder="Project Area" >
                         <label for="form_firstname">Project Area</label>
                           @error('project_area')
     <span class="text-danger">{{ $message }}</span>
@@ -107,36 +107,36 @@
 
 
                     <div class="form-label-group">
-                        <textarea id="challenge" name="challenge" class="form-control" placeholder="Challenge"></textarea>
+                        <textarea id="challenge" name="challenge" class="form-control" placeholder="Challenge" value="{{ old('challenge') }}">{{old('challenge')}}</textarea>
                           @error('challenge')
     <span class="text-danger">{{ $message }}</span>
 @enderror
                     </div>
 
                     <div class="form-label-group">
-                        <textarea id="solution" name="solution" class="form-control" placeholder="Solution"></textarea>
+                        <textarea id="solution" name="solution" class="form-control" placeholder="Solution" value="{{ old('solution') }}">{{old('solution')}}</textarea>
                           @error('solution')
     <span class="text-danger">{{ $message }}</span>
 @enderror
                     </div>
 
                     <div class="form-label-group">
-                         <textarea id="result" name="result" class="form-control" placeholder="Result"></textarea>
+                         <textarea id="result" name="result" class="form-control" placeholder="Result" value="{{ old('result') }}">{{old('result')}}</textarea>
                            @error('result')
     <span class="text-danger">{{ $message }}</span>
 @enderror
                     </div>
 
                     <div class="form-label-group">
-                        <input id="product_used" type="text" name="products_used" class="form-control" placeholder="Product Used" >
-                        <label for="form_firstname">Product Used</label>
-                          @error('product_used')
+                        <input id="products_used" type="text" value="{{ old('products_used') }}" name="products_used" class="form-control" placeholder="Product Used" >
+                        <label for="form_firstname">Producst Used</label>
+                          @error('products_used')
     <span class="text-danger">{{ $message }}</span>
 @enderror
                     </div>      
 
                     <div class="form-label-group">
-                        <input id="completion_date" type="date" name="completion_date" class="form-control" placeholder="Project Area" >
+                        <input id="completion_date" type="date" value="{{ old('completion_date') }}" name="completion_date" class="form-control" placeholder="Project Area" >
                         <label for="form_firstname">Completion Date</label>
                           @error('completion_date')
     <span class="text-danger">{{ $message }}</span>
@@ -144,7 +144,7 @@
                     </div>
 
                     <div class="form-label-group">
-    <input id="featured_image" type="file" name="featured_image" class="form-control" accept="image/*" >
+    <input id="featured_image" type="file" name="featured_image" value="{{ old('featured_image') }}" class="form-control" accept="image/*" value="{{old('featured_image')}}">
     <label>Featured Image</label>
       @error('featured_image')
     <span class="text-danger">{{ $message }}</span>
@@ -158,11 +158,12 @@
 </div>
 
                     <div class="mb-3">
-            <label>Gallery Images</label>
+            
             <div class="mb-3">
     <label>Gallery Images</label>
     <input type="file"
            name="gallery[]"
+           value="{{ old('gallery') }}"
            class="form-control"
            multiple
            accept="image/*">
@@ -175,10 +176,10 @@
 <div id="gallery-preview" class="row mt-3"></div>
 
                     <div class="form-label-group">
-                        <select name="status" id="status" class="form-control" >
-                             <option value="" disabled selected>Status</option>
-                             <option value="published">Published</option>
-                             <option value="draft">Draft</option>
+                        <select name="status" id="status"  class="form-control" >
+                             <option value="" disabled {{ old('status') ? '' : 'selected'  }}>Status</option>
+                             <option value="published" {{ old('status') == 'published' ? 'selected' : '' }}>Published</option>
+                             <option value="draft" {{ old('status') == 'draft' ? 'selected' : '' }}>Draft</option>
                         </select>
                           @error('status')
     <span class="text-danger">{{ $message }}</span>
@@ -186,7 +187,7 @@
                     </div>
 
                     <div class="form-check mb-3">
-                        <input type="checkbox" name="is_featured" value="1" class="form-check-input"> 
+                        <input type="checkbox"  name="is_featured" value="1" class="form-check-input"> 
                         <label class="form-check-label"> Featured Case Study </label> 
                         
                     </div>
@@ -240,7 +241,7 @@
                     <input type="text" class="form-control" id="seo_description" placeholder="SEO Description"
                         name="seo_description" value="{{ old('seo_description') }}">
                     <label for="">SEO Description</label>
-                      @error('description')
+                      @error('seo_description')
     <span class="text-danger">{{ $message }}</span>
 @enderror
                 </div>

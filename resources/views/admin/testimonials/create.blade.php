@@ -6,8 +6,8 @@
     min-height: 250px;
 }
 </style>
-{{-- @section('content')
-@if ($errors->any())
+@section('content')
+{{-- @if ($errors->any())
     <div class="alert alert-danger">
         <ul class="mb-0">
             @foreach ($errors->all() as $error)
@@ -113,8 +113,8 @@
 <div class="col-md-12 mb-3">
     <select name="status" class="form-control" >
         <option value="">Select Status *</option>
-        <option value="1">Active</option>
-        <option value="0">Inactive</option>
+        <option value="1" {{ old('status') == '1' ? 'selected' : '' }}>Active</option>
+        <option value="0" {{ old('status') == '0' ? 'selected' : '' }}>Inactive</option>
     </select>
       @error('status')
     <span class="text-danger">{{ $message }}</span>

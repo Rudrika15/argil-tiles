@@ -34,7 +34,7 @@
 			</div>
 		</div>
 	</div>
-    @if ($errors->any())
+    {{-- @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -42,7 +42,7 @@
             @endforeach
         </ul>
     </div>
-@endif
+@endif --}}
 
 	<form class="form-group" enctype="multipart/form-data" action="{{route('admin.cms.update',$cms->id)}}" method="post">
 		@csrf
@@ -52,77 +52,73 @@
 					<input id="name" type="text" name="title" value="{{$cms->title}}" class="form-control" placeholder="title" >
 					<label for="form_firstname">title</label>
                     @error('title')
-    <span class="text-danger">{{ $message }}</span>
-@enderror
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
 				</div>
-<div class="form-label-group">
-                <input type="text" name="slug" id="slug" value="{{$cms->slug}}" class="form-control">
-</div>
-
-				
-                    <div class="form-label-group">
-                         <textarea id="form_firstname"
-          name="description"
-          class="form-control"
-          {{-- placeholder="Description">{{ old('description', $cms->description) }}</textarea> --}}
-          @error('description')
-    <span class="text-danger">{{ $message }}</span>
-@enderror
-                    </div> 
+                <div class="form-label-group">
+                                <input type="text" name="slug" id="slug" value="{{$cms->slug}}" class="form-control">
+                </div>
+                <div class="form-label-group">
+                    <textarea id="form_firstname" name="description" class="form-control" placeholder="Description">{{$cms->description  }}</textarea>
+                    {{-- <textarea id="form_firstname" name="description" class="form-control" placeholder="Description">{{ old('description', $cms->description) }}</textarea> --}}
+         
+                    @error('description')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div> 
 
                  <div class="form-label-group">
-    <select name="status" id="status" class="form-control"  >
-        <option value="" disabled>Status</option>
-        <option value="1" {{ old('status', $cms->status) == 1 ? 'selected' : '' }}>
-            Active
-        </option>
-        <option value="0" {{ old('status', $cms->status) == 0 ? 'selected' : '' }}>
-            Inactive
-        </option>
-    </select>
-    @error('status
-    ')
-    <span class="text-danger">{{ $message }}</span>
-@enderror
-</div>
+                    <select name="status" id="status" class="form-control"  >
+                        <option value="" disabled>Status</option>
+                        <option value="1" {{ old('status', $cms->status) == 1 ? 'selected' : '' }}>
+                            Active
+                        </option>
+                        <option value="0" {{ old('status', $cms->status) == 0 ? 'selected' : '' }}>
+                            Inactive
+                        </option>
+                    </select>
+                    @error('status')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
 			</div>
 		</div>
 
 		<h4 class="mb-4">Edit Meta Properties for CMS</h4>
 
-   {{-- Meta title --}}
-    <div class="row mb-3">
-        <div class="col-sm-12 col-lg-3 col-md-12">
-            meta title
-        </div>
-        <div class="col">
-            <div class="form-label-group">
-                <input type="text" class="form-control" value="{{$cms->meta_title}}" id="meta_title" placeholder="" name="meta_title"
-                    value="{{ old('meta_title') }}">
-                <label for="">title</label>
-                @error('meta_title')
-    <span class="text-danger">{{ $message }}</span>
-@enderror
+        {{-- Meta title --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                meta title
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" value="{{$cms->meta_title}}" id="meta_title" placeholder="" name="meta_title"
+                        value="{{ old('meta_title') }}">
+                    <label for="">title</label>
+                    @error('meta_title')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
             </div>
         </div>
-    </div>
 
-    {{-- Meta Keywords --}}
-    <div class="row mb-3">
-        <div class="col-sm-12 col-lg-3 col-md-12">
-            Keyword
-        </div>
-        <div class="col">
-            <div class="form-label-group">
-                <input type="text" class="form-control" value="{{$cms->meta_keyword}}" id="meta_keyword" placeholder="Meta Keyword" name="meta_keyword"
-                    value="{{ old('meta_keyword') }}">
-                <label for="">keywords</label>
-                @error('meta_keyword')
-    <span class="text-danger">{{ $message }}</span>
-@enderror
+        {{-- Meta Keywords --}}
+        <div class="row mb-3">
+            <div class="col-sm-12 col-lg-3 col-md-12">
+                Keyword
+            </div>
+            <div class="col">
+                <div class="form-label-group">
+                    <input type="text" class="form-control" value="{{$cms->meta_keyword}}" id="meta_keyword" placeholder="Meta Keyword" name="meta_keyword"
+                        value="{{ old('meta_keyword') }}">
+                    <label for="">keywords</label>
+                    @error('meta_keyword')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
             </div>
         </div>
-    </div>
 
     {{-- Meta Description --}}
     <div class="row mb-3">
@@ -135,50 +131,38 @@
                     name="meta_description" value="{{ old('meta_description') }}">
                 <label for="">description</label>
                 @error('meta_description')
-    <span class="text-danger">{{ $message }}</span>
-@enderror
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
-        </div>
-
-        
-       
+        </div>  
     </div>
 
     {{-- OG Image --}}
     <div class="row mb-3">
-         <div class="col-md-3">
-       <img id="ogImagePreview"
-     src="{{ $cms->og_image ? asset($cms->og_image) : asset('slider/image_default.png') }}"
-     width="150"
-     height="100"
-     alt="Preview">
-     
-        @if(!empty($cms->og_image))
-            <div class="form-check mt-2">
-                <input type="checkbox"
-                       name="remove_image"
-                       value="1"
-                       class="form-check-input"
-                       id="remove_image">
+        <div class="col-md-3">
+            <img id="ogImagePreview" src="{{ $cms->og_image ? asset($cms->og_image) : asset('slider/image_default.png') }}" width="150" height="100" alt="Preview">
+            
+            @if(!empty($cms->og_image))
+                <div class="form-check mt-2">
+                    <input type="checkbox"
+                           name="remove_image"
+                           value="1"
+                           class="form-check-input"
+                           id="remove_image">
 
-                <label class="form-check-label" for="remove_image">
-                    Remove Image
-                </label>
-            </div>
-        @endif
+                    <label class="form-check-label" for="remove_image">
+                        Remove Image
+                    </label>
+                </div>
+            @endif
         </div>
 
         <div class="col-md-9">
             <label>OG Image</label>
-            <input type="file"
-                name="og_image"
-                id="og_image"
-                class="form-control"
-                accept="image/*"
-                onchange="readURL(this, '#ogImagePreview')">
+            <input type="file" name="og_image" id="og_image" class="form-control" accept="image/*" onchange="readURL(this, '#ogImagePreview')">
                 @error('og_image')
-    <span class="text-danger">{{ $message }}</span>
-@enderror
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
         </div>
     </div>
     {{-- author --}}
@@ -192,8 +176,8 @@
                     value="{{ old('author') }}">
                 <label for="">author</label>
                 @error('author')
-    <span class="text-danger">{{ $message }}</span>
-@enderror
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
         </div>
     </div>
@@ -208,8 +192,8 @@
                     name="tags" value="{{ old('tags') }}">
                 <label for="">tages</label>
                 @error('tags')
-    <span class="text-danger">{{ $message }}</span>
-@enderror
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
         </div>
     </div>
@@ -224,14 +208,14 @@
                     value="{{ old('og_url') }}">
                 <label for="">Url</label>
                 @error('og_url')
-    <span class="text-danger">{{ $message }}</span>
-@enderror
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
         </div>
     </div>
     <div class="text-center form-action">
-                <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
-            </div>
+        <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+    </div>
 
 </div>
 

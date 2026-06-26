@@ -243,7 +243,7 @@
                             href="/">HOME</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{ Request::is('profile', 'about', 'documentaryfilm', 'corevalues', 'groupcompany', 'achievements', 'plants', 'quality') ? 'active' : '' }}"
+                        <a class="nav-link dropdown-toggle {{ Request::is('profile', 'about-argil', 'documentaryfilm', 'corevalues', 'groupcompany', 'achievements', 'plants', 'quality') ? 'active' : '' }}"
                             href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             CORPORATE
@@ -254,8 +254,8 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item {{ Request::is('about') ? 'active' : '' }}"
-                                    href="/about">ABOUT </a></li>
+                            <li><a class="dropdown-item {{ Request::is('about-argil') ? 'active' : '' }}"
+                                    href="/about-argil">ABOUT </a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

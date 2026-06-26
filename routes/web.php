@@ -290,7 +290,7 @@ Route::get('/delete-case-studies/{slug}', [CaseStudyController::class, 'delete']
 
 Route::get('/', [VisitorController::class, 'home']);
 Route::get('/profile', [VisitorController::class, 'profile']);
-Route::get('/about', [VisitorController::class, 'about']);
+Route::get('/about-argil', [VisitorController::class, 'about']);
 Route::get('/documentaryfilm', [VisitorController::class, 'documentaryfilm']);
 Route::get('/corevalues', [VisitorController::class, 'corevalue']);
 Route::get('/groupcompany', [VisitorController::class, 'groupcompany']);

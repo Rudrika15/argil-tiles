@@ -52,16 +52,18 @@ class TestimonialController extends Controller
     'client_image.max' => 'Image size must not exceed 2 MB.',
 ]);
         
-        // $testimonial = new Testimonial();
-$imagePath = null;
+ $imageName = null;
 
 if ($request->hasFile('client_image')) {
+
     $image = $request->file('client_image');
+
     $imageName = time().'_'.$image->getClientOriginalName();
 
-    $image->move(public_path('testimonial-image'), $imageName);
-
-    $imagePath = 'testimonial-image/'.$imageName;
+    $image->move(
+        public_path('testimonial-image'),
+        $imageName
+    );
 }
 
 
@@ -83,7 +85,7 @@ if ($request->hasFile('client_image')) {
         'company_name' => $request->company_name,
         'designation' => $request->designation,
         'testimonial' => $request->testimonial,
-        'client_image' => $imagePath,
+        'client_image' => $imageName,
         'rating' => $request->rating,
         'location' => $request->location,
         'project_name' => $request->project_name,
@@ -141,23 +143,27 @@ if ($request->hasFile('client_image')) {
     'client_image.mimes' => 'Only PNG, JPG, JPEG and WEBP images are allowed.',
     'client_image.max' => 'Image size must not exceed 2 MB.',
 ]);
-    
-$imageName = $testimonial->client_image;
+   $imageName = $testimonial->client_image;
 
-if ($request->file('client_image')) {
+if ($request->hasFile('client_image')) {
 
     if (
         $testimonial->client_image &&
-        file_exists(public_path('testimonial-image/'.$testimonial->client_image))
+        file_exists(
+            public_path('testimonial-image/'.$testimonial->client_image)
+        )
     ) {
-        unlink(public_path('testimonial-image/'.$testimonial->client_image));
+        unlink(
+            public_path('testimonial-image/'.$testimonial->client_image)
+        );
     }
 
     $image = $request->file('client_image');
-    $imageName = $image->getClientOriginalName();
+
+    $imageName = time().'_'.$image->getClientOriginalName();
 
     $image->move(
-        public_path('testimonial-image/'),
+        public_path('testimonial-image'),
         $imageName
     );
 }
@@ -187,6 +193,17 @@ if ($request->file('client_image')) {
     public function delete(string $id)
     {
         $testimonial = Testimonial::findOrFail($id);
+        if (
+    $testimonial->client_image &&
+    file_exists(
+        public_path('testimonial-image/'.$testimonial->client_image)
+    )
+) {
+    unlink(
+        public_path('testimonial-image/'.$testimonial->client_image)
+    );
+}
+
         $testimonial->delete();
         return redirect()->route('admin.testimonials.index')->with('success','testimonial deleted successfully');
     }

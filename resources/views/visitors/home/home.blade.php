@@ -168,13 +168,12 @@ Get a price quote "
 
                         I would like to congratulate you on the same and motivate you to always be this humble and serving
                         to your brand and people associated....
-                        <a href="/about" class="text-dark text-decoration-none">About More <i
+                        <a href="/about-argil" class="text-dark text-decoration-none">About More <i
                                 class="bi bi-arrow-right"></i> </a>
                     </p>
 
         <!-- Explore More Section -->
         <h5 class="fw-bold mt-4 mb-3">Explore More</h5>
-
         <div class="row g-3">
 
             <div class="col-md-4">

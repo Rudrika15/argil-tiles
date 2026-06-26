@@ -42,28 +42,6 @@ class CmsController extends Controller
     'tags' => 'nullable|string|max:500',
 
     'og_url' => 'nullable|url|max:255',
-], [
-
-    'title.required' => 'Page title is required.',
-    'title.max' => 'Page title cannot exceed 255 characters.',
-
-    'slug.required' => 'Slug is required.',
-    'slug.unique' => 'This slug already exists.',
-    'slug.regex' => 'Slug can contain only lowercase letters, numbers and hyphens.',
-
-    'description.required' => 'Description is required.',
-
-    'status.required' => 'Please select a status.',
-
-    'meta_title.max' => 'Meta title should not exceed 60 characters for SEO.',
-
-    'meta_description.max' => 'Meta description should not exceed 160 characters for SEO.',
-
-    'og_image.image' => 'Please upload a valid image.',
-    'og_image.mimes' => 'Only JPG, JPEG, PNG and WEBP files are allowed.',
-    'og_image.max' => 'Image size must not exceed 2MB.',
-
-    'og_url.url' => 'Please enter a valid URL.',
 ]);
         $cms = new Cms();
 //         $title = strtolower($request->title);
@@ -157,28 +135,7 @@ class CmsController extends Controller
             'author' => 'nullable|string|max:255',
             'tags' => 'nullable|string',
             'og_url' => 'nullable|url|max:255'
-            // 'og_image' => 'nullable|string|max:255',
-        ], [
-
-    'title.required' => 'Title is required.',
-    'title.max' => 'Title cannot exceed 255 characters.',
-
-    'slug.unique' => 'This slug already exists.',
-
-    'description.required' => 'Description is required.',
-
-    'status.required' => 'Please select a status.',
-
-    'meta_title.max' => 'Meta title cannot exceed 255 characters.',
-
-    'og_image.image' => 'Please upload a valid image file.',
-    'og_image.mimes' => 'Only JPG, JPEG, PNG and WEBP images are allowed.',
-    'og_image.max' => 'Image size must not exceed 2 MB.',
-
-    'author.max' => 'Author name cannot exceed 255 characters.',
-
-    'og_url.url' => 'Please enter a valid URL.',
-    'og_url.max' => 'URL cannot exceed 255 characters.',]);
+        ]);
 
         $cms->title = $request->title;
     //    $cms->slug = Str::slug($request->slug ?: $request->title);

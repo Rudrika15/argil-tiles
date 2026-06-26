@@ -39,9 +39,14 @@
         <form class="form-group" enctype="multipart/form-data" action="{{ route('blog.store') }}" method="post">
             @csrf
             <div class="form-label-group">
-                <input id="title" type="text" name="title" class="form-control" placeholder="Title" value="{{ old('title') }}" required>
+                <input id="title" type="text" name="title" class="form-control" placeholder="Title" value="{{ old('title') }}" >
                 <label for="form_firstname">Title</label>
             </div>
+             @error('title')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
 
             <input type="hidden" name="slug" id="slug">
 
@@ -67,9 +72,14 @@
                 <div class="col-md-6">
                     <div class="form-label-group">
                         <input accept='image/*' onchange="readURL(this,'#image')" id="form_firstname" type="file"
-                            name="image" class="form-control" placeholder="image" required>
+                            name="image" class="form-control" placeholder="image" >
 
-                        <label for="form_firstname">Blog Image</label>
+                        <label for="image">Blog Image</label>
+                         @error('description')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
                     </div>
                 </div>
                 <div class="col-md-6"> <img src="{{ url('slider/image_default.png') }}" alt="image" id="image"
@@ -79,7 +89,7 @@
             </div>
            <br>
 <div class="form-label-group">
-    <select name="status" id="status" class="form-control" required>
+    <select name="status" id="status" class="form-control" >
         <option value="" disabled {{ old('status') ? '' : 'selected' }}>Status</option>
 
         <option value="active" {{ old('status') == 'active' ? 'selected' : '' }}>
@@ -206,6 +216,11 @@
                         <input type="text" class="form-control" id="author" placeholder="" name="author"
                             value="{{ old('author') }}">
                         <label for="">author</label>
+                         @error('author')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
                     </div>
                 </div>
             </div>

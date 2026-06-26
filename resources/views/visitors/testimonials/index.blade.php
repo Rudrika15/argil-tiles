@@ -160,7 +160,7 @@
         </div>
 
         <p class="testimonial-text">
-            "{{ Str::limit($testimonial->testimonial, 180) }}"
+            {{ strip_tags($testimonial->testimonial) }}
         </p>
 
         <div class="d-flex align-items-center mt-2">
