@@ -67,6 +67,7 @@
             transition: all 0.3s ease;
             padding: 1.2rem 1rem;
             background-color: white;
+            
         }
 
         .sticky-navbar {
@@ -243,7 +244,7 @@
                             href="/">HOME</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{ Request::is('profile', 'about', 'documentaryfilm', 'corevalues', 'groupcompany', 'achievements', 'plants', 'quality') ? 'active' : '' }}"
+                        <a class="nav-link dropdown-toggle {{ Request::is('profile', 'about-argil', 'documentaryfilm', 'corevalues', 'groupcompany', 'achievements', 'plants', 'quality') ? 'active' : '' }}"
                             href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             CORPORATE
@@ -254,8 +255,8 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item {{ Request::is('about') ? 'active' : '' }}"
-                                    href="/about">ABOUT </a></li>
+                            <li><a class="dropdown-item {{ Request::is('about-argil') ? 'active' : '' }}"
+                                    href="/about-argil">ABOUT </a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -313,7 +314,7 @@
                             href="/catalogue">CATALOGUE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="/contact">CONTACT</a>
+                        <a class="nav-link {{ Request::is('contact-argil') ? 'active' : '' }}" href="/contact-argil">CONTACT</a>
                     </li>
                 </ul>
 

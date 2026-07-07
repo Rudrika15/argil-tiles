@@ -139,7 +139,7 @@
                     <div class="card blog-card h-100 border-0 shadow-sm">
 
                         <img src="{{ asset('blogimage/' . $blog->image) }}"
-                             alt="argil blog"
+                             alt="argil blog "
                              title="argil blog"
                              loading="lazy"
                              class="card-img-top blog-card-image"

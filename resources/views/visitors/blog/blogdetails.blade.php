@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 <style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 .blog-hero{
@@ -38,7 +39,7 @@
     content:"✦";
     position:absolute;
     left:50%;
-    top:-14px;
+    top:-11px;
     transform:translateX(-50%);
     color:#ccb19b;
 }
@@ -437,7 +438,7 @@
 
             <div class="author-logo ml-2">
 
-                <img src="{{ asset('assets/asset/logo.png') }}"
+                <img src="{{ asset('assets/asset/logo.png') }}" class="p-3"
                     alt="Argil">
 
             </div>

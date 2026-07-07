@@ -41,7 +41,13 @@
                         <td>{{ $data->slug }}</td>
                         {{-- <td>{{ Str::limit($data->description, 500, '...') }}</td> --}}
                         {{-- <td><img src="{{ 'blogimage/'.$data->image }}" style="height:200px" class="img-thumbnail"></td> --}}
-                        <td>{{ $data->status ? 'Active' : 'Inactive' }}</td>
+                        <td>
+                            @if($data->status == 1)
+                                <span class="">Active</span>
+                            @else
+                                <span class="badge bg-danger">Inactive</span>
+                            @endif
+                        </td>
                         <td>
                             <span class="d-flex" style="gap: 8px">
                             <a href = "{{ route('admin.cms.edit', $data->id) }}" class="btn btn-primary"> Edit </a>
@@ -60,6 +66,21 @@
 
 
 @endsection
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.0/js/dataTables.bootstrap4.min.js"></script>
+
+<script>
+$(document).ready(function () {
+    $('#dataTable').DataTable({
+        order: [[0, 'desc']]
+    });
+});
+</script>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

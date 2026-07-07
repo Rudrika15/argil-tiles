@@ -214,6 +214,11 @@
                     class="nav-item {{ request()->routeIs('admin.testimonials.index') || request()->routeIs('admin.testimonials.edit') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('admin.testimonials.index') }}">Testimonials</a>
                 </li>
+                
+                <li
+                    class="nav-item {{ request()->routeIs('admin.case_studies.index') || request()->routeIs('admin.case_studies.edit') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.case_studies.index') }}">Case Studies</a>
+                </li>
 
             </ul>
         </div>

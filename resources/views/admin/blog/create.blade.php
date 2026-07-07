@@ -39,15 +39,20 @@
         <form class="form-group" enctype="multipart/form-data" action="{{ route('blog.store') }}" method="post">
             @csrf
             <div class="form-label-group">
-                <input id="title" type="text" name="title" class="form-control" placeholder="Title" required>
+                <input id="title" type="text" name="title" class="form-control" placeholder="Title" value="{{ old('title') }}" >
                 <label for="form_firstname">Title</label>
             </div>
+             @error('title')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
 
             <input type="hidden" name="slug" id="slug">
 
 
             <div class="form-label-group">
-                <textarea id="form_firstname" name="description" class="form-control" placeholder="Description"></textarea>
+                <textarea id="form_firstname" name="description" class="form-control" placeholder="Description">{{ old('description') }}</textarea>
             </div>
             @error('description')
                 <div class="invalid-feedback d-block">
@@ -67,9 +72,14 @@
                 <div class="col-md-6">
                     <div class="form-label-group">
                         <input accept='image/*' onchange="readURL(this,'#image')" id="form_firstname" type="file"
-                            name="image" class="form-control" placeholder="image" required>
+                            name="image" class="form-control" placeholder="image" >
 
-                        <label for="form_firstname">Blog Image</label>
+                        <label for="image">Blog Image</label>
+                         @error('description')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
                     </div>
                 </div>
                 <div class="col-md-6"> <img src="{{ url('slider/image_default.png') }}" alt="image" id="image"
@@ -77,15 +87,28 @@
                 </div>
                 
             </div>
-            <br>
-            <div class="form-label-group">
-                            <select name="status" id="status" class="form-control" required>
-                                <option value="" disabled selected>Status</option>
-                                <option value="active">Active</option>
-                                <option value="inactive">Inactive</option>
-                                <option value="published">Published</option>
-                            </select>
-                    </div>
+           <br>
+<div class="form-label-group">
+    <select name="status" id="status" class="form-control" >
+        <option value="" disabled {{ old('status') ? '' : 'selected' }}>Status</option>
+
+        <option value="active" {{ old('status') == 'active' ? 'selected' : '' }}>
+            Active
+        </option>
+
+        <option value="deactive" {{ old('status') == 'deactive' ? 'selected' : '' }}>
+            Deactive
+        </option>
+
+        <option value="published" {{ old('status') == 'published' ? 'selected' : '' }}>
+            Published
+        </option>
+    </select>
+
+    @error('status')
+        <span class="text-danger">{{ $message }}</span>
+    @enderror
+</div>
             {{-- add meta propertys --}}
             <hr class="sidebar-divider my-4">
 
@@ -193,6 +216,11 @@
                         <input type="text" class="form-control" id="author" placeholder="" name="author"
                             value="{{ old('author') }}">
                         <label for="">author</label>
+                         @error('author')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 @section('seosection')
     <meta name="description"
         content="Premium quartz stone slabs for
@@ -36,7 +36,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         Quartz Countertop Slabs Manufacturer in Morbi | Argil
     </title>
 @endsection
-@section('content')
+@section('content') --}}
 {{--     
 @foreach($faqs as $faq)
     <div class="accordion-item bg-white">
@@ -46,7 +46,11 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
 @endforeach --}}
 
   <div class="container my-5">
-    <h2 class="text-center mb-4 fw-bold">FAQs</h2>
+    <div class="text-center mb-5">
+                <h6 class="text-uppercase fw-bold ls-2" style="color: #ccb19b; letter-spacing: 2px;">Support Center</h6>
+                <h2 class="display-6 fw-bold text-dark">Frequently Asked Questions</h2>
+                <div class="mx-auto mt-3" style="width: 50px; height: 3px; background-color: #ccb19b !important;"></div>
+            </div>
 
     <div class="accordion" id="accordionExample">
 
@@ -140,4 +144,4 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                 });
         });
     </script>
-@endsection
+{{-- @endsection --}}

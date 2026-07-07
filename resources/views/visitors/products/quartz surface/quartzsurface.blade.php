@@ -36,6 +36,14 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         Quartz Countertop Slabs Manufacturer in Morbi | Argil
     </title>
 @endsection
+<style>
+    .contact-image{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:15px;
+}
+</style>
 @section('content')
     <!-- breadcrumb -->
     <div class="breadcrumb d-flex justify-content-between align-items-center">
@@ -76,7 +84,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <!-- Why Choose Us -->
 
 
-    <div class="container">
+    <div class="container" id="images">
 
 
         <div class="row pb-5">
@@ -97,6 +105,11 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     </a>
                 </div>
             @endforeach
+        </div>
+        <div class="row">
+
+            {{ $data->links('pagination::bootstrap-5') }}
+
         </div>
     </div>
 
@@ -232,7 +245,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                         facility </p>
                 </div>
             </div>
-            <div class="row pb-5">
+            <div class="row pb-5 g-4">
                 <div class="col-md-3">
                     <div class="card text-center mt-3 h-100">
                         <div class="d-flex justify-content-center mt-4">
@@ -312,254 +325,14 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         </div>
     </div>
 
-    <div class="container my-5">
-        <h2 class="text-center mb-4 fw-bold">FAQs</h2>
 
-        <div class="accordion" id="accordionExample">
-
-            <!-- FAQ 1 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
-                        aria-controls="collapseOne">
-                        What are quartz countertops?
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Quartz countertops are elegant, practical, and low-maintenance, made from natural quartz stone with
-                        resin.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 2 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                        aria-controls="collapseTwo">
-                        What are the advantages of quartz slabs?
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Attractive appearance, ease of maintenance, variety of options, cost-effectiveness, and durability.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 3 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                        aria-controls="collapseThree">
-                        What are the disadvantages of quartz slabs?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Quartz is not heat-resistant and can be more expensive than some other countertop materials like
-                        granite.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 4 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                        aria-controls="collapseFour">
-                        How can quartz slabs be used?
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Quartz slabs are used for countertops, backsplashes, tabletops, and even flooring in kitchens and
-                        bathrooms.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 5 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
-                        aria-controls="collapseFive">
-                        Are quartz slabs high maintenance?
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Quartz slabs are low-maintenance and easy to clean with mild soap and water. They do not require
-                        sealing like granite.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 6 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
-                        aria-controls="collapseSix">
-                        How much is a slab of quartz?
-                    </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        The price of a quartz slab can vary, but on average it ranges from $50 to $100 per square foot,
-                        depending on the brand and quality.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 7 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingSeven">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
-                        aria-controls="collapseSeven">
-                        Do quartz countertops scratch easily?
-                    </button>
-                </h2>
-                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Quartz countertops are highly scratch-resistant due to their hard surface, but they can still get
-                        scratched with excessive force.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 8 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingEight">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false"
-                        aria-controls="collapseEight">
-                        Is quartz more expensive than granite?
-                    </button>
-                </h2>
-                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Quartz is generally more expensive than granite, though the cost can vary depending on quality and
-                        brand.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 9 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingNine">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false"
-                        aria-controls="collapseNine">
-                        Is quartz better than granite?
-                    </button>
-                </h2>
-                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Quartz is engineered and more consistent in color and pattern, whereas granite is a natural stone
-                        with unique patterns.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 10 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingTen">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false"
-                        aria-controls="collapseTen">
-                        Does quartz stain easily?
-                    </button>
-                </h2>
-                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Quartz is highly stain-resistant, but it's still important to clean up spills immediately,
-                        especially for acidic substances.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 11 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingEleven">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false"
-                        aria-controls="collapseEleven">
-                        Is quartz cheaper than concrete?
-                    </button>
-                </h2>
-                <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Quartz countertops can be more expensive than concrete, depending on the quality, but offer more
-                        durability and variety in design.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 12 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingTwelve">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false"
-                        aria-controls="collapseTwelve">
-                        Is quartz cheaper than marble?
-                    </button>
-                </h2>
-                <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Yes, quartz is generally more affordable than marble, which tends to be more expensive due to its
-                        natural stone origin.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 13 -->
-            <div class="accordion-item bg-white">
-                <h2 class="accordion-header" id="headingThirteen">
-                    <button class="accordion-button collapsed bg-white text-dark" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false"
-                        aria-controls="collapseThirteen">
-                        How should quartz be cleaned?
-                    </button>
-                </h2>
-                <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body bg-white text-dark">
-                        Clean quartz surfaces with warm water and a mild detergent. Avoid harsh chemicals or abrasive
-                        materials.
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
+    @include('visitors.faq.index')
 
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <img src="asset/images/argileimage/footerimge.jpg" alt="Quartz product" title="Quartz product"
-                    class="img-fluid mb-5">
+                    class=" contact-image mb-5">
             </div>
             <div class="col-md-6">
                 <h2 class="fw-bold">Let's Be in Touch !!!
@@ -617,8 +390,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
 
                     <div class="form-floating mb-3">
                         <textarea class="form-control" id="floatingMessage" placeholder="Your Message" name="form_message"
-                            style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.
-')"
+                            style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.')"
                             oninput="this.setCustomValidity('')"></textarea>
                         <label for="floatingMessage">Your Message</label>
                     </div>
@@ -690,6 +462,17 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
                 });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.pagination a').forEach(link => {
+                // Avoid duplicate hashes
+                if (!link.href.includes('#images')) {
+                    link.href += '#images';
+                }
+            });
         });
     </script>
 @endsection

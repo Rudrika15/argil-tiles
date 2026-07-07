@@ -36,8 +36,11 @@
                            class="form-control"
                            placeholder="Question"
                            value="{{ old('question') }}"
-                           required>
+                           >
                     <label>Question</label>
+                    @error('question')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
                 </div>
 
                 {{-- Answer --}}
@@ -48,6 +51,9 @@
                               rows="6"
                               {{-- placeholder="Answer">{{ old('answer') }}</textarea> --}}
                               placeholder="Answer">{{ $faq->answer }}</textarea>
+                              @error('answer')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
                 </div>
 
                 {{-- Schema --}}

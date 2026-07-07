@@ -40,21 +40,35 @@
             @csrf
             <div class="form-label-group">
                 <input id="form_firstname" type="text" name="title" value="{{ $blogs->title }}" class="form-control"
-                    placeholder="Title" required>
+                    placeholder="Title" >
                 <label for="form_firstname">Title</label>
+                 @error('title')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
             </div>
 
 
             <div class="form-label-group">
                 <textarea id="description" name="description" class="form-control" placeholder="description">{{ $blogs->description }}</textarea>
+                 @error('description')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-label-group">
                         <input accept='image/*' onchange="readURL(this,'#image')" id="form_firstname" type="file"
                             name="image" class="form-control" placeholder="image">
-
                         <label for="form_firstname">Blog Image</label>
+                         @error('image')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
                     </div>
                 </div>
                 <div class="col-md-6"> <img src="{{ asset('blogimage/' . $blogs->image) }}" alt="image" id="image"
@@ -69,6 +83,11 @@
         <option value="deactive" {{ old('status', $blogs->status) == 'deactive' ? 'selected' : '' }}>Deactive</option>
         <option value="publish" {{ old('status', $blogs->status) == 'publish' ? 'selected' : '' }}>Publish</option>
     </select>
+     @error('status')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
 </div>
             {{-- add meta propertys --}}
             <hr class="sidebar-divider my-4">
@@ -178,6 +197,11 @@
                         <input type="text" class="form-control" id="author" placeholder="" name="author"
                             value="{{ $metablogs->author ?? '' }}">
                         <label for="">author</label>
+                         @error('author')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
                     </div>
                 </div>
             </div>

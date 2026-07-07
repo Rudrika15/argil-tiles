@@ -225,3 +225,17 @@ ul.pagination li.page-item.disabled a.page-link {
     background-repeat: no-repeat;
 }
 
+.client-image{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#d4b59e; /* Change to your preferred color */
+    color:#fff;
+    font-size:24px;
+    font-weight:700;
+    object-fit:cover;
+    flex-shrink:0;
+}

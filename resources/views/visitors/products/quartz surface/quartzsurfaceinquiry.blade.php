@@ -18,6 +18,7 @@
 
     <title>Quartz | {{ $data->name }} | Premium Quartz Surfaces by Argil</title>
 
+    @verbatim
     <script type="application/ld+json">
         {
           "@context": "https://schema.org/",
@@ -44,6 +45,7 @@
 
         }
         </script>
+        @endverbatim
 @endsection
 @section('content')
     <!-- breadcrumb -->

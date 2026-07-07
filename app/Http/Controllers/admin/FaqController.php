@@ -9,18 +9,26 @@ use Illuminate\Http\Request;
 class FaqController extends Controller
 {
     public function index(){
-        $faq = Faq::latest()->paginate(10);
+        $faq = Faq::latest()->get();
         return view('/admin.faqs.index',compact('faq'));
     }
 
     public function create(){
-        return view('/admin.faqs.create');
+        return view('admin.faqs.create');
     }
 
     public function store(Request $request){
         $request->validate([
-            'question' => 'required|string|max:255',
-            'answer' => 'required',
+            'question' => 'required|string|max:255|regex:/[a-zA-Z]/',
+           'answer' => 'required|string|regex:/[a-zA-Z]/|min:10',
+        ],[
+             'question.required' => 'Question is required.',
+    'question.regex' => 'Question must contain at least one alphabet character.',
+
+    'answer.required' => 'Answer is required.',
+    'answer.regex' => 'Answer must contain at least one alphabet character.',
+    'answer.min' => 'Answer must contain at least ten alphabet character.'
+
         ]);
 
         $faq = new Faq();
@@ -33,11 +41,11 @@ class FaqController extends Controller
 
         $faq->save();
 
-        return redirect()->route('admin.faqs.index')->with('success', 'CMS created successfully.');
+        return redirect()->route('admin.faqs.index')->with('success', 'FAQ created successfully.');
     }
 
     public function edit($id){
-        $faq = Faq::find($id);
+        $faq = Faq::findOrFail($id);
         return view('admin.faqs.edit',compact('faq'));
     }
 
@@ -45,9 +53,17 @@ class FaqController extends Controller
 
         $faq = Faq::findOrFail($id);
 
-        $request->validate([
-            'question' => 'required|string|max:255',
-            'answer' => 'required',
+       $request->validate([
+            'question' => 'required|string|max:255|regex:/[a-zA-Z]/',
+           'answer' => 'required|string|regex:/[a-zA-Z]/|min:10',
+        ],[
+             'question.required' => 'Question is required.',
+    'question.regex' => 'Question must contain at least one alphabet character.',
+
+    'answer.required' => 'Answer is required.',
+    'answer.regex' => 'Answer must contain at least one alphabet character.',
+    'answer.min' => 'Answer must contain at least ten alphabet character.'
+
         ]);
 
         $faq->question = $request->question;
@@ -58,7 +74,7 @@ class FaqController extends Controller
 
         $faq->save();
 
-        return redirect()->route('admin.faqs.index')->with('success', 'CMS created successfully.');
+        return redirect()->route('admin.faqs.index')->with('success', 'FAQ Updated successfully.');
     }
 
     public function delete($id){

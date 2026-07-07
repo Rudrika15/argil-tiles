@@ -18,6 +18,7 @@
 
     <title> {{ $data->names }} | Premium SPC Flooring Solutions by Argil</title>
 
+@verbatim
 
     <script type="application/ld+json">
         {
@@ -46,6 +47,8 @@
 
         }
         </script>
+        @endverbatim
+
 @endsection
 @section('content')
     <!-- breadcrumb -->

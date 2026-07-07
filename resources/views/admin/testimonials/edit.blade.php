@@ -1,8 +1,14 @@
 @extends('admin.layouts.app')
 
 @section('pageTitle','Edit Testimonial')
+<style>
+.ck-editor__editable {
+    min-height: 250px;
+}
+</style>
 
 @section('content')
+
 
 <div class="main-content">
     <div class="row">
@@ -18,73 +24,81 @@
         </div>
     </div>
 
-<form class="form-group"
-    enctype="multipart/form-data"
-    action="{{ route('admin.testimonials.update', $testimonial->id) }}"
-    method="POST">
+    <form class="form-group"
+        enctype="multipart/form-data"
+        action="{{ route('admin.testimonials.update', $testimonial->id) }}"
+        method="POST">
 
-    @csrf
-    
+        @csrf
 
-    <div class="row">
-        <div class="col-md-12">
 
-            <div class="form-label-group">
-                <input type="text" name="client_name" class="form-control"
-                    placeholder="Client Name"
-                    value="{{ $testimonial->client_name }}" required>
-                <label>Client Name</label>
-            </div>
+        <div class="row">
+            <div class="col-md-12">
 
-            <div class="form-label-group">
-                <input type="text" name="company_name" class="form-control"
-                    placeholder="Company Name"
-                    value="{{ $testimonial->company_name }}">
-                <label>Company Name</label>
-            </div>
+                <div class="form-label-group">
+                    <input type="text" name="client_name" class="form-control"
+                        placeholder="Client Name"
+                        value="{{ $testimonial->client_name }}">
+                    <label>Client Name</label>
+                    @error('client_name')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                
+                </div>
 
-            <div class="form-label-group">
-                <input type="text" name="designation" class="form-control"
-                    placeholder="Designation"
-                    value="{{ $testimonial->designation }}">
-                <label>Designation</label>
-            </div>
+                <div class="form-label-group">
+                    <input type="text" name="company_name" class="form-control"
+                        placeholder="Company Name"
+                        value="{{ $testimonial->company_name }}">
+                    <label>Company Name</label>
+                </div>
 
-            <div class="form-label-group">
-                <input type="text" name="location" class="form-control"
-                    placeholder="Location"
-                    value="{{ $testimonial->location }}">
-                <label>Location</label>
-            </div>
+                <div class="form-label-group">
+                    <input type="text" name="designation" class="form-control"
+                        placeholder="Designation"
+                        value="{{ $testimonial->designation }}">
+                    <label>Designation</label>
+                </div>
 
-            <div class="form-label-group">
-                <input type="text" name="project_name" class="form-control"
-                    placeholder="Project Name"
-                    value="{{ $testimonial->project_name }}">
-                <label>Project Name</label>
-            </div>
+                <div class="form-label-group">
+                    <input type="text" name="location" class="form-control"
+                        placeholder="Location"
+                        value="{{ $testimonial->location }}">
+                    <label>Location</label>
+                </div>
 
-            <div class="form-label-group">
-                <input type="text" name="product_type" class="form-control"
-                    placeholder="Product Type"
-                    value="{{ $testimonial->product_type }}">
-                <label>Product Type</label>
-            </div>
+                <div class="form-label-group">
+                    <input type="text" name="project_name" class="form-control"
+                        placeholder="Project Name"
+                        value="{{ $testimonial->project_name }}">
+                    <label>Project Name</label>
+                </div>
 
-            <div class="form-label-group">
-                <select name="rating" class="form-control" required>
-                    <option value="">Select Rating</option>
-                    @for($i = 1; $i <= 5; $i++)
-                        <option value="{{ $i }}"
-                            {{ $testimonial->rating == $i ? 'selected' : '' }}>
-                            {{ $i }} Star
-                        </option>
-                    @endfor
-                </select>
+                <div class="form-label-group">
+                    <input type="text" name="product_type" class="form-control"
+                        placeholder="Product Type"
+                        value="{{ $testimonial->product_type }}">
+                    <label>Product Type</label>
+                </div>
+
+                <div class="form-label-group">
+                    <select name="rating" class="form-control" >
+                        <option value="">Select Rating</option>
+                        @for($i = 1; $i <= 5; $i++)
+                            <option value="{{ $i }}"
+                                {{ $testimonial->rating == $i ? 'selected' : '' }}>
+                                {{ $i }} Star
+                            </option>
+                        @endfor
+                    </select>
+                    @error('rating')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+        
             </div>
 
             <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-9">
         <div class="form-label-group">
             <input accept="image/*"
                 onchange="readURL(this,'#image')"
@@ -95,10 +109,14 @@
                 placeholder="Client Image">
 
             <label for="form_firstname">Client Image</label>
+            @error('client_image')
+                <span class="text-danger">{{ $message }}</span>
+            @enderror
+        
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-3">
         <img src="{{ asset('testimonialimage/' . $testimonial->image) }}"
             alt="image"
             id="image"
@@ -110,11 +128,17 @@
                 <textarea name="testimonial"
                     class="form-control"
                     rows="5"
+                    id="testimonial"
                     placeholder="Testimonial">{{ $testimonial->testimonial }}</textarea>
+                     @error('testimonial')
+                <div class="invalid-feedback d-block">
+                    {{ $message }}
+                </div>
+            @enderror
             </div>
 
             <div class="form-label-group">
-                <select name="status" class="form-control" required>
+                <select name="status" class="form-control" >
                     <option value="1" {{ $testimonial->status == 1 ? 'selected' : '' }}>
                         Active
                     </option>
@@ -122,6 +146,10 @@
                         Inactive
                     </option>
                 </select>
+                  @error('status')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
+        
             </div>
 
             <div class="form-group">
@@ -144,6 +172,7 @@
 </form>
 
 </div>
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 
 <script>
     function readURL(input, tgt) {
@@ -159,4 +188,24 @@
     }
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    console.log('Page Loaded');
+
+    const testimonial = document.querySelector('#testimonial');
+
+    if (testimonial) {
+        ClassicEditor
+            .create(testimonial)
+            .then(editor => {
+                console.log('CKEditor Loaded');
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+
+});
+</script>
 @endsection

@@ -1,9 +1,21 @@
 @extends('admin.layouts.app')
 
 @section('pageTitle', 'Create Testimonial')
-
+<style>
+.ck-editor__editable {
+    min-height: 250px;
+}
+</style>
 @section('content')
-
+{{-- @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif --}}
 <div class="main-content">
 
     <div class="row mb-3">
@@ -27,13 +39,17 @@
            <div class="col-md-12 mb-3">
     <input type="text" name="client_name" class="form-control"
         placeholder="Client Name *"
-        value="{{ old('client_name') }}" required>
+        value="{{ old('client_name') }}" > 
+        @error('client_name')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
 </div>
 
 <div class="col-md-12 mb-3">
     <input type="text" name="company_name" class="form-control"
         placeholder="Company Name"
         value="{{ old('company_name') }}">
+        
 </div>
 
 <div class="col-md-12 mb-3">
@@ -61,7 +77,7 @@
 </div>
 
 <div class="col-md-12 mb-3">
-    <select name="rating" class="form-control" required>
+    <select name="rating" class="form-control" >
         <option value="">Select Rating *</option>
         <option value="1">1 Star</option>
         <option value="2">2 Stars</option>
@@ -69,6 +85,10 @@
         <option value="4">4 Stars</option>
         <option value="5">5 Stars</option>
     </select>
+      @error('rating')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
+        
 </div>
 
 <div class="col-md-12 mb-3">
@@ -91,19 +111,28 @@
 </div>
 
 <div class="col-md-12 mb-3">
-    <select name="status" class="form-control" required>
+    <select name="status" class="form-control" >
         <option value="">Select Status *</option>
-        <option value="1">Active</option>
-        <option value="0">Inactive</option>
+        <option value="1" {{ old('status') == '1' ? 'selected' : '' }}>Active</option>
+        <option value="0" {{ old('status') == '0' ? 'selected' : '' }}>Inactive</option>
     </select>
+      @error('status')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
+        
 </div>
 
 <div class="col-md-12 mb-3">
-    <textarea name="testimonial"
+    <textarea id="testimonial"
+        name="testimonial"
         rows="5"
         class="form-control"
         placeholder="Enter Testimonial *"
-        required>{{ old('testimonial') }}</textarea>
+        >{{ old('testimonial') }}</textarea>
+          @error('testimonial')
+    <span class="text-danger">{{ $message }}</span>
+@enderror
+        
 </div>
 
 <div class="text-center form-action">
@@ -114,6 +143,7 @@
     </form>
 
 </div>
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 
 <script>
     function readURL(input, target) {
@@ -127,6 +157,26 @@
             reader.readAsDataURL(input.files[0]);
         }
     }
-</script>
 
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    console.log('Page Loaded');
+
+    const testimonial = document.querySelector('#testimonial');
+
+    if (testimonial) {
+        ClassicEditor
+            .create(testimonial)
+            .then(editor => {
+                console.log('CKEditor Loaded');
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+
+});
+</script>
 @endsection
