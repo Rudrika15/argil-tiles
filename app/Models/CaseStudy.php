@@ -30,6 +30,7 @@ class CaseStudy extends Model
     ];
 
     protected $casts = [
-        'gallery' => 'array'
+        'gallery' => 'array',
+        'completion_date' => 'date'
     ];
 }

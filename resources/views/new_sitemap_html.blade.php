@@ -161,6 +161,35 @@
                     <td>weekly</td>
                     <td>0.8</td>
                 </tr>
+                {{-- Dynamic Blogs --}}
+@foreach($blogs as $blog)
+<tr>
+    <td>
+        <a href="{{ url('/blogdetails/'.$blog->slug) }}">
+            {{ url('/blogdetails/'.$blog->slug) }}
+        </a>
+    </td>
+    <td>{{ optional($blog->updated_at)->format('Y-m-d') }}</td>
+    <td>monthly</td>
+    <td>0.7</td>
+</tr>
+@endforeach
+
+{{-- Dynamic Authors --}}
+@foreach($authors as $author)
+<tr>
+    <td>
+        <a href="{{ url('/authors/'.$author->author) }}">
+            {{ url('/authors/'.$author->author) }}
+        </a>
+    </td>
+    <td>{{ now()->format('Y-m-d') }}</td>
+    <td>monthly</td>
+    <td>0.6</td>
+</tr>
+@endforeach
+
+
                 <tr>
                     <td><a href="https://argiltiles.com/privacyPolicy">https://argiltiles.com/privacyPolicy</a></td>
                     <td>2026-03-23</td>
@@ -222,6 +251,49 @@
                     <td>weekly</td>
                     <td>0.8</td>
                 </tr>
+
+                <tr>
+    <td><a href="https://argiltiles.com/case-studies">https://argiltiles.com/case-studies</a></td>
+    <td>2026-07-08</td>
+    <td>weekly</td>
+    <td>0.8</td>
+</tr>
+{{-- Dynamic Case Studies --}}
+@foreach($caseStudies as $caseStudy)
+<tr>
+    <td>
+        <a href="{{ url('/case-details/'.$caseStudy->slug) }}">
+            {{ url('/case-details/'.$caseStudy->slug) }}
+        </a>
+    </td>
+    <td>{{ optional($caseStudy->updated_at)->format('Y-m-d') }}</td>
+    <td>monthly</td>
+    <td>0.7</td>
+</tr>
+@endforeach
+
+<tr>
+    <td><a href="https://argiltiles.com/testimonial">https://argiltiles.com/testimonial</a></td>
+    <td>2026-07-08</td>
+    <td>monthly</td>
+    <td>0.7</td>
+</tr>
+
+{{-- Dynamic CMS Pages --}}
+@foreach($cmsPages as $page)
+<tr>
+    <td>
+        <a href="{{ url('/'.$page->slug) }}">
+            {{ url('/'.$page->slug) }}
+        </a>
+    </td>
+    <td>{{ optional($page->updated_at)->format('Y-m-d') }}</td>
+    <td>monthly</td>
+    <td>0.8</td>
+</tr>
+@endforeach
+
+
             </tbody>
         </table>
     </main>

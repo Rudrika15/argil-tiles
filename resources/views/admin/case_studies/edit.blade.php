@@ -108,8 +108,13 @@
                     </div>
                     
                     <div class="form-label-group">
-                        <input id="completion_date" type="date" name="completion_date" value="{{$caseStudy->completion_date}}" class="form-control" placeholder="Project Area" >
-                        <label for="form_firstname">Completion Date</label>
+                        <input
+    id="completion_date"
+    type="date"
+    name="completion_date"
+    class="form-control"
+    value="{{ old('completion_date', $caseStudy->completion_date?->format('Y-m-d')) }}"
+><label for="form_firstname">Completion Date</label>
                           @error('completion_date')
     <span class="text-danger">{{ $message }}</span>
 @enderror

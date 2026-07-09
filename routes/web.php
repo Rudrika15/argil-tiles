@@ -358,5 +358,12 @@ Route::redirect('/spc-flooring-exporter-india', '/exports', 301);
 Route::redirect('/quartz-surface-exporter-india', '/exports', 301);
 
 
+
+Route::get('/sitemap.xml', [VisitorController::class, 'new_sitemap'])->name('new_sitemap');
+
+
+Route::get('/sitemap.html', [VisitorController::class, 'html'])->name('new_sitemap_html');
+
 Route::get('/{slug}', [CmsController::class, 'show'])
     ->name('visitors.cms.show');
+

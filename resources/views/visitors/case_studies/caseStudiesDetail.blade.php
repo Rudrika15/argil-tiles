@@ -295,10 +295,10 @@
         margin-top:10px;
     }
 }
-/* .story-block p {
+.story-block p {
     margin-bottom: 12px;
     line-height: 1.7;
-} */
+} 
 
 @media(max-width:991px){
 
@@ -426,9 +426,9 @@
             </div>
 
             <div class="col-md-3">
-                <h6 class="text-muted">Published</h6>
+                <h6 class="text-muted">Completed</h6>
                 <p class="fw-semibold">
-                    {{ $caseStudies->updated_at->format('d M Y') }}
+                    {{ $caseStudies->completion_date->format('d M Y') }}
                 </p>
             </div>
 

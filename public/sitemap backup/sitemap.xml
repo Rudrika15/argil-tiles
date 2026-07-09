@@ -144,4 +144,60 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+<!-- change -->
+  <url>
+    <loc>https://argiltiles.com/case-studies</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+   <url>
+    <loc>https://argiltiles.com/case-details/premium-residential-flooring-renovation-with-spc</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+   <url>
+    <loc>https://argiltiles.com/case-details/hotel-vanity-bathroom-quartz-installation</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://argiltiles.com/case-details/retail-showroom-interior-with-premium-spc-flooring</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://argiltiles.com/case-details/spc-flooring-installation-for-a-corporate-office</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://argiltiles.com/case-details/premium-quartz-kitchen-for-a-modern-luxury-villa</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <url>
+    <loc>https://argiltiles.com/testimonial</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+</url>
+
+
+
+<!-- change end -->
 </urlset>

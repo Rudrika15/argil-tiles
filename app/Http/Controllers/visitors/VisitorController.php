@@ -7,11 +7,14 @@ use App\Mail\ContactFormMail;
 use App\Mail\ExportFormMail;
 use App\Mail\InquiryFormMail;
 use App\Models\Blog;
+use App\Models\CaseStudy;
 use App\Models\Catelogue;
+use App\Models\Cms;
 use App\Models\Contact;
 use App\Models\Faq;
 use App\Models\Inquiry;
 use App\Models\Lvtproduct;
+use App\Models\MetaPropertyBlog;
 use App\Models\Quartzproduct;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
@@ -275,4 +278,54 @@ class VisitorController extends Controller
             ], 500);
         }
     }
+
+    public function new_sitemap(Request $request){
+
+        $blogs = Blog::where('status', 'active')->get();
+
+         $authors = MetaPropertyBlog::select('author')
+        ->whereNotNull('author')
+        ->where('author', '!=', '')
+        ->distinct()
+        ->get();
+
+
+        $caseStudies = CaseStudy::where('status', 'published')->get();
+
+        $testimonials = Testimonial::where('status', 'active')->get();
+        
+        $cmsPages = Cms::where('status', 1)->get();
+
+        return response()
+            ->view('new_sitemap', compact(
+                'blogs',
+                'authors',
+                'caseStudies',
+                'testimonials',
+                'cmsPages'
+            ))
+            ->header('Content-Type', 'application/xml');
+
+    }
+
+    public function html(Request $request){
+       $blogs = Blog::where('status', 'active')->get();
+
+    $caseStudies = CaseStudy::where('status', 'published')->get();
+
+    $authors = MetaPropertyBlog::select('author')
+        ->whereNotNull('author')
+        ->where('author', '!=', '')
+        ->distinct()
+        ->get();
+
+    $cmsPages = Cms::where('status', 1)->get();
+
+    return view('new_sitemap_html', compact(
+        'blogs',
+        'caseStudies',
+        'authors',
+        'cmsPages'
+    ));
+}
 }
