@@ -166,9 +166,7 @@ Get a price quote "
                         with affection and respect for the brand.
 
                         I would like to congratulate you on the same and motivate you to always be this humble and serving
-                        to your brand and people associated....
-                        <a href="/about-argil" class="text-dark text-decoration-none">About More <i
-                                class="bi bi-arrow-right"></i> </a>
+                        to your brand and people associated.
                     </p>
 
         <!-- Explore More Section -->
