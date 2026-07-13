@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2026 at 01:49 PM
+-- Generation Time: Jul 13, 2026 at 07:12 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -76,8 +76,24 @@ INSERT INTO `blogs` (`id`, `title`, `slug`, `description`, `image`, `status`, `c
 --
 -- Table structure for table `cache`
 --
--- Error reading structure for table argil45k_dev_argil.cache: #1932 - Table &#039;argil45k_dev_argil.cache&#039; doesn&#039;t exist in engine
--- Error reading data for table argil45k_dev_argil.cache: #1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &#039;FROM `argil45k_dev_argil`.`cache`&#039; at line 1
+
+CREATE TABLE `cache` (
+  `key` varchar(255) NOT NULL,
+  `value` mediumtext NOT NULL,
+  `expiration` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cache_locks`
+--
+
+CREATE TABLE `cache_locks` (
+  `key` varchar(255) NOT NULL,
+  `owner` varchar(255) NOT NULL,
+  `expiration` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1375,7 +1391,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (15, '2026_06_05_113701_create_faqs_table', 3),
 (16, '2026_06_03_132301_create_cms_table', 4),
 (17, '2026_06_08_122950_create_testimonials_table', 5),
-(18, '2026_06_09_165718_create_case_studies_table', 6);
+(18, '2026_06_09_165718_create_case_studies_table', 6),
+(19, '0001_01_01_000001_create_cache_table', 7);
 
 -- --------------------------------------------------------
 
@@ -2796,6 +2813,18 @@ ALTER TABLE `blogs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `cache`
+--
+ALTER TABLE `cache`
+  ADD PRIMARY KEY (`key`);
+
+--
+-- Indexes for table `cache_locks`
+--
+ALTER TABLE `cache_locks`
+  ADD PRIMARY KEY (`key`);
+
+--
 -- Indexes for table `case_studies`
 --
 ALTER TABLE `case_studies`
@@ -3091,7 +3120,7 @@ ALTER TABLE `meta_property_spcs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `newsrooms`
