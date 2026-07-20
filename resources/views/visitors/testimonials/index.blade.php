@@ -165,27 +165,52 @@
             @endfor
         </div>
 
-        <p class="testimonial-text">
+        @php
+          $fullText = strip_tags($testimonial->testimonial);
+          $shortText = Str::limit($fullText, 100);
+          $needsToggle = strlen($fullText) > 100;
+            @endphp
+
+            <p class="testimonial-text"
+               data-short="{{ e($shortText) }}"
+               data-full="{{ e($fullText) }}">
+                {{ $shortText }}
+
+            @if($needsToggle)
+                <button type="button"
+                        class="btn btn-link p-0 read-more-btn text-decoration-none"
+                        style="color:#d4b59e; font-size:15px; font-weight:600;">
+                    Read More
+                </button>
+            @endif
+            
+            </p>
+
+        
+        {{-- <p class="testimonial-text">
             {{ strip_tags($testimonial->testimonial) }}
-        </p>
+        </p> --}}
 
         <div class="d-flex align-items-center mt-2">
-@if($testimonial->client_image)
-    <img src="{{ asset('testimonial-image/'.$testimonial->client_image) }}"
-         class="client-image me-3"
-         alt="{{ $testimonial->client_name }}">
-@else
-    <div class="client-image me-3">
-        {{ strtoupper(substr(trim($testimonial->client_name), 0, 1)) }}
-    </div>
-@endif
-
-
+             <div class="client-image me-3">
+                    {{ strtoupper(substr(trim($testimonial->client_name), 0, 1)) }}
+                </div>
+                    {{-- <div class="d-flex align-items-center mt-2">
+            @if($testimonial->client_image)
+                <img src="{{ asset('testimonial-image/'.$testimonial->client_image) }}"
+                     class="client-image me-3"
+                     alt="{{ $testimonial->client_name }}">
+            @else
+                <div class="client-image me-3">
+                    {{ strtoupper(substr(trim($testimonial->client_name), 0, 1)) }}
+                </div>
+            @endif
+             --}}
+            
             <div>
                 <div class="client-name">
                     {{ $testimonial->client_name }}
                 </div>
-
                 @if($testimonial->designation)
                     <div class="client-designation">
                         {{ $testimonial->designation }}
@@ -214,5 +239,24 @@
 
     </div>
 </section>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.testimonial-card').forEach(function (card) {
+        const textEl = card.querySelector('.testimonial-text');
+        const btn = card.querySelector('.read-more-btn');
 
+        if (!textEl || !btn) return;
+
+        const shortText = textEl.dataset.short;
+        const fullText = textEl.dataset.full;
+
+        btn.addEventListener('click', function () {
+            const isExpanded = textEl.classList.toggle('is-expanded');
+
+            textEl.textContent = isExpanded ? fullText : shortText;
+            btn.textContent = isExpanded ? 'Read Less' : 'Read More';
+        });
+    });
+});
+</script>
 @endsection

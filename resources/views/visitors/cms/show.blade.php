@@ -224,10 +224,12 @@
 .blog-content ol{
     padding-left:25px;
     margin-bottom:20px;
+    line-height: 1;
 }
 
 .blog-content li{
     margin-bottom:10px;
+    /* line-height: 1.5; */
 }
 
 .blog-content p:first-child:first-letter{

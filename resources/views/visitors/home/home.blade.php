@@ -74,11 +74,18 @@ Get a price quote "
 }
 
 .client-image{
-    width:55px;
-    height:55px;
+    width:60px;
+    height:60px;
     border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#d4b59e; /* Change to your preferred color */
+    color:#fff;
+    font-size:24px;
+    font-weight:700;
     object-fit:cover;
-    border:2px solid #d4b59e;
+    flex-shrink:0;
 }
 
 .client-name{

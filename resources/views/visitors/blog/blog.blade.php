@@ -19,10 +19,16 @@
 @endsection
 
 <style>
-    .blog-card-image {
+    /* .blog-card-image {
     width: 100%;
     height: 250px;
     object-fit: cover;
+} */
+
+ .blog-card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: fill;
 }
 
 .blog-card {

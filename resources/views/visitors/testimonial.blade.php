@@ -27,7 +27,7 @@
         </p>
 
         <div class="d-flex align-items-center mt-2">
-
+{{-- 
             @if($testimonial->client_image)
     <img src="{{ asset('testimonial-image/'.$testimonial->client_image) }}"
          class="client-image me-3"
@@ -36,7 +36,11 @@
     <div class="client-image me-3">
         {{ strtoupper(substr(trim($testimonial->client_name), 0, 1)) }}
     </div>
-@endif
+@endif --}}
+
+ <div class="client-image me-3">
+        {{ strtoupper(substr(trim($testimonial->client_name), 0, 1)) }}
+    </div>
 
 
             <div>

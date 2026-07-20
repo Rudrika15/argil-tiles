@@ -79,7 +79,7 @@
     display:block;
     width:100%;
     height:650px;
-    object-fit:cover;
+    object-fit:fill;
     border-radius:20px;
 }
 
@@ -402,7 +402,7 @@
 
             <img src="{{ asset('blogimage/'.$blog->image) }}"
                 alt="{{ $blog->title }}"
-                class="img-fluid w-100">
+                class=" w-100">
 
         </div>
 

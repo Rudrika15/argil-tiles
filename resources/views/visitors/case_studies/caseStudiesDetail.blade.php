@@ -285,6 +285,7 @@
     .author-logo img{
         width:110px;
         height:110px;
+
     }
 
     .author-info h4{
@@ -490,7 +491,8 @@
 .gallery-img {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    object-fit: fill;
+    /* object-fit: cover; */
     transition: transform 0.4s ease;
 }
 

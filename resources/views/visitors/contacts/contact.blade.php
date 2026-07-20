@@ -68,12 +68,27 @@ assist you!">
     min-height:130px;
 }
 
-.client-image{
+/* .client-image{
     width:55px;
     height:55px;
     border-radius:50%;
     object-fit:cover;
     border:2px solid #d4b59e;
+} */
+
+.client-image{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#d4b59e; /* Change to your preferred color */
+    color:#fff;
+    font-size:24px;
+    font-weight:700;
+    object-fit:cover;
+    flex-shrink:0;
 }
 
 .client-name{
