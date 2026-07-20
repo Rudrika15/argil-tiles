@@ -34,6 +34,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
+                        <th scope="col">Slug</th>
                         <th scope="col">Sizes</th>
                         <th scope="col">Thicknesses</th>
                         <th scope="col">Finish Type</th>
@@ -54,6 +55,7 @@
                     @foreach ($data as $data)
                         <tr>
                             <td>{{ $data->name }}</td>
+                            <td>{{ $data->slug }}</td>
                             <td>{{ $data->sizes }}</td>
                             <td>{{ $data->thicknesses }}</td>
                             <td>{{ $data->finishType }}</td>

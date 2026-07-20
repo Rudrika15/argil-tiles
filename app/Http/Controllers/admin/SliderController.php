@@ -119,6 +119,6 @@ class SliderController extends Controller
     function delete($id)
     {
         $data=Slider::find($id)->delete();
-        return redirect()->route('slidershow')->with('msg', 'Data Deleted Successfully');
+        return redirect()->route('slidershow')->with('msg', 'Data Delete Successfully.');
     }
 }

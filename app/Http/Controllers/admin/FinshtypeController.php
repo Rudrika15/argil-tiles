@@ -76,6 +76,6 @@ class FinshtypeController extends Controller
     function delete($id)
 	{
         $data=Finishtype::find($id)->delete();
-        return redirect()->route('finishtypeshow')->with('msg', 'Data Deleted Successfully');
+        return redirect()->route('finishtypeshow')->with('msg', 'Data Delete Successfully.');
     }
 }

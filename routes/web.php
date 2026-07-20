@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\BlogController;
+use App\Http\Controllers\admin\CaseStudyController;
 use App\Http\Controllers\visitors\VisitorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\DashboardController;
@@ -23,8 +24,17 @@ use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\StockController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\visitors\ContactController;
+use App\Http\Controllers\visitors\SpcExportController;
+use App\Http\Controllers\visitors\QuartzExportController;
 
-
+use App\Http\Controllers\admin\CmsController;
+use App\Http\Controllers\admin\FaqController;
+use App\Http\Controllers\admin\TestimonialController;
+use App\Http\Controllers\visitors\TestimonialViewController;
+use App\Http\Controllers\visitors\BlogAuthorController;
+use App\Http\Controllers\visitors\CaseStudiesViewController;
+use App\Http\Controllers\visitors\ContactArgilController;
+use App\Http\Controllers\visitors\FaqShowController;
 
 // ====================== admin ======================
 
@@ -48,7 +58,7 @@ Route::get("/logout", [UserController::class, 'logout'])->name('logout');
 // end login
 
 Route::middleware('auth:web')->group(function () {
-    Route::get('dashboard',[UserCOntroller::class,'dashboardpage'])->name('dashboard');
+    Route::get('dashboard', [UserCOntroller::class, 'dashboardpage'])->name('dashboard');
     // Route::get("", [DashboardController::class, 'index'])->name('dashboard');
     // Route::get("dashboard", [DashboardController::class, 'index'])->name('dashboard');
     //cat Start
@@ -201,17 +211,75 @@ Route::middleware('auth:web')->group(function () {
     Route::get("stock/delete/{id}", [StockController::class, 'delete'])->name('stock.delete');
 
     //Blog
-    Route::get("blog",[BlogController::class,'index'])->name('blog');
-    Route::get("blog.create",[BlogController::class,'create'])->name('blog.create');
-    Route::post("blog.store",[BlogController::class,'store'])->name('blog.store');
-    Route::get("blog.edit/{id}",[BlogController::class,'edit'])->name('blog.edit');
-    Route::post("blog.update/{id}",[BlogController::class,'update'])->name('blog.update');
-    Route::get("blog.delete/{id}",[BlogController::class,'destroy'])->name('blog.delete');
+    Route::get("blog", [BlogController::class, 'index'])->name('blog');
+    Route::get("blog.create", [BlogController::class, 'create'])->name('blog.create');
+    Route::post("blog.store", [BlogController::class, 'store'])->name('blog.store');
+    Route::get("blog.edit/{id}", [BlogController::class, 'edit'])->name('blog.edit');
+    Route::post("blog.update/{id}", [BlogController::class, 'update'])->name('blog.update');
+    Route::get("blog.delete/{id}", [BlogController::class, 'destroy'])->name('blog.delete');
 
     // new arievels
     Route::get("newarrivalsshow", [NewArrivalsController::class, 'index'])->name('newarrivalsshow');
     Route::get("newarrivals/edit/{id}", [NewArrivalsController::class, 'edit'])->name('newarrivals.edit');
     Route::post("newarrivals/update/{id}", [NewArrivalsController::class, 'update'])->name('newarrivals.update');
+
+
+    //cms
+    Route::get('/show-cms',[CmsController::class,'index'])->name('admin.cms.index'); 
+    Route::get('/create-cms',[CmsController::class,'create'])->name('admin.cms.create'); 
+    Route::post('/store-cms',[CmsController::class,'store'])->name('admin.cms.store'); 
+    Route::get('/edit-cms/{id}',[CmsController::class,'edit'])->name('admin.cms.edit'); 
+    Route::post('/update-cms/{id}',[CmsController::class,'update'])->name('admin.cms.update'); 
+    Route::get('/delete-cms/{id}',[CmsController::class,'delete'])->name('admin.cms.delete'); 
+
+    //Faqs
+    Route::get('/show-faqs',[FaqController::class,'index'])->name('admin.faqs.index'); 
+    Route::get('/create-faqs',[FaqController::class,'create'])->name('admin.faqs.create'); 
+    Route::post('/store-faqs',[FaqController::class,'store'])->name('admin.faqs.store'); 
+    Route::get('/edit-faqs/{id}',[FaqController::class,'edit'])->name('admin.faqs.edit'); 
+    Route::post('/update-faqs/{id}',[FaqController::class,'update'])->name('admin.faqs.update'); 
+    Route::get('/delete-faqs/{id}',[FaqController::class,'delete'])->name('admin.faqs.delete'); 
+
+
+    //Testimonial
+    Route::get('/show-testimonials',[TestimonialController::class,'index'])->name('admin.testimonials.index'); 
+    Route::get('/create-testimonials',[TestimonialController::class,'create'])->name('admin.testimonials.create'); 
+    Route::post('/store-testimonials',[TestimonialController::class,'store'])->name('admin.testimonials.store'); 
+    Route::get('/edit-testimonials/{id}',[TestimonialController::class,'edit'])->name('admin.testimonials.edit'); 
+    Route::post('/update-testimonials/{id}',[TestimonialController::class,'update'])->name('admin.testimonials.update'); 
+    Route::get('/delete-testimonials/{id}',[TestimonialController::class,'delete'])->name('admin.testimonials.delete'); 
+
+   // Case Studies (Slug Based)
+
+// List all case studies
+Route::get('/show-case-studies', [CaseStudyController::class, 'index'])
+    ->name('admin.case_studies.index');
+
+// Create form
+Route::get('/create-case-studies', [CaseStudyController::class, 'create'])
+    ->name('admin.case_studies.create');
+
+// Store new case study
+Route::post('/store-case-studies', [CaseStudyController::class, 'store'])
+    ->name('admin.case_studies.store');
+
+// Edit (using slug instead of ID)
+Route::get('/edit-case-studies/{slug}', [CaseStudyController::class, 'edit'])
+    ->name('admin.case_studies.edit');
+
+// Update (using slug instead of ID)
+Route::post('/update-case-studies/{slug}', [CaseStudyController::class, 'update'])
+    ->name('admin.case_studies.update');
+
+// Delete (using slug instead of ID)
+Route::get('/delete-case-studies/{slug}', [CaseStudyController::class, 'delete'])
+    ->name('admin.case_studies.delete');
+    //Show case studies by passing slug
+    Route::get(
+    '/case-studies/{slug}',
+    [CaseStudyController::class,'show']
+);
+
 
 });
 
@@ -220,34 +288,82 @@ Route::middleware('auth:web')->group(function () {
 
 // ====================== visitors ======================
 
-Route::get('/',[VisitorController::class,'home']);
-Route::get('/profile',[VisitorController::class,'profile']);
-Route::get('/about',[VisitorController::class,'about']);
-Route::get('/documentaryfilm',[VisitorController::class,'documentaryfilm']);
-Route::get('/corevalues',[VisitorController::class,'corevalue']);
-Route::get('/groupcompany',[VisitorController::class,'groupcompany']);
-Route::get('/achievements',[VisitorController::class,'achievement']);
-Route::get('/plants',[VisitorController::class,'plants']);
-Route::get('/quality',[VisitorController::class,'quality']);
-Route::get('/catalogue',[VisitorController::class,'catalogue']);
-Route::get('/contact',[VisitorController::class,'contact']);
-Route::get('/spcproducts',[VisitorController::class,'spcproducts']);
-Route::get('spcproductinquiry/{id?}',[VisitorController::class,'spcproductinquiry'])->name('spcproductinquiry');
-Route::get('quartzinquiry/{id}',[VisitorController::class,'quartzinquiry'])->name('quartzinquiry');
-// Route::get('quartzinquiry/{slug?}',[VisitorController::class,'quartzinquiry'])->name('quartzinquiry');
-Route::get('/quartzsurface',[VisitorController::class,'quartzsurface']);
-Route::get('/privacyPolicy',[VisitorController::class,'privacyPolicy']);
+Route::get('/', [VisitorController::class, 'home']);
+Route::get('/profile', [VisitorController::class, 'profile']);
+Route::get('/about-argil', [VisitorController::class, 'about']);
+Route::get('/documentaryfilm', [VisitorController::class, 'documentaryfilm']);
+Route::get('/corevalues', [VisitorController::class, 'corevalue']);
+Route::get('/groupcompany', [VisitorController::class, 'groupcompany']);
+Route::get('/achievements', [VisitorController::class, 'achievement']);
+Route::get('/plants', [VisitorController::class, 'plants']);
+Route::get('/quality', [VisitorController::class, 'quality']);
+Route::get('/catalogue', [VisitorController::class, 'catalogue'])->name('catalogue');
+Route::get('/contact-argil', [VisitorController::class, 'contact']);
+Route::get('/spcproducts', [VisitorController::class, 'spcproducts']);
+Route::get('spcproductinquiry/{slug?}', [VisitorController::class, 'spcproductinquiry'])->name('spcproductinquiry');
+Route::get('quartzinquiry/{slug?}', [VisitorController::class, 'quartzinquiry'])->name('quartzinquiry');
+Route::get('quartzinquiry/{slug?}', [VisitorController::class, 'quartzinquiry'])->name('quartzinquiry');
+Route::get('/quartzsurface', [VisitorController::class, 'quartzsurface']);
+Route::get('/privacyPolicy', [VisitorController::class, 'privacyPolicy']);
+Route::get('/blogs', [VisitorController::class, 'blog']);
+Route::get('/blogdetails/{slug}', [VisitorController::class, 'blogdetails'])->name('blogdetails');
+
+//blog author
+Route::get('/authors/{author?}',[BlogAuthorController::class,'showAuthor'])->name('visitors.blog.blogAuthor');
 
 // Route::post('/send-mail',[ContactController::class,'sendMail'])->name('send.mail');
 // Route::get('send-mail', [MailController::class, 'index']);
 
+Route::get('/faq/{type?}', [FaqShowController::class, 'index'])->name('visitors.faq.index');
+
+Route::get('/case-studies',[CaseStudiesViewController::class,'caseStudyList'])->name('visitors.case_studies.caseStudies');
+Route::get('/case-details/{slug}',[CaseStudiesViewController::class,'caseStudyDetail'])->name('visitors.case_studies.caseStudiesDetail');
+
+// all testimonial show
+Route::get('/testimonial', [TestimonialViewController::class, 'index'])
+    ->name('visitors.testimonials.index');
 
 
 Route::post('/send-mail', [VisitorController::class, 'sendEmail'])->name('send.mail');
 Route::post('/send-inquiry', [VisitorController::class, 'sendinquiry'])->name('send.inquiry');
 
+// landing pages
+
+// web.php
+
+Route::get('/spc-export', [SpcExportController::class, 'spcExportPage'])
+->name('spc.export');
+Route::get('/quartz-export', [QuartzExportController::class, 'quartzExportPage'])
+->name('quartz.export');
+
+// Route::get('quartz-export', function () {
+    //     return view('visitors.landing.quartz-export');
+    // })->name('quartz.export');
+    
+Route::post('/spc-export/submit', [SpcExportController::class, 'submit'])->name('spc.export.submit');
+Route::post('/quartz-export/submit', [QuartzExportController::class, 'submit'])->name('quartz.export.submit');
+
+Route::get('/exports', [VisitorController::class, 'exports'])->name('exports');
+Route::get('/exports/usa', [VisitorController::class, 'exportusa'])->name('exports.us');
+Route::get('/exports/uae', [VisitorController::class, 'exportuae'])->name('exports.uae');
+Route::get('/exports/canada', [VisitorController::class, 'exportcanada'])->name('exports.canada');
+Route::get('/exports/uk', [VisitorController::class, 'exportuk'])->name('exports.uk');
+Route::get('/exports/australia', [VisitorController::class, 'exportaustralia'])->name('exports.australia');
+Route::get('/exports/russia', [VisitorController::class, 'exportrussia'])->name('exports.russia');
+
+Route::post('/exports/mail', [VisitorController::class, 'exportmail'])->name('exports.mail');
+
+// Redirect old SEO URLs
+Route::redirect('/spc-flooring-exporter-india', '/exports', 301);
+Route::redirect('/quartz-surface-exporter-india', '/exports', 301);
 
 
 
+Route::get('/sitemap.xml', [VisitorController::class, 'new_sitemap'])->name('new_sitemap');
 
+
+Route::get('/sitemap.html', [VisitorController::class, 'html'])->name('new_sitemap_html');
+
+Route::get('/{slug}', [CmsController::class, 'show'])
+    ->name('visitors.cms.show');
 

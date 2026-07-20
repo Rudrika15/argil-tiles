@@ -4,9 +4,10 @@ namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use App\Models\Lvtproduct;
+use App\Models\MetaPropertySpc;
 use App\Models\Ssizemaster;
 use Validator;
-// use Illuminate\Support\Str;
+use Illuminate\Support\Str;
 
 
 class LvtController extends Controller
@@ -48,6 +49,7 @@ class LvtController extends Controller
         $lvtproduct = new Lvtproduct();
 
         $lvtproduct->names = $request->names;
+        $lvtproduct->slug = Str::slug($request->slug);
         $lvtproduct->thicknesses = $request->thicknesses;
         $lvtproduct->primarycolors = $request->primarycolors;
         $lvtproduct->edges = $request->edges;
@@ -92,6 +94,39 @@ class LvtController extends Controller
 
         $lvtproduct->save();
 
+
+        $ogImageName = null;
+        if ($request->file('ogImage')) {
+            $image = $request->file('ogImage');
+
+            $ogImageName = $image->getClientOriginalName();
+
+            $image->move(public_path('ogimage/'), $ogImageName);
+        }
+
+        if (
+            $request->filled('ogTitleEng') ||
+            $request->filled('ogDescriptionEng') ||
+            $request->filled('ogUrl') ||
+            $request->filled('metadescription') ||
+            $request->filled('keywords') ||
+            $request->filled('author') ||
+            $request->filled('tages') ||
+            $request->file('ogImage')
+        ) {
+            $metaspc = new MetaPropertySpc();
+            $metaspc->spcId = $lvtproduct->id;
+            $metaspc->ogTitleEng = $request->ogTitleEng;
+            $metaspc->ogDescriptionEng = $request->ogDescriptionEng;
+            $metaspc->ogImage = $ogImageName;
+            $metaspc->ogUrl = $request->ogUrl;
+            $metaspc->description = $request->metadescription;
+            $metaspc->keywords = $request->keywords;
+            $metaspc->author = $request->author;
+            $metaspc->tages = $request->tages;
+            $metaspc->save();
+        }
+
         return redirect()->route('lvtshow')->with('msg', 'Record Inserted Successfully');
 
 
@@ -103,7 +138,8 @@ class LvtController extends Controller
         $data = Lvtproduct::find($id);
         // return $data;
         $lvtsize = Ssizemaster::all();
-        return view("admin.lvtproduct.edit", compact('data', 'lvtsize'));
+        $data1 = MetaPropertySpc::where('spcId', $id)->first();
+        return view("admin.lvtproduct.edit", compact('data', 'lvtsize', 'data1'));
     }
     function editcode(Request $request)
     {
@@ -130,7 +166,7 @@ class LvtController extends Controller
         $lvtproduct =  Lvtproduct::find($id);
 
         $lvtproduct->names = $request->names;
-        // $lvtproduct->slug = Str::slug($request->names);
+        $lvtproduct->slug = Str::slug($request->names);
         $lvtproduct->thicknesses = $request->thicknesses;
         $lvtproduct->primarycolors = $request->primarycolors;
         $lvtproduct->edges = $request->edges;
@@ -175,11 +211,55 @@ class LvtController extends Controller
         }
         $lvtproduct->save();
 
+
+
+         $metaspc = MetaPropertySpc::where('spcId', $lvtproduct->id)->first();
+         if (!$metaspc) {
+             $metaspc = new MetaPropertySpc();
+             $metaspc->spcId = $lvtproduct->id;
+         }
+         $ogImageName = null;
+         if ($request->hasFile('ogImage')) {
+             $image = $request->file('ogImage');
+
+             $ogImageName = $image->getClientOriginalName();
+
+             $image->move(public_path('ogimage/'), $ogImageName);
+             $metaspc->ogImage = $ogImageName;
+         }
+
+         if (
+             $request->filled('ogTitleEng') ||
+             $request->filled('ogDescriptionEng') ||
+             $request->filled('ogUrl') ||
+             $request->filled('metadescription') ||
+             $request->filled('keywords') ||
+             $request->filled('author') ||
+             $request->filled('tages') ||
+             $request->file('ogImage')
+         ) {
+
+             $metaspc->spcId = $lvtproduct->id;
+             $metaspc->ogTitleEng = $request->ogTitleEng;
+             $metaspc->ogDescriptionEng = $request->ogDescriptionEng;
+             $metaspc->ogImage = $ogImageName;
+             $metaspc->ogUrl = $request->ogUrl;
+             $metaspc->description = $request->metadescription;
+             $metaspc->keywords = $request->keywords;
+             $metaspc->author = $request->author;
+             $metaspc->tages = $request->tages;
+             $metaspc->save();
+         }
+
         return redirect()->route('lvtshow')->with('msg', 'Record Update Successfully');
     }
     function delete($id)
     {
         $data = Lvtproduct::find($id)->delete();
-        return redirect()->route('lvtshow')->with('msg', 'Data Deleted Successfully');
+        $metaspc = MetaPropertySpc::where('spcId', $id)->first();
+        if ($metaspc) {
+            $metaspc->delete();
+        }
+        return redirect()->route('lvtshow')->with('msg', 'Data Delete Successfully.');
     }
 }

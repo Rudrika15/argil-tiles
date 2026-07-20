@@ -31,38 +31,40 @@ slab for kitchen platform countertops manufacturers in Morbi, Gujarat, India. We
  have the best engineered  quartz surface stone for kitchen and platform  at a
 reasonable price We have 10+ yrs of service. Get a price quote  "
         data-react-helmet="true">
-    <link rel="canonical" href="https://argiltiles.com/quartzsurface" data-react-
-    helmet="true">
-    <title>Quartz Countertops & Kitchen Slabs Manufacturer | Argil</title>
+    <link rel="canonical" href="https://argiltiles.com/quartzsurface" data-react- helmet="true">
+    <title>
+        Quartz Countertop Slabs Manufacturer in Morbi | Argil
+    </title>
 @endsection
+<style>
+    .contact-image{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:15px;
+}
+</style>
 @section('content')
-    <!-- page title -->
-    <a href="/contact">
-        <section class="page-title" style="background-image: url('asset/css/assets/bg-img.png');">
+    <!-- breadcrumb -->
+    <div class="breadcrumb d-flex justify-content-between align-items-center">
+        <div class="container">
 
-            <div class="container">
-                <div class="content-box">
-                    <div class="title">
-                        <h1>Quartz Surface</h1>
-                    </div>
-                    <div class="bread-crumb">
-                        <a href="/">Home &nbsp;<i class="fa fa-angle-right"></i></a> &nbsp;<span>Quartz
-                            Surface</span>
-                    </div>
-                </div>
+            <div class="p-2">
+                <h1 class="display-6 fw-bold">Home / Quartz Surface Products</h1>
             </div>
-        </section>
-    </a>
-    <!--End Page Title-->
+        </div>
+    </div>
+    <!-- breadcrumb -->
 
     <div class="container">
+
         <div class="row">
-            <div class="col-md-6 surface-image">
-                <img src="asset/images/argileimage/quartzimage1.jpg" alt="quartz product" title="quartz product"
-                    class="img-responsive all-page-side-image">
+            <div class="col-md-6 text-center">
+                <img src="{{ asset('asset/images/argileimage/quartzimage1.jpg') }}" alt="argil quartz product"
+                    title="argil quartz product" loading="lazy" class="img-fluid w-75 mb-5 mt-4">
             </div>
-            <div class="col-md-6 overview">
-                <h3>overview</h3>
+            <div class="col-md-6">
+                <h2 class="mt-5 fw-bold">Overview</h2>
                 <p class="text-justify">Composite or engineered quartz is a very solid material that resembles real granite
                     in
                     both look and
@@ -75,46 +77,53 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
             </div>
         </div>
     </div>
-    {{-- why choose argile group --}}
+
+
+    <!-- Why Choose Us -->
     @include('visitors.comanfile.certificate')
-    {{-- end why choose argile group --}}
+    <!-- Why Choose Us -->
 
-    {{-- Quartz Stone Slab --}}
 
-    <div class="quartz-stone-heading">
-        <h3 class="text-center">Quartz Stone Slab</h3>
-    </div>
-    <div class="container quartzsurface">
-        <div class="row">
+    <div class="container" id="images">
+
+
+        <div class="row pb-5">
+            <h2 class="text-center fw-bold pt-5">Quartz Stone Slab</h2>
             @foreach ($data as $index => $item)
-                <div class="col-md-4 ">
-                    <a href="{{ Route('quartzinquiry', $item->id) }}">
-                        <div class="card1" data-aos="flip-up">
-                            <img src="{{ asset('quartz/' . $item->mainImg) }}" alt="quartz product" title="quartz product" class="img-responsive">
-                            <p class="text-center">{{ $item->name }}</p>
+                <div class="col-md-4 pt-5">
+                    <a href="{{ Route('quartzinquiry', $item->slug) }}" class="text-decoration-none">
+                        <div class="card">
+                            <picture>
+                                <source srcset="{{ asset('quartz/' . $item->mainImg) }}" type="image/webp" />
+                                <img src="{{ asset('quartz/' . $item->mainImg) }}" class="card-img-top"
+                                    alt="{{ $item->slug }}" title="{{ $item->slug }}" loading="lazy" />
+                            </picture>
+                            <div class="card-body">
+                                <h5 class="card-title text-center">{{ $item->name }}</h5>
+                            </div>
                         </div>
                     </a>
                 </div>
-
-                {{-- After every 3 products, start a new row --}}
-                @if (($index + 1) % 3 == 0)
+            @endforeach
         </div>
         <div class="row">
-            @endif
-            @endforeach
+
+            {{ $data->links('pagination::bootstrap-5') }}
+
         </div>
     </div>
 
-    {{-- enhancing the usablity --}}
-    {{-- @include('visitors.comanfile.certificate') --}}
+
+    <!-- Usability Section -->
     @include('visitors.comanfile.usablity')
-    {{-- end enhancing the usablity --}}
+    <!-- Usability Section -->
+
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12 advantage-parapraph">
-                <h3 class="text-center">Advantages of Artifical Quartz Stones</h3>
-                <p class="paragraph text-center">
+            <div class="col-md-12">
+                <h2 class="text-center fw-bold pt-5">Advantages of Artifical Quartz Stones</h2>
+                <p class="text-center mt-4">
                     Artificial quartz stones are manufactured from natural quartz crystals that are bound together with the
                     help of a binding resin, as compared with natural quartz stones, which are carved from pure sandstone,
                     marble, or granite. Artificial variations will resemble the natural ones in appearance. However, there
@@ -124,39 +133,39 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
             </div>
         </div>
     </div>
-    <div class="main-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 advantage-card" data-aos="fade-up">
-                    <h3 class="heading2">Attractive look and feel</h3>
-                    <p class="text-justify">The compressed artificial quartz material is made into slabs with variations of
-                        natural stone's
-                        texture
-                        and colour. The manufactured varieties' colours differ in that they are much more uniform in
-                        appearance.
-                        You may get a wide variety of imitation quartz stones at different stores in lovely colours to match
-                        any
-                        decor.</p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 advantage-card1" data-aos="fade-up">
-                    <h3>Easy to maintain</h3>
-                    <p class="text-justify">Natural quartz has pores in them. However, the polished surface of artificial
-                        stone does not absorb
-                        moisture. As a result, cleaning the surface is simpler and requires less care. Additionally, the
-                        surface is stain- and scratch-resistant. Because of easy maintenance, these artificial quartz last
-                        longer and look new for years.</p>
-                </div>
+    {{-- <div class="main-container"> --}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="fw-bold pt-5">Attractive look and feel</h4>
+                <p class="text-justify">The compressed artificial quartz material is made into slabs with variations of
+                    natural stone's
+                    texture
+                    and colour. The manufactured varieties' colours differ in that they are much more uniform in
+                    appearance.
+                    You may get a wide variety of imitation quartz stones at different stores in lovely colours to match
+                    any
+                    decor.</p>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 advantage-card" data-aos="fade-up">
-                <h3>Available in a variety of options</h3>
+            <div class="col-md-12">
+                <h4 class="fw-bold pt-2">Easy to maintain</h4>
+                <p class="text-justify">Natural quartz has pores in them. However, the polished surface of artificial
+                    stone does not absorb
+                    moisture. As a result, cleaning the surface is simpler and requires less care. Additionally, the
+                    surface is stain- and scratch-resistant. Because of easy maintenance, these artificial quartz last
+                    longer and look new for years.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="fw-bold pt-2">Available in a variety of options</h4>
                 <p class="text-justify">The size, quart colours, treatments, and patterns of composite quartz stone are
                     present in a variety of
                     options. As a result, you will never be without resources to help in the design or renovation of an
@@ -166,8 +175,8 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 advantage-card1" data-aos="fade-up">
-                <h3>Cost effective</h3>
+            <div class="col-md-12">
+                <h4 class="fw-bold pt-2">Cost effective</h4>
                 <p class="text-justify">The cost of natural stone might vary depending on the kind, colour, and quality of
                     the stone but is
                     typically more. For less money, artificial quartz stone offers a more luxurious and traditional
@@ -178,8 +187,8 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 advantage-card" data-aos="fade-up">
-                <h3>Durability</h3>
+            <div class="col-md-12">
+                <h4 class="fw-bold pt-2">Durability</h4>
                 <p class="text-justify">Artificial quartz is as strong and hard as granite, with the benefit of being chip
                     and crack resistant.
                     The engineered stone will only crack if it is not fitted properly on the surfaces. Hence, artificial
@@ -187,12 +196,17 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
             </div>
         </div>
     </div>
-    </div>
-    <div class="container text-center quartz-paragraph">
-        <h3>Uses and Applications of Quartz Stones</h3>
-        <p class="paragraph">There are a number of usage and applications of artificial quartz stones which is why they are
-            so much popular
-            amongst people. These are</p>
+
+    <div class="container">
+        <div class="row pt-4">
+            <h2 class="text-center fw-bold pt-2">Uses and Applications of Quartz Stones</h2>
+            <p class="text-center pt-2">There are a number of usage and applications of artificial quartz stones which is
+                why
+                they
+                are
+                so much popular
+                amongst people. These are</p>
+        </div>
     </div>
     <div class="container quartz-paragraph1">
         <ul>
@@ -206,36 +220,43 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
             </li>
         </ul>
     </div>
-    <div class="bg-image-enchance">
-        {{-- <img src="asset/images/argileimage/backgroundimage1.jpg" alt="" class="img-responsive bg-image-enhance1"> --}}
-        <div class="container-fluid bg-imgae-enhance1">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="asset/images/argileimage/quartzimage5.jpg" alt="argil quartz product" title="argil quartz product"
-                        class="img-responsive bg-img1">
+
+
+    <!-- Usability Section -->
+    <div class="container-fluid parallax"
+        style="background-image: url(./assets/asset/enhance-bg.999209ece5b0474be060.jpg); ">
+
+        <div class="container">
+            <div class="row py-5 text-center ">
+                <div class="col-md-6 h">
+                    <img src="{{ asset('asset/images/argileimage/quartzimage5.jpg') }}" alt="argil quartz product"
+                        title="argil quartz product" loading="lazy" class="img-fluid w-75 border rounded p-2" />
                 </div>
-                <div class="col-md-6 card3">
-                    <h3 class="bg-image-title">Argil Quartz Slab Manufacturing Process</h3>
-                    <p class="text-justify">Finely crushed quartz is combined with resin, stabilising polymers,
+                <div class="col-md-6">
+                    <h3 class="text-center fw-bold text-white mt-2">Argil Quartz Slab Manufacturing Process</h3>
+                    <p class="text-justify text-white">Finely crushed quartz is combined with resin, stabilising polymers,
                         and colouring pigments to create
                         Argil Quartz Slabs, which are then polished to an amazing mirror finish. We are one of the leading
                         quartz countertops manufacturers in the country with a number of satisfied customers.</p>
-                    <p class="text-justify">At Argil, we have the greatest expectations for ourselves. To ensure
+                    <p class="text-justify text-white">At Argil, we have the greatest expectations for ourselves. To ensure
                         the final product is the finest
                         it can be, our production process follows a number of strict practices and procedures. Mixing,
                         pressing, polishing and quality control are some of the best practices that are followed at our
                         facility </p>
                 </div>
             </div>
-        </div>
-        <div class="container main-bg-enhance-card">
-            <div class="row">
+            <div class="row pb-5 g-4">
                 <div class="col-md-3">
-                    <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
-                        <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg1.png" alt="MIXING" title="MIXING" class="img-responsive">
-                            <h3>MIXING</h3>
-                            <p>The fundamental components of an Argil Tiles Slab, such as Natural Quartz Grits, Resin,
+                    <div class="card text-center mt-3 h-100">
+                        <div class="d-flex justify-content-center mt-4">
+                            <img src="asset/images/argileimage/quartz-bg1.png" alt="MIXING" title="MIXING"
+                                loading="lazy" class="card-img-top w-25">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title pt-1">MIXING</h4>
+                            <p class="card-text pt-2">The fundamental components of an Argil Tiles Slab, such as Natural
+                                Quartz
+                                Grits, Resin,
                                 colouring
                                 agents
                                 (traces), and texturizing material, are all thoroughly tested before being combined in huge
@@ -245,64 +266,57 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                                 the
                                 same
                                 fundamental process which makes Argil, one of the leading quartz stone manufacturers in
-                                Morbi
-                            </p>
+                                Morbi</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
-                        <div class="panel-body">
+                    <div class="card text-center mt-3 h-100">
+                        <div class="d-flex justify-content-center mt-4">
                             <img src="asset/images/argileimage/quartz-bg2.png" alt="PRESSING" title="PRESSING"
-                                class="img-responsive">
-                            <h3>PRESSING</h3>
-                            <p class="">Spread onto trays, the mixture is compacted with intense vibration and
-                                pressure. The
-                                compressed
-                                mixture is then transferred to a curing room, where it is heated for about an hour at about
-                                90°C
-                                before cooling. In this phase, the mixture's resin is activated, combining with the quartz
-                                to
-                                create
-                                a slab. These curved and irregular stones now have the classic hardness and stain
-                                resistance.
-                            </p>
+                                loading="lazy" class="card-img-top w-25">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title pt-1">PRESSING</h4>
+                            <p class="card-text pt-2">Spread onto trays, the mixture is compacted with intense vibration
+                                and pressure. The compressed mixture is then transferred to a curing room, where it is
+                                heated for about an hour at about 90°C before cooling. In this phase, the mixture's resin is
+                                activated, combining with the quartz to create a slab. These curved and irregular stones now
+                                have the classic hardness and stain resistance.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
-                        <div class="panel-body">
+                    <div class="card text-center mt-3 h-100">
+                        <div class="d-flex justify-content-center mt-4">
                             <img src="asset/images/argileimage/quartz-bg3.png" alt="POLISHING" title="POLISHING"
-                                class="img-responsive">
-                            <h3>POLISHING</h3>
-                            <p>Using two sets of parallel diamond saws, the uneven slab's four sides are now cut to the
-                                appropriate
-                                size. To achieve the precise needed thickness, the slab's upper and lower surfaces are
-                                calibrated
-                                using a multi-head diamond calibration machine. And a multi-head polishing machine is used
-                                to
-                                polish
-                                the finished surface until it has the correct mirror glaze. What distinguishes the finished
-                                product
-                                is its mirror glaze.</p>
+                                class="card-img-top w-25">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title pt-1">POLISHING
+                            </h4>
+                            <p class="card-text pt-2">Using two sets of parallel diamond saws, the uneven slab's four sides
+                                are now cut to the appropriate size. To achieve the precise needed thickness, the slab's
+                                upper and lower surfaces are calibrated using a multi-head diamond calibration machine. And
+                                a multi-head polishing machine is used to polish the finished surface until it has the
+                                correct mirror glaze. What distinguishes the finished product is its mirror glaze.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="panel panel-default bg-enhance-card" data-aos="fade-up">
-                        <div class="panel-body">
-                            <img src="asset/images/argileimage/quartz-bg4.png" alt="QUALITY CONTROL" title="QUALITY CONTROL"
-                                class="img-responsive">
-                            <h3>QUALITY CONTROL</h3>
-                            <p class="card-para1">Every step of the manufacturing process undergoes inspection at Argil
-                                Tiles, from selecting
-                                the
-                                best
-                                raw materials to maintaining strict quality control standards. Our Quality Control division
-                                inspects
-                                each slab for flaws and impurities. The slabs are only sorted and marked for entry into our
-                                distribution system after they have given their permission.</p>
+                    <div class="card text-center mt-3 h-100">
+                        <div class="d-flex justify-content-center mt-4">
+                            <img src="asset/images/argileimage/quartz-bg4.png" alt="QUALITY CONTROL"
+                                title="QUALITY CONTROL" class="card-img-top w-25">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title pt-1">QUALITY CONTROL</h4>
+                            <p class="card-text pt-2 mb-5">Every step of the manufacturing process undergoes inspection at
+                                Argil
+                                Tiles, from selecting the best raw materials to maintaining strict quality control
+                                standards. Our Quality Control division inspects each slab for flaws and impurities. The
+                                slabs are only sorted and marked for entry into our distribution system after they have
+                                given their permission.</p>
                         </div>
                     </div>
                 </div>
@@ -312,289 +326,88 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     </div>
 
 
-
-    {{-- start accrodian --}}
-
-    <div class="container">
-        <div class="row">
-            <div class="heading-faq text-center">
-                <h2>FAQs</h2>
-            </div>
-        </div>
-    </div>
+    @include('visitors.faq.index')
 
     <div class="container">
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
-                aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">What are quartz countertops?</h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Quartz countertops are elegant, practical, and low-maintenance and are composed of bits
-                            of
-                            quartz held together in an industrial-grade binder. Quartz countertops manufacturers
-                            make
-                            different varieties of quartz countertops to cater the needs of their customers.
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsetwo" aria-expanded="false"
-                aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">What are the advantages of quartz slabs?</h4>
-                    </div>
-                    <div id="collapsetwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Attractive look and feel, Ease of maintenance, Availability in a variety of options,
-                            Cost effectiveness, and Durability are some of the major advantages of quartz slabs.
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsethree"
-                aria-expanded="false" aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">What are the disadvantages of quartz slabs?</h4>
-                    </div>
-                    <div id="collapsethree" class="panel-collapse collapse" role="tabpanel"
-                        aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            The cost and heat resistance of quartz countertops are their major disadvantages. A
-                            quartz
-                            kitchen counter top can be out of your price range if you're installing worktops on a
-                            tight
-                            budget. Additionally, heated cookware and appliances can harm quartz countertops.
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour"
-                aria-expanded="false" aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">How can quartz slabs be used?</h4>
-                    </div>
-                    <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Quartz slabs are perfect for a variety of wonderful home improvements. Quartz is most
-                            frequently
-                            used for countertops, backsplashes in kitchens, tabletop surfaces, and flooring.
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive"
-                aria-expanded="false" aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title"> Are quartz slabs high maintenance?</h4>
-                    </div>
-                    <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Low maintenance is required for quartz slabs and countertops. Look no further if you're
-                            unsure
-                            of how to maintain your black or white quartz countertops. Quartz is relatively simple
-                            to keep
-                            clean and maintain. To keep surfaces looking their best, use a soft substance cloth and
-                            a
-                            moderate cleaning chemical.
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsesix" aria-expanded="false"
-                aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">How much is a slab of quartz?</h4>
-                    </div>
-                    <div id="collapsesix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Quartz slabs are significantly more expensive per square than materials like ceramic and
-                            porcelain. Quartz slabs of good quality and depending upon the thickness artificial
-                            quartz stone
-                            manufacturers in Morbi and rest of India can charge between 200 to 400 Rupees per square
-                            foot.
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseseven"
-                aria-expanded="false" aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">Do quartz countertops scratch easily?</h4>
-                    </div>
-                    <div id="collapseseven" class="panel-collapse collapse" role="tabpanel"
-                        aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Quartz slabs and countertops are extremely scratch-resistant; quartz of good quality may
-                            withstand regular use without being harmed.
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseeight"
-                aria-expanded="false" aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">Is quartz more expensive than granite?</h4>
-                    </div>
-                    <div id="collapseeight" class="panel-collapse collapse" role="tabpanel"
-                        aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Granite costs more than quartz often. There are several types of low-quality granite
-                            that you
-                            might get cheaply, but using such a material is not advised.
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsenine"
-                aria-expanded="false" aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">Is quartz better than granite?</h4>
-                    </div>
-                    <div id="collapsenine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Both quartz and granite are extraordinarily stunning and durable. Depending on your
-                            preferred
-                            design and intended use for your countertops or floors, you may select one material over
-                            another. Granite is a natural stone, while quartz is man-made. Compared to granite,
-                            quartz
-                            requires fewer maintenance tasks because it doesn't need to be sealed.
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseten" aria-expanded="false"
-                aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title"> Does quartz stain easily?</h4>
-                    </div>
-                    <div id="collapseten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Quartz is not easily stained. Quartz tiles and slabs are stain-resistant because of the
-                            resin
-                            combination used in their construction.
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseeleven"
-                aria-expanded="false" aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title"> Is quartz cheaper than concrete?</h4>
-                    </div>
-                    <div id="collapseeleven" class="panel-collapse collapse" role="tabpanel"
-                        aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Concrete countertops are typically less expensive for homeowners than quartz surfaces.
-                            Quartz
-                            countertops are more expensive but require little maintenance, making them the more
-                            preferred
-                            choice.
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsetwell"
-                aria-expanded="false" aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">Is quartz cheaper than marble?</h4>
-                    </div>
-                    <div id="collapsetwell" class="panel-collapse collapse" role="tabpanel"
-                        aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            Yes. Quartz is frequently less expensive than marble. Natural luxury stones like marble
-                            are
-                            typically fairly pricey. Quartz countertops can be great for a luxurious aesthetic with
-                            a lower
-                            price tag because they often cost substantially less.
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsethirteen"
-                aria-expanded="false" aria-controls="collapseOne">
-                <div class="panel panel-default panel-box">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">How should quartz be cleaned?</h4>
-                    </div>
-                    <div id="collapsethirteen" class="panel-collapse collapse" role="tabpanel"
-                        aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            The best cleaner for quartz slabs or countertops is a blend of warm water and mild
-                            detergent,
-                            despite the fact that there are numerous secure commercial products on the market. Your
-                            quartz
-                            surfaces will remain clean with routine cleaning.
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    {{-- end accrodian --}}
-
-
-
-    <div class="container contact-details-form">
         <div class="row">
             <div class="col-md-6">
                 <img src="asset/images/argileimage/footerimge.jpg" alt="Quartz product" title="Quartz product"
-                    class="quartz-image-footer img-responsive">
+                    class=" contact-image mb-5">
             </div>
             <div class="col-md-6">
-                <div class="contact-form-area">
-                    <div class="contact-title">Contact us</div>
-                    <div class="text">
-                        <p>Let's Be in Touch !!!</p>
+                <h2 class="fw-bold">Let's Be in Touch !!!
+                </h2>
+                {{-- <form>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingName" placeholder="Your Name" required>
+                        <label for="floatingName">Your Name</label>
                     </div>
-                    <form id="contact-form" name="contact_form" class="default-form">
-                        @csrf
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" name="form_name" value="" placeholder="Your Name "
-                                    class="inp" required="">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" name="form_email" value="" placeholder="Email"
-                                    class="inp" required="">
-                            </div>
-                            <div class="col-md-12">
-                                <input type="text" name="form_phone" value="" placeholder="Contact Number"
-                                    class="inp" required="">
-                            </div>
 
-                            <div class="col-md-12 ">
-                                <textarea placeholder="Message" name="form_message" required="" class="textarea inp"></textarea>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn-one btn-class1">Request
-                            Price
-                            Quote</button>
-                    </form>
-                </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com"
+                            required>
+                        <label for="floatingEmail">Email</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="floatingContact" placeholder="Contact Number"
+                            required>
+                        <label for="floatingContact">Contact Number</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="floatingMessage" placeholder="Your Message" style="height: 150px;" required></textarea>
+                        <label for="floatingMessage">Your Message</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+                </form> --}}
+                <form method="POST" id="contact-form">
+                    @csrf
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingName" name="form_name"
+                            placeholder="Your Name" required
+                            oninvalid="this.setCustomValidity('The name field is required.')"
+                            oninput="this.setCustomValidity('')">
+                        <label for="floatingName">Your Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" name="form_email"
+                            placeholder="name@example.com" required
+                            oninvalid="this.setCustomValidity('The email field is required.')"
+                            oninput="this.setCustomValidity('')">
+                        <label for="floatingEmail">Email</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="floatingContact" name="form_phone"
+                            placeholder="Contact Number" required
+                            oninvalid="this.setCustomValidity('The contact field is required.')"
+                            oninput="this.setCustomValidity('')">
+                        <label for="floatingContact">Contact Number</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="floatingMessage" placeholder="Your Message" name="form_message"
+                            style="height: 150px;" required oninvalid="this.setCustomValidity('The message field is required.')"
+                            oninput="this.setCustomValidity('')"></textarea>
+                        <label for="floatingMessage">Your Message</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+                </form>
+
+
             </div>
+
         </div>
+
+    </div>
+    </div>
     </div>
 
-     {{-- contact form --}}
-
-     <script>
+    <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -619,35 +432,46 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
             const formData = new FormData(form);
 
             fetch("{{ Route('send.mail') }}", {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    Swal.fire({
-                        title: 'Thank you!',
-                        text: 'Your message has been sent successfully!',
-                        icon: 'success',
-                        confirmButtonText: 'OK',
-                        customClass: {
-                            title: 'swal-title',
-                            htmlContainer: 'swal-text',
-                            confirmButton: 'swal-button'
-                        }
-                    });
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        Swal.fire({
+                            title: 'Thank you!',
+                            text: 'Your message has been sent successfully!',
+                            icon: 'success',
+                            confirmButtonText: 'OK',
+                            customClass: {
+                                title: 'swal-title',
+                                htmlContainer: 'swal-text',
+                                confirmButton: 'swal-button'
+                            }
+                        });
 
-                    // Reset the form
-                    form.reset();
+                        // Reset the form
+                        form.reset();
+                    }
+                })
+                .finally(() => {
+                    // Re-enable the button and restore original text
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.pagination a').forEach(link => {
+                // Avoid duplicate hashes
+                if (!link.href.includes('#images')) {
+                    link.href += '#images';
                 }
-            })
-            .finally(() => {
-                // Re-enable the button and restore original text
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
             });
         });
     </script>

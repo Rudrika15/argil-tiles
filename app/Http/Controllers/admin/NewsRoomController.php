@@ -100,7 +100,7 @@ class NewsRoomController extends Controller
     function delete($id)
 	{
         $data=Newsroom::find($id)->delete();
-		return redirect('/newsroomshow')->with('success','Data Deleted Successfully');
+		return redirect('/newsroomshow')->with('success','Data Delete Successfully.');
     }
 }
 

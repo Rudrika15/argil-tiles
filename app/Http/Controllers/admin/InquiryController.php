@@ -5,7 +5,8 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Http\Request;
 use App\Models\Inquiry;
 use App\Models\Contact;
-use Validator;
+// use Validator;
+use Illuminate\Support\Facades\Validator;
 
 
 class InquiryController extends Controller
@@ -99,12 +100,12 @@ class InquiryController extends Controller
     function delete($id)
 	{
         $data=Inquiry::find($id)->delete();
-        return redirect()->route('inquiryshow')->with('msg', 'Data Deleted Successfully');
+        return redirect()->route('inquiryshow')->with('msg', 'Data Delete Successfully.');
 
     }
     function contactdelete($id)
 	{
         $data=Contact::find($id)->delete();
-        return redirect()->route('contactshow')->with('msg', 'Data Deleted Successfully');
+        return redirect()->route('contactshow')->with('msg', 'Data Delete Successfully.');
     }
 }

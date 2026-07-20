@@ -9,6 +9,10 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
+Route::group(['middleware' => ['auth:sanctum']], function () {
+
+    Route::get('/dashboard', [ApiController::class, 'dashboard']);
+});
 // Route::get('/catelogue/{id?}',[ApiController::class,'catelougeview']);
 // Route::get('/home/{id?}',[ApiController::class,'homeview']);
 //Route::get('/inquiry/{id?}',[ApiController::class,'inquiryview']);
@@ -17,10 +21,14 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/slider/{id?}', [ApiController::class, 'sliderview']);
 Route::get('/quartzproduct/{id?}', [ApiController::class, 'quartzproductview']);
+Route::get('/quartzproductpagination/{id?}', [ApiController::class, 'quartzproductviewpagination']);
+
 //Route::get('/wallproductview/{id?}',[ApiController::class,'wallproductview']);
 Route::get('/spcproduct/{id?}', [ApiController::class, 'lvtproductview']);
+Route::get('/spcproductpagination/{id?}', [ApiController::class, 'lvtproductviewpagination']);
+
 // new arrivals route
-Route::get('/newarrivals/{id?}', [ApiController::class, 'newarrivalsview']);
+Route::get('/newarrivals', [ApiController::class, 'newarrivalsview']);
 
 Route::post('/contactus', [ApiController::class, 'contactus']);
 Route::post('/inquiry', [ApiController::class, 'inquiry']);
@@ -39,7 +47,9 @@ Route::post('/inquiry', [ApiController::class, 'inquiry']);
 
 
 // Route::post('/register',[ApiController::class,'register']);
-// Route::post('/login',[ApiController::class,'login']);
+Route::post('/login',[ApiController::class,'login']);
+
+// Route::get('/dashboard', [ApiController::class, 'dashboard']);
 // Route::post('/profile/{id}',[ApiController::class,'profile']);
 // Route::post('/changepassword/{id}',[ApiController::class,'changepassword']);
 // Route::get('/usermasterview/{id?}',[ApiController::class,'usermasterview']);

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\api;
 
+use App\Helper\Util;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactFormMail;
 use Illuminate\Http\Request;
@@ -26,6 +27,10 @@ use App\Models\Finishtype;
 use App\Models\Favorite;
 use App\Models\NewArievels;
 use App\Models\NewArrivals;
+use Carbon\Carbon;
+use Exception;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 
 class apiController extends Controller
@@ -37,10 +42,8 @@ class apiController extends Controller
         } else {
             $data = Catelogue::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No Catelogue Found.."];
+
+        return Util::getSuccessMessage('Success', $data);
     }
 
     function favorite_add(Request $requset)
@@ -51,7 +54,7 @@ class apiController extends Controller
         $fav->type = $requset->type;
 
         $fav->save();
-        return $fav;
+        return Util::getSuccessMessage('Success', $fav);
     }
     function favorite_remove(Request $requset)
     {
@@ -63,17 +66,15 @@ class apiController extends Controller
             ->where('user_id', '=', $user_id)
             ->get()->first();
         $fav->delete();
-        return $fav;
+        return Util::getSuccessMessage('Success', $fav);
     }
     function favorite_view($id)
     {
         $data = Favorite::orderBy('id', 'desc')
             ->where('user_id', '=', $id)
             ->get();
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+
+        return Util::getSuccessMessage('Success', $data);
     }
 
     function register(Request $requset)
@@ -85,7 +86,8 @@ class apiController extends Controller
         $um->password = $requset->password;
         $um->contact = $requset->contact;
         $um->save();
-        return $um;
+
+        return Util::getSuccessMessage('Register Successfully', $um);
     }
 
     public function sendEmail($subject, $message)
@@ -127,7 +129,7 @@ class apiController extends Controller
         curl_close($session);
 
         // print everything out
-        return ($response);
+        return Util::getSuccessMessage('Success',  $response);
     }
 
 
@@ -145,13 +147,11 @@ class apiController extends Controller
         $ctc->message = $message;
         $ctc->save();
 
-         // Send the email using the ContactFormMail Mailable
+        // Send the email using the ContactFormMail Mailable
         Mail::to('social.media@argiltiles.com')  // Replace with your own email address
-        ->send(new ContactFormMail($name, $email, $contactno, $message));
+            ->send(new ContactFormMail($name, $email, $contactno, $message));
 
-        return $ctc;
-        // return $responseEmail;
-
+        return Util::getSuccessMessage('Message Sent Successfully', $ctc);
     }
     function inquiry(Request $request)
     {
@@ -161,7 +161,8 @@ class apiController extends Controller
         $email = $request->email;
         $contactno = $request->contactno;
         $message = $request->message;
-        $type = $request->type;
+        $details = $request->details;
+        $subject = $request->subject;
 
         $inqr = new Inquiry();
         $inqr->subject = $productname;
@@ -169,17 +170,15 @@ class apiController extends Controller
         $inqr->email = $email;
         $inqr->phone = $contactno;
         $inqr->message = $message;
-        $inqr->details = $type;
+        $inqr->details = $details;
+        $inqr->subject = $subject;
         $inqr->save();
 
-          // email code here
+        // email code here
+        Mail::to('social.media@argiltiles.com')  // Replace with your own email address
+            ->send(new ContactFormMail($name, $email, $contactno, $message));
 
-        return response()->json([
-            'status' => true,
-            'message' => 'Inquiry Sent Successfully',
-            'data' => $inqr
-
-        ]);
+        return Util::getSuccessMessage('Inquiry Sent Successfully', $inqr);
     }
     function forgot(Request $request)
     {
@@ -187,18 +186,16 @@ class apiController extends Controller
         $contact = $request->contact;
     }
 
-    function login(Request $requset)
-    {
-        $contact = $requset->contact;
-        $password = $requset->password;
-        $data = Usermaster::where('contact', '=', $contact)->where('password', '=', $password)->first();
+    // function login(Request $requset)
+    // {
+    //     $contact = $requset->contact;
+    //     $password = $requset->password;
+    //     $data = Usermaster::where('contact', '=', $contact)->where('password', '=', $password)->first();
 
-        if ($data)
 
-            return $data;
-        else
-            return ['data' => "No  Found.."];
-    }
+    //     return Util::getSuccessMessage($data, 'Login Successfully');
+    // }
+
 
     function profile(Request $requset, $id)
     {
@@ -208,7 +205,7 @@ class apiController extends Controller
         $um->email = $requset->email;
         $um->contact = $requset->contact;
         $um->save();
-        return $um;
+        return Util::getSuccessMessage('Profile Updated Successfully', $um);
     }
 
     function changepassword(Request $requset, $id)
@@ -222,9 +219,9 @@ class apiController extends Controller
                 $um->password = $newpassword;
 
                 $um->save();
-                return $um;
+                return Util::getSuccessMessage('Password Updated Successfully', $um);
             } else {
-                return ['data' => "Not Match Found.."];
+                return Util::getErrorMessage('Old Password Not Match',);
             }
         } else {
             return ['data' => "No  Found.."];
@@ -235,9 +232,9 @@ class apiController extends Controller
     {
         $data = Usermaster::find($id);
         if ($data)
-            return $data;
+            return Util::getSuccessMessage($data, 'User Found Successfully');
         else
-            return ['data' => "No  Found.."];
+            return Util::getErrorMessage($data, 'User Not Found');
     }
 
     function qsizematsterview($id = 0)
@@ -248,9 +245,9 @@ class apiController extends Controller
             $data = Qsizemaster::find($id);
         }
         if ($data)
-            return $data;
+            return Util::getSuccessMessage('Quartz Size Fetched Successfully', $data);
         else
-            return ['data' => "No  Found.."];
+            return Util::getErrorMessage('Quartz Size Not Found', $data);
     }
     function wsizematsterview($id = 0)
     {
@@ -259,10 +256,7 @@ class apiController extends Controller
         } else {
             $data = Wsizemaster::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+        return Util::getSuccessMessage('Wall Size Fetched Successfully', $data);
     }
     function stockview($id = 0)
     {
@@ -271,10 +265,8 @@ class apiController extends Controller
         } else {
             $data = Stock::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+
+        return Util::getSuccessMessage(' User Found Successfully', $data);
     }
     function designtypeview($id = 0)
     {
@@ -283,10 +275,8 @@ class apiController extends Controller
         } else {
             $data = Designtype::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No  Found.."];
+
+        return Util::getSuccessMessage(' User Found Successfully', $data);
     }
 
     function finishtypeview($id = 0)
@@ -334,15 +324,30 @@ class apiController extends Controller
     function lvtproductview($id = 0)
     {
         if ($id == 0) {
-            $data = Lvtproduct::orderBy('id', 'desc')->get();
+            $data = Lvtproduct::orderBy('names')->get();
         } else {
             $data = Lvtproduct::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No product Found.."];
+        return Util::getSuccessMessage('Lvtproduct Fetched Successfully', $data);
     }
+    function lvtproductviewpagination(Request $request, $id = 0)
+    {
+        if ($id == 0) {
+            $query = Lvtproduct::orderBy('names');
+
+            // 🔍 Filter by name (starts with or contains)
+            if (!empty($request->q)) {
+                $query->where('names', 'like', '%' . $request->q . '%');
+            }
+
+            $data = $query->paginate(6); // use paginate if you want pagination
+        } else {
+            $data = Lvtproduct::find($id);
+        }
+
+        return Util::getSuccessMessage('Lvtproduct Fetched Successfully', $data);
+    }
+
 
 
     function newsroomview($id = 0)
@@ -359,18 +364,43 @@ class apiController extends Controller
     }
 
 
-    function quartzproductview($id = 0)
+    // function quartzproductview($id = 0)
+    // {
+    //     if ($id == 0) {
+    //         $data = Quartzproduct::orderBy('id', 'desc')->get();
+    //     } else {
+    //         $data = Quartzproduct::find($id);
+    //     }
+    //     return Util::getSuccessMessage('Quartzproduct Fetched Successfully', $data);
+    // }
+    // function quartzproductviewpagination($id = 0)
+    // {
+    //     if ($id == 0) {
+    //         $data = Quartzproduct::orderBy('id', 'desc')->paginate(6);
+    //     } else {
+    //         $data = Quartzproduct::find($id);
+    //     }
+    //     return Util::getSuccessMessage('Quartzproduct Fetched Successfully', $data);
+    // }
+    function quartzproductviewpagination(Request $request, $id = 0)
     {
         if ($id == 0) {
-            $data = Quartzproduct::orderBy('id', 'desc')->get();
+            $query = Quartzproduct::where('status','Active')->orderBy('id', 'desc');  // display only active product-by jigar
+
+            // 🔍 Filter by name if "q" is passed
+            if (!empty($request->q)) {
+                $query->where('name', 'like', '%' . $request->q . '%');
+            }
+
+            $data = $query->paginate(6);
         } else {
             $data = Quartzproduct::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No Quartzproduct Found.."];
+
+        return Util::getSuccessMessage('Quartzproduct Fetched Successfully', $data);
     }
+
+
 
 
     function wallproductview($id = 0)
@@ -492,10 +522,125 @@ class apiController extends Controller
         } else {
             $data = Slider::find($id);
         }
-        if ($data)
-            return $data;
-        else
-            return ['data' => "No Slider Found.."];
+        return Util::getSuccessMessage('Slider Fetched Successfully', $data);
+    }
+
+    // function newarrivalsview()
+    // {
+    //     $data = NewArrivals::orderBy('id', 'desc')->first();
+    //     $url = $data->navigate_url;
+
+    //     // Extract path and split into segments
+    //     $path = parse_url($url, PHP_URL_PATH);
+    //     $segments = explode('/', trim($path, '/'));
+
+    //     $productId = 0;
+    //     $quartzproduct = null;
+    //     $wallproduct = null;
+
+    //     $index = array_search('quartzproduct', $segments);
+    //     if ($index !== false && isset($segments[$index + 1])) {
+    //         $productId = $segments[$index + 1];
+
+    //         // Fetch quartz product
+    //         $quartzproduct = Quartzproduct::find($productId);
+    //         if ($quartzproduct) {
+    //             return Util::getSuccessMessage('Quartz Product Fetched Successfully', [$quartzproduct, $data]);
+    //         }
+    //     } else {
+    //         // Try to detect wallproduct and get its ID
+    //         $index = array_search('wallproduct', $segments);
+    //         if ($index !== false && isset($segments[$index + 1])) {
+    //             $productId = $segments[$index + 1];
+    //             $wallproduct = Wallproduct::find($productId);
+    //             if ($wallproduct) {
+    //                 return Util::getSuccessMessage('Wall Product Fetched Successfully', [$wallproduct, $data]);
+    //             }
+    //         }
+    //     }
+
+    //     // Fallback response
+    //     return response()->json([
+    //         'status' => false,
+    //         'message' => 'Product not found.',
+    //         'data' => [
+    //             'url' => $url,
+    //             'newarrival' => $data,
+    //             'quartzproduct' => $quartzproduct,
+    //             'wallproduct' => $wallproduct
+    //         ]
+    //     ]);
+    // }
+
+    function newarrivalsview()
+    {
+        try {
+            $data = NewArrivals::orderBy('id', 'desc')->first();
+            $data->image = 'newarieles/' . $data->image;
+            return Util::getSuccessMessage('New Arrivals Fetched Successfully', $data);
+        } catch (Exception $e) {
+            return Util::getErrorMessage('New Arrivals Not Found', $e);
+        }
+    }
+    public function dashboard()
+    {
+        if (!Auth::user()) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Unauthorized',
+            ]);
+        }
+
+        $inquiryCount = Inquiry::count();
+        $contactCount = Contact::count();
+
+        // $inquiryDate = Inquiry::orderBy('created_at', 'desc')->get();
+       
+
+        // $contactDate = Contact::orderBy('created_at', 'desc')->get();
+         $inquiryDate = Inquiry::orderBy('created_at', 'desc')
+            ->limit(50)
+            ->get();
+
+        $contactDate = Contact::orderBy('created_at', 'desc')
+            ->limit(50)
+            ->get();
+        return response()->json([
+            'status' => true,
+            'message' => 'Dashboard Fetched Successfully',
+            'data' => [
+                'inquiryCount' => $inquiryCount,
+                'contactCount' => $contactCount,
+                'inquiryData' => $inquiryDate,
+                'contactData' => $contactDate,
+            ],
+
+        ]);
+    }
+
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $user = User::where('email', $request->email)->first();
+
+        if ($user && Hash::check($request->password, $user->password)) {
+            // Create token
+            $tokenResult = $user->createToken('auth_token');
+            $token = $tokenResult->plainTextToken;
+
+            // Update token expiration manually
+            $tokenResult->accessToken->expires_at = Carbon::now()->addYear();
+            $tokenResult->accessToken->save();
+
+            return Util::getSuccessMessage('Login Successfully', ["user" => $user, "token" => $token]);
+        }
+
+        return Util::getErrorMessage('Login Failed', 'Invalid Credentials');
     }
 
     function newarrivalsview()
