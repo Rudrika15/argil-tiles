@@ -35,8 +35,7 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <title>
         Quartz Countertop Slabs Manufacturer in Morbi | Argil
     </title>
-@endsection
-<style>
+    <style>
     .contact-image{
     width:100%;
     height:500px;
@@ -44,6 +43,8 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     border-radius:15px;
 }
 </style>
+@endsection
+
 @section('content')
     <!-- breadcrumb -->
     <div class="breadcrumb d-flex justify-content-between align-items-center">

@@ -1,5 +1,38 @@
 @extends('layouts.app')
-<style>
+@section('seosection')
+   <meta name="description"
+        content="{{ $caseStudies->seo_description ?? $caseStudies->short_description }}">
+
+    <meta name="keywords"
+        content="{{ $caseStudies->seo_keywords }}">
+
+    <meta property="og:title"
+        content="{{ $caseStudies->seo_title ?? $caseStudies->title . ' | Argil Tiles' }}">
+
+    <meta property="og:description"
+        content="{{ $caseStudies->seo_description ?? $caseStudies->short_description }}">
+
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Argil Tiles">
+
+    <meta property="og:image"
+        content="{{ asset('storage/' . $caseStudies->featured_image) }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+        content="{{ $caseStudies->seo_title ?? $caseStudies->title . ' | Argil Tiles' }}">
+
+    <meta name="twitter:description"
+        content="{{ $caseStudies->seo_description ?? $caseStudies->short_description }}">
+
+    <meta name="twitter:image"
+        content="{{ asset('storage/' . $caseStudies->featured_image) }}">
+
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <title>{{ $caseStudies->seo_title ?? $caseStudies->title . ' | Argil Tiles' }}</title>
+    <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 .blog-hero{
@@ -362,6 +395,8 @@
     }
 }
 </style>
+@endsection
+
 @section('content')
 
 {{-- ================= FULLSCREEN HERO IMAGE ================= --}}

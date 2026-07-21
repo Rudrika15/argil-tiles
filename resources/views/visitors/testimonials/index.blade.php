@@ -1,6 +1,44 @@
 @extends('layouts.app')
+@section('seosection')
+    <meta name="description"
+        content="Read genuine client testimonials about Argil Tiles' premium engineered quartz surfaces and SPC flooring. Discover why homeowners, architects, designers, and businesses trust our quality, craftsmanship, and service.">
+
+    <meta name="keywords"
+        content="Argil Tiles testimonials, customer reviews, quartz surface reviews, SPC flooring reviews, client feedback, engineered quartz manufacturer, SPC flooring manufacturer, Morbi quartz manufacturer, flooring customer testimonials">
+
+    <meta property="og:title"
+        content="Customer Testimonials | Argil Tiles">
+
+    <meta property="og:description"
+        content="Explore authentic customer testimonials and success stories showcasing Argil Tiles' premium quartz surfaces and SPC flooring solutions for residential and commercial projects.">
+
+    <meta property="og:url"
+        content="{{ url()->current() }}">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:site_name" content="Argil Tiles">
+
+    <meta property="og:image"
+        content="{{ asset('assets/images/og-image.jpg') }}"> {{-- Replace with your default OG image --}}
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title"
+        content="Customer Testimonials | Argil Tiles">
+
+    <meta name="twitter:description"
+        content="See what our customers say about Argil Tiles' premium quartz surfaces and SPC flooring. Read real experiences from successful residential and commercial projects.">
+
+    <meta name="twitter:image"
+        content="{{ asset('assets/images/og-image.jpg') }}"> {{-- Replace with your default OG image --}}
+
+    <link rel="canonical"
+        href="{{ url()->current() }}">
+
+    <title>Customer Testimonials | Quartz & SPC Flooring Reviews | Argil Tiles</title>
+
 <style>
-   
 .testimonial-card{
     position:relative;
     background:#fff;
@@ -40,6 +78,7 @@
     font-size:15px;
     min-height:130px;
 }
+
 .client-image{
     width:60px;
     height:60px;
@@ -102,6 +141,7 @@
     font-size:18px;
 }
 </style>
+@endsection
 @section('content')
 
 <section class="py-5">

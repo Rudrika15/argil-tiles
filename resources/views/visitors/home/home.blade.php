@@ -31,7 +31,7 @@ Get a price quote "
 
         <title>Quartz Stone Slab
             Manufacturers | Argil – Morbi, India</title>
-    @endsection 
+            
 <style>
 .testimonial-card{
     position:relative;
@@ -135,6 +135,7 @@ Get a price quote "
     font-size:18px;
 }
 </style>
+    @endsection 
     @section('content')
         <div class="container-fluid px-0">
             <div class="row g-0">

@@ -1,23 +1,22 @@
 @extends('layouts.app')
 @section('seosection')
-    <meta name="description"
-        content="Expert tips on quartz countertops, SPC flooring & tile design from Argil's team. Read the latest articles.">
+<meta name="description"
+    content="Expert tips on quartz countertops, SPC flooring & tile design from Argil's team. Read the latest articles.">
 
-    <meta property="og:title" content="Argil Tiles Blog | Tile Design Trends, Tips & Inspirations">
-    <meta property="og:description"
-        content="Explore design inspiration, tile trends, and expert insights from Argil Tiles. Discover ideas for modern homes and commercial spaces.">
-    <meta property="og:url" content="https://argiltiles.com/blogs">
+<meta property="og:title" content="Argil Tiles Blog | Tile Design Trends, Tips & Inspirations">
+<meta property="og:description"
+    content="Explore design inspiration, tile trends, and expert insights from Argil Tiles. Discover ideas for modern homes and commercial spaces.">
+<meta property="og:url" content="https://argiltiles.com/blogs">
 
-    <meta name="twitter:title" content="Argil Tiles Blog | Tile Design Trends, Tips & Inspirations">
-    <meta name="twitter:description"
-        content="Get the latest tile trends, flooring ideas, and expert advice from Argil Tiles. Stay inspired with our newest blog articles.">
+<meta name="twitter:title" content="Argil Tiles Blog | Tile Design Trends, Tips & Inspirations">
+<meta name="twitter:description"
+    content="Get the latest tile trends, flooring ideas, and expert advice from Argil Tiles. Stay inspired with our newest blog articles.">
 
-    <link rel="canonical" href="https://argiltiles.com/blogs">
+<link rel="canonical" href="https://argiltiles.com/blogs">
 
-    <title>Argil Tiles Blog | Quartz, SPC Flooring & Tile Design Tips</title>
+<title>Argil Tiles Blog | Quartz, SPC Flooring & Tile Design Tips</title>
+ 
     
-@endsection
-
 <style>
     /* .blog-card-image {
     width: 100%;
@@ -102,6 +101,8 @@
     height:16px;
 }
 </style>
+
+@endsection
 @section('content')
     <!-- breadcrumb -->
     <div class="breadcrumb d-flex justify-content-between align-items-center">

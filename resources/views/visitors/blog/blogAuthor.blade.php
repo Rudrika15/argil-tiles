@@ -18,7 +18,7 @@
     <title>
         {{ isset($author) && $author ? $author . ' Blogs | Argil Tiles' : 'Blog Authors | Argil Tiles' }}
     </title>
-@endsection
+
 <style>
 
     .blog-card-image {
@@ -47,6 +47,7 @@
     transform: translateX(0);
 }
 </style>
+@endsection
 
 @section('content')
     <!-- breadcrumb -->

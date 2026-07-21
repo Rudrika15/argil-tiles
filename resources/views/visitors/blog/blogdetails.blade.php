@@ -1,5 +1,17 @@
 @extends('layouts.app')
 
+@section('seosection')
+    <meta name="description" content="Read the latest blog post from Argil Tiles. Discover tips on quartz countertops, SPC flooring, and tile design.">
+    <meta name="keywords" content="Argil Tiles blog, quartz countertops, SPC flooring, tile design tips, flooring ideas, interior design inspiration">
+    <meta property="og:title" content="Argil Tiles Blog | Quartz, SPC Flooring & Tile Design Tips">
+    <meta property="og:description" content="Get the latest tile trends, flooring ideas, and expert advice from Argil Tiles. Stay inspired with our newest blog articles.">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Argil Tiles">
+    <meta name="twitter:title" content="Argil Tiles Blog | Quartz, SPC Flooring & Tile Design Tips">
+    <meta name="twitter:description" content="Get the latest tile trends, flooring ideas, and expert advice from Argil Tiles. Stay inspired with our newest blog articles.">
+    <link rel="canonical" href="{{ url()->current() }}">
+
 <style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 .blog-hero{
@@ -357,6 +369,7 @@
     }
 }
 </style>
+@endsection
 @section('content')
 
 <section class="blog-hero">

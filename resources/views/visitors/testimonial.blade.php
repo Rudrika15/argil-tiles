@@ -22,9 +22,26 @@
             @endfor
         </div>
 
-        <p class="testimonial-text">
-           {{ strip_tags($testimonial->testimonial) }}
-        </p>
+        @php
+          $fullText = strip_tags($testimonial->testimonial);
+          $shortText = Str::limit($fullText, 100);
+          $needsToggle = strlen($fullText) > 100;
+            @endphp
+
+            <p class="testimonial-text"
+               data-short="{{ e($shortText) }}"
+               data-full="{{ e($fullText) }}">
+                {{ $shortText }}
+
+            @if($needsToggle)
+                <button type="button"
+                        class="btn btn-link p-0 read-more-btn text-decoration-none"
+                        style="color:#d4b59e; font-size:15px; font-weight:600;">
+                    Read More
+                </button>
+            @endif
+            
+            </p>
 
         <div class="d-flex align-items-center mt-2">
 {{-- 
@@ -79,3 +96,24 @@
         </div>
 
     </div>
+    
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.testimonial-card').forEach(function (card) {
+        const textEl = card.querySelector('.testimonial-text');
+        const btn = card.querySelector('.read-more-btn');
+
+        if (!textEl || !btn) return;
+
+        const shortText = textEl.dataset.short;
+        const fullText = textEl.dataset.full;
+
+        btn.addEventListener('click', function () {
+            const isExpanded = textEl.classList.toggle('is-expanded');
+
+            textEl.textContent = isExpanded ? fullText : shortText;
+            btn.textContent = isExpanded ? 'Read Less' : 'Read More';
+        });
+    });
+});
+</script>

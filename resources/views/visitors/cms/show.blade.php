@@ -2,36 +2,46 @@
 
 @section('seosection')
 
-<title>{{ $page->meta_title ?: $page->title }}</title>
+    <meta name="description"
+        content="{{ $page->meta_description ?? Str::limit(strip_tags($page->description), 160) }}">
 
-<meta name="description"
-    content="{{ $page->meta_description }}">
+    <meta name="keywords"
+        content="{{ $page->meta_keyword }}">
 
-<meta name="keywords"
-    content="{{ $page->meta_keyword }}">
+    <meta property="og:title"
+        content="{{ $page->meta_title ?? $page->title . ' | Argil Tiles' }}">
 
-<meta name="author"
-    content="{{ $page->author }}">
+    <meta property="og:description"
+        content="{{ $page->meta_description ?? Str::limit(strip_tags($page->description), 160) }}">
 
-<meta property="og:title"
-    content="{{ $page->meta_title ?: $page->title }}">
+    <meta property="og:url"
+        content="{{ $page->og_url ?: url()->current() }}">
 
-<meta property="og:description"
-    content="{{ $page->meta_description }}">
+    <meta property="og:type" content="website">
 
-<meta property="og:url"
-    content="{{ url()->current() }}">
+    <meta property="og:site_name" content="Argil Tiles">
 
-@if($page->og_image)
-<meta property="og:image"
-    content="{{ asset($page->og_image) }}">
-@endif
+    <meta property="og:image"
+        content="{{ $page->og_image ? asset('storage/' . $page->og_image) : asset('assets/images/og-image.jpg') }}">
 
-<link rel="canonical"
-    href="{{ url()->current() }}">
+    <meta name="twitter:card" content="summary_large_image">
 
-@endsection
-<style>
+    <meta name="twitter:title"
+        content="{{ $page->meta_title ?? $page->title . ' | Argil Tiles' }}">
+
+    <meta name="twitter:description"
+        content="{{ $page->meta_description ?? Str::limit(strip_tags($page->description), 160) }}">
+
+    <meta name="twitter:image"
+        content="{{ $page->og_image ? asset('storage/' . $page->og_image) : asset('assets/images/og-image.jpg') }}">
+
+    <link rel="canonical"
+        href="{{ $page->og_url ?: url()->current() }}">
+
+    <title>{{ $page->meta_title ?? $page->title . ' | Argil Tiles' }}</title>
+
+
+    <style>
 
 .top{
      color:#ccb19b;
@@ -257,6 +267,8 @@
     }
 }
 </style>
+@endsection('seosection')
+
 @section('content')
 
 <!-- Breadcrumb -->

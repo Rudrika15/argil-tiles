@@ -25,7 +25,7 @@ assist you!">
     <meta name="twitter:site" content="@ArgilGroup">
     <link rel="canonical" href="https://argiltiles.com/contact" data-react- helmet="true">
     <title>Contact Us | Argil Tiles – Quartz Stone Manufacturers in Morbi, India</title>
-@endsection
+
 <style>
     
 .testimonial-card{
@@ -111,7 +111,7 @@ assist you!">
     background:#fafafa;
 }
 </style>
-
+@endsection
 @section('content')
     {{-- @if (session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">

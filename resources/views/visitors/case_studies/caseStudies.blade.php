@@ -1,28 +1,32 @@
 @extends('layouts.app')
 @section('seosection')
     <meta name="description"
-        content="Expert tips on quartz countertops, SPC flooring & tile design from Argil's team. Read the latest articles.">
+        content="Explore Argil Tiles case studies featuring premium engineered quartz surfaces and SPC flooring installations across residential, commercial, retail, and hospitality projects.">
 
-    <meta property="og:title" content="Argil Tiles Blog | Tile Design Trends, Tips & Inspirations">
+    <meta name="keywords"
+        content="Argil Tiles case studies, quartz installation projects, SPC flooring projects, commercial flooring, retail flooring, hospitality flooring, engineered quartz projects, Morbi quartz manufacturer">
+
+    <meta property="og:title" content="Argil Tiles Case Studies | Quartz & SPC Flooring Projects">
     <meta property="og:description"
-        content="Explore design inspiration, tile trends, and expert insights from Argil Tiles. Discover ideas for modern homes and commercial spaces.">
-    <meta property="og:url" content="https://argiltiles.com/blogs">
+        content="Discover real-world quartz surface and SPC flooring projects completed by Argil Tiles. Browse our portfolio of residential and commercial installations.">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Argil Tiles">
 
-    <meta name="twitter:title" content="Argil Tiles Blog | Tile Design Trends, Tips & Inspirations">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Argil Tiles Case Studies | Quartz & SPC Flooring Projects">
     <meta name="twitter:description"
-        content="Get the latest tile trends, flooring ideas, and expert advice from Argil Tiles. Stay inspired with our newest blog articles.">
+        content="Browse successful quartz and SPC flooring installations by Argil Tiles. See how our premium surfaces transform homes, retail stores, offices, hotels, and commercial spaces.">
 
-    <link rel="canonical" href="https://argiltiles.com/blogs">
+    <link rel="canonical" href="{{ url()->current() }}">
 
-    <title>Argil Tiles Blog | Quartz, SPC Flooring & Tile Design Tips</title>
+    <title>Case Studies | Quartz & SPC Flooring Projects | Argil Tiles</title>
+
     
-@endsection
-
 <style>
     /* =========================
        CASE STUDIES CARDS
     ========================= */
-
     .blog-card {
         border: 0;
         border-radius: 12px;
@@ -153,6 +157,8 @@
         }
     }
 </style>
+@endsection
+
 @section('content')
     <!-- breadcrumb -->
     <div class="breadcrumb d-flex justify-content-between align-items-center">
