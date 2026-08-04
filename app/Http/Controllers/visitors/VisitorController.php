@@ -82,7 +82,14 @@ class VisitorController extends Controller
 {
     $blog = Blog::select(
                 'blogs.*',
-                'meta_property_blogs.author'
+                'meta_property_blogs.author',
+                'meta_property_blogs.ogTitleEng',
+                'meta_property_blogs.ogDescriptionEng',
+                'meta_property_blogs.ogImage',
+                'meta_property_blogs.ogUrl',
+                'meta_property_blogs.description as meta_description',
+                'meta_property_blogs.keywords',
+                'meta_property_blogs.tages'
             )
             ->leftJoin(
                 'meta_property_blogs',

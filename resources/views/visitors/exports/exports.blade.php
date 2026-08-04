@@ -1,42 +1,53 @@
 @extends('layouts.app')
 
 @section('seosection')
-    <title>Exports | Argil Tiles – Quartz Stone Manufacturers in Morbi, India</title>
+    <meta name="description"
+        content="Export premium rigid-core vinyl and engineered stone from Morbi, India to global distributors and developers.">
+    <meta name="keywords"
+        content="rigid-core vinyl export, engineered stone export, surface exporter India, wholesale surfaces Morbi">
+    <meta property="og:title" content="Exports | Global Wholesale Surfaces & Vinyl">
+    <meta property="og:description"
+        content="Export premium rigid-core vinyl and engineered stone from Morbi, India to global distributors and developers.">
+    <meta property="og:url" content="https://argiltiles.com/exports">
+    <link rel="canonical" href="https://argiltiles.com/exports">
+    <title>Exports | Global Wholesale Surfaces & Vinyl Supply</title>
+@endsection
+@section('lcp_preload')
+    <link rel="preload" as="image" href="{{ asset('export-imgs/uae.png') }}" fetchpriority="high">
 @endsection
 
 
 @section('content')
     <!-- HERO -->
-    <section class="text-white position-relative d-flex align-items-center justify-content-center overflow-hidden"
-        style="min-height: 90vh; 
-           border-bottom: 8px solid #ccb19b !important; 
-           background: linear-gradient(rgba(77, 76, 76, 0.7), rgba(0, 0, 0, 0.85)), 
-                       url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2000&auto=format&fit=crop'); 
-           background-size: cover; 
-           background-position: center; 
-           background-attachment: fixed;">
+    <section class="text-white position-relative d-flex align-items-center justify-content-center overflow-hidden export-hero">
 
         <div class="container py-5 text-center">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
 
-                    <p class="text-uppercase fw-bold mb-4" style="color:#ccb19b; letter-spacing:6px; font-size: 0.85rem;">
-                        Argil Group <span class="mx-2 opacity-50">|</span> Global Export Division
+                    <p class="text-uppercase fw-bold mb-4 export-hero-kicker">
+                        Global Export Division
                     </p>
 
-                    <h1 class="display-4 fw-bold text-uppercase mb-4" style="line-height: 1.1; letter-spacing: -1px;">
-                        Premium <span style="color:#ccb19b">SPC & Quartz</span> <br>
+                    <h1 class="display-4 fw-bold text-uppercase mb-4 export-hero-title">
+                        Premium <span>Surfaces & Vinyl</span> <br>
                         Global Wholesale Supply
                     </h1>
 
-                    <p class="lead fw-light opacity-75 mb-5 mx-auto"
-                        style="max-width: 750px; font-size: 1.35rem; line-height: 1.6;">
+                    <p class="lead fw-light opacity-75 mb-4 mx-auto export-hero-lead">
                         Supplying high-performance architectural surfaces to global distributors
                         and developers with reliable factory-to-port logistics.
                     </p>
+                    <p class="fw-light opacity-75 mb-5 mx-auto export-hero-lead">
+                        From Morbi, India we support wholesale buyers with engineered stone slabs and rigid-core vinyl,
+                        clear documentation, and flexible container planning for residential, commercial, and hospitality
+                        projects across major markets. Our export desk coordinates production slots, packing lists, and
+                        port timelines so distributors can plan inventory with fewer surprises. Share your destination,
+                        preferred series, and monthly volume targets to receive a practical quotation package.
+                    </p>
 
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="#enquiry" class="btn text-white fw-bold px-4 py-3 rounded-0" style="background:#ccb19b">
+                        <a href="#enquiry" class="btn text-white fw-bold px-4 py-3 rounded-0 export-hero-cta">
                             Request Quotation
                         </a>
                         <a href="{{ route('catalogue') }}" target="_blank"
@@ -45,8 +56,7 @@
                         </a>
                     </div>
 
-                    <div class="mt-5 pt-2 d-flex justify-content-center gap-5 opacity-50 text-uppercase small"
-                        style="letter-spacing: 2px;">
+                    <div class="mt-5 pt-2 d-flex justify-content-center gap-5 opacity-50 text-uppercase small export-hero-meta">
                         <span><i class="bi bi-award me-2"></i>ISO Certified</span>
                         <span><i class="bi bi-ship/truck me-2"></i>Direct Logistics</span>
                         <span><i class="bi bi-globe me-2"></i>5+ Countries</span>
@@ -57,34 +67,80 @@
         </div>
     </section>
 
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="fw-bold mb-3 text-center">Why importers choose Morbi surfaces</h2>
+                    <p class="text-muted">
+                        Global buyers partner with our factory for predictable quality systems, competitive FOB pricing, and
+                        the ability to mix engineered stone and rigid-core vinyl programmes in coordinated shipments. We
+                        support private labeling, sample approvals, and batch-level colour control so multi-site rollouts
+                        stay consistent from the first container to the last.
+                    </p>
+                    <p class="text-muted">
+                        Our export workflow covers inquiry clarification, production scheduling, quality inspection, packing,
+                        and documentation for major ports. Whether you serve hospitality towers in the Gulf, residential
+                        distributors in North America, or commercial fit-outs in Europe and Asia-Pacific, the same plant
+                        disciplines apply—ISO-aligned processes, trained finishing teams, and clear communication on lead
+                        times.
+                    </p>
+                    <p class="text-muted mb-0">
+                        Start with a country page below for market notes, or send an enquiry with destination, product mix,
+                        and target volume. We will respond with series recommendations, approximate transit guidance, and
+                        next steps for samples or a formal quotation. Long-term partners also use standing forecasts so we
+                        can reserve capacity ahead of peak building seasons in their markets. Ask about mixed containers if
+                        you need both stone slabs and vinyl planks in one sailing. Country pages below outline local notes
+                        for UAE, USA, UK, Australia, Canada, and Russia routes. Prefer a single conversation for multiple
+                        markets? List all destinations in your enquiry and we will coordinate one response pack. Export
+                        support is available in English for international buyers and regional partners worldwide each week.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="h5 fw-bold">Export checklist</h2>
+                    <p class="text-muted mb-0">
+                        Prepare destination country, preferred series, monthly volume, packaging notes, and any OEM
+                        labeling needs before you enquire. With those details ready, our team can return a quotation pack
+                        covering lead time, container options, and sample availability for faster decision making.
+                        Keep certificates and previous packing preferences handy if you are a returning partner renewing
+                        a programme.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- INTERNATIONAL SUPPLY -->
     <section class="py-5 bg-white">
         <div class="container">
-            <h2 class="text-center fw-bold mb-5" style="color:black;">
+            <h2 class="text-center fw-bold mb-5 text-dark">
                 INTERNATIONAL SUPPLY REGIONS
             </h2>
 
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden"
-                        style="border-color: #ccb19b !important; cursor: pointer; transition: all 0.3s ease-in-out;"
-                        onmouseenter="this.querySelector('.long-arrow').style.opacity='1'; this.querySelector('.long-arrow').style.transform='translateX(0)'; this.style.transform='translateY(-5px)';"
-                        onmouseleave="this.querySelector('.long-arrow').style.opacity='0'; this.querySelector('.long-arrow').style.transform='translateX(-20px)';"
+                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden export-dest-card"
                         onclick="window.location.href='exports/uae';">
 
-                        <img src="export-imgs/uae.png" class="img-fluid w-50 mx-auto d-block" alt="UAE">
+                        <img src="{{ asset('export-imgs/uae.png') }}" class="img-fluid w-50 mx-auto d-block" alt="UAE" width="403" height="422" loading="eager" fetchpriority="high" decoding="async">
 
                         <div class="card-body pb-5">
-                            <h5 class="fw-bold">UAE</h5>
+                            <h3 class="fw-bold">UAE</h3>
                             <p class="text-muted mb-0">
-                                SPC flooring and quartz surfaces supplied for hospitality, residential towers and
+                                rigid-core vinyl and engineered stone supplied for hospitality, residential towers and
                                 commercial interiors.
                             </p>
                         </div>
 
-                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between"
-                            style="opacity: 0; color: #ccb19b; transition: all 0.4s ease-in-out; transform: translateX(-20px);">
-                            <span class="small fw-bold text-uppercase" style="letter-spacing: 1px;">More Details</span>
+                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between">
+                            <span class="small fw-bold text-uppercase ls-1">More Details</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="16" fill="currentColor"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -95,24 +151,20 @@
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden"
-                        style="border-color: #ccb19b !important; cursor: pointer; transition: all 0.3s ease-in-out;"
-                        onmouseenter="this.querySelector('.long-arrow').style.opacity='1'; this.querySelector('.long-arrow').style.transform='translateX(0)'; this.style.transform='translateY(-5px)';"
-                        onmouseleave="this.querySelector('.long-arrow').style.opacity='0'; this.querySelector('.long-arrow').style.transform='translateX(-20px)';"
+                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden export-dest-card"
                         onclick="window.location.href='exports/usa'">
 
                         <img src="export-imgs/usa.png" class="img-fluid w-50 mx-auto d-block" alt="USA">
 
                         <div class="card-body mt-2 pb-5">
-                            <h5 class="fw-bold">United States</h5>
+                            <h3 class="fw-bold">United States</h3>
                             <p class="text-muted mb-0">
                                 Bulk supply for renovation projects, apartments and retail interior developments.
                             </p>
                         </div>
 
-                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between"
-                            style="opacity: 0; color: #ccb19b; transition: all 0.4s ease-in-out; transform: translateX(-20px);">
-                            <span class="small fw-bold text-uppercase" style="letter-spacing: 1px;">More Details</span>
+                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between">
+                            <span class="small fw-bold text-uppercase ls-1">More Details</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="16" fill="currentColor"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -123,24 +175,20 @@
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden"
-                        style="border-color: #ccb19b !important; cursor: pointer; transition: all 0.3s ease-in-out;"
-                        onmouseenter="this.querySelector('.long-arrow').style.opacity='1'; this.querySelector('.long-arrow').style.transform='translateX(0)'; this.style.transform='translateY(-5px)';"
-                        onmouseleave="this.querySelector('.long-arrow').style.opacity='0'; this.querySelector('.long-arrow').style.transform='translateX(-20px)';"
+                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden export-dest-card"
                         onclick="window.location.href='exports/canada';">
 
                         <img src="export-imgs/canada.png" class="img-fluid w-50 mx-auto d-block" alt="Canada">
 
                         <div class="card-body pb-5">
-                            <h5 class="fw-bold">Canada</h5>
+                            <h3 class="fw-bold">Canada</h3>
                             <p class="text-muted mb-0">
                                 Durable flooring and engineered quartz materials supplied for residential construction.
                             </p>
                         </div>
 
-                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between"
-                            style="opacity: 0; color: #ccb19b; transition: all 0.4s ease-in-out; transform: translateX(-20px);">
-                            <span class="small fw-bold text-uppercase" style="letter-spacing: 1px;">More Details</span>
+                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between">
+                            <span class="small fw-bold text-uppercase ls-1">More Details</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="16" fill="currentColor"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -151,24 +199,20 @@
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden"
-                        style="border-color: #ccb19b !important; cursor: pointer; transition: all 0.3s ease-in-out;"
-                        onmouseenter="this.querySelector('.long-arrow').style.opacity='1'; this.querySelector('.long-arrow').style.transform='translateX(0)'; this.style.transform='translateY(-5px)';"
-                        onmouseleave="this.querySelector('.long-arrow').style.opacity='0'; this.querySelector('.long-arrow').style.transform='translateX(-20px)';"
+                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden export-dest-card"
                         onclick="window.location.href='exports/uk';">
 
                         <img src="export-imgs/uk.png" class="img-fluid w-50 mx-auto d-block" alt="UK">
 
                         <div class="card-body pb-5">
-                            <h5 class="fw-bold">United Kingdom</h5>
+                            <h3 class="fw-bold">United Kingdom</h3>
                             <p class="text-muted mb-0">
                                 Luxury vinyl flooring and quartz slabs for offices, housing and renovation projects.
                             </p>
                         </div>
 
-                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between"
-                            style="opacity: 0; color: #ccb19b; transition: all 0.4s ease-in-out; transform: translateX(-20px);">
-                            <span class="small fw-bold text-uppercase" style="letter-spacing: 1px;">More Details</span>
+                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between">
+                            <span class="small fw-bold text-uppercase ls-1">More Details</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="16" fill="currentColor"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -179,24 +223,20 @@
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden"
-                        style="border-color: #ccb19b !important; cursor: pointer; transition: all 0.3s ease-in-out;"
-                        onmouseenter="this.querySelector('.long-arrow').style.opacity='1'; this.querySelector('.long-arrow').style.transform='translateX(0)'; this.style.transform='translateY(-5px)';"
-                        onmouseleave="this.querySelector('.long-arrow').style.opacity='0'; this.querySelector('.long-arrow').style.transform='translateX(-20px)';"
+                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden export-dest-card"
                         onclick="window.location.href='/exports/australia';">
 
                         <img src="export-imgs/austraila.png" class="img-fluid w-50 mx-auto d-block" alt="Australia">
 
                         <div class="card-body pb-5">
-                            <h5 class="fw-bold">Australia</h5>
+                            <h3 class="fw-bold">Australia</h3>
                             <p class="text-muted mb-0">
-                                Moisture-resistant SPC flooring for residential interiors and commercial developments.
+                                Moisture-resistant rigid-core vinyl for residential interiors and commercial developments.
                             </p>
                         </div>
 
-                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between"
-                            style="opacity: 0; color: #ccb19b; transition: all 0.4s ease-in-out; transform: translateX(-20px);">
-                            <span class="small fw-bold text-uppercase" style="letter-spacing: 1px;">More Details</span>
+                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between">
+                            <span class="small fw-bold text-uppercase ls-1">More Details</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="16" fill="currentColor"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -207,24 +247,20 @@
                 </div>
 
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden"
-                        style="border-color: #ccb19b !important; cursor: pointer; transition: all 0.3s ease-in-out;"
-                        onmouseenter="this.querySelector('.long-arrow').style.opacity='1'; this.querySelector('.long-arrow').style.transform='translateX(0)'; this.style.transform='translateY(-5px)';"
-                        onmouseleave="this.querySelector('.long-arrow').style.opacity='0'; this.querySelector('.long-arrow').style.transform='translateX(-20px)';"
+                    <div class="card h-100 border-0 shadow-sm p-3 border-top border-3 position-relative overflow-hidden export-dest-card"
                         onclick="window.location.href='/exports/russia';">
 
                         <img src="export-imgs/russia.png" class="img-fluid w-50 mx-auto d-block" alt="Russia">
 
                         <div class="card-body mt-4 pb-5">
-                            <h5 class="fw-bold">Russia</h5>
+                            <h3 class="fw-bold">Russia</h3>
                             <p class="text-muted mb-0">
-                                SPC flooring and quartz surfaces supplied for apartment projects and interiors.
+                                rigid-core vinyl and engineered stone supplied for apartment projects and interiors.
                             </p>
                         </div>
 
-                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between"
-                            style="opacity: 0; color: #ccb19b; transition: all 0.4s ease-in-out; transform: translateX(-20px);">
-                            <span class="small fw-bold text-uppercase" style="letter-spacing: 1px;">More Details</span>
+                        <div class="long-arrow position-absolute bottom-0 start-0 p-3 w-100 d-flex align-items-center justify-content-between">
+                            <span class="small fw-bold text-uppercase ls-1">More Details</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="16" fill="currentColor"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -244,14 +280,13 @@
         <div class="container">
             <div class="row mb-5 align-items-end">
                 <div class="col-lg-7">
-                    <h6 class="text-uppercase fw-bold ls-2" style="color: #ccb19b; letter-spacing: 2px;">Manufacturing
-                        Excellence</h6>
+                    <p class="text-uppercase fw-bold ls-2 text-brand">Manufacturing
+                        Excellence</p>
                     <h2 class="display-5 fw-bold text-dark">Export Specifications</h2>
                 </div>
                 <div class="col-lg-5 text-lg-end pb-2">
-                    <p class="text-muted mb-0 border-start border-md-0 ps-3 ps-md-0"
-                        style="border-color: #ccb19b !important;">
-                        Argil Tiles operates under ISO 9001:2015 standards, ensuring batch-to-batch color consistency
+                    <p class="text-muted mb-0 border-start border-md-0 ps-3 ps-md-0 border-brand">
+                        Our factory operates under ISO 9001:2015 standards, ensuring batch-to-batch color consistency
                         for
                         international projects.
                     </p>
@@ -261,16 +296,15 @@
             <div class="row g-0 shadow-lg rounded overflow-hidden border">
                 <div class="col-lg-6 border-end">
                     <div class="p-0 position-relative">
-                        <div style="height:100px;"></div>
-                        <img src="export-imgs/spc1.jpg" class="img-fluid w-50 mx-auto d-block" alt="Argil SPC Flooring">
+                        <div class="spacer-100"></div>
+                        <img src="export-imgs/spc1.jpg" class="img-fluid w-50 mx-auto d-block" alt="Rigid-core vinyl planks" title="Rigid-core vinyl planks">
                         <div class="position-absolute top-0 end-0 m-3">
-                            <span class="badge bg-dark text-white px-3 py-2 fw-normal"
-                                style="border-left: 3px solid #ccb19b;">SPC-RIGID SERIES</span>
+                            <span class="badge bg-dark text-white px-3 py-2 fw-normal badge-brand-edge">SPC-RIGID SERIES</span>
                         </div>
                     </div>
                     <div class="p-4 p-xl-5">
                         <div class="d-flex align-items-center mb-4">
-                            <div class="flex-shrink-0 p-3 rounded bg-light" style="color: #ccb19b;">
+                            <div class="flex-shrink-0 p-3 rounded bg-light icon-brand-box">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                                     fill="currentColor" viewBox="0 0 16 16">
                                     <path
@@ -278,7 +312,7 @@
                                 </svg>
                             </div>
                             <div class="ms-4">
-                                <h4 class="fw-bold mb-0">Wooden-Core SPC</h4>
+                                <h3 class="fw-bold mb-0">Wooden-Core SPC</h3>
                                 <small class="text-muted text-uppercase fw-bold">High-Density Limestone
                                     Composite</small>
                             </div>
@@ -302,24 +336,22 @@
                             </tr>
                         </table>
 
-                        <a href="/spcproducts" class="btn w-100 rounded-0 fw-bold py-2 text-white"
-                            style="background-color: #ccb19b;">Explore Products</a>
+                        <a href="/spcproducts" class="btn w-100 rounded-0 fw-bold py-2 text-white bg-brand">Explore Products</a>
                     </div>
                 </div>
 
                 <div class="col-lg-6 bg-light">
                     <div class="p-0 position-relative">
-                        <div style="height:100px;"></div>
+                        <div class="spacer-100"></div>
                         <img src="export-imgs/quartz1.jpg" class="img-fluid w-50 mx-auto d-block"
-                            alt="Argil Quartz Surface">
+                            alt="Engineered stone surface" title="Engineered stone surface">
                         <div class="position-absolute top-0 end-0 m-3">
-                            <span class="badge bg-dark text-white px-3 py-2 fw-normal"
-                                style="border-left: 3px solid #ccb19b;">QUARTZ-SURFACE</span>
+                            <span class="badge bg-dark text-white px-3 py-2 fw-normal badge-brand-edge">QUARTZ-SURFACE</span>
                         </div>
                     </div>
                     <div class="p-4 p-xl-5">
                         <div class="d-flex align-items-center mb-4">
-                            <div class="flex-shrink-0 p-3 rounded bg-white" style="color: #ccb19b;">
+                            <div class="flex-shrink-0 p-3 rounded bg-white icon-brand-box">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                                     fill="currentColor" viewBox="0 0 16 16">
                                     <path
@@ -329,7 +361,7 @@
                                 </svg>
                             </div>
                             <div class="ms-4">
-                                <h4 class="fw-bold mb-0">Architectural Quartz</h4>
+                                <h3 class="fw-bold mb-0">Architectural Quartz</h3>
                                 <small class="text-muted text-uppercase fw-bold">93% Natural Quartz Crystal</small>
                             </div>
                         </div>
@@ -353,8 +385,7 @@
                             </tr>
                         </table>
 
-                        <a href="/quartzsurface" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm"
-                            style="background-color: #ccb19b;">Explore Products</a>
+                        <a href="/quartzsurface" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm bg-brand">Explore Products</a>
                     </div>
                 </div>
             </div>
@@ -364,23 +395,20 @@
 
     <!-- ENQUIRY -->
 
-    <section id="enquiry" class="py-2 text-white"
-        style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <section id="enquiry" class="py-2 text-white export-quote-banner">
 
         <div class="container py-2">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
 
                     <div class="text-center mb-3">
-                        <p class="text-uppercase fw-bold mb-2 tracking-widest"
-                            style="color:#ccb19b; letter-spacing: 2px;">
+                        <p class="text-uppercase fw-bold mb-2 tracking-widest text-brand ls-2">
                             Global Logistics & Pricing</p>
                         <h2 class="display-6 fw-bold text-uppercase mb-3">Request Export Quote</h2>
-                        <hr class="mx-auto opacity-100" style="width: 60px; height: 3px; background-color: #ccb19b;">
+                        <hr class="mx-auto opacity-100 divider-brand-wide">
                     </div>
 
-                    <div class="p-4 p-md-5 bg-dark bg-opacity-50 border-top border-4 shadow-lg"
-                        style="border-color: #ccb19b !important;">
+                    <div class="p-4 p-md-5 bg-dark bg-opacity-50 border-top border-4 shadow-lg border-brand">
 
                         <form id="contact-form" class="row g-4" method="post"
                             action="{{ request()->root() }}/exports/mail">
@@ -423,7 +451,7 @@
 
                         <div class="text-center mt-4">
                             <p class="small mb-0 opacity-75">
-                                <i class="bi bi-shield-check me-1" style="color: #ccb19b;"></i>
+                                <i class="bi bi-shield-check me-1 text-brand"></i>
                                 Verified Direct Factory Quotes • Responds within 24h
                             </p>
                         </div>
@@ -437,9 +465,9 @@
     <section class="py-5 bg-white border-top">
         <div class="container py-4">
             <div class="text-center mb-5">
-                <h6 class="text-uppercase fw-bold ls-2" style="color: #ccb19b; letter-spacing: 2px;">Support Center</h6>
+                <p class="text-uppercase fw-bold ls-2 text-brand">Support Center</p>
                 <h2 class="display-6 fw-bold text-dark">Frequently Asked Questions</h2>
-                <div class="mx-auto mt-3" style="width: 50px; height: 3px; background-color: #ccb19b !important;"></div>
+                <div class="mx-auto mt-3 divider-brand"></div>
             </div>
 
             <div class="row">
@@ -447,17 +475,15 @@
                     <div class="accordion accordion-flush shadow-sm border" id="faqProject">
 
                         <div class="accordion-item border-bottom">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#f1"
-                                    style="border-left: 4px solid #ccb19b; transition: 0.3s;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white accordion-brand-edge"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#f1">
                                     What products are available for project supply?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="f1" class="accordion-collapse collapse" data-bs-parent="#faqProject">
-                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25"
-                                    style="border-left: 4px solid #ccb19b;">
-                                    Argil Group specializes in **SPC flooring, Quartz surfaces, porcelain, vitrified,
+                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25 accordion-brand-edge">
+                                    Our team specializes in **rigid-core vinyl, engineered stone, porcelain, vitrified,
                                     wall,
                                     and floor tiles** tailored for global residential and commercial projects.
                                 </div>
@@ -465,16 +491,14 @@
                         </div>
 
                         <div class="accordion-item border-bottom">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#f2"
-                                    style="border-left: 4px solid #ccb19b; transition: 0.3s;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white accordion-brand-edge"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#f2">
                                     What is the minimum order quantity (MOQ) for export?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqProject">
-                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25"
-                                    style="border-left: 4px solid #ccb19b;">
+                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25 accordion-brand-edge">
                                     Typically, the MOQ is **one 20-foot container**. However, mixed designs or sizes can
                                     be
                                     arranged depending on availability and specific project requirements.
@@ -483,16 +507,14 @@
                         </div>
 
                         <div class="accordion-item border-bottom">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#f3"
-                                    style="border-left: 4px solid #ccb19b; transition: 0.3s;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white accordion-brand-edge"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#f3">
                                     How are tiles packaged for international shipping?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqProject">
-                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25"
-                                    style="border-left: 4px solid #ccb19b;">
+                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25 accordion-brand-edge">
                                     We use **strong corrugated boxes** with protective separators, stacked on
                                     **fumigated
                                     wooden pallets** (ISPM-15 certified) to ensure safety during long-distance sea
@@ -502,16 +524,14 @@
                         </div>
 
                         <div class="accordion-item border-bottom">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#f4"
-                                    style="border-left: 4px solid #ccb19b; transition: 0.3s;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white accordion-brand-edge"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#f4">
                                     What documents are provided with export shipments?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqProject">
-                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25"
-                                    style="border-left: 4px solid #ccb19b;">
+                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25 accordion-brand-edge">
                                     We provide a complete set of documents: **Commercial Invoice, Packing List, Bill of
                                     Lading, Certificate of Origin,** and technical test reports for smooth customs
                                     clearance.
@@ -520,16 +540,14 @@
                         </div>
 
                         <div class="accordion-item border-bottom">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#f5"
-                                    style="border-left: 4px solid #ccb19b; transition: 0.3s;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white accordion-brand-edge"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#f5">
                                     How long does international shipping take?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faqProject">
-                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25"
-                                    style="border-left: 4px solid #ccb19b;">
+                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25 accordion-brand-edge">
                                     Production takes 2–4 weeks. Sea freight delivery typically ranges from **15–40
                                     days**
                                     depending on the destination port and shipping line.
@@ -538,16 +556,14 @@
                         </div>
 
                         <div class="accordion-item border-bottom">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#f6"
-                                    style="border-left: 4px solid #ccb19b; transition: 0.3s;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white accordion-brand-edge"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#f6">
                                     Are your tiles certified for international quality?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="f6" class="accordion-collapse collapse" data-bs-parent="#faqProject">
-                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25"
-                                    style="border-left: 4px solid #ccb19b;">
+                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25 accordion-brand-edge">
                                     Yes. Our products comply with **ISO and global standards**. We test for water
                                     absorption, breaking strength, and slip resistance to ensure maximum durability.
                                 </div>
@@ -555,16 +571,14 @@
                         </div>
 
                         <div class="accordion-item border-bottom">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#f7"
-                                    style="border-left: 4px solid #ccb19b; transition: 0.3s;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white accordion-brand-edge"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#f7">
                                     Do you provide samples before bulk orders?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="f7" class="accordion-collapse collapse" data-bs-parent="#faqProject">
-                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25"
-                                    style="border-left: 4px solid #ccb19b;">
+                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25 accordion-brand-edge">
                                     Yes. We provide **samples for quality and design verification**. Contact our export
                                     team
                                     to arrange a sample kit before confirming your bulk shipment.
@@ -573,16 +587,14 @@
                         </div>
 
                         <div class="accordion-item border-bottom">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#f8"
-                                    style="border-left: 4px solid #ccb19b; transition: 0.3s;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white accordion-brand-edge"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#f8">
                                     Can I request custom designs or private labeling?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="f8" class="accordion-collapse collapse" data-bs-parent="#faqProject">
-                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25"
-                                    style="border-left: 4px solid #ccb19b;">
+                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25 accordion-brand-edge">
                                     Yes. We offer **OEM and private labeling services**, including customized packaging,
                                     branding, and specific design requirements for global wholesalers.
                                 </div>
@@ -590,17 +602,15 @@
                         </div>
 
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#f9"
-                                    style="border-left: 4px solid #ccb19b; transition: 0.3s;">
-                                    Why choose tiles exported from India by Argil Group?
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-dark py-4 shadow-none bg-white accordion-brand-edge"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#f9">
+                                    Why choose tiles exported from India by our factory?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="f9" class="accordion-collapse collapse" data-bs-parent="#faqProject">
-                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25"
-                                    style="border-left: 4px solid #ccb19b;">
-                                    India is a global leader in ceramics. Argil Group provides **factory-direct
+                                <div class="accordion-body py-4 text-secondary bg-light bg-opacity-25 accordion-brand-edge">
+                                    India is a global leader in ceramics. Our factory provides **factory-direct
                                     pricing**,
                                     advanced manufacturing technology, and a reliable supply chain for worldwide
                                     delivery.
@@ -625,7 +635,7 @@
           "name": "What types of tiles do you export?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We export a wide range of high-quality tiles including Quartz tiles, SPC flooring, porcelain tiles, vitrified tiles, wall tiles, and floor tiles designed for residential, commercial, and large-scale construction projects worldwide."
+            "text": "We export a wide range of high-quality surfaces including engineered stone, rigid-core vinyl, porcelain tiles, vitrified tiles, wall tiles, and floor tiles designed for residential, commercial, and large-scale construction projects worldwide."
           }
         },
         {
@@ -710,10 +720,10 @@
         },
         {
           "@type": "Question",
-          "name": "Why choose tiles exported from India by Argil Group?",
+          "name": "Why choose tiles exported from India by our factory?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "India is a top global exporter offering high-quality products at competitive prices. Argil Group combines advanced manufacturing with a strong supply chain for reliable global delivery."
+            "text": "India is a top global exporter offering high-quality products at competitive prices. Our factory combines advanced manufacturing with a strong supply chain for reliable global delivery."
           }
         }
       ]

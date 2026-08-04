@@ -21,6 +21,9 @@ Gujarat, India. Quality, innovation, and excellence define us.">
 helmet="true">
     <title>Argil Company Profile | Leading Quartz Slab Manufacturer</title>
 @endsection
+@section('lcp_preload')
+    <link rel="preload" as="image" href="{{ asset('assets/asset/profile.png') }}" fetchpriority="high">
+@endsection
 @section('content')
 
      <!-- breadcrumb -->
@@ -49,7 +52,7 @@ helmet="true">
                     to always be this humble and serving to your brand and people associated.</p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{ asset('assets/asset/profile.png')}}" alt="argil profile" title="argil profile" loading="lazy" class="img-fluid h-75">
+                <img src="{{ asset('assets/asset/profile.png')}}" alt="argil profile" title="argil profile" width="519" height="366" loading="eager" fetchpriority="high" decoding="async" class="img-fluid h-75">
             </div>
 
         </div>

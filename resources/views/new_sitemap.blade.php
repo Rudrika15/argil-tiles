@@ -1,4 +1,5 @@
-{!! '<?xml version="1.0" encoding="UTF-8"?>' !!}
+{{ '<?xml version="1.0" encoding="UTF-8"?>' }}
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     {{-- Static Pages --}}
@@ -185,47 +186,47 @@
         <priority>0.7</priority>
     </url>
 
-    
+
     {{-- Dynamic Blogs --}}
 
-    @foreach($blogs as $blog)
-    <url>
-        <loc>{{ url('/blogdetails/'.$blog->slug) }}</loc>
-        <lastmod>{{ optional($blog->updated_at)->format('Y-m-d') }}</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
+    @foreach ($blogs as $blog)
+        <url>
+            <loc>{{ url('/blogdetails/' . $blog->slug) }}</loc>
+            <lastmod>{{ optional($blog->updated_at)->format('Y-m-d') }}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
+        </url>
     @endforeach
 
     {{-- Author Pages --}}
-@foreach($authors as $author)
-<url>
-    <loc>{{ url('/authors/'.$author->author) }}</loc>
-    <lastmod>{{ now()->format('Y-m-d') }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-</url>
-@endforeach
+    @foreach ($authors as $author)
+        <url>
+            <loc>{{ url('/authors/' . $author->author) }}</loc>
+            <lastmod>{{ now()->format('Y-m-d') }}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.6</priority>
+        </url>
+    @endforeach
 
-{{-- Dynamic Case Studies --}}
+    {{-- Dynamic Case Studies --}}
 
-    @foreach($caseStudies as $caseStudy)
-    <url>
-        <loc>{{ url('/case-details/'.$caseStudy->slug) }}</loc>
-        <lastmod>{{ optional($caseStudy->updated_at)->format('Y-m-d') }}</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
+    @foreach ($caseStudies as $caseStudy)
+        <url>
+            <loc>{{ url('/case-details/' . $caseStudy->slug) }}</loc>
+            <lastmod>{{ optional($caseStudy->updated_at)->format('Y-m-d') }}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
+        </url>
     @endforeach
 
     {{-- AI SEO CMS Pages --}}
-@foreach($cmsPages as $page)
-<url>
-    <loc>{{ url('/'.$page->slug) }}</loc>
-    <lastmod>{{ optional($page->updated_at)->format('Y-m-d') }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-</url>
-@endforeach
+    @foreach ($cmsPages as $page)
+        <url>
+            <loc>{{ url('/' . $page->slug) }}</loc>
+            <lastmod>{{ optional($page->updated_at)->format('Y-m-d') }}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    @endforeach
 
 </urlset>
