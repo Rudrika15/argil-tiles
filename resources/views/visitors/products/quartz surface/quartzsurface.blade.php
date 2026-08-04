@@ -1,80 +1,49 @@
 @extends('layouts.app')
 @section('seosection')
     <meta name="description"
-        content="Premium quartz stone slabs for
-countertops & kitchen platforms. Manufactured in Morbi, Gujarat, India.
-Explore our high-quality designs at Argil." />
+        content="Premium engineered stone slabs for kitchen countertops, manufactured in Morbi, Gujarat. Explore high-quality designs.">
     <meta name="keywords"
-        content="Quartz Slabs, Quartz Countertops,
-Kitchen Surfaces, Argil Tiles, Quartz Stone Manufacturers, Morbi Gujarat" />
-    <meta name="author" content="Argil Group – Leading Manufacturer of
-Premium Quartz Surfaces">
-    <meta property="og:title"
-        content="Quartz Stone Slab For Kitchen Platform
-Countertops Manufacturers In Morbi, Gujarat, India | Argil"
-        data-react-helmet
-="true">
-    <meta property="og:url" content="https://argiltiles.com/quartzsurface" data-react-helmet="true">
+        content="engineered stone slabs, kitchen countertops, Morbi manufacturer">
+    <meta property="og:title" content="Engineered Stone Countertop Slabs | Morbi">
+    <meta property="og:url" content="https://argiltiles.com/quartzsurface">
     <meta property="og:description"
-        content="Argil is a quartz surface stone slab
-for kitchen platform countertops manufacturers in Morbi, Gujarat, India. We have
- the best engineered  quartz surface stone for kitchen and platform  at a
- reasonable price We have 10+ yrs of service. Get a price quote "
-        data-react- helmet="true">
-    <meta name="twitter:title"
-        content="Quartz Stone Slab For Kitchen Platform
-Countertops Manufacturers In Morbi, Gujarat, India | Argil"
-        data-react-helmet="true">
+        content="Premium engineered stone slabs for kitchens and platforms from Morbi. Explore designs and request a quote.">
+    <meta name="twitter:title" content="Engineered Stone Countertop Slabs | Morbi">
     <meta name="twitter:description"
-        content="Argil is a quartz surface stone
-slab for kitchen platform countertops manufacturers in Morbi, Gujarat, India. We
- have the best engineered  quartz surface stone for kitchen and platform  at a
-reasonable price We have 10+ yrs of service. Get a price quote  "
-        data-react-helmet="true">
-    <link rel="canonical" href="https://argiltiles.com/quartzsurface" data-react- helmet="true">
-    <title>
-        Quartz Countertop Slabs Manufacturer in Morbi | Argil
-    </title>
-    <style>
-    .contact-image{
-    width:100%;
-    height:500px;
-    object-fit:cover;
-    border-radius:15px;
-}
-</style>
+        content="Premium engineered stone slabs for kitchens and platforms from Morbi. Explore designs and request a quote.">
+    <link rel="canonical" href="https://argiltiles.com/quartzsurface">
+    <title>Engineered Stone Countertop Slabs | Morbi</title>
+@endsection
+@section('lcp_preload')
+    <link rel="preload" as="image" href="{{ asset('asset/images/argileimage/quartzimage1.jpg') }}" fetchpriority="high">
 @endsection
 
 @section('content')
-    <!-- breadcrumb -->
-    <div class="breadcrumb d-flex justify-content-between align-items-center">
-        <div class="container">
-
-            <div class="p-2">
-                <h1 class="display-6 fw-bold">Home / Quartz Surface Products</h1>
-            </div>
+    <div class="breadcrumb">
+        <div class="container py-2">
+            <h1 class="display-6 fw-bold">Home / Engineered Stone</h1>
         </div>
     </div>
-    <!-- breadcrumb -->
 
     <div class="container">
 
         <div class="row">
             <div class="col-md-6 text-center">
-                <img src="{{ asset('asset/images/argileimage/quartzimage1.jpg') }}" alt="argil quartz product"
-                    title="argil quartz product" loading="lazy" class="img-fluid w-75 mb-5 mt-4">
+                <img src="{{ asset('asset/images/argileimage/quartzimage1.jpg') }}" alt="engineered stone slab"
+                    title="Engineered stone slab" width="350" height="354" loading="eager" fetchpriority="high" decoding="async" class="img-fluid w-75 mb-5 mt-4">
             </div>
             <div class="col-md-6">
                 <h2 class="mt-5 fw-bold">Overview</h2>
-                <p class="text-justify">Composite or engineered quartz is a very solid material that resembles real granite
-                    in
-                    both look and
-                    utility. Engineered quartz is unaffected by stains, scratches, and cracks. It is also resistant to heat
-                    and cold. Engineered By blending quartz or granite aggregates with resins and pigments, man-made
-                    products like stone or quartz are created by quartz manufacturers in India, which are mostly generated
-                    from natural materials. The composition of engineered quartz slabs is typically 90% pulverised natural
-                    quartz and 10% polyresin. However, these percentages may vary slightly depending on the kind of quartz
-                    used.</p>
+                <p class="text-justify">Engineered stone is a dense surface material that looks and performs much
+                    like natural granite. It resists stains, scratches, and cracking, and handles everyday heat and cold.
+                    Makers in India blend mineral aggregates with resins and pigments to form these man-made slabs—typically
+                    about 90% pulverised natural mineral and 10% polyresin, with slight variation by grade. The finish stays
+                    consistent and durable for kitchens, platforms, and commercial interiors.</p>
+                <p class="text-muted">
+                    Architects and fabricators choose engineered slabs when they need repeatable colour, non-porous hygiene,
+                    and large formats for islands and reception desks. Explore the designs below, compare finishes, and
+                    request a quote for residential or commercial volumes from our Morbi manufacturing team.
+                </p>
             </div>
         </div>
     </div>
@@ -89,18 +58,15 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
 
 
         <div class="row pb-5">
-            <h2 class="text-center fw-bold pt-5">Quartz Stone Slab</h2>
+            <h2 class="text-center fw-bold pt-5">Stone Slab Designs</h2>
             @foreach ($data as $index => $item)
                 <div class="col-md-4 pt-5">
                     <a href="{{ Route('quartzinquiry', $item->slug) }}" class="text-decoration-none">
                         <div class="card">
-                            <picture>
-                                <source srcset="{{ asset('quartz/' . $item->mainImg) }}" type="image/webp" />
-                                <img src="{{ asset('quartz/' . $item->mainImg) }}" class="card-img-top"
-                                    alt="{{ $item->slug }}" title="{{ $item->slug }}" loading="lazy" />
-                            </picture>
+                            <img src="{{ asset('quartz/' . $item->mainImg) }}" class="card-img-top"
+                                alt="{{ $item->name }}" title="{{ $item->name }}" loading="lazy" width="400" height="300" />
                             <div class="card-body">
-                                <h5 class="card-title text-center">{{ $item->name }}</h5>
+                                <h3 class="card-title text-center">{{ $item->name }}</h3>
                             </div>
                         </div>
                     </a>
@@ -123,13 +89,11 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-center fw-bold pt-5">Advantages of Artifical Quartz Stones</h2>
+                <h2 class="text-center fw-bold pt-5">Advantages of Engineered Stone</h2>
                 <p class="text-center mt-4">
-                    Artificial quartz stones are manufactured from natural quartz crystals that are bound together with the
-                    help of a binding resin, as compared with natural quartz stones, which are carved from pure sandstone,
-                    marble, or granite. Artificial variations will resemble the natural ones in appearance. However, there
-                    are numerous advantages to buying premium-class artificial quartz stone from artificial quartz stone
-                    manufacturers in India, which are
+                    Engineered slabs are made from crushed natural mineral crystals bound with resin, unlike quarried sandstone,
+                    marble, or granite that is cut from the earth. They can closely match natural looks while offering practical
+                    upsides. Buyers choose premium-grade options from Indian makers for reasons such as:
                 </p>
             </div>
         </div>
@@ -138,27 +102,20 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="fw-bold pt-5">Attractive look and feel</h4>
-                <p class="text-justify">The compressed artificial quartz material is made into slabs with variations of
-                    natural stone's
-                    texture
-                    and colour. The manufactured varieties' colours differ in that they are much more uniform in
-                    appearance.
-                    You may get a wide variety of imitation quartz stones at different stores in lovely colours to match
-                    any
-                    decor.</p>
+                <h3 class="fw-bold pt-5">Attractive look and feel</h3>
+                <p class="text-justify">Compressed engineered material is formed into slabs with natural-stone textures and
+                    colours. Manufactured finishes tend to look more uniform than quarry stone. You can find a wide range of
+                    imitation looks in colours that suit almost any décor.</p>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="fw-bold pt-2">Easy to maintain</h4>
-                <p class="text-justify">Natural quartz has pores in them. However, the polished surface of artificial
-                    stone does not absorb
-                    moisture. As a result, cleaning the surface is simpler and requires less care. Additionally, the
-                    surface is stain- and scratch-resistant. Because of easy maintenance, these artificial quartz last
-                    longer and look new for years.</p>
+                <h3 class="fw-bold pt-2">Easy to maintain</h3>
+                <p class="text-justify">Natural stone often has pores. A polished engineered surface does not absorb moisture
+                    as readily, so cleaning is simpler and needs less special care. It also resists stains and scratches.
+                    With easy upkeep, these slabs stay looking fresh for years.</p>
             </div>
         </div>
     </div>
@@ -166,58 +123,49 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="fw-bold pt-2">Available in a variety of options</h4>
-                <p class="text-justify">The size, quart colours, treatments, and patterns of composite quartz stone are
-                    present in a variety of
-                    options. As a result, you will never be without resources to help in the design or renovation of an
-                    existing area. The top choices include Zodiac Black, Zodiac Red, Crystal White, and many others.</p>
+                <h3 class="fw-bold pt-2">Available in a variety of options</h3>
+                <p class="text-justify">Composite slabs come in many sizes, colours, treatments, and patterns, so you rarely
+                    run short of options for a new design or renovation. Popular choices include Zodiac Black, Zodiac Red,
+                    Crystal White, and more.</p>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="fw-bold pt-2">Cost effective</h4>
-                <p class="text-justify">The cost of natural stone might vary depending on the kind, colour, and quality of
-                    the stone but is
-                    typically more. For less money, artificial quartz stone offers a more luxurious and traditional
-                    appearance. Quartz slab manufacturers in India make variety of cost effective slabs which are available
-                    in amazing colors and variants</p>
+                <h3 class="fw-bold pt-2">Cost effective</h3>
+                <p class="text-justify">Natural stone pricing varies by type, colour, and grade and is often higher. Engineered
+                    slabs can deliver a luxurious, classic look for less. Indian makers offer cost-effective ranges in many
+                    colours and finishes.</p>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="fw-bold pt-2">Durability</h4>
-                <p class="text-justify">Artificial quartz is as strong and hard as granite, with the benefit of being chip
-                    and crack resistant.
-                    The engineered stone will only crack if it is not fitted properly on the surfaces. Hence, artificial
-                    quartz stones last longer and due to their easy maintenance, they look the same for years.</p>
+                <h3 class="fw-bold pt-2">Durability</h3>
+                <p class="text-justify">Engineered stone is as hard as granite, with strong chip and crack resistance when
+                    installed correctly. Poor fitting—not the material itself—is the usual cause of cracks. With proper install
+                    and simple care, these surfaces keep their look for years.</p>
             </div>
         </div>
     </div>
 
     <div class="container">
         <div class="row pt-4">
-            <h2 class="text-center fw-bold pt-2">Uses and Applications of Quartz Stones</h2>
-            <p class="text-center pt-2">There are a number of usage and applications of artificial quartz stones which is
-                why
-                they
-                are
-                so much popular
-                amongst people. These are</p>
+            <h2 class="text-center fw-bold pt-2">Uses and Applications</h2>
+            <p class="text-center pt-2">Engineered stone is popular for many residential and commercial projects. Common uses
+                include:</p>
         </div>
     </div>
     <div class="container quartz-paragraph1">
         <ul>
-            <li>It can be perfect for both residential and commercial uses because of its long lifespan and low maintenance
-                requirements. Quartz will provide your interior spaces with the ideal classy finish.</li>
-            <li>You may also use engineered stone for your kitchen backsplash to prevent spills and stains on your walls.
+            <li>Long lifespan and low upkeep make it a strong choice for homes and workplaces that need a refined finish.
             </li>
-            <li>Engineered quartz slabs are ideal for interior walls since they are non-porous and frequently offer mould
-                and mildew resistance. They are therefore used as quartz stone for kitchen platform and also appropriate for
-                wet rooms in both residential and commercial structures.
+            <li>Use it as a kitchen backsplash to help protect walls from spills and stains.
+            </li>
+            <li>Non-porous engineered slabs suit interior walls and wet areas; they are widely specified for kitchen platforms
+                and damp rooms in homes and commercial buildings.
             </li>
         </ul>
     </div>
@@ -230,20 +178,17 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
         <div class="container">
             <div class="row py-5 text-center ">
                 <div class="col-md-6 h">
-                    <img src="{{ asset('asset/images/argileimage/quartzimage5.jpg') }}" alt="argil quartz product"
-                        title="argil quartz product" loading="lazy" class="img-fluid w-75 border rounded p-2" />
+                    <img src="{{ asset('asset/images/argileimage/quartzimage5.jpg') }}" alt="slab manufacturing process"
+                        title="Slab manufacturing process" loading="lazy" class="img-fluid w-75 border rounded p-2" />
                 </div>
                 <div class="col-md-6">
-                    <h3 class="text-center fw-bold text-white mt-2">Argil Quartz Slab Manufacturing Process</h3>
-                    <p class="text-justify text-white">Finely crushed quartz is combined with resin, stabilising polymers,
-                        and colouring pigments to create
-                        Argil Quartz Slabs, which are then polished to an amazing mirror finish. We are one of the leading
-                        quartz countertops manufacturers in the country with a number of satisfied customers.</p>
-                    <p class="text-justify text-white">At Argil, we have the greatest expectations for ourselves. To ensure
-                        the final product is the finest
-                        it can be, our production process follows a number of strict practices and procedures. Mixing,
-                        pressing, polishing and quality control are some of the best practices that are followed at our
-                        facility </p>
+                    <h2 class="text-center fw-bold text-white mt-2">How Our Slabs Are Made</h2>
+                    <p class="text-justify text-white">Finely crushed mineral is combined with resin, stabilising polymers,
+                        and colour pigments, then polished to a mirror finish. We focus on consistent quality so architects and
+                        homeowners get reliable countertops and platforms.</p>
+                    <p class="text-justify text-white">At our facility, we hold ourselves to high standards. Mixing, pressing, polishing,
+                        and quality control follow strict routines so each slab meets the same finish and performance bar.
+                    </p>
                 </div>
             </div>
             <div class="row pb-5 g-4">
@@ -254,20 +199,11 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                                 loading="lazy" class="card-img-top w-25">
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title pt-1">MIXING</h4>
-                            <p class="card-text pt-2">The fundamental components of an Argil Tiles Slab, such as Natural
-                                Quartz
-                                Grits, Resin,
-                                colouring
-                                agents
-                                (traces), and texturizing material, are all thoroughly tested before being combined in huge
-                                overhead
-                                mixers. It's crucial to remember that all Argil Tile variations and colours are produced
-                                using
-                                the
-                                same
-                                fundamental process which makes Argil, one of the leading quartz stone manufacturers in
-                                Morbi</p>
+                            <h3 class="card-title pt-1">MIXING</h3>
+                            <p class="card-text pt-2">Core ingredients such as natural mineral grits, resin, colouring agents
+                                (in traces), and texturizing material are tested, then blended in large overhead mixers. The same
+                                fundamental process is used across colours and variants so results stay consistent from batch to
+                                batch.</p>
                         </div>
                     </div>
                 </div>
@@ -278,12 +214,11 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                                 loading="lazy" class="card-img-top w-25">
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title pt-1">PRESSING</h4>
+                            <h3 class="card-title pt-1">PRESSING</h3>
                             <p class="card-text pt-2">Spread onto trays, the mixture is compacted with intense vibration
                                 and pressure. The compressed mixture is then transferred to a curing room, where it is
                                 heated for about an hour at about 90°C before cooling. In this phase, the mixture's resin is
-                                activated, combining with the quartz to create a slab. These curved and irregular stones now
-                                have the classic hardness and stain resistance.</p>
+                                activated, binding the mineral into a slab with classic hardness and stain resistance.</p>
                         </div>
                     </div>
                 </div>
@@ -294,8 +229,8 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                                 class="card-img-top w-25">
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title pt-1">POLISHING
-                            </h4>
+                            <h3 class="card-title pt-1">POLISHING
+                            </h3>
                             <p class="card-text pt-2">Using two sets of parallel diamond saws, the uneven slab's four sides
                                 are now cut to the appropriate size. To achieve the precise needed thickness, the slab's
                                 upper and lower surfaces are calibrated using a multi-head diamond calibration machine. And
@@ -311,10 +246,9 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
                                 title="QUALITY CONTROL" class="card-img-top w-25">
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title pt-1">QUALITY CONTROL</h4>
+                            <h3 class="card-title pt-1">QUALITY CONTROL</h3>
                             <p class="card-text pt-2 mb-5">Every step of the manufacturing process undergoes inspection at
-                                Argil
-                                Tiles, from selecting the best raw materials to maintaining strict quality control
+                                our facility, from selecting the best raw materials to maintaining strict quality control
                                 standards. Our Quality Control division inspects each slab for flaws and impurities. The
                                 slabs are only sorted and marked for entry into our distribution system after they have
                                 given their permission.</p>
@@ -327,12 +261,12 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
     </div>
 
 
-    @include('visitors.faq.index')
+    @include('visitors.faq.list')
 
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="asset/images/argileimage/footerimge.jpg" alt="Quartz product" title="Quartz product"
+                <img src="asset/images/argileimage/footerimge.jpg" alt="Engineered stone product" title="Engineered stone product"
                     class=" contact-image mb-5">
             </div>
             <div class="col-md-6">
@@ -476,4 +410,42 @@ reasonable price We have 10+ yrs of service. Get a price quote  "
             });
         });
     </script>
+
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "CollectionPage",
+    "@@id": "https://argiltiles.com/quartzsurface#collection",
+    "name": "Engineered Stone Collection",
+    "description": "Explore premium engineered stone surfaces for residential and commercial applications.",
+    "url": "https://argiltiles.com/quartzsurface",
+    "isPartOf": {
+        "@@type": "WebSite",
+        "name": "Mod Ceramic Industries Ltd.",
+        "url": "https://argiltiles.com/"
+    },
+    "mainEntity": {
+        "@@type": "ItemList",
+        "name": "Engineered Stone Products",
+        "itemListElement": [
+            @foreach($data->take(6) as $product)
+            {
+                "@@type": "ListItem",
+                "position": {{ $loop->iteration }},
+                "item": {
+                    "@@type": "Product",
+                    "name": {{ json_encode($product->name) }},
+                    "image": "{{ asset('quartz/' . $product->mainImg) }}",
+                    "url": "https://argiltiles.com/quartzinquiry/{{ $product->slug }}",
+                    "brand": {
+                        "@@type": "Brand",
+                        "name": "Argil"
+                    }
+                }
+            }@if(!$loop->last),@endif
+            @endforeach
+        ]
+    }
+}
+</script>
 @endsection

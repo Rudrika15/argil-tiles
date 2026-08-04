@@ -1,27 +1,29 @@
 @extends('layouts.app')
 @section('seosection')
     <meta name="description"
-        content="Expert tips on quartz countertops, SPC flooring & tile design from Argil. Read the latest articles and ideas.">
+        content="About Argil Tiles – leading quartz surface and SPC flooring manufacturer in Morbi, Gujarat. Learn our story, craftsmanship, and innovation.">
+
+    <meta name="keywords"
+        content="About Argil, quartz manufacturer, SPC flooring, Morbi">
 
     <meta property="og:title" content="About Argil Tiles – Quartz Manufacturer in Morbi">
 
-
     <meta property="og:description"
-        content="Explore tile trends, flooring ideas, and expert insights from Argil Tiles. Get inspired with our latest blogs.">
+        content="Learn about Argil Tiles, a leading manufacturer of premium quartz surfaces and SPC flooring in Morbi, Gujarat, India.">
 
-    <meta property="og:url" content="https://argiltiles.com/about">
+    <meta property="og:url" content="https://argiltiles.com/about-argil">
 
     <meta name="twitter:title" content="About Argil Tiles – Quartz Manufacturer in Morbi">
 
-
-
     <meta name="twitter:description"
-        content="Discover tile design ideas, quartz trends, and SPC flooring tips from Argil. Stay updated with our newest articles.">
+        content="Learn about Argil Tiles, a leading manufacturer of premium quartz surfaces and SPC flooring in Morbi, Gujarat, India.">
 
-
-    <link rel="canonical" href="https://argiltiles.com/about">
+    <link rel="canonical" href="https://argiltiles.com/about-argil">
 
     <title>About Argil Tiles | Quartz Manufacturer in Morbi, Gujarat</title>
+@endsection
+@section('lcp_preload')
+    <link rel="preload" as="image" href="{{ asset('assets/asset/aboutimage.png') }}" fetchpriority="high">
 @endsection
 @section('content')
     <!-- breadcrumb -->
@@ -52,8 +54,8 @@
                 </p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="{{ asset('assets/asset/aboutimage.png') }}" alt="argil about" title="argil about" loading="lazy"
-                    class="img-fluid w-75">
+                <img src="{{ asset('assets/asset/aboutimage.png') }}" alt="argil about" title="argil about"
+                    width="521" height="521" loading="eager" fetchpriority="high" decoding="async" class="img-fluid w-75">
             </div>
 
         </div>
@@ -113,4 +115,12 @@
             </div>
         </div>
     </div>
+<script type="application/ld+json">
+{
+    "@@context":"https://schema.org",
+    "@@type":"AboutPage",
+    "name":"About Argil Tiles",
+    "url":"https://argiltiles.com/about-argil"
+}
+</script>
 @endsection

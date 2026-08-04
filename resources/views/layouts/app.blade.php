@@ -6,7 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="author" content="Argil Group">
+    {{-- LCP: navbar logo is a frequent LCP candidate — preload before CSS --}}
+    <link rel="preload" as="image" href="{{ asset('assets/asset/logo.png') }}" fetchpriority="high">
+    @hasSection('lcp_preload')
+        @yield('lcp_preload')
+    @endif
+
+    <meta name="author" content="Surface Manufacturer">
 
     <meta name="geo.region" content="IN-GJ">
     <meta name="geo.placename" content="Morbi">
@@ -14,7 +20,7 @@
     <meta name="ICBM" content="22.82587, 70.847998">
 
     <meta property="og:type" content="website" data-react-helmet="true">
-    <meta property="og:site_name" content="Argil Group">
+    <meta property="og:site_name" content="Mod Ceramic Industries">
 
     <meta property="og:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
         helmet="true">
@@ -24,7 +30,7 @@
 
     <meta name="twitter:image" content="https://www.argiltiles.com/asset/images/logo/logo.png" data-react-
         helmet="true">
-    <meta name="publisher" content="Argil Tiles" />
+    <meta name="publisher" content="Surface Manufacturer" />
 
 
     <meta name="robots" content="index, follow" />
@@ -45,54 +51,37 @@
 
     <!-- Favicon & App Icons -->
 
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="{{ asset('assets/css/style.min.css') }}?v={{ @filemtime(public_path('assets/css/style.min.css')) ?: @filemtime(public_path('assets/css/style.css')) }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 
-    <!-- country CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-
-    <!-- country JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-
-
-
-    <style>
-        .navbar {
-            transition: all 0.3s ease;
-            padding: 1.2rem 1rem;
-            background-color: white;
-            
-        }
-
-        .sticky-navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 0.5rem 1rem;
-            background-color: white;
-        }
-    </style>
+    @if (!empty(trim($__env->yieldContent('intl_tel'))))
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" defer></script>
+    @endif
 
     @yield('seosection')
     @verbatim
-
-
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
+          "@type": ["LocalBusiness", "Organization"],
           "name": "Mod Ceramic Industries Ltd.",
+          "alternateName": "Argil",
           "image": "https://argiltiles.com/asset/images/logo/logo.png",
-          "@id": "",
-          "url": "https://www.argiltiles.com/",
+          "logo": "https://argiltiles.com/asset/images/logo/logo.png",
+          "url": "https://argiltiles.com/",
           "telephone": "02822 240 628",
           "address": {
             "@type": "PostalAddress",
@@ -108,13 +97,7 @@
           },
           "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday"
-            ],
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
             "opens": "08:00",
             "closes": "20:00"
           },
@@ -125,85 +108,24 @@
           ]
         }
         </script>
-    @endverbatim
-    @verbatim
-
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Mod Ceramic Industries Ltd.",
-          "alternateName": "Argil Tiles",
-          "url": "https://www.argiltiles.com/",
-          "logo": "https://argiltiles.com/asset/images/logo/logo.png",
-          "sameAs": [
-            "https://www.facebook.com/argilgroup/",
-            "https://www.instagram.com/argilgroup/",
-            "https://www.linkedin.com/company/argilgroup/",
-            "https://www.argiltiles.com/"
-          ]
-        }
-        </script>
-    @endverbatim
-    @verbatim
-
-
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org/",
           "@type": "WebSite",
-          "name": "Argil Tiles",
-          "url": "https://argiltiles.com/",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "{search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
+          "name": "Mod Ceramic Industries Ltd.",
+          "url": "https://argiltiles.com/"
         }
         </script>
     @endverbatim
 
-    @verbatim
-
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org/",
-          "@type": "Product",
-          "name": "Argil Tiles",
-          "description": "Argil is an artificial quartz stone slab manufacturer in Morbi, Gujarat, India. We have the best-engineered quartz surface stone for kitchen and platform at a reasonable price. We have 10+ yrs of service. Get a price quote",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.1",
-            "bestRating": "5",
-            "ratingCount": "39"
-          }
-        }
-        </script>
-    @endverbatim
 
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTBK17M75S"></script>
-
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-TTBK17M75S');
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17164959163"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
         gtag('config', 'AW-17164959163');
     </script>
 </head>
@@ -229,8 +151,8 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="{{ asset('assets/asset/logo.png') }}" alt="argil tiles logo" title ="argil tiles logo"
-                    loading="lazy" class="" style="height: 65px;" />
+                <img src="{{ asset('assets/asset/logo.png') }}" alt="company logo" title="Home"
+                    width="180" height="65" loading="eager" fetchpriority="high" decoding="async" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -252,39 +174,18 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item {{ Request::is('profile') ? 'active' : '' }}"
                                     href="/profile">PROFILE</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
                             <li><a class="dropdown-item {{ Request::is('about-argil') ? 'active' : '' }}"
                                     href="/about-argil">ABOUT </a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
                             <li><a class="dropdown-item {{ Request::is('documentaryfilm') ? 'active' : '' }}"
                                     href="/documentaryfilm">DOCUMENTARY FILM</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
                             <li><a class="dropdown-item {{ Request::is('corevalues') ? 'active' : '' }}"
                                     href="/corevalues">CORE VALUES</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
                             <li><a class="dropdown-item {{ Request::is('groupcompany') ? 'active' : '' }}"
                                     href="/groupcompany">COMPANY GROUP</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
                             <li><a class="dropdown-item {{ Request::is('achievements') ? 'active' : '' }}"
                                     href="/achievements">ACHIEVEMENTS</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
                             <li><a class="dropdown-item {{ Request::is('plants') ? 'active' : '' }}"
                                     href="/plants">PLANTS</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
                             <li><a class="dropdown-item {{ Request::is('quality') ? 'active' : '' }}"
                                     href="/quality">QUALITY</a></li>
                         </ul>
@@ -297,12 +198,9 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item {{ Request::is('quartzsurface', 'quartzinquiry/*') ? 'active' : '' }}"
-                                    href="/quartzsurface">QUARTZ SURFACE</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                                    href="/quartzsurface">ENGINEERED STONE</a></li>
                             <li><a class="dropdown-item {{ Request::is('spcproducts', 'spcproductinquiry/*') ? 'active' : '' }}"
-                                    href="/spcproducts">SPC PRODUCTS</a></li>
+                                    href="/spcproducts">RIGID-CORE VINYL</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -322,38 +220,20 @@
         </div>
     </nav>
 
-    <!-- Video Section -->
     @yield('content')
 
-    {{-- <div id="preloader">
-        <div class="spinner"></div>
-    </div> --}}
-    <!-- footer -->
-    <!-- Footer -->
     <footer class="text-center text-lg-start bg-body-tertiary text-muted">
-        <!-- Section: Social media -->
-
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="">
+        <section>
             <div class="container-fluid d-flex justify-content-evenly text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-5 ">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto my-4 d-flex justify-content-center ">
-                        <!-- Content -->
-                        <img src="{{ asset('assets/asset/footerlogo.png') }}" style="width: 150px;height: 150px;"
-                            alt="argil footerlogo" title="argil footerlogo" loading="lazy" />
+                <div class="row mt-5">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto my-4 d-flex justify-content-center">
+                        <img src="{{ asset('assets/asset/footerlogo.png') }}" class="footer-logo"
+                            alt="footer logo" title="Home" loading="eager" decoding="async" width="150" height="150" />
                     </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto my-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold my-4">
+                        <p class="text-uppercase fw-bold my-4 mb-0">
                             Quick Links
-                        </h6>
+                        </p>
                         <p>
                             <a href="/profile" class="text-reset text-decoration-none ">Corporate</a>
                         </p>
@@ -374,29 +254,24 @@
                         </p>
 
                     </div>
-                    <!-- Grid column -->
 
-                    <!-- Grid column -->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto my-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mt-4">
+                        <p class="text-uppercase fw-bold mt-4 mb-0">
                             Download Our App
-
-
-                        </h6>
+                        </p>
 
                         <p class="my-4">
                             <a target="_blank"
                                 href="https://play.google.com/store/apps/details?id=com.arjil.argil_tiles">
                                 <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
-                                    alt="argil-playstore-link" title="argil-playstore-link" class="w-75">
+                                    alt="Google Play download" title="Get it on Google Play" class="w-75">
                             </a>
                         </p>
                         <p>
                             <a href="https://apps.apple.com/in/app/argil-group/id6746482165" target="_blank">
 
                                 <img src="{{ asset('assets/asset/appstore.png') }}"
-                                    loading ="lazy"alt="argil-appstore-link" title="argil-appstore-link"
+                                    loading ="lazy" alt="App Store download" title="Download on the App Store"
                                     class="w-75">
                             </a>
                         </p>
@@ -406,8 +281,8 @@
                     <!-- Grid column -->
                     <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mb-md-0 my-4">
                         <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mt-4">Contact info</h6>
-                        <p class="my-4"><i class="bi bi-geo-alt mx-3 "></i>Argil Group
+                        <p class="text-uppercase fw-bold mt-4 mb-0">Contact info</p>
+                        <p class="my-4"><i class="bi bi-geo-alt mx-3 "></i>Display Center
                             <br />
                             <span class="mx-5 ">
                                 8-A, National Highway, </span>
@@ -422,21 +297,20 @@
                         </p>
 
                         <p><i class="bi bi-telephone me-3 mx-3"></i><a href="tel:9925511465"
-                                class="text-decoration-none" style="color: inherit !important;">+ 91 9925511465</a>
+                                class="text-decoration-none footer-link-inherit">+ 91 9925511465</a>
                         </p>
                         <p> <i class="bi bi-envelope me-3 mx-3"></i>
-                            <a href="mailto:info@argiltiles.com" class="text-decoration-none"
-                                style="color: inherit !important;">info@argiltiles.com</a>
+                            <a href="mailto:info@argiltiles.com" class="text-decoration-none footer-link-inherit">info@argiltiles.com</a>
                         </p>
                         <p class="mx-5">
                             <a href="https://www.facebook.com/argilgroup/" target="blank"
-                                class="text-decoration-none" style="color: inherit !important;"><i
+                                class="text-decoration-none footer-link-inherit"><i
                                     class="bi bi-facebook me-3"></i></a>
                             <a href="https://www.instagram.com/argilgroup/" target="blank"
-                                class="text-decoration-none" style="color: inherit !important;"><i
+                                class="text-decoration-none footer-link-inherit"><i
                                     class="bi bi-instagram me-3"></i></a>
                             <a href="https://www.linkedin.com/company/argilgroup/?viewAsMember=true" target="blank"
-                                class="text-decoration-none" style="color: inherit !important;"><i
+                                class="text-decoration-none footer-link-inherit"><i
                                     class="bi bi-linkedin me-3"></i></a>
 
                         </p>
@@ -450,14 +324,13 @@
 
 
         <!-- Copyright -->
-        <div class="d-flex flex-column flex-md-row justify-content-around p-4 text-center text-md-start"
-            style="background-color: rgba(0, 0, 0, 0.05);">
+        <div class="d-flex flex-column flex-md-row justify-content-around p-4 text-center text-md-start footer-copy">
             <div class="mb-2 mb-md-0">
                 @php
                     $year = date('Y');
                 @endphp
                 <a class="text-reset fw-bold text-decoration-none" href="https://argiltiles.com">
-                    © {{ $year }} Argil Group
+                    © {{ $year }} Mod Ceramic Industries Ltd.
                 </a>
             </div>
             <div>
@@ -474,58 +347,7 @@
     <!-- Footer -->
     <!-- footer -->
     <!-- Bootstrap JS -->
-    <style>
-        /* Preloader styling */
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-
-        .spinner {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #ccb19b;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    {{-- <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 75) {
-                navbar.classList.add('sticky-navbar');
-            } else {
-                navbar.classList.remove('sticky-navbar');
-            }
-        });
-    </script> --}}
-    <script>
-        // Wait for window load
-        // window.addEventListener("load", function() {
-        // document.getElementById("preloader").style.display = "none";
-        // document.querySelector(".content").style.display = "block";
-        // });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
 
     <script type="text/javascript">
         _linkedin_partner_id = "9069537";

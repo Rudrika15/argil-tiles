@@ -1,54 +1,53 @@
 @extends('layouts.app')
 @section('seosection')
+@php
+    $siName = \App\Support\SeoCopy::soften($data->names);
+@endphp
     <meta name="description"
-        content="Argil is a leading manufacturer of premium artificial quartz stone slabs in Morbi, Gujarat. Explore quartz for homes & businesses.">
-    <meta name="keywords" content="Artificial Quartz, Quartz Slabs, Quartz Manufacturers, Morbi Quartz, India Quartz Stone">
-    <meta property="og:title" content="SPC Product Inquiry | Argil Quartz Surfaces" data-react-helmet="true">
+        content="Explore premium rigid-core vinyl. Waterproof, durable planks for homes and commercial spaces. Request a quote.">
+    <meta name="keywords" content="rigid-core vinyl, {{ $siName }}, waterproof vinyl, Morbi manufacturer">
+    <meta property="og:title" content="{{ $siName }} | Rigid-Core Vinyl">
     <meta property="og:description"
-        content="Explore premium artificial quartz stone slabs by Argil, a leading manufacturer in Morbi, Gujarat. Perfect for homes and businesses."
-        data-react-helmet="true">
-    <meta property="og:url" content="https://argiltiles.com/spcproductinquiry/{{ $data->id }}" data-react-helmet="true">
+        content="Explore {{ $siName }} rigid-core vinyl. Durable, waterproof floor covering manufactured in Morbi, Gujarat.">
+    <meta property="og:url" content="https://argiltiles.com/spcproductinquiry/{{ $data->slug }}">
 
-    <meta name="twitter:title" content="SPC Product Inquiry | Argil Quartz Surfaces" data-react-helmet="true">
+    <meta name="twitter:title" content="{{ $siName }} | Rigid-Core Vinyl">
     <meta name="twitter:description"
-        content="Explore premium artificial quartz stone slabs by Argil, a leading manufacturer in Morbi, Gujarat. Perfect for homes and businesses."
-        data-react-helmet="true">
+        content="Explore {{ $siName }} rigid-core vinyl. Durable, waterproof floor covering manufactured in Morbi, Gujarat.">
 
-    <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="canonical" href="https://argiltiles.com/spcproductinquiry/{{ $data->slug }}">
 
-    <title> {{ $data->names }} | Premium SPC Flooring Solutions by Argil</title>
+    <title>{{ $siName }} | Rigid-Core Vinyl</title>
 
-@verbatim
-
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org/",
-          "@type": "Product",
-          "name": "{{ $data->names }}",
-          "image": ["{{ asset('spc/' . $data->mainImg) }}"],
-          "description": " Thickness : {{ $data->thicknesses }} , Primary color : {{ $data->primarycolors }} ",
-          "brand": {
-            "@type": "Brand",
-            "name": "Argil Group"
-          },
-          "review": [
-
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Chandan Gupta"
-            },
-            "datePublished": "{{ $data->created_at->toDateString() }}",
-            "reviewBody": "
-            Thrilled with the SPC flooring from Argil. It has a clean, stylish appearance and feels incredibly sturdy underfoot. It’s transformed our room with a modern touch and is super low-maintenance. Definitely recommend!"
-          }
-          ]
-
-        }
-        </script>
-        @endverbatim
-
+<script type="application/ld+json">
+{
+    "@@context":"https://schema.org",
+    "@@type":"Product",
+    "@@id":"https://argiltiles.com/spcproductinquiry/{{ $data->slug }}#product",
+    "name":{{ json_encode(\App\Support\SeoCopy::soften($data->names)) }},
+    "image":[
+        "{{ asset('spc/' . $data->mainImg) }}"
+    ],
+    "description":{{ json_encode(trim('Thickness: ' . ($data->thicknesses ?? '') . ', Primary color: ' . ($data->primarycolors ?? '') . ', Style: ' . ($data->style ?? ''))) }},
+    "sku":"{{ $data->slug ?? $data->id }}",
+    "brand":{
+        "@@type":"Brand",
+        "name":"Argil Tiles"
+    },
+    "manufacturer":{
+        "@@type":"Organization",
+        "name":"Mod Ceramic Industries Ltd."
+    },
+    "category":"Rigid-Core Vinyl",
+    "url":"https://argiltiles.com/spcproductinquiry/{{ $data->slug }}"
+}
+</script>
+@endsection
+@section('intl_tel', '1')
+@section('lcp_preload')
+    @if(!empty($data->mainImg))
+        <link rel="preload" as="image" href="{{ asset('spc/' . $data->mainImg) }}" fetchpriority="high">
+    @endif
 @endsection
 @section('content')
     <!-- breadcrumb -->
@@ -56,7 +55,7 @@
         <div class="container">
 
             <div class="p-2">
-                <h1 class="display-6 fw-bold">Home / {{ $data->names }}</h1>
+                <h1 class="display-6 fw-bold">Home / {{ \App\Support\SeoCopy::soften($data->names) }}</h1>
             </div>
         </div>
     </div>
@@ -64,13 +63,13 @@
     <div class="container">
 
         <div class="row pb-5">
-            <h2 class="text-center fw-bold pt-5">SPC Flooring tiles</h2>
+            <h2 class="text-center fw-bold pt-5">Rigid-Core Vinyl tiles</h2>
             <div class="col-md-4 pt-5">
                 {{-- Main Image --}}
                 @if ($data->mainImg)
                     <div >
                         <img id="mainImage" src="{{ asset('spc/' . $data->mainImg) }}" class="img-thumbnail mb-3"
-                            alt="spc product" title="spc product" loading="lazy">
+                            alt="{{ \App\Support\SeoCopy::soften($data->names) }}" title="{{ \App\Support\SeoCopy::soften($data->names) }}" loading="eager" fetchpriority="high" decoding="async">
                     </div>
                 @endif
 
@@ -108,7 +107,7 @@
                     <div class="col-md-6">
 
                         <h3>Serise Name ( s ) :</h3>
-                        <p>{{ $data->names }}</p>
+                        <p>{{ \App\Support\SeoCopy::soften($data->names) }}</p>
                         <h3>With Enhanced Beveled Edges :</h3>
                         <p>{{ $data->edges }}</p>
                         <h3>Thickness :</h3>
@@ -245,12 +244,15 @@
     </script>
 
     <script>
-        const input = document.querySelector("#form_phone");
-
-        window.intlTelInput(input, {
-            initialCountry: "in", // default country code (India)
-            separateDialCode: true,
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.querySelector("#form_phone");
+            if (input && window.intlTelInput) {
+                window.intlTelInput(input, {
+                    initialCountry: "in",
+                    separateDialCode: true,
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+                });
+            }
         });
     </script>
 @endsection

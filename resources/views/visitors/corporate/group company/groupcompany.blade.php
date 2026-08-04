@@ -26,6 +26,9 @@ solutions with a focus on innovation and quality.">
     <link rel="canonical" href="https://argiltiles.com/groupcompany" data- react-helmet="true">
     <title>Argil Group of Companies | Leaders in Quartz Manufacturing</title>
 @endsection
+@section('lcp_preload')
+    <link rel="preload" as="image" href="{{ asset('assets/asset/groupcompanyimage.png') }}" fetchpriority="high">
+@endsection
 @section('content')
     <!-- breadcrumb -->
     <div class="breadcrumb d-flex justify-content-between align-items-center">
@@ -56,7 +59,7 @@ solutions with a focus on innovation and quality.">
             </div>
             <div class="col-md-6 text-center mt-5">
                 <img src="{{ asset('assets/asset/groupcompanyimage.png') }}" alt="argil groupcompany"
-                    title="argil groupcompany" loading="lazy" class="img-fluid w-75">
+                    title="argil groupcompany" width="748" height="521" loading="eager" fetchpriority="high" decoding="async" class="img-fluid w-75">
             </div>
 
             <div class="col-md-12 pt-5">

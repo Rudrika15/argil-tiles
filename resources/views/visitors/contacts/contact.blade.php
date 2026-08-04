@@ -2,115 +2,24 @@
 
 @section('seosection')
     <meta name="description"
-        content="Contact Argil Tiles for inquiries about
-quartz slabs, pricing, and orders. Our team is ready to assist you with top-
-quality artificial quartz." />
-    <meta name="keywords" content="Contact Argil, Quartz Tiles Contact,
-Argil Support, Argil Inquiry" />
-    <meta property="og:title" content="Get in Touch with Argil Group – Contact Us
-Today">
+        content="Contact our Morbi team for slab pricing, sample requests, distributor partnerships, and export shipment questions." />
+    <meta name="keywords" content="contact surface manufacturer, slab inquiry, export support, Morbi factory contact" />
+    <meta property="og:title" content="Contact Us | Surface & Vinyl Manufacturer">
     <meta property="og:description"
-        content="Have questions or need
-assistance? Contact Argil Group for inquiries about our premium artificial
-quartz stone slabs. We are here to help!">
-    <meta property="og:url" content="https://argiltiles.com/contact">
+        content="Have questions or need assistance? Reach our team for engineered stone and rigid-core vinyl project support.">
+    <meta property="og:url" content="https://argiltiles.com/contact-argil">
     <meta property="og:type" content="website">
-    <meta name="twitter:title" content="Get in Touch with Argil Group – Contact Us
-Today">
+    <meta name="twitter:title" content="Contact Us | Surface & Vinyl Manufacturer">
     <meta name="twitter:description"
-        content="Need help? Contact Argil Group for
-inquiries about our premium artificial quartz stone slabs. Our team is ready to
-assist you!">
+        content="Need help with engineered stone or rigid-core vinyl? Our team is ready to assist.">
 
     <meta name="twitter:site" content="@ArgilGroup">
-    <link rel="canonical" href="https://argiltiles.com/contact" data-react- helmet="true">
-    <title>Contact Us | Argil Tiles – Quartz Stone Manufacturers in Morbi, India</title>
-
-<style>
-    
-.testimonial-card{
-    position:relative;
-    background:#fff;
-    border:none;
-    border-top:4px solid #d4b59e;
-    border-radius:0;
-    padding:15px;
-    transition:all .3s ease;
-    overflow:hidden;
-}
-
-.testimonial-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-}
-
-.testimonial-card::before{
-    content:"❝";
-    position:absolute;
-    top:10px;
-    right:20px;
-    font-size:70px;
-    line-height:1;
-    color:rgba(212,181,158,.15);
-    font-family:serif;
-}
-
-.testimonial-rating{
-    color:#d4b59e;
-    font-size:15px;
-    margin-bottom:15px;
-}
-
-.testimonial-text{
-    color:#555;
-    line-height:1.8;
-    font-size:15px;
-    min-height:130px;
-}
-
-/* .client-image{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    object-fit:cover;
-    border:2px solid #d4b59e;
-} */
-
-.client-image{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#d4b59e; /* Change to your preferred color */
-    color:#fff;
-    font-size:24px;
-    font-weight:700;
-    object-fit:cover;
-    flex-shrink:0;
-}
-
-.client-name{
-    font-size:16px;
-    font-weight:600;
-    color:#222;
-}
-
-.client-designation{
-    font-size:13px;
-    color:#777;
-}
-
-.client-company{
-    font-size:13px;
-    color:#999;
-}
-
-.testimonial-section{
-    background:#fafafa;
-}
-</style>
+    <link rel="canonical" href="https://argiltiles.com/contact-argil">
+    <title>Contact Us | Surface Manufacturer in Morbi, India</title>
+@endsection
+@section('intl_tel', '1')
+@section('lcp_preload')
+    <link rel="preload" as="image" href="{{ asset('assets/asset/contactsimage.png') }}" fetchpriority="high">
 @endsection
 @section('content')
     {{-- @if (session('success'))
@@ -134,13 +43,33 @@ assist you!">
     </div>
     <!-- breadcrumb -->
 
-    
-    <div class="container">
+    <div class="container py-4">
+        <div class="row mb-4">
+            <div class="col-lg-10 mx-auto">
+                <p class="lead mb-3">
+                    Reach our team for quotes, product details, and project support on engineered stone slabs and rigid-core vinyl.
+                </p>
+                <p class="text-muted mb-3">
+                    Whether you are an architect, interior designer, distributor, or homeowner, our Morbi-based team can help with
+                    design selection, slab sizes, export inquiries, and order timelines. Share your requirements below and we will
+                    respond with the right product guidance for kitchens, bathrooms, commercial floors, and large-scale projects.
+                    Include preferred finishes, approximate square metres, and destination city or port so we can prepare accurate
+                    pricing and lead-time guidance.
+                </p>
+                <p class="text-muted mb-0">
+                    Visiting Gujarat? Schedule a showroom appointment to view slab samples and rigid-core décors in person.
+                    Remote buyers can request digital boards, catalogue PDFs, and WhatsApp support for faster shortlisting.
+                    Our goal is clear communication from first inquiry through dispatch. Typical response windows are within
+                    one business day for standard product questions and slightly longer when custom sizes, OEM labeling, or
+                    multi-container export schedules are involved.
+                </p>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-6 text-center">
 
-                <img src="{{ asset('assets/asset/contactsimage.png') }}" alt="argil contact" title="argil contact"
-                    loading="lazy" class="img-fluid ">
+                <img src="{{ asset('assets/asset/contactsimage.png') }}" alt="contact showroom" title="Contact us"
+                    width="521" height="521" loading="eager" fetchpriority="high" decoding="async" class="img-fluid">
             </div>
             <div class="col-md-6 pt-5">
                 <h2 class="fw-bold">Let's Be in Touch !!!
@@ -189,15 +118,57 @@ assist you!">
 
     </div>
 
-    @include('visitors.testimonial')
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h2 class="h4 fw-bold mb-3">Visit Our Display Center</h2>
+                <p class="mb-2">
+                    Our Display Center, National Highway 8A, Anand Nagar, Morbi, Gujarat 363642, India.
+                </p>
+                <p class="mb-2">
+                    Phone: <a href="tel:+912822240628" class="text-decoration-none text-dark">02822 240 628</a>
+                </p>
+                <p class="mb-0 text-muted">
+                    Business hours: Monday to Friday, 8:00 AM to 8:00 PM IST. Use the form above for slab pricing,
+                    sample requests, distributor partnerships, and export shipment questions.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h2 class="h4 fw-bold mb-3">How We Can Help</h2>
+                <p class="mb-2">
+                    Request quotations for kitchen platforms, vanity tops, countertops, and rigid-core vinyl for homes or commercial spaces.
+                </p>
+                <p class="mb-0 text-muted">
+                    Share project location, quantity, preferred finish, and timeline so our team can recommend suitable
+                    designs and confirm availability for domestic or international delivery. For urgent site requirements,
+                    include a phone number and preferred call window so we can prioritise sample dispatch and quotation
+                    follow-up.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <p class="text-center text-muted mb-0">
+            Prefer social proof before you enquire? Read full client reviews on our
+            <a href="/testimonial">testimonials page</a>, then return here to request pricing, samples, or export support
+            from our Morbi team.
+        </p>
+    </div>
 
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.6099585746833!2d70.8608067753077!3d22.816912179318518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39598c54ff1c773b%3A0x8d065e671b879a69!2sARGIL%20GROUP%20-%20DISPLAY%20CENTER!5e0!3m2!1sen!2sin!4v1745670064322!5m2!1sen!2sin"
-                    width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="100%" height="550" class="contact-map" allowfullscreen="" loading="lazy"
+                    title="Display center map in Morbi, Gujarat"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="text-center text-muted mt-3">
+                    Find our National Highway display center in Morbi on the map above. Call ahead for sample viewing
+                    appointments and directions from Rajkot or Ahmedabad. Parking is available near the showroom for trade
+                    visitors bringing drawings or material boards.                     We look forward to helping you specify the right surface for kitchens, baths, and commercial floors.
+                </p>
             </div>
         </div>
     </div>
@@ -205,74 +176,78 @@ assist you!">
     
 
 
-    <!-- country JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-
-
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const form = this;
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-
-            if (!form.checkValidity()) return;
-
-            submitBtn.innerHTML = "Submitting...";
-            submitBtn.disabled = true;
-
-            const formData = new FormData(form);
-
-            // Get intlTelInput instance
-            const iti = window.intlTelInputGlobals.getInstance(document.querySelector('#form_phone'));
-
-            // Get full international number
-            const fullPhone = iti.getNumber();
-
-            // Remove original form_phone and add formatted one
-            formData.delete('form_phone');
-            formData.append('form_phone', fullPhone);
-
-            fetch("{{ Route('send.mail') }}", {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        Swal.fire({
-                            title: 'Thank you!',
-                            text: 'Your message has been sent successfully!',
-                            icon: 'success',
-                            confirmButtonText: 'OK',
-                            customClass: {
-                                title: 'swal-title',
-                                htmlContainer: 'swal-text',
-                                confirmButton: 'swal-button'
-                            }
-                        });
-
-                        form.reset();
-                    }
-                })
-                .finally(() => {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalText;
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.querySelector("#form_phone");
+            if (input && window.intlTelInput) {
+                window.intlTelInput(input, {
+                    initialCountry: "in",
+                    separateDialCode: true,
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
                 });
+            }
+
+            const contactForm = document.getElementById('contact-form');
+            if (!contactForm) return;
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const form = this;
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+
+                if (!form.checkValidity()) return;
+
+                submitBtn.innerHTML = "Submitting...";
+                submitBtn.disabled = true;
+
+                const formData = new FormData(form);
+                const iti = window.intlTelInputGlobals.getInstance(document.querySelector('#form_phone'));
+                const fullPhone = iti.getNumber();
+
+                formData.delete('form_phone');
+                formData.append('form_phone', fullPhone);
+
+                fetch("{{ Route('send.mail') }}", {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            Swal.fire({
+                                title: 'Thank you!',
+                                text: 'Your message has been sent successfully!',
+                                icon: 'success',
+                                confirmButtonText: 'OK',
+                                customClass: {
+                                    title: 'swal-title',
+                                    htmlContainer: 'swal-text',
+                                    confirmButton: 'swal-button'
+                                }
+                            });
+
+                            form.reset();
+                        }
+                    })
+                    .finally(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalText;
+                    });
+            });
         });
     </script>
 
-    <script>
-        const input = document.querySelector("#form_phone");
-
-        window.intlTelInput(input, {
-            initialCountry: "in", // default country code (India)
-            separateDialCode: true,
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-        });
-    </script>
+<script type="application/ld+json">
+{
+    "@@context":"https://schema.org",
+    "@@type":"ContactPage",
+    "name":"Contact Our Team",
+    "url":"https://argiltiles.com/contact-argil"
+}
+</script>
 @endsection

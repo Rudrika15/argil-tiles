@@ -26,6 +26,9 @@ to quality, innovation, and leadership in the artificial quartz industry.">
     react-helmet="true">
     <title>Argil Achievements | Awards & Milestones in Quartz Industry</title>
 @endsection
+@section('lcp_preload')
+    <link rel="preload" as="image" href="{{ asset('assets/asset/achievementimage1.jpeg') }}" fetchpriority="high">
+@endsection
 @section('content')
      <!-- breadcrumb -->
      <div class="breadcrumb d-flex justify-content-between align-items-center">
@@ -50,50 +53,49 @@ to quality, innovation, and leadership in the artificial quartz industry.">
         <div class="container py-4">
             <div class="row align-items-center mb-4">
                 <div class="col-md-4 text-center mb-3 mb-md-0">
-                    <img src="{{ asset('assets/asset/achievementimage1.jpeg') }}" alt="Argil National Award"
-                        title="Argil National Award" loading="lazy" class="img-fluid rounded shadow-sm">
+                    <img src="{{ asset('assets/asset/achievementimage1.jpeg') }}" alt="National Award ceremony"
+                        title="National Award" width="452" height="500" loading="eager" fetchpriority="high" decoding="async" class="img-fluid rounded shadow-sm">
                 </div>
                 <div class="col-md-8">
-                    <h3 class="fw-bold">National Award</h3>
+                    <h2 class="fw-bold">National Award</h2>
                     <p class="mb-0 text-justify">
-                        In 1997, Argil Group was honored with the prestigious National Award for Best Quality Products,
-                        presented by the Vice President of India. This significant recognition marked a milestone in the
-                        company’s journey, celebrating its unwavering dedication to product excellence, innovation, and
-                        quality assurance. The award reflects Argil’s commitment to delivering products that not only meet
-                        but exceed industry standards, showcasing Indian manufacturing capabilities on a national platform.
+                        In 1997, the company was honored with the prestigious National Award for Best Quality Products,
+                        presented by the Vice President of India. This recognition marked a milestone in our journey,
+                        celebrating dedication to product excellence, innovation, and quality assurance. The award reflects
+                        a commitment to delivering products that meet and exceed industry standards, showcasing Indian
+                        manufacturing capabilities on a national platform.
                     </p>
                     <p class="mb-0 text-justify">
 
-                        Receiving the National Award is one of the highest accolades a company can achieve, and for Argil,
-                        it served as a powerful endorsement of its vision, technology-driven processes, and skilled
-                        workforce. This recognition was not only a celebration of past achievements but also a motivator to
-                        continuously raise the bar in product development and customer satisfaction.
+                        Receiving the National Award is one of the highest accolades a manufacturer can achieve. For us,
+                        it served as a powerful endorsement of our vision, technology-driven processes, and skilled
+                        workforce. The recognition celebrated past achievements and motivated the team to keep raising the
+                        bar in product development and customer satisfaction.
                     </p>
                     <p class="mb-0 text-justify">
-                        The award ceremony brought national attention to Argil’s brand, validating years of hard work,
-                        attention to detail, and a strong emphasis on quality control. It positioned Argil Group as a
-                        trusted name in the industry and paved the way for future growth, innovation, and expansion into new
-                        markets. Even today, this award remains a proud symbol of Argil’s legacy and its long-standing
-                        commitment to excellence in manufacturing.
+                        The ceremony brought national attention to the brand, validating years of careful work and strong
+                        quality control. It positioned the Group as a trusted name in the industry and opened doors for
+                        growth, innovation, and expansion into new markets. Even today, this award remains a proud symbol of
+                        our legacy and long-standing commitment to excellence in manufacturing.
                     </p>
                 </div>
             </div>
 
             <div class="row align-items-center flex-md-row-reverse">
                 <div class="col-md-4 text-center mb-3 mb-md-0">
-                    <img src="{{ asset('assets/asset/achievementimage2.jpeg') }}" alt="Argil Export Awards"
-                        title="Argil Export Awards" loading="lazy" class="img-fluid rounded shadow-sm w-100">
+                    <img src="{{ asset('assets/asset/achievementimage2.jpeg') }}" alt="Export Awards recognition"
+                        title="Export Awards" loading="lazy" class="img-fluid rounded shadow-sm w-100">
                 </div>
                 <div class="col-md-8">
-                    <h3 class="fw-bold">Export Awards</h3>
+                    <h2 class="fw-bold">Export Awards</h2>
                     <p class="mb-0 text-justify">
-                        Argil Group has been honored with the Highest Export Awards by both the Government of India and the
-                        State Government, recognizing its outstanding contribution to international trade. This prestigious
-                        accolade reflects Argil’s excellence in product quality, consistent export growth, and global market
-                        presence. By maintaining international standards, timely delivery, and customer satisfaction, Argil
-                        has established itself as a trusted name across borders. The award signifies not just business
-                        success, but also the company’s role in strengthening the economy and creating global value. It
-                        stands as a proud testament to Argil’s vision, commitment, and leadership in the export industry.
+                        We have also received Highest Export Awards from both the Government of India and the State
+                        Government, recognising outstanding contribution to international trade. The accolade reflects
+                        excellence in product quality, consistent export growth, and a growing global presence. By keeping
+                        international standards, on-time delivery, and customer satisfaction at the centre, the company has
+                        become a trusted name across borders. The award signals not only commercial success but also a role in
+                        strengthening the economy and creating global value—a testament to vision, commitment, and leadership
+                        in export manufacturing.
                     </p>
                 </div>
             </div>

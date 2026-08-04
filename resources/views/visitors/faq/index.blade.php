@@ -1,147 +1,35 @@
-{{-- @extends('layouts.app')
+@extends('layouts.app')
 @section('seosection')
     <meta name="description"
-        content="Premium quartz stone slabs for
-countertops & kitchen platforms. Manufactured in Morbi, Gujarat, India.
-Explore our high-quality designs at Argil." />
+        content="Answers about engineered stone slabs, rigid-core vinyl, installation, care, and wholesale supply from our Morbi factory.">
     <meta name="keywords"
-        content="Quartz Slabs, Quartz Countertops,
-Kitchen Surfaces, Argil Tiles, Quartz Stone Manufacturers, Morbi Gujarat" />
-    <meta name="author" content="Argil Group – Leading Manufacturer of
-Premium Quartz Surfaces">
-    <meta property="og:title"
-        content="Quartz Stone Slab For Kitchen Platform
-Countertops Manufacturers In Morbi, Gujarat, India | Argil"
-        data-react-helmet
-="true">
-    <meta property="og:url" content="https://argiltiles.com/quartzsurface" data-react-helmet="true">
+        content="engineered stone FAQ, rigid-core vinyl FAQ, surface care, countertop questions, Morbi manufacturer">
+    <meta property="og:title" content="FAQ | Engineered Surfaces & Rigid-Core Vinyl">
     <meta property="og:description"
-        content="Argil is a quartz surface stone slab
-for kitchen platform countertops manufacturers in Morbi, Gujarat, India. We have
- the best engineered  quartz surface stone for kitchen and platform  at a
- reasonable price We have 10+ yrs of service. Get a price quote "
-        data-react- helmet="true">
-    <meta name="twitter:title"
-        content="Quartz Stone Slab For Kitchen Platform
-Countertops Manufacturers In Morbi, Gujarat, India | Argil"
-        data-react-helmet="true">
-    <meta name="twitter:description"
-        content="Argil is a quartz surface stone
-slab for kitchen platform countertops manufacturers in Morbi, Gujarat, India. We
- have the best engineered  quartz surface stone for kitchen and platform  at a
-reasonable price We have 10+ yrs of service. Get a price quote  "
-        data-react-helmet="true">
-    <link rel="canonical" href="https://argiltiles.com/quartzsurface" data-react- helmet="true">
-    <title>
-        Quartz Countertop Slabs Manufacturer in Morbi | Argil
-    </title>
+        content="Find answers about engineered stone, rigid-core vinyl, installation, and care from our Morbi manufacturing team.">
+    <meta property="og:url" content="https://argiltiles.com/faq">
+    <meta property="og:site_name" content="Mod Ceramic Industries">
+    <link rel="canonical" href="https://argiltiles.com/faq">
+    <title>FAQ | Engineered Surfaces & Rigid-Core Vinyl</title>
 @endsection
-@section('content') --}}
-{{--     
-@foreach($faqs as $faq)
-    <div class="accordion-item bg-white">
-        <h3>{{ $faq->question }}</h3>
-        <p>{{ $faq->answer }}</p>
+@section('content')
+    <div class="breadcrumb">
+        <div class="container py-2">
+            <h1 class="display-6 fw-bold">Frequently Asked Questions</h1>
+        </div>
     </div>
-@endforeach --}}
-
-  <div class="container my-5">
-    <div class="text-center mb-5">
-                <h6 class="text-uppercase fw-bold ls-2" style="color: #ccb19b; letter-spacing: 2px;">Support Center</h6>
-                <h2 class="display-6 fw-bold text-dark">Frequently Asked Questions</h2>
-                <div class="mx-auto mt-3" style="width: 50px; height: 3px; background-color: #ccb19b !important;"></div>
-            </div>
-
-    <div class="accordion" id="accordionExample">
-
-        @foreach ($faqs as $faq)
-            @php
-                $id = $loop->index;
-            @endphp
-
-            <div class="accordion-item bg-white">
-
-                <h2 class="accordion-header" id="heading{{ $id }}">
-                    <button class="accordion-button collapsed bg-white text-dark"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapse{{ $id }}"
-                        aria-expanded="false"
-                        aria-controls="collapse{{ $id }}">
-                        {{ $faq->question }}
-                    </button>
-                </h2>
-
-                <div id="collapse{{ $id }}"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="heading{{ $id }}"
-                    data-bs-parent="#accordionExample">
-
-                    <div class="accordion-body bg-white text-dark">
-                        {{ $faq->answer }}
-                    </div>
-
-                </div>
-            </div>
-        @endforeach
-
+    <div class="container pt-4">
+        <h2 class="h5 fw-bold">How to use this FAQ</h2>
+        <p class="text-muted mx-auto mb-0" style="max-width:760px;">
+            Find clear answers about engineered stone slabs, rigid-core vinyl, installation basics, care routines,
+            and wholesale supply from our Morbi factory. If your question is project-specific—custom sizes, export
+            packaging, or certificate copies—use the contact form and our team will follow up with tailored guidance.
+            Browse by topic below, expand any item for the full answer, and revisit this page as new product lines and
+            installation recommendations are published. Looking for series-specific FAQs? Open an engineered stone or
+            rigid-core product page to see questions filtered for that category. Still stuck? Email or call the display
+            center and reference the FAQ topic so we can answer faster. Updated answers are reviewed whenever specifications
+            or care guidance change. Bookmark this page when comparing materials for your next tender, renovation brief, or export quotation pack.
+        </p>
     </div>
-</div>
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const form = this;
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-
-            // Check if all required fields are filled
-            const isFormValid = form.checkValidity();
-
-            // If the form is valid, change the button text to "Submitting..."
-            if (isFormValid) {
-                submitBtn.innerHTML = "Submitting...";
-            } else {
-                // If form is not valid, just return without making AJAX request
-                return;
-            }
-
-            // Disable the button to prevent multiple submissions
-            submitBtn.disabled = true;
-
-            const formData = new FormData(form);
-
-            fetch("{{ Route('send.mail') }}", {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        Swal.fire({
-                            title: 'Thank you!',
-                            text: 'Your message has been sent successfully!',
-                            icon: 'success',
-                            confirmButtonText: 'OK',
-                            customClass: {
-                                title: 'swal-title',
-                                htmlContainer: 'swal-text',
-                                confirmButton: 'swal-button'
-                            }
-                        });
-
-                        // Reset the form
-                        form.reset();
-                    }
-                })
-                .finally(() => {
-                    // Re-enable the button and restore original text
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalText;
-                });
-        });
-    </script>
-{{-- @endsection --}}
+    @include('visitors.faq.list')
+@endsection

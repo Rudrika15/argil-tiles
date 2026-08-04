@@ -1,7 +1,20 @@
 @extends('layouts.app')
 
 @section('seosection')
-    <title>Exports | Argil Tiles – Quartz Stone Manufacturers in Morbi, India</title>
+    <meta name="description"
+        content="Export rigid-core vinyl and engineered stone from India to Russia. Premium wholesale supply for Russian distributors.">
+    <meta name="keywords"
+        content="rigid-core vinyl export Russia, engineered stone export Russia, surface exporter India to Russia">
+    <meta property="og:title" content="Rigid-Core Vinyl & Engineered Stone Export to Russia">
+    <meta property="og:description"
+        content="Export rigid-core vinyl and engineered stone from India to Russia. Premium wholesale supply for Russian distributors.">
+    <meta property="og:url" content="https://argiltiles.com/exports/russia">
+    <link rel="canonical" href="https://argiltiles.com/exports/russia">
+    <title>Rigid-Core Vinyl & Engineered Stone Export to Russia</title>
+@endsection
+
+@section('lcp_preload')
+    <link rel="preload" as="image" href="{{ asset('export-imgs/spc1.jpg') }}" fetchpriority="high">
 @endsection
 
 @section('content')
@@ -20,15 +33,15 @@
                         Russia Export Division
                     </p>
                     <h1 class="display-4 fw-bold text-uppercase mb-4">
-                        Premium SPC Flooring & Quartz <br>
-                        Export To <span style="color:#ccb19b">Russia</span>
+                        Premium Surfaces & Rigid-Core Vinyl <br>
+                        Export To <span class="text-brand">Russia</span>
                     </h1>
                     <p class="lead opacity-75 mb-4">
                         Argil Group supplies high-performance architectural surfaces to Russian distributors,
                         real estate developers, and large-scale importers with reliable direct-to-port logistics.
                     </p>
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="#enquiry" class="btn text-white fw-bold px-4 py-3 rounded-0" style="background:#ccb19b">
+                        <a href="#enquiry" class="btn text-white fw-bold px-4 py-3 rounded-0 bg-brand">
                             Request Quotation
                         </a>
                         <a href="/catalogue" class="btn btn-outline-light px-4 py-3 rounded-0">
@@ -50,7 +63,7 @@
                         the Russian construction market, ensuring high durability suitable for extreme temperature
                         variations.
                     </p>
-                    <p class="fw-bold text-uppercase small mb-2" style="color: #ccb19b; letter-spacing: 1px;">
+                    <p class="fw-bold text-uppercase small mb-2 text-brand ls-1">
                         Our Russia-Focused Process:
                     </p>
                     <ul class="list-unstyled mb-4">
@@ -81,8 +94,8 @@
                     <div class="p-5 bg-white border rounded-0 h-100 shadow-sm" style="transition: all 0.4s ease-in-out;"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-shield-check display-5 mb-4 d-block" style="color: #ccb19b;"></i>
-                        <h5 class="fw-bold text-uppercase">High-Grade Durability</h5>
+                        <i class="bi bi-shield-check display-5 mb-4 d-block text-brand"></i>
+                        <h3 class="fw-bold text-uppercase">High-Grade Durability</h3>
                         <p class="small text-muted mb-0">Products engineered to withstand high foot traffic and internal
                             heating expansion, ideal for Russian apartments and malls.</p>
                     </div>
@@ -91,8 +104,8 @@
                     <div class="p-5 bg-white border rounded-0 h-100 shadow-sm" style="transition: all 0.4s ease-in-out;"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-geo-alt display-5 mb-4 d-block" style="color: #ccb19b;"></i>
-                        <h5 class="fw-bold text-uppercase">Strategic Port Access</h5>
+                        <i class="bi bi-geo-alt display-5 mb-4 d-block text-brand"></i>
+                        <h3 class="fw-bold text-uppercase">Strategic Port Access</h3>
                         <p class="small text-muted mb-0">Direct routes from Mundra to major Russian gateways, ensuring
                             reduced transit times for bulk orders.</p>
                     </div>
@@ -101,8 +114,8 @@
                     <div class="p-5 bg-white border rounded-0 h-100 shadow-sm" style="transition: all 0.4s ease-in-out;"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-box-seam display-5 mb-4 d-block" style="color: #ccb19b;"></i>
-                        <h5 class="fw-bold text-uppercase">Jumbo Quartz Slabs</h5>
+                        <i class="bi bi-box-seam display-5 mb-4 d-block text-brand"></i>
+                        <h3 class="fw-bold text-uppercase">Jumbo Quartz Slabs</h3>
                         <p class="small text-muted mb-0">Capability to export massive Quartz slabs for modern Russian
                             interior countertops and kitchen islands.</p>
                     </div>
@@ -115,13 +128,12 @@
         <div class="container">
             <div class="row mb-5 align-items-end">
                 <div class="col-lg-7">
-                    <h6 class="text-uppercase fw-bold ls-2" style="color: #ccb19b; letter-spacing: 2px;">Export
-                        Excellence</h6>
+                    <p class="text-uppercase fw-bold ls-2 text-brand">Export
+                        Excellence</p>
                     <h2 class="display-5 fw-bold text-dark">Export Specifications</h2>
                 </div>
                 <div class="col-lg-5 text-lg-end pb-2">
-                    <p class="text-muted mb-0 border-start border-md-0 ps-3 ps-md-0"
-                        style="border-color: #ccb19b !important;">
+                    <p class="text-muted mb-0 border-start border-md-0 ps-3 ps-md-0 border-brand">
                         Argil Group maintains ISO 9001:2015 standards, ensuring batch-level quality control for Russian
                         infrastructure projects.
                     </p>
@@ -131,16 +143,15 @@
             <div class="row g-0 shadow-lg rounded overflow-hidden border">
                 <div class="col-lg-6 border-end">
                     <div class="p-0 position-relative">
-                        <div style="height:100px;"></div>
+                        <div class="spacer-100"></div>
                         <img src="{{ asset('export-imgs/spc1.jpg') }}" class="img-fluid w-50 mx-auto d-block"
-                            alt="SPC Flooring">
+                            alt="rigid-core vinyl" title="rigid-core vinyl" width="350" height="354" loading="eager" fetchpriority="high" decoding="async">
                         <div class="position-absolute top-0 end-0 m-3">
-                            <span class="badge bg-dark text-white px-3 py-2 fw-normal"
-                                style="border-left: 3px solid #ccb19b;">SPC-RIGID SERIES</span>
+                            <span class="badge bg-dark text-white px-3 py-2 fw-normal badge-brand-edge">SPC-RIGID SERIES</span>
                         </div>
                     </div>
                     <div class="p-4 p-xl-5">
-                        <h4 class="fw-bold mb-3">SPC Rigid Core Flooring</h4>
+                        <h3 class="fw-bold mb-3">Rigid-Core Vinyl</h3>
                         <p class="text-secondary small mb-4">100% waterproof and moisture resistant. Engineered with a
                             stone-plastic composite core for maximum stability.</p>
                         <table class="table table-sm table-borderless small text-uppercase mb-4">
@@ -157,23 +168,21 @@
                                 <td class="py-2 fw-bold text-end">Valinge / Uniclic</td>
                             </tr>
                         </table>
-                        <a href="/spcproducts" class="btn w-100 rounded-0 fw-bold py-2 text-white"
-                            style="background-color: #ccb19b;">Explore Products</a>
+                        <a href="/spcproducts" class="btn w-100 rounded-0 fw-bold py-2 text-white bg-brand">Explore Products</a>
                     </div>
                 </div>
                 <div class="col-lg-6 bg-light">
                     <div class="p-0 position-relative">
-                        <div style="height:100px;"></div>
+                        <div class="spacer-100"></div>
                         <img src="{{ asset('export-imgs/quartz1.jpg') }}" class="img-fluid w-50 mx-auto d-block"
-                            alt="Quartz Surface">
+                            alt="Quartz Surface" title="Quartz Surface">
                         <div class="position-absolute top-0 end-0 m-3">
-                            <span class="badge bg-dark text-white px-3 py-2 fw-normal"
-                                style="border-left: 3px solid #ccb19b;">QUARTZ-SURFACE</span>
+                            <span class="badge bg-dark text-white px-3 py-2 fw-normal badge-brand-edge">QUARTZ-SURFACE</span>
                         </div>
                     </div>
                     <div class="p-4 p-xl-5">
-                        <h4 class="fw-bold mb-3">Architectural Quartz</h4>
-                        <p class="text-secondary small mb-4">Composed of 93% natural quartz. Highly non-porous and
+                        <h3 class="fw-bold mb-3">Architectural Engineered Stone</h3>
+                        <p class="text-secondary small mb-4">Composed of about 93% natural mineral. Highly non-porous and
                             scratch resistant for premium applications.</p>
                         <table class="table table-sm table-borderless small text-uppercase mb-4">
                             <tr class="border-bottom">
@@ -189,8 +198,7 @@
                                 <td class="py-2 fw-bold text-end">Premium High-Gloss</td>
                             </tr>
                         </table>
-                        <a href="/quartzsurface" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm"
-                            style="background-color: #ccb19b;">Explore Products</a>
+                        <a href="/quartzsurface" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm bg-brand">Explore Products</a>
                     </div>
                 </div>
             </div>
@@ -199,14 +207,14 @@
 
     <section class="py-5 bg-dark text-white">
         <div class="container py-5 text-center">
-            <h2 class="fw-bold text-uppercase ls-widest mb-5" style="color: #ccb19b;">Packaging & Shipping</h2>
+            <h2 class="fw-bold text-uppercase ls-widest mb-5 text-brand">Packaging & Shipping</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-box-seam h1 mb-3 d-block" style="color: #ccb19b;"></i>
-                        <h5 class="fw-bold">Export Grade</h5>
+                        <i class="bi bi-box-seam h1 mb-3 d-block text-brand"></i>
+                        <h3 class="fw-bold">Export Grade</h3>
                         <p class="small opacity-50 mb-0">Foam layers, reinforced cartons, and ISPM-15 wooden pallets for
                             2-ton static loads.</p>
                     </div>
@@ -215,8 +223,8 @@
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-globe-americas h1 mb-3 d-block" style="color: #ccb19b;"></i>
-                        <h5 class="fw-bold">Port to Port</h5>
+                        <i class="bi bi-globe-americas h1 mb-3 d-block text-brand"></i>
+                        <h3 class="fw-bold">Port to Port</h3>
                         <p class="small opacity-50 mb-0">Mundra / Nhava Sheva (India) to Jebel Ali Port or other major
                             UAE gateways.</p>
                     </div>
@@ -225,8 +233,8 @@
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-phone-vibrate h1 mb-3 d-block" style="color: #ccb19b;"></i>
-                        <h5 class="fw-bold">Real-time Support</h5>
+                        <i class="bi bi-phone-vibrate h1 mb-3 d-block text-brand"></i>
+                        <h3 class="fw-bold">Real-time Support</h3>
                         <p class="small opacity-50 mb-0">Supervised container loading photos and tracking verification
                             via WhatsApp.</p>
                     </div>
@@ -242,23 +250,23 @@
             <h2 class="fw-bold text-uppercase text-center mb-5">Global Export Network</h2>
             <div class="row text-center g-4">
                 <div class="col-md-3">
-                    <h1 class="display-5 fw-bold" style="color:#ccb19b"><span class="counter" data-target="50">0</span>+
-                    </h1>
+                    <p class="display-5 fw-bold text-brand"><span class="counter" data-target="50">0</span>+
+                    </p>
                     <p class="text-muted small text-uppercase">Nations Exported</p>
                 </div>
                 <div class="col-md-3">
-                    <h1 class="display-5 fw-bold" style="color:#ccb19b"><span class="counter"
-                            data-target="250">0</span>+</h1>
+                    <p class="display-5 fw-bold text-brand"><span class="counter"
+                            data-target="250">0</span>+</p>
                     <p class="text-muted small text-uppercase">Satisfied Partners</p>
                 </div>
                 <div class="col-md-3">
-                    <h1 class="display-5 fw-bold" style="color:#ccb19b"><span class="counter"
-                            data-target="600">0</span>+</h1>
+                    <p class="display-5 fw-bold text-brand"><span class="counter"
+                            data-target="600">0</span>+</p>
                     <p class="text-muted small text-uppercase">Containers Shipped</p>
                 </div>
                 <div class="col-md-3">
-                    <h1 class="display-5 fw-bold" style="color:#ccb19b"><span class="counter" data-target="15">0</span>+
-                    </h1>
+                    <p class="display-5 fw-bold text-brand"><span class="counter" data-target="15">0</span>+
+                    </p>
                     <p class="text-muted small text-uppercase">Years Experience</p>
                 </div>
             </div>
@@ -278,7 +286,7 @@
                     <h2 class="fw-bold text-uppercase mb-4">Russia Import Desk</h2>
                     <p class="opacity-75 mb-4">Direct sourcing solutions for Russian business owners. Our dedicated
                         export team assists with container logistics, local certification, and custom pricing.</p>
-                    <p class="fw-bold"><i class="bi bi-whatsapp me-2" style="color:#ccb19b"></i> +91 99255 11465</p>
+                    <p class="fw-bold"><i class="bi bi-whatsapp me-2 text-brand"></i> +91 99255 11465</p>
                 </div>
 
                 <div class="col-lg-7">
@@ -305,8 +313,8 @@
                             <select name="category"
                                 class="form-select rounded-0 border-0 shadow-none py-3 text-dark bg-white" required>
                                 <option selected disabled>Select Product</option>
-                                <option value="SPC Flooring">SPC Flooring</option>
-                                <option value="Quartz Surfaces">Quartz Surfaces</option>
+                                <option value="rigid-core vinyl">rigid-core vinyl</option>
+                                <option value="engineered stone">engineered stone</option>
                                 <option value="Both Categories">Both Categories</option>
                             </select>
                         </div>
@@ -315,8 +323,7 @@
                                 rows="4" placeholder="Request Details"></textarea>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn text-white fw-bold w-100 py-3 rounded-0 border-0"
-                                style="background:#ccb19b;">
+                            <button type="submit" class="btn text-white fw-bold w-100 py-3 rounded-0 border-0 bg-brand">
                                 SUBMIT ENQUIRY
                             </button>
                         </div>
@@ -330,20 +337,20 @@
         <div class="container py-4">
             <div class="text-center mb-5">
                 <h2 class="fw-bold mb-2 text-dark text-uppercase">FAQs — RUSSIA EXPORT</h2>
-                <div class="mx-auto" style="width: 50px; height: 3px; background-color: #ccb19b !important;"></div>
+                <div class="mx-auto divider-brand"></div>
             </div>
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <div class="accordion" id="faqRussia">
 
                         <div class="accordion-item border rounded-0 mb-3 overflow-hidden shadow-sm">
-                            <h2 class="accordion-header">
+                            <h3 class="accordion-header">
                                 <button
                                     class="accordion-button collapsed fw-bold text-uppercase small bg-white text-dark shadow-none"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#r1">
                                     What is the standard delivery time to Russia?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="r1" class="accordion-collapse collapse" data-bs-parent="#faqRussia">
                                 <div class="accordion-body small text-muted bg-white border-top">
                                     Production typically takes 3–4 weeks. Shipping transit time to **Novorossiysk** is
@@ -355,16 +362,16 @@
                         </div>
 
                         <div class="accordion-item border rounded-0 mb-3 overflow-hidden shadow-sm">
-                            <h2 class="accordion-header">
+                            <h3 class="accordion-header">
                                 <button
                                     class="accordion-button collapsed fw-bold text-uppercase small bg-white text-dark shadow-none"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#r2">
-                                    How does Argil SPC flooring perform in extreme cold?
+                                    How does Argil rigid-core vinyl perform in extreme cold?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="r2" class="accordion-collapse collapse" data-bs-parent="#faqRussia">
                                 <div class="accordion-body small text-muted bg-white border-top">
-                                    Our SPC flooring is engineered with a high-mineral stone-plastic composite core.
+                                    Our rigid-core range flooring is engineered with a high-mineral stone-plastic composite core.
                                     This
                                     provides exceptional dimensional stability, ensuring the planks do not become
                                     brittle or
@@ -374,13 +381,13 @@
                         </div>
 
                         <div class="accordion-item border rounded-0 mb-3 overflow-hidden shadow-sm">
-                            <h2 class="accordion-header">
+                            <h3 class="accordion-header">
                                 <button
                                     class="accordion-button collapsed fw-bold text-uppercase small bg-white text-dark shadow-none"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#r3">
                                     Do you provide documentation for Russian Customs clearance?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="r3" class="accordion-collapse collapse" data-bs-parent="#faqRussia">
                                 <div class="accordion-body small text-muted bg-white border-top">
                                     Yes. Argil Group provides a comprehensive set of documents including the Commercial
@@ -392,13 +399,13 @@
                         </div>
 
                         <div class="accordion-item border rounded-0 mb-3 overflow-hidden shadow-sm">
-                            <h2 class="accordion-header">
+                            <h3 class="accordion-header">
                                 <button
                                     class="accordion-button collapsed fw-bold text-uppercase small bg-white text-dark shadow-none"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#r4">
                                     Are Jumbo Quartz slabs available for Russian interior projects?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="r4" class="accordion-collapse collapse" data-bs-parent="#faqRussia">
                                 <div class="accordion-body small text-muted bg-white border-top">
                                     Absolutely. We export **Jumbo Quartz slabs (3200 x 1600 mm)** which are highly
@@ -411,13 +418,13 @@
                         </div>
 
                         <div class="accordion-item border rounded-0 mb-3 overflow-hidden shadow-sm">
-                            <h2 class="accordion-header">
+                            <h3 class="accordion-header">
                                 <button
                                     class="accordion-button collapsed fw-bold text-uppercase small bg-white text-dark shadow-none"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#r5">
-                                    Can we mix different SPC and Quartz products in one container?
+                                    Can we mix different SPC and engineered stone products in one container?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="r5" class="accordion-collapse collapse" data-bs-parent="#faqRussia">
                                 <div class="accordion-body small text-muted bg-white border-top">
                                     Yes, we offer flexible container consolidation. Russian distributors can mix various
@@ -487,10 +494,10 @@
     },
     {
       "@type": "Question",
-      "name": "How does Argil SPC flooring perform in extreme cold?",
+      "name": "How does Argil rigid-core vinyl perform in extreme cold?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Our SPC flooring is engineered with a high-mineral stone-plastic composite core. This provides exceptional dimensional stability, ensuring the planks do not become brittle or warp during harsh Russian winters or due to internal heating system fluctuations."
+        "text": "Our rigid-core range flooring is engineered with a high-mineral stone-plastic composite core. This provides exceptional dimensional stability, ensuring the planks do not become brittle or warp during harsh Russian winters or due to internal heating system fluctuations."
       }
     },
     {
@@ -511,7 +518,7 @@
     },
     {
       "@type": "Question",
-      "name": "Can we mix different SPC and Quartz products in one container?",
+      "name": "Can we mix different SPC and engineered stone products in one container?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes, we offer flexible container consolidation. Russian distributors can mix various SPC designs and Quartz colors in a single 20ft or 40ft container to maintain a diverse stock without excessive overhead."

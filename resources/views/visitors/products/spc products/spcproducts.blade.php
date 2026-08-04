@@ -2,119 +2,103 @@
 @section('seosection')
 
     <meta name="description"
-        content="High-quality SPC flooring tiles by Argil.
-Durable, waterproof, and stylish SPC flooring solutions from top manufacturers
-in Morbi, Gujarat, India." />
+        content="Durable, waterproof rigid-core vinyl from Morbi, Gujarat. Premium designs for homes and commercial spaces." />
 
     <meta name="keywords"
-        content="SPC flooring, vinyl flooring, SPC vinyl flooring, SPC flooring manufacturer, 
-        vinyl flooring manufacturer, SPC flooring supplier, vinyl flooring supplier, SPC flooring India,
-        vinyl flooring India, SPC flooring Morbi, vinyl flooring Morbi, stone plastic composite flooring, 
-        rigid core SPC flooring, luxury vinyl flooring, vinyl plank flooring, waterproof SPC flooring, waterproof vinyl flooring,
-        premium SPC flooring, premium vinyl flooring, SPC flooring for homes, vinyl flooring for homes, SPC flooring for commercial, 
-        vinyl flooring for commercial "/>
+        content="rigid-core vinyl, waterproof floor covering, Morbi manufacturer"/>
 
-    <meta name="author" content="Argil Group – Innovators in SPC Flooring &
-Surface Solutions">
+    <meta name="author" content="Surface Manufacturer">
     <meta property="og:title"
-        content="Quartz Stone Slab For Kitchen Platform
-Countertops Manufacturers In Morbi, Gujarat, India | Argil"
+        content="Rigid-Core Vinyl Manufacturer | Morbi"
         data-react-helmet
 ="true">
-    <meta property="og:url" content="https://argiltiles.com/spcproducts" data- react-helmet="true">
+    <meta property="og:url" content="https://argiltiles.com/spcproducts">
     <meta property="og:description"
-        content="Argil is SPC flooring tiles
-manufacturers in Morbi, Gujarat, India. We are the best SPC flooring brands
-with 10+ yrs of service. Get a price quote "
+        content="Premium rigid-core vinyl from Morbi, Gujarat. Durable, waterproof floor covering with 10+ years of expertise. Get a quote."
         data-react-helmet="true">
-    <meta name="twitter:title" content="SPC Flooring Tiles Manufacturers In Morbi,
- Gujarat, India | Argil"
+    <meta name="twitter:title" content="Rigid-Core Vinyl Manufacturer | Morbi"
         data-react-helmet="true">
     <meta name="twitter:description"
-        content="Argil is SPC flooring tiles
-manufacturers in Morbi, Gujarat, India. We are the best SPC flooring brands
-with 10+ yrs of service. Get a price quote"
+        content="Premium rigid-core vinyl from Morbi, Gujarat. Durable, waterproof floor covering with 10+ years of expertise. Get a quote."
         data-react-helmet="true">
-    <link rel="canonical" href="https://argiltiles.com/spcproducts" data-react- helmet="true">
-    <title>Best SPC Flooring Tiles Manufacturer in Morbi, India | Argil</title>
+    <link rel="canonical" href="https://argiltiles.com/spcproducts">
+    <title>Rigid-Core Vinyl Manufacturer | Morbi</title>
+@endsection
+@section('lcp_preload')
+    <link rel="preload" as="image" href="{{ asset('asset/images/argileimage/spc1.jpg') }}" fetchpriority="high">
 @endsection
 @section('content')
-    <!-- breadcrumb -->
-    <div class="breadcrumb d-flex justify-content-between align-items-center">
-        <div class="container">
-
-            <div class="p-2">
-                <h1 class="display-6 fw-bold">Home / SPC Products</h1>
-            </div>
+    <div class="breadcrumb">
+        <div class="container py-2">
+            <h1 class="display-6 fw-bold">Home / Rigid-Core Vinyl</h1>
         </div>
     </div>
-    
-    <!-- breadcrumb -->
     <div class="container">
-
-        <div class="container">
             <div class="row pt-3">
                 <div class="col-md-4">
-
-                    <img src="{{ asset('asset/images/argileimage/spc1.jpg') }}" alt="argil spc product"
-                        title="argil spc product" loading="lazy" class="img-fluid">
-
+                    <img src="{{ asset('asset/images/argileimage/spc1.jpg') }}" alt="rigid-core vinyl product"
+                        title="Rigid-core vinyl product" width="350" height="354" loading="eager" fetchpriority="high" decoding="async" class="img-fluid">
                 </div>
                 <div class="col-md-8">
-                    <p class="text-justify">SPC Flooring (Stone Plastic Composite) is a modern and durable flooring solution
-                        made from a mix of limestone powder, PVC, and stabilizers. <span id="products">It</span> is highly
-                        water-resistant, making it
-                        ideal for kitchens, bathrooms, and other moisture-prone areas. The rigid core provides excellent
-                        stability and resists dents and scratches, even in high-traffic spaces. SPC flooring features a link
-                        lock system that allows for quick and easy installation without glue or nails. Its layered structure
-                        includes a protective wear layer, decorative vinyl layer, solid core, and attached underlayment for
-                        sound insulation and comfort. It often replicates the appearance of natural wood or stone. This
-                        flooring is low maintenance and easy to clean, making it a practical choice for both homes and
-                        commercial environments.</p>
+                    <p class="text-justify">Stone Plastic Composite is a modern rigid-core vinyl covering made from limestone
+                        powder, PVC, and stabilizers. <span id="products">It</span> resists water well, so it suits kitchens,
+                        bathrooms, and other damp rooms. The solid core stays stable under foot traffic and shrugs off dents
+                        and scratches. A click-lock profile installs without glue or nails. Typical layers include a wear coat,
+                        decorative film, rigid core, and underlayment for quieter steps and comfort. Many looks echo wood or
+                        natural stone, and routine cleaning stays simple for homes and commercial spaces.</p>
+                    <p class="text-muted">
+                        Specifiers choose these planks when they need waterproof performance without the weight of ceramic
+                        tile, plus faster installation on renovation timelines. Browse the designs below for tone and texture,
+                        then open a product page for thickness, wear layer, and MOQ details—or request a quote for project
+                        and export volumes from our Morbi plant.
+                    </p>
+                    <p class="text-muted">
+                        Rigid-core vinyl suits apartments, villas, offices, boutiques, and hospitality corridors where moisture
+                        resistance and dimensional stability matter. Decorative films recreate oak, walnut, marble, and concrete
+                        looks while the limestone-rich core helps reduce telegraphing of minor subfloor imperfections. Pair the
+                        right wear layer with your traffic level, confirm underlayment needs for acoustic comfort, and plan
+                        expansion gaps according to room size and climate.
+                    </p>
+                    <p class="text-muted">
+                        For multi-unit or export orders, share destination country, preferred thickness, and packaging notes
+                        early. Our team can advise on container mixes across décors, private labeling options, and documentation
+                        that distributors typically request for customs clearance. Sample planks and technical data sheets
+                        are available for critical colour approvals before you commit to full production quantities.
+                    </p>
                 </div>
             </div>
 
+        {{-- Commented media blocks removed from render path to keep HTML lean --}}
+
+        <div class="row pb-4">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="h5 fw-bold">Buying guide</h2>
+                <p class="text-muted mb-0">
+                    Match décor and wear layer to the room: kitchens and bathrooms favour waterproof cores; living areas
+                    often prioritise warmer wood tones; retail floors need higher wear ratings. Confirm underlayment and
+                    expansion gaps with your installer, then lock thicknesses and MOQs with our Morbi export desk.
+                </p>
+            </div>
         </div>
-
-        {{-- <div class="container">
-            <div class="row">
-                <div class="col-md-12 pt-4">
-                    <img src="spc\spc2.jpg" alt="argil spc product" title="argil spc product" loading="lazy"
-                        class="img-fluid">
-                </div>
-            </div>
-        </div> --}}
-        {{-- <div class="container">
-            <div class="row">
-                <div class="col-md-4 mt-4">
-                    <video autoplay muted loop playsinline class="w-100">
-                        <source src="{{ asset('assets/asset/video1.mp4') }}" type="video/mp4" />
-                    </video>
-                </div>
-                <div class="col-md-4 mt-4">
-                    <video autoplay muted loop playsinline class="w-100">
-                        <source src="{{ asset('assets/asset/video 2.mp4') }}" type="video/mp4" />
-                    </video>
-                </div>
-                <div class="col-md-4 mt-4">
-                    <video autoplay muted loop playsinline class="w-100">
-                        <source src="{{ asset('assets/asset/video3.mp4') }}" type="video/mp4" />
-                    </video>
-                </div>
-            </div>
-        </div> --}}
-
         <div class="row pb-5">
-            <h2 class="text-center fw-bold pt-5">SPC Flooring Tiles</h2>
+            <h2 class="text-center fw-bold pt-5">Rigid-Core Vinyl Designs</h2>
+            <p class="text-center text-muted col-lg-8 mx-auto mb-2">
+                Select a décor to view thickness options, wear layers, and inquiry details. Each design is manufactured
+                for waterproof performance in homes and commercial interiors, with finishes suited to modern specifications.
+                Need help choosing between wood and stone looks? Share room photos and traffic level with our team for a
+                practical shortlist.                 Technical data sheets can accompany sample packs for site approvals. Scroll the grid to compare looks,
+                then request a quote when your shortlist is ready.                 Domestic and export MOQs are confirmed on enquiry for every listed décor in this collection.
+            </p>
 
             @foreach ($data as $index => $item)
                 <div class="col-md-4 pt-5">
                     <a href="{{ Route('spcproductinquiry', $item->slug) }}" class="text-decoration-none">
                         <div class="card">
                             <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top" alt="{{ $item->slug }}"
-                                title="{{ $item->slug }}" loading="lazy" />
+                                title="{{ $item->slug }}"
+                                @if ($index === 0) loading="eager" fetchpriority="high" decoding="async" @else loading="lazy" @endif />
                             <div class="card-body">
-                                <h5 class="card-title text-center">{{ $item->names }}</h5>
+                                <h3 class="card-title text-center">{{ $item->names }}</h3>
                             </div>
                         </div>
                     </a>
@@ -130,7 +114,7 @@ with 10+ yrs of service. Get a price quote"
         </div>
     </div>
 
-     @include('visitors.faq.index')
+     @include('visitors.faq.list')
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -142,4 +126,42 @@ with 10+ yrs of service. Get a price quote"
             });
         });
     </script>
+
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "CollectionPage",
+    "@@id": "https://argiltiles.com/spcproducts#collection",
+    "name": "Rigid-Core Vinyl Collection",
+    "description": "Explore premium rigid-core vinyl products for residential and commercial applications.",
+    "url": "https://argiltiles.com/spcproducts",
+    "isPartOf": {
+        "@@type": "WebSite",
+        "name": "Mod Ceramic Industries",
+        "url": "https://argiltiles.com/"
+    },
+    "mainEntity": {
+        "@@type": "ItemList",
+        "name": "Rigid-Core Vinyl Products",
+        "itemListElement": [
+            @foreach($data->take(6) as $product)
+            {
+                "@@type": "ListItem",
+                "position": {{ $loop->iteration }},
+                "item": {
+                    "@@type": "Product",
+                    "name": {{ json_encode(\App\Support\SeoCopy::soften($product->names)) }},
+                    "image": "{{ asset('spc/' . $product->mainImg) }}",
+                    "url": "https://argiltiles.com/spcproductinquiry/{{ $product->slug }}",
+                    "brand": {
+                        "@@type": "Brand",
+                        "name": "Argil"
+                    }
+                }
+            }@if(!$loop->last),@endif
+            @endforeach
+        ]
+    }
+}
+</script>
 @endsection

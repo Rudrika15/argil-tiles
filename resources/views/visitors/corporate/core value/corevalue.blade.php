@@ -58,7 +58,7 @@ excellence in quartz stone manufacturing.">
             </div>
             <div class="col-md-6 text-center">
                 <img src="{{ asset('assets/asset/corevaluesimage.png') }}" class="img-fluid rounded shadow-sm"
-                    alt="Core Values">
+                    alt="Argil Core Values" title="Argil Core Values">
             </div>
         </div>
         <div class="row mt-5">

@@ -1,51 +1,53 @@
 @extends('layouts.app')
 @section('seosection')
+@php
+    $qiName = \App\Support\SeoCopy::soften($data->name);
+@endphp
     <meta name="description"
-        content="Argil is a leading artificial quartz stone slab manufacturer in Morbi, Gujarat. Explore premium quartz surfaces for homes and businesses.">
-    <meta name="keywords" content="Artificial Quartz, Quartz Slabs, Quartz Manufacturers, Morbi Quartz, India Quartz Stone">
-    <meta property="og:title" content="Quartz Inquiry | Argil Quartz Surfaces" data-react-helmet="true">
+        content="Explore {{ $qiName }} engineered stone from our Morbi factory. Premium slabs for homes and commercial projects.">
+    <meta name="keywords" content="{{ $qiName }}, engineered stone slabs, kitchen surfaces, Morbi manufacturer">
+    <meta property="og:title" content="{{ $qiName }} | Engineered Stone">
     <meta property="og:description"
-        content="Explore premium artificial quartz stone slabs from Argil, trusted by homeowners and businesses in India."
-        data-react-helmet="true">
-    <meta property="og:url" content="https://argiltiles.com/quartzinquiry/{{ $data->id }}">
+        content="Explore {{ $qiName }} engineered stone. Premium slabs manufactured in Morbi, Gujarat.">
+    <meta property="og:url" content="https://argiltiles.com/quartzinquiry/{{ $data->slug }}">
 
-    <meta name="twitter:title" content="Quartz Inquiry | Argil Quartz Surfaces" data-react-helmet="true">
+    <meta name="twitter:title" content="{{ $qiName }} | Engineered Stone">
     <meta name="twitter:description"
-        content="Explore premium artificial quartz stone slabs from Argil, trusted by homeowners and businesses in India."
-        data-react-helmet="true">
+        content="Explore {{ $qiName }} engineered stone. Premium slabs manufactured in Morbi, Gujarat.">
 
-    <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="canonical" href="https://argiltiles.com/quartzinquiry/{{ $data->slug }}">
 
-    <title>Quartz | {{ $data->name }} | Premium Quartz Surfaces by Argil</title>
+    <title>{{ $qiName }} | Engineered Stone</title>
 
-    @verbatim
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org/",
-          "@type": "Product",
-          "name": "{{ $data->name }}",
-          "image": ["{{ asset('quartz/' . $data->mainImg) }}"],
-          "description": " Thickness : {{ $data->thicknesses }} , Primary color : {{ $data->primarycolors }} ",
-          "brand": {
-            "@type": "Brand",
-            "name": "Argil Group"
-          },
-          "review": [
-
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Chandan Gupta"
-            },
-            "datePublished": "{{ $data->created_at->toDateString() }}",
-            "reviewBody": "Impressed with the quality and elegant finish of Argil’s quartz. Smooth texture, excellent durability, and a classy touch to our space. Highly recommended!"
-          }
-          ]
-
-        }
-        </script>
-        @endverbatim
+<script type="application/ld+json">
+{
+    "@@context":"https://schema.org",
+    "@@type":"Product",
+    "@@id":"https://argiltiles.com/quartzinquiry/{{ $data->slug }}#product",
+    "name":{{ json_encode($data->name) }},
+    "image":[
+        "{{ asset('quartz/' . $data->mainImg) }}"
+    ],
+    "description":{{ json_encode(trim('Thickness: ' . ($data->thicknesses ?? '') . ', Primary color: ' . ($data->primarycolors ?? '') . ', Finish: ' . ($data->finishType ?? ''))) }},
+    "sku":"{{ $data->slug ?? $data->id }}",
+    "brand":{
+        "@@type":"Brand",
+        "name":"Argil Tiles"
+    },
+    "manufacturer":{
+        "@@type":"Organization",
+        "name":"Mod Ceramic Industries Ltd."
+    },
+    "category":"Engineered Stone",
+    "url":"https://argiltiles.com/quartzinquiry/{{ $data->slug }}"
+}
+</script>
+@endsection
+@section('intl_tel', '1')
+@section('lcp_preload')
+    @if(!empty($data->mainImg))
+        <link rel="preload" as="image" href="{{ asset('quartz/' . $data->mainImg) }}" fetchpriority="high">
+    @endif
 @endsection
 @section('content')
     <!-- breadcrumb -->
@@ -92,7 +94,7 @@
             @if ($data->mainImg)
                 <div class="carousel-item active">
                     <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="Main Image" class="d-block w-100 img-fluid"
-                        style="object-fit: cover; height: 100vh;">
+                        style="object-fit: cover; height: 100vh;" loading="eager" fetchpriority="high" decoding="async">
                 </div>
             @endif
             @foreach (['subImg1', 'subImg2', 'subImg3', 'subImg4', 'subImg5'] as $index => $img)
@@ -124,19 +126,19 @@
             <!-- SPACES box -->
             <div class="col-12 col-md-4 col-lg-3 mb-4">
                 <div class="border border-1 border-dark p-3 rounded h-100">
-                    <h4 class="pt-2">SPACES</h4>
-                    <h5 class="pt-1">Primary Color :</h5>
+                    <h3 class="pt-2">SPACES</h3>
+                    <p class="pt-1">Primary Color :</p>
                     <p>{{ $data->primarycolors }}</p>
-                    <h5>Stock :</h5>
+                    <p>Stock :</p>
                     <p>{{ $data->stock }}</p>
-                    <h5>Book Match :</h5>
+                    <p>Book Match :</p>
                     <p>{{ $data->bookmatch }}</p>
-                    <h5>Available Finish :</h5>
+                    <p>Available Finish :</p>
                     <p>{{ $data->finishType }}</p>
-                    <h4 class="pt-2">SIZES</h4>
-                    <h5 class="pt-1">Thickness :</h5>
+                    <h3 class="pt-2">SIZES</h3>
+                    <p class="pt-1">Thickness :</p>
                     <p>{{ $data->thicknesses }}</p>
-                    <h5>Slab Size :</h5>
+                    <p>Slab Size :</p>
                     <p>{{ $data->sizes }}</p>
                 </div>
             </div>
@@ -144,21 +146,21 @@
             <!-- APPLICATIONS box -->
             <div class="col-12 col-md-4 col-lg-3 mb-4">
                 <div class="border border-1 border-dark p-3 rounded h-100">
-                    <h4 class="pt-2">APPLICATIONS</h4>
+                    <h3 class="pt-2">APPLICATIONS</h3>
 
-                    <h5 class="pt-1">Flooring :</h5>
+                    <p class="pt-1">Flooring :</p>
                     <p>Residential <i class="bi bi-check-lg text-success"></i></p>
                     <p>Commercial <i class="bi bi-check-lg text-success"></i></p>
 
-                    <h5>Counters :</h5>
+                    <p>Counters :</p>
                     <p>Residential <i class="bi bi-check-lg text-success"></i></p>
                     <p>Commercial <i class="bi bi-check-lg text-success"></i></p>
 
-                    <h5>Wall :</h5>
+                    <p>Wall :</p>
                     <p>Residential <i class="bi bi-check-lg text-success"></i></p>
                     <p>Commercial <i class="bi bi-check-lg text-success"></i></p>
 
-                    <h5>Other :</h5>
+                    <p>Other :</p>
                     <p>Residential <i class="bi bi-check-lg text-success"></i></p>
                     <p>Commercial <i class="bi bi-x-lg text-danger"></i></p>
                 </div>
@@ -280,12 +282,15 @@
     </script>
 
     <script>
-        const input = document.querySelector("#form_phone");
-
-        window.intlTelInput(input, {
-            initialCountry: "in", // default country code (India)
-            separateDialCode: true,
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.querySelector("#form_phone");
+            if (input && window.intlTelInput) {
+                window.intlTelInput(input, {
+                    initialCountry: "in",
+                    separateDialCode: true,
+                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+                });
+            }
         });
     </script>
 @endsection
