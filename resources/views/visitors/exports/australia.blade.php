@@ -2,19 +2,14 @@
 
 @section('seosection')
     <meta name="description"
-        content="Export rigid-core vinyl and engineered stone from India to Australia. Reliable wholesale supply for AU distributors.">
-    <meta name="keywords"
-        content="rigid-core vinyl export Australia, engineered stone export Australia, surface exporter India">
-    <meta property="og:title" content="Rigid-Core Vinyl & Engineered Stone Export to Australia">
+        content="Argil Tiles exports premium quartz surfaces and SPC flooring from India to distributors and projects across Australia.">
+    <meta property="og:title" content="Australia Exports | Argil Tiles – Quartz & SPC Flooring from India">
     <meta property="og:description"
-        content="Export rigid-core vinyl and engineered stone from India to Australia. Reliable wholesale supply for AU distributors.">
+        content="Argil Tiles exports premium quartz surfaces and SPC flooring from India to distributors and projects across Australia.">
     <meta property="og:url" content="https://argiltiles.com/exports/australia">
+    <meta property="og:type" content="website">
     <link rel="canonical" href="https://argiltiles.com/exports/australia">
-    <title>Rigid-Core Vinyl & Engineered Stone Export to Australia</title>
-@endsection
-
-@section('lcp_preload')
-    <link rel="preload" as="image" href="{{ asset('export-imgs/spc1.jpg') }}" fetchpriority="high">
+    <title>Australia Exports | Argil Tiles – Quartz & SPC Flooring from India</title>
 @endsection
 
 @section('content')
@@ -33,15 +28,15 @@
                         Australia Export Division
                     </p>
                     <h1 class="display-4 fw-bold text-uppercase mb-4">
-                        Premium Surfaces & Rigid-Core Vinyl <br>
-                        Export To <span class="text-brand">Australia</span>
+                        Premium SPC Flooring & Quartz <br>
+                        Export To <span style="color:#ccb19b">Australia</span>
                     </h1>
                     <p class="lead opacity-75 mb-4">
                         Argil Group supplies high-performance architectural surfaces to Australian distributors,
                         retailers, and large-scale builders with reliable direct-to-port logistics.
                     </p>
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="#enquiry" class="btn text-white fw-bold px-4 py-3 rounded-0 bg-brand">
+                        <a href="#enquiry" class="btn text-white fw-bold px-4 py-3 rounded-0" style="background:#ccb19b">
                             Request Quote
                         </a>
                         <a href="/catalogue" class="btn btn-outline-light px-4 py-3 rounded-0">
@@ -63,7 +58,7 @@
                         the Oceania market, ensuring high durability suitable for Australian coastal and inland
                         conditions.
                     </p>
-                    <p class="fw-bold text-uppercase small mb-2 text-brand ls-1">
+                    <p class="fw-bold text-uppercase small mb-2" style="color: #ccb19b; letter-spacing: 1px;">
                         Our Australia-Focused Process:
                     </p>
                     <ul class="list-unstyled mb-4">
@@ -94,8 +89,8 @@
                     <div class="p-5 bg-white border rounded-0 h-100 shadow-sm" style="transition: all 0.4s ease-in-out;"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-shield-check display-5 mb-4 d-block text-brand"></i>
-                        <h3 class="fw-bold text-uppercase">Certified Durability</h3>
+                        <i class="bi bi-shield-check display-5 mb-4 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold text-uppercase">Certified Durability</h3>
                         <p class="small text-muted mb-0">Products engineered for high-traffic Australian residential and
                             commercial environments.</p>
                     </div>
@@ -104,8 +99,8 @@
                     <div class="p-5 bg-white border rounded-0 h-100 shadow-sm" style="transition: all 0.4s ease-in-out;"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-geo-alt display-5 mb-4 d-block text-brand"></i>
-                        <h3 class="fw-bold text-uppercase">Coastal Logistics</h3>
+                        <i class="bi bi-geo-alt display-5 mb-4 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold text-uppercase">Coastal Logistics</h3>
                         <p class="small text-muted mb-0">Direct routes from Mundra to major Australian ports, ensuring
                             reduced transit times for bulk orders.</p>
                     </div>
@@ -114,8 +109,8 @@
                     <div class="p-5 bg-white border rounded-0 h-100 shadow-sm" style="transition: all 0.4s ease-in-out;"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-box-seam display-5 mb-4 d-block text-brand"></i>
-                        <h3 class="fw-bold text-uppercase">Jumbo Quartz</h3>
+                        <i class="bi bi-box-seam display-5 mb-4 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold text-uppercase">Jumbo Quartz</h3>
                         <p class="small text-muted mb-0">Capability to export massive Quartz slabs for modern Australian
                             kitchen islands and bathroom vanities.</p>
                     </div>
@@ -128,12 +123,13 @@
         <div class="container">
             <div class="row mb-5 align-items-end">
                 <div class="col-lg-7">
-                    <p class="text-uppercase fw-bold ls-2 text-brand">Export
+                    <p class="h6 text-uppercase fw-bold ls-2" style="color: #ccb19b; letter-spacing: 2px;">Export
                         Excellence</p>
                     <h2 class="display-5 fw-bold text-dark">Export Specifications</h2>
                 </div>
                 <div class="col-lg-5 text-lg-end pb-2">
-                    <p class="text-muted mb-0 border-start border-md-0 ps-3 ps-md-0 border-brand">
+                    <p class="text-muted mb-0 border-start border-md-0 ps-3 ps-md-0"
+                        style="border-color: #ccb19b !important;">
                         Maintaining ISO 9001:2015 standards for major Australian infrastructure and residential
                         projects.
                     </p>
@@ -143,15 +139,16 @@
             <div class="row g-0 shadow-lg rounded overflow-hidden border">
                 <div class="col-lg-6 border-end">
                     <div class="p-0 position-relative text-center bg-light">
-                        <div class="spacer-100"></div>
+                        <div style="height:100px;"></div>
                         <img src="{{ asset('export-imgs/spc1.jpg') }}" class="img-fluid w-50 mx-auto d-block"
-                            alt="rigid-core vinyl" title="rigid-core vinyl" width="350" height="354" loading="eager" fetchpriority="high" decoding="async">
+                            alt="SPC Flooring" title="Argil SPC Flooring">
                         <div class="position-absolute top-0 end-0 m-3">
-                            <span class="badge bg-dark text-white px-3 py-2 fw-normal badge-brand-edge">SPC-AU SERIES</span>
+                            <span class="badge bg-dark text-white px-3 py-2 fw-normal"
+                                style="border-left: 3px solid #ccb19b;">SPC-AU SERIES</span>
                         </div>
                     </div>
                     <div class="p-4 p-xl-5">
-                        <h3 class="fw-bold mb-3">Rigid-Core Vinyl</h3>
+                        <h3 class="h4 fw-bold mb-3">SPC Rigid Core Flooring</h3>
                         <p class="text-secondary small mb-4">100% waterproof and moisture resistant. Built with a
                             stone-plastic composite core for maximum stability.</p>
                         <table class="table table-sm table-borderless small text-uppercase mb-4">
@@ -168,21 +165,23 @@
                                 <td class="py-2 fw-bold text-end">Valinge / Uniclic</td>
                             </tr>
                         </table>
-                        <a href="/spcproducts" class="btn w-100 rounded-0 fw-bold py-2 text-white bg-brand">Explore Products</a>
+                        <a href="/spcproducts" class="btn w-100 rounded-0 fw-bold py-2 text-white"
+                            style="background-color: #ccb19b;">Explore Products</a>
                     </div>
                 </div>
                 <div class="col-lg-6 bg-light">
                     <div class="p-0 position-relative text-center bg-white">
-                        <div class="spacer-100"></div>
+                        <div style="height:100px;"></div>
                         <img src="{{ asset('export-imgs/quartz1.jpg') }}" class="img-fluid w-50 mx-auto d-block"
-                            alt="Quartz Surface" title="Quartz Surface">
+                            alt="Quartz Surface" title="Argil Quartz Surface">
                         <div class="position-absolute top-0 end-0 m-3">
-                            <span class="badge bg-dark text-white px-3 py-2 fw-normal badge-brand-edge">AU-QUARTZ</span>
+                            <span class="badge bg-dark text-white px-3 py-2 fw-normal"
+                                style="border-left: 3px solid #ccb19b;">AU-QUARTZ</span>
                         </div>
                     </div>
                     <div class="p-4 p-xl-5">
-                        <h3 class="fw-bold mb-3">Architectural Engineered Stone</h3>
-                        <p class="text-secondary small mb-4">Composed of about 93% natural mineral. Highly non-porous and
+                        <h3 class="h4 fw-bold mb-3">Architectural Quartz</h3>
+                        <p class="text-secondary small mb-4">Composed of 93% natural quartz. Highly non-porous and
                             scratch resistant for premium Australian applications.</p>
                         <table class="table table-sm table-borderless small text-uppercase mb-4">
                             <tr class="border-bottom">
@@ -198,7 +197,8 @@
                                 <td class="py-2 fw-bold text-end">Premium High-Gloss</td>
                             </tr>
                         </table>
-                        <a href="/quartzsurface" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm bg-brand">Explore Products</a>
+                        <a href="/quartzsurface" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm"
+                            style="background-color: #ccb19b;">Explore Products</a>
                     </div>
                 </div>
             </div>
@@ -207,14 +207,14 @@
 
     <section class="py-5 bg-dark text-white">
         <div class="container py-5 text-center">
-            <h2 class="fw-bold text-uppercase ls-widest mb-5 text-brand">Packaging & Shipping</h2>
+            <h2 class="fw-bold text-uppercase ls-widest mb-5" style="color: #ccb19b;">Packaging & Shipping</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-box-seam h1 mb-3 d-block text-brand"></i>
-                        <h3 class="fw-bold">Export Grade</h3>
+                        <i class="bi bi-box-seam h1 mb-3 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold">Export Grade</h3>
                         <p class="small opacity-50 mb-0">Reinforced cartons and ISPM-15 heat-treated wooden pallets for
                             safe long-haul transit.</p>
                     </div>
@@ -223,8 +223,8 @@
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-globe-americas h1 mb-3 d-block text-brand"></i>
-                        <h3 class="fw-bold">Oceania Routes</h3>
+                        <i class="bi bi-globe-americas h1 mb-3 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold">Oceania Routes</h3>
                         <p class="small opacity-50 mb-0">Direct shipping from Mundra (India) to Sydney, Melbourne,
                             Adelaide, or Brisbane ports.</p>
                     </div>
@@ -233,8 +233,8 @@
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-phone-vibrate h1 mb-3 d-block text-brand"></i>
-                        <h3 class="fw-bold">Digital Support</h3>
+                        <i class="bi bi-phone-vibrate h1 mb-3 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold">Digital Support</h3>
                         <p class="small opacity-50 mb-0">Loading supervision and tracking updates available via WhatsApp
                             for complete transparency.</p>
                     </div>
@@ -248,22 +248,22 @@
             <h2 class="fw-bold text-uppercase text-center mb-5">Global Export Network</h2>
             <div class="row text-center g-4">
                 <div class="col-md-3">
-                    <p class="display-5 fw-bold text-brand"><span class="counter" data-target="50">0</span>+
+                    <p class="display-5 fw-bold" style="color:#ccb19b"><span class="counter" data-target="50">0</span>+
                     </p>
                     <p class="text-muted small text-uppercase fw-bold">Nations Exported</p>
                 </div>
                 <div class="col-md-3">
-                    <p class="display-5 fw-bold text-brand"><span class="counter"
+                    <p class="display-5 fw-bold" style="color:#ccb19b"><span class="counter"
                             data-target="250">0</span>+</p>
                     <p class="text-muted small text-uppercase fw-bold">Satisfied Partners</p>
                 </div>
                 <div class="col-md-3">
-                    <p class="display-5 fw-bold text-brand"><span class="counter"
+                    <p class="display-5 fw-bold" style="color:#ccb19b"><span class="counter"
                             data-target="600">0</span>+</p>
                     <p class="text-muted small text-uppercase fw-bold">Containers Shipped</p>
                 </div>
                 <div class="col-md-3">
-                    <p class="display-5 fw-bold text-brand"><span class="counter" data-target="15">0</span>+
+                    <p class="display-5 fw-bold" style="color:#ccb19b"><span class="counter" data-target="15">0</span>+
                     </p>
                     <p class="text-muted small text-uppercase fw-bold">Years Experience</p>
                 </div>
@@ -271,7 +271,12 @@
         </div>
     </section>
 
-    <section id="enquiry" class="py-5 text-white shadow-lg export-quote-banner">
+    <section id="enquiry" class="py-5 text-white shadow-lg"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+           url('https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+           background-size: cover; 
+           background-position: center;
+           background-attachment: fixed;">
 
         <div class="container py-4">
             <div class="row g-5 align-items-center">
@@ -279,7 +284,7 @@
                     <h2 class="fw-bold text-uppercase mb-4">Australia Import Desk</h2>
                     <p class="opacity-75 mb-4">Direct sourcing solutions for Australian business owners. Our dedicated
                         export team assists with volume pricing, logistics, and AS/NZS compliance.</p>
-                    <p class="fw-bold h5"><i class="bi bi-whatsapp me-2 text-brand"></i> +91 99255 11465</p>
+                    <p class="fw-bold h5"><i class="bi bi-whatsapp me-2" style="color:#ccb19b"></i> +91 99255 11465</p>
                 </div>
 
                 <div class="col-lg-7">
@@ -300,8 +305,8 @@
                             <select name="category"
                                 class="form-select rounded-0 border-0 shadow-none py-3 text-dark bg-white" required>
                                 <option selected disabled>Select Product</option>
-                                <option value="rigid-core vinyl">rigid-core vinyl</option>
-                                <option value="engineered stone">engineered stone</option>
+                                <option value="SPC Flooring">SPC Flooring</option>
+                                <option value="Quartz Surfaces">Quartz Surfaces</option>
                                 <option value="Both Categories">Both Categories</option>
                             </select>
                         </div>
@@ -310,7 +315,8 @@
                                 rows="4" placeholder="Request Details"></textarea>
                         </div>
                         <div class="col-12"><button type="submit"
-                                class="btn text-white fw-bold w-100 py-3 rounded-0 border-0 bg-brand">SUBMIT ENQUIRY</button></div>
+                                class="btn text-white fw-bold w-100 py-3 rounded-0 border-0"
+                                style="background:#ccb19b;">SUBMIT ENQUIRY</button></div>
                     </form>
                 </div>
             </div>
@@ -321,7 +327,7 @@
         <div class="container py-4">
             <div class="text-center mb-5">
                 <h2 class="fw-bold mb-2 text-dark">FAQs — AUSTRALIA EXPORT</h2>
-                <div class="mx-auto divider-brand"></div>
+                <div class="mx-auto" style="width: 50px; height: 3px; background-color: #ccb19b !important;"></div>
             </div>
             <div class="row">
                 <div class="col-lg-10 mx-auto">
@@ -355,7 +361,7 @@
                             </h3>
                             <div id="au2" class="accordion-collapse collapse" data-bs-parent="#faqAustralia">
                                 <div class="accordion-body small text-muted bg-white border-top">
-                                    Yes. Our rigid-core range and engineered stone are manufactured to meet **AS/NZS standards**. We
+                                    Yes. Our SPC and Quartz surfaces are manufactured to meet **AS/NZS standards**. We
                                     provide technical test reports for slip resistance (P-ratings) and fire safety,
                                     which
                                     are critical for NCC (National Construction Code) compliance.
@@ -424,12 +430,12 @@
                                 <button
                                     class="accordion-button collapsed fw-bold text-uppercase small bg-white text-dark shadow-none"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#au6">
-                                    What is the wear rating of your rigid-core vinyl for Australian commercial use?
+                                    What is the wear rating of your SPC flooring for Australian commercial use?
                                 </button>
                             </h3>
                             <div id="au6" class="accordion-collapse collapse" data-bs-parent="#faqAustralia">
                                 <div class="accordion-body small text-muted bg-white border-top">
-                                    Our rigid-core range flooring comes with a high-performance 0.5mm (20 mil) wear layer, making it
+                                    Our SPC flooring comes with a high-performance 0.5mm (20 mil) wear layer, making it
                                     suitable for heavy-duty commercial applications, including retail stores, offices,
                                     and
                                     multi-residential developments in Australia.
@@ -496,7 +502,7 @@
       "name": "Are Argil products compliant with Australian Building Standards?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Our rigid-core range and engineered stone are manufactured to meet AS/NZS standards. We provide technical test reports for slip resistance (P-ratings) and fire safety, which are critical for NCC (National Construction Code) compliance."
+        "text": "Yes. Our SPC and Quartz surfaces are manufactured to meet AS/NZS standards. We provide technical test reports for slip resistance (P-ratings) and fire safety, which are critical for NCC (National Construction Code) compliance."
       }
     },
     {
@@ -525,10 +531,10 @@
     },
     {
       "@type": "Question",
-      "name": "What is the wear rating of your rigid-core vinyl for Australian commercial use?",
+      "name": "What is the wear rating of your SPC flooring for Australian commercial use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Our rigid-core range flooring comes with a high-performance 0.5mm (20 mil) wear layer, making it suitable for heavy-duty commercial applications, including retail stores, offices, and multi-residential developments in Australia."
+        "text": "Our SPC flooring comes with a high-performance 0.5mm (20 mil) wear layer, making it suitable for heavy-duty commercial applications, including retail stores, offices, and multi-residential developments in Australia."
       }
     }
   ]

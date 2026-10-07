@@ -1,53 +1,52 @@
 @extends('layouts.app')
 @section('seosection')
-@php
-    $siName = \App\Support\SeoCopy::soften($data->names);
-@endphp
     <meta name="description"
-        content="Explore premium rigid-core vinyl. Waterproof, durable planks for homes and commercial spaces. Request a quote.">
-    <meta name="keywords" content="rigid-core vinyl, {{ $siName }}, waterproof vinyl, Morbi manufacturer">
-    <meta property="og:title" content="{{ $siName }} | Rigid-Core Vinyl">
+        content="Explore {{ $data->names }} SPC flooring tiles from Argil Tiles. Durable waterproof vinyl flooring manufactured in Morbi, Gujarat, India.">
+    <meta name="keywords" content="{{ $data->names }}, SPC flooring, vinyl flooring, waterproof SPC, Argil Tiles, Morbi">
+    <meta property="og:title" content="{{ $data->names }} | SPC Flooring Tiles | Argil Tiles">
     <meta property="og:description"
-        content="Explore {{ $siName }} rigid-core vinyl. Durable, waterproof floor covering manufactured in Morbi, Gujarat.">
+        content="Explore {{ $data->names }} SPC flooring tiles from Argil Tiles. Durable waterproof vinyl flooring manufactured in Morbi, Gujarat, India.">
     <meta property="og:url" content="https://argiltiles.com/spcproductinquiry/{{ $data->slug }}">
 
-    <meta name="twitter:title" content="{{ $siName }} | Rigid-Core Vinyl">
+    <meta name="twitter:title" content="{{ $data->names }} | SPC Flooring Tiles | Argil Tiles">
     <meta name="twitter:description"
-        content="Explore {{ $siName }} rigid-core vinyl. Durable, waterproof floor covering manufactured in Morbi, Gujarat.">
+        content="Explore {{ $data->names }} SPC flooring tiles from Argil Tiles. Durable waterproof vinyl flooring manufactured in Morbi, Gujarat, India.">
 
     <link rel="canonical" href="https://argiltiles.com/spcproductinquiry/{{ $data->slug }}">
 
-    <title>{{ $siName }} | Rigid-Core Vinyl</title>
+    <title>{{ $data->names }} | SPC Flooring Tiles | Argil Tiles</title>
 
-<script type="application/ld+json">
-{
-    "@@context":"https://schema.org",
-    "@@type":"Product",
-    "@@id":"https://argiltiles.com/spcproductinquiry/{{ $data->slug }}#product",
-    "name":{{ json_encode(\App\Support\SeoCopy::soften($data->names)) }},
-    "image":[
-        "{{ asset('spc/' . $data->mainImg) }}"
-    ],
-    "description":{{ json_encode(trim('Thickness: ' . ($data->thicknesses ?? '') . ', Primary color: ' . ($data->primarycolors ?? '') . ', Style: ' . ($data->style ?? ''))) }},
-    "sku":"{{ $data->slug ?? $data->id }}",
-    "brand":{
-        "@@type":"Brand",
-        "name":"Argil Tiles"
-    },
-    "manufacturer":{
-        "@@type":"Organization",
-        "name":"Mod Ceramic Industries Ltd."
-    },
-    "category":"Rigid-Core Vinyl",
-    "url":"https://argiltiles.com/spcproductinquiry/{{ $data->slug }}"
-}
-</script>
-@endsection
-@section('intl_tel', '1')
-@section('lcp_preload')
-    @if(!empty($data->mainImg))
-        <link rel="preload" as="image" href="{{ asset('spc/' . $data->mainImg) }}" fetchpriority="high">
-    @endif
+@verbatim
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "name": "{{ $data->names }}",
+          "image": ["{{ asset('spc/' . $data->mainImg) }}"],
+          "description": " Thickness : {{ $data->thicknesses }} , Primary color : {{ $data->primarycolors }} ",
+          "brand": {
+            "@type": "Brand",
+            "name": "Argil Group"
+          },
+          "review": [
+
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Chandan Gupta"
+            },
+            "datePublished": "{{ $data->created_at->toDateString() }}",
+            "reviewBody": "
+            Thrilled with the SPC flooring from Argil. It has a clean, stylish appearance and feels incredibly sturdy underfoot. It’s transformed our room with a modern touch and is super low-maintenance. Definitely recommend!"
+          }
+          ]
+
+        }
+        </script>
+        @endverbatim
+
 @endsection
 @section('content')
     <!-- breadcrumb -->
@@ -55,7 +54,7 @@
         <div class="container">
 
             <div class="p-2">
-                <h1 class="display-6 fw-bold">Home / {{ \App\Support\SeoCopy::soften($data->names) }}</h1>
+                <h1 class="display-6 fw-bold">Home / {{ $data->names }}</h1>
             </div>
         </div>
     </div>
@@ -63,13 +62,13 @@
     <div class="container">
 
         <div class="row pb-5">
-            <h2 class="text-center fw-bold pt-5">Rigid-Core Vinyl tiles</h2>
+            <h2 class="text-center fw-bold pt-5">SPC Flooring tiles</h2>
             <div class="col-md-4 pt-5">
                 {{-- Main Image --}}
                 @if ($data->mainImg)
                     <div >
                         <img id="mainImage" src="{{ asset('spc/' . $data->mainImg) }}" class="img-thumbnail mb-3"
-                            alt="{{ \App\Support\SeoCopy::soften($data->names) }}" title="{{ \App\Support\SeoCopy::soften($data->names) }}" loading="eager" fetchpriority="high" decoding="async">
+                            alt="spc product" title="spc product" loading="lazy">
                     </div>
                 @endif
 
@@ -106,26 +105,26 @@
                 <div class="row">
                     <div class="col-md-6">
 
-                        <h3>Serise Name ( s ) :</h3>
-                        <p>{{ \App\Support\SeoCopy::soften($data->names) }}</p>
-                        <h3>With Enhanced Beveled Edges :</h3>
+                        <p class="h3 mb-1">Serise Name ( s ) :</p>
+                        <p>{{ $data->names }}</p>
+                        <p class="h3 mb-1">With Enhanced Beveled Edges :</p>
                         <p>{{ $data->edges }}</p>
-                        <h3>Thickness :</h3>
+                        <p class="h3 mb-1">Thickness :</p>
                         <p>{{ $data->thicknesses }}</p>
-                        <h3>Click Type :</h3>
+                        <p class="h3 mb-1">Click Type :</p>
                         <p>{{ $data->clicktype }}</p>
-                        <h3>Shade Variation :</h3>
+                        <p class="h3 mb-1">Shade Variation :</p>
                         <p>{{ $data->shadeVariation }}</p>
                     </div>
                     <div class="col-md-6">
 
-                        <h3>Primary Color (s) :</h3>
+                        <p class="h3 mb-1">Primary Color (s) :</p>
                         <p>{{ $data->primarycolors }}</p>
-                        <h3>Backing Type :</h3>
+                        <p class="h3 mb-1">Backing Type :</p>
                         <p>{{ $data->backingType }}</p>
-                        <h3>Style :</h3>
+                        <p class="h3 mb-1">Style :</p>
                         <p>{{ $data->style }}</p>
-                        <h3>Wear Layer :</h3>
+                        <p class="h3 mb-1">Wear Layer :</p>
                         <p>{{ $data->wearLayer }}</p>
                     </div>
                 </div>
@@ -244,15 +243,12 @@
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const input = document.querySelector("#form_phone");
-            if (input && window.intlTelInput) {
-                window.intlTelInput(input, {
-                    initialCountry: "in",
-                    separateDialCode: true,
-                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-                });
-            }
+        const input = document.querySelector("#form_phone");
+
+        window.intlTelInput(input, {
+            initialCountry: "in", // default country code (India)
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
         });
     </script>
 @endsection

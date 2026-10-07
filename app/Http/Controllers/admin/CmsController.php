@@ -82,7 +82,7 @@ class CmsController extends Controller
 
     public function show($slug)
     {
-        $page = Cms::where('slug', $slug)
+        $page = Cms::whereRaw('LOWER(slug) = ?', [strtolower($slug)])
             ->where('status', 1)
             ->firstOrFail();
         $spcUrls = [

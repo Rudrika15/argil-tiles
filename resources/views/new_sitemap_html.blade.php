@@ -90,7 +90,7 @@
                     <td>0.8</td>
                 </tr>
                 <tr>
-                    <td><a href="https://argiltiles.com/about">https://argiltiles.com/about</a></td>
+                    <td><a href="https://argiltiles.com/about-argil">https://argiltiles.com/about-argil</a></td>
                     <td>2026-03-23</td>
                     <td>monthly</td>
                     <td>0.8</td>
@@ -138,7 +138,7 @@
                     <td>0.9</td>
                 </tr>
                 <tr>
-                    <td><a href="https://argiltiles.com/contact">https://argiltiles.com/contact</a></td>
+                    <td><a href="https://argiltiles.com/contact-argil">https://argiltiles.com/contact-argil</a></td>
                     <td>2026-03-23</td>
                     <td>weekly</td>
                     <td>0.9</td>

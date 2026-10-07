@@ -5,16 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="@yield('meta_description')">
-    {{-- LCP: landing navbar logo --}}
-    <link rel="preload" as="image" href="{{ asset('assets/asset/logo.png') }}" fetchpriority="high">
-    @hasSection('lcp_preload')
-        @yield('lcp_preload')
-    @endif
-    @hasSection('canonical')
-    <link rel="canonical" href="@yield('canonical')">
-    @endif
-    <meta property="og:url" content="@yield('canonical')">
     <title>@yield('title')</title>
+    <link rel="canonical" href="@yield('canonical', 'https://argiltiles.com')">
+    <link rel="stylesheet" href="{{ asset('assets/css/landing.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('icons/favicon-96x96.png') }}" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="{{ asset('icons/favicon.svg') }}" />
     <link rel="shortcut icon" href="{{ asset('icons/favicon.ico') }}" />
@@ -27,26 +20,24 @@
 
     <!-- Favicon & App Icons -->
 
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="{{ asset('assets/css/landing.min.css') }}?v={{ @filemtime(public_path('assets/css/landing.min.css')) ?: @filemtime(public_path('assets/css/landing.css')) }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/style.min.css') }}?v={{ @filemtime(public_path('assets/css/style.min.css')) ?: @filemtime(public_path('assets/css/style.css')) }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 
-    @if (!empty(trim($__env->yieldContent('intl_tel'))))
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" defer></script>
-    @endif
+    <!-- country CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
+    <!-- country JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" defer></script>
+
 
 
 </head>
@@ -55,7 +46,7 @@
 
     <!-- Header -->
     {{-- <header class="header py-3 px-4 bg-light d-flex justify-content-between align-items-center">
-        <a href="{{ url('/') }}" class="logo">Home</a>
+        <a href="{{ url('/') }}" class="logo">Argil Group</a>
         <a href="#quote-form" class="btn btn-primary">Request Export Quote</a>
     </header> --}}
     <div class="main">
@@ -78,8 +69,8 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="{{ asset('assets/asset/logo.png') }}" alt="company logo" title="Home"
-                    width="180" height="65" loading="eager" fetchpriority="high" decoding="async" class="" style="height: 65px; width: auto;" />
+                <img src="{{ asset('assets/asset/logo.png') }}" alt="argil tiles logo" title="argil tiles logo"
+                    height="65" fetchpriority="high" decoding="async" class="" style="height: 65px;" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -109,8 +100,8 @@
 
                 <!-- Contact Section -->
                 <div class="col-12 col-md-2 mb-4 ">
-                    <p class="mb-3">Contact Us</p>
-                    <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>Display Center 8-A,
+                    <p class="h5 mb-3">Contact Us</p>
+                    <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>Argil Group 8-A,
                         <br />
                         <span>
                             National Highway, </span>
@@ -150,14 +141,14 @@
                 {{-- download section --}}
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
                     <!-- Links -->
-                    <p class="mb-3">Download Our App
+                    <p class="h5 mb-3">Download Our App
                     </p>
                     <p class="my-4">
                         <a target="_blank" href="https://play.google.com/store/apps/details?id=com.arjil.argil_tiles">
                             {{-- <img src="{{ asset('assets/asset/playstore.png') }}" loading ="lazy"
                                     alt="argil-playstore-link" title="argil-playstore-link" class="w-75"> --}}
                             <img src="{{ asset('assets/asset/playstore.png') }}"
-                                alt="Download app on Google Play" title="Google Play"
+                                alt="Download Argil App on Google Play Store" title="Argil Play Store Link"
                                 class="img-fluid w-75" width="138" height="41" loading="lazy">
                         </a>
                     </p>
@@ -168,7 +159,7 @@
                                     loading ="lazy"alt="argil-appstore-link" title="argil-appstore-link"
                                     class="w-75"> --}}
                             <img src="{{ asset('assets/asset/appstore.png') }}"
-                                alt="Download app on App Store" title="App Store"
+                                alt="Download Argil App on Apple App Store" title="Argil App Store Link"
                                 class="img-fluid w-75" loading="lazy">
                         </a>
                     </p>
@@ -177,7 +168,7 @@
                 <!-- Social Links -->
                 <div class="col-12 col-md-2 mb-4 text-center">
 
-                    <p class="mb-3">Follow Us</p>
+                    <p class="h5 mb-3">Follow Us</p>
 
                     <div class="d-flex justify-content-center align-items-center pt-1">
 
