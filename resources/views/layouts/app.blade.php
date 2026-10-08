@@ -6,7 +6,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTBK17M75S"></script>
     <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
+          "@@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Mod Ceramic Industries Ltd.",
           "image": "https://argiltiles.com/asset/images/logo/logo.png",
@@ -48,7 +48,7 @@
 
     <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
+          "@@context": "https://schema.org",
           "@type": "Organization",
           "name": "Mod Ceramic Industries Ltd.",
           "alternateName": "Argil Tiles",
@@ -66,7 +66,7 @@
 
     <script type="application/ld+json">
         {
-          "@context": "https://schema.org/",
+          "@@context": "https://schema.org/",
           "@type": "WebSite",
           "name": "Argil Tiles",
           "url": "https://argiltiles.com/",
@@ -81,7 +81,7 @@
 
     <script type="application/ld+json">
         {
-          "@context": "https://schema.org/",
+          "@@context": "https://schema.org/",
           "@type": "Product",
           "name": "Argil Tiles",
           "description": "Argil is an artificial quartz stone slab manufacturer in Morbi, Gujarat, India. We have the best-engineered quartz surface stone for kitchen and platform at a reasonable price. We have 10+ yrs of service. Get a price quote",
@@ -180,7 +180,7 @@
     @verbatim
         <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
+          "@@context": "https://schema.org",
           "@type": ["LocalBusiness", "Organization"],
           "name": "Mod Ceramic Industries Ltd.",
           "alternateName": "Argil",
@@ -215,7 +215,7 @@
         </script>
         <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
+          "@@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Mod Ceramic Industries Ltd.",
           "url": "https://argiltiles.com/"

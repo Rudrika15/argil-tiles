@@ -16,6 +16,7 @@ use App\Models\Inquiry;
 use App\Models\Lvtproduct;
 use App\Models\MetaPropertyBlog;
 use App\Models\Quartzproduct;
+use App\Models\Slider;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -30,9 +31,11 @@ class VisitorController extends Controller
     //     ->get();
 
     $testimonials = Testimonial::inRandomOrder()->take(3)->get();
+    $sliders = Slider::orderBy('id', 'desc')->get();
 
     return view('visitors.home.home', [
-        'testimonials' => $testimonials
+        'testimonials' => $testimonials,
+        'sliders' => $sliders
     ]);
 }
     public function profile()

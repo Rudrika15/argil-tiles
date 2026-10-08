@@ -92,12 +92,12 @@
             @foreach ($data as $index => $item)
                 <div class="col-md-4 pt-5">
                     <a href="{{ Route('spcproductinquiry', $item->slug) }}" class="text-decoration-none">
-                        <div class="card">
-                            <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top" alt="{{ $item->slug }}"
+                        <div class="card h-100 shadow-sm overflow-hidden">
+                            <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top spc-card-img" alt="{{ $item->slug }}"
                                 title="{{ $item->slug }}"
                                 @if ($index === 0) loading="eager" fetchpriority="high" decoding="async" @else loading="lazy" @endif />
                             <div class="card-body">
-                                <h3 class="card-title text-center">{{ $item->names }}</h3>
+                                <h3 class="card-title text-center h6 fw-bold mb-0 text-dark">{{ $item->names }}</h3>
                             </div>
                         </div>
                     </a>

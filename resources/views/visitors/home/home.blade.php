@@ -22,13 +22,31 @@
 @endsection
     @section('content')
         <div class="container-fluid px-0">
-            <div class="row g-0">
-                <div class="col-12">
-                    <video autoplay muted loop playsinline class="home-hero-video">
-                        <source src="{{ asset('assets/asset/mainvideo.mp4') }}" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+            <div id="homeHeroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+                @if(isset($sliders) && count($sliders) > 0)
+                    <div class="carousel-indicators">
+                        @foreach($sliders as $index => $slider)
+                            <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="{{ $index }}" class="{{ $loop->first ? 'active' : '' }}" aria-current="{{ $loop->first ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
+                        @endforeach
+                    </div>
+
+                    <div class="carousel-inner">
+                        @foreach($sliders as $index => $slider)
+                            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                <img src="{{ asset('slider/' . $slider->sliderimg) }}" class="d-block w-100 home-hero-slider-img" alt="{{ $slider->title ?? 'Argil Tiles' }}" style="width: 100%; height: auto; display: block;">
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#homeHeroCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#homeHeroCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                @endif
             </div>
         </div>
 
