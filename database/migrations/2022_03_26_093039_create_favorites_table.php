@@ -13,13 +13,15 @@ class CreateFavoritesTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('favorites')) {
         Schema::create('favorites', function (Blueprint $table) {
-            $table->id();
-            $table->integer('user_id');
-            $table->integer('p_id');
-            $table->string('type');
-            $table->timestamps();
-        });
+                $table->id();
+                $table->integer('user_id');
+                $table->integer('p_id');
+                $table->string('type');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

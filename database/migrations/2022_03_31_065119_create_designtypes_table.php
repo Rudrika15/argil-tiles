@@ -13,11 +13,13 @@ class CreateDesigntypesTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('designtypes')) {
         Schema::create('designtypes', function (Blueprint $table) {
-            $table->id();
-            $table->string('type');
-            $table->timestamps();
-        });
+                $table->id();
+                $table->string('type');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

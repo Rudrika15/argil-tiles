@@ -13,11 +13,13 @@ class CreateSsizemastersTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('ssizemasters')) {
         Schema::create('ssizemasters', function (Blueprint $table) {
-            $table->id();
-            $table->string('size');
-            $table->timestamps();
-        });
+                $table->id();
+                $table->string('size');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

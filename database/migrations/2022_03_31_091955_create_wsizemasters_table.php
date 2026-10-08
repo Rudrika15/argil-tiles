@@ -13,11 +13,13 @@ class CreateWsizemastersTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('wsizemasters')) {
         Schema::create('wsizemasters', function (Blueprint $table) {
-            $table->id();
-            $table->string('size');
-            $table->timestamps();
-        });
+                $table->id();
+                $table->string('size');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

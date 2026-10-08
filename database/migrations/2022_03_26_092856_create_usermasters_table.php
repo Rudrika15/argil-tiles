@@ -13,15 +13,17 @@ class CreateUsermastersTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('usermasters')) {
         Schema::create('usermasters', function (Blueprint $table) {
-            $table->id();
-            $table->string("name");
-            $table->string("email");
-            $table->string("contact");
-            $table->string("password");
+                $table->id();
+                $table->string("name");
+                $table->string("email");
+                $table->string("contact");
+                $table->string("password");
 
-            $table->timestamps();
-        });
+                $table->timestamps();
+            });
+        }
     }
 
     /**

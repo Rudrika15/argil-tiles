@@ -13,13 +13,15 @@ class CreateCateloguesTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('catelogues')) {
         Schema::create('catelogues', function (Blueprint $table) {
-            $table->id();
-			$table->string("title");
-			$table->string("pdfFile");
+                $table->id();
+    			$table->string("title");
+    			$table->string("pdfFile");
 
-            $table->timestamps();
-        });
+                $table->timestamps();
+            });
+        }
     }
 
     /**

@@ -11,30 +11,32 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (!Schema::hasTable('testimonials')) {
         Schema::create('testimonials', function (Blueprint $table) {
-    $table->id();
+        $table->id();
 
-    $table->string('client_name');
-    $table->string('company_name')->nullable();
-    $table->string('designation')->nullable();
+        $table->string('client_name');
+        $table->string('company_name')->nullable();
+        $table->string('designation')->nullable();
 
-    $table->text('testimonial');
+        $table->text('testimonial');
 
-    $table->string('client_image')->nullable();
+        $table->string('client_image')->nullable();
 
-    $table->unsignedTinyInteger('rating')->default(5);
+        $table->unsignedTinyInteger('rating')->default(5);
 
-    $table->string('location')->nullable();
+        $table->string('location')->nullable();
 
-    $table->string('project_name')->nullable();
-    $table->string('product_type')->nullable();
+        $table->string('project_name')->nullable();
+        $table->string('product_type')->nullable();
 
-    $table->enum('status', ['active', 'inactive'])->default('active');
+        $table->enum('status', ['active', 'inactive'])->default('active');
 
-    $table->integer('display_order')->default(0);
+        $table->integer('display_order')->default(0);
 
-    $table->timestamps();
-});
+        $table->timestamps();
+    });
+        }
     }
 
     /**

@@ -13,13 +13,15 @@ class CreateSlidersTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('sliders')) {
         Schema::create('sliders', function (Blueprint $table) {
-            $table->id();
-			$table->string("title");
-			$table->string("sliderimg");
+                $table->id();
+    			$table->string("title");
+    			$table->string("sliderimg");
 
-            $table->timestamps();
-        });
+                $table->timestamps();
+            });
+        }
     }
 
     /**

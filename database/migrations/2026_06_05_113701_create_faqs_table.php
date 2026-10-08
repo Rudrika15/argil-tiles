@@ -11,15 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (!Schema::hasTable('faqs')) {
         Schema::create('faqs', function (Blueprint $table) {
-            $table->id();
-            $table->string('question');
-            $table->text('answer');
-            $table->longText('schema')->nullable();
-            $table->boolean('is_spc')->default(false);
-            $table->boolean('is_quartz')->default(false);
-            $table->timestamps();
-        });
+                $table->id();
+                $table->string('question');
+                $table->text('answer');
+                $table->longText('schema')->nullable();
+                $table->boolean('is_spc')->default(false);
+                $table->boolean('is_quartz')->default(false);
+                $table->timestamps();
+            });
+        }
     }
 
     /**

@@ -11,24 +11,26 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('exports', function (Blueprint $table) {
-        $table->id();
-        $table->string('title');
-        $table->string('slug')->unique();
-        $table->longText('details')->nullable();
+        if (!Schema::hasTable('exports')) {
+    Schema::create('exports', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('slug')->unique();
+            $table->longText('details')->nullable();
 
-        // SEO fields
-        $table->string('metaTitle')->nullable();
-        $table->text('metaDescription')->nullable();
-        $table->text('metaKeywords')->nullable();
-        $table->string('ogTitle')->nullable();
-        $table->text('ogDescription')->nullable();
-        $table->string('ogImage')->nullable();
+            // SEO fields
+            $table->string('metaTitle')->nullable();
+            $table->text('metaDescription')->nullable();
+            $table->text('metaKeywords')->nullable();
+            $table->string('ogTitle')->nullable();
+            $table->text('ogDescription')->nullable();
+            $table->string('ogImage')->nullable();
 
-        $table->enum('status',['Y','N'])->default('Y');
+            $table->enum('status',['Y','N'])->default('Y');
 
-        $table->timestamps();
-    });
+            $table->timestamps();
+        });
+    }
     }
 
     /**

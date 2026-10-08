@@ -13,14 +13,16 @@ class CreateNewsroomsTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('newsrooms')) {
         Schema::create('newsrooms', function (Blueprint $table) {
-            $table->id();
-			$table->string("title");
-			$table->string("img");
-			$table->mediumText("details");
+                $table->id();
+    			$table->string("title");
+    			$table->string("img");
+    			$table->mediumText("details");
 
-            $table->timestamps();
-        });
+                $table->timestamps();
+            });
+        }
     }
 
     /**

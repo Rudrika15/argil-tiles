@@ -11,46 +11,48 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (!Schema::hasTable('case_studies')) {
         Schema::create('case_studies', function (Blueprint $table) {
-            $table->bigIncrements('id');
+                $table->bigIncrements('id');
 
-            $table->string('title');
-            $table->string('slug')->unique();
+                $table->string('title');
+                $table->string('slug')->unique();
 
-            $table->text('short_description')->nullable();
-            $table->longText('overview')->nullable();
+                $table->text('short_description')->nullable();
+                $table->longText('overview')->nullable();
 
-            $table->string('client_name')->nullable();
-            $table->string('industry', 100)->nullable();
+                $table->string('client_name')->nullable();
+                $table->string('industry', 100)->nullable();
 
-            $table->string('location')->nullable();
+                $table->string('location')->nullable();
 
-            $table->string('project_type', 100)->nullable(); // SPC Flooring / Quartz Surface
+                $table->string('project_type', 100)->nullable(); // SPC Flooring / Quartz Surface
 
-            $table->string('project_area', 100)->nullable();
+                $table->string('project_area', 100)->nullable();
 
-            $table->longText('challenge')->nullable();
-            $table->longText('solution')->nullable();
-            $table->longText('result')->nullable();
+                $table->longText('challenge')->nullable();
+                $table->longText('solution')->nullable();
+                $table->longText('result')->nullable();
 
-            $table->text('products_used')->nullable();
+                $table->text('products_used')->nullable();
 
-            $table->date('completion_date')->nullable();
+                $table->date('completion_date')->nullable();
 
-            $table->string('featured_image')->nullable();
+                $table->string('featured_image')->nullable();
 
-            $table->json('gallery')->nullable();
+                $table->json('gallery')->nullable();
 
-            $table->string('seo_title')->nullable();
-            $table->text('seo_description')->nullable();
-            $table->text('seo_keywords')->nullable();
+                $table->string('seo_title')->nullable();
+                $table->text('seo_description')->nullable();
+                $table->text('seo_keywords')->nullable();
 
-            $table->enum('status', ['draft', 'published'])->default('draft');
+                $table->enum('status', ['draft', 'published'])->default('draft');
 
-            $table->boolean('is_featured')->default(false);
+                $table->boolean('is_featured')->default(false);
 
-            $table->timestamps();
-        }); 
+                $table->timestamps();
+            });
+        } 
     }
 
     /**

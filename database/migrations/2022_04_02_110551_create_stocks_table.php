@@ -13,11 +13,13 @@ class CreateStocksTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('stocks')) {
         Schema::create('stocks', function (Blueprint $table) {
-            $table->id();
-            $table->string('stock');
-            $table->timestamps();
-        });
+                $table->id();
+                $table->string('stock');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

@@ -11,15 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (!Schema::hasTable('blogs')) {
         Schema::create('blogs', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('slug');
-            $table->string('description');
-            $table->string('image');
-            $table->enum('status',['active','deactive','publish'])->default('active');
-            $table->timestamps();
-        });
+                $table->id();
+                $table->string('title');
+                $table->string('slug');
+                $table->string('description');
+                $table->string('image');
+                $table->enum('status',['active','deactive','publish'])->default('active');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

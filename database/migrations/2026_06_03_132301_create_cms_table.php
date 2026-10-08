@@ -11,21 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (!Schema::hasTable('cms')) {
         Schema::create('cms', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('slug')->unique();
-            $table->longText('description')->nullable();
-            $table->boolean('status')->default(1);
-            $table->string('meta_title')->nullable();
-            $table->text('meta_keyword')->nullable();
-            $table->text('meta_description')->nullable();
-            $table->string('og_image')->nullable();
-            $table->string('author')->nullable();
-            $table->string('tags')->nullable();
-            $table->string('og_url')->nullable();
-            $table->timestamps();
-        });
+                $table->id();
+                $table->string('title');
+                $table->string('slug')->unique();
+                $table->longText('description')->nullable();
+                $table->boolean('status')->default(1);
+                $table->string('meta_title')->nullable();
+                $table->text('meta_keyword')->nullable();
+                $table->text('meta_description')->nullable();
+                $table->string('og_image')->nullable();
+                $table->string('author')->nullable();
+                $table->string('tags')->nullable();
+                $table->string('og_url')->nullable();
+                $table->timestamps();
+            });
+        }
     }
 
     /**

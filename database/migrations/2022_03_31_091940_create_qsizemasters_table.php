@@ -13,11 +13,13 @@ class CreateQsizemastersTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('qsizemasters')) {
         Schema::create('qsizemasters', function (Blueprint $table) {
-            $table->id();
-            $table->string('size');
-            $table->timestamps();
-        });
+                $table->id();
+                $table->string('size');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

@@ -13,12 +13,14 @@ class CreateHomepagesTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('homepages')) {
         Schema::create('homepages', function (Blueprint $table) {
-            $table->id();
-			$table->string("title");
-			$table->string("img");
-            $table->timestamps();
-        });
+                $table->id();
+    			$table->string("title");
+    			$table->string("img");
+                $table->timestamps();
+            });
+        }
     }
 
     /**

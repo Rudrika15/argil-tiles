@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (!Schema::hasTable('new_arrivals')) {
         Schema::create('new_arrivals', function (Blueprint $table) {
-            $table->id();
-            $table->string('image');
-            $table->string('navigate_url');
-            $table->timestamps();
-        });
+                $table->id();
+                $table->string('image');
+                $table->string('navigate_url');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

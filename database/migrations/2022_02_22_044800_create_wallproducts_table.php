@@ -13,24 +13,26 @@ class CreateWallproductsTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('wallproducts')) {
         Schema::create('wallproducts', function (Blueprint $table) {
-            $table->id();
-			$table->string("name");
-			$table->string("size");
-			$table->string("finishType");
-			$table->string("stock");
-			$table->string("designType");
-			$table->string("mainImg");
-			$table->string("subImg1")->nullable();	
-			$table->string("subImg2")->nullable();
-			$table->string("subImg3")->nullable();
-			$table->string("subImg4")->nullable();
-			$table->string("subImg5")->nullable();
-			$table->string("status",10)->default("Active");
-            
+                $table->id();
+    			$table->string("name");
+    			$table->string("size");
+    			$table->string("finishType");
+    			$table->string("stock");
+    			$table->string("designType");
+    			$table->string("mainImg");
+    			$table->string("subImg1")->nullable();	
+    			$table->string("subImg2")->nullable();
+    			$table->string("subImg3")->nullable();
+    			$table->string("subImg4")->nullable();
+    			$table->string("subImg5")->nullable();
+    			$table->string("status",10)->default("Active");
+                
 
-            $table->timestamps();
-        });
+                $table->timestamps();
+            });
+        }
     }
 
     /**

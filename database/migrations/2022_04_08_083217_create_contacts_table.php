@@ -13,14 +13,16 @@ class CreateContactsTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('contacts')) {
         Schema::create('contacts', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->string('contactno');
-            $table->string('message');            
-            $table->timestamps();
-        });
+                $table->id();
+                $table->string('name');
+                $table->string('email');
+                $table->string('contactno');
+                $table->string('message');            
+                $table->timestamps();
+            });
+        }
     }
 
     /**

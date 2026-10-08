@@ -13,11 +13,13 @@ class CreateFinishtypesTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('finishtypes')) {
         Schema::create('finishtypes', function (Blueprint $table) {
-            $table->id();
-            $table->string('type');
-            $table->timestamps();
-        });
+                $table->id();
+                $table->string('type');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

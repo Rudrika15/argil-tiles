@@ -13,29 +13,31 @@ class CreateLvtproductsTable extends Migration
      */
     public function up()
     {
+        if (!Schema::hasTable('lvtproducts')) {
         Schema::create('lvtproducts', function (Blueprint $table) {
-            $table->id();
-			$table->string("names");
-			$table->string("thicknesses");
-			$table->string("primarycolors");
-			$table->string("edges",10);
-			$table->string("clicktype");
-			$table->string("shadeVariation");
-			$table->string("backingType");
-			$table->string("style");
-			$table->string("wearLayer");
-			$table->string("bookmatch");
-			$table->string("mainImg");
-			$table->string("subImg1")->nullable();
-			$table->string("subImg2")->nullable();	
-			$table->string("subImg3")->nullable();
-			$table->string("subImg4")->nullable();
-			$table->string("subImg5")->nullable();
-			$table->string("status",10)->default("Active");
+                $table->id();
+    			$table->string("names");
+    			$table->string("thicknesses");
+    			$table->string("primarycolors");
+    			$table->string("edges",10);
+    			$table->string("clicktype");
+    			$table->string("shadeVariation");
+    			$table->string("backingType");
+    			$table->string("style");
+    			$table->string("wearLayer");
+    			$table->string("bookmatch");
+    			$table->string("mainImg");
+    			$table->string("subImg1")->nullable();
+    			$table->string("subImg2")->nullable();	
+    			$table->string("subImg3")->nullable();
+    			$table->string("subImg4")->nullable();
+    			$table->string("subImg5")->nullable();
+    			$table->string("status",10)->default("Active");
 
-			
-            $table->timestamps();
-        });
+    			
+                $table->timestamps();
+            });
+        }
     }
 
     /**
