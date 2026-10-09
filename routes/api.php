@@ -33,6 +33,10 @@ Route::get('/newarrivals', [ApiController::class, 'newarrivalsview']);
 Route::post('/contactus', [ApiController::class, 'contactus']);
 Route::post('/inquiry', [ApiController::class, 'inquiry']);
 
+// Export APIs
+Route::get('/export/contact', [ApiController::class, 'exportContacts']);
+Route::get('/export/inquiry', [ApiController::class, 'exportInquiries']);
+
 //Route::post('/wallfilter',[ApiController::class,'wallfilter']);
 //Route::get('/quartzfilter/{id?}',[ApiController::class,'quartzfilter']);
 //Route::get('/spcfilter/{id?}',[ApiController::class,'spcfilter']);

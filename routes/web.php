@@ -81,6 +81,7 @@ Route::middleware('auth:web')->group(function () {
 
     // Inquiry Start
     Route::get("inquiryshow", [InquiryController::class, 'index'])->name('inquiryshow');
+    Route::get("inquiry/export", [InquiryController::class, 'exportInquiries'])->name('inquiry.export');
     Route::get("inquiry/edit/{id}", [InquiryController::class, 'edit'])->name('inquiry.edit');
     Route::get("inquirycreate", [InquiryController::class, 'create'])->name('inquirycreate');
     Route::post("inquiry/editcode", [InquiryController::class, 'editcode'])->name('inquiry.editcode');
@@ -90,6 +91,7 @@ Route::middleware('auth:web')->group(function () {
 
     // contact us
     Route::get("contactshow", [InquiryController::class, 'contactshow'])->name('contactshow');
+    Route::get("contact/export", [InquiryController::class, 'exportContacts'])->name('contact.export');
     Route::get("inquiry/conactdelete/{id}", [InquiryController::class, 'contactdelete'])->name('inquiry.contactdelete');
 
 
