@@ -18,6 +18,13 @@
         content="High-quality SPC flooring tiles by Argil. Durable, waterproof vinyl flooring from manufacturers in Morbi, Gujarat, India.">
     <link rel="canonical" href="https://argiltiles.com/spcproducts">
     <title>Best SPC Flooring Tiles Manufacturer in Morbi | Argil Tiles</title>
+    <style>
+        .spc-card-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+    </style>
 @endsection
 @section('content')
     <!-- breadcrumb -->
@@ -91,9 +98,9 @@
             @foreach ($data as $index => $item)
                 <div class="col-md-4 pt-5">
                     <a href="{{ Route('spcproductinquiry', $item->slug) }}" class="text-decoration-none">
-                        <div class="card">
-                            <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top" alt="{{ $item->slug }}"
-                                title="{{ $item->slug }}" loading="lazy" />
+                        <div class="card h-100">
+                            <img src="{{ asset('spc/' . $item->mainImg) }}" class="card-img-top spc-card-img" alt="{{ $item->slug }}"
+                                title="{{ $item->slug }}" loading="lazy" style="height: 380px; object-fit: cover;" />
                             <div class="card-body">
                                 <h3 class="h5 card-title text-center">{{ $item->names }}</h3>
                             </div>
