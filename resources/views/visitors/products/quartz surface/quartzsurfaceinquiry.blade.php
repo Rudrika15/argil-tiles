@@ -1,53 +1,49 @@
 @extends('layouts.app')
 @section('seosection')
-@php
-    $qiName = \App\Support\SeoCopy::soften($data->name);
-@endphp
     <meta name="description"
-        content="Explore {{ $qiName }} engineered stone from our Morbi factory. Premium slabs for homes and commercial projects.">
-    <meta name="keywords" content="{{ $qiName }}, engineered stone slabs, kitchen surfaces, Morbi manufacturer">
-    <meta property="og:title" content="{{ $qiName }} | Engineered Stone">
+        content="Explore {{ $data->name }} quartz countertop slab from Argil Tiles. Premium engineered quartz manufactured in Morbi, Gujarat, India.">
+    <meta name="keywords" content="{{ $data->name }}, quartz slabs, engineered quartz, quartz countertops, Argil Tiles, Morbi">
+    <meta property="og:title" content="{{ $data->name }} | Quartz Countertop Slab | Argil Tiles">
     <meta property="og:description"
-        content="Explore {{ $qiName }} engineered stone. Premium slabs manufactured in Morbi, Gujarat.">
+        content="Explore {{ $data->name }} quartz countertop slab from Argil Tiles. Premium engineered quartz manufactured in Morbi, Gujarat, India.">
     <meta property="og:url" content="https://argiltiles.com/quartzinquiry/{{ $data->slug }}">
 
-    <meta name="twitter:title" content="{{ $qiName }} | Engineered Stone">
+    <meta name="twitter:title" content="{{ $data->name }} | Quartz Countertop Slab | Argil Tiles">
     <meta name="twitter:description"
-        content="Explore {{ $qiName }} engineered stone. Premium slabs manufactured in Morbi, Gujarat.">
+        content="Explore {{ $data->name }} quartz countertop slab from Argil Tiles. Premium engineered quartz manufactured in Morbi, Gujarat, India.">
 
     <link rel="canonical" href="https://argiltiles.com/quartzinquiry/{{ $data->slug }}">
 
-    <title>{{ $qiName }} | Engineered Stone</title>
+    <title>{{ $data->name }} | Quartz Countertop Slab | Argil Tiles</title>
 
-<script type="application/ld+json">
-{
-    "@@context":"https://schema.org",
-    "@@type":"Product",
-    "@@id":"https://argiltiles.com/quartzinquiry/{{ $data->slug }}#product",
-    "name":{{ json_encode($data->name) }},
-    "image":[
-        "{{ asset('quartz/' . $data->mainImg) }}"
-    ],
-    "description":{{ json_encode(trim('Thickness: ' . ($data->thicknesses ?? '') . ', Primary color: ' . ($data->primarycolors ?? '') . ', Finish: ' . ($data->finishType ?? ''))) }},
-    "sku":"{{ $data->slug ?? $data->id }}",
-    "brand":{
-        "@@type":"Brand",
-        "name":"Argil Tiles"
-    },
-    "manufacturer":{
-        "@@type":"Organization",
-        "name":"Mod Ceramic Industries Ltd."
-    },
-    "category":"Engineered Stone",
-    "url":"https://argiltiles.com/quartzinquiry/{{ $data->slug }}"
-}
-</script>
-@endsection
-@section('intl_tel', '1')
-@section('lcp_preload')
-    @if(!empty($data->mainImg))
-        <link rel="preload" as="image" href="{{ asset('quartz/' . $data->mainImg) }}" fetchpriority="high">
-    @endif
+    @verbatim
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "name": "{{ $data->name }}",
+          "image": ["{{ asset('quartz/' . $data->mainImg) }}"],
+          "description": " Thickness : {{ $data->thicknesses }} , Primary color : {{ $data->primarycolors }} ",
+          "brand": {
+            "@type": "Brand",
+            "name": "Argil Group"
+          },
+          "review": [
+
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Chandan Gupta"
+            },
+            "datePublished": "{{ $data->created_at->toDateString() }}",
+            "reviewBody": "Impressed with the quality and elegant finish of Argil’s quartz. Smooth texture, excellent durability, and a classy touch to our space. Highly recommended!"
+          }
+          ]
+
+        }
+        </script>
+        @endverbatim
 @endsection
 @section('content')
     <!-- breadcrumb -->
@@ -93,14 +89,19 @@
         <div class="carousel-inner">
             @if ($data->mainImg)
                 <div class="carousel-item active">
-                    <img src="{{ asset('quartz/' . $data->mainImg) }}" alt="Main Image" class="d-block w-100 img-fluid"
-                        style="object-fit: cover; height: 100vh;" loading="eager" fetchpriority="high" decoding="async">
+                    <img src="{{ asset('quartz/' . $data->mainImg) }}"
+                        alt="{{ $data->name }} quartz surface"
+                        title="{{ $data->name }} quartz surface"
+                        class="d-block w-100 img-fluid"
+                        style="object-fit: cover; height: 100vh;">
                 </div>
             @endif
             @foreach (['subImg1', 'subImg2', 'subImg3', 'subImg4', 'subImg5'] as $index => $img)
                 @if ($data->$img)
                     <div class="carousel-item @if (!$data->mainImg && $index == 0) active @endif">
-                        <img src="{{ asset('quartz/' . $data->$img) }}" alt="Image {{ $index + 1 }}"
+                        <img src="{{ asset('quartz/' . $data->$img) }}"
+                            alt="{{ $data->name }} quartz surface image {{ $index + 1 }}"
+                            title="{{ $data->name }} quartz surface image {{ $index + 1 }}"
                             class="d-block w-100 img-fluid" style="object-fit: cover; height: 100vh;">
                     </div>
                 @endif
@@ -126,19 +127,19 @@
             <!-- SPACES box -->
             <div class="col-12 col-md-4 col-lg-3 mb-4">
                 <div class="border border-1 border-dark p-3 rounded h-100">
-                    <h3 class="pt-2">SPACES</h3>
-                    <p class="pt-1">Primary Color :</p>
+                    <h3 class="h4 pt-2">SPACES</h3>
+                    <p class="h5 pt-1 mb-1">Primary Color :</p>
                     <p>{{ $data->primarycolors }}</p>
-                    <p>Stock :</p>
+                    <p class="h5 mb-1">Stock :</p>
                     <p>{{ $data->stock }}</p>
-                    <p>Book Match :</p>
+                    <p class="h5 mb-1">Book Match :</p>
                     <p>{{ $data->bookmatch }}</p>
-                    <p>Available Finish :</p>
+                    <p class="h5 mb-1">Available Finish :</p>
                     <p>{{ $data->finishType }}</p>
-                    <h3 class="pt-2">SIZES</h3>
-                    <p class="pt-1">Thickness :</p>
+                    <h3 class="h4 pt-2">SIZES</h3>
+                    <p class="h5 pt-1 mb-1">Thickness :</p>
                     <p>{{ $data->thicknesses }}</p>
-                    <p>Slab Size :</p>
+                    <p class="h5 mb-1">Slab Size :</p>
                     <p>{{ $data->sizes }}</p>
                 </div>
             </div>
@@ -146,21 +147,21 @@
             <!-- APPLICATIONS box -->
             <div class="col-12 col-md-4 col-lg-3 mb-4">
                 <div class="border border-1 border-dark p-3 rounded h-100">
-                    <h3 class="pt-2">APPLICATIONS</h3>
+                    <h3 class="h4 pt-2">APPLICATIONS</h3>
 
-                    <p class="pt-1">Flooring :</p>
+                    <p class="h5 pt-1 mb-1">Flooring :</p>
                     <p>Residential <i class="bi bi-check-lg text-success"></i></p>
                     <p>Commercial <i class="bi bi-check-lg text-success"></i></p>
 
-                    <p>Counters :</p>
+                    <p class="h5 mb-1">Counters :</p>
                     <p>Residential <i class="bi bi-check-lg text-success"></i></p>
                     <p>Commercial <i class="bi bi-check-lg text-success"></i></p>
 
-                    <p>Wall :</p>
+                    <p class="h5 mb-1">Wall :</p>
                     <p>Residential <i class="bi bi-check-lg text-success"></i></p>
                     <p>Commercial <i class="bi bi-check-lg text-success"></i></p>
 
-                    <p>Other :</p>
+                    <p class="h5 mb-1">Other :</p>
                     <p>Residential <i class="bi bi-check-lg text-success"></i></p>
                     <p>Commercial <i class="bi bi-x-lg text-danger"></i></p>
                 </div>
@@ -282,15 +283,12 @@
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const input = document.querySelector("#form_phone");
-            if (input && window.intlTelInput) {
-                window.intlTelInput(input, {
-                    initialCountry: "in",
-                    separateDialCode: true,
-                    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-                });
-            }
+        const input = document.querySelector("#form_phone");
+
+        window.intlTelInput(input, {
+            initialCountry: "in", // default country code (India)
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
         });
     </script>
 @endsection

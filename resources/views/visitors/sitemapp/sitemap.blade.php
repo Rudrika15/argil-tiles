@@ -8,7 +8,7 @@
 </url>
 {{-- about --}}
 <url>
-    <a href="https://argiltiles.com/about"></a>
+    <a href="https://argiltiles.com/about-argil"></a>
 </url>
 {{-- documentary film --}}
 <url>
@@ -48,7 +48,7 @@
 </url>
 {{-- contact --}}
 <url>
-    <a href="https://argiltiles.com/contact"></a>
+    <a href="https://argiltiles.com/contact-argil"></a>
 </url>
 {{-- privacyPolicy --}}
 <url>

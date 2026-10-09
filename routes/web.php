@@ -291,6 +291,7 @@ Route::get('/delete-case-studies/{slug}', [CaseStudyController::class, 'delete']
 Route::get('/', [VisitorController::class, 'home']);
 Route::get('/profile', [VisitorController::class, 'profile']);
 Route::get('/about-argil', [VisitorController::class, 'about']);
+Route::redirect('/about', '/about-argil', 301);
 Route::get('/documentaryfilm', [VisitorController::class, 'documentaryfilm']);
 Route::get('/corevalues', [VisitorController::class, 'corevalue']);
 Route::get('/groupcompany', [VisitorController::class, 'groupcompany']);
@@ -299,6 +300,7 @@ Route::get('/plants', [VisitorController::class, 'plants']);
 Route::get('/quality', [VisitorController::class, 'quality']);
 Route::get('/catalogue', [VisitorController::class, 'catalogue'])->name('catalogue');
 Route::get('/contact-argil', [VisitorController::class, 'contact']);
+Route::redirect('/contact', '/contact-argil', 301);
 Route::get('/spcproducts', [VisitorController::class, 'spcproducts']);
 Route::get('spcproductinquiry/{slug?}', [VisitorController::class, 'spcproductinquiry'])->name('spcproductinquiry');
 Route::get('quartzinquiry/{slug?}', [VisitorController::class, 'quartzinquiry'])->name('quartzinquiry');

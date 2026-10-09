@@ -72,7 +72,7 @@ class VisitorController extends Controller
     }
     public function blog()
     {
-       $blogs = Blog::latest()->paginate(9);
+        $blogs = Blog::latest()->paginate(9);
         return view('visitors.blog.blog', compact('blogs'));
     }
     // public function blogdetails($slug)

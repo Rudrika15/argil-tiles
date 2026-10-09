@@ -19,7 +19,7 @@
     </url>
 
     <url>
-        <loc>{{ url('/about') }}</loc>
+        <loc>{{ url('/about-argil') }}</loc>
         <lastmod>{{ now()->format('Y-m-d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -75,7 +75,7 @@
     </url>
 
     <url>
-        <loc>{{ url('/contact') }}</loc>
+        <loc>{{ url('/contact-argil') }}</loc>
         <lastmod>{{ now()->format('Y-m-d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>

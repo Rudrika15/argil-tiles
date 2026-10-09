@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('seosection')
     <meta name="description"
@@ -7,17 +7,46 @@
     <meta property="og:title" content="Blog Authors | Argil Tiles">
     <meta property="og:description"
         content="Read articles from Argil Tiles authors and discover expert insights on tiles, quartz surfaces, and flooring solutions.">
-    <meta property="og:url" content="https://argiltiles.com/authors/{{ isset($author) && $author ? Str::slug($author) : '' }}">
+    <meta property="og:url" content="{{ url()->current() }}">
 
     <meta name="twitter:title" content="Blog Authors | Argil Tiles">
     <meta name="twitter:description"
         content="Explore blogs written by Argil Tiles authors and industry experts.">
 
-    <link rel="canonical" href="https://argiltiles.com/authors/{{ isset($author) && $author ? Str::slug($author) : '' }}">
+    <link rel="canonical" href="{{ url()->current() }}">
 
     <title>
         {{ isset($author) && $author ? $author . ' Blogs | Argil Tiles' : 'Blog Authors | Argil Tiles' }}
     </title>
+
+<style>
+
+    .blog-card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.blog-card {
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card .long-arrow {
+    color: #ccb19b;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease-in-out;
+}
+
+.blog-card:hover .long-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+</style>
 @endsection
 
 @section('content')
@@ -63,14 +92,14 @@
                     <img src="{{ asset('blogimage/' . $blog->image) }}"
                         alt="{{ $blog->title }}"
                         title="{{ $blog->title }}"
-                        @if ($loop->iteration <= 2) loading="eager" fetchpriority="{{ $loop->first ? 'high' : 'auto' }}" decoding="async" @else loading="lazy" @endif
+                        loading="lazy"
                         class="card-img-top blog-card-image">
 
                     <div class="card-body">
 
-                        <h2 class="card-title fw-bold">
+                        <h3 class="h5 card-title fw-bold">
                             {{ $blog->title }}
-                        </h2>
+                        </h3>
 
                         <p class="text-muted small mb-1">
                             By {{ $blog->author }}
@@ -106,7 +135,7 @@
     @empty
 
         <div class="col-12 text-center">
-            <p>No blogs found.</p>
+            <p class="h4">No blogs found.</p>
         </div>
 
     @endforelse

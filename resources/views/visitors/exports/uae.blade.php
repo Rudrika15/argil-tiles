@@ -2,34 +2,32 @@
 
 @section('seosection')
     <meta name="description"
-        content="Export rigid-core vinyl and engineered stone from India to the UAE. Fast delivery for Gulf distributors and projects.">
-    <meta name="keywords"
-        content="rigid-core vinyl export UAE, engineered stone export Dubai, surface exporter India to UAE">
-    <meta property="og:title" content="Rigid-Core Vinyl & Engineered Stone Export to UAE">
+        content="Argil Tiles exports premium quartz surfaces and SPC flooring from India to distributors and projects across the UAE.">
+    <meta property="og:title" content="UAE Exports | Argil Tiles – Quartz & SPC Flooring from India">
     <meta property="og:description"
-        content="Export rigid-core vinyl and engineered stone from India to the UAE. Fast delivery for Gulf distributors and projects.">
+        content="Argil Tiles exports premium quartz surfaces and SPC flooring from India to distributors and projects across the UAE.">
     <meta property="og:url" content="https://argiltiles.com/exports/uae">
+    <meta property="og:type" content="website">
     <link rel="canonical" href="https://argiltiles.com/exports/uae">
-    <title>Rigid-Core Vinyl & Engineered Stone Export to UAE</title>
+    <title>UAE Exports | Argil Tiles – Quartz & SPC Flooring from India</title>
 @endsection
 
-@section('lcp_preload')
-    <link rel="preload" as="image" href="{{ asset('export-imgs/spc1.jpg') }}" fetchpriority="high">
-@endsection
 
 @section('content')
     <header class="py-5 bg-dark text-white text-center shadow-lg" style="border-bottom: 15px solid #ccb19b;">
         <div class="container py-5">
-            <p class="text-uppercase fw-bold mb-3" style="color: #ccb19b; letter-spacing: 5px;">Premium Surfaces from India</p>
-            <h1 class="display-3 fw-bold mb-4 text-uppercase">SURFACE & RIGID-CORE VINYL EXPORT <span
-                    class="text-brand">TO UAE</span>
+            <p class="h6 text-uppercase fw-bold mb-3" style="color: #ccb19b; letter-spacing: 5px;">Premium Indian SPC &
+                Quartz</p>
+            <h1 class="display-3 fw-bold mb-4 text-uppercase">SPC FLOORING & QUARTZ SURFACE EXPORT <span
+                    style="color: #ccb19b;">TO UAE</span>
             </h1>
             <p class="lead mb-5 opacity-75 mx-auto" style="max-width: 850px;">
-                Our factory manufactures and exports high-quality rigid-core vinyl and engineered stone surfaces
+                Argil Group manufactures and exports high-quality SPC & Vinyl flooring and engineered quartz surfaces
                 from India to the World for residential, commercial, and hospitality projects.
             </p>
             <div class="d-flex flex-wrap gap-3 justify-content-center">
-                <a href="#tender" class="btn btn-lg rounded-0 px-5 py-3 fw-bold text-white shadow bg-brand border-0">REQUEST QUOTE</a>
+                <a href="#tender" class="btn btn-lg rounded-0 px-5 py-3 fw-bold text-white shadow"
+                    style="background-color: #ccb19b; border: none;">REQUEST QUOTE</a>
                 <a href="/catalogue" class="btn btn-outline-light btn-lg rounded-0 px-5 py-3 fw-bold">PRODUCT CATALOGUE</a>
             </div>
         </div>
@@ -40,10 +38,10 @@
             <h2 class="fw-bold text-uppercase mb-4 text-center text-md-start">ABOUT OUR EXPORT OPERATIONS TO UAE</h2>
             <div class="row">
                 <div class="col-lg-10">
-                    <p class="text-muted lead mb-4">Our team provides direct sourcing of flooring and surface
+                    <p class="text-muted lead mb-4">Argil Group provides direct sourcing of flooring and surface
                         materials from India for buyers in the UAE engaged in construction, interior fit-out, and
                         large-scale installations.</p>
-                    <p class="fw-bold text-uppercase small mb-2 text-brand ls-1">Our export
+                    <p class="fw-bold text-uppercase small mb-2" style="color: #ccb19b; letter-spacing: 1px;">Our export
                         process ensures:</p>
                     <ul class="list-unstyled mb-4">
                         <li class="mb-2 small"><i class="bi bi-check2-circle me-2 text-dark"></i> Confirmed product
@@ -72,8 +70,8 @@
                         style="transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-gear-wide-connected display-5 mb-4 d-block text-brand"></i>
-                        <h3 class="fw-bold text-uppercase">Direct Manufacturer</h3>
+                        <i class="bi bi-gear-wide-connected display-5 mb-4 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold text-uppercase">Direct Manufacturer</h3>
                         <p class="small text-muted mb-0">Full production control ensures specification accuracy and
                             approved sample-based production.</p>
                     </div>
@@ -83,8 +81,8 @@
                         style="transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-truck display-5 mb-4 d-block text-brand"></i>
-                        <h3 class="fw-bold text-uppercase">Reliable Dispatch</h3>
+                        <i class="bi bi-truck display-5 mb-4 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold text-uppercase">Reliable Dispatch</h3>
                         <p class="small text-muted mb-0">Timelines confirmed to support project schedules with
                             international shipping expertise for UAE.</p>
                     </div>
@@ -94,8 +92,8 @@
                         style="transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-chat-left-dots display-5 mb-4 d-block text-brand"></i>
-                        <h3 class="fw-bold text-uppercase">Clear Coordination</h3>
+                        <i class="bi bi-chat-left-dots display-5 mb-4 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold text-uppercase">Clear Coordination</h3>
                         <p class="small text-muted mb-0">Structured order coordination and flexible container planning
                             for multiple designs and quantities.</p>
                     </div>
@@ -111,24 +109,25 @@
             <div class="row g-5 align-items-center mb-5 pb-5 border-bottom">
                 <div class="col-lg-6">
                     <img src="{{ asset('export-imgs/spc1.jpg') }}" class="img-fluid w-50 mx-auto d-block"
-                        alt="Argil rigid-core vinyl" title="Argil rigid-core vinyl"
-                        width="350" height="354" loading="eager" fetchpriority="high" decoding="async">
+                        alt="Argil SPC Flooring" title="Argil SPC Flooring">
                 </div>
                 <div class="col-lg-6 ps-lg-5">
                     <h3 class="fw-bold text-uppercase mb-3">SPC & Vinyl Flooring</h3>
                     <p class="text-muted lead mb-4">Modular flooring for UAE projects. 100% waterproof and
                         moisture-resistant core with dimensional stability in warm environments.</p>
                     <div class="row g-3 small fw-bold text-uppercase">
-                        <div class="col-6"><i class="bi bi-check2-square text-brown text-brand"></i>
+                        <div class="col-6"><i class="bi bi-check2-square text-brown" style="color: #ccb19b;"></i>
                             Thickness: 4mm – 8mm</div>
-                        <div class="col-6"><i class="bi bi-check2-square text-brown text-brand"></i> Wear
+                        <div class="col-6"><i class="bi bi-check2-square text-brown" style="color: #ccb19b;"></i> Wear
                             Layer: 0.3 – 0.5mm</div>
-                        <div class="col-6"><i class="bi bi-check2-square text-brown text-brand"></i> Size
+                        <div class="col-6"><i class="bi bi-check2-square text-brown" style="color: #ccb19b;"></i> Size
                             :181*1220mm , 228*1524mm , 306*612mm, 150*600mm</div>
-                        <div class="col-12 mt-3 p-3 bg-light border-start border-brown border-4 border-brand">
+                        <div class="col-12 mt-3 p-3 bg-light border-start border-brown border-4"
+                            style="border-color:#ccb19b !important;">
                             Wood Grain | Stone Texture | Herringbone Finishes | Pantented Locking System
                         </div>
-                        <a href="/spcproducts" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm bg-brand">Explore Products</a>
+                        <a href="/spcproducts" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm"
+                            style="background-color: #ccb19b;">Explore Products</a>
                     </div>
                 </div>
             </div>
@@ -145,15 +144,17 @@
                     <p class="text-muted lead mb-4">Premium architectural surfaces. Non-porous, food-safe, and highly
                         resistant to heat, scratches, and stains.</p>
                     <div class="row g-3 small fw-bold text-uppercase justify-content-lg-end">
-                        <div class="col-6"><i class="bi bi-check2-square text-brown text-brand"></i> 20mm •
+                        <div class="col-6"><i class="bi bi-check2-square text-brown" style="color: #ccb19b;"></i> 20mm •
                             30mm Thickness</div>
-                        <div class="col-6"><i class="bi bi-check2-square text-brown text-brand"></i> Jumbo
+                        <div class="col-6"><i class="bi bi-check2-square text-brown" style="color: #ccb19b;"></i> Jumbo
                             & Super Jumbo Size
                             Slabs Available</div>
-                        <div class="col-12 mt-3 p-3 bg-light border-end border-brown border-4 text-lg-end border-brand">
+                        <div class="col-12 mt-3 p-3 bg-light border-end border-brown border-4 text-lg-end"
+                            style="border-color:#ccb19b !important;">
                             Ideal for Countertops, Vanity Tops & Bulk Projects
                         </div>
-                        <a href="/quartzsurface" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm bg-brand">Explore Products</a>
+                        <a href="/quartzsurface" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm"
+                            style="background-color: #ccb19b;">Explore Products</a>
                     </div>
                 </div>
             </div>
@@ -162,14 +163,14 @@
 
     <section class="py-5 bg-dark text-white">
         <div class="container py-5 text-center">
-            <h2 class="fw-bold text-uppercase ls-widest mb-5 text-brand">Packaging & Shipping</h2>
+            <h2 class="fw-bold text-uppercase ls-widest mb-5" style="color: #ccb19b;">Packaging & Shipping</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-box-seam h1 mb-3 d-block text-brand"></i>
-                        <h3 class="fw-bold">Export Grade</h3>
+                        <i class="bi bi-box-seam h1 mb-3 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold">Export Grade</h3>
                         <p class="small opacity-50 mb-0">Foam layers, reinforced cartons, and ISPM-15 wooden pallets for
                             2-ton static loads.</p>
                     </div>
@@ -178,8 +179,8 @@
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-globe-americas h1 mb-3 d-block text-brand"></i>
-                        <h3 class="fw-bold">Port to Port</h3>
+                        <i class="bi bi-globe-americas h1 mb-3 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold">Port to Port</h3>
                         <p class="small opacity-50 mb-0">Mundra / Nhava Sheva (India) to Jebel Ali Port or other major
                             UAE gateways.</p>
                     </div>
@@ -188,8 +189,8 @@
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-phone-vibrate h1 mb-3 d-block text-brand"></i>
-                        <h3 class="fw-bold">Real-time Support</h3>
+                        <i class="bi bi-phone-vibrate h1 mb-3 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold">Real-time Support</h3>
                         <p class="small opacity-50 mb-0">Supervised container loading photos and tracking verification
                             via WhatsApp.</p>
                     </div>
@@ -203,14 +204,14 @@
             <div class="row g-0 shadow-lg border">
                 <div class="col-lg-5 p-5 bg-dark text-white d-flex flex-column justify-content-center"
                     style="border-right: 15px solid #ccb19b;">
-                    <h2 class="display-5 fw-bold mb-4 text-uppercase">Direct <span class="text-brand">Tender.</span>
+                    <h2 class="display-5 fw-bold mb-4 text-uppercase">Direct <span style="color: #ccb19b;">Tender.</span>
                     </h2>
                     <p class="opacity-75 lead mb-5">Professional procurement gateway for Dubai, Abu Dhabi, and Sharjah
                         projects. Direct factory access for volume orders.</p>
-                    <div class="mb-2 small fw-bold"><i class="bi bi-geo-alt-fill me-2 text-brand"></i>
+                    <div class="mb-2 small fw-bold"><i class="bi bi-geo-alt-fill me-2" style="color: #ccb19b;"></i>
                         Morbi Hub → Jebel
                         Ali</div>
-                    <div class="small fw-bold"><i class="bi bi-whatsapp me-2 text-brand"></i> +91 99255
+                    <div class="small fw-bold"><i class="bi bi-whatsapp me-2" style="color: #ccb19b;"></i> +91 99255
                         11465</div>
                 </div>
                 <div class="col-lg-7 p-5 bg-white">
@@ -237,8 +238,8 @@
                             <label class="small fw-bold text-uppercase opacity-50 mb-2">Product Requirement</label>
                             <select name="category" class="form-select rounded-0 border-0 bg-light py-3 shadow-none"
                                 required>
-                                <option value="rigid-core vinyl">SPC / Vinyl Flooring</option>
-                                <option value="engineered stone">Quartz Surface</option>
+                                <option value="SPC Flooring">SPC / Vinyl Flooring</option>
+                                <option value="Quartz Surfaces">Quartz Surface</option>
                                 <option value="Both Categories">Both Categories</option>
 
                             </select>
@@ -250,7 +251,8 @@
                         </div>
                         <div class="col-12 text-center mt-4">
                             <button type="submit"
-                                class="btn btn-dark w-100 rounded-0 py-3 fw-bold border-0 text-white shadow-sm bg-brand ls-2">SEND ENQUIRY</button>
+                                class="btn btn-dark w-100 rounded-0 py-3 fw-bold border-0 text-white shadow-sm"
+                                style="background-color: #ccb19b; letter-spacing: 2px;">SEND ENQUIRY</button>
                         </div>
                     </form>
                 </div>
@@ -262,7 +264,7 @@
         <div class="container py-4">
             <div class="text-center mb-5">
                 <h2 class="fw-bold mb-2 text-dark text-uppercase">FAQs — UAE EXPORT</h2>
-                <div class="mx-auto divider-brand"></div>
+                <div class="mx-auto" style="width: 50px; height: 3px; background-color: #ccb19b !important;"></div>
             </div>
             <div class="row">
                 <div class="col-lg-10 mx-auto">
@@ -278,7 +280,7 @@
                             </h3>
                             <div id="f1" class="accordion-collapse collapse" data-bs-parent="#faqUAE">
                                 <div class="accordion-body small text-muted bg-white border-top">
-                                    We supply high-density rigid-core vinyl, architectural engineered stone, and specialized
+                                    We supply high-density SPC flooring, architectural Quartz surfaces, and specialized
                                     LVT
                                     solutions tailored for Middle Eastern construction standards.
                                 </div>
@@ -330,9 +332,9 @@
                             </h3>
                             <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqUAE">
                                 <div class="accordion-body small text-muted bg-white border-top">
-                                    Yes. Our rigid-core range flooring features a stone-plastic composite rigid core designed to
+                                    Yes. Our SPC flooring features a stone-plastic composite rigid core designed to
                                     resist
-                                    expansion in high temperatures, while our engineered stone are non-porous and
+                                    expansion in high temperatures, while our Quartz surfaces are non-porous and
                                     engineered
                                     for thermal stability.
                                 </div>
@@ -378,7 +380,7 @@
                                 <button
                                     class="accordion-button collapsed fw-bold text-uppercase small bg-white text-dark shadow-none"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#f7">
-                                    What installation system is used for rigid-core vinyl?
+                                    What installation system is used for SPC flooring?
                                 </button>
                             </h3>
                             <div id="f7" class="accordion-collapse collapse" data-bs-parent="#faqUAE">
@@ -424,7 +426,7 @@
           "name": "What products are available for UAE projects?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We supply high-density rigid-core vinyl, architectural engineered stone, and specialized LVT solutions tailored for Middle Eastern construction standards."
+            "text": "We supply high-density SPC flooring, architectural Quartz surfaces, and specialized LVT solutions tailored for Middle Eastern construction standards."
           }
         },
         {
@@ -448,7 +450,7 @@
           "name": "Are Argil products heat-resistant for the UAE climate?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Our rigid-core range flooring features a stone-plastic composite rigid core designed to resist expansion in high temperatures, while our engineered stone are non-porous and engineered for thermal stability."
+            "text": "Yes. Our SPC flooring features a stone-plastic composite rigid core designed to resist expansion in high temperatures, while our Quartz surfaces are non-porous and engineered for thermal stability."
           }
         },
         {
@@ -469,7 +471,7 @@
         },
         {
           "@type": "Question",
-          "name": "What installation system is used for rigid-core vinyl?",
+          "name": "What installation system is used for SPC flooring?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "We utilize the Uniclic or Valinge click-lock systems. These allow for glueless, floating installations, which are ideal for fast-paced fit-outs in commercial UAE spaces."

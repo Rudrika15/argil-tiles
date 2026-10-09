@@ -25,9 +25,6 @@ innovation drive the production of world-class artificial quartz stones.">
     <link rel="canonical" href="https://argiltiles.com/plants" data-react- helmet="true">
     <title>Argil Manufacturing Plants | Advanced Tile Production</title>
 @endsection
-@section('lcp_preload')
-    <link rel="preload" as="image" href="{{ asset('assets/asset/plantsimage.png') }}" fetchpriority="high">
-@endsection
 @section('content')
     <!-- breadcrumb -->
     <div class="breadcrumb d-flex justify-content-between align-items-center">
@@ -74,7 +71,7 @@ innovation drive the production of world-class artificial quartz stones.">
             </div>
             <div class="col-md-6 text-center">
                 <img src="{{ asset('assets/asset/plantsimage.png') }}" alt="argil plants" title="argil plants"
-                    width="521" height="521" loading="eager" fetchpriority="high" decoding="async" class="img-fluid w-75">
+                    loading="lazy" class="img-fluid w-75">
             </div>
 
         </div>

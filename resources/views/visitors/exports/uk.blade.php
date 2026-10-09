@@ -2,19 +2,14 @@
 
 @section('seosection')
     <meta name="description"
-        content="Export rigid-core vinyl and engineered stone from India to the UK. Premium wholesale supply for UK distributors and projects.">
-    <meta name="keywords"
-        content="rigid-core vinyl export UK, engineered stone export UK, surface exporter India to UK">
-    <meta property="og:title" content="Rigid-Core Vinyl & Engineered Stone Export to UK">
+        content="Argil Tiles exports premium quartz surfaces and SPC flooring from India to distributors and projects across the UK.">
+    <meta property="og:title" content="UK Exports | Argil Tiles – Quartz & SPC Flooring from India">
     <meta property="og:description"
-        content="Export rigid-core vinyl and engineered stone from India to the UK. Premium wholesale supply for UK distributors and projects.">
+        content="Argil Tiles exports premium quartz surfaces and SPC flooring from India to distributors and projects across the UK.">
     <meta property="og:url" content="https://argiltiles.com/exports/uk">
+    <meta property="og:type" content="website">
     <link rel="canonical" href="https://argiltiles.com/exports/uk">
-    <title>Rigid-Core Vinyl & Engineered Stone Export to UK</title>
-@endsection
-
-@section('lcp_preload')
-    <link rel="preload" as="image" href="{{ asset('export-imgs/spc1.jpg') }}" fetchpriority="high">
+    <title>UK Exports | Argil Tiles – Quartz & SPC Flooring from India</title>
 @endsection
 
 @section('content')
@@ -33,15 +28,15 @@
                         UK Export Division
                     </p>
                     <h1 class="display-4 fw-bold text-uppercase mb-4">
-                        Premium Surfaces & Rigid-Core Vinyl <br>
-                        Export To <span class="text-brand">United Kingdom</span>
+                        Premium SPC Flooring & Quartz <br>
+                        Export To <span style="color:#ccb19b">United Kingdom</span>
                     </h1>
                     <p class="lead opacity-75 mb-4">
                         Argil Group supplies high-performance architectural surfaces to British distributors,
                         real estate developers, and large-scale importers with reliable direct-to-port logistics.
                     </p>
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="#enquiry" class="btn text-white fw-bold px-4 py-3 rounded-0 bg-brand">
+                        <a href="#enquiry" class="btn text-white fw-bold px-4 py-3 rounded-0" style="background:#ccb19b">
                             Request Quotation
                         </a>
                         <a href="/catalogue" class="btn btn-outline-light px-4 py-3 rounded-0">
@@ -63,7 +58,7 @@
                         the British construction market, ensuring high durability suitable for diverse climate
                         variations.
                     </p>
-                    <p class="fw-bold text-uppercase small mb-2 text-brand ls-1">
+                    <p class="fw-bold text-uppercase small mb-2" style="color: #ccb19b; letter-spacing: 1px;">
                         Our UK-Focused Process:
                     </p>
                     <ul class="list-unstyled mb-4">
@@ -94,8 +89,8 @@
                     <div class="p-5 bg-white border rounded-0 h-100 shadow-sm" style="transition: all 0.4s ease-in-out;"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-shield-check display-5 mb-4 d-block text-brand"></i>
-                        <h3 class="fw-bold text-uppercase">High-Grade Durability</h3>
+                        <i class="bi bi-shield-check display-5 mb-4 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold text-uppercase">High-Grade Durability</h3>
                         <p class="small text-muted mb-0">Products engineered to withstand high foot traffic and internal
                             heating expansion, ideal for British apartments and commercial spaces.</p>
                     </div>
@@ -104,8 +99,8 @@
                     <div class="p-5 bg-white border rounded-0 h-100 shadow-sm" style="transition: all 0.4s ease-in-out;"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-geo-alt display-5 mb-4 d-block text-brand"></i>
-                        <h3 class="fw-bold text-uppercase">Strategic Port Access</h3>
+                        <i class="bi bi-geo-alt display-5 mb-4 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold text-uppercase">Strategic Port Access</h3>
                         <p class="small text-muted mb-0">Direct routes from Mundra to major UK gateways, ensuring
                             reduced transit times for bulk orders.</p>
                     </div>
@@ -114,8 +109,8 @@
                     <div class="p-5 bg-white border rounded-0 h-100 shadow-sm" style="transition: all 0.4s ease-in-out;"
                         onmouseover="this.style.transform='translateY(-15px)'; this.style.borderColor='#ccb19b';"
                         onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#dee2e6';">
-                        <i class="bi bi-box-seam display-5 mb-4 d-block text-brand"></i>
-                        <h3 class="fw-bold text-uppercase">Jumbo Quartz Slabs</h3>
+                        <i class="bi bi-box-seam display-5 mb-4 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold text-uppercase">Jumbo Quartz Slabs</h3>
                         <p class="small text-muted mb-0">Capability to export massive Quartz slabs for modern UK
                             interior countertops and kitchen islands.</p>
                     </div>
@@ -128,12 +123,13 @@
         <div class="container">
             <div class="row mb-5 align-items-end">
                 <div class="col-lg-7">
-                    <p class="text-uppercase fw-bold ls-2 text-brand">Export
+                    <p class="h6 text-uppercase fw-bold ls-2" style="color: #ccb19b; letter-spacing: 2px;">Export
                         Excellence</p>
                     <h2 class="display-5 fw-bold text-dark">Export Specifications</h2>
                 </div>
                 <div class="col-lg-5 text-lg-end pb-2">
-                    <p class="text-muted mb-0 border-start border-md-0 ps-3 ps-md-0 border-brand">
+                    <p class="text-muted mb-0 border-start border-md-0 ps-3 ps-md-0"
+                        style="border-color: #ccb19b !important;">
                         Argil Group maintains ISO 9001:2015 standards, ensuring batch-level quality control for UK
                         infrastructure projects.
                     </p>
@@ -143,15 +139,16 @@
             <div class="row g-0 shadow-lg rounded overflow-hidden border">
                 <div class="col-lg-6 border-end">
                     <div class="p-0 position-relative text-center bg-light">
-                        <div class="spacer-100"></div>
+                        <div style="height:100px;"></div>
                         <img src="{{ asset('export-imgs/spc1.jpg') }}" class="img-fluid w-50 mx-auto d-block"
-                            alt="rigid-core vinyl" title="rigid-core vinyl" width="350" height="354" loading="eager" fetchpriority="high" decoding="async">
+                            alt="SPC Flooring" title="Argil SPC Flooring">
                         <div class="position-absolute top-0 end-0 m-3">
-                            <span class="badge bg-dark text-white px-3 py-2 fw-normal badge-brand-edge">SPC-UK SERIES</span>
+                            <span class="badge bg-dark text-white px-3 py-2 fw-normal"
+                                style="border-left: 3px solid #ccb19b;">SPC-UK SERIES</span>
                         </div>
                     </div>
                     <div class="p-4 p-xl-5">
-                        <h3 class="fw-bold mb-3">Rigid-Core Vinyl</h3>
+                        <h3 class="h4 fw-bold mb-3">SPC Rigid Core Flooring</h3>
                         <p class="text-secondary small mb-4">100% waterproof and moisture resistant. Engineered with a
                             stone-plastic composite core for maximum stability.</p>
                         <table class="table table-sm table-borderless small text-uppercase mb-4">
@@ -168,21 +165,23 @@
                                 <td class="py-2 fw-bold text-end">Valinge / Uniclic</td>
                             </tr>
                         </table>
-                        <a href="/spcproducts" class="btn w-100 rounded-0 fw-bold py-2 text-white bg-brand">Explore Products</a>
+                        <a href="/spcproducts" class="btn w-100 rounded-0 fw-bold py-2 text-white"
+                            style="background-color: #ccb19b;">Explore Products</a>
                     </div>
                 </div>
                 <div class="col-lg-6 bg-light">
                     <div class="p-0 position-relative text-center bg-white">
-                        <div class="spacer-100"></div>
+                        <div style="height:100px;"></div>
                         <img src="{{ asset('export-imgs/quartz1.jpg') }}" class="img-fluid w-50 mx-auto d-block"
-                            alt="Quartz Surface" title="Quartz Surface">
+                            alt="Quartz Surface" title="Argil Quartz Surface">
                         <div class="position-absolute top-0 end-0 m-3">
-                            <span class="badge bg-dark text-white px-3 py-2 fw-normal badge-brand-edge">UK-QUARTZ</span>
+                            <span class="badge bg-dark text-white px-3 py-2 fw-normal"
+                                style="border-left: 3px solid #ccb19b;">UK-QUARTZ</span>
                         </div>
                     </div>
                     <div class="p-4 p-xl-5">
-                        <h3 class="fw-bold mb-3">Architectural Engineered Stone</h3>
-                        <p class="text-secondary small mb-4">Composed of about 93% natural mineral. Highly non-porous and
+                        <h3 class="h4 fw-bold mb-3">Architectural Quartz</h3>
+                        <p class="text-secondary small mb-4">Composed of 93% natural quartz. Highly non-porous and
                             scratch resistant for premium UK applications.</p>
                         <table class="table table-sm table-borderless small text-uppercase mb-4">
                             <tr class="border-bottom">
@@ -198,7 +197,8 @@
                                 <td class="py-2 fw-bold text-end">Premium High-Gloss</td>
                             </tr>
                         </table>
-                        <a href="/quartzsurface" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm bg-brand">Explore Products</a>
+                        <a href="/quartzsurface" class="btn w-100 rounded-0 fw-bold py-2 text-white shadow-sm"
+                            style="background-color: #ccb19b;">Explore Products</a>
                     </div>
                 </div>
             </div>
@@ -207,14 +207,14 @@
 
     <section class="py-5 bg-dark text-white">
         <div class="container py-5 text-center">
-            <h2 class="fw-bold text-uppercase ls-widest mb-5 text-brand">UK Packaging & Shipping</h2>
+            <h2 class="fw-bold text-uppercase ls-widest mb-5" style="color: #ccb19b;">UK Packaging & Shipping</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-box-seam h1 mb-3 d-block text-brand"></i>
-                        <h3 class="fw-bold">Export Grade</h3>
+                        <i class="bi bi-box-seam h1 mb-3 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold">Export Grade</h3>
                         <p class="small opacity-50 mb-0">Foam layers, reinforced cartons, and ISPM-15 wooden pallets for
                             2-ton static loads.</p>
                     </div>
@@ -223,8 +223,8 @@
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-globe-americas h1 mb-3 d-block text-brand"></i>
-                        <h3 class="fw-bold">Major UK Ports</h3>
+                        <i class="bi bi-globe-americas h1 mb-3 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold">Major UK Ports</h3>
                         <p class="small opacity-50 mb-0">Mundra / Nhava Sheva (India) to Felixstowe, Southampton, or
                             London Gateway.</p>
                     </div>
@@ -233,8 +233,8 @@
                     <div class="p-4 border border-secondary h-100 rounded-0 shadow-sm" style="transition: 0.3s;"
                         onmouseover="this.style.borderColor='#ccb19b'; this.style.transform='translateY(-10px)'"
                         onmouseout="this.style.borderColor='#6c757d'; this.style.transform='translateY(0)'">
-                        <i class="bi bi-phone-vibrate h1 mb-3 d-block text-brand"></i>
-                        <h3 class="fw-bold">Real-time Support</h3>
+                        <i class="bi bi-phone-vibrate h1 mb-3 d-block" style="color: #ccb19b;"></i>
+                        <h3 class="h5 fw-bold">Real-time Support</h3>
                         <p class="small opacity-50 mb-0">Supervised container loading photos and tracking verification
                             via WhatsApp.</p>
                     </div>
@@ -248,22 +248,22 @@
             <h2 class="fw-bold text-uppercase text-center mb-5">Global Export Network</h2>
             <div class="row text-center g-4">
                 <div class="col-md-3">
-                    <p class="display-5 fw-bold text-brand"><span class="counter" data-target="50">0</span>+
+                    <p class="display-5 fw-bold" style="color:#ccb19b"><span class="counter" data-target="50">0</span>+
                     </p>
                     <p class="text-muted small text-uppercase">Nations Exported</p>
                 </div>
                 <div class="col-md-3">
-                    <p class="display-5 fw-bold text-brand"><span class="counter"
+                    <p class="display-5 fw-bold" style="color:#ccb19b"><span class="counter"
                             data-target="250">0</span>+</p>
                     <p class="text-muted small text-uppercase">Satisfied Partners</p>
                 </div>
                 <div class="col-md-3">
-                    <p class="display-5 fw-bold text-brand"><span class="counter"
+                    <p class="display-5 fw-bold" style="color:#ccb19b"><span class="counter"
                             data-target="600">0</span>+</p>
                     <p class="text-muted small text-uppercase">Containers Shipped</p>
                 </div>
                 <div class="col-md-3">
-                    <p class="display-5 fw-bold text-brand"><span class="counter" data-target="15">0</span>+
+                    <p class="display-5 fw-bold" style="color:#ccb19b"><span class="counter" data-target="15">0</span>+
                     </p>
                     <p class="text-muted small text-uppercase">Years Experience</p>
                 </div>
@@ -271,7 +271,12 @@
         </div>
     </section>
 
-    <section id="enquiry" class="py-5 text-white shadow-lg export-quote-banner">
+    <section id="enquiry" class="py-5 text-white shadow-lg"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+           url('https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+           background-size: cover; 
+           background-position: center;
+           background-attachment: fixed;">
 
         <div class="container py-4">
             <div class="row g-5 align-items-center">
@@ -279,7 +284,7 @@
                     <h2 class="fw-bold text-uppercase mb-4">UK Import Desk</h2>
                     <p class="opacity-75 mb-4">Direct sourcing solutions for UK business owners. Our dedicated
                         export team assists with container logistics, local certification, and custom pricing.</p>
-                    <p class="fw-bold h5"><i class="bi bi-whatsapp me-2 text-brand"></i> +91 99255 11465</p>
+                    <p class="fw-bold h5"><i class="bi bi-whatsapp me-2" style="color:#ccb19b"></i> +91 99255 11465</p>
                 </div>
 
                 <div class="col-lg-7">
@@ -300,8 +305,8 @@
                             <select name="category"
                                 class="form-select rounded-0 border-0 shadow-none py-3 text-dark bg-white" required>
                                 <option selected disabled>Select Product</option>
-                                <option value="rigid-core vinyl">rigid-core vinyl</option>
-                                <option value="engineered stone">engineered stone</option>
+                                <option value="SPC Flooring">SPC Flooring</option>
+                                <option value="Quartz Surfaces">Quartz Surfaces</option>
                                 <option value="Both Categories">Both Categories</option>
                             </select>
                         </div>
@@ -310,7 +315,8 @@
                                 rows="4" placeholder="Request Details"></textarea>
                         </div>
                         <div class="col-12"><button type="submit"
-                                class="btn text-white fw-bold w-100 py-3 rounded-0 border-0 shadow-sm bg-brand">SUBMIT ENQUIRY</button></div>
+                                class="btn text-white fw-bold w-100 py-3 rounded-0 border-0 shadow-sm"
+                                style="background:#ccb19b;">SUBMIT ENQUIRY</button></div>
                     </form>
                 </div>
             </div>
@@ -321,7 +327,7 @@
         <div class="container py-4">
             <div class="text-center mb-5">
                 <h2 class="fw-bold mb-2 text-dark text-uppercase">FAQs — UK EXPORT</h2>
-                <div class="mx-auto divider-brand"></div>
+                <div class="mx-auto" style="width: 50px; height: 3px; background-color: #ccb19b !important;"></div>
             </div>
             <div class="row">
                 <div class="col-lg-10 mx-auto">
@@ -355,7 +361,7 @@
                             </h3>
                             <div id="uk2" class="accordion-collapse collapse" data-bs-parent="#faqUK">
                                 <div class="accordion-body small text-muted bg-white border-top">
-                                    Yes. Our rigid-core vinyl and engineered stone comply with relevant British and European
+                                    Yes. Our SPC flooring and Quartz surfaces comply with relevant British and European
                                     standards. We provide the necessary technical files and declarations of performance
                                     required for **UKCA marking**, ensuring compliance with UK construction product
                                     regulations.
@@ -373,7 +379,7 @@
                             </h3>
                             <div id="uk3" class="accordion-collapse collapse" data-bs-parent="#faqUK">
                                 <div class="accordion-body small text-muted bg-white border-top">
-                                    Absolutely. Our rigid-core range flooring is highly compatible with both electric and water-based
+                                    Absolutely. Our SPC flooring is highly compatible with both electric and water-based
                                     underfloor heating systems, which are standard in modern UK residential
                                     developments.
                                     The rigid core provides excellent thermal conductivity and dimensional stability.
@@ -478,7 +484,7 @@
       "name": "Do Argil products meet UKCA and CE requirements?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Our rigid-core vinyl and engineered stone comply with relevant British and European standards. We provide the necessary technical files and declarations of performance required for UKCA marking, ensuring compliance with UK construction product regulations."
+        "text": "Yes. Our SPC flooring and Quartz surfaces comply with relevant British and European standards. We provide the necessary technical files and declarations of performance required for UKCA marking, ensuring compliance with UK construction product regulations."
       }
     },
     {
@@ -486,7 +492,7 @@
       "name": "Are the products suitable for underfloor heating (UFH)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely. Our rigid-core range flooring is highly compatible with both electric and water-based underfloor heating systems, which are standard in modern UK residential developments. The rigid core provides excellent thermal conductivity and dimensional stability."
+        "text": "Absolutely. Our SPC flooring is highly compatible with both electric and water-based underfloor heating systems, which are standard in modern UK residential developments. The rigid core provides excellent thermal conductivity and dimensional stability."
       }
     },
     {

@@ -1,23 +1,20 @@
 @extends('layouts.landing')
 
-@section('title', 'Engineered Stone Export from India')
-@section('meta_description', 'Import premium engineered stone from India. Export-ready, certified slabs for distributors worldwide. Request a quote.')
+@section('title', 'Quartz Surface Export from India | Argil Group')
 @section('canonical', 'https://argiltiles.com/quartz-export')
-
-@section('lcp_preload')
-    <link rel="preload" as="image" href="{{ asset('assets/asset/qualityimage1.jpeg') }}" fetchpriority="high">
-@endsection
+@section('meta_description',
+    'Import export-ready quartz surfaces from Argil Group. Certified Indian quartz for distributors worldwide. Request a quote today.')
 
 @section('content')
 
     <!-- Hero Section -->
     <section class="text-white text-center py-5 spc-bg-image">
         <div class="container py-5">
-            <h1 class="display-4">Premium Engineered Stone – Export-Ready from India</h1>
-            <p class="lead mt-3">Durable, stylish, and certified slabs, delivered worldwide for distributors,
+            <h1 class="display-4">Premium Quartz Surface – Export-Ready from India</h1>
+            <p class="lead mt-3">Durable, stylish, and certified Quartz Surface, delivered worldwide for distributors,
                 importers, and interior designers.</p>
             <a href="#quote-form" class="btn btn-light btn-lg mt-3">Request Export Quote</a>
-            <a href="https://argiltiles.com/pdf/Leaflet-Dura-Quartz.pdf" class="btn btn-outline-light btn-lg mt-3" target="_blank">Download
+            <a href="https://argiltiles.com/pdf/Leaflet-Dura-Quartz.pdf" class="btn btn-outline-light btn-lg mt-3" target="_blank">Download Quartz
                 Catalog</a>
 
             {{-- <a href="https://argiltiles.com/pdf/CATALOGUE.pdf" target="_blank">
@@ -32,24 +29,24 @@
     <section class="why-us py-5">
         <div class="container">
 
-            <h2 class="text-center mb-4">Why International Buyers Choose Us</h2>
+            <h2 class="text-center mb-4">Why International Buyers Choose Argil Group</h2>
             <div class="row text-center">
                 <div class="col-md-4 mb-3">
-                    <img src="{{ asset('assets/asset/qualityimage1.jpeg') }}" alt="ISO certified badge"
-                        title="ISO CERTIFIED" loading="eager" fetchpriority="high" decoding="async" class="img-fluid w-50">
-                    <h3>ISO Certified</h3>
-                    <p>Premium quality engineered stone certified for global standards.</p>
+                    <img src="http://127.0.0.1:8000/assets/asset/qualityimage1.jpeg" alt="argil ISO CERTIFIED"
+                        title="argil ISO CERTIFIED" loading="lazy" class="img-fluid w-50">
+                    <h3 class="h5">ISO Certified</h3>
+                    <p>Premium quality Quartz Surface certified for global standards.</p>
                 </div>
                 <div class="col-md-4 mb-3">
                     <img src="{{ asset('asset/images/spc-export/Wide-Designs2.png') }}" alt="Wide Designs"
-                        title="Wide Designs" loading="eager" decoding="async" class="img-fluid w-50">
-                    <h3>Wide Designs</h3>
+                        title="Argil ISO Certified" loading="lazy" class="img-fluid w-50">
+                    <h3 class="h5">Wide Designs</h3>
                     <p>Modern textures, colors, and customizable sizes.</p>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <img src="{{ asset('asset/images/spc-export/Reliable-Exports3.png') }}" alt="Reliable Exports"
-                        title="Reliable Exports" loading="lazy" class="img-fluid w-50">
-                    <h3>Reliable Exports</h3>
+                    <img src="{{ asset('asset/images/spc-export/Reliable-Exports3.png') }}" alt="Wide Designs"
+                        title="Argil ISO Certified" loading="lazy" class="img-fluid w-50">
+                    <h3 class="h5">Reliable Exports</h3>
                     <p>Proven track record in timely shipments worldwide.</p>
                 </div>
             </div>
@@ -59,7 +56,7 @@
     <!-- Featured Products -->
     <section class="products py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4">Our Surface Collection</h2>
+            <h2 class="text-center mb-4">Our Quartz Surface Collection</h2>
 
             <div class="row">
                 @foreach ($products as $product)
@@ -67,10 +64,10 @@
                         <div class="card h-100">
 
                             <img src="{{ asset('quartz/' . $product->mainImg) }}" class="card-img-top"
-                                alt="{{ \App\Support\SeoCopy::soften($product->name) }}" title="{{ \App\Support\SeoCopy::soften($product->name) }}">
+                                alt="{{ $product->names }}">
 
                             <div class="card-body">
-                                <h3 class="card-title">{{ \App\Support\SeoCopy::soften($product->name)}}</h3>
+                                <h3 class="h5 card-title">{{ $product->name}}</h3>
 
                                 <p>
                                     Thickness: {{ $product->thicknesses }} <br>
@@ -85,7 +82,7 @@
                 @endforeach
             </div>
              <div class="text-center mt-4">
-            <a href="https://argiltiles.com/quartzsurface" class="btn btn-primary">View All Products</a>        </div>
+            <a href="{{ url('/quartzsurface') }}" class="btn btn-primary">View All Products</a>        </div>
         </div>
     </section>
 
@@ -96,28 +93,28 @@
             <div class="row text-center justify-content-between align-items-center">
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/inquiry.svg') }}" alt="Inquiry"
-                        title="Inquiry step" loading="lazy" class="img-fluid w-50 p-2">
-                    <h6 class="py-2">Inquiry</h6>
+                        title="Inquiry - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <p class="h6 py-2">Inquiry</p>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/approval.svg') }}" alt="Sample Approval"
-                        title="Sample approval step" loading="lazy" class="img-fluid w-50 p-2">
-                    <h6 class="py-2">Sample Approval</h6>
+                        title="Sample Approval - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <p class="h6 py-2">Sample Approval</p>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/payment.svg') }}" alt="Order and Payment"
-                        title="Order and payment step" loading="lazy" class="img-fluid w-50 p-2">
-                    <h6 class="py-2">Order & Payment</h6>
+                        title="Order & Payment - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <p class="h6 py-2">Order & Payment</p>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/packaging.svg') }}" alt="Packaging and Shipment"
-                        title="Packaging and shipment step" loading="lazy" class="img-fluid w-50 p-2">
-                    <h6 class="py-2">Packaging & Shipment</h6>
+                        title="Packaging & Shipment - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <p class="h6 py-2">Packaging & Shipment</p>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/global-delivery.svg') }}" alt="Global Delivery"
-                        title="Global delivery step" loading="lazy" class="img-fluid w-50 p-2">
-                    <h6 class="py-2">Global Delivery</h6>
+                        title="Global Delivery - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <p class="h6 py-2">Global Delivery</p>
                 </div>
             </div>
         </div>
@@ -128,28 +125,28 @@
             <div class="row text-center justify-content-between align-items-center">
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/question.svg') }}" alt="Inquiry"
-                        title="Inquiry step" loading="lazy" class="img-fluid w-50 p-2">
-                    <h3 class="py-2">Inquiry</h3>
+                        title="Inquiry - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <p class="h6 py-2">Inquiry</p>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/approval-new.svg') }}" alt="Sample Approval"
-                        title="Sample approval step" loading="lazy" class="img-fluid w-50 p-2">
-                    <h3 class="py-2">Sample Approval</h3>
+                        title="Sample Approval - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <p class="h6 py-2">Sample Approval</p>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/payment-new.svg') }}" alt="Order and Payment"
-                        title="Order and payment step" loading="lazy" class="img-fluid w-50 p-2">
-                    <h3 class="py-2">Order & Payment</h3>
+                        title="Order & Payment - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <p class="h6 py-2">Order & Payment</p>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/packaging-new.svg') }}" alt="Packaging and Shipment"
-                        title="Packaging and shipment step" loading="lazy" class="img-fluid w-50 p-2">
-                    <h3 class="py-2">Packaging & Shipment</h3>
+                        title="Packaging & Shipment - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <p class="h6 py-2">Packaging & Shipment</p>
                 </div>
                 <div class="col-6 col-md-2 mb-3">
                     <img src="{{ asset('asset/images/spc-export/global-delivery-new.svg') }}" alt="Global Delivery"
-                        title="Global delivery step" loading="lazy" class="img-fluid w-50 p-2">
-                    <h3 class="py-2">Global Delivery</h3>
+                        title="Global Delivery - Argil Group" loading="lazy" class="img-fluid w-50 p-2">
+                    <p class="h6 py-2">Global Delivery</p>
                 </div>
             </div>
         </div>
@@ -173,7 +170,7 @@
                 <div class="carousel-inner text-center">
                     <div class="carousel-item active">
                         <blockquote class="blockquote mx-auto" style="max-width:720px;">
-                            <p class="mb-3">"Product quality is exceptional. Our import orders arrived
+                            <p class="mb-3">"Argil Group’s SPC flooring quality is exceptional. Our import orders arrived
                                 on
                                 time and exceeded expectations."</p>
                             <footer class="blockquote-footer">John Smith, Distributor, UK</footer>
@@ -182,7 +179,7 @@
 
                     <div class="carousel-item">
                         <blockquote class="blockquote mx-auto" style="max-width:720px;">
-                            <p class="mb-3">"Working with this manufacturer for our interior projects was seamless. Their
+                            <p class="mb-3">"Working with Argil Group for our interior projects was seamless. Their
                                 export
                                 team made the entire process smooth and reliable."</p>
                             <footer class="blockquote-footer">Sarah Ahmed, Interior Designer, UAE</footer>
@@ -237,8 +234,8 @@
 
                     <div class="carousel-item">
                         <blockquote class="blockquote mx-auto" style="max-width:720px;">
-                            <p class="mb-3">"Their floor covering options are modern and practical. We loved the texture and
-                                wood-like finish of the rigid-core tiles.
+                            <p class="mb-3">"Their flooring options are modern and practical. We loved the texture and
+                                wood-like finish of the SPC tiles.
                                 "</p>
                             <footer class="blockquote-footer">Rudrika Dave</footer>
                         </blockquote>
@@ -247,7 +244,7 @@
                     <div class="carousel-item">
                         <blockquote class="blockquote mx-auto" style="max-width:720px;">
                             <p class="mb-3">"Consistent quality and service.
-                                This is our third project using these products. They never disappoint. Highly dependable."
+                                This is our third project using Argile products. They never disappoint. Highly dependable."
                             </p>
                             <footer class="blockquote-footer">Nishant Dabhi</footer>
                         </blockquote>
@@ -271,7 +268,7 @@
     <!-- Quote Form -->
     <section id="quote-form" class="quote-form py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Get Your Export Quote Today</h2>
+            <h2 class="text-center mb-4">Get Your Quartz Export Quote Today</h2>
             {{-- <form action=""> --}}
                 <form action="{{ route('quartz.export.submit') }}" method="POST">
                 @csrf
